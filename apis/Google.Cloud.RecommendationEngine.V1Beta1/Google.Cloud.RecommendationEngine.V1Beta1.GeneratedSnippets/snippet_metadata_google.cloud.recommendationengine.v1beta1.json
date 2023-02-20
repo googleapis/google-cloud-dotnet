@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.CreateCatalogItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.CreateCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.CreateCatalogItem",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
+            "name": "catalogItem"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.CreateCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
+            "name": "catalogItem"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.CreateCatalogItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
+            "name": "catalogItem"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.CreateCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
+            "name": "catalogItem"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "GetCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.GetCatalogItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "GetCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.GetCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "GetCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.GetCatalogItem",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -361,6 +467,16 @@
         "shortName": "GetCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.GetCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -398,6 +514,16 @@
       "clientMethod": {
         "shortName": "GetCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.GetCatalogItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItemPathName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -436,6 +562,16 @@
         "shortName": "GetCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.GetCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItemPathName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -473,6 +609,16 @@
       "clientMethod": {
         "shortName": "ListCatalogItems",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ListCatalogItems",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -512,6 +658,16 @@
         "shortName": "ListCatalogItemsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ListCatalogItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -550,6 +706,28 @@
       "clientMethod": {
         "shortName": "ListCatalogItems",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ListCatalogItems",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -588,6 +766,28 @@
         "shortName": "ListCatalogItemsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ListCatalogItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -625,6 +825,28 @@
       "clientMethod": {
         "shortName": "ListCatalogItems",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ListCatalogItems",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -663,6 +885,28 @@
         "shortName": "ListCatalogItemsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ListCatalogItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.UpdateCatalogItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.UpdateCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -777,6 +1041,24 @@
       "clientMethod": {
         "shortName": "UpdateCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.UpdateCatalogItem",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
+            "name": "catalogItem"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -815,6 +1097,24 @@
         "shortName": "UpdateCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.UpdateCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
+            "name": "catalogItem"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -852,6 +1152,24 @@
       "clientMethod": {
         "shortName": "UpdateCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.UpdateCatalogItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItemPathName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
+            "name": "catalogItem"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -890,6 +1208,24 @@
         "shortName": "UpdateCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.UpdateCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItemPathName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem",
+            "name": "catalogItem"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -927,6 +1263,16 @@
       "clientMethod": {
         "shortName": "DeleteCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.DeleteCatalogItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CatalogServiceClient",
           "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient"
@@ -965,6 +1311,16 @@
         "shortName": "DeleteCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.DeleteCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1003,6 +1359,16 @@
       "clientMethod": {
         "shortName": "DeleteCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.DeleteCatalogItem",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CatalogServiceClient",
           "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient"
@@ -1040,6 +1406,16 @@
         "shortName": "DeleteCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.DeleteCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1077,6 +1453,16 @@
       "clientMethod": {
         "shortName": "DeleteCatalogItem",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.DeleteCatalogItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItemPathName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CatalogServiceClient",
           "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient"
@@ -1114,6 +1500,16 @@
         "shortName": "DeleteCatalogItemAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.DeleteCatalogItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogItemPathName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1151,6 +1547,16 @@
       "clientMethod": {
         "shortName": "ImportCatalogItems",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ImportCatalogItems",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1190,6 +1596,16 @@
         "shortName": "ImportCatalogItemsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ImportCatalogItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1228,6 +1644,28 @@
       "clientMethod": {
         "shortName": "ImportCatalogItems",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ImportCatalogItems",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "requestId"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig",
+            "name": "errorsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1266,6 +1704,28 @@
         "shortName": "ImportCatalogItemsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ImportCatalogItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "requestId"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig",
+            "name": "errorsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1303,6 +1763,28 @@
       "clientMethod": {
         "shortName": "ImportCatalogItems",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ImportCatalogItems",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "requestId"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig",
+            "name": "errorsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1341,6 +1823,28 @@
         "shortName": "ImportCatalogItemsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogServiceClient.ImportCatalogItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "requestId"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig",
+            "name": "errorsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1378,6 +1882,16 @@
       "clientMethod": {
         "shortName": "CreatePredictionApiKeyRegistration",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.CreatePredictionApiKeyRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1417,6 +1931,16 @@
         "shortName": "CreatePredictionApiKeyRegistrationAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.CreatePredictionApiKeyRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1455,6 +1979,20 @@
       "clientMethod": {
         "shortName": "CreatePredictionApiKeyRegistration",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.CreatePredictionApiKeyRegistration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration",
+            "name": "predictionApiKeyRegistration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1493,6 +2031,20 @@
         "shortName": "CreatePredictionApiKeyRegistrationAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.CreatePredictionApiKeyRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration",
+            "name": "predictionApiKeyRegistration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1530,6 +2082,20 @@
       "clientMethod": {
         "shortName": "CreatePredictionApiKeyRegistration",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.CreatePredictionApiKeyRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration",
+            "name": "predictionApiKeyRegistration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1568,6 +2134,20 @@
         "shortName": "CreatePredictionApiKeyRegistrationAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.CreatePredictionApiKeyRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration",
+            "name": "predictionApiKeyRegistration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1605,6 +2185,16 @@
       "clientMethod": {
         "shortName": "ListPredictionApiKeyRegistrations",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.ListPredictionApiKeyRegistrations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1644,6 +2234,16 @@
         "shortName": "ListPredictionApiKeyRegistrationsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.ListPredictionApiKeyRegistrationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1682,6 +2282,24 @@
       "clientMethod": {
         "shortName": "ListPredictionApiKeyRegistrations",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.ListPredictionApiKeyRegistrations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1720,6 +2338,24 @@
         "shortName": "ListPredictionApiKeyRegistrationsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.ListPredictionApiKeyRegistrationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1757,6 +2393,24 @@
       "clientMethod": {
         "shortName": "ListPredictionApiKeyRegistrations",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.ListPredictionApiKeyRegistrations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1795,6 +2449,24 @@
         "shortName": "ListPredictionApiKeyRegistrationsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.ListPredictionApiKeyRegistrationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1832,6 +2504,16 @@
       "clientMethod": {
         "shortName": "DeletePredictionApiKeyRegistration",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.DeletePredictionApiKeyRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
           "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient"
@@ -1870,6 +2552,16 @@
         "shortName": "DeletePredictionApiKeyRegistrationAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.DeletePredictionApiKeyRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1908,6 +2600,16 @@
       "clientMethod": {
         "shortName": "DeletePredictionApiKeyRegistration",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.DeletePredictionApiKeyRegistration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
           "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient"
@@ -1945,6 +2647,16 @@
         "shortName": "DeletePredictionApiKeyRegistrationAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.DeletePredictionApiKeyRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -1982,6 +2694,16 @@
       "clientMethod": {
         "shortName": "DeletePredictionApiKeyRegistration",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.DeletePredictionApiKeyRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistrationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
           "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient"
@@ -2019,6 +2741,16 @@
         "shortName": "DeletePredictionApiKeyRegistrationAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistryClient.DeletePredictionApiKeyRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistrationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PredictionApiKeyRegistryClient",
@@ -2056,6 +2788,16 @@
       "clientMethod": {
         "shortName": "Predict",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionServiceClient.Predict",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse+Types+PredictionResult>",
         "client": {
           "shortName": "PredictionServiceClient",
@@ -2095,6 +2837,16 @@
         "shortName": "PredictAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionServiceClient.PredictAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse+Types+PredictionResult>",
         "client": {
           "shortName": "PredictionServiceClient",
@@ -2133,6 +2885,28 @@
       "clientMethod": {
         "shortName": "Predict",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionServiceClient.Predict",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
+            "name": "userEvent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse+Types+PredictionResult>",
         "client": {
           "shortName": "PredictionServiceClient",
@@ -2171,6 +2945,28 @@
         "shortName": "PredictAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionServiceClient.PredictAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
+            "name": "userEvent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse+Types+PredictionResult>",
         "client": {
           "shortName": "PredictionServiceClient",
@@ -2208,6 +3004,28 @@
       "clientMethod": {
         "shortName": "Predict",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionServiceClient.Predict",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PlacementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
+            "name": "userEvent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse+Types+PredictionResult>",
         "client": {
           "shortName": "PredictionServiceClient",
@@ -2246,6 +3064,28 @@
         "shortName": "PredictAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.PredictionServiceClient.PredictAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PlacementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
+            "name": "userEvent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse, Google.Cloud.RecommendationEngine.V1Beta1.PredictResponse+Types+PredictionResult>",
         "client": {
           "shortName": "PredictionServiceClient",
@@ -2283,6 +3123,16 @@
       "clientMethod": {
         "shortName": "WriteUserEvent",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.WriteUserEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.WriteUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2322,6 +3172,16 @@
         "shortName": "WriteUserEventAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.WriteUserEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.WriteUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2360,6 +3220,20 @@
       "clientMethod": {
         "shortName": "WriteUserEvent",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.WriteUserEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
+            "name": "userEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2398,6 +3272,20 @@
         "shortName": "WriteUserEventAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.WriteUserEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
+            "name": "userEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2435,6 +3323,20 @@
       "clientMethod": {
         "shortName": "WriteUserEvent",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.WriteUserEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
+            "name": "userEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2473,6 +3375,20 @@
         "shortName": "WriteUserEventAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.WriteUserEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.UserEvent",
+            "name": "userEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2510,6 +3426,16 @@
       "clientMethod": {
         "shortName": "CollectUserEvent",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.CollectUserEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CollectUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2549,6 +3475,16 @@
         "shortName": "CollectUserEventAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.CollectUserEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.CollectUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2587,6 +3523,28 @@
       "clientMethod": {
         "shortName": "CollectUserEvent",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.CollectUserEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "userEvent"
+          },
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "System.Int64",
+            "name": "ets"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2625,6 +3583,28 @@
         "shortName": "CollectUserEventAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.CollectUserEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "userEvent"
+          },
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "System.Int64",
+            "name": "ets"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2662,6 +3642,28 @@
       "clientMethod": {
         "shortName": "CollectUserEvent",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.CollectUserEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "userEvent"
+          },
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "System.Int64",
+            "name": "ets"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2700,6 +3702,28 @@
         "shortName": "CollectUserEventAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.CollectUserEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "userEvent"
+          },
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "System.Int64",
+            "name": "ets"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2737,6 +3761,16 @@
       "clientMethod": {
         "shortName": "ListUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ListUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2776,6 +3810,16 @@
         "shortName": "ListUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ListUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2814,6 +3858,28 @@
       "clientMethod": {
         "shortName": "ListUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ListUserEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2852,6 +3918,28 @@
         "shortName": "ListUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ListUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2889,6 +3977,28 @@
       "clientMethod": {
         "shortName": "ListUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ListUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2927,6 +4037,28 @@
         "shortName": "ListUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ListUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecommendationEngine.V1Beta1.ListUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -2964,6 +4096,16 @@
       "clientMethod": {
         "shortName": "PurgeUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.PurgeUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3003,6 +4145,16 @@
         "shortName": "PurgeUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.PurgeUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3041,6 +4193,24 @@
       "clientMethod": {
         "shortName": "PurgeUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.PurgeUserEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3079,6 +4249,24 @@
         "shortName": "PurgeUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.PurgeUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3116,6 +4304,24 @@
       "clientMethod": {
         "shortName": "PurgeUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.PurgeUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3154,6 +4360,24 @@
         "shortName": "PurgeUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.PurgeUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.PurgeUserEventsMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3191,6 +4415,16 @@
       "clientMethod": {
         "shortName": "ImportUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ImportUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3230,6 +4464,16 @@
         "shortName": "ImportUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ImportUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3268,6 +4512,28 @@
       "clientMethod": {
         "shortName": "ImportUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ImportUserEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "requestId"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig",
+            "name": "errorsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3306,6 +4572,28 @@
         "shortName": "ImportUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ImportUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "requestId"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig",
+            "name": "errorsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3343,6 +4631,28 @@
       "clientMethod": {
         "shortName": "ImportUserEvents",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ImportUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "requestId"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig",
+            "name": "errorsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -3381,6 +4691,28 @@
         "shortName": "ImportUserEventsAsync",
         "fullName": "Google.Cloud.RecommendationEngine.V1Beta1.UserEventServiceClient.ImportUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.EventStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "requestId"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig",
+            "name": "errorsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.RecommendationEngine.V1Beta1.ImportUserEventsResponse, Google.Cloud.RecommendationEngine.V1Beta1.ImportMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",

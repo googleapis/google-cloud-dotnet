@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -96,6 +116,28 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, Google.Cloud.Bigtable.Admin.V2.Cluster>",
+            "name": "clusters"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -134,6 +176,28 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, Google.Cloud.Bigtable.Admin.V2.Cluster>",
+            "name": "clusters"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -171,6 +235,28 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, Google.Cloud.Bigtable.Admin.V2.Cluster>",
+            "name": "clusters"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -209,6 +295,28 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, Google.Cloud.Bigtable.Admin.V2.Cluster>",
+            "name": "clusters"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.CreateInstanceMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -246,6 +354,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Instance",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -285,6 +403,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Instance>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -323,6 +451,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Instance",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -361,6 +499,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Instance>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -398,6 +546,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Instance",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -436,6 +594,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Instance>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -473,6 +641,16 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -512,6 +690,16 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -550,6 +738,16 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -588,6 +786,16 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -625,6 +833,16 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -663,6 +881,16 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.ListInstancesResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -700,6 +928,16 @@
       "clientMethod": {
         "shortName": "UpdateInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Instance",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Instance",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -739,6 +977,16 @@
         "shortName": "UpdateInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Instance",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Instance>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -777,6 +1025,16 @@
       "clientMethod": {
         "shortName": "PartialUpdateInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.PartialUpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -816,6 +1074,16 @@
         "shortName": "PartialUpdateInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.PartialUpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.PartialUpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -854,6 +1122,20 @@
       "clientMethod": {
         "shortName": "PartialUpdateInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.PartialUpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -892,6 +1174,20 @@
         "shortName": "PartialUpdateInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.PartialUpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Instance, Google.Cloud.Bigtable.Admin.V2.UpdateInstanceMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -929,6 +1225,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -967,6 +1273,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1005,6 +1321,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -1042,6 +1368,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1079,6 +1415,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -1116,6 +1462,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1153,6 +1509,16 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1192,6 +1558,16 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1230,6 +1606,24 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1268,6 +1662,24 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1305,6 +1717,24 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1343,6 +1773,24 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.CreateClusterMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1380,6 +1828,16 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Cluster",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1419,6 +1877,16 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Cluster>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1457,6 +1925,16 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Cluster",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1495,6 +1973,16 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Cluster>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1532,6 +2020,16 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Cluster",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1570,6 +2068,16 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Cluster>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1607,6 +2115,16 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.ListClustersResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1646,6 +2164,16 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.ListClustersResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1684,6 +2212,16 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.ListClustersResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1722,6 +2260,16 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.ListClustersResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1759,6 +2307,16 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.ListClustersResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1797,6 +2355,16 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.ListClustersResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1834,6 +2402,16 @@
       "clientMethod": {
         "shortName": "UpdateCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Cluster",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1873,6 +2451,16 @@
         "shortName": "UpdateClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Cluster",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1911,6 +2499,16 @@
       "clientMethod": {
         "shortName": "PartialUpdateCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.PartialUpdateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1950,6 +2548,16 @@
         "shortName": "PartialUpdateClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.PartialUpdateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -1988,6 +2596,20 @@
       "clientMethod": {
         "shortName": "PartialUpdateCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.PartialUpdateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2026,6 +2648,20 @@
         "shortName": "PartialUpdateClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.PartialUpdateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Cluster, Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2063,6 +2699,16 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -2101,6 +2747,16 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2139,6 +2795,16 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -2176,6 +2842,16 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2213,6 +2889,16 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -2250,6 +2936,16 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2287,6 +2983,16 @@
       "clientMethod": {
         "shortName": "CreateAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2326,6 +3032,16 @@
         "shortName": "CreateAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2364,6 +3080,24 @@
       "clientMethod": {
         "shortName": "CreateAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateAppProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
+            "name": "appProfile"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2402,6 +3136,24 @@
         "shortName": "CreateAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
+            "name": "appProfile"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2439,6 +3191,24 @@
       "clientMethod": {
         "shortName": "CreateAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
+            "name": "appProfile"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2477,6 +3247,24 @@
         "shortName": "CreateAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
+            "name": "appProfile"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2514,6 +3302,16 @@
       "clientMethod": {
         "shortName": "GetAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2553,6 +3351,16 @@
         "shortName": "GetAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2591,6 +3399,16 @@
       "clientMethod": {
         "shortName": "GetAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetAppProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2629,6 +3447,16 @@
         "shortName": "GetAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2666,6 +3494,16 @@
       "clientMethod": {
         "shortName": "GetAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2704,6 +3542,16 @@
         "shortName": "GetAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2741,6 +3589,16 @@
       "clientMethod": {
         "shortName": "ListAppProfiles",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListAppProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse, Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2780,6 +3638,16 @@
         "shortName": "ListAppProfilesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListAppProfilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse, Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2818,6 +3686,24 @@
       "clientMethod": {
         "shortName": "ListAppProfiles",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListAppProfiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse, Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2856,6 +3742,24 @@
         "shortName": "ListAppProfilesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListAppProfilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse, Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2893,6 +3797,24 @@
       "clientMethod": {
         "shortName": "ListAppProfiles",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListAppProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse, Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2931,6 +3853,24 @@
         "shortName": "ListAppProfilesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListAppProfilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse, Google.Cloud.Bigtable.Admin.V2.AppProfile>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -2968,6 +3908,16 @@
       "clientMethod": {
         "shortName": "UpdateAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.AppProfile, Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3007,6 +3957,16 @@
         "shortName": "UpdateAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.AppProfile, Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3045,6 +4005,20 @@
       "clientMethod": {
         "shortName": "UpdateAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
+            "name": "appProfile"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.AppProfile, Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3083,6 +4057,20 @@
         "shortName": "UpdateAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfile",
+            "name": "appProfile"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.AppProfile, Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata>>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3120,6 +4108,16 @@
       "clientMethod": {
         "shortName": "DeleteAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -3158,6 +4156,16 @@
         "shortName": "DeleteAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3196,6 +4204,16 @@
       "clientMethod": {
         "shortName": "DeleteAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -3233,6 +4251,16 @@
         "shortName": "DeleteAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3270,6 +4298,16 @@
       "clientMethod": {
         "shortName": "DeleteAppProfile",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableInstanceAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
@@ -3307,6 +4345,16 @@
         "shortName": "DeleteAppProfileAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3344,6 +4392,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3383,6 +4441,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3421,6 +4489,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3459,6 +4537,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3496,6 +4584,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3534,6 +4632,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3571,6 +4679,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3610,6 +4728,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3648,6 +4776,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3686,6 +4828,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3723,6 +4879,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3761,6 +4931,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3798,6 +4982,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3837,6 +5031,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3875,6 +5079,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3913,6 +5131,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3950,6 +5182,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -3988,6 +5234,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -4025,6 +5285,16 @@
       "clientMethod": {
         "shortName": "ListHotTablets",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTablets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListHotTabletsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -4064,6 +5334,16 @@
         "shortName": "ListHotTabletsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTabletsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListHotTabletsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -4102,6 +5382,24 @@
       "clientMethod": {
         "shortName": "ListHotTablets",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTablets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -4140,6 +5438,24 @@
         "shortName": "ListHotTabletsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTabletsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -4177,6 +5493,24 @@
       "clientMethod": {
         "shortName": "ListHotTablets",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTablets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -4215,6 +5549,24 @@
         "shortName": "ListHotTabletsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListHotTabletsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListHotTabletsResponse, Google.Cloud.Bigtable.Admin.V2.HotTablet>",
         "client": {
           "shortName": "BigtableInstanceAdminClient",
@@ -4252,6 +5604,16 @@
       "clientMethod": {
         "shortName": "CreateTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4291,6 +5653,16 @@
         "shortName": "CreateTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4329,6 +5701,24 @@
       "clientMethod": {
         "shortName": "CreateTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tableId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Table",
+            "name": "table"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4367,6 +5757,24 @@
         "shortName": "CreateTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tableId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Table",
+            "name": "table"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4404,6 +5812,24 @@
       "clientMethod": {
         "shortName": "CreateTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tableId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Table",
+            "name": "table"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4442,6 +5868,24 @@
         "shortName": "CreateTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tableId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Table",
+            "name": "table"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4479,6 +5923,16 @@
       "clientMethod": {
         "shortName": "CreateTableFromSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableFromSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4518,6 +5972,16 @@
         "shortName": "CreateTableFromSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableFromSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4556,6 +6020,24 @@
       "clientMethod": {
         "shortName": "CreateTableFromSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableFromSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tableId"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceSnapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4594,6 +6076,24 @@
         "shortName": "CreateTableFromSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableFromSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tableId"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceSnapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4631,6 +6131,24 @@
       "clientMethod": {
         "shortName": "CreateTableFromSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableFromSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tableId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SnapshotName",
+            "name": "sourceSnapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4669,6 +6187,24 @@
         "shortName": "CreateTableFromSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateTableFromSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tableId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SnapshotName",
+            "name": "sourceSnapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4706,6 +6242,16 @@
       "clientMethod": {
         "shortName": "ListTables",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListTables",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListTablesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListTablesResponse, Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4745,6 +6291,16 @@
         "shortName": "ListTablesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListTablesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListTablesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListTablesResponse, Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4783,6 +6339,24 @@
       "clientMethod": {
         "shortName": "ListTables",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListTables",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListTablesResponse, Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4821,6 +6395,24 @@
         "shortName": "ListTablesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListTablesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListTablesResponse, Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4858,6 +6450,24 @@
       "clientMethod": {
         "shortName": "ListTables",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListTables",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListTablesResponse, Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4896,6 +6506,24 @@
         "shortName": "ListTablesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListTablesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListTablesResponse, Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4933,6 +6561,16 @@
       "clientMethod": {
         "shortName": "GetTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -4972,6 +6610,16 @@
         "shortName": "GetTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5010,6 +6658,16 @@
       "clientMethod": {
         "shortName": "GetTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5048,6 +6706,16 @@
         "shortName": "GetTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5085,6 +6753,16 @@
       "clientMethod": {
         "shortName": "GetTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5123,6 +6801,16 @@
         "shortName": "GetTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5160,6 +6848,16 @@
       "clientMethod": {
         "shortName": "UpdateTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UpdateTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5199,6 +6897,16 @@
         "shortName": "UpdateTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UpdateTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5237,6 +6945,20 @@
       "clientMethod": {
         "shortName": "UpdateTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Table",
+            "name": "table"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UpdateTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5275,6 +6997,20 @@
         "shortName": "UpdateTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Table",
+            "name": "table"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UpdateTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5312,6 +7048,16 @@
       "clientMethod": {
         "shortName": "DeleteTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -5350,6 +7096,16 @@
         "shortName": "DeleteTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5388,6 +7144,16 @@
       "clientMethod": {
         "shortName": "DeleteTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -5425,6 +7191,16 @@
         "shortName": "DeleteTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5462,6 +7238,16 @@
       "clientMethod": {
         "shortName": "DeleteTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -5499,6 +7285,16 @@
         "shortName": "DeleteTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5536,6 +7332,16 @@
       "clientMethod": {
         "shortName": "UndeleteTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UndeleteTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5575,6 +7381,16 @@
         "shortName": "UndeleteTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UndeleteTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5613,6 +7429,16 @@
       "clientMethod": {
         "shortName": "UndeleteTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5651,6 +7477,16 @@
         "shortName": "UndeleteTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5688,6 +7524,16 @@
       "clientMethod": {
         "shortName": "UndeleteTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5726,6 +7572,16 @@
         "shortName": "UndeleteTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UndeleteTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.UndeleteTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5763,6 +7619,16 @@
       "clientMethod": {
         "shortName": "ModifyColumnFamilies",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ModifyColumnFamilies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5802,6 +7668,16 @@
         "shortName": "ModifyColumnFamiliesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ModifyColumnFamiliesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5840,6 +7716,20 @@
       "clientMethod": {
         "shortName": "ModifyColumnFamilies",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ModifyColumnFamilies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest+Types+Modification>",
+            "name": "modifications"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5878,6 +7768,20 @@
         "shortName": "ModifyColumnFamiliesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ModifyColumnFamiliesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest+Types+Modification>",
+            "name": "modifications"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5915,6 +7819,20 @@
       "clientMethod": {
         "shortName": "ModifyColumnFamilies",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ModifyColumnFamilies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest+Types+Modification>",
+            "name": "modifications"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Table",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5953,6 +7871,20 @@
         "shortName": "ModifyColumnFamiliesAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ModifyColumnFamiliesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest+Types+Modification>",
+            "name": "modifications"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Table>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -5990,6 +7922,16 @@
       "clientMethod": {
         "shortName": "DropRowRange",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DropRowRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -6028,6 +7970,16 @@
         "shortName": "DropRowRangeAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DropRowRangeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6066,6 +8018,16 @@
       "clientMethod": {
         "shortName": "GenerateConsistencyToken",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GenerateConsistencyToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6105,6 +8067,16 @@
         "shortName": "GenerateConsistencyTokenAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GenerateConsistencyTokenAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6143,6 +8115,16 @@
       "clientMethod": {
         "shortName": "GenerateConsistencyToken",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GenerateConsistencyToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6181,6 +8163,16 @@
         "shortName": "GenerateConsistencyTokenAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GenerateConsistencyTokenAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6218,6 +8210,16 @@
       "clientMethod": {
         "shortName": "GenerateConsistencyToken",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GenerateConsistencyToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6256,6 +8258,16 @@
         "shortName": "GenerateConsistencyTokenAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GenerateConsistencyTokenAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6293,6 +8305,16 @@
       "clientMethod": {
         "shortName": "CheckConsistency",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CheckConsistency",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6332,6 +8354,16 @@
         "shortName": "CheckConsistencyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CheckConsistencyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6370,6 +8402,20 @@
       "clientMethod": {
         "shortName": "CheckConsistency",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CheckConsistency",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "consistencyToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6408,6 +8454,20 @@
         "shortName": "CheckConsistencyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CheckConsistencyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "consistencyToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6445,6 +8505,20 @@
       "clientMethod": {
         "shortName": "CheckConsistency",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CheckConsistency",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "consistencyToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6483,6 +8557,20 @@
         "shortName": "CheckConsistencyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CheckConsistencyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "consistencyToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6520,6 +8608,16 @@
       "clientMethod": {
         "shortName": "SnapshotTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SnapshotTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Snapshot, Google.Cloud.Bigtable.Admin.V2.SnapshotTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6559,6 +8657,16 @@
         "shortName": "SnapshotTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SnapshotTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Snapshot, Google.Cloud.Bigtable.Admin.V2.SnapshotTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6597,6 +8705,28 @@
       "clientMethod": {
         "shortName": "SnapshotTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SnapshotTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "snapshotId"
+          },
+          {
+            "type": "System.String",
+            "name": "description"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Snapshot, Google.Cloud.Bigtable.Admin.V2.SnapshotTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6635,6 +8765,28 @@
         "shortName": "SnapshotTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SnapshotTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "snapshotId"
+          },
+          {
+            "type": "System.String",
+            "name": "description"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Snapshot, Google.Cloud.Bigtable.Admin.V2.SnapshotTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6672,6 +8824,28 @@
       "clientMethod": {
         "shortName": "SnapshotTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SnapshotTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "snapshotId"
+          },
+          {
+            "type": "System.String",
+            "name": "description"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Snapshot, Google.Cloud.Bigtable.Admin.V2.SnapshotTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6710,6 +8884,28 @@
         "shortName": "SnapshotTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SnapshotTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "snapshotId"
+          },
+          {
+            "type": "System.String",
+            "name": "description"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Snapshot, Google.Cloud.Bigtable.Admin.V2.SnapshotTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6747,6 +8943,16 @@
       "clientMethod": {
         "shortName": "GetSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Snapshot",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6786,6 +8992,16 @@
         "shortName": "GetSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6824,6 +9040,16 @@
       "clientMethod": {
         "shortName": "GetSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Snapshot",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6862,6 +9088,16 @@
         "shortName": "GetSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6899,6 +9135,16 @@
       "clientMethod": {
         "shortName": "GetSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Snapshot",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6937,6 +9183,16 @@
         "shortName": "GetSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -6974,6 +9230,16 @@
       "clientMethod": {
         "shortName": "ListSnapshots",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse, Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7013,6 +9279,16 @@
         "shortName": "ListSnapshotsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse, Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7051,6 +9327,24 @@
       "clientMethod": {
         "shortName": "ListSnapshots",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse, Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7089,6 +9383,24 @@
         "shortName": "ListSnapshotsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse, Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7126,6 +9438,24 @@
       "clientMethod": {
         "shortName": "ListSnapshots",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse, Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7164,6 +9494,24 @@
         "shortName": "ListSnapshotsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse, Google.Cloud.Bigtable.Admin.V2.Snapshot>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7201,6 +9549,16 @@
       "clientMethod": {
         "shortName": "DeleteSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -7239,6 +9597,16 @@
         "shortName": "DeleteSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7277,6 +9645,16 @@
       "clientMethod": {
         "shortName": "DeleteSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -7314,6 +9692,16 @@
         "shortName": "DeleteSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7351,6 +9739,16 @@
       "clientMethod": {
         "shortName": "DeleteSnapshot",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -7388,6 +9786,16 @@
         "shortName": "DeleteSnapshotAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7425,6 +9833,16 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CreateBackupMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7464,6 +9882,16 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CreateBackupMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7502,6 +9930,24 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CreateBackupMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7540,6 +9986,24 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CreateBackupMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7577,6 +10041,24 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CreateBackupMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7615,6 +10097,24 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Backup, Google.Cloud.Bigtable.Admin.V2.CreateBackupMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7652,6 +10152,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Backup",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7691,6 +10201,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7729,6 +10249,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Backup",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7767,6 +10297,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7804,6 +10344,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Backup",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7842,6 +10392,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7879,6 +10439,16 @@
       "clientMethod": {
         "shortName": "UpdateBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Backup",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7918,6 +10488,16 @@
         "shortName": "UpdateBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7956,6 +10536,20 @@
       "clientMethod": {
         "shortName": "UpdateBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Bigtable.Admin.V2.Backup",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -7994,6 +10588,20 @@
         "shortName": "UpdateBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.UpdateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8031,6 +10639,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -8069,6 +10687,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8107,6 +10735,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -8144,6 +10782,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8181,6 +10829,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "BigtableTableAdminClient",
           "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient"
@@ -8218,6 +10876,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8255,6 +10923,16 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse, Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8294,6 +10972,16 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse, Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8332,6 +11020,24 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListBackups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse, Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8370,6 +11076,24 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse, Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8407,6 +11131,24 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse, Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8445,6 +11187,24 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse, Google.Cloud.Bigtable.Admin.V2.Backup>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8482,6 +11242,16 @@
       "clientMethod": {
         "shortName": "RestoreTable",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.RestoreTable",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.RestoreTableMetadata>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8521,6 +11291,16 @@
         "shortName": "RestoreTableAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.RestoreTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.Table, Google.Cloud.Bigtable.Admin.V2.RestoreTableMetadata>>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8559,6 +11339,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8598,6 +11388,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8636,6 +11436,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8674,6 +11484,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8711,6 +11531,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8749,6 +11579,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8786,6 +11626,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8825,6 +11675,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8863,6 +11723,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8901,6 +11775,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8938,6 +11826,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -8976,6 +11878,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -9013,6 +11929,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -9052,6 +11978,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -9090,6 +12026,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -9128,6 +12078,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -9165,6 +12129,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "BigtableTableAdminClient",
@@ -9203,6 +12181,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableTableAdminClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "BigtableTableAdminClient",

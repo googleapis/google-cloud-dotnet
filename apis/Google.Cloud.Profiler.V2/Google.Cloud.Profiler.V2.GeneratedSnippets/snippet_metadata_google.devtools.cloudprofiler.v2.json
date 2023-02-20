@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateProfile",
         "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.CreateProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Profiler.V2.Profile",
         "client": {
           "shortName": "ProfilerServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateProfileAsync",
         "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.CreateProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
         "client": {
           "shortName": "ProfilerServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "CreateOfflineProfile",
         "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateOfflineProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.CreateOfflineProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Profiler.V2.Profile",
         "client": {
           "shortName": "ProfilerServiceClient",
@@ -135,6 +165,16 @@
         "shortName": "CreateOfflineProfileAsync",
         "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateOfflineProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.CreateOfflineProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
         "client": {
           "shortName": "ProfilerServiceClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "UpdateProfile",
         "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.UpdateProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.UpdateProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Profiler.V2.Profile",
         "client": {
           "shortName": "ProfilerServiceClient",
@@ -212,6 +262,16 @@
         "shortName": "UpdateProfileAsync",
         "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.UpdateProfileAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.UpdateProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
         "client": {
           "shortName": "ProfilerServiceClient",

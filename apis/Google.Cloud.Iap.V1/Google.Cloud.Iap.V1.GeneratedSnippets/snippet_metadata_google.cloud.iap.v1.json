@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -135,6 +165,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -212,6 +262,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -250,6 +310,16 @@
       "clientMethod": {
         "shortName": "GetIapSettings",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetIapSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.GetIapSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.IapSettings",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -289,6 +359,16 @@
         "shortName": "GetIapSettingsAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetIapSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.GetIapSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.IapSettings>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -327,6 +407,16 @@
       "clientMethod": {
         "shortName": "UpdateIapSettings",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateIapSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.UpdateIapSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.IapSettings",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -366,6 +456,16 @@
         "shortName": "UpdateIapSettingsAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateIapSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.UpdateIapSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.IapSettings>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -404,6 +504,16 @@
       "clientMethod": {
         "shortName": "ListTunnelDestGroups",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -443,6 +553,16 @@
         "shortName": "ListTunnelDestGroupsAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -481,6 +601,24 @@
       "clientMethod": {
         "shortName": "ListTunnelDestGroups",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -519,6 +657,24 @@
         "shortName": "ListTunnelDestGroupsAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -556,6 +712,24 @@
       "clientMethod": {
         "shortName": "ListTunnelDestGroups",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -594,6 +768,24 @@
         "shortName": "ListTunnelDestGroupsAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.ListTunnelDestGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse, Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -631,6 +823,16 @@
       "clientMethod": {
         "shortName": "CreateTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -670,6 +872,16 @@
         "shortName": "CreateTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -708,6 +920,24 @@
       "clientMethod": {
         "shortName": "CreateTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroup",
+            "name": "tunnelDestGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "tunnelDestGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -746,6 +976,24 @@
         "shortName": "CreateTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroup",
+            "name": "tunnelDestGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "tunnelDestGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -783,6 +1031,24 @@
       "clientMethod": {
         "shortName": "CreateTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroup",
+            "name": "tunnelDestGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "tunnelDestGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -821,6 +1087,24 @@
         "shortName": "CreateTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.CreateTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroup",
+            "name": "tunnelDestGroup"
+          },
+          {
+            "type": "System.String",
+            "name": "tunnelDestGroupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -858,6 +1142,16 @@
       "clientMethod": {
         "shortName": "GetTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.GetTunnelDestGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -897,6 +1191,16 @@
         "shortName": "GetTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.GetTunnelDestGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -935,6 +1239,16 @@
       "clientMethod": {
         "shortName": "GetTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -973,6 +1287,16 @@
         "shortName": "GetTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1010,6 +1334,16 @@
       "clientMethod": {
         "shortName": "GetTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1048,6 +1382,16 @@
         "shortName": "GetTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.GetTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1085,6 +1429,16 @@
       "clientMethod": {
         "shortName": "DeleteTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
           "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
@@ -1123,6 +1477,16 @@
         "shortName": "DeleteTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.DeleteTunnelDestGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1161,6 +1525,16 @@
       "clientMethod": {
         "shortName": "DeleteTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
           "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
@@ -1198,6 +1572,16 @@
         "shortName": "DeleteTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1235,6 +1619,16 @@
       "clientMethod": {
         "shortName": "DeleteTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
           "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient"
@@ -1272,6 +1666,16 @@
         "shortName": "DeleteTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.DeleteTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1309,6 +1713,16 @@
       "clientMethod": {
         "shortName": "UpdateTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1348,6 +1762,16 @@
         "shortName": "UpdateTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.UpdateTunnelDestGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1386,6 +1810,20 @@
       "clientMethod": {
         "shortName": "UpdateTunnelDestGroup",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroup",
+            "name": "tunnelDestGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.TunnelDestGroup",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1424,6 +1862,20 @@
         "shortName": "UpdateTunnelDestGroupAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyAdminServiceClient.UpdateTunnelDestGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.TunnelDestGroup",
+            "name": "tunnelDestGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.TunnelDestGroup>",
         "client": {
           "shortName": "IdentityAwareProxyAdminServiceClient",
@@ -1461,6 +1913,16 @@
       "clientMethod": {
         "shortName": "ListBrands",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.ListBrands",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.ListBrandsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.ListBrandsResponse",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1500,6 +1962,16 @@
         "shortName": "ListBrandsAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.ListBrandsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.ListBrandsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.ListBrandsResponse>",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1538,6 +2010,16 @@
       "clientMethod": {
         "shortName": "CreateBrand",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.CreateBrand",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.CreateBrandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.Brand",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1577,6 +2059,16 @@
         "shortName": "CreateBrandAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.CreateBrandAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.CreateBrandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.Brand>",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1615,6 +2107,16 @@
       "clientMethod": {
         "shortName": "GetBrand",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.GetBrand",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.GetBrandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.Brand",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1654,6 +2156,16 @@
         "shortName": "GetBrandAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.GetBrandAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.GetBrandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.Brand>",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1692,6 +2204,16 @@
       "clientMethod": {
         "shortName": "CreateIdentityAwareProxyClient",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.CreateIdentityAwareProxyClient",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.IdentityAwareProxyClient",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1731,6 +2253,16 @@
         "shortName": "CreateIdentityAwareProxyClientAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.CreateIdentityAwareProxyClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.IdentityAwareProxyClient>",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1769,6 +2301,16 @@
       "clientMethod": {
         "shortName": "ListIdentityAwareProxyClients",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.ListIdentityAwareProxyClients",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse, Google.Cloud.Iap.V1.IdentityAwareProxyClient>",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1808,6 +2350,16 @@
         "shortName": "ListIdentityAwareProxyClientsAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.ListIdentityAwareProxyClientsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse, Google.Cloud.Iap.V1.IdentityAwareProxyClient>",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1846,6 +2398,16 @@
       "clientMethod": {
         "shortName": "GetIdentityAwareProxyClient",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.GetIdentityAwareProxyClient",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.IdentityAwareProxyClient",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1885,6 +2447,16 @@
         "shortName": "GetIdentityAwareProxyClientAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.GetIdentityAwareProxyClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.IdentityAwareProxyClient>",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1923,6 +2495,16 @@
       "clientMethod": {
         "shortName": "ResetIdentityAwareProxyClientSecret",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.ResetIdentityAwareProxyClientSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iap.V1.IdentityAwareProxyClient",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -1962,6 +2544,16 @@
         "shortName": "ResetIdentityAwareProxyClientSecretAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.ResetIdentityAwareProxyClientSecretAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iap.V1.IdentityAwareProxyClient>",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
@@ -2000,6 +2592,16 @@
       "clientMethod": {
         "shortName": "DeleteIdentityAwareProxyClient",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.DeleteIdentityAwareProxyClient",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",
           "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient"
@@ -2038,6 +2640,16 @@
         "shortName": "DeleteIdentityAwareProxyClientAsync",
         "fullName": "Google.Cloud.Iap.V1.IdentityAwareProxyOAuthServiceClient.DeleteIdentityAwareProxyClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "IdentityAwareProxyOAuthServiceClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "BatchAnnotateImages",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.BatchAnnotateImagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.BatchAnnotateImagesResponse",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -58,6 +68,16 @@
         "shortName": "BatchAnnotateImagesAsync",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.BatchAnnotateImagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateImagesResponse>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "BatchAnnotateImages",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages",
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Vision.V1.AnnotateImageRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.BatchAnnotateImagesResponse",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -134,6 +164,16 @@
         "shortName": "BatchAnnotateImagesAsync",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Vision.V1.AnnotateImageRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateImagesResponse>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "BatchAnnotateFiles",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.BatchAnnotateFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.BatchAnnotateFilesResponse",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -210,6 +260,16 @@
         "shortName": "BatchAnnotateFilesAsync",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.BatchAnnotateFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateFilesResponse>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -248,6 +308,16 @@
       "clientMethod": {
         "shortName": "BatchAnnotateFiles",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFiles",
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Vision.V1.AnnotateFileRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.BatchAnnotateFilesResponse",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -286,6 +356,16 @@
         "shortName": "BatchAnnotateFilesAsync",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateFilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Vision.V1.AnnotateFileRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.BatchAnnotateFilesResponse>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "AsyncBatchAnnotateImages",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -362,6 +452,16 @@
         "shortName": "AsyncBatchAnnotateImagesAsync",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -400,6 +500,20 @@
       "clientMethod": {
         "shortName": "AsyncBatchAnnotateImages",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImages",
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Vision.V1.AnnotateImageRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -438,6 +552,20 @@
         "shortName": "AsyncBatchAnnotateImagesAsync",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Vision.V1.AnnotateImageRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -475,6 +603,16 @@
       "clientMethod": {
         "shortName": "AsyncBatchAnnotateFiles",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -514,6 +652,16 @@
         "shortName": "AsyncBatchAnnotateFilesAsync",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -552,6 +700,16 @@
       "clientMethod": {
         "shortName": "AsyncBatchAnnotateFiles",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFiles",
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Vision.V1.AsyncAnnotateFileRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -590,6 +748,16 @@
         "shortName": "AsyncBatchAnnotateFilesAsync",
         "fullName": "Google.Cloud.Vision.V1.ImageAnnotatorClient.AsyncBatchAnnotateFilesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Vision.V1.AsyncAnnotateFileRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse, Google.Cloud.Vision.V1.OperationMetadata>>",
         "client": {
           "shortName": "ImageAnnotatorClient",
@@ -627,6 +795,16 @@
       "clientMethod": {
         "shortName": "CreateProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.CreateProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ProductSet",
         "client": {
           "shortName": "ProductSearchClient",
@@ -666,6 +844,16 @@
         "shortName": "CreateProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.CreateProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -704,6 +892,24 @@
       "clientMethod": {
         "shortName": "CreateProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSet",
+            "name": "productSet"
+          },
+          {
+            "type": "System.String",
+            "name": "productSetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ProductSet",
         "client": {
           "shortName": "ProductSearchClient",
@@ -742,6 +948,24 @@
         "shortName": "CreateProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSet",
+            "name": "productSet"
+          },
+          {
+            "type": "System.String",
+            "name": "productSetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -779,6 +1003,24 @@
       "clientMethod": {
         "shortName": "CreateProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductSet",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSet",
+            "name": "productSet"
+          },
+          {
+            "type": "System.String",
+            "name": "productSetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ProductSet",
         "client": {
           "shortName": "ProductSearchClient",
@@ -817,6 +1059,24 @@
         "shortName": "CreateProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSet",
+            "name": "productSet"
+          },
+          {
+            "type": "System.String",
+            "name": "productSetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -854,6 +1114,16 @@
       "clientMethod": {
         "shortName": "ListProductSets",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductSets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ListProductSetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductSetsResponse, Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -893,6 +1163,16 @@
         "shortName": "ListProductSetsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ListProductSetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductSetsResponse, Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -931,6 +1211,24 @@
       "clientMethod": {
         "shortName": "ListProductSets",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductSets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductSetsResponse, Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -969,6 +1267,24 @@
         "shortName": "ListProductSetsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductSetsResponse, Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1006,6 +1322,24 @@
       "clientMethod": {
         "shortName": "ListProductSets",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductSets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductSetsResponse, Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1044,6 +1378,24 @@
         "shortName": "ListProductSetsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductSetsResponse, Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1081,6 +1433,16 @@
       "clientMethod": {
         "shortName": "GetProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.GetProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ProductSet",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1120,6 +1482,16 @@
         "shortName": "GetProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.GetProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1158,6 +1530,16 @@
       "clientMethod": {
         "shortName": "GetProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ProductSet",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1196,6 +1578,16 @@
         "shortName": "GetProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1233,6 +1625,16 @@
       "clientMethod": {
         "shortName": "GetProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ProductSet",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1271,6 +1673,16 @@
         "shortName": "GetProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1308,6 +1720,16 @@
       "clientMethod": {
         "shortName": "UpdateProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.UpdateProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.UpdateProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ProductSet",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1347,6 +1769,16 @@
         "shortName": "UpdateProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.UpdateProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.UpdateProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1385,6 +1817,20 @@
       "clientMethod": {
         "shortName": "UpdateProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.UpdateProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSet",
+            "name": "productSet"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ProductSet",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1423,6 +1869,20 @@
         "shortName": "UpdateProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.UpdateProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSet",
+            "name": "productSet"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ProductSet>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1460,6 +1920,16 @@
       "clientMethod": {
         "shortName": "DeleteProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.DeleteProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -1498,6 +1968,16 @@
         "shortName": "DeleteProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.DeleteProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1536,6 +2016,16 @@
       "clientMethod": {
         "shortName": "DeleteProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -1573,6 +2063,16 @@
         "shortName": "DeleteProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1610,6 +2110,16 @@
       "clientMethod": {
         "shortName": "DeleteProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -1647,6 +2157,16 @@
         "shortName": "DeleteProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1684,6 +2204,16 @@
       "clientMethod": {
         "shortName": "CreateProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.CreateProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.Product",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1723,6 +2253,16 @@
         "shortName": "CreateProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.CreateProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1761,6 +2301,24 @@
       "clientMethod": {
         "shortName": "CreateProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.Product",
+            "name": "product"
+          },
+          {
+            "type": "System.String",
+            "name": "productId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.Product",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1799,6 +2357,24 @@
         "shortName": "CreateProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.Product",
+            "name": "product"
+          },
+          {
+            "type": "System.String",
+            "name": "productId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1836,6 +2412,24 @@
       "clientMethod": {
         "shortName": "CreateProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProduct",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.Product",
+            "name": "product"
+          },
+          {
+            "type": "System.String",
+            "name": "productId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.Product",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1874,6 +2468,24 @@
         "shortName": "CreateProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.Product",
+            "name": "product"
+          },
+          {
+            "type": "System.String",
+            "name": "productId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1911,6 +2523,16 @@
       "clientMethod": {
         "shortName": "ListProducts",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ListProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductsResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1950,6 +2572,16 @@
         "shortName": "ListProductsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ListProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductsResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -1988,6 +2620,24 @@
       "clientMethod": {
         "shortName": "ListProducts",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProducts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductsResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2026,6 +2676,24 @@
         "shortName": "ListProductsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductsResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2063,6 +2731,24 @@
       "clientMethod": {
         "shortName": "ListProducts",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProducts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductsResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2101,6 +2787,24 @@
         "shortName": "ListProductsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductsResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2138,6 +2842,16 @@
       "clientMethod": {
         "shortName": "GetProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.GetProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.Product",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2177,6 +2891,16 @@
         "shortName": "GetProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.GetProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2215,6 +2939,16 @@
       "clientMethod": {
         "shortName": "GetProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.Product",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2253,6 +2987,16 @@
         "shortName": "GetProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2290,6 +3034,16 @@
       "clientMethod": {
         "shortName": "GetProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.Product",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2328,6 +3082,16 @@
         "shortName": "GetProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2365,6 +3129,16 @@
       "clientMethod": {
         "shortName": "UpdateProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.UpdateProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.UpdateProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.Product",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2404,6 +3178,16 @@
         "shortName": "UpdateProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.UpdateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.UpdateProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2442,6 +3226,20 @@
       "clientMethod": {
         "shortName": "UpdateProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.UpdateProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.Product",
+            "name": "product"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.Product",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2480,6 +3278,20 @@
         "shortName": "UpdateProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.UpdateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.Product",
+            "name": "product"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2517,6 +3329,16 @@
       "clientMethod": {
         "shortName": "DeleteProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.DeleteProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -2555,6 +3377,16 @@
         "shortName": "DeleteProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.DeleteProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2593,6 +3425,16 @@
       "clientMethod": {
         "shortName": "DeleteProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -2630,6 +3472,16 @@
         "shortName": "DeleteProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2667,6 +3519,16 @@
       "clientMethod": {
         "shortName": "DeleteProduct",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -2704,6 +3566,16 @@
         "shortName": "DeleteProductAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2741,6 +3613,16 @@
       "clientMethod": {
         "shortName": "CreateReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateReferenceImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.CreateReferenceImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ReferenceImage",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2780,6 +3662,16 @@
         "shortName": "CreateReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.CreateReferenceImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2818,6 +3710,24 @@
       "clientMethod": {
         "shortName": "CreateReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateReferenceImage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ReferenceImage",
+            "name": "referenceImage"
+          },
+          {
+            "type": "System.String",
+            "name": "referenceImageId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ReferenceImage",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2856,6 +3766,24 @@
         "shortName": "CreateReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ReferenceImage",
+            "name": "referenceImage"
+          },
+          {
+            "type": "System.String",
+            "name": "referenceImageId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2893,6 +3821,24 @@
       "clientMethod": {
         "shortName": "CreateReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateReferenceImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ReferenceImage",
+            "name": "referenceImage"
+          },
+          {
+            "type": "System.String",
+            "name": "referenceImageId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ReferenceImage",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2931,6 +3877,24 @@
         "shortName": "CreateReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.CreateReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ReferenceImage",
+            "name": "referenceImage"
+          },
+          {
+            "type": "System.String",
+            "name": "referenceImageId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -2968,6 +3932,16 @@
       "clientMethod": {
         "shortName": "DeleteReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteReferenceImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.DeleteReferenceImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -3006,6 +3980,16 @@
         "shortName": "DeleteReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.DeleteReferenceImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3044,6 +4028,16 @@
       "clientMethod": {
         "shortName": "DeleteReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteReferenceImage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -3081,6 +4075,16 @@
         "shortName": "DeleteReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3118,6 +4122,16 @@
       "clientMethod": {
         "shortName": "DeleteReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteReferenceImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ReferenceImageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -3155,6 +4169,16 @@
         "shortName": "DeleteReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.DeleteReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ReferenceImageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3192,6 +4216,16 @@
       "clientMethod": {
         "shortName": "ListReferenceImages",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListReferenceImages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ListReferenceImagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListReferenceImagesResponse, Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3231,6 +4265,16 @@
         "shortName": "ListReferenceImagesAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListReferenceImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ListReferenceImagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListReferenceImagesResponse, Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3269,6 +4313,24 @@
       "clientMethod": {
         "shortName": "ListReferenceImages",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListReferenceImages",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListReferenceImagesResponse, Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3307,6 +4369,24 @@
         "shortName": "ListReferenceImagesAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListReferenceImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListReferenceImagesResponse, Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3344,6 +4424,24 @@
       "clientMethod": {
         "shortName": "ListReferenceImages",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListReferenceImages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListReferenceImagesResponse, Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3382,6 +4480,24 @@
         "shortName": "ListReferenceImagesAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListReferenceImagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListReferenceImagesResponse, Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3419,6 +4535,16 @@
       "clientMethod": {
         "shortName": "GetReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetReferenceImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.GetReferenceImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ReferenceImage",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3458,6 +4584,16 @@
         "shortName": "GetReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.GetReferenceImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3496,6 +4632,16 @@
       "clientMethod": {
         "shortName": "GetReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetReferenceImage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ReferenceImage",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3534,6 +4680,16 @@
         "shortName": "GetReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3571,6 +4727,16 @@
       "clientMethod": {
         "shortName": "GetReferenceImage",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetReferenceImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ReferenceImageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Vision.V1.ReferenceImage",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3609,6 +4775,16 @@
         "shortName": "GetReferenceImageAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.GetReferenceImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ReferenceImageName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Vision.V1.ReferenceImage>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3646,6 +4822,16 @@
       "clientMethod": {
         "shortName": "AddProductToProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.AddProductToProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.AddProductToProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -3684,6 +4870,16 @@
         "shortName": "AddProductToProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.AddProductToProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.AddProductToProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3722,6 +4918,20 @@
       "clientMethod": {
         "shortName": "AddProductToProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.AddProductToProductSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -3759,6 +4969,20 @@
         "shortName": "AddProductToProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.AddProductToProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3796,6 +5020,20 @@
       "clientMethod": {
         "shortName": "AddProductToProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.AddProductToProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -3833,6 +5071,20 @@
         "shortName": "AddProductToProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.AddProductToProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3870,6 +5122,16 @@
       "clientMethod": {
         "shortName": "RemoveProductFromProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.RemoveProductFromProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -3908,6 +5170,16 @@
         "shortName": "RemoveProductFromProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.RemoveProductFromProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -3946,6 +5218,20 @@
       "clientMethod": {
         "shortName": "RemoveProductFromProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.RemoveProductFromProductSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -3983,6 +5269,20 @@
         "shortName": "RemoveProductFromProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.RemoveProductFromProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4020,6 +5320,20 @@
       "clientMethod": {
         "shortName": "RemoveProductFromProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.RemoveProductFromProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductSearchClient",
           "fullName": "Google.Cloud.Vision.V1.ProductSearchClient"
@@ -4057,6 +5371,20 @@
         "shortName": "RemoveProductFromProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.RemoveProductFromProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4094,6 +5422,16 @@
       "clientMethod": {
         "shortName": "ListProductsInProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsInProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ListProductsInProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductsInProductSetResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4133,6 +5471,16 @@
         "shortName": "ListProductsInProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsInProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ListProductsInProductSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductsInProductSetResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4171,6 +5519,24 @@
       "clientMethod": {
         "shortName": "ListProductsInProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsInProductSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductsInProductSetResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4209,6 +5575,24 @@
         "shortName": "ListProductsInProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsInProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductsInProductSetResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4246,6 +5630,24 @@
       "clientMethod": {
         "shortName": "ListProductsInProductSet",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsInProductSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Vision.V1.ListProductsInProductSetResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4284,6 +5686,24 @@
         "shortName": "ListProductsInProductSetAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ListProductsInProductSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ProductSetName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Vision.V1.ListProductsInProductSetResponse, Google.Cloud.Vision.V1.Product>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4321,6 +5741,16 @@
       "clientMethod": {
         "shortName": "ImportProductSets",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ImportProductSets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ImportProductSetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.ImportProductSetsResponse, Google.Cloud.Vision.V1.BatchOperationMetadata>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4360,6 +5790,16 @@
         "shortName": "ImportProductSetsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ImportProductSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.ImportProductSetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.ImportProductSetsResponse, Google.Cloud.Vision.V1.BatchOperationMetadata>>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4398,6 +5838,20 @@
       "clientMethod": {
         "shortName": "ImportProductSets",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ImportProductSets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ImportProductSetsInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.ImportProductSetsResponse, Google.Cloud.Vision.V1.BatchOperationMetadata>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4436,6 +5890,20 @@
         "shortName": "ImportProductSetsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ImportProductSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ImportProductSetsInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.ImportProductSetsResponse, Google.Cloud.Vision.V1.BatchOperationMetadata>>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4473,6 +5941,20 @@
       "clientMethod": {
         "shortName": "ImportProductSets",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ImportProductSets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ImportProductSetsInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Vision.V1.ImportProductSetsResponse, Google.Cloud.Vision.V1.BatchOperationMetadata>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4511,6 +5993,20 @@
         "shortName": "ImportProductSetsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.ImportProductSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Vision.V1.ImportProductSetsInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Vision.V1.ImportProductSetsResponse, Google.Cloud.Vision.V1.BatchOperationMetadata>>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4548,6 +6044,16 @@
       "clientMethod": {
         "shortName": "PurgeProducts",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.PurgeProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.PurgeProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Vision.V1.BatchOperationMetadata>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4587,6 +6093,16 @@
         "shortName": "PurgeProductsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.PurgeProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Vision.V1.PurgeProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Vision.V1.BatchOperationMetadata>>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4625,6 +6141,16 @@
       "clientMethod": {
         "shortName": "PurgeProducts",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.PurgeProducts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Vision.V1.BatchOperationMetadata>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4663,6 +6189,16 @@
         "shortName": "PurgeProductsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.PurgeProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Vision.V1.BatchOperationMetadata>>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4700,6 +6236,16 @@
       "clientMethod": {
         "shortName": "PurgeProducts",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.PurgeProducts",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Vision.V1.BatchOperationMetadata>",
         "client": {
           "shortName": "ProductSearchClient",
@@ -4738,6 +6284,16 @@
         "shortName": "PurgeProductsAsync",
         "fullName": "Google.Cloud.Vision.V1.ProductSearchClient.PurgeProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Vision.V1.BatchOperationMetadata>>",
         "client": {
           "shortName": "ProductSearchClient",

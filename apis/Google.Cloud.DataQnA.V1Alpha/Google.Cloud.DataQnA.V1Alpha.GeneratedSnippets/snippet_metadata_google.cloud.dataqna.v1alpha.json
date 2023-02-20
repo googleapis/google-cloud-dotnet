@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "SuggestQueries",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.AutoSuggestionServiceClient.SuggestQueries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.SuggestQueriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.SuggestQueriesResponse",
         "client": {
           "shortName": "AutoSuggestionServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "SuggestQueriesAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.AutoSuggestionServiceClient.SuggestQueriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.SuggestQueriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.SuggestQueriesResponse>",
         "client": {
           "shortName": "AutoSuggestionServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetQuestion",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetQuestion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.Question",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -135,6 +165,16 @@
         "shortName": "GetQuestionAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetQuestionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.Question>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "GetQuestion",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetQuestion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.Question",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -211,6 +261,16 @@
         "shortName": "GetQuestionAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetQuestionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.Question>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -248,6 +308,16 @@
       "clientMethod": {
         "shortName": "GetQuestion",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetQuestion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.QuestionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.Question",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -286,6 +356,16 @@
         "shortName": "GetQuestionAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetQuestionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.QuestionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.Question>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "CreateQuestion",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.CreateQuestion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.Question",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -362,6 +452,16 @@
         "shortName": "CreateQuestionAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.CreateQuestionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.Question>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -400,6 +500,20 @@
       "clientMethod": {
         "shortName": "CreateQuestion",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.CreateQuestion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.Question",
+            "name": "question"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.Question",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -438,6 +552,20 @@
         "shortName": "CreateQuestionAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.CreateQuestionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.Question",
+            "name": "question"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.Question>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -475,6 +603,20 @@
       "clientMethod": {
         "shortName": "CreateQuestion",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.CreateQuestion",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.Question",
+            "name": "question"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.Question",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -513,6 +655,20 @@
         "shortName": "CreateQuestionAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.CreateQuestionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.Question",
+            "name": "question"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.Question>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -550,6 +706,16 @@
       "clientMethod": {
         "shortName": "ExecuteQuestion",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.ExecuteQuestion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.Question",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -589,6 +755,16 @@
         "shortName": "ExecuteQuestionAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.ExecuteQuestionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.Question>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -627,6 +803,20 @@
       "clientMethod": {
         "shortName": "ExecuteQuestion",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.ExecuteQuestion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Int32",
+            "name": "interpretationIndex"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.Question",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -665,6 +855,20 @@
         "shortName": "ExecuteQuestionAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.ExecuteQuestionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Int32",
+            "name": "interpretationIndex"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.Question>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -702,6 +906,16 @@
       "clientMethod": {
         "shortName": "GetUserFeedback",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetUserFeedback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.UserFeedback",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -741,6 +955,16 @@
         "shortName": "GetUserFeedbackAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetUserFeedbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.UserFeedback>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -779,6 +1003,16 @@
       "clientMethod": {
         "shortName": "GetUserFeedback",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetUserFeedback",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.UserFeedback",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -817,6 +1051,16 @@
         "shortName": "GetUserFeedbackAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetUserFeedbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.UserFeedback>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -854,6 +1098,16 @@
       "clientMethod": {
         "shortName": "GetUserFeedback",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetUserFeedback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.UserFeedbackName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.UserFeedback",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -892,6 +1146,16 @@
         "shortName": "GetUserFeedbackAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.GetUserFeedbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.UserFeedbackName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.UserFeedback>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -929,6 +1193,16 @@
       "clientMethod": {
         "shortName": "UpdateUserFeedback",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.UpdateUserFeedback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.UserFeedback",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -968,6 +1242,16 @@
         "shortName": "UpdateUserFeedbackAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.UpdateUserFeedbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.UserFeedback>",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -1006,6 +1290,20 @@
       "clientMethod": {
         "shortName": "UpdateUserFeedback",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.UpdateUserFeedback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.UserFeedback",
+            "name": "userFeedback"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataQnA.V1Alpha.UserFeedback",
         "client": {
           "shortName": "QuestionServiceClient",
@@ -1044,6 +1342,20 @@
         "shortName": "UpdateUserFeedbackAsync",
         "fullName": "Google.Cloud.DataQnA.V1Alpha.QuestionServiceClient.UpdateUserFeedbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataQnA.V1Alpha.UserFeedback",
+            "name": "userFeedback"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataQnA.V1Alpha.UserFeedback>",
         "client": {
           "shortName": "QuestionServiceClient",

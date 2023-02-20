@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.CreateWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.CreateWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1.Workload, Google.Cloud.AssuredWorkloads.V1.CreateWorkloadOperationMetadata>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.CreateWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.CreateWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1.Workload, Google.Cloud.AssuredWorkloads.V1.CreateWorkloadOperationMetadata>>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.CreateWorkload",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1.Workload, Google.Cloud.AssuredWorkloads.V1.CreateWorkloadOperationMetadata>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.CreateWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1.Workload, Google.Cloud.AssuredWorkloads.V1.CreateWorkloadOperationMetadata>>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.CreateWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1.Workload, Google.Cloud.AssuredWorkloads.V1.CreateWorkloadOperationMetadata>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.CreateWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1.Workload, Google.Cloud.AssuredWorkloads.V1.CreateWorkloadOperationMetadata>>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "UpdateWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.UpdateWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.UpdateWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.Workload",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "UpdateWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.UpdateWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.UpdateWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -323,6 +419,20 @@
       "clientMethod": {
         "shortName": "UpdateWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.UpdateWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.Workload",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -361,6 +471,20 @@
         "shortName": "UpdateWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.UpdateWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -398,6 +522,16 @@
       "clientMethod": {
         "shortName": "RestrictAllowedResources",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.RestrictAllowedResources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -437,6 +571,16 @@
         "shortName": "RestrictAllowedResourcesAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.RestrictAllowedResourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.RestrictAllowedResourcesResponse>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -475,6 +619,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.DeleteWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.DeleteWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
           "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
@@ -513,6 +667,16 @@
         "shortName": "DeleteWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.DeleteWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.DeleteWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -551,6 +715,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.DeleteWorkload",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
           "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
@@ -588,6 +762,16 @@
         "shortName": "DeleteWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.DeleteWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -625,6 +809,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.DeleteWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.WorkloadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
           "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient"
@@ -662,6 +856,16 @@
         "shortName": "DeleteWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.DeleteWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.WorkloadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -699,6 +903,16 @@
       "clientMethod": {
         "shortName": "GetWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.GetWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.Workload",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -738,6 +952,16 @@
         "shortName": "GetWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.GetWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -776,6 +1000,16 @@
       "clientMethod": {
         "shortName": "GetWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetWorkload",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.Workload",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -814,6 +1048,16 @@
         "shortName": "GetWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -851,6 +1095,16 @@
       "clientMethod": {
         "shortName": "GetWorkload",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.WorkloadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.Workload",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -889,6 +1143,16 @@
         "shortName": "GetWorkloadAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetWorkloadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.WorkloadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -926,6 +1190,16 @@
       "clientMethod": {
         "shortName": "ListWorkloads",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.ListWorkloadsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -965,6 +1239,16 @@
         "shortName": "ListWorkloadsAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListWorkloadsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.ListWorkloadsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1003,6 +1287,24 @@
       "clientMethod": {
         "shortName": "ListWorkloads",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1041,6 +1343,24 @@
         "shortName": "ListWorkloadsAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListWorkloadsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1078,6 +1398,24 @@
       "clientMethod": {
         "shortName": "ListWorkloads",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1116,6 +1454,24 @@
         "shortName": "ListWorkloadsAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListWorkloadsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1.Workload>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1153,6 +1509,16 @@
       "clientMethod": {
         "shortName": "ListViolations",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1192,6 +1558,16 @@
         "shortName": "ListViolationsAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.ListViolationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1230,6 +1606,24 @@
       "clientMethod": {
         "shortName": "ListViolations",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1268,6 +1662,24 @@
         "shortName": "ListViolationsAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1305,6 +1717,24 @@
       "clientMethod": {
         "shortName": "ListViolations",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.WorkloadName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1343,6 +1773,24 @@
         "shortName": "ListViolationsAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.ListViolationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.WorkloadName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1.ListViolationsResponse, Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1380,6 +1828,16 @@
       "clientMethod": {
         "shortName": "GetViolation",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.GetViolationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.Violation",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1419,6 +1877,16 @@
         "shortName": "GetViolationAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.GetViolationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1457,6 +1925,16 @@
       "clientMethod": {
         "shortName": "GetViolation",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.Violation",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1495,6 +1973,16 @@
         "shortName": "GetViolationAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1532,6 +2020,16 @@
       "clientMethod": {
         "shortName": "GetViolation",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.ViolationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.Violation",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1570,6 +2068,16 @@
         "shortName": "GetViolationAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.GetViolationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.ViolationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.Violation>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1607,6 +2115,16 @@
       "clientMethod": {
         "shortName": "AcknowledgeViolation",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.AcknowledgeViolation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",
@@ -1646,6 +2164,16 @@
         "shortName": "AcknowledgeViolationAsync",
         "fullName": "Google.Cloud.AssuredWorkloads.V1.AssuredWorkloadsServiceClient.AcknowledgeViolationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1.AcknowledgeViolationResponse>",
         "client": {
           "shortName": "AssuredWorkloadsServiceClient",

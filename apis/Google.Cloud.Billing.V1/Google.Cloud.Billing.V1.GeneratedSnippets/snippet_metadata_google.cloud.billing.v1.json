@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetBillingAccount",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetBillingAccount",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.GetBillingAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.BillingAccount",
         "client": {
           "shortName": "CloudBillingClient",
@@ -58,6 +68,16 @@
         "shortName": "GetBillingAccountAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetBillingAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.GetBillingAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetBillingAccount",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetBillingAccount",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.BillingAccount",
         "client": {
           "shortName": "CloudBillingClient",
@@ -134,6 +164,16 @@
         "shortName": "GetBillingAccountAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetBillingAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetBillingAccount",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetBillingAccount",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.BillingAccount",
         "client": {
           "shortName": "CloudBillingClient",
@@ -209,6 +259,16 @@
         "shortName": "GetBillingAccountAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetBillingAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "ListBillingAccounts",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListBillingAccounts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ListBillingAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListBillingAccountsResponse, Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -285,6 +355,16 @@
         "shortName": "ListBillingAccountsAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListBillingAccountsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ListBillingAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListBillingAccountsResponse, Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -323,6 +403,20 @@
       "clientMethod": {
         "shortName": "ListBillingAccounts",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListBillingAccounts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListBillingAccountsResponse, Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -361,6 +455,20 @@
         "shortName": "ListBillingAccountsAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListBillingAccountsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListBillingAccountsResponse, Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -398,6 +506,16 @@
       "clientMethod": {
         "shortName": "UpdateBillingAccount",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateBillingAccount",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.UpdateBillingAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.BillingAccount",
         "client": {
           "shortName": "CloudBillingClient",
@@ -437,6 +555,16 @@
         "shortName": "UpdateBillingAccountAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateBillingAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.UpdateBillingAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -475,6 +603,20 @@
       "clientMethod": {
         "shortName": "UpdateBillingAccount",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateBillingAccount",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Billing.V1.BillingAccount",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.BillingAccount",
         "client": {
           "shortName": "CloudBillingClient",
@@ -513,6 +655,20 @@
         "shortName": "UpdateBillingAccountAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateBillingAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Billing.V1.BillingAccount",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -550,6 +706,20 @@
       "clientMethod": {
         "shortName": "UpdateBillingAccount",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateBillingAccount",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Billing.V1.BillingAccount",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.BillingAccount",
         "client": {
           "shortName": "CloudBillingClient",
@@ -588,6 +758,20 @@
         "shortName": "UpdateBillingAccountAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateBillingAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Billing.V1.BillingAccount",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -625,6 +809,16 @@
       "clientMethod": {
         "shortName": "CreateBillingAccount",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.CreateBillingAccount",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.CreateBillingAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.BillingAccount",
         "client": {
           "shortName": "CloudBillingClient",
@@ -664,6 +858,16 @@
         "shortName": "CreateBillingAccountAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.CreateBillingAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.CreateBillingAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -702,6 +906,16 @@
       "clientMethod": {
         "shortName": "CreateBillingAccount",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.CreateBillingAccount",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.BillingAccount",
+            "name": "billingAccount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.BillingAccount",
         "client": {
           "shortName": "CloudBillingClient",
@@ -740,6 +954,16 @@
         "shortName": "CreateBillingAccountAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.CreateBillingAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.BillingAccount",
+            "name": "billingAccount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.BillingAccount>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -777,6 +1001,16 @@
       "clientMethod": {
         "shortName": "ListProjectBillingInfo",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListProjectBillingInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ListProjectBillingInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListProjectBillingInfoResponse, Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -816,6 +1050,16 @@
         "shortName": "ListProjectBillingInfoAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListProjectBillingInfoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ListProjectBillingInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListProjectBillingInfoResponse, Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -854,6 +1098,24 @@
       "clientMethod": {
         "shortName": "ListProjectBillingInfo",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListProjectBillingInfo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListProjectBillingInfoResponse, Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -892,6 +1154,24 @@
         "shortName": "ListProjectBillingInfoAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListProjectBillingInfoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListProjectBillingInfoResponse, Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -929,6 +1209,24 @@
       "clientMethod": {
         "shortName": "ListProjectBillingInfo",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListProjectBillingInfo",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListProjectBillingInfoResponse, Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -967,6 +1265,24 @@
         "shortName": "ListProjectBillingInfoAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.ListProjectBillingInfoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.BillingAccountName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListProjectBillingInfoResponse, Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1004,6 +1320,16 @@
       "clientMethod": {
         "shortName": "GetProjectBillingInfo",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetProjectBillingInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.GetProjectBillingInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.ProjectBillingInfo",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1043,6 +1369,16 @@
         "shortName": "GetProjectBillingInfoAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetProjectBillingInfoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.GetProjectBillingInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1081,6 +1417,16 @@
       "clientMethod": {
         "shortName": "GetProjectBillingInfo",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetProjectBillingInfo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.ProjectBillingInfo",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1119,6 +1465,16 @@
         "shortName": "GetProjectBillingInfoAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetProjectBillingInfoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1156,6 +1512,16 @@
       "clientMethod": {
         "shortName": "UpdateProjectBillingInfo",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateProjectBillingInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.ProjectBillingInfo",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1195,6 +1561,16 @@
         "shortName": "UpdateProjectBillingInfoAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateProjectBillingInfoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1233,6 +1609,20 @@
       "clientMethod": {
         "shortName": "UpdateProjectBillingInfo",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateProjectBillingInfo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Billing.V1.ProjectBillingInfo",
+            "name": "projectBillingInfo"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Billing.V1.ProjectBillingInfo",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1271,6 +1661,20 @@
         "shortName": "UpdateProjectBillingInfoAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.UpdateProjectBillingInfoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Billing.V1.ProjectBillingInfo",
+            "name": "projectBillingInfo"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.ProjectBillingInfo>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1308,6 +1712,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1347,6 +1761,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1385,6 +1809,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1423,6 +1857,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1460,6 +1904,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1498,6 +1952,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1535,6 +1999,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1574,6 +2048,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1612,6 +2096,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1650,6 +2148,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1687,6 +2199,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1725,6 +2251,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1762,6 +2302,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1801,6 +2351,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1839,6 +2399,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1877,6 +2451,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1914,6 +2502,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1952,6 +2554,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "CloudBillingClient",
@@ -1989,6 +2605,16 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListServicesResponse, Google.Cloud.Billing.V1.Service>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2028,6 +2654,16 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListServicesResponse, Google.Cloud.Billing.V1.Service>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2066,6 +2702,20 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListServices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListServicesResponse, Google.Cloud.Billing.V1.Service>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2104,6 +2754,20 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListServicesResponse, Google.Cloud.Billing.V1.Service>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2141,6 +2805,16 @@
       "clientMethod": {
         "shortName": "ListSkus",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListSkus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ListSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListSkusResponse, Google.Cloud.Billing.V1.Sku>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2180,6 +2854,16 @@
         "shortName": "ListSkusAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListSkusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ListSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListSkusResponse, Google.Cloud.Billing.V1.Sku>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2218,6 +2902,24 @@
       "clientMethod": {
         "shortName": "ListSkus",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListSkus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListSkusResponse, Google.Cloud.Billing.V1.Sku>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2256,6 +2958,24 @@
         "shortName": "ListSkusAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListSkusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListSkusResponse, Google.Cloud.Billing.V1.Sku>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2293,6 +3013,24 @@
       "clientMethod": {
         "shortName": "ListSkus",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListSkus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Billing.V1.ListSkusResponse, Google.Cloud.Billing.V1.Sku>",
         "client": {
           "shortName": "CloudCatalogClient",
@@ -2331,6 +3069,24 @@
         "shortName": "ListSkusAsync",
         "fullName": "Google.Cloud.Billing.V1.CloudCatalogClient.ListSkusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Billing.V1.ListSkusResponse, Google.Cloud.Billing.V1.Sku>",
         "client": {
           "shortName": "CloudCatalogClient",

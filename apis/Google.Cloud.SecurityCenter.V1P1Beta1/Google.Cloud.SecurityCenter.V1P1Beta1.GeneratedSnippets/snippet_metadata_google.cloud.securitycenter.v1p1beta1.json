@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.CreateSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.CreateSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateSource",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "CreateFinding",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.CreateFindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -285,6 +371,16 @@
         "shortName": "CreateFindingAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.CreateFindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -323,6 +419,24 @@
       "clientMethod": {
         "shortName": "CreateFinding",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "findingId"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -361,6 +475,24 @@
         "shortName": "CreateFindingAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "findingId"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -398,6 +530,24 @@
       "clientMethod": {
         "shortName": "CreateFinding",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "findingId"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -436,6 +586,24 @@
         "shortName": "CreateFindingAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "findingId"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -473,6 +641,24 @@
       "clientMethod": {
         "shortName": "CreateFinding",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "System.String",
+            "name": "findingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -511,6 +697,24 @@
         "shortName": "CreateFindingAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "System.String",
+            "name": "findingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -548,6 +752,24 @@
       "clientMethod": {
         "shortName": "CreateFinding",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "System.String",
+            "name": "findingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -586,6 +808,24 @@
         "shortName": "CreateFindingAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "System.String",
+            "name": "findingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -623,6 +863,16 @@
       "clientMethod": {
         "shortName": "CreateNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.CreateNotificationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -662,6 +912,16 @@
         "shortName": "CreateNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.CreateNotificationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -700,6 +960,24 @@
       "clientMethod": {
         "shortName": "CreateNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "configId"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -738,6 +1016,24 @@
         "shortName": "CreateNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "configId"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -775,6 +1071,24 @@
       "clientMethod": {
         "shortName": "CreateNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "configId"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -813,6 +1127,24 @@
         "shortName": "CreateNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "configId"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -850,6 +1182,20 @@
       "clientMethod": {
         "shortName": "CreateNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -888,6 +1234,20 @@
         "shortName": "CreateNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -925,6 +1285,20 @@
       "clientMethod": {
         "shortName": "CreateNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -963,6 +1337,20 @@
         "shortName": "CreateNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.CreateNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1000,6 +1388,16 @@
       "clientMethod": {
         "shortName": "DeleteNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.DeleteNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.DeleteNotificationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SecurityCenterClient",
           "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient"
@@ -1038,6 +1436,16 @@
         "shortName": "DeleteNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.DeleteNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.DeleteNotificationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1076,6 +1484,16 @@
       "clientMethod": {
         "shortName": "DeleteNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.DeleteNotificationConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SecurityCenterClient",
           "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient"
@@ -1113,6 +1531,16 @@
         "shortName": "DeleteNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.DeleteNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1150,6 +1578,16 @@
       "clientMethod": {
         "shortName": "DeleteNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.DeleteNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SecurityCenterClient",
           "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient"
@@ -1187,6 +1625,16 @@
         "shortName": "DeleteNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.DeleteNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1224,6 +1672,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1263,6 +1721,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1301,6 +1769,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1339,6 +1817,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1376,6 +1864,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1414,6 +1912,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1451,6 +1959,16 @@
       "clientMethod": {
         "shortName": "GetNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GetNotificationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1490,6 +2008,16 @@
         "shortName": "GetNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GetNotificationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1528,6 +2056,16 @@
       "clientMethod": {
         "shortName": "GetNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetNotificationConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1566,6 +2104,16 @@
         "shortName": "GetNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1603,6 +2151,16 @@
       "clientMethod": {
         "shortName": "GetNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1641,6 +2199,16 @@
         "shortName": "GetNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1678,6 +2246,16 @@
       "clientMethod": {
         "shortName": "GetOrganizationSettings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetOrganizationSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GetOrganizationSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1717,6 +2295,16 @@
         "shortName": "GetOrganizationSettingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetOrganizationSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GetOrganizationSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1755,6 +2343,16 @@
       "clientMethod": {
         "shortName": "GetOrganizationSettings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetOrganizationSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1793,6 +2391,16 @@
         "shortName": "GetOrganizationSettingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetOrganizationSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1830,6 +2438,16 @@
       "clientMethod": {
         "shortName": "GetOrganizationSettings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetOrganizationSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1868,6 +2486,16 @@
         "shortName": "GetOrganizationSettingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetOrganizationSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1905,6 +2533,16 @@
       "clientMethod": {
         "shortName": "GetSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GetSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1944,6 +2582,16 @@
         "shortName": "GetSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GetSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -1982,6 +2630,16 @@
       "clientMethod": {
         "shortName": "GetSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2020,6 +2678,16 @@
         "shortName": "GetSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2057,6 +2725,16 @@
       "clientMethod": {
         "shortName": "GetSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2095,6 +2773,16 @@
         "shortName": "GetSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GetSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2132,6 +2820,16 @@
       "clientMethod": {
         "shortName": "GroupAssets",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GroupAssets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GroupAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.GroupAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.GroupResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2171,6 +2869,16 @@
         "shortName": "GroupAssetsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GroupAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GroupAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.GroupAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.GroupResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2209,6 +2917,16 @@
       "clientMethod": {
         "shortName": "GroupFindings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GroupFindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GroupFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.GroupFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.GroupResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2248,6 +2966,16 @@
         "shortName": "GroupFindingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GroupFindingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.GroupFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.GroupFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.GroupResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2286,6 +3014,28 @@
       "clientMethod": {
         "shortName": "GroupFindings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GroupFindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "groupBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.GroupFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.GroupResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2324,6 +3074,28 @@
         "shortName": "GroupFindingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GroupFindingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "groupBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.GroupFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.GroupResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2361,6 +3133,28 @@
       "clientMethod": {
         "shortName": "GroupFindings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GroupFindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "groupBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.GroupFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.GroupResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2399,6 +3193,28 @@
         "shortName": "GroupFindingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.GroupFindingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "groupBy"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.GroupFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.GroupResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2436,6 +3252,16 @@
       "clientMethod": {
         "shortName": "ListAssets",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2475,6 +3301,16 @@
         "shortName": "ListAssetsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2513,6 +3349,24 @@
       "clientMethod": {
         "shortName": "ListAssets",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2551,6 +3405,24 @@
         "shortName": "ListAssetsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2588,6 +3460,24 @@
       "clientMethod": {
         "shortName": "ListAssets",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2626,6 +3516,24 @@
         "shortName": "ListAssetsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2663,6 +3571,24 @@
       "clientMethod": {
         "shortName": "ListAssets",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2701,6 +3627,24 @@
         "shortName": "ListAssetsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2738,6 +3682,24 @@
       "clientMethod": {
         "shortName": "ListAssets",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2776,6 +3738,24 @@
         "shortName": "ListAssetsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListAssetsResponse+Types+ListAssetsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2813,6 +3793,16 @@
       "clientMethod": {
         "shortName": "ListFindings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListFindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse+Types+ListFindingsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2852,6 +3842,16 @@
         "shortName": "ListFindingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListFindingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse+Types+ListFindingsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2890,6 +3890,24 @@
       "clientMethod": {
         "shortName": "ListFindings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListFindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse+Types+ListFindingsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2928,6 +3946,24 @@
         "shortName": "ListFindingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListFindingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse+Types+ListFindingsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -2965,6 +4001,24 @@
       "clientMethod": {
         "shortName": "ListFindings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListFindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse+Types+ListFindingsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3003,6 +4057,24 @@
         "shortName": "ListFindingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListFindingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.ListFindingsResponse+Types+ListFindingsResult>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3040,6 +4112,16 @@
       "clientMethod": {
         "shortName": "ListNotificationConfigs",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListNotificationConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.ListNotificationConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3079,6 +4161,16 @@
         "shortName": "ListNotificationConfigsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListNotificationConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.ListNotificationConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3117,6 +4209,24 @@
       "clientMethod": {
         "shortName": "ListNotificationConfigs",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListNotificationConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3155,6 +4265,24 @@
         "shortName": "ListNotificationConfigsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListNotificationConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3192,6 +4320,24 @@
       "clientMethod": {
         "shortName": "ListNotificationConfigs",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListNotificationConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3230,6 +4376,24 @@
         "shortName": "ListNotificationConfigsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListNotificationConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListNotificationConfigsResponse, Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3267,6 +4431,16 @@
       "clientMethod": {
         "shortName": "ListSources",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3306,6 +4480,16 @@
         "shortName": "ListSourcesAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3344,6 +4528,24 @@
       "clientMethod": {
         "shortName": "ListSources",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3382,6 +4584,24 @@
         "shortName": "ListSourcesAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3419,6 +4639,24 @@
       "clientMethod": {
         "shortName": "ListSources",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3457,6 +4695,24 @@
         "shortName": "ListSourcesAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3494,6 +4750,24 @@
       "clientMethod": {
         "shortName": "ListSources",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3532,6 +4806,24 @@
         "shortName": "ListSourcesAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3569,6 +4861,24 @@
       "clientMethod": {
         "shortName": "ListSources",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3607,6 +4917,24 @@
         "shortName": "ListSourcesAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.ListSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1P1Beta1.ListSourcesResponse, Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3644,6 +4972,16 @@
       "clientMethod": {
         "shortName": "RunAssetDiscovery",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.RunAssetDiscovery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryResponse, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3683,6 +5021,16 @@
         "shortName": "RunAssetDiscoveryAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.RunAssetDiscoveryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryResponse, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3721,6 +5069,16 @@
       "clientMethod": {
         "shortName": "RunAssetDiscovery",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.RunAssetDiscovery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryResponse, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3759,6 +5117,16 @@
         "shortName": "RunAssetDiscoveryAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.RunAssetDiscoveryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryResponse, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3796,6 +5164,16 @@
       "clientMethod": {
         "shortName": "RunAssetDiscovery",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.RunAssetDiscovery",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryResponse, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3834,6 +5212,16 @@
         "shortName": "RunAssetDiscoveryAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.RunAssetDiscoveryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.SecurityCenter.V1P1Beta1.RunAssetDiscoveryResponse, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3871,6 +5259,16 @@
       "clientMethod": {
         "shortName": "SetFindingState",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetFindingState",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SetFindingStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3910,6 +5308,16 @@
         "shortName": "SetFindingStateAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetFindingStateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SetFindingStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3948,6 +5356,24 @@
       "clientMethod": {
         "shortName": "SetFindingState",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetFindingState",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding+Types+State",
+            "name": "state"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -3986,6 +5412,24 @@
         "shortName": "SetFindingStateAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetFindingStateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding+Types+State",
+            "name": "state"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4023,6 +5467,24 @@
       "clientMethod": {
         "shortName": "SetFindingState",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetFindingState",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.FindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding+Types+State",
+            "name": "state"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4061,6 +5523,24 @@
         "shortName": "SetFindingStateAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetFindingStateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.FindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding+Types+State",
+            "name": "state"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4098,6 +5578,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4137,6 +5627,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4175,6 +5675,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4213,6 +5727,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4250,6 +5778,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4288,6 +5830,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4325,6 +5881,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4364,6 +5930,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4402,6 +5978,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4440,6 +6030,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4477,6 +6081,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4515,6 +6133,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4552,6 +6184,16 @@
       "clientMethod": {
         "shortName": "UpdateFinding",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateFindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4591,6 +6233,16 @@
         "shortName": "UpdateFindingAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateFindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4629,6 +6281,16 @@
       "clientMethod": {
         "shortName": "UpdateFinding",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4667,6 +6329,16 @@
         "shortName": "UpdateFindingAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4704,6 +6376,20 @@
       "clientMethod": {
         "shortName": "UpdateFinding",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4742,6 +6428,20 @@
         "shortName": "UpdateFindingAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Finding",
+            "name": "finding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Finding>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4779,6 +6479,16 @@
       "clientMethod": {
         "shortName": "UpdateNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateNotificationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4818,6 +6528,16 @@
         "shortName": "UpdateNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateNotificationConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4856,6 +6576,16 @@
       "clientMethod": {
         "shortName": "UpdateNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4894,6 +6624,16 @@
         "shortName": "UpdateNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4931,6 +6671,20 @@
       "clientMethod": {
         "shortName": "UpdateNotificationConfig",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateNotificationConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -4969,6 +6723,20 @@
         "shortName": "UpdateNotificationConfigAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateNotificationConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig",
+            "name": "notificationConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5006,6 +6774,16 @@
       "clientMethod": {
         "shortName": "UpdateOrganizationSettings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateOrganizationSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateOrganizationSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5045,6 +6823,16 @@
         "shortName": "UpdateOrganizationSettingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateOrganizationSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateOrganizationSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5083,6 +6871,16 @@
       "clientMethod": {
         "shortName": "UpdateOrganizationSettings",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateOrganizationSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings",
+            "name": "organizationSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5121,6 +6919,16 @@
         "shortName": "UpdateOrganizationSettingsAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateOrganizationSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings",
+            "name": "organizationSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5158,6 +6966,16 @@
       "clientMethod": {
         "shortName": "UpdateSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5197,6 +7015,16 @@
         "shortName": "UpdateSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5235,6 +7063,16 @@
       "clientMethod": {
         "shortName": "UpdateSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5273,6 +7111,16 @@
         "shortName": "UpdateSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5310,6 +7158,20 @@
       "clientMethod": {
         "shortName": "UpdateSource",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5348,6 +7210,20 @@
         "shortName": "UpdateSourceAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.Source>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5385,6 +7261,16 @@
       "clientMethod": {
         "shortName": "UpdateSecurityMarks",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSecurityMarks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateSecurityMarksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5424,6 +7310,16 @@
         "shortName": "UpdateSecurityMarksAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSecurityMarksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.UpdateSecurityMarksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5462,6 +7358,16 @@
       "clientMethod": {
         "shortName": "UpdateSecurityMarks",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSecurityMarks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks",
+            "name": "securityMarks"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5500,6 +7406,16 @@
         "shortName": "UpdateSecurityMarksAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSecurityMarksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks",
+            "name": "securityMarks"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks>",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5537,6 +7453,20 @@
       "clientMethod": {
         "shortName": "UpdateSecurityMarks",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSecurityMarks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks",
+            "name": "securityMarks"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks",
         "client": {
           "shortName": "SecurityCenterClient",
@@ -5575,6 +7505,20 @@
         "shortName": "UpdateSecurityMarksAsync",
         "fullName": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityCenterClient.UpdateSecurityMarksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks",
+            "name": "securityMarks"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks>",
         "client": {
           "shortName": "SecurityCenterClient",

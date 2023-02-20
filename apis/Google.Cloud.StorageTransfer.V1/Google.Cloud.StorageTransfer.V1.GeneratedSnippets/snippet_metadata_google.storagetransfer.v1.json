@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetGoogleServiceAccount",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetGoogleServiceAccount",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.GoogleServiceAccount",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "GetGoogleServiceAccountAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetGoogleServiceAccountAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.GoogleServiceAccount>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "CreateTransferJob",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateTransferJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.TransferJob",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -135,6 +165,16 @@
         "shortName": "CreateTransferJobAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateTransferJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.TransferJob>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "UpdateTransferJob",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateTransferJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.TransferJob",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -212,6 +262,16 @@
         "shortName": "UpdateTransferJobAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateTransferJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.TransferJob>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -250,6 +310,16 @@
       "clientMethod": {
         "shortName": "GetTransferJob",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetTransferJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.GetTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.TransferJob",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -289,6 +359,16 @@
         "shortName": "GetTransferJobAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetTransferJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.GetTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.TransferJob>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -327,6 +407,16 @@
       "clientMethod": {
         "shortName": "ListTransferJobs",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListTransferJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse, Google.Cloud.StorageTransfer.V1.TransferJob>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -366,6 +456,16 @@
         "shortName": "ListTransferJobsAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListTransferJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse, Google.Cloud.StorageTransfer.V1.TransferJob>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -404,6 +504,16 @@
       "clientMethod": {
         "shortName": "PauseTransferOperation",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.PauseTransferOperation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "StorageTransferServiceClient",
           "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
@@ -442,6 +552,16 @@
         "shortName": "PauseTransferOperationAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.PauseTransferOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -480,6 +600,16 @@
       "clientMethod": {
         "shortName": "ResumeTransferOperation",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ResumeTransferOperation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "StorageTransferServiceClient",
           "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
@@ -518,6 +648,16 @@
         "shortName": "ResumeTransferOperationAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ResumeTransferOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -556,6 +696,16 @@
       "clientMethod": {
         "shortName": "RunTransferJob",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.RunTransferJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.RunTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageTransfer.V1.TransferOperation>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -595,6 +745,16 @@
         "shortName": "RunTransferJobAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.RunTransferJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.RunTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageTransfer.V1.TransferOperation>>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -633,6 +793,16 @@
       "clientMethod": {
         "shortName": "DeleteTransferJob",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteTransferJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "StorageTransferServiceClient",
           "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
@@ -671,6 +841,16 @@
         "shortName": "DeleteTransferJobAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteTransferJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.DeleteTransferJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -709,6 +889,16 @@
       "clientMethod": {
         "shortName": "CreateAgentPool",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateAgentPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -748,6 +938,16 @@
         "shortName": "CreateAgentPoolAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateAgentPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.CreateAgentPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -786,6 +986,24 @@
       "clientMethod": {
         "shortName": "CreateAgentPool",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateAgentPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.AgentPool",
+            "name": "agentPool"
+          },
+          {
+            "type": "System.String",
+            "name": "agentPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -824,6 +1042,24 @@
         "shortName": "CreateAgentPoolAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.CreateAgentPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.AgentPool",
+            "name": "agentPool"
+          },
+          {
+            "type": "System.String",
+            "name": "agentPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -861,6 +1097,16 @@
       "clientMethod": {
         "shortName": "UpdateAgentPool",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateAgentPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -900,6 +1146,16 @@
         "shortName": "UpdateAgentPoolAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateAgentPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.UpdateAgentPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -938,6 +1194,20 @@
       "clientMethod": {
         "shortName": "UpdateAgentPool",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateAgentPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.AgentPool",
+            "name": "agentPool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -976,6 +1246,20 @@
         "shortName": "UpdateAgentPoolAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.UpdateAgentPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.AgentPool",
+            "name": "agentPool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1013,6 +1297,16 @@
       "clientMethod": {
         "shortName": "GetAgentPool",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetAgentPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1052,6 +1346,16 @@
         "shortName": "GetAgentPoolAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetAgentPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.GetAgentPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1090,6 +1394,16 @@
       "clientMethod": {
         "shortName": "GetAgentPool",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetAgentPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.StorageTransfer.V1.AgentPool",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1128,6 +1442,16 @@
         "shortName": "GetAgentPoolAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.GetAgentPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1165,6 +1489,16 @@
       "clientMethod": {
         "shortName": "ListAgentPools",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListAgentPools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse, Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1204,6 +1538,16 @@
         "shortName": "ListAgentPoolsAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListAgentPoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.ListAgentPoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse, Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1242,6 +1586,24 @@
       "clientMethod": {
         "shortName": "ListAgentPools",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListAgentPools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse, Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1280,6 +1642,24 @@
         "shortName": "ListAgentPoolsAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.ListAgentPoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageTransfer.V1.ListAgentPoolsResponse, Google.Cloud.StorageTransfer.V1.AgentPool>",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1317,6 +1697,16 @@
       "clientMethod": {
         "shortName": "DeleteAgentPool",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteAgentPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "StorageTransferServiceClient",
           "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
@@ -1355,6 +1745,16 @@
         "shortName": "DeleteAgentPoolAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteAgentPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageTransfer.V1.DeleteAgentPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "StorageTransferServiceClient",
@@ -1393,6 +1793,16 @@
       "clientMethod": {
         "shortName": "DeleteAgentPool",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteAgentPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "StorageTransferServiceClient",
           "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient"
@@ -1430,6 +1840,16 @@
         "shortName": "DeleteAgentPoolAsync",
         "fullName": "Google.Cloud.StorageTransfer.V1.StorageTransferServiceClient.DeleteAgentPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "StorageTransferServiceClient",

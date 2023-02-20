@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateBuild",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.CreateBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.CreateBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateBuild",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.Build",
+            "name": "build"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.Build",
+            "name": "build"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -171,6 +219,16 @@
       "clientMethod": {
         "shortName": "GetBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetBuild",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.GetBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.Build",
         "client": {
           "shortName": "CloudBuildClient",
@@ -210,6 +268,16 @@
         "shortName": "GetBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.GetBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.Build>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -248,6 +316,20 @@
       "clientMethod": {
         "shortName": "GetBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetBuild",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "id"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.Build",
         "client": {
           "shortName": "CloudBuildClient",
@@ -286,6 +368,20 @@
         "shortName": "GetBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "id"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.Build>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "ListBuilds",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListBuilds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ListBuildsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V1.ListBuildsResponse, Google.Cloud.CloudBuild.V1.Build>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -362,6 +468,16 @@
         "shortName": "ListBuildsAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListBuildsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ListBuildsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V1.ListBuildsResponse, Google.Cloud.CloudBuild.V1.Build>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -400,6 +516,28 @@
       "clientMethod": {
         "shortName": "ListBuilds",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListBuilds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V1.ListBuildsResponse, Google.Cloud.CloudBuild.V1.Build>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -438,6 +576,28 @@
         "shortName": "ListBuildsAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListBuildsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V1.ListBuildsResponse, Google.Cloud.CloudBuild.V1.Build>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -475,6 +635,16 @@
       "clientMethod": {
         "shortName": "CancelBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CancelBuild",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.CancelBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.Build",
         "client": {
           "shortName": "CloudBuildClient",
@@ -514,6 +684,16 @@
         "shortName": "CancelBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CancelBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.CancelBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.Build>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -552,6 +732,20 @@
       "clientMethod": {
         "shortName": "CancelBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CancelBuild",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "id"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.Build",
         "client": {
           "shortName": "CloudBuildClient",
@@ -590,6 +784,20 @@
         "shortName": "CancelBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CancelBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "id"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.Build>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -627,6 +835,16 @@
       "clientMethod": {
         "shortName": "RetryBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.RetryBuild",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.RetryBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -666,6 +884,16 @@
         "shortName": "RetryBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.RetryBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.RetryBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -704,6 +932,20 @@
       "clientMethod": {
         "shortName": "RetryBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.RetryBuild",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "id"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -742,6 +984,20 @@
         "shortName": "RetryBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.RetryBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "id"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -779,6 +1035,16 @@
       "clientMethod": {
         "shortName": "ApproveBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ApproveBuild",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ApproveBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -818,6 +1084,16 @@
         "shortName": "ApproveBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ApproveBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ApproveBuildRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -856,6 +1132,20 @@
       "clientMethod": {
         "shortName": "ApproveBuild",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ApproveBuild",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ApprovalResult",
+            "name": "approvalResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -894,6 +1184,20 @@
         "shortName": "ApproveBuildAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ApproveBuildAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ApprovalResult",
+            "name": "approvalResult"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -931,6 +1235,16 @@
       "clientMethod": {
         "shortName": "CreateBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateBuildTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.BuildTrigger",
         "client": {
           "shortName": "CloudBuildClient",
@@ -970,6 +1284,16 @@
         "shortName": "CreateBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1008,6 +1332,20 @@
       "clientMethod": {
         "shortName": "CreateBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateBuildTrigger",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.BuildTrigger",
+            "name": "trigger"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.BuildTrigger",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1046,6 +1384,20 @@
         "shortName": "CreateBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.BuildTrigger",
+            "name": "trigger"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1083,6 +1435,16 @@
       "clientMethod": {
         "shortName": "GetBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetBuildTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.BuildTrigger",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1122,6 +1484,16 @@
         "shortName": "GetBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1160,6 +1532,20 @@
       "clientMethod": {
         "shortName": "GetBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetBuildTrigger",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.BuildTrigger",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1198,6 +1584,20 @@
         "shortName": "GetBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1235,6 +1635,16 @@
       "clientMethod": {
         "shortName": "ListBuildTriggers",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListBuildTriggers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse, Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1274,6 +1684,16 @@
         "shortName": "ListBuildTriggersAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListBuildTriggersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse, Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1312,6 +1732,24 @@
       "clientMethod": {
         "shortName": "ListBuildTriggers",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListBuildTriggers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse, Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1350,6 +1788,24 @@
         "shortName": "ListBuildTriggersAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListBuildTriggersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse, Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1387,6 +1843,16 @@
       "clientMethod": {
         "shortName": "DeleteBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteBuildTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudBuildClient",
           "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient"
@@ -1425,6 +1891,16 @@
         "shortName": "DeleteBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1463,6 +1939,20 @@
       "clientMethod": {
         "shortName": "DeleteBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteBuildTrigger",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudBuildClient",
           "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient"
@@ -1500,6 +1990,20 @@
         "shortName": "DeleteBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1537,6 +2041,16 @@
       "clientMethod": {
         "shortName": "UpdateBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.UpdateBuildTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.BuildTrigger",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1576,6 +2090,16 @@
         "shortName": "UpdateBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.UpdateBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1614,6 +2138,24 @@
       "clientMethod": {
         "shortName": "UpdateBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.UpdateBuildTrigger",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.BuildTrigger",
+            "name": "trigger"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.BuildTrigger",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1652,6 +2194,24 @@
         "shortName": "UpdateBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.UpdateBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.BuildTrigger",
+            "name": "trigger"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.BuildTrigger>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1689,6 +2249,16 @@
       "clientMethod": {
         "shortName": "RunBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.RunBuildTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1728,6 +2298,16 @@
         "shortName": "RunBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.RunBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1766,6 +2346,24 @@
       "clientMethod": {
         "shortName": "RunBuildTrigger",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.RunBuildTrigger",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.RepoSource",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1804,6 +2402,24 @@
         "shortName": "RunBuildTriggerAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.RunBuildTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.RepoSource",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.Build, Google.Cloud.CloudBuild.V1.BuildOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1841,6 +2457,16 @@
       "clientMethod": {
         "shortName": "ReceiveTriggerWebhook",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ReceiveTriggerWebhook",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1880,6 +2506,16 @@
         "shortName": "ReceiveTriggerWebhookAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ReceiveTriggerWebhookAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1918,6 +2554,16 @@
       "clientMethod": {
         "shortName": "CreateWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.CreateWorkerPoolOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1957,6 +2603,16 @@
         "shortName": "CreateWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.CreateWorkerPoolOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -1995,6 +2651,24 @@
       "clientMethod": {
         "shortName": "CreateWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateWorkerPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "System.String",
+            "name": "workerPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.CreateWorkerPoolOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2033,6 +2707,24 @@
         "shortName": "CreateWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "System.String",
+            "name": "workerPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.CreateWorkerPoolOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2070,6 +2762,24 @@
       "clientMethod": {
         "shortName": "CreateWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "System.String",
+            "name": "workerPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.CreateWorkerPoolOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2108,6 +2818,24 @@
         "shortName": "CreateWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.CreateWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "System.String",
+            "name": "workerPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.CreateWorkerPoolOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2145,6 +2873,16 @@
       "clientMethod": {
         "shortName": "GetWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.WorkerPool",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2184,6 +2922,16 @@
         "shortName": "GetWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2222,6 +2970,16 @@
       "clientMethod": {
         "shortName": "GetWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetWorkerPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.WorkerPool",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2260,6 +3018,16 @@
         "shortName": "GetWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2297,6 +3065,16 @@
       "clientMethod": {
         "shortName": "GetWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CloudBuild.V1.WorkerPool",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2335,6 +3113,16 @@
         "shortName": "GetWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.GetWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2372,6 +3160,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V1.DeleteWorkerPoolOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2411,6 +3209,16 @@
         "shortName": "DeleteWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V1.DeleteWorkerPoolOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2449,6 +3257,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteWorkerPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V1.DeleteWorkerPoolOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2487,6 +3305,16 @@
         "shortName": "DeleteWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V1.DeleteWorkerPoolOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2524,6 +3352,16 @@
       "clientMethod": {
         "shortName": "DeleteWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V1.DeleteWorkerPoolOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2562,6 +3400,16 @@
         "shortName": "DeleteWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.DeleteWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V1.DeleteWorkerPoolOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2599,6 +3447,16 @@
       "clientMethod": {
         "shortName": "UpdateWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.UpdateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.UpdateWorkerPoolOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2638,6 +3496,16 @@
         "shortName": "UpdateWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.UpdateWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.UpdateWorkerPoolOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2676,6 +3544,20 @@
       "clientMethod": {
         "shortName": "UpdateWorkerPool",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.UpdateWorkerPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.UpdateWorkerPoolOperationMetadata>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2714,6 +3596,20 @@
         "shortName": "UpdateWorkerPoolAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.UpdateWorkerPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.WorkerPool",
+            "name": "workerPool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V1.WorkerPool, Google.Cloud.CloudBuild.V1.UpdateWorkerPoolOperationMetadata>>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2751,6 +3647,16 @@
       "clientMethod": {
         "shortName": "ListWorkerPools",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListWorkerPools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse, Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2790,6 +3696,16 @@
         "shortName": "ListWorkerPoolsAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListWorkerPoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse, Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2828,6 +3744,24 @@
       "clientMethod": {
         "shortName": "ListWorkerPools",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListWorkerPools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse, Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2866,6 +3800,24 @@
         "shortName": "ListWorkerPoolsAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListWorkerPoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse, Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2903,6 +3855,24 @@
       "clientMethod": {
         "shortName": "ListWorkerPools",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListWorkerPools",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse, Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",
@@ -2941,6 +3911,24 @@
         "shortName": "ListWorkerPoolsAsync",
         "fullName": "Google.Cloud.CloudBuild.V1.CloudBuildClient.ListWorkerPoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse, Google.Cloud.CloudBuild.V1.WorkerPool>",
         "client": {
           "shortName": "CloudBuildClient",

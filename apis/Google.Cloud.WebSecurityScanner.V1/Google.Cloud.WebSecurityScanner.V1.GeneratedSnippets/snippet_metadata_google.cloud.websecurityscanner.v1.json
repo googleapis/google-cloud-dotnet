@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateScanConfig",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.CreateScanConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebSecurityScanner.V1.ScanConfig",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateScanConfigAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.CreateScanConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebSecurityScanner.V1.ScanConfig>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "DeleteScanConfig",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.DeleteScanConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "WebSecurityScannerClient",
           "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient"
@@ -134,6 +164,16 @@
         "shortName": "DeleteScanConfigAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.DeleteScanConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -172,6 +212,16 @@
       "clientMethod": {
         "shortName": "GetScanConfig",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.GetScanConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebSecurityScanner.V1.ScanConfig",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -211,6 +261,16 @@
         "shortName": "GetScanConfigAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.GetScanConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebSecurityScanner.V1.ScanConfig>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -249,6 +309,16 @@
       "clientMethod": {
         "shortName": "ListScanConfigs",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListScanConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse, Google.Cloud.WebSecurityScanner.V1.ScanConfig>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -288,6 +358,16 @@
         "shortName": "ListScanConfigsAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListScanConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse, Google.Cloud.WebSecurityScanner.V1.ScanConfig>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -326,6 +406,16 @@
       "clientMethod": {
         "shortName": "UpdateScanConfig",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.UpdateScanConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebSecurityScanner.V1.ScanConfig",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -365,6 +455,16 @@
         "shortName": "UpdateScanConfigAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.UpdateScanConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebSecurityScanner.V1.ScanConfig>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -403,6 +503,16 @@
       "clientMethod": {
         "shortName": "StartScanRun",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.StartScanRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebSecurityScanner.V1.ScanRun",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -442,6 +552,16 @@
         "shortName": "StartScanRunAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.StartScanRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebSecurityScanner.V1.ScanRun>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -480,6 +600,16 @@
       "clientMethod": {
         "shortName": "GetScanRun",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.GetScanRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebSecurityScanner.V1.ScanRun",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -519,6 +649,16 @@
         "shortName": "GetScanRunAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.GetScanRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebSecurityScanner.V1.ScanRun>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -557,6 +697,16 @@
       "clientMethod": {
         "shortName": "ListScanRuns",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListScanRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse, Google.Cloud.WebSecurityScanner.V1.ScanRun>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -596,6 +746,16 @@
         "shortName": "ListScanRunsAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListScanRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse, Google.Cloud.WebSecurityScanner.V1.ScanRun>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -634,6 +794,16 @@
       "clientMethod": {
         "shortName": "StopScanRun",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.StopScanRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebSecurityScanner.V1.ScanRun",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -673,6 +843,16 @@
         "shortName": "StopScanRunAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.StopScanRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebSecurityScanner.V1.ScanRun>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -711,6 +891,16 @@
       "clientMethod": {
         "shortName": "ListCrawledUrls",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListCrawledUrls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse, Google.Cloud.WebSecurityScanner.V1.CrawledUrl>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -750,6 +940,16 @@
         "shortName": "ListCrawledUrlsAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListCrawledUrlsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse, Google.Cloud.WebSecurityScanner.V1.CrawledUrl>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -788,6 +988,16 @@
       "clientMethod": {
         "shortName": "GetFinding",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.GetFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.GetFindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebSecurityScanner.V1.Finding",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -827,6 +1037,16 @@
         "shortName": "GetFindingAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.GetFindingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.GetFindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebSecurityScanner.V1.Finding>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -865,6 +1085,16 @@
       "clientMethod": {
         "shortName": "ListFindings",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListFindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse, Google.Cloud.WebSecurityScanner.V1.Finding>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -904,6 +1134,16 @@
         "shortName": "ListFindingsAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListFindingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse, Google.Cloud.WebSecurityScanner.V1.Finding>",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -942,6 +1182,16 @@
       "clientMethod": {
         "shortName": "ListFindingTypeStats",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListFindingTypeStats",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse",
         "client": {
           "shortName": "WebSecurityScannerClient",
@@ -981,6 +1231,16 @@
         "shortName": "ListFindingTypeStatsAsync",
         "fullName": "Google.Cloud.WebSecurityScanner.V1.WebSecurityScannerClient.ListFindingTypeStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse>",
         "client": {
           "shortName": "WebSecurityScannerClient",

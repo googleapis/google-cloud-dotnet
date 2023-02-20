@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.CreateOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.CreateOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.CreateOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
+            "name": "osPolicyAssignment"
+          },
+          {
+            "type": "System.String",
+            "name": "osPolicyAssignmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.CreateOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
+            "name": "osPolicyAssignment"
+          },
+          {
+            "type": "System.String",
+            "name": "osPolicyAssignmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.CreateOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
+            "name": "osPolicyAssignment"
+          },
+          {
+            "type": "System.String",
+            "name": "osPolicyAssignmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.CreateOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
+            "name": "osPolicyAssignment"
+          },
+          {
+            "type": "System.String",
+            "name": "osPolicyAssignmentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "UpdateOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.UpdateOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "UpdateOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.UpdateOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -323,6 +435,20 @@
       "clientMethod": {
         "shortName": "UpdateOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.UpdateOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
+            "name": "osPolicyAssignment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -361,6 +487,20 @@
         "shortName": "UpdateOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.UpdateOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
+            "name": "osPolicyAssignment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -398,6 +538,16 @@
       "clientMethod": {
         "shortName": "GetOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -437,6 +587,16 @@
         "shortName": "GetOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -475,6 +635,16 @@
       "clientMethod": {
         "shortName": "GetOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -513,6 +683,16 @@
         "shortName": "GetOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -550,6 +730,16 @@
       "clientMethod": {
         "shortName": "GetOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -588,6 +778,16 @@
         "shortName": "GetOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -625,6 +825,16 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignments",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -664,6 +874,16 @@
         "shortName": "ListOSPolicyAssignmentsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -702,6 +922,24 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignments",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -740,6 +978,24 @@
         "shortName": "ListOSPolicyAssignmentsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -777,6 +1033,24 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignments",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -815,6 +1089,24 @@
         "shortName": "ListOSPolicyAssignmentsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignmentRevisions",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -891,6 +1193,16 @@
         "shortName": "ListOSPolicyAssignmentRevisionsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentRevisionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -929,6 +1241,24 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignmentRevisions",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentRevisions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -967,6 +1297,24 @@
         "shortName": "ListOSPolicyAssignmentRevisionsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentRevisionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1004,6 +1352,24 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignmentRevisions",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1042,6 +1408,24 @@
         "shortName": "ListOSPolicyAssignmentRevisionsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentRevisionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1079,6 +1463,16 @@
       "clientMethod": {
         "shortName": "DeleteOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.DeleteOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1118,6 +1512,16 @@
         "shortName": "DeleteOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.DeleteOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1156,6 +1560,16 @@
       "clientMethod": {
         "shortName": "DeleteOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.DeleteOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1194,6 +1608,16 @@
         "shortName": "DeleteOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.DeleteOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1231,6 +1655,16 @@
       "clientMethod": {
         "shortName": "DeleteOSPolicyAssignment",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.DeleteOSPolicyAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1269,6 +1703,16 @@
         "shortName": "DeleteOSPolicyAssignmentAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.DeleteOSPolicyAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentOperationMetadata>>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1306,6 +1750,16 @@
       "clientMethod": {
         "shortName": "GetInstanceOSPoliciesCompliance",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInstanceOSPoliciesCompliance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1345,6 +1799,16 @@
         "shortName": "GetInstanceOSPoliciesComplianceAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInstanceOSPoliciesComplianceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1383,6 +1847,16 @@
       "clientMethod": {
         "shortName": "GetInstanceOSPoliciesCompliance",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInstanceOSPoliciesCompliance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1421,6 +1895,16 @@
         "shortName": "GetInstanceOSPoliciesComplianceAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInstanceOSPoliciesComplianceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1458,6 +1942,16 @@
       "clientMethod": {
         "shortName": "GetInstanceOSPoliciesCompliance",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInstanceOSPoliciesCompliance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesComplianceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1496,6 +1990,16 @@
         "shortName": "GetInstanceOSPoliciesComplianceAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInstanceOSPoliciesComplianceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesComplianceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "ListInstanceOSPoliciesCompliances",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInstanceOSPoliciesCompliances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse, Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1572,6 +2086,16 @@
         "shortName": "ListInstanceOSPoliciesCompliancesAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInstanceOSPoliciesCompliancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse, Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1610,6 +2134,24 @@
       "clientMethod": {
         "shortName": "ListInstanceOSPoliciesCompliances",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInstanceOSPoliciesCompliances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse, Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1648,6 +2190,24 @@
         "shortName": "ListInstanceOSPoliciesCompliancesAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInstanceOSPoliciesCompliancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse, Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1685,6 +2245,24 @@
       "clientMethod": {
         "shortName": "ListInstanceOSPoliciesCompliances",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInstanceOSPoliciesCompliances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse, Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1723,6 +2301,24 @@
         "shortName": "ListInstanceOSPoliciesCompliancesAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInstanceOSPoliciesCompliancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse, Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1760,6 +2356,16 @@
       "clientMethod": {
         "shortName": "GetOSPolicyAssignmentReport",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1799,6 +2405,16 @@
         "shortName": "GetOSPolicyAssignmentReportAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1837,6 +2453,16 @@
       "clientMethod": {
         "shortName": "GetOSPolicyAssignmentReport",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1875,6 +2501,16 @@
         "shortName": "GetOSPolicyAssignmentReportAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1912,6 +2548,16 @@
       "clientMethod": {
         "shortName": "GetOSPolicyAssignmentReport",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1950,6 +2596,16 @@
         "shortName": "GetOSPolicyAssignmentReportAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetOSPolicyAssignmentReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -1987,6 +2643,16 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignmentReports",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2026,6 +2692,16 @@
         "shortName": "ListOSPolicyAssignmentReportsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2064,6 +2740,24 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignmentReports",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentReports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2102,6 +2796,24 @@
         "shortName": "ListOSPolicyAssignmentReportsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2139,6 +2851,24 @@
       "clientMethod": {
         "shortName": "ListOSPolicyAssignmentReports",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InstanceOSPolicyAssignmentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2177,6 +2907,24 @@
         "shortName": "ListOSPolicyAssignmentReportsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InstanceOSPolicyAssignmentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentReportsResponse, Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignmentReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2214,6 +2962,16 @@
       "clientMethod": {
         "shortName": "GetInventory",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInventory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.Inventory",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2253,6 +3011,16 @@
         "shortName": "GetInventoryAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInventoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2291,6 +3059,16 @@
       "clientMethod": {
         "shortName": "GetInventory",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInventory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.Inventory",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2329,6 +3107,16 @@
         "shortName": "GetInventoryAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInventoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2366,6 +3154,16 @@
       "clientMethod": {
         "shortName": "GetInventory",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInventory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InventoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.Inventory",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2404,6 +3202,16 @@
         "shortName": "GetInventoryAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetInventoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InventoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2441,6 +3249,16 @@
       "clientMethod": {
         "shortName": "ListInventories",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInventories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse, Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2480,6 +3298,16 @@
         "shortName": "ListInventoriesAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse, Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2518,6 +3346,24 @@
       "clientMethod": {
         "shortName": "ListInventories",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInventories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse, Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2556,6 +3402,24 @@
         "shortName": "ListInventoriesAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse, Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2593,6 +3457,24 @@
       "clientMethod": {
         "shortName": "ListInventories",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInventories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse, Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2631,6 +3513,24 @@
         "shortName": "ListInventoriesAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse, Google.Cloud.OsConfig.V1Alpha.Inventory>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2668,6 +3568,16 @@
       "clientMethod": {
         "shortName": "GetVulnerabilityReport",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetVulnerabilityReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2707,6 +3617,16 @@
         "shortName": "GetVulnerabilityReportAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetVulnerabilityReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2745,6 +3665,16 @@
       "clientMethod": {
         "shortName": "GetVulnerabilityReport",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetVulnerabilityReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2783,6 +3713,16 @@
         "shortName": "GetVulnerabilityReportAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetVulnerabilityReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2820,6 +3760,16 @@
       "clientMethod": {
         "shortName": "GetVulnerabilityReport",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetVulnerabilityReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.VulnerabilityReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2858,6 +3808,16 @@
         "shortName": "GetVulnerabilityReportAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.GetVulnerabilityReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.VulnerabilityReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2895,6 +3855,16 @@
       "clientMethod": {
         "shortName": "ListVulnerabilityReports",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListVulnerabilityReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse, Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2934,6 +3904,16 @@
         "shortName": "ListVulnerabilityReportsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListVulnerabilityReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse, Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -2972,6 +3952,24 @@
       "clientMethod": {
         "shortName": "ListVulnerabilityReports",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListVulnerabilityReports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse, Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -3010,6 +4008,24 @@
         "shortName": "ListVulnerabilityReportsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListVulnerabilityReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse, Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -3047,6 +4063,24 @@
       "clientMethod": {
         "shortName": "ListVulnerabilityReports",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListVulnerabilityReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse, Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",
@@ -3085,6 +4119,24 @@
         "shortName": "ListVulnerabilityReportsAsync",
         "fullName": "Google.Cloud.OsConfig.V1Alpha.OsConfigZonalServiceClient.ListVulnerabilityReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OsConfig.V1Alpha.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse, Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>",
         "client": {
           "shortName": "OsConfigZonalServiceClient",

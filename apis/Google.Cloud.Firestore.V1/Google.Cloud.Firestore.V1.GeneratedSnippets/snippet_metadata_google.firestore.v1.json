@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetDocument",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.GetDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.GetDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.Document",
         "client": {
           "shortName": "FirestoreClient",
@@ -58,6 +68,16 @@
         "shortName": "GetDocumentAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.GetDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.GetDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.Document>",
         "client": {
           "shortName": "FirestoreClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "ListDocuments",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ListDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.V1.ListDocumentsResponse, Google.Cloud.Firestore.V1.Document>",
         "client": {
           "shortName": "FirestoreClient",
@@ -135,6 +165,16 @@
         "shortName": "ListDocumentsAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ListDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.V1.ListDocumentsResponse, Google.Cloud.Firestore.V1.Document>",
         "client": {
           "shortName": "FirestoreClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "UpdateDocument",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.UpdateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.UpdateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.Document",
         "client": {
           "shortName": "FirestoreClient",
@@ -212,6 +262,16 @@
         "shortName": "UpdateDocumentAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.UpdateDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.UpdateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.Document>",
         "client": {
           "shortName": "FirestoreClient",
@@ -250,6 +310,20 @@
       "clientMethod": {
         "shortName": "UpdateDocument",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.UpdateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Firestore.V1.DocumentMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.Document",
         "client": {
           "shortName": "FirestoreClient",
@@ -288,6 +362,20 @@
         "shortName": "UpdateDocumentAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.UpdateDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Firestore.V1.DocumentMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.Document>",
         "client": {
           "shortName": "FirestoreClient",
@@ -325,6 +413,16 @@
       "clientMethod": {
         "shortName": "DeleteDocument",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.DeleteDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.DeleteDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "FirestoreClient",
           "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
@@ -363,6 +461,16 @@
         "shortName": "DeleteDocumentAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.DeleteDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.DeleteDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "FirestoreClient",
@@ -401,6 +509,16 @@
       "clientMethod": {
         "shortName": "DeleteDocument",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.DeleteDocument",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "FirestoreClient",
           "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
@@ -438,6 +556,16 @@
         "shortName": "DeleteDocumentAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.DeleteDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "FirestoreClient",
@@ -475,6 +603,16 @@
       "clientMethod": {
         "shortName": "BatchGetDocuments",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BatchGetDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BatchGetDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+BatchGetDocumentsStream",
         "client": {
           "shortName": "FirestoreClient",
@@ -513,6 +651,16 @@
       "clientMethod": {
         "shortName": "BeginTransaction",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BeginTransactionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.BeginTransactionResponse",
         "client": {
           "shortName": "FirestoreClient",
@@ -552,6 +700,16 @@
         "shortName": "BeginTransactionAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BeginTransactionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BeginTransactionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.BeginTransactionResponse>",
         "client": {
           "shortName": "FirestoreClient",
@@ -590,6 +748,16 @@
       "clientMethod": {
         "shortName": "BeginTransaction",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.BeginTransactionResponse",
         "client": {
           "shortName": "FirestoreClient",
@@ -628,6 +796,16 @@
         "shortName": "BeginTransactionAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BeginTransactionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.BeginTransactionResponse>",
         "client": {
           "shortName": "FirestoreClient",
@@ -665,6 +843,16 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Commit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.CommitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.CommitResponse",
         "client": {
           "shortName": "FirestoreClient",
@@ -704,6 +892,16 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.CommitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.CommitResponse>",
         "client": {
           "shortName": "FirestoreClient",
@@ -742,6 +940,20 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Commit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Firestore.V1.Write>",
+            "name": "writes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.CommitResponse",
         "client": {
           "shortName": "FirestoreClient",
@@ -780,6 +992,20 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Firestore.V1.Write>",
+            "name": "writes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.CommitResponse>",
         "client": {
           "shortName": "FirestoreClient",
@@ -817,6 +1043,16 @@
       "clientMethod": {
         "shortName": "Rollback",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Rollback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.RollbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "FirestoreClient",
           "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
@@ -855,6 +1091,16 @@
         "shortName": "RollbackAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.RollbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.RollbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "FirestoreClient",
@@ -893,6 +1139,20 @@
       "clientMethod": {
         "shortName": "Rollback",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Rollback",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transaction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "FirestoreClient",
           "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
@@ -930,6 +1190,20 @@
         "shortName": "RollbackAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.RollbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transaction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "FirestoreClient",
@@ -967,6 +1241,16 @@
       "clientMethod": {
         "shortName": "RunQuery",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.RunQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.RunQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+RunQueryStream",
         "client": {
           "shortName": "FirestoreClient",
@@ -1005,6 +1289,16 @@
       "clientMethod": {
         "shortName": "RunAggregationQuery",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.RunAggregationQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.RunAggregationQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+RunAggregationQueryStream",
         "client": {
           "shortName": "FirestoreClient",
@@ -1043,6 +1337,16 @@
       "clientMethod": {
         "shortName": "PartitionQuery",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.PartitionQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.PartitionQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.V1.PartitionQueryResponse, Google.Cloud.Firestore.V1.Cursor>",
         "client": {
           "shortName": "FirestoreClient",
@@ -1082,6 +1386,16 @@
         "shortName": "PartitionQueryAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.PartitionQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.PartitionQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.V1.PartitionQueryResponse, Google.Cloud.Firestore.V1.Cursor>",
         "client": {
           "shortName": "FirestoreClient",
@@ -1120,6 +1434,16 @@
       "clientMethod": {
         "shortName": "Write",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Write",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+WriteStream",
         "client": {
           "shortName": "FirestoreClient",
@@ -1158,6 +1482,16 @@
       "clientMethod": {
         "shortName": "Listen",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Listen",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+ListenStream",
         "client": {
           "shortName": "FirestoreClient",
@@ -1196,6 +1530,16 @@
       "clientMethod": {
         "shortName": "ListCollectionIds",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListCollectionIds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ListCollectionIdsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.V1.ListCollectionIdsResponse, System.String>",
         "client": {
           "shortName": "FirestoreClient",
@@ -1235,6 +1579,16 @@
         "shortName": "ListCollectionIdsAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListCollectionIdsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ListCollectionIdsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.V1.ListCollectionIdsResponse, System.String>",
         "client": {
           "shortName": "FirestoreClient",
@@ -1273,6 +1627,24 @@
       "clientMethod": {
         "shortName": "ListCollectionIds",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListCollectionIds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.V1.ListCollectionIdsResponse, System.String>",
         "client": {
           "shortName": "FirestoreClient",
@@ -1311,6 +1683,24 @@
         "shortName": "ListCollectionIdsAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListCollectionIdsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.V1.ListCollectionIdsResponse, System.String>",
         "client": {
           "shortName": "FirestoreClient",
@@ -1348,6 +1738,16 @@
       "clientMethod": {
         "shortName": "BatchWrite",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BatchWrite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BatchWriteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.BatchWriteResponse",
         "client": {
           "shortName": "FirestoreClient",
@@ -1387,6 +1787,16 @@
         "shortName": "BatchWriteAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BatchWriteAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BatchWriteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.BatchWriteResponse>",
         "client": {
           "shortName": "FirestoreClient",
@@ -1425,6 +1835,16 @@
       "clientMethod": {
         "shortName": "CreateDocument",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.CreateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.CreateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.V1.Document",
         "client": {
           "shortName": "FirestoreClient",
@@ -1464,6 +1884,16 @@
         "shortName": "CreateDocumentAsync",
         "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.CreateDocumentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.CreateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.Document>",
         "client": {
           "shortName": "FirestoreClient",

@@ -18,6 +18,16 @@
       "clientMethod": {
         "shortName": "ListLocations",
         "fullName": "Google.Cloud.Location.LocationsClient.ListLocations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Location.ListLocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Location.ListLocationsResponse, Google.Cloud.Location.Location>",
         "client": {
           "shortName": "LocationsClient",
@@ -57,6 +67,16 @@
         "shortName": "ListLocationsAsync",
         "fullName": "Google.Cloud.Location.LocationsClient.ListLocationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Location.ListLocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Location.ListLocationsResponse, Google.Cloud.Location.Location>",
         "client": {
           "shortName": "LocationsClient",
@@ -95,6 +115,16 @@
       "clientMethod": {
         "shortName": "GetLocation",
         "fullName": "Google.Cloud.Location.LocationsClient.GetLocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Location.GetLocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Location.Location",
         "client": {
           "shortName": "LocationsClient",
@@ -134,6 +164,16 @@
         "shortName": "GetLocationAsync",
         "fullName": "Google.Cloud.Location.LocationsClient.GetLocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Location.GetLocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Location.Location>",
         "client": {
           "shortName": "LocationsClient",

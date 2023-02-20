@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "LaunchFlexTemplate",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient.LaunchFlexTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateResponse",
         "client": {
           "shortName": "FlexTemplatesServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "LaunchFlexTemplateAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.FlexTemplatesServiceClient.LaunchFlexTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.LaunchFlexTemplateResponse>",
         "client": {
           "shortName": "FlexTemplatesServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "CreateJob",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.Job",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -135,6 +165,16 @@
         "shortName": "CreateJobAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.CreateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.Job>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "GetJob",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.Job",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -212,6 +262,16 @@
         "shortName": "GetJobAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.GetJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.Job>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -250,6 +310,16 @@
       "clientMethod": {
         "shortName": "UpdateJob",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.UpdateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.UpdateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.Job",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -289,6 +359,16 @@
         "shortName": "UpdateJobAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.UpdateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.UpdateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.Job>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -327,6 +407,16 @@
       "clientMethod": {
         "shortName": "ListJobs",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataflow.V1Beta3.ListJobsResponse, Google.Cloud.Dataflow.V1Beta3.Job>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -366,6 +456,16 @@
         "shortName": "ListJobsAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.ListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataflow.V1Beta3.ListJobsResponse, Google.Cloud.Dataflow.V1Beta3.Job>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -404,6 +504,16 @@
       "clientMethod": {
         "shortName": "AggregatedListJobs",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.AggregatedListJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataflow.V1Beta3.ListJobsResponse, Google.Cloud.Dataflow.V1Beta3.Job>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -443,6 +553,16 @@
         "shortName": "AggregatedListJobsAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.AggregatedListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataflow.V1Beta3.ListJobsResponse, Google.Cloud.Dataflow.V1Beta3.Job>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -481,6 +601,16 @@
       "clientMethod": {
         "shortName": "CheckActiveJobs",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.CheckActiveJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.CheckActiveJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.CheckActiveJobsResponse",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -520,6 +650,16 @@
         "shortName": "CheckActiveJobsAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.CheckActiveJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.CheckActiveJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.CheckActiveJobsResponse>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -558,6 +698,16 @@
       "clientMethod": {
         "shortName": "SnapshotJob",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.SnapshotJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.SnapshotJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.Snapshot",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -597,6 +747,16 @@
         "shortName": "SnapshotJobAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.JobsV1Beta3Client.SnapshotJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.SnapshotJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.Snapshot>",
         "client": {
           "shortName": "JobsV1Beta3Client",
@@ -635,6 +795,16 @@
       "clientMethod": {
         "shortName": "ListJobMessages",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.MessagesV1Beta3Client.ListJobMessages",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse, Google.Cloud.Dataflow.V1Beta3.JobMessage>",
         "client": {
           "shortName": "MessagesV1Beta3Client",
@@ -674,6 +844,16 @@
         "shortName": "ListJobMessagesAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.MessagesV1Beta3Client.ListJobMessagesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse, Google.Cloud.Dataflow.V1Beta3.JobMessage>",
         "client": {
           "shortName": "MessagesV1Beta3Client",
@@ -712,6 +892,16 @@
       "clientMethod": {
         "shortName": "GetJobMetrics",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.MetricsV1Beta3Client.GetJobMetrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetJobMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.JobMetrics",
         "client": {
           "shortName": "MetricsV1Beta3Client",
@@ -751,6 +941,16 @@
         "shortName": "GetJobMetricsAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.MetricsV1Beta3Client.GetJobMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetJobMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.JobMetrics>",
         "client": {
           "shortName": "MetricsV1Beta3Client",
@@ -789,6 +989,16 @@
       "clientMethod": {
         "shortName": "GetJobExecutionDetails",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.MetricsV1Beta3Client.GetJobExecutionDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetJobExecutionDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataflow.V1Beta3.JobExecutionDetails, Google.Cloud.Dataflow.V1Beta3.StageSummary>",
         "client": {
           "shortName": "MetricsV1Beta3Client",
@@ -828,6 +1038,16 @@
         "shortName": "GetJobExecutionDetailsAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.MetricsV1Beta3Client.GetJobExecutionDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetJobExecutionDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataflow.V1Beta3.JobExecutionDetails, Google.Cloud.Dataflow.V1Beta3.StageSummary>",
         "client": {
           "shortName": "MetricsV1Beta3Client",
@@ -866,6 +1086,16 @@
       "clientMethod": {
         "shortName": "GetStageExecutionDetails",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.MetricsV1Beta3Client.GetStageExecutionDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetStageExecutionDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataflow.V1Beta3.StageExecutionDetails, Google.Cloud.Dataflow.V1Beta3.WorkerDetails>",
         "client": {
           "shortName": "MetricsV1Beta3Client",
@@ -905,6 +1135,16 @@
         "shortName": "GetStageExecutionDetailsAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.MetricsV1Beta3Client.GetStageExecutionDetailsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetStageExecutionDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataflow.V1Beta3.StageExecutionDetails, Google.Cloud.Dataflow.V1Beta3.WorkerDetails>",
         "client": {
           "shortName": "MetricsV1Beta3Client",
@@ -943,6 +1183,16 @@
       "clientMethod": {
         "shortName": "GetSnapshot",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.GetSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.Snapshot",
         "client": {
           "shortName": "SnapshotsV1Beta3Client",
@@ -982,6 +1232,16 @@
         "shortName": "GetSnapshotAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.GetSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.Snapshot>",
         "client": {
           "shortName": "SnapshotsV1Beta3Client",
@@ -1020,6 +1280,16 @@
       "clientMethod": {
         "shortName": "DeleteSnapshot",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.DeleteSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.DeleteSnapshotResponse",
         "client": {
           "shortName": "SnapshotsV1Beta3Client",
@@ -1059,6 +1329,16 @@
         "shortName": "DeleteSnapshotAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.DeleteSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.DeleteSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.DeleteSnapshotResponse>",
         "client": {
           "shortName": "SnapshotsV1Beta3Client",
@@ -1097,6 +1377,16 @@
       "clientMethod": {
         "shortName": "ListSnapshots",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.ListSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.ListSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.ListSnapshotsResponse",
         "client": {
           "shortName": "SnapshotsV1Beta3Client",
@@ -1136,6 +1426,16 @@
         "shortName": "ListSnapshotsAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.SnapshotsV1Beta3Client.ListSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.ListSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.ListSnapshotsResponse>",
         "client": {
           "shortName": "SnapshotsV1Beta3Client",
@@ -1174,6 +1474,16 @@
       "clientMethod": {
         "shortName": "CreateJobFromTemplate",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.TemplatesServiceClient.CreateJobFromTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.CreateJobFromTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.Job",
         "client": {
           "shortName": "TemplatesServiceClient",
@@ -1213,6 +1523,16 @@
         "shortName": "CreateJobFromTemplateAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.TemplatesServiceClient.CreateJobFromTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.CreateJobFromTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.Job>",
         "client": {
           "shortName": "TemplatesServiceClient",
@@ -1251,6 +1571,16 @@
       "clientMethod": {
         "shortName": "LaunchTemplate",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.TemplatesServiceClient.LaunchTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.LaunchTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.LaunchTemplateResponse",
         "client": {
           "shortName": "TemplatesServiceClient",
@@ -1290,6 +1620,16 @@
         "shortName": "LaunchTemplateAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.TemplatesServiceClient.LaunchTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.LaunchTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.LaunchTemplateResponse>",
         "client": {
           "shortName": "TemplatesServiceClient",
@@ -1328,6 +1668,16 @@
       "clientMethod": {
         "shortName": "GetTemplate",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.TemplatesServiceClient.GetTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Dataflow.V1Beta3.GetTemplateResponse",
         "client": {
           "shortName": "TemplatesServiceClient",
@@ -1367,6 +1717,16 @@
         "shortName": "GetTemplateAsync",
         "fullName": "Google.Cloud.Dataflow.V1Beta3.TemplatesServiceClient.GetTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataflow.V1Beta3.GetTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataflow.V1Beta3.GetTemplateResponse>",
         "client": {
           "shortName": "TemplatesServiceClient",

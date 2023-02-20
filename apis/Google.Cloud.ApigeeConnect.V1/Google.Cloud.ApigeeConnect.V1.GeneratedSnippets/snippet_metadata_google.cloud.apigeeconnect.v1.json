@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListConnections",
         "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeConnect.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
         "client": {
           "shortName": "ConnectionServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListConnectionsAsync",
         "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeConnect.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
         "client": {
           "shortName": "ConnectionServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListConnections",
         "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
         "client": {
           "shortName": "ConnectionServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListConnectionsAsync",
         "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
         "client": {
           "shortName": "ConnectionServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListConnections",
         "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeConnect.V1.EndpointName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
         "client": {
           "shortName": "ConnectionServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListConnectionsAsync",
         "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeConnect.V1.EndpointName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
         "client": {
           "shortName": "ConnectionServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "Egress",
         "fullName": "Google.Cloud.ApigeeConnect.V1.TetherClient.Egress",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApigeeConnect.V1.TetherClient+EgressStream",
         "client": {
           "shortName": "TetherClient",

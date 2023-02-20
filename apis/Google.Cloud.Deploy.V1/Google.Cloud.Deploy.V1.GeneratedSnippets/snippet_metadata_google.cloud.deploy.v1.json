@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListDeliveryPipelines",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListDeliveryPipelines",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListDeliveryPipelinesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse, Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -58,6 +68,16 @@
         "shortName": "ListDeliveryPipelinesAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListDeliveryPipelinesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListDeliveryPipelinesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse, Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListDeliveryPipelines",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListDeliveryPipelines",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse, Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -134,6 +172,24 @@
         "shortName": "ListDeliveryPipelinesAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListDeliveryPipelinesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse, Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListDeliveryPipelines",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListDeliveryPipelines",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse, Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -209,6 +283,24 @@
         "shortName": "ListDeliveryPipelinesAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListDeliveryPipelinesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListDeliveryPipelinesResponse, Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetDeliveryPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.DeliveryPipeline",
         "client": {
           "shortName": "CloudDeployClient",
@@ -285,6 +387,16 @@
         "shortName": "GetDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetDeliveryPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.DeliveryPipeline",
         "client": {
           "shortName": "CloudDeployClient",
@@ -361,6 +483,16 @@
         "shortName": "GetDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.DeliveryPipeline",
         "client": {
           "shortName": "CloudDeployClient",
@@ -436,6 +578,16 @@
         "shortName": "GetDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.DeliveryPipeline>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateDeliveryPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateDeliveryPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipeline",
+            "name": "deliveryPipeline"
+          },
+          {
+            "type": "System.String",
+            "name": "deliveryPipelineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipeline",
+            "name": "deliveryPipeline"
+          },
+          {
+            "type": "System.String",
+            "name": "deliveryPipelineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipeline",
+            "name": "deliveryPipeline"
+          },
+          {
+            "type": "System.String",
+            "name": "deliveryPipelineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipeline",
+            "name": "deliveryPipeline"
+          },
+          {
+            "type": "System.String",
+            "name": "deliveryPipelineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.UpdateDeliveryPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.UpdateDeliveryPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipeline",
+            "name": "deliveryPipeline"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipeline",
+            "name": "deliveryPipeline"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.DeliveryPipeline, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeleteDeliveryPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeleteDeliveryPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteDeliveryPipeline",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteDeliveryPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteDeliveryPipelineAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteDeliveryPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "ListTargets",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListTargets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListTargetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListTargetsResponse, Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1118,6 +1480,16 @@
         "shortName": "ListTargetsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListTargetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListTargetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListTargetsResponse, Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1156,6 +1528,24 @@
       "clientMethod": {
         "shortName": "ListTargets",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListTargets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListTargetsResponse, Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1194,6 +1584,24 @@
         "shortName": "ListTargetsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListTargetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListTargetsResponse, Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1231,6 +1639,24 @@
       "clientMethod": {
         "shortName": "ListTargets",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListTargets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListTargetsResponse, Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1269,6 +1695,24 @@
         "shortName": "ListTargetsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListTargetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListTargetsResponse, Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1306,6 +1750,16 @@
       "clientMethod": {
         "shortName": "GetTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Target",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1345,6 +1799,16 @@
         "shortName": "GetTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1383,6 +1847,16 @@
       "clientMethod": {
         "shortName": "GetTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetTarget",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Target",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1421,6 +1895,16 @@
         "shortName": "GetTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1458,6 +1942,16 @@
       "clientMethod": {
         "shortName": "GetTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.TargetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Target",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1496,6 +1990,16 @@
         "shortName": "GetTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.TargetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Target>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "CreateTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1572,6 +2086,16 @@
         "shortName": "CreateTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1610,6 +2134,24 @@
       "clientMethod": {
         "shortName": "CreateTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateTarget",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Target",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "targetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1648,6 +2190,24 @@
         "shortName": "CreateTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Target",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "targetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1685,6 +2245,24 @@
       "clientMethod": {
         "shortName": "CreateTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateTarget",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Target",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "targetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1723,6 +2301,24 @@
         "shortName": "CreateTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Target",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "targetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1760,6 +2356,16 @@
       "clientMethod": {
         "shortName": "UpdateTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.UpdateTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1799,6 +2405,16 @@
         "shortName": "UpdateTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.UpdateTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1837,6 +2453,20 @@
       "clientMethod": {
         "shortName": "UpdateTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.Target",
+            "name": "target"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1875,6 +2505,20 @@
         "shortName": "UpdateTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.UpdateTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.Target",
+            "name": "target"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Target, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1912,6 +2556,16 @@
       "clientMethod": {
         "shortName": "DeleteTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeleteTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1951,6 +2605,16 @@
         "shortName": "DeleteTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeleteTargetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -1989,6 +2653,16 @@
       "clientMethod": {
         "shortName": "DeleteTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteTarget",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2027,6 +2701,16 @@
         "shortName": "DeleteTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2064,6 +2748,16 @@
       "clientMethod": {
         "shortName": "DeleteTarget",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteTarget",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.TargetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2102,6 +2796,16 @@
         "shortName": "DeleteTargetAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.DeleteTargetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.TargetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2139,6 +2843,16 @@
       "clientMethod": {
         "shortName": "ListReleases",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListReleases",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListReleasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListReleasesResponse, Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2178,6 +2892,16 @@
         "shortName": "ListReleasesAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListReleasesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListReleasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListReleasesResponse, Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2216,6 +2940,24 @@
       "clientMethod": {
         "shortName": "ListReleases",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListReleases",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListReleasesResponse, Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2254,6 +2996,24 @@
         "shortName": "ListReleasesAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListReleasesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListReleasesResponse, Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2291,6 +3051,24 @@
       "clientMethod": {
         "shortName": "ListReleases",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListReleases",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListReleasesResponse, Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2329,6 +3107,24 @@
         "shortName": "ListReleasesAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListReleasesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListReleasesResponse, Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2366,6 +3162,16 @@
       "clientMethod": {
         "shortName": "GetRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRelease",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetReleaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Release",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2405,6 +3211,16 @@
         "shortName": "GetReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetReleaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2443,6 +3259,16 @@
       "clientMethod": {
         "shortName": "GetRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRelease",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Release",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2481,6 +3307,16 @@
         "shortName": "GetReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2518,6 +3354,16 @@
       "clientMethod": {
         "shortName": "GetRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRelease",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ReleaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Release",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2556,6 +3402,16 @@
         "shortName": "GetReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ReleaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Release>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2593,6 +3449,16 @@
       "clientMethod": {
         "shortName": "CreateRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRelease",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateReleaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Release, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2632,6 +3498,16 @@
         "shortName": "CreateReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateReleaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Release, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2670,6 +3546,24 @@
       "clientMethod": {
         "shortName": "CreateRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRelease",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Release",
+            "name": "release"
+          },
+          {
+            "type": "System.String",
+            "name": "releaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Release, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2708,6 +3602,24 @@
         "shortName": "CreateReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Release",
+            "name": "release"
+          },
+          {
+            "type": "System.String",
+            "name": "releaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Release, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2745,6 +3657,24 @@
       "clientMethod": {
         "shortName": "CreateRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRelease",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Release",
+            "name": "release"
+          },
+          {
+            "type": "System.String",
+            "name": "releaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Release, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2783,6 +3713,24 @@
         "shortName": "CreateReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.DeliveryPipelineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Release",
+            "name": "release"
+          },
+          {
+            "type": "System.String",
+            "name": "releaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Release, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2820,6 +3768,16 @@
       "clientMethod": {
         "shortName": "AbandonRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonRelease",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AbandonReleaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.AbandonReleaseResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2859,6 +3817,16 @@
         "shortName": "AbandonReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AbandonReleaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AbandonReleaseResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2897,6 +3865,16 @@
       "clientMethod": {
         "shortName": "AbandonRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonRelease",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.AbandonReleaseResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2935,6 +3913,16 @@
         "shortName": "AbandonReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AbandonReleaseResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -2972,6 +3960,16 @@
       "clientMethod": {
         "shortName": "AbandonRelease",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonRelease",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ReleaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.AbandonReleaseResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3010,6 +4008,16 @@
         "shortName": "AbandonReleaseAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AbandonReleaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ReleaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AbandonReleaseResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3047,6 +4055,16 @@
       "clientMethod": {
         "shortName": "ApproveRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ApproveRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ApproveRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.ApproveRolloutResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3086,6 +4104,16 @@
         "shortName": "ApproveRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ApproveRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ApproveRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.ApproveRolloutResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3124,6 +4152,16 @@
       "clientMethod": {
         "shortName": "ApproveRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ApproveRollout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.ApproveRolloutResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3162,6 +4200,16 @@
         "shortName": "ApproveRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ApproveRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.ApproveRolloutResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3199,6 +4247,16 @@
       "clientMethod": {
         "shortName": "ApproveRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ApproveRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.ApproveRolloutResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3237,6 +4295,16 @@
         "shortName": "ApproveRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ApproveRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.ApproveRolloutResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3274,6 +4342,16 @@
       "clientMethod": {
         "shortName": "ListRollouts",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListRollouts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListRolloutsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListRolloutsResponse, Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3313,6 +4391,16 @@
         "shortName": "ListRolloutsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListRolloutsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListRolloutsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListRolloutsResponse, Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3351,6 +4439,24 @@
       "clientMethod": {
         "shortName": "ListRollouts",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListRollouts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListRolloutsResponse, Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3389,6 +4495,24 @@
         "shortName": "ListRolloutsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListRolloutsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListRolloutsResponse, Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3426,6 +4550,24 @@
       "clientMethod": {
         "shortName": "ListRollouts",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListRollouts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ReleaseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListRolloutsResponse, Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3464,6 +4606,24 @@
         "shortName": "ListRolloutsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListRolloutsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ReleaseName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListRolloutsResponse, Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3501,6 +4661,16 @@
       "clientMethod": {
         "shortName": "GetRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Rollout",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3540,6 +4710,16 @@
         "shortName": "GetRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3578,6 +4758,16 @@
       "clientMethod": {
         "shortName": "GetRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRollout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Rollout",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3616,6 +4806,16 @@
         "shortName": "GetRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3653,6 +4853,16 @@
       "clientMethod": {
         "shortName": "GetRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Rollout",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3691,6 +4901,16 @@
         "shortName": "GetRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Rollout>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3728,6 +4948,16 @@
       "clientMethod": {
         "shortName": "CreateRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Rollout, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3767,6 +4997,16 @@
         "shortName": "CreateRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CreateRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Rollout, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3805,6 +5045,24 @@
       "clientMethod": {
         "shortName": "CreateRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRollout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Rollout",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Rollout, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3843,6 +5101,24 @@
         "shortName": "CreateRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Rollout",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Rollout, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3880,6 +5156,24 @@
       "clientMethod": {
         "shortName": "CreateRollout",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ReleaseName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Rollout",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Rollout, Google.Cloud.Deploy.V1.OperationMetadata>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3918,6 +5212,24 @@
         "shortName": "CreateRolloutAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CreateRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ReleaseName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Deploy.V1.Rollout",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Deploy.V1.Rollout, Google.Cloud.Deploy.V1.OperationMetadata>>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3955,6 +5267,16 @@
       "clientMethod": {
         "shortName": "RetryJob",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RetryJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.RetryJobResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -3994,6 +5316,16 @@
         "shortName": "RetryJobAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RetryJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RetryJobResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4032,6 +5364,24 @@
       "clientMethod": {
         "shortName": "RetryJob",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.RetryJobResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4070,6 +5420,24 @@
         "shortName": "RetryJobAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RetryJobResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4107,6 +5475,24 @@
       "clientMethod": {
         "shortName": "RetryJob",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.RetryJobResponse",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4145,6 +5531,24 @@
         "shortName": "RetryJobAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.RetryJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.RetryJobResponse>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4182,6 +5586,16 @@
       "clientMethod": {
         "shortName": "ListJobRuns",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListJobRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4221,6 +5635,16 @@
         "shortName": "ListJobRunsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ListJobRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4259,6 +5683,24 @@
       "clientMethod": {
         "shortName": "ListJobRuns",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRuns",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4297,6 +5739,24 @@
         "shortName": "ListJobRunsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4334,6 +5794,24 @@
       "clientMethod": {
         "shortName": "ListJobRuns",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4372,6 +5850,24 @@
         "shortName": "ListJobRunsAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.ListJobRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Deploy.V1.ListJobRunsResponse, Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4409,6 +5905,16 @@
       "clientMethod": {
         "shortName": "GetJobRun",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetJobRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.JobRun",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4448,6 +5954,16 @@
         "shortName": "GetJobRunAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetJobRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4486,6 +6002,16 @@
       "clientMethod": {
         "shortName": "GetJobRun",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.JobRun",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4524,6 +6050,16 @@
         "shortName": "GetJobRunAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4561,6 +6097,16 @@
       "clientMethod": {
         "shortName": "GetJobRun",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.JobRunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.JobRun",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4599,6 +6145,16 @@
         "shortName": "GetJobRunAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetJobRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.JobRunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.JobRun>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4636,6 +6192,16 @@
       "clientMethod": {
         "shortName": "GetConfig",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Config",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4675,6 +6241,16 @@
         "shortName": "GetConfigAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.GetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Config>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4713,6 +6289,16 @@
       "clientMethod": {
         "shortName": "GetConfig",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Config",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4751,6 +6337,16 @@
         "shortName": "GetConfigAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Config>",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4788,6 +6384,16 @@
       "clientMethod": {
         "shortName": "GetConfig",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Deploy.V1.Config",
         "client": {
           "shortName": "CloudDeployClient",
@@ -4826,6 +6432,16 @@
         "shortName": "GetConfigAsync",
         "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.GetConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.ConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.Config>",
         "client": {
           "shortName": "CloudDeployClient",

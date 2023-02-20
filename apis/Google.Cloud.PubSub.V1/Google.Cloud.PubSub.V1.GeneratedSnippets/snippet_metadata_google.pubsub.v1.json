@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.CreateTopic",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Topic",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Topic",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.CreateTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Topic",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "CreateTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.CreateTopic",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Topic",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -134,6 +164,16 @@
         "shortName": "CreateTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.CreateTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "CreateTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.CreateTopic",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Topic",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -209,6 +259,16 @@
         "shortName": "CreateTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.CreateTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "UpdateTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.UpdateTopic",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.UpdateTopicRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Topic",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -285,6 +355,16 @@
         "shortName": "UpdateTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.UpdateTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.UpdateTopicRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -323,6 +403,20 @@
       "clientMethod": {
         "shortName": "UpdateTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.UpdateTopic",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Topic",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Topic",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -361,6 +455,20 @@
         "shortName": "UpdateTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.UpdateTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Topic",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -398,6 +506,16 @@
       "clientMethod": {
         "shortName": "Publish",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.Publish",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.PublishRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.PublishResponse",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -437,6 +555,16 @@
         "shortName": "PublishAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.PublishAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.PublishRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PublishResponse>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -475,6 +603,20 @@
       "clientMethod": {
         "shortName": "Publish",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.Publish",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.PubSub.V1.PubsubMessage>",
+            "name": "messages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.PublishResponse",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -513,6 +655,20 @@
         "shortName": "PublishAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.PublishAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.PubSub.V1.PubsubMessage>",
+            "name": "messages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PublishResponse>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -550,6 +706,20 @@
       "clientMethod": {
         "shortName": "Publish",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.Publish",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.PubSub.V1.PubsubMessage>",
+            "name": "messages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.PublishResponse",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -588,6 +758,20 @@
         "shortName": "PublishAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.PublishAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.PubSub.V1.PubsubMessage>",
+            "name": "messages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PublishResponse>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -625,6 +809,16 @@
       "clientMethod": {
         "shortName": "GetTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.GetTopic",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.GetTopicRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Topic",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -664,6 +858,16 @@
         "shortName": "GetTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.GetTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.GetTopicRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -702,6 +906,16 @@
       "clientMethod": {
         "shortName": "GetTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.GetTopic",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Topic",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -740,6 +954,16 @@
         "shortName": "GetTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.GetTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -777,6 +1001,16 @@
       "clientMethod": {
         "shortName": "GetTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.GetTopic",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Topic",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -815,6 +1049,16 @@
         "shortName": "GetTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.GetTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -852,6 +1096,16 @@
       "clientMethod": {
         "shortName": "ListTopics",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListTopicsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -891,6 +1145,16 @@
         "shortName": "ListTopicsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListTopicsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -929,6 +1193,24 @@
       "clientMethod": {
         "shortName": "ListTopics",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopics",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -967,6 +1249,24 @@
         "shortName": "ListTopicsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1004,6 +1304,24 @@
       "clientMethod": {
         "shortName": "ListTopics",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopics",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1042,6 +1360,24 @@
         "shortName": "ListTopicsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicsResponse, Google.Cloud.PubSub.V1.Topic>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1079,6 +1415,16 @@
       "clientMethod": {
         "shortName": "ListTopicSubscriptions",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1118,6 +1464,16 @@
         "shortName": "ListTopicSubscriptionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSubscriptionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1156,6 +1512,24 @@
       "clientMethod": {
         "shortName": "ListTopicSubscriptions",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSubscriptions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1194,6 +1568,24 @@
         "shortName": "ListTopicSubscriptionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSubscriptionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1231,6 +1623,24 @@
       "clientMethod": {
         "shortName": "ListTopicSubscriptions",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1269,6 +1679,24 @@
         "shortName": "ListTopicSubscriptionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSubscriptionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1306,6 +1734,16 @@
       "clientMethod": {
         "shortName": "ListTopicSnapshots",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1345,6 +1783,16 @@
         "shortName": "ListTopicSnapshotsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1383,6 +1831,24 @@
       "clientMethod": {
         "shortName": "ListTopicSnapshots",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSnapshots",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1421,6 +1887,24 @@
         "shortName": "ListTopicSnapshotsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1458,6 +1942,24 @@
       "clientMethod": {
         "shortName": "ListTopicSnapshots",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1496,6 +1998,24 @@
         "shortName": "ListTopicSnapshotsAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.ListTopicSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse, System.String>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1533,6 +2053,16 @@
       "clientMethod": {
         "shortName": "DeleteTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.DeleteTopic",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteTopicRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PublisherServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient"
@@ -1571,6 +2101,16 @@
         "shortName": "DeleteTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.DeleteTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteTopicRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1609,6 +2149,16 @@
       "clientMethod": {
         "shortName": "DeleteTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.DeleteTopic",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PublisherServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient"
@@ -1646,6 +2196,16 @@
         "shortName": "DeleteTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.DeleteTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1683,6 +2243,16 @@
       "clientMethod": {
         "shortName": "DeleteTopic",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.DeleteTopic",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PublisherServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient"
@@ -1720,6 +2290,16 @@
         "shortName": "DeleteTopicAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.DeleteTopicAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1757,6 +2337,16 @@
       "clientMethod": {
         "shortName": "DetachSubscription",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.DetachSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DetachSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.DetachSubscriptionResponse",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1796,6 +2386,16 @@
         "shortName": "DetachSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.PublisherServiceApiClient.DetachSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DetachSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.DetachSubscriptionResponse>",
         "client": {
           "shortName": "PublisherServiceApiClient",
@@ -1834,6 +2434,16 @@
       "clientMethod": {
         "shortName": "CreateSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.CreateSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -1873,6 +2483,16 @@
         "shortName": "CreateSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.CreateSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -1911,6 +2531,24 @@
       "clientMethod": {
         "shortName": "CreateSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -1949,6 +2587,24 @@
         "shortName": "CreateSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -1986,6 +2642,24 @@
       "clientMethod": {
         "shortName": "CreateSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchema",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2024,6 +2698,24 @@
         "shortName": "CreateSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CreateSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2061,6 +2753,16 @@
       "clientMethod": {
         "shortName": "GetSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.GetSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2100,6 +2802,16 @@
         "shortName": "GetSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.GetSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2138,6 +2850,16 @@
       "clientMethod": {
         "shortName": "GetSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2176,6 +2898,16 @@
         "shortName": "GetSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2213,6 +2945,16 @@
       "clientMethod": {
         "shortName": "GetSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2251,6 +2993,16 @@
         "shortName": "GetSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.GetSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2288,6 +3040,16 @@
       "clientMethod": {
         "shortName": "ListSchemas",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2327,6 +3089,16 @@
         "shortName": "ListSchemasAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2365,6 +3137,24 @@
       "clientMethod": {
         "shortName": "ListSchemas",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2403,6 +3193,24 @@
         "shortName": "ListSchemasAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2440,6 +3248,24 @@
       "clientMethod": {
         "shortName": "ListSchemas",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemas",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2478,6 +3304,24 @@
         "shortName": "ListSchemasAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemasAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemasResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2515,6 +3359,16 @@
       "clientMethod": {
         "shortName": "ListSchemaRevisions",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListSchemaRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2554,6 +3408,16 @@
         "shortName": "ListSchemaRevisionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListSchemaRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2592,6 +3456,24 @@
       "clientMethod": {
         "shortName": "ListSchemaRevisions",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2630,6 +3512,24 @@
         "shortName": "ListSchemaRevisionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2667,6 +3567,24 @@
       "clientMethod": {
         "shortName": "ListSchemaRevisions",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2705,6 +3623,24 @@
         "shortName": "ListSchemaRevisionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ListSchemaRevisionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSchemaRevisionsResponse, Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2742,6 +3678,16 @@
       "clientMethod": {
         "shortName": "CommitSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.CommitSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2781,6 +3727,16 @@
         "shortName": "CommitSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.CommitSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2819,6 +3775,20 @@
       "clientMethod": {
         "shortName": "CommitSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2857,6 +3827,20 @@
         "shortName": "CommitSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2894,6 +3878,20 @@
       "clientMethod": {
         "shortName": "CommitSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2932,6 +3930,20 @@
         "shortName": "CommitSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.CommitSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -2969,6 +3981,16 @@
       "clientMethod": {
         "shortName": "RollbackSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.RollbackSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3008,6 +4030,16 @@
         "shortName": "RollbackSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.RollbackSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3046,6 +4078,20 @@
       "clientMethod": {
         "shortName": "RollbackSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "revisionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3084,6 +4130,20 @@
         "shortName": "RollbackSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "revisionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3121,6 +4181,20 @@
       "clientMethod": {
         "shortName": "RollbackSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "revisionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3159,6 +4233,20 @@
         "shortName": "RollbackSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.RollbackSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "revisionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3196,6 +4284,16 @@
       "clientMethod": {
         "shortName": "DeleteSchemaRevision",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteSchemaRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3235,6 +4333,16 @@
         "shortName": "DeleteSchemaRevisionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteSchemaRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3273,6 +4381,20 @@
       "clientMethod": {
         "shortName": "DeleteSchemaRevision",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "revisionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3311,6 +4433,20 @@
         "shortName": "DeleteSchemaRevisionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "revisionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3348,6 +4484,20 @@
       "clientMethod": {
         "shortName": "DeleteSchemaRevision",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "revisionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Schema",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3386,6 +4536,20 @@
         "shortName": "DeleteSchemaRevisionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaRevisionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "revisionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Schema>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3423,6 +4587,16 @@
       "clientMethod": {
         "shortName": "DeleteSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SchemaServiceClient",
           "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
@@ -3461,6 +4635,16 @@
         "shortName": "DeleteSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3499,6 +4683,16 @@
       "clientMethod": {
         "shortName": "DeleteSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SchemaServiceClient",
           "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
@@ -3536,6 +4730,16 @@
         "shortName": "DeleteSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3573,6 +4777,16 @@
       "clientMethod": {
         "shortName": "DeleteSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SchemaServiceClient",
           "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient"
@@ -3610,6 +4824,16 @@
         "shortName": "DeleteSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.DeleteSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3647,6 +4871,16 @@
       "clientMethod": {
         "shortName": "ValidateSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ValidateSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3686,6 +4920,16 @@
         "shortName": "ValidateSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ValidateSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3724,6 +4968,20 @@
       "clientMethod": {
         "shortName": "ValidateSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3762,6 +5020,20 @@
         "shortName": "ValidateSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3799,6 +5071,20 @@
       "clientMethod": {
         "shortName": "ValidateSchema",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchema",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.ValidateSchemaResponse",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3837,6 +5123,20 @@
         "shortName": "ValidateSchemaAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateSchemaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateSchemaResponse>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3874,6 +5174,16 @@
       "clientMethod": {
         "shortName": "ValidateMessage",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateMessage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ValidateMessageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.ValidateMessageResponse",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3913,6 +5223,16 @@
         "shortName": "ValidateMessageAsync",
         "fullName": "Google.Cloud.PubSub.V1.SchemaServiceClient.ValidateMessageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ValidateMessageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.ValidateMessageResponse>",
         "client": {
           "shortName": "SchemaServiceClient",
@@ -3951,6 +5271,16 @@
       "clientMethod": {
         "shortName": "CreateSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Subscription",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Subscription",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -3990,6 +5320,16 @@
         "shortName": "CreateSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Subscription",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4028,6 +5368,28 @@
       "clientMethod": {
         "shortName": "CreateSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.PushConfig",
+            "name": "pushConfig"
+          },
+          {
+            "type": "System.Int32",
+            "name": "ackDeadlineSeconds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Subscription",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4066,6 +5428,28 @@
         "shortName": "CreateSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.PushConfig",
+            "name": "pushConfig"
+          },
+          {
+            "type": "System.Int32",
+            "name": "ackDeadlineSeconds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4103,6 +5487,28 @@
       "clientMethod": {
         "shortName": "CreateSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.PushConfig",
+            "name": "pushConfig"
+          },
+          {
+            "type": "System.Int32",
+            "name": "ackDeadlineSeconds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Subscription",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4141,6 +5547,28 @@
         "shortName": "CreateSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.TopicName",
+            "name": "topic"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.PushConfig",
+            "name": "pushConfig"
+          },
+          {
+            "type": "System.Int32",
+            "name": "ackDeadlineSeconds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4178,6 +5606,16 @@
       "clientMethod": {
         "shortName": "GetSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.GetSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Subscription",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4217,6 +5655,16 @@
         "shortName": "GetSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.GetSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4255,6 +5703,16 @@
       "clientMethod": {
         "shortName": "GetSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Subscription",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4293,6 +5751,16 @@
         "shortName": "GetSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4330,6 +5798,16 @@
       "clientMethod": {
         "shortName": "GetSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Subscription",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4368,6 +5846,16 @@
         "shortName": "GetSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4405,6 +5893,16 @@
       "clientMethod": {
         "shortName": "UpdateSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.UpdateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Subscription",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4444,6 +5942,16 @@
         "shortName": "UpdateSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.UpdateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4482,6 +5990,20 @@
       "clientMethod": {
         "shortName": "UpdateSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Subscription",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Subscription",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4520,6 +6042,20 @@
         "shortName": "UpdateSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Subscription",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4557,6 +6093,16 @@
       "clientMethod": {
         "shortName": "ListSubscriptions",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4596,6 +6142,16 @@
         "shortName": "ListSubscriptionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSubscriptionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4634,6 +6190,24 @@
       "clientMethod": {
         "shortName": "ListSubscriptions",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSubscriptions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4672,6 +6246,24 @@
         "shortName": "ListSubscriptionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSubscriptionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4709,6 +6301,24 @@
       "clientMethod": {
         "shortName": "ListSubscriptions",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4747,6 +6357,24 @@
         "shortName": "ListSubscriptionsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSubscriptionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSubscriptionsResponse, Google.Cloud.PubSub.V1.Subscription>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4784,6 +6412,16 @@
       "clientMethod": {
         "shortName": "DeleteSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -4822,6 +6460,16 @@
         "shortName": "DeleteSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4860,6 +6508,16 @@
       "clientMethod": {
         "shortName": "DeleteSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -4897,6 +6555,16 @@
         "shortName": "DeleteSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -4934,6 +6602,16 @@
       "clientMethod": {
         "shortName": "DeleteSubscription",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -4971,6 +6649,16 @@
         "shortName": "DeleteSubscriptionAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSubscriptionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5008,6 +6696,16 @@
       "clientMethod": {
         "shortName": "ModifyAckDeadline",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyAckDeadline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -5046,6 +6744,16 @@
         "shortName": "ModifyAckDeadlineAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyAckDeadlineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5084,6 +6792,24 @@
       "clientMethod": {
         "shortName": "ModifyAckDeadline",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyAckDeadline",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ackIds"
+          },
+          {
+            "type": "System.Int32",
+            "name": "ackDeadlineSeconds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -5121,6 +6847,24 @@
         "shortName": "ModifyAckDeadlineAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyAckDeadlineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ackIds"
+          },
+          {
+            "type": "System.Int32",
+            "name": "ackDeadlineSeconds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5158,6 +6902,24 @@
       "clientMethod": {
         "shortName": "ModifyAckDeadline",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyAckDeadline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ackIds"
+          },
+          {
+            "type": "System.Int32",
+            "name": "ackDeadlineSeconds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -5195,6 +6957,24 @@
         "shortName": "ModifyAckDeadlineAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyAckDeadlineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ackIds"
+          },
+          {
+            "type": "System.Int32",
+            "name": "ackDeadlineSeconds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5232,6 +7012,16 @@
       "clientMethod": {
         "shortName": "Acknowledge",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Acknowledge",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.AcknowledgeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -5270,6 +7060,16 @@
         "shortName": "AcknowledgeAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.AcknowledgeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.AcknowledgeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5308,6 +7108,20 @@
       "clientMethod": {
         "shortName": "Acknowledge",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Acknowledge",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ackIds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -5345,6 +7159,20 @@
         "shortName": "AcknowledgeAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.AcknowledgeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ackIds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5382,6 +7210,20 @@
       "clientMethod": {
         "shortName": "Acknowledge",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Acknowledge",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ackIds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -5419,6 +7261,20 @@
         "shortName": "AcknowledgeAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.AcknowledgeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ackIds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5456,6 +7312,16 @@
       "clientMethod": {
         "shortName": "Pull",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Pull",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.PullRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.PullResponse",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5495,6 +7361,16 @@
         "shortName": "PullAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.PullAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.PullRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5533,6 +7409,24 @@
       "clientMethod": {
         "shortName": "Pull",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Pull",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "returnImmediately"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxMessages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.PullResponse",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5571,6 +7465,24 @@
         "shortName": "PullAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.PullAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "returnImmediately"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxMessages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5608,6 +7520,24 @@
       "clientMethod": {
         "shortName": "Pull",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Pull",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "returnImmediately"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxMessages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.PullResponse",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5646,6 +7576,24 @@
         "shortName": "PullAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.PullAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "returnImmediately"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxMessages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5683,6 +7631,20 @@
       "clientMethod": {
         "shortName": "Pull",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Pull",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxMessages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.PullResponse",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5721,6 +7683,20 @@
         "shortName": "PullAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.PullAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxMessages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5758,6 +7734,20 @@
       "clientMethod": {
         "shortName": "Pull",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Pull",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxMessages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.PullResponse",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5796,6 +7786,20 @@
         "shortName": "PullAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.PullAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "System.Int32",
+            "name": "maxMessages"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.PullResponse>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5833,6 +7837,16 @@
       "clientMethod": {
         "shortName": "StreamingPull",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.StreamingPull",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient+StreamingPullStream",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5871,6 +7885,16 @@
       "clientMethod": {
         "shortName": "ModifyPushConfig",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyPushConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ModifyPushConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -5909,6 +7933,16 @@
         "shortName": "ModifyPushConfigAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyPushConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ModifyPushConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -5947,6 +7981,20 @@
       "clientMethod": {
         "shortName": "ModifyPushConfig",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyPushConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.PushConfig",
+            "name": "pushConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -5984,6 +8032,20 @@
         "shortName": "ModifyPushConfigAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyPushConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.PushConfig",
+            "name": "pushConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6021,6 +8083,20 @@
       "clientMethod": {
         "shortName": "ModifyPushConfig",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyPushConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.PushConfig",
+            "name": "pushConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -6058,6 +8134,20 @@
         "shortName": "ModifyPushConfigAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ModifyPushConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.PushConfig",
+            "name": "pushConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6095,6 +8185,16 @@
       "clientMethod": {
         "shortName": "GetSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.GetSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Snapshot",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6134,6 +8234,16 @@
         "shortName": "GetSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.GetSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6172,6 +8282,16 @@
       "clientMethod": {
         "shortName": "GetSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Snapshot",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6210,6 +8330,16 @@
         "shortName": "GetSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6247,6 +8377,16 @@
       "clientMethod": {
         "shortName": "GetSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SnapshotName",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Snapshot",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6285,6 +8425,16 @@
         "shortName": "GetSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.GetSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SnapshotName",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6322,6 +8472,16 @@
       "clientMethod": {
         "shortName": "ListSnapshots",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6361,6 +8521,16 @@
         "shortName": "ListSnapshotsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.ListSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6399,6 +8569,24 @@
       "clientMethod": {
         "shortName": "ListSnapshots",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6437,6 +8625,24 @@
         "shortName": "ListSnapshotsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6474,6 +8680,24 @@
       "clientMethod": {
         "shortName": "ListSnapshots",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6512,6 +8736,24 @@
         "shortName": "ListSnapshotsAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.ListSnapshotsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PubSub.V1.ListSnapshotsResponse, Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6549,6 +8791,16 @@
       "clientMethod": {
         "shortName": "CreateSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.CreateSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Snapshot",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6588,6 +8840,16 @@
         "shortName": "CreateSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.CreateSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6626,6 +8888,20 @@
       "clientMethod": {
         "shortName": "CreateSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Snapshot",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6664,6 +8940,20 @@
         "shortName": "CreateSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6701,6 +8991,20 @@
       "clientMethod": {
         "shortName": "CreateSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Snapshot",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6739,6 +9043,20 @@
         "shortName": "CreateSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.CreateSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.PubSub.V1.SubscriptionName",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6776,6 +9094,16 @@
       "clientMethod": {
         "shortName": "UpdateSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.UpdateSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Snapshot",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6815,6 +9143,16 @@
         "shortName": "UpdateSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.UpdateSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6853,6 +9191,20 @@
       "clientMethod": {
         "shortName": "UpdateSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Snapshot",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.Snapshot",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6891,6 +9243,20 @@
         "shortName": "UpdateSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.UpdateSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.Snapshot",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.Snapshot>",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -6928,6 +9294,16 @@
       "clientMethod": {
         "shortName": "DeleteSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -6966,6 +9342,16 @@
         "shortName": "DeleteSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.DeleteSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -7004,6 +9390,16 @@
       "clientMethod": {
         "shortName": "DeleteSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -7041,6 +9437,16 @@
         "shortName": "DeleteSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -7078,6 +9484,16 @@
       "clientMethod": {
         "shortName": "DeleteSnapshot",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SnapshotName",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SubscriberServiceApiClient",
           "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient"
@@ -7115,6 +9531,16 @@
         "shortName": "DeleteSnapshotAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.DeleteSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SnapshotName",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -7152,6 +9578,16 @@
       "clientMethod": {
         "shortName": "Seek",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.Seek",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SeekRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.PubSub.V1.SeekResponse",
         "client": {
           "shortName": "SubscriberServiceApiClient",
@@ -7191,6 +9627,16 @@
         "shortName": "SeekAsync",
         "fullName": "Google.Cloud.PubSub.V1.SubscriberServiceApiClient.SeekAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PubSub.V1.SeekRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.PubSub.V1.SeekResponse>",
         "client": {
           "shortName": "SubscriberServiceApiClient",

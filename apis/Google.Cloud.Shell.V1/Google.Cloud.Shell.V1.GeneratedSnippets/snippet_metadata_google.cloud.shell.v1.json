@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetEnvironment",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.GetEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.GetEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Shell.V1.Environment",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "GetEnvironmentAsync",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.GetEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.GetEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Shell.V1.Environment>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetEnvironment",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.GetEnvironment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Shell.V1.Environment",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -134,6 +164,16 @@
         "shortName": "GetEnvironmentAsync",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.GetEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Shell.V1.Environment>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetEnvironment",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.GetEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.EnvironmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Shell.V1.Environment",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -209,6 +259,16 @@
         "shortName": "GetEnvironmentAsync",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.GetEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.EnvironmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Shell.V1.Environment>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "StartEnvironment",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.StartEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.StartEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Shell.V1.StartEnvironmentResponse, Google.Cloud.Shell.V1.StartEnvironmentMetadata>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -285,6 +355,16 @@
         "shortName": "StartEnvironmentAsync",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.StartEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.StartEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Shell.V1.StartEnvironmentResponse, Google.Cloud.Shell.V1.StartEnvironmentMetadata>>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "AuthorizeEnvironment",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.AuthorizeEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.AuthorizeEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Shell.V1.AuthorizeEnvironmentResponse, Google.Cloud.Shell.V1.AuthorizeEnvironmentMetadata>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -362,6 +452,16 @@
         "shortName": "AuthorizeEnvironmentAsync",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.AuthorizeEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.AuthorizeEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Shell.V1.AuthorizeEnvironmentResponse, Google.Cloud.Shell.V1.AuthorizeEnvironmentMetadata>>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -400,6 +500,16 @@
       "clientMethod": {
         "shortName": "AddPublicKey",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.AddPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.AddPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Shell.V1.AddPublicKeyResponse, Google.Cloud.Shell.V1.AddPublicKeyMetadata>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -439,6 +549,16 @@
         "shortName": "AddPublicKeyAsync",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.AddPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.AddPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Shell.V1.AddPublicKeyResponse, Google.Cloud.Shell.V1.AddPublicKeyMetadata>>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -477,6 +597,16 @@
       "clientMethod": {
         "shortName": "RemovePublicKey",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.RemovePublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.RemovePublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Shell.V1.RemovePublicKeyResponse, Google.Cloud.Shell.V1.RemovePublicKeyMetadata>",
         "client": {
           "shortName": "CloudShellServiceClient",
@@ -516,6 +646,16 @@
         "shortName": "RemovePublicKeyAsync",
         "fullName": "Google.Cloud.Shell.V1.CloudShellServiceClient.RemovePublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Shell.V1.RemovePublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Shell.V1.RemovePublicKeyResponse, Google.Cloud.Shell.V1.RemovePublicKeyMetadata>>",
         "client": {
           "shortName": "CloudShellServiceClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceManagement.V1.ListServicesResponse, Google.Cloud.ServiceManagement.V1.ManagedService>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -58,6 +68,16 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceManagement.V1.ListServicesResponse, Google.Cloud.ServiceManagement.V1.ManagedService>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -96,6 +116,28 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "producerProjectId"
+          },
+          {
+            "type": "System.String",
+            "name": "consumerId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceManagement.V1.ListServicesResponse, Google.Cloud.ServiceManagement.V1.ManagedService>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -134,6 +176,28 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "producerProjectId"
+          },
+          {
+            "type": "System.String",
+            "name": "consumerId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceManagement.V1.ListServicesResponse, Google.Cloud.ServiceManagement.V1.ManagedService>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -171,6 +235,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceManagement.V1.ManagedService",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -210,6 +284,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceManagement.V1.ManagedService>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -248,6 +332,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceManagement.V1.ManagedService",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -286,6 +380,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceManagement.V1.ManagedService>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -323,6 +427,16 @@
       "clientMethod": {
         "shortName": "CreateService",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.CreateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.ManagedService, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -362,6 +476,16 @@
         "shortName": "CreateServiceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.CreateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.ManagedService, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -400,6 +524,16 @@
       "clientMethod": {
         "shortName": "CreateService",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ManagedService",
+            "name": "service"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.ManagedService, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -438,6 +572,16 @@
         "shortName": "CreateServiceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ManagedService",
+            "name": "service"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.ManagedService, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -475,6 +619,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.DeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -514,6 +668,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -552,6 +716,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.DeleteService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -590,6 +764,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -627,6 +811,16 @@
       "clientMethod": {
         "shortName": "UndeleteService",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.UndeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.UndeleteServiceResponse, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -666,6 +860,16 @@
         "shortName": "UndeleteServiceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.UndeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.UndeleteServiceResponse, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -704,6 +908,16 @@
       "clientMethod": {
         "shortName": "UndeleteService",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.UndeleteService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.UndeleteServiceResponse, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -742,6 +956,16 @@
         "shortName": "UndeleteServiceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.UndeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.UndeleteServiceResponse, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -779,6 +1003,16 @@
       "clientMethod": {
         "shortName": "ListServiceConfigs",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServiceConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse, Google.Api.Service>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -818,6 +1052,16 @@
         "shortName": "ListServiceConfigsAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServiceConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse, Google.Api.Service>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -856,6 +1100,24 @@
       "clientMethod": {
         "shortName": "ListServiceConfigs",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServiceConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse, Google.Api.Service>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -894,6 +1156,24 @@
         "shortName": "ListServiceConfigsAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServiceConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse, Google.Api.Service>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -931,6 +1211,16 @@
       "clientMethod": {
         "shortName": "GetServiceConfig",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Service",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -970,6 +1260,16 @@
         "shortName": "GetServiceConfigAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.Service>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1008,6 +1308,24 @@
       "clientMethod": {
         "shortName": "GetServiceConfig",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "System.String",
+            "name": "configId"
+          },
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest+Types+ConfigView",
+            "name": "view"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Service",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1046,6 +1364,24 @@
         "shortName": "GetServiceConfigAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "System.String",
+            "name": "configId"
+          },
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest+Types+ConfigView",
+            "name": "view"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.Service>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1083,6 +1419,16 @@
       "clientMethod": {
         "shortName": "CreateServiceConfig",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Service",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1122,6 +1468,16 @@
         "shortName": "CreateServiceConfigAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.Service>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1160,6 +1516,20 @@
       "clientMethod": {
         "shortName": "CreateServiceConfig",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Api.Service",
+            "name": "serviceConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Service",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1198,6 +1568,20 @@
         "shortName": "CreateServiceConfigAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Api.Service",
+            "name": "serviceConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.Service>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1235,6 +1619,16 @@
       "clientMethod": {
         "shortName": "SubmitConfigSource",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.SubmitConfigSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.SubmitConfigSourceResponse, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1274,6 +1668,16 @@
         "shortName": "SubmitConfigSourceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.SubmitConfigSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.SubmitConfigSourceResponse, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1312,6 +1716,24 @@
       "clientMethod": {
         "shortName": "SubmitConfigSource",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.SubmitConfigSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ConfigSource",
+            "name": "configSource"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "validateOnly"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.SubmitConfigSourceResponse, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1350,6 +1772,24 @@
         "shortName": "SubmitConfigSourceAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.SubmitConfigSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ConfigSource",
+            "name": "configSource"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "validateOnly"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.SubmitConfigSourceResponse, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1387,6 +1827,16 @@
       "clientMethod": {
         "shortName": "ListServiceRollouts",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServiceRollouts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse, Google.Cloud.ServiceManagement.V1.Rollout>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1426,6 +1876,16 @@
         "shortName": "ListServiceRolloutsAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServiceRolloutsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse, Google.Cloud.ServiceManagement.V1.Rollout>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1464,6 +1924,28 @@
       "clientMethod": {
         "shortName": "ListServiceRollouts",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServiceRollouts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse, Google.Cloud.ServiceManagement.V1.Rollout>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1502,6 +1984,28 @@
         "shortName": "ListServiceRolloutsAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.ListServiceRolloutsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse, Google.Cloud.ServiceManagement.V1.Rollout>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1539,6 +2043,16 @@
       "clientMethod": {
         "shortName": "GetServiceRollout",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceManagement.V1.Rollout",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1578,6 +2092,16 @@
         "shortName": "GetServiceRolloutAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceManagement.V1.Rollout>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1616,6 +2140,20 @@
       "clientMethod": {
         "shortName": "GetServiceRollout",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceRollout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceManagement.V1.Rollout",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1654,6 +2192,20 @@
         "shortName": "GetServiceRolloutAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GetServiceRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "System.String",
+            "name": "rolloutId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceManagement.V1.Rollout>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1691,6 +2243,16 @@
       "clientMethod": {
         "shortName": "CreateServiceRollout",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.Rollout, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1730,6 +2292,16 @@
         "shortName": "CreateServiceRolloutAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.Rollout, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1768,6 +2340,20 @@
       "clientMethod": {
         "shortName": "CreateServiceRollout",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceRollout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.Rollout",
+            "name": "rollout"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.Rollout, Google.Cloud.ServiceManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1806,6 +2392,20 @@
         "shortName": "CreateServiceRolloutAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.CreateServiceRolloutAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "serviceName"
+          },
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.Rollout",
+            "name": "rollout"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ServiceManagement.V1.Rollout, Google.Cloud.ServiceManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1843,6 +2443,16 @@
       "clientMethod": {
         "shortName": "GenerateConfigReport",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GenerateConfigReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1882,6 +2492,16 @@
         "shortName": "GenerateConfigReportAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GenerateConfigReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse>",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1920,6 +2540,20 @@
       "clientMethod": {
         "shortName": "GenerateConfigReport",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GenerateConfigReport",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Any",
+            "name": "newConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Any",
+            "name": "oldConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse",
         "client": {
           "shortName": "ServiceManagerClient",
@@ -1958,6 +2592,20 @@
         "shortName": "GenerateConfigReportAsync",
         "fullName": "Google.Cloud.ServiceManagement.V1.ServiceManagerClient.GenerateConfigReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Any",
+            "name": "newConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Any",
+            "name": "oldConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse>",
         "client": {
           "shortName": "ServiceManagerClient",

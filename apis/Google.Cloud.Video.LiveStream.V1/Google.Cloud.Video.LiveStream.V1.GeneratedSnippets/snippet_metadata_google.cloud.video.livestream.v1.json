@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "System.String",
+            "name": "channelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "System.String",
+            "name": "channelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateChannel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "System.String",
+            "name": "channelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "System.String",
+            "name": "channelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ListChannels",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListChannels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListChannelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListChannelsResponse, Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "ListChannelsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListChannelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListChannelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListChannelsResponse, Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -323,6 +435,24 @@
       "clientMethod": {
         "shortName": "ListChannels",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListChannels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListChannelsResponse, Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -361,6 +491,24 @@
         "shortName": "ListChannelsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListChannelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListChannelsResponse, Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -398,6 +546,24 @@
       "clientMethod": {
         "shortName": "ListChannels",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListChannels",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListChannelsResponse, Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -436,6 +602,24 @@
         "shortName": "ListChannelsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListChannelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListChannelsResponse, Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -473,6 +657,16 @@
       "clientMethod": {
         "shortName": "GetChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Channel",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -512,6 +706,16 @@
         "shortName": "GetChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -550,6 +754,16 @@
       "clientMethod": {
         "shortName": "GetChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Channel",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -588,6 +802,16 @@
         "shortName": "GetChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -625,6 +849,16 @@
       "clientMethod": {
         "shortName": "GetChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Channel",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -663,6 +897,16 @@
         "shortName": "GetChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Channel>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "DeleteChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "DeleteChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -777,6 +1041,16 @@
       "clientMethod": {
         "shortName": "DeleteChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -815,6 +1089,16 @@
         "shortName": "DeleteChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -852,6 +1136,16 @@
       "clientMethod": {
         "shortName": "DeleteChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -890,6 +1184,16 @@
         "shortName": "DeleteChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -927,6 +1231,16 @@
       "clientMethod": {
         "shortName": "UpdateChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.UpdateChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -966,6 +1280,16 @@
         "shortName": "UpdateChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.UpdateChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1004,6 +1328,20 @@
       "clientMethod": {
         "shortName": "UpdateChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1042,6 +1380,20 @@
         "shortName": "UpdateChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Channel, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "StartChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.StartChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1118,6 +1480,16 @@
         "shortName": "StartChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.StartChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1156,6 +1528,16 @@
       "clientMethod": {
         "shortName": "StartChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1194,6 +1576,16 @@
         "shortName": "StartChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1231,6 +1623,16 @@
       "clientMethod": {
         "shortName": "StartChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1269,6 +1671,16 @@
         "shortName": "StartChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1306,6 +1718,16 @@
       "clientMethod": {
         "shortName": "StopChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.StopChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1345,6 +1767,16 @@
         "shortName": "StopChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.StopChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1383,6 +1815,16 @@
       "clientMethod": {
         "shortName": "StopChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1421,6 +1863,16 @@
         "shortName": "StopChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1458,6 +1910,16 @@
       "clientMethod": {
         "shortName": "StopChannel",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1496,6 +1958,16 @@
         "shortName": "StopChannelAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1533,6 +2005,16 @@
       "clientMethod": {
         "shortName": "CreateInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1572,6 +2054,16 @@
         "shortName": "CreateInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1610,6 +2102,24 @@
       "clientMethod": {
         "shortName": "CreateInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateInput",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Input",
+            "name": "input"
+          },
+          {
+            "type": "System.String",
+            "name": "inputId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1648,6 +2158,24 @@
         "shortName": "CreateInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Input",
+            "name": "input"
+          },
+          {
+            "type": "System.String",
+            "name": "inputId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1685,6 +2213,24 @@
       "clientMethod": {
         "shortName": "CreateInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateInput",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Input",
+            "name": "input"
+          },
+          {
+            "type": "System.String",
+            "name": "inputId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1723,6 +2269,24 @@
         "shortName": "CreateInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Input",
+            "name": "input"
+          },
+          {
+            "type": "System.String",
+            "name": "inputId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1760,6 +2324,16 @@
       "clientMethod": {
         "shortName": "ListInputs",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListInputs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListInputsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListInputsResponse, Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1799,6 +2373,16 @@
         "shortName": "ListInputsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListInputsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListInputsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListInputsResponse, Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1837,6 +2421,24 @@
       "clientMethod": {
         "shortName": "ListInputs",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListInputs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListInputsResponse, Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1875,6 +2477,24 @@
         "shortName": "ListInputsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListInputsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListInputsResponse, Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1912,6 +2532,24 @@
       "clientMethod": {
         "shortName": "ListInputs",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListInputs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListInputsResponse, Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1950,6 +2588,24 @@
         "shortName": "ListInputsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListInputsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListInputsResponse, Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -1987,6 +2643,16 @@
       "clientMethod": {
         "shortName": "GetInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Input",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2026,6 +2692,16 @@
         "shortName": "GetInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2064,6 +2740,16 @@
       "clientMethod": {
         "shortName": "GetInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetInput",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Input",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2102,6 +2788,16 @@
         "shortName": "GetInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2139,6 +2835,16 @@
       "clientMethod": {
         "shortName": "GetInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.InputName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Input",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2177,6 +2883,16 @@
         "shortName": "GetInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.InputName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Input>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2214,6 +2930,16 @@
       "clientMethod": {
         "shortName": "DeleteInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2253,6 +2979,16 @@
         "shortName": "DeleteInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2291,6 +3027,16 @@
       "clientMethod": {
         "shortName": "DeleteInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteInput",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2329,6 +3075,16 @@
         "shortName": "DeleteInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2366,6 +3122,16 @@
       "clientMethod": {
         "shortName": "DeleteInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.InputName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2404,6 +3170,16 @@
         "shortName": "DeleteInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.InputName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2441,6 +3217,16 @@
       "clientMethod": {
         "shortName": "UpdateInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.UpdateInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2480,6 +3266,16 @@
         "shortName": "UpdateInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.UpdateInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2518,6 +3314,20 @@
       "clientMethod": {
         "shortName": "UpdateInput",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Input",
+            "name": "input"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2556,6 +3366,20 @@
         "shortName": "UpdateInputAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdateInputAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Input",
+            "name": "input"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Input, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2593,6 +3417,16 @@
       "clientMethod": {
         "shortName": "CreateEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Event",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2632,6 +3466,16 @@
         "shortName": "CreateEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2670,6 +3514,24 @@
       "clientMethod": {
         "shortName": "CreateEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Event",
+            "name": "event"
+          },
+          {
+            "type": "System.String",
+            "name": "eventId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Event",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2708,6 +3570,24 @@
         "shortName": "CreateEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Event",
+            "name": "event"
+          },
+          {
+            "type": "System.String",
+            "name": "eventId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2745,6 +3625,24 @@
       "clientMethod": {
         "shortName": "CreateEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Event",
+            "name": "event"
+          },
+          {
+            "type": "System.String",
+            "name": "eventId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Event",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2783,6 +3681,24 @@
         "shortName": "CreateEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Event",
+            "name": "event"
+          },
+          {
+            "type": "System.String",
+            "name": "eventId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2820,6 +3736,16 @@
       "clientMethod": {
         "shortName": "ListEvents",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListEventsResponse, Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2859,6 +3785,16 @@
         "shortName": "ListEventsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListEventsResponse, Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2897,6 +3833,24 @@
       "clientMethod": {
         "shortName": "ListEvents",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListEventsResponse, Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2935,6 +3889,24 @@
         "shortName": "ListEventsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListEventsResponse, Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -2972,6 +3944,24 @@
       "clientMethod": {
         "shortName": "ListEvents",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListEventsResponse, Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3010,6 +4000,24 @@
         "shortName": "ListEventsAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListEventsResponse, Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3047,6 +4055,16 @@
       "clientMethod": {
         "shortName": "GetEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Event",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3086,6 +4104,16 @@
         "shortName": "GetEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3124,6 +4152,16 @@
       "clientMethod": {
         "shortName": "GetEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Event",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3162,6 +4200,16 @@
         "shortName": "GetEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3199,6 +4247,16 @@
       "clientMethod": {
         "shortName": "GetEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.EventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.LiveStream.V1.Event",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3237,6 +4295,16 @@
         "shortName": "GetEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.EventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Event>",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3274,6 +4342,16 @@
       "clientMethod": {
         "shortName": "DeleteEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LivestreamServiceClient",
           "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
@@ -3312,6 +4390,16 @@
         "shortName": "DeleteEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3350,6 +4438,16 @@
       "clientMethod": {
         "shortName": "DeleteEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LivestreamServiceClient",
           "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
@@ -3387,6 +4485,16 @@
         "shortName": "DeleteEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LivestreamServiceClient",
@@ -3424,6 +4532,16 @@
       "clientMethod": {
         "shortName": "DeleteEvent",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.EventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LivestreamServiceClient",
           "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
@@ -3461,6 +4579,16 @@
         "shortName": "DeleteEventAsync",
         "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.EventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LivestreamServiceClient",

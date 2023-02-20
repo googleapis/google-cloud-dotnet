@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListEkmConnections",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.ListEkmConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListEkmConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListEkmConnectionsResponse, Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListEkmConnectionsAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.ListEkmConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListEkmConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListEkmConnectionsResponse, Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListEkmConnections",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.ListEkmConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListEkmConnectionsResponse, Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListEkmConnectionsAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.ListEkmConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListEkmConnectionsResponse, Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListEkmConnections",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.ListEkmConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListEkmConnectionsResponse, Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListEkmConnectionsAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.ListEkmConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListEkmConnectionsResponse, Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetEkmConnection",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetEkmConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EkmConnection",
         "client": {
           "shortName": "EkmServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "GetEkmConnectionAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetEkmConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetEkmConnection",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EkmConnection",
         "client": {
           "shortName": "EkmServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "GetEkmConnectionAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetEkmConnection",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EkmConnection",
         "client": {
           "shortName": "EkmServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "GetEkmConnectionAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateEkmConnection",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.CreateEkmConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateEkmConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EkmConnection",
         "client": {
           "shortName": "EkmServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateEkmConnectionAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.CreateEkmConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateEkmConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateEkmConnection",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.CreateEkmConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "ekmConnectionId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnection",
+            "name": "ekmConnection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EkmConnection",
         "client": {
           "shortName": "EkmServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateEkmConnectionAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.CreateEkmConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "ekmConnectionId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnection",
+            "name": "ekmConnection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateEkmConnection",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.CreateEkmConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "ekmConnectionId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnection",
+            "name": "ekmConnection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EkmConnection",
         "client": {
           "shortName": "EkmServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateEkmConnectionAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.CreateEkmConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "ekmConnectionId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnection",
+            "name": "ekmConnection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateEkmConnection",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.UpdateEkmConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateEkmConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EkmConnection",
         "client": {
           "shortName": "EkmServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateEkmConnectionAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.UpdateEkmConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateEkmConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateEkmConnection",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.UpdateEkmConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnection",
+            "name": "ekmConnection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EkmConnection",
         "client": {
           "shortName": "EkmServiceClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateEkmConnectionAsync",
         "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.UpdateEkmConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnection",
+            "name": "ekmConnection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConnection>",
         "client": {
           "shortName": "EkmServiceClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "ListKeyRings",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListKeyRings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListKeyRingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListKeyRingsResponse, Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -891,6 +1193,16 @@
         "shortName": "ListKeyRingsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListKeyRingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListKeyRingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListKeyRingsResponse, Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -929,6 +1241,24 @@
       "clientMethod": {
         "shortName": "ListKeyRings",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListKeyRings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListKeyRingsResponse, Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -967,6 +1297,24 @@
         "shortName": "ListKeyRingsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListKeyRingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListKeyRingsResponse, Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1004,6 +1352,24 @@
       "clientMethod": {
         "shortName": "ListKeyRings",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListKeyRings",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListKeyRingsResponse, Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1042,6 +1408,24 @@
         "shortName": "ListKeyRingsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListKeyRingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListKeyRingsResponse, Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1079,6 +1463,16 @@
       "clientMethod": {
         "shortName": "ListCryptoKeys",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListCryptoKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListCryptoKeysResponse, Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1118,6 +1512,16 @@
         "shortName": "ListCryptoKeysAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListCryptoKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListCryptoKeysResponse, Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1156,6 +1560,24 @@
       "clientMethod": {
         "shortName": "ListCryptoKeys",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListCryptoKeysResponse, Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1194,6 +1616,24 @@
         "shortName": "ListCryptoKeysAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListCryptoKeysResponse, Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1231,6 +1671,24 @@
       "clientMethod": {
         "shortName": "ListCryptoKeys",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListCryptoKeysResponse, Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1269,6 +1727,24 @@
         "shortName": "ListCryptoKeysAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListCryptoKeysResponse, Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1306,6 +1782,16 @@
       "clientMethod": {
         "shortName": "ListCryptoKeyVersions",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeyVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse, Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1345,6 +1831,16 @@
         "shortName": "ListCryptoKeyVersionsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeyVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse, Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1383,6 +1879,24 @@
       "clientMethod": {
         "shortName": "ListCryptoKeyVersions",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeyVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse, Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1421,6 +1935,24 @@
         "shortName": "ListCryptoKeyVersionsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeyVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse, Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1458,6 +1990,24 @@
       "clientMethod": {
         "shortName": "ListCryptoKeyVersions",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeyVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse, Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1496,6 +2046,24 @@
         "shortName": "ListCryptoKeyVersionsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListCryptoKeyVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse, Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1533,6 +2101,16 @@
       "clientMethod": {
         "shortName": "ListImportJobs",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListImportJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListImportJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListImportJobsResponse, Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1572,6 +2150,16 @@
         "shortName": "ListImportJobsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListImportJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ListImportJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListImportJobsResponse, Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1610,6 +2198,24 @@
       "clientMethod": {
         "shortName": "ListImportJobs",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListImportJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListImportJobsResponse, Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1648,6 +2254,24 @@
         "shortName": "ListImportJobsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListImportJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListImportJobsResponse, Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1685,6 +2309,24 @@
       "clientMethod": {
         "shortName": "ListImportJobs",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListImportJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Kms.V1.ListImportJobsResponse, Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1723,6 +2365,24 @@
         "shortName": "ListImportJobsAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ListImportJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Kms.V1.ListImportJobsResponse, Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1760,6 +2420,16 @@
       "clientMethod": {
         "shortName": "GetKeyRing",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetKeyRing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetKeyRingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.KeyRing",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1799,6 +2469,16 @@
         "shortName": "GetKeyRingAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetKeyRingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetKeyRingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1837,6 +2517,16 @@
       "clientMethod": {
         "shortName": "GetKeyRing",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetKeyRing",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.KeyRing",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1875,6 +2565,16 @@
         "shortName": "GetKeyRingAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetKeyRingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1912,6 +2612,16 @@
       "clientMethod": {
         "shortName": "GetKeyRing",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetKeyRing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.KeyRing",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1950,6 +2660,16 @@
         "shortName": "GetKeyRingAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetKeyRingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -1987,6 +2707,16 @@
       "clientMethod": {
         "shortName": "GetCryptoKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetCryptoKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2026,6 +2756,16 @@
         "shortName": "GetCryptoKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetCryptoKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2064,6 +2804,16 @@
       "clientMethod": {
         "shortName": "GetCryptoKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2102,6 +2852,16 @@
         "shortName": "GetCryptoKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2139,6 +2899,16 @@
       "clientMethod": {
         "shortName": "GetCryptoKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2177,6 +2947,16 @@
         "shortName": "GetCryptoKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2214,6 +2994,16 @@
       "clientMethod": {
         "shortName": "GetCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2253,6 +3043,16 @@
         "shortName": "GetCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2291,6 +3091,16 @@
       "clientMethod": {
         "shortName": "GetCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2329,6 +3139,16 @@
         "shortName": "GetCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2366,6 +3186,16 @@
       "clientMethod": {
         "shortName": "GetCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2404,6 +3234,16 @@
         "shortName": "GetCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2441,6 +3281,16 @@
       "clientMethod": {
         "shortName": "GetPublicKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.PublicKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2480,6 +3330,16 @@
         "shortName": "GetPublicKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetPublicKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.PublicKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2518,6 +3378,16 @@
       "clientMethod": {
         "shortName": "GetPublicKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetPublicKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.PublicKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2556,6 +3426,16 @@
         "shortName": "GetPublicKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.PublicKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2593,6 +3473,16 @@
       "clientMethod": {
         "shortName": "GetPublicKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetPublicKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.PublicKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2631,6 +3521,16 @@
         "shortName": "GetPublicKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetPublicKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.PublicKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2668,6 +3568,16 @@
       "clientMethod": {
         "shortName": "GetImportJob",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetImportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetImportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.ImportJob",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2707,6 +3617,16 @@
         "shortName": "GetImportJobAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetImportJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetImportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2745,6 +3665,16 @@
       "clientMethod": {
         "shortName": "GetImportJob",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetImportJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.ImportJob",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2783,6 +3713,16 @@
         "shortName": "GetImportJobAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetImportJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2820,6 +3760,16 @@
       "clientMethod": {
         "shortName": "GetImportJob",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetImportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ImportJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.ImportJob",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2858,6 +3808,16 @@
         "shortName": "GetImportJobAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GetImportJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ImportJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2895,6 +3855,16 @@
       "clientMethod": {
         "shortName": "CreateKeyRing",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateKeyRing",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateKeyRingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.KeyRing",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2934,6 +3904,16 @@
         "shortName": "CreateKeyRingAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateKeyRingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateKeyRingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -2972,6 +3952,24 @@
       "clientMethod": {
         "shortName": "CreateKeyRing",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateKeyRing",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "keyRingId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRing",
+            "name": "keyRing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.KeyRing",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3010,6 +4008,24 @@
         "shortName": "CreateKeyRingAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateKeyRingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "keyRingId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRing",
+            "name": "keyRing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3047,6 +4063,24 @@
       "clientMethod": {
         "shortName": "CreateKeyRing",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateKeyRing",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "keyRingId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRing",
+            "name": "keyRing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.KeyRing",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3085,6 +4119,24 @@
         "shortName": "CreateKeyRingAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateKeyRingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "keyRingId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRing",
+            "name": "keyRing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.KeyRing>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3122,6 +4174,16 @@
       "clientMethod": {
         "shortName": "CreateCryptoKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateCryptoKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3161,6 +4223,16 @@
         "shortName": "CreateCryptoKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateCryptoKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3199,6 +4271,24 @@
       "clientMethod": {
         "shortName": "CreateCryptoKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "cryptoKeyId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKey",
+            "name": "cryptoKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3237,6 +4327,24 @@
         "shortName": "CreateCryptoKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "cryptoKeyId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKey",
+            "name": "cryptoKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3274,6 +4382,24 @@
       "clientMethod": {
         "shortName": "CreateCryptoKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "cryptoKeyId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKey",
+            "name": "cryptoKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3312,6 +4438,24 @@
         "shortName": "CreateCryptoKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "cryptoKeyId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKey",
+            "name": "cryptoKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3349,6 +4493,16 @@
       "clientMethod": {
         "shortName": "CreateCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3388,6 +4542,16 @@
         "shortName": "CreateCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3426,6 +4590,20 @@
       "clientMethod": {
         "shortName": "CreateCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersion",
+            "name": "cryptoKeyVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3464,6 +4642,20 @@
         "shortName": "CreateCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersion",
+            "name": "cryptoKeyVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3501,6 +4693,20 @@
       "clientMethod": {
         "shortName": "CreateCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersion",
+            "name": "cryptoKeyVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3539,6 +4745,20 @@
         "shortName": "CreateCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersion",
+            "name": "cryptoKeyVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3576,6 +4796,16 @@
       "clientMethod": {
         "shortName": "ImportCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ImportCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3615,6 +4845,16 @@
         "shortName": "ImportCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.ImportCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3653,6 +4893,16 @@
       "clientMethod": {
         "shortName": "CreateImportJob",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateImportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateImportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.ImportJob",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3692,6 +4942,16 @@
         "shortName": "CreateImportJobAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateImportJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CreateImportJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3730,6 +4990,24 @@
       "clientMethod": {
         "shortName": "CreateImportJob",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateImportJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "importJobId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ImportJob",
+            "name": "importJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.ImportJob",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3768,6 +5046,24 @@
         "shortName": "CreateImportJobAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateImportJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "importJobId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ImportJob",
+            "name": "importJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3805,6 +5101,24 @@
       "clientMethod": {
         "shortName": "CreateImportJob",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateImportJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "importJobId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ImportJob",
+            "name": "importJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.ImportJob",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3843,6 +5157,24 @@
         "shortName": "CreateImportJobAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.CreateImportJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.KeyRingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "importJobId"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ImportJob",
+            "name": "importJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.ImportJob>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3880,6 +5212,16 @@
       "clientMethod": {
         "shortName": "UpdateCryptoKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateCryptoKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3919,6 +5261,16 @@
         "shortName": "UpdateCryptoKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateCryptoKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3957,6 +5309,20 @@
       "clientMethod": {
         "shortName": "UpdateCryptoKey",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKey",
+            "name": "cryptoKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -3995,6 +5361,20 @@
         "shortName": "UpdateCryptoKeyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKey",
+            "name": "cryptoKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4032,6 +5412,16 @@
       "clientMethod": {
         "shortName": "UpdateCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4071,6 +5461,16 @@
         "shortName": "UpdateCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4109,6 +5509,20 @@
       "clientMethod": {
         "shortName": "UpdateCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersion",
+            "name": "cryptoKeyVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4147,6 +5561,20 @@
         "shortName": "UpdateCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersion",
+            "name": "cryptoKeyVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4184,6 +5612,16 @@
       "clientMethod": {
         "shortName": "UpdateCryptoKeyPrimaryVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4223,6 +5661,16 @@
         "shortName": "UpdateCryptoKeyPrimaryVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4261,6 +5709,20 @@
       "clientMethod": {
         "shortName": "UpdateCryptoKeyPrimaryVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "cryptoKeyVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4299,6 +5761,20 @@
         "shortName": "UpdateCryptoKeyPrimaryVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "cryptoKeyVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4336,6 +5812,20 @@
       "clientMethod": {
         "shortName": "UpdateCryptoKeyPrimaryVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "cryptoKeyVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKey",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4374,6 +5864,20 @@
         "shortName": "UpdateCryptoKeyPrimaryVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.UpdateCryptoKeyPrimaryVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "cryptoKeyVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKey>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4411,6 +5915,16 @@
       "clientMethod": {
         "shortName": "DestroyCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DestroyCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4450,6 +5964,16 @@
         "shortName": "DestroyCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DestroyCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4488,6 +6012,16 @@
       "clientMethod": {
         "shortName": "DestroyCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DestroyCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4526,6 +6060,16 @@
         "shortName": "DestroyCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DestroyCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4563,6 +6107,16 @@
       "clientMethod": {
         "shortName": "DestroyCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DestroyCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4601,6 +6155,16 @@
         "shortName": "DestroyCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DestroyCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4638,6 +6202,16 @@
       "clientMethod": {
         "shortName": "RestoreCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RestoreCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4677,6 +6251,16 @@
         "shortName": "RestoreCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RestoreCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4715,6 +6299,16 @@
       "clientMethod": {
         "shortName": "RestoreCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RestoreCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4753,6 +6347,16 @@
         "shortName": "RestoreCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RestoreCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4790,6 +6394,16 @@
       "clientMethod": {
         "shortName": "RestoreCryptoKeyVersion",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RestoreCryptoKeyVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.CryptoKeyVersion",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4828,6 +6442,16 @@
         "shortName": "RestoreCryptoKeyVersionAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RestoreCryptoKeyVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.CryptoKeyVersion>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4865,6 +6489,16 @@
       "clientMethod": {
         "shortName": "Encrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.Encrypt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EncryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EncryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4904,6 +6538,16 @@
         "shortName": "EncryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.EncryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EncryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EncryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4942,6 +6586,20 @@
       "clientMethod": {
         "shortName": "Encrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.Encrypt",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "plaintext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EncryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -4980,6 +6638,20 @@
         "shortName": "EncryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.EncryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "plaintext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EncryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5017,6 +6689,20 @@
       "clientMethod": {
         "shortName": "Encrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.Encrypt",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "plaintext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.EncryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5055,6 +6741,20 @@
         "shortName": "EncryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.EncryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "plaintext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EncryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5092,6 +6792,16 @@
       "clientMethod": {
         "shortName": "Decrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.Decrypt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DecryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.DecryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5131,6 +6841,16 @@
         "shortName": "DecryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DecryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DecryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.DecryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5169,6 +6889,20 @@
       "clientMethod": {
         "shortName": "Decrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.Decrypt",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "ciphertext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.DecryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5207,6 +6941,20 @@
         "shortName": "DecryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DecryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "ciphertext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.DecryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5244,6 +6992,20 @@
       "clientMethod": {
         "shortName": "Decrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.Decrypt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "ciphertext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.DecryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5282,6 +7044,20 @@
         "shortName": "DecryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DecryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "ciphertext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.DecryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5319,6 +7095,16 @@
       "clientMethod": {
         "shortName": "AsymmetricSign",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricSign",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.AsymmetricSignRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.AsymmetricSignResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5358,6 +7144,16 @@
         "shortName": "AsymmetricSignAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricSignAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.AsymmetricSignRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AsymmetricSignResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5396,6 +7192,20 @@
       "clientMethod": {
         "shortName": "AsymmetricSign",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricSign",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.Digest",
+            "name": "digest"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.AsymmetricSignResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5434,6 +7244,20 @@
         "shortName": "AsymmetricSignAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricSignAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.Digest",
+            "name": "digest"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AsymmetricSignResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5471,6 +7295,20 @@
       "clientMethod": {
         "shortName": "AsymmetricSign",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricSign",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.Digest",
+            "name": "digest"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.AsymmetricSignResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5509,6 +7347,20 @@
         "shortName": "AsymmetricSignAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricSignAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.Digest",
+            "name": "digest"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AsymmetricSignResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5546,6 +7398,16 @@
       "clientMethod": {
         "shortName": "AsymmetricDecrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricDecrypt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.AsymmetricDecryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.AsymmetricDecryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5585,6 +7447,16 @@
         "shortName": "AsymmetricDecryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricDecryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.AsymmetricDecryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AsymmetricDecryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5623,6 +7495,20 @@
       "clientMethod": {
         "shortName": "AsymmetricDecrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricDecrypt",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "ciphertext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.AsymmetricDecryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5661,6 +7547,20 @@
         "shortName": "AsymmetricDecryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricDecryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "ciphertext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AsymmetricDecryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5698,6 +7598,20 @@
       "clientMethod": {
         "shortName": "AsymmetricDecrypt",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricDecrypt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "ciphertext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.AsymmetricDecryptResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5736,6 +7650,20 @@
         "shortName": "AsymmetricDecryptAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.AsymmetricDecryptAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "ciphertext"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.AsymmetricDecryptResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5773,6 +7701,16 @@
       "clientMethod": {
         "shortName": "MacSign",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacSign",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.MacSignRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.MacSignResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5812,6 +7750,16 @@
         "shortName": "MacSignAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacSignAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.MacSignRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.MacSignResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5850,6 +7798,20 @@
       "clientMethod": {
         "shortName": "MacSign",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacSign",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.MacSignResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5888,6 +7850,20 @@
         "shortName": "MacSignAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacSignAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.MacSignResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5925,6 +7901,20 @@
       "clientMethod": {
         "shortName": "MacSign",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacSign",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.MacSignResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -5963,6 +7953,20 @@
         "shortName": "MacSignAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacSignAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.MacSignResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6000,6 +8004,16 @@
       "clientMethod": {
         "shortName": "MacVerify",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacVerify",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.MacVerifyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.MacVerifyResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6039,6 +8053,16 @@
         "shortName": "MacVerifyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacVerifyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.MacVerifyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.MacVerifyResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6077,6 +8101,24 @@
       "clientMethod": {
         "shortName": "MacVerify",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacVerify",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "mac"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.MacVerifyResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6115,6 +8157,24 @@
         "shortName": "MacVerifyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacVerifyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "mac"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.MacVerifyResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6152,6 +8212,24 @@
       "clientMethod": {
         "shortName": "MacVerify",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacVerify",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "mac"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.MacVerifyResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6190,6 +8268,24 @@
         "shortName": "MacVerifyAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.MacVerifyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.CryptoKeyVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "data"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "mac"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.MacVerifyResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6227,6 +8323,16 @@
       "clientMethod": {
         "shortName": "GenerateRandomBytes",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GenerateRandomBytes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GenerateRandomBytesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.GenerateRandomBytesResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6266,6 +8372,16 @@
         "shortName": "GenerateRandomBytesAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GenerateRandomBytesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GenerateRandomBytesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.GenerateRandomBytesResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6304,6 +8420,24 @@
       "clientMethod": {
         "shortName": "GenerateRandomBytes",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GenerateRandomBytes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.Int32",
+            "name": "lengthBytes"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ProtectionLevel",
+            "name": "protectionLevel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Kms.V1.GenerateRandomBytesResponse",
         "client": {
           "shortName": "KeyManagementServiceClient",
@@ -6342,6 +8476,24 @@
         "shortName": "GenerateRandomBytesAsync",
         "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.GenerateRandomBytesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.Int32",
+            "name": "lengthBytes"
+          },
+          {
+            "type": "Google.Cloud.Kms.V1.ProtectionLevel",
+            "name": "protectionLevel"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.GenerateRandomBytesResponse>",
         "client": {
           "shortName": "KeyManagementServiceClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListPrivateClouds",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateClouds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListPrivateCloudsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse, Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -58,6 +68,16 @@
         "shortName": "ListPrivateCloudsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateCloudsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListPrivateCloudsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse, Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListPrivateClouds",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateClouds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse, Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -134,6 +172,24 @@
         "shortName": "ListPrivateCloudsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateCloudsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse, Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListPrivateClouds",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateClouds",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse, Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -209,6 +283,24 @@
         "shortName": "ListPrivateCloudsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateCloudsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse, Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetPrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetPrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -285,6 +387,16 @@
         "shortName": "GetPrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetPrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetPrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateCloud",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -361,6 +483,16 @@
         "shortName": "GetPrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetPrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -436,6 +578,16 @@
         "shortName": "GetPrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.PrivateCloud>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreatePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreatePrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -512,6 +674,16 @@
         "shortName": "CreatePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreatePrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreatePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateCloud",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
+            "name": "privateCloud"
+          },
+          {
+            "type": "System.String",
+            "name": "privateCloudId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -588,6 +778,24 @@
         "shortName": "CreatePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
+            "name": "privateCloud"
+          },
+          {
+            "type": "System.String",
+            "name": "privateCloudId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreatePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
+            "name": "privateCloud"
+          },
+          {
+            "type": "System.String",
+            "name": "privateCloudId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -663,6 +889,24 @@
         "shortName": "CreatePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
+            "name": "privateCloud"
+          },
+          {
+            "type": "System.String",
+            "name": "privateCloudId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdatePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdatePrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdatePrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdatePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdatePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdatePrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdatePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdatePrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdatePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdatePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloud",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeletePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeletePrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeletePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeletePrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeletePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateCloud",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeletePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeletePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeletePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "UndeletePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UndeletePrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UndeletePrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1118,6 +1480,16 @@
         "shortName": "UndeletePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UndeletePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UndeletePrivateCloudRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1156,6 +1528,16 @@
       "clientMethod": {
         "shortName": "UndeletePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UndeletePrivateCloud",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1194,6 +1576,16 @@
         "shortName": "UndeletePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UndeletePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1231,6 +1623,16 @@
       "clientMethod": {
         "shortName": "UndeletePrivateCloud",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UndeletePrivateCloud",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1269,6 +1671,16 @@
         "shortName": "UndeletePrivateCloudAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UndeletePrivateCloudAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1306,6 +1718,16 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListClustersResponse, Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1345,6 +1767,16 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListClustersResponse, Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1383,6 +1815,24 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListClustersResponse, Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1421,6 +1871,24 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListClustersResponse, Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1458,6 +1926,24 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListClustersResponse, Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1496,6 +1982,24 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListClustersResponse, Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Cluster",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1572,6 +2086,16 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1610,6 +2134,16 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Cluster",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1648,6 +2182,16 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1685,6 +2229,16 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Cluster",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1723,6 +2277,16 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Cluster>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1760,6 +2324,16 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1799,6 +2373,16 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1837,6 +2421,24 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1875,6 +2477,24 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1912,6 +2532,24 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1950,6 +2588,24 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -1987,6 +2643,16 @@
       "clientMethod": {
         "shortName": "UpdateCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2026,6 +2692,16 @@
         "shortName": "UpdateClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2064,6 +2740,20 @@
       "clientMethod": {
         "shortName": "UpdateCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2102,6 +2792,20 @@
         "shortName": "UpdateClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Cluster, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2139,6 +2843,16 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeleteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2178,6 +2892,16 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeleteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2216,6 +2940,16 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2254,6 +2988,16 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2291,6 +3035,16 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2329,6 +3083,16 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2366,6 +3130,16 @@
       "clientMethod": {
         "shortName": "ListSubnets",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListSubnets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListSubnetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListSubnetsResponse, Google.Cloud.VmwareEngine.V1.Subnet>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2405,6 +3179,16 @@
         "shortName": "ListSubnetsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListSubnetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListSubnetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListSubnetsResponse, Google.Cloud.VmwareEngine.V1.Subnet>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2443,6 +3227,24 @@
       "clientMethod": {
         "shortName": "ListSubnets",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListSubnets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListSubnetsResponse, Google.Cloud.VmwareEngine.V1.Subnet>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2481,6 +3283,24 @@
         "shortName": "ListSubnetsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListSubnetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListSubnetsResponse, Google.Cloud.VmwareEngine.V1.Subnet>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2518,6 +3338,24 @@
       "clientMethod": {
         "shortName": "ListSubnets",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListSubnets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListSubnetsResponse, Google.Cloud.VmwareEngine.V1.Subnet>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2556,6 +3394,24 @@
         "shortName": "ListSubnetsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListSubnetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListSubnetsResponse, Google.Cloud.VmwareEngine.V1.Subnet>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2593,6 +3449,16 @@
       "clientMethod": {
         "shortName": "ListNodeTypes",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNodeTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse, Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2632,6 +3498,16 @@
         "shortName": "ListNodeTypesAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNodeTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse, Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2670,6 +3546,24 @@
       "clientMethod": {
         "shortName": "ListNodeTypes",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNodeTypes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse, Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2708,6 +3602,24 @@
         "shortName": "ListNodeTypesAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNodeTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse, Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2745,6 +3657,24 @@
       "clientMethod": {
         "shortName": "ListNodeTypes",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNodeTypes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse, Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2783,6 +3713,24 @@
         "shortName": "ListNodeTypesAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNodeTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse, Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2820,6 +3768,16 @@
       "clientMethod": {
         "shortName": "GetNodeType",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNodeType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetNodeTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.NodeType",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2859,6 +3817,16 @@
         "shortName": "GetNodeTypeAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNodeTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetNodeTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2897,6 +3865,16 @@
       "clientMethod": {
         "shortName": "GetNodeType",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNodeType",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.NodeType",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2935,6 +3913,16 @@
         "shortName": "GetNodeTypeAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNodeTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -2972,6 +3960,16 @@
       "clientMethod": {
         "shortName": "GetNodeType",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNodeType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NodeTypeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.NodeType",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3010,6 +4008,16 @@
         "shortName": "GetNodeTypeAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNodeTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NodeTypeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.NodeType>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3047,6 +4055,16 @@
       "clientMethod": {
         "shortName": "ShowNsxCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowNsxCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ShowNsxCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Credentials",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3086,6 +4104,16 @@
         "shortName": "ShowNsxCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowNsxCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ShowNsxCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Credentials>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3124,6 +4152,16 @@
       "clientMethod": {
         "shortName": "ShowNsxCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowNsxCredentials",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Credentials",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3162,6 +4200,16 @@
         "shortName": "ShowNsxCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowNsxCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Credentials>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3199,6 +4247,16 @@
       "clientMethod": {
         "shortName": "ShowNsxCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowNsxCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Credentials",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3237,6 +4295,16 @@
         "shortName": "ShowNsxCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowNsxCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Credentials>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3274,6 +4342,16 @@
       "clientMethod": {
         "shortName": "ShowVcenterCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowVcenterCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ShowVcenterCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Credentials",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3313,6 +4391,16 @@
         "shortName": "ShowVcenterCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowVcenterCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ShowVcenterCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Credentials>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3351,6 +4439,16 @@
       "clientMethod": {
         "shortName": "ShowVcenterCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowVcenterCredentials",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Credentials",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3389,6 +4487,16 @@
         "shortName": "ShowVcenterCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowVcenterCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Credentials>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3426,6 +4534,16 @@
       "clientMethod": {
         "shortName": "ShowVcenterCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowVcenterCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.Credentials",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3464,6 +4582,16 @@
         "shortName": "ShowVcenterCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ShowVcenterCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Credentials>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3501,6 +4629,16 @@
       "clientMethod": {
         "shortName": "ResetNsxCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetNsxCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ResetNsxCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3540,6 +4678,16 @@
         "shortName": "ResetNsxCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetNsxCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ResetNsxCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3578,6 +4726,16 @@
       "clientMethod": {
         "shortName": "ResetNsxCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetNsxCredentials",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3616,6 +4774,16 @@
         "shortName": "ResetNsxCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetNsxCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3653,6 +4821,16 @@
       "clientMethod": {
         "shortName": "ResetNsxCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetNsxCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3691,6 +4869,16 @@
         "shortName": "ResetNsxCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetNsxCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3728,6 +4916,16 @@
       "clientMethod": {
         "shortName": "ResetVcenterCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetVcenterCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ResetVcenterCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3767,6 +4965,16 @@
         "shortName": "ResetVcenterCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetVcenterCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ResetVcenterCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3805,6 +5013,16 @@
       "clientMethod": {
         "shortName": "ResetVcenterCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetVcenterCredentials",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3843,6 +5061,16 @@
         "shortName": "ResetVcenterCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetVcenterCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3880,6 +5108,16 @@
       "clientMethod": {
         "shortName": "ResetVcenterCredentials",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetVcenterCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3918,6 +5156,16 @@
         "shortName": "ResetVcenterCredentialsAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ResetVcenterCredentialsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "privateCloud"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateCloud, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3955,6 +5203,16 @@
       "clientMethod": {
         "shortName": "CreateHcxActivationKey",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateHcxActivationKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreateHcxActivationKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.HcxActivationKey, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -3994,6 +5252,16 @@
         "shortName": "CreateHcxActivationKeyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateHcxActivationKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreateHcxActivationKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.HcxActivationKey, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4032,6 +5300,24 @@
       "clientMethod": {
         "shortName": "CreateHcxActivationKey",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateHcxActivationKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.HcxActivationKey",
+            "name": "hcxActivationKey"
+          },
+          {
+            "type": "System.String",
+            "name": "hcxActivationKeyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.HcxActivationKey, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4070,6 +5356,24 @@
         "shortName": "CreateHcxActivationKeyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateHcxActivationKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.HcxActivationKey",
+            "name": "hcxActivationKey"
+          },
+          {
+            "type": "System.String",
+            "name": "hcxActivationKeyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.HcxActivationKey, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4107,6 +5411,24 @@
       "clientMethod": {
         "shortName": "CreateHcxActivationKey",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateHcxActivationKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.HcxActivationKey",
+            "name": "hcxActivationKey"
+          },
+          {
+            "type": "System.String",
+            "name": "hcxActivationKeyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.HcxActivationKey, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4145,6 +5467,24 @@
         "shortName": "CreateHcxActivationKeyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateHcxActivationKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.HcxActivationKey",
+            "name": "hcxActivationKey"
+          },
+          {
+            "type": "System.String",
+            "name": "hcxActivationKeyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.HcxActivationKey, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4182,6 +5522,16 @@
       "clientMethod": {
         "shortName": "ListHcxActivationKeys",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListHcxActivationKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysResponse, Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4221,6 +5571,16 @@
         "shortName": "ListHcxActivationKeysAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListHcxActivationKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysResponse, Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4259,6 +5619,24 @@
       "clientMethod": {
         "shortName": "ListHcxActivationKeys",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListHcxActivationKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysResponse, Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4297,6 +5675,24 @@
         "shortName": "ListHcxActivationKeysAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListHcxActivationKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysResponse, Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4334,6 +5730,24 @@
       "clientMethod": {
         "shortName": "ListHcxActivationKeys",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListHcxActivationKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysResponse, Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4372,6 +5786,24 @@
         "shortName": "ListHcxActivationKeysAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListHcxActivationKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateCloudName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListHcxActivationKeysResponse, Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4409,6 +5841,16 @@
       "clientMethod": {
         "shortName": "GetHcxActivationKey",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetHcxActivationKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetHcxActivationKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.HcxActivationKey",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4448,6 +5890,16 @@
         "shortName": "GetHcxActivationKeyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetHcxActivationKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetHcxActivationKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4486,6 +5938,16 @@
       "clientMethod": {
         "shortName": "GetHcxActivationKey",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetHcxActivationKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.HcxActivationKey",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4524,6 +5986,16 @@
         "shortName": "GetHcxActivationKeyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetHcxActivationKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4561,6 +6033,16 @@
       "clientMethod": {
         "shortName": "GetHcxActivationKey",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetHcxActivationKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.HcxActivationKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.HcxActivationKey",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4599,6 +6081,16 @@
         "shortName": "GetHcxActivationKeyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetHcxActivationKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.HcxActivationKeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.HcxActivationKey>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4636,6 +6128,16 @@
       "clientMethod": {
         "shortName": "GetNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4675,6 +6177,16 @@
         "shortName": "GetNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4713,6 +6225,16 @@
       "clientMethod": {
         "shortName": "GetNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNetworkPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4751,6 +6273,16 @@
         "shortName": "GetNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4788,6 +6320,16 @@
       "clientMethod": {
         "shortName": "GetNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4826,6 +6368,16 @@
         "shortName": "GetNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4863,6 +6415,16 @@
       "clientMethod": {
         "shortName": "ListNetworkPolicies",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNetworkPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListNetworkPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListNetworkPoliciesResponse, Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4902,6 +6464,16 @@
         "shortName": "ListNetworkPoliciesAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNetworkPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListNetworkPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListNetworkPoliciesResponse, Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4940,6 +6512,24 @@
       "clientMethod": {
         "shortName": "ListNetworkPolicies",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNetworkPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListNetworkPoliciesResponse, Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -4978,6 +6568,24 @@
         "shortName": "ListNetworkPoliciesAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNetworkPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListNetworkPoliciesResponse, Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5015,6 +6623,24 @@
       "clientMethod": {
         "shortName": "ListNetworkPolicies",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNetworkPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListNetworkPoliciesResponse, Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5053,6 +6679,24 @@
         "shortName": "ListNetworkPoliciesAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListNetworkPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListNetworkPoliciesResponse, Google.Cloud.VmwareEngine.V1.NetworkPolicy>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5090,6 +6734,16 @@
       "clientMethod": {
         "shortName": "CreateNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreateNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5129,6 +6783,16 @@
         "shortName": "CreateNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreateNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5167,6 +6831,24 @@
       "clientMethod": {
         "shortName": "CreateNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateNetworkPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "networkPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5205,6 +6887,24 @@
         "shortName": "CreateNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "networkPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5242,6 +6942,24 @@
       "clientMethod": {
         "shortName": "CreateNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "networkPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5280,6 +6998,24 @@
         "shortName": "CreateNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "networkPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5317,6 +7053,16 @@
       "clientMethod": {
         "shortName": "UpdateNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdateNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5356,6 +7102,16 @@
         "shortName": "UpdateNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdateNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5394,6 +7150,20 @@
       "clientMethod": {
         "shortName": "UpdateNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5432,6 +7202,20 @@
         "shortName": "UpdateNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.NetworkPolicy, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5469,6 +7253,16 @@
       "clientMethod": {
         "shortName": "DeleteNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeleteNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5508,6 +7302,16 @@
         "shortName": "DeleteNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeleteNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5546,6 +7350,16 @@
       "clientMethod": {
         "shortName": "DeleteNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteNetworkPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5584,6 +7398,16 @@
         "shortName": "DeleteNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5621,6 +7445,16 @@
       "clientMethod": {
         "shortName": "DeleteNetworkPolicy",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5659,6 +7493,16 @@
         "shortName": "DeleteNetworkPolicyAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.NetworkPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5696,6 +7540,16 @@
       "clientMethod": {
         "shortName": "CreateVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreateVmwareEngineNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5735,6 +7589,16 @@
         "shortName": "CreateVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreateVmwareEngineNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5773,6 +7637,24 @@
       "clientMethod": {
         "shortName": "CreateVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
+            "name": "vmwareEngineNetwork"
+          },
+          {
+            "type": "System.String",
+            "name": "vmwareEngineNetworkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5811,6 +7693,24 @@
         "shortName": "CreateVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
+            "name": "vmwareEngineNetwork"
+          },
+          {
+            "type": "System.String",
+            "name": "vmwareEngineNetworkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5848,6 +7748,24 @@
       "clientMethod": {
         "shortName": "CreateVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
+            "name": "vmwareEngineNetwork"
+          },
+          {
+            "type": "System.String",
+            "name": "vmwareEngineNetworkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5886,6 +7804,24 @@
         "shortName": "CreateVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreateVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
+            "name": "vmwareEngineNetwork"
+          },
+          {
+            "type": "System.String",
+            "name": "vmwareEngineNetworkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5923,6 +7859,16 @@
       "clientMethod": {
         "shortName": "UpdateVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdateVmwareEngineNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -5962,6 +7908,16 @@
         "shortName": "UpdateVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdateVmwareEngineNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6000,6 +7956,20 @@
       "clientMethod": {
         "shortName": "UpdateVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
+            "name": "vmwareEngineNetwork"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6038,6 +8008,20 @@
         "shortName": "UpdateVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
+            "name": "vmwareEngineNetwork"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6075,6 +8059,16 @@
       "clientMethod": {
         "shortName": "DeleteVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeleteVmwareEngineNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6114,6 +8108,16 @@
         "shortName": "DeleteVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeleteVmwareEngineNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6152,6 +8156,16 @@
       "clientMethod": {
         "shortName": "DeleteVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6190,6 +8204,16 @@
         "shortName": "DeleteVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6227,6 +8251,16 @@
       "clientMethod": {
         "shortName": "DeleteVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6265,6 +8299,16 @@
         "shortName": "DeleteVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeleteVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6302,6 +8346,16 @@
       "clientMethod": {
         "shortName": "GetVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetVmwareEngineNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6341,6 +8395,16 @@
         "shortName": "GetVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetVmwareEngineNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6379,6 +8443,16 @@
       "clientMethod": {
         "shortName": "GetVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6417,6 +8491,16 @@
         "shortName": "GetVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6454,6 +8538,16 @@
       "clientMethod": {
         "shortName": "GetVmwareEngineNetwork",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetVmwareEngineNetwork",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6492,6 +8586,16 @@
         "shortName": "GetVmwareEngineNetworkAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetVmwareEngineNetworkAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.VmwareEngineNetworkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6529,6 +8633,16 @@
       "clientMethod": {
         "shortName": "ListVmwareEngineNetworks",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListVmwareEngineNetworks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse, Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6568,6 +8682,16 @@
         "shortName": "ListVmwareEngineNetworksAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListVmwareEngineNetworksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse, Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6606,6 +8730,24 @@
       "clientMethod": {
         "shortName": "ListVmwareEngineNetworks",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListVmwareEngineNetworks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse, Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6644,6 +8786,24 @@
         "shortName": "ListVmwareEngineNetworksAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListVmwareEngineNetworksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse, Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6681,6 +8841,24 @@
       "clientMethod": {
         "shortName": "ListVmwareEngineNetworks",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListVmwareEngineNetworks",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse, Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",
@@ -6719,6 +8897,24 @@
         "shortName": "ListVmwareEngineNetworksAsync",
         "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListVmwareEngineNetworksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse, Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>",
         "client": {
           "shortName": "VmwareEngineClient",

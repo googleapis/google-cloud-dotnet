@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "GetDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "GetDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "GetDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -361,6 +467,16 @@
         "shortName": "GetDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -398,6 +514,16 @@
       "clientMethod": {
         "shortName": "GetDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Dataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -436,6 +562,16 @@
         "shortName": "GetDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -473,6 +609,16 @@
       "clientMethod": {
         "shortName": "ListDatasets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -512,6 +658,16 @@
         "shortName": "ListDatasetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -550,6 +706,28 @@
       "clientMethod": {
         "shortName": "ListDatasets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -588,6 +766,28 @@
         "shortName": "ListDatasetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -625,6 +825,28 @@
       "clientMethod": {
         "shortName": "ListDatasets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -663,6 +885,28 @@
         "shortName": "ListDatasetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.Dataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "DeleteDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -738,6 +992,16 @@
         "shortName": "DeleteDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -776,6 +1040,16 @@
       "clientMethod": {
         "shortName": "DeleteDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -813,6 +1087,16 @@
         "shortName": "DeleteDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -850,6 +1134,16 @@
       "clientMethod": {
         "shortName": "DeleteDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -887,6 +1181,16 @@
         "shortName": "DeleteDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -924,6 +1228,16 @@
       "clientMethod": {
         "shortName": "ImportData",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ImportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -963,6 +1277,16 @@
         "shortName": "ImportDataAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ImportDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1001,6 +1325,20 @@
       "clientMethod": {
         "shortName": "ImportData",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ImportData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1039,6 +1377,20 @@
         "shortName": "ImportDataAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ImportDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1076,6 +1428,20 @@
       "clientMethod": {
         "shortName": "ImportData",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ImportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1114,6 +1480,20 @@
         "shortName": "ImportDataAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ImportDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ImportDataOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1151,6 +1531,16 @@
       "clientMethod": {
         "shortName": "ExportData",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ExportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1190,6 +1580,16 @@
         "shortName": "ExportDataAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ExportDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1228,6 +1628,28 @@
       "clientMethod": {
         "shortName": "ExportData",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ExportData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "annotatedDataset"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1266,6 +1688,28 @@
         "shortName": "ExportDataAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ExportDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "annotatedDataset"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1303,6 +1747,28 @@
       "clientMethod": {
         "shortName": "ExportData",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ExportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDatasetName",
+            "name": "annotatedDataset"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1341,6 +1807,28 @@
         "shortName": "ExportDataAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ExportDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDatasetName",
+            "name": "annotatedDataset"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationResponse, Google.Cloud.DataLabeling.V1Beta1.ExportDataOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1378,6 +1866,16 @@
       "clientMethod": {
         "shortName": "GetDataItem",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.DataItem",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1417,6 +1915,16 @@
         "shortName": "GetDataItemAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1455,6 +1963,16 @@
       "clientMethod": {
         "shortName": "GetDataItem",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataItem",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.DataItem",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1493,6 +2011,16 @@
         "shortName": "GetDataItemAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1530,6 +2058,16 @@
       "clientMethod": {
         "shortName": "GetDataItem",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataItem",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DataItemName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.DataItem",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1568,6 +2106,16 @@
         "shortName": "GetDataItemAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetDataItemAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DataItemName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1605,6 +2153,16 @@
       "clientMethod": {
         "shortName": "ListDataItems",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDataItems",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse, Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1644,6 +2202,16 @@
         "shortName": "ListDataItemsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDataItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse, Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1682,6 +2250,28 @@
       "clientMethod": {
         "shortName": "ListDataItems",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDataItems",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse, Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1720,6 +2310,28 @@
         "shortName": "ListDataItemsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDataItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse, Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1757,6 +2369,28 @@
       "clientMethod": {
         "shortName": "ListDataItems",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDataItems",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse, Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1795,6 +2429,28 @@
         "shortName": "ListDataItemsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListDataItemsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse, Google.Cloud.DataLabeling.V1Beta1.DataItem>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1832,6 +2488,16 @@
       "clientMethod": {
         "shortName": "GetAnnotatedDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotatedDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1871,6 +2537,16 @@
         "shortName": "GetAnnotatedDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotatedDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1909,6 +2585,16 @@
       "clientMethod": {
         "shortName": "GetAnnotatedDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotatedDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1947,6 +2633,16 @@
         "shortName": "GetAnnotatedDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotatedDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -1984,6 +2680,16 @@
       "clientMethod": {
         "shortName": "GetAnnotatedDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotatedDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2022,6 +2728,16 @@
         "shortName": "GetAnnotatedDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotatedDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2059,6 +2775,16 @@
       "clientMethod": {
         "shortName": "ListAnnotatedDatasets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotatedDatasets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2098,6 +2824,16 @@
         "shortName": "ListAnnotatedDatasetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotatedDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2136,6 +2872,28 @@
       "clientMethod": {
         "shortName": "ListAnnotatedDatasets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotatedDatasets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2174,6 +2932,28 @@
         "shortName": "ListAnnotatedDatasetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotatedDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2211,6 +2991,28 @@
       "clientMethod": {
         "shortName": "ListAnnotatedDatasets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotatedDatasets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2249,6 +3051,28 @@
         "shortName": "ListAnnotatedDatasetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotatedDatasetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2286,6 +3110,16 @@
       "clientMethod": {
         "shortName": "DeleteAnnotatedDataset",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteAnnotatedDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -2324,6 +3158,16 @@
         "shortName": "DeleteAnnotatedDatasetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteAnnotatedDatasetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2362,6 +3206,16 @@
       "clientMethod": {
         "shortName": "LabelImage",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2401,6 +3255,16 @@
         "shortName": "LabelImageAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2439,6 +3303,24 @@
       "clientMethod": {
         "shortName": "LabelImage",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelImage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2477,6 +3359,24 @@
         "shortName": "LabelImageAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2514,6 +3414,24 @@
       "clientMethod": {
         "shortName": "LabelImage",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelImage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2552,6 +3470,24 @@
         "shortName": "LabelImageAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelImageAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2589,6 +3525,16 @@
       "clientMethod": {
         "shortName": "LabelVideo",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelVideo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2628,6 +3574,16 @@
         "shortName": "LabelVideoAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelVideoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2666,6 +3622,24 @@
       "clientMethod": {
         "shortName": "LabelVideo",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelVideo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2704,6 +3678,24 @@
         "shortName": "LabelVideoAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelVideoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2741,6 +3733,24 @@
       "clientMethod": {
         "shortName": "LabelVideo",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelVideo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2779,6 +3789,24 @@
         "shortName": "LabelVideoAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelVideoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2816,6 +3844,16 @@
       "clientMethod": {
         "shortName": "LabelText",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2855,6 +3893,16 @@
         "shortName": "LabelTextAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelTextAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2893,6 +3941,24 @@
       "clientMethod": {
         "shortName": "LabelText",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelText",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2931,6 +3997,24 @@
         "shortName": "LabelTextAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelTextAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -2968,6 +4052,24 @@
       "clientMethod": {
         "shortName": "LabelText",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3006,6 +4108,24 @@
         "shortName": "LabelTextAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.LabelTextAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.HumanAnnotationConfig",
+            "name": "basicConfig"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest+Types+Feature",
+            "name": "feature"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset, Google.Cloud.DataLabeling.V1Beta1.LabelOperationMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3043,6 +4163,16 @@
       "clientMethod": {
         "shortName": "GetExample",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetExample",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Example",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3082,6 +4212,16 @@
         "shortName": "GetExampleAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetExampleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3120,6 +4260,20 @@
       "clientMethod": {
         "shortName": "GetExample",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetExample",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Example",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3158,6 +4312,20 @@
         "shortName": "GetExampleAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetExampleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3195,6 +4363,20 @@
       "clientMethod": {
         "shortName": "GetExample",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetExample",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ExampleName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Example",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3233,6 +4415,20 @@
         "shortName": "GetExampleAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetExampleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ExampleName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3270,6 +4466,16 @@
       "clientMethod": {
         "shortName": "ListExamples",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListExamples",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse, Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3309,6 +4515,16 @@
         "shortName": "ListExamplesAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListExamplesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse, Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3347,6 +4563,28 @@
       "clientMethod": {
         "shortName": "ListExamples",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListExamples",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse, Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3385,6 +4623,28 @@
         "shortName": "ListExamplesAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListExamplesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse, Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3422,6 +4682,28 @@
       "clientMethod": {
         "shortName": "ListExamples",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListExamples",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse, Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3460,6 +4742,28 @@
         "shortName": "ListExamplesAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListExamplesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotatedDatasetName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse, Google.Cloud.DataLabeling.V1Beta1.Example>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3497,6 +4801,16 @@
       "clientMethod": {
         "shortName": "CreateAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3536,6 +4850,16 @@
         "shortName": "CreateAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3574,6 +4898,20 @@
       "clientMethod": {
         "shortName": "CreateAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
+            "name": "annotationSpecSet"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3612,6 +4950,20 @@
         "shortName": "CreateAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
+            "name": "annotationSpecSet"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3649,6 +5001,20 @@
       "clientMethod": {
         "shortName": "CreateAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
+            "name": "annotationSpecSet"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3687,6 +5053,20 @@
         "shortName": "CreateAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
+            "name": "annotationSpecSet"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3724,6 +5104,16 @@
       "clientMethod": {
         "shortName": "GetAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3763,6 +5153,16 @@
         "shortName": "GetAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3801,6 +5201,16 @@
       "clientMethod": {
         "shortName": "GetAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3839,6 +5249,16 @@
         "shortName": "GetAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3876,6 +5296,16 @@
       "clientMethod": {
         "shortName": "GetAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3914,6 +5344,16 @@
         "shortName": "GetAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3951,6 +5391,16 @@
       "clientMethod": {
         "shortName": "ListAnnotationSpecSets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotationSpecSets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -3990,6 +5440,16 @@
         "shortName": "ListAnnotationSpecSetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotationSpecSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4028,6 +5488,28 @@
       "clientMethod": {
         "shortName": "ListAnnotationSpecSets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotationSpecSets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4066,6 +5548,28 @@
         "shortName": "ListAnnotationSpecSetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotationSpecSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4103,6 +5607,28 @@
       "clientMethod": {
         "shortName": "ListAnnotationSpecSets",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotationSpecSets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4141,6 +5667,28 @@
         "shortName": "ListAnnotationSpecSetsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListAnnotationSpecSetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse, Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4178,6 +5726,16 @@
       "clientMethod": {
         "shortName": "DeleteAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -4216,6 +5774,16 @@
         "shortName": "DeleteAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4254,6 +5822,16 @@
       "clientMethod": {
         "shortName": "DeleteAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -4291,6 +5869,16 @@
         "shortName": "DeleteAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4328,6 +5916,16 @@
       "clientMethod": {
         "shortName": "DeleteAnnotationSpecSet",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteAnnotationSpecSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -4365,6 +5963,16 @@
         "shortName": "DeleteAnnotationSpecSetAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteAnnotationSpecSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4402,6 +6010,16 @@
       "clientMethod": {
         "shortName": "CreateInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateInstruction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.Instruction, Google.Cloud.DataLabeling.V1Beta1.CreateInstructionMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4441,6 +6059,16 @@
         "shortName": "CreateInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.Instruction, Google.Cloud.DataLabeling.V1Beta1.CreateInstructionMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4479,6 +6107,20 @@
       "clientMethod": {
         "shortName": "CreateInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateInstruction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.Instruction",
+            "name": "instruction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.Instruction, Google.Cloud.DataLabeling.V1Beta1.CreateInstructionMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4517,6 +6159,20 @@
         "shortName": "CreateInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.Instruction",
+            "name": "instruction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.Instruction, Google.Cloud.DataLabeling.V1Beta1.CreateInstructionMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4554,6 +6210,20 @@
       "clientMethod": {
         "shortName": "CreateInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateInstruction",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.Instruction",
+            "name": "instruction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.Instruction, Google.Cloud.DataLabeling.V1Beta1.CreateInstructionMetadata>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4592,6 +6262,20 @@
         "shortName": "CreateInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.Instruction",
+            "name": "instruction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataLabeling.V1Beta1.Instruction, Google.Cloud.DataLabeling.V1Beta1.CreateInstructionMetadata>>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4629,6 +6313,16 @@
       "clientMethod": {
         "shortName": "GetInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetInstruction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Instruction",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4668,6 +6362,16 @@
         "shortName": "GetInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4706,6 +6410,16 @@
       "clientMethod": {
         "shortName": "GetInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetInstruction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Instruction",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4744,6 +6458,16 @@
         "shortName": "GetInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4781,6 +6505,16 @@
       "clientMethod": {
         "shortName": "GetInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetInstruction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.InstructionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Instruction",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4819,6 +6553,16 @@
         "shortName": "GetInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.InstructionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4856,6 +6600,16 @@
       "clientMethod": {
         "shortName": "ListInstructions",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListInstructions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse, Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4895,6 +6649,16 @@
         "shortName": "ListInstructionsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListInstructionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse, Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4933,6 +6697,28 @@
       "clientMethod": {
         "shortName": "ListInstructions",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListInstructions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse, Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -4971,6 +6757,28 @@
         "shortName": "ListInstructionsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListInstructionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse, Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5008,6 +6816,28 @@
       "clientMethod": {
         "shortName": "ListInstructions",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListInstructions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse, Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5046,6 +6876,28 @@
         "shortName": "ListInstructionsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListInstructionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse, Google.Cloud.DataLabeling.V1Beta1.Instruction>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5083,6 +6935,16 @@
       "clientMethod": {
         "shortName": "DeleteInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteInstruction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -5121,6 +6983,16 @@
         "shortName": "DeleteInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5159,6 +7031,16 @@
       "clientMethod": {
         "shortName": "DeleteInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteInstruction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -5196,6 +7078,16 @@
         "shortName": "DeleteInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5233,6 +7125,16 @@
       "clientMethod": {
         "shortName": "DeleteInstruction",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteInstruction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.InstructionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -5270,6 +7172,16 @@
         "shortName": "DeleteInstructionAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteInstructionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.InstructionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5307,6 +7219,16 @@
       "clientMethod": {
         "shortName": "GetEvaluation",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Evaluation",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5346,6 +7268,16 @@
         "shortName": "GetEvaluationAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5384,6 +7316,16 @@
       "clientMethod": {
         "shortName": "GetEvaluation",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Evaluation",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5422,6 +7364,16 @@
         "shortName": "GetEvaluationAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5459,6 +7411,16 @@
       "clientMethod": {
         "shortName": "GetEvaluation",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.Evaluation",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5497,6 +7459,16 @@
         "shortName": "GetEvaluationAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5534,6 +7506,16 @@
       "clientMethod": {
         "shortName": "SearchEvaluations",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse, Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5573,6 +7555,16 @@
         "shortName": "SearchEvaluationsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchEvaluationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse, Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5611,6 +7603,28 @@
       "clientMethod": {
         "shortName": "SearchEvaluations",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchEvaluations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse, Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5649,6 +7663,28 @@
         "shortName": "SearchEvaluationsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchEvaluationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse, Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5686,6 +7722,28 @@
       "clientMethod": {
         "shortName": "SearchEvaluations",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse, Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5724,6 +7782,28 @@
         "shortName": "SearchEvaluationsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchEvaluationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse, Google.Cloud.DataLabeling.V1Beta1.Evaluation>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5761,6 +7841,16 @@
       "clientMethod": {
         "shortName": "SearchExampleComparisons",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchExampleComparisons",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse, Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse+Types+ExampleComparison>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5800,6 +7890,16 @@
         "shortName": "SearchExampleComparisonsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchExampleComparisonsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse, Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse+Types+ExampleComparison>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5838,6 +7938,24 @@
       "clientMethod": {
         "shortName": "SearchExampleComparisons",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchExampleComparisons",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse, Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse+Types+ExampleComparison>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5876,6 +7994,24 @@
         "shortName": "SearchExampleComparisonsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchExampleComparisonsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse, Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse+Types+ExampleComparison>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5913,6 +8049,24 @@
       "clientMethod": {
         "shortName": "SearchExampleComparisons",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchExampleComparisons",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse, Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse+Types+ExampleComparison>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5951,6 +8105,24 @@
         "shortName": "SearchExampleComparisonsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.SearchExampleComparisonsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse, Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse+Types+ExampleComparison>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -5988,6 +8160,16 @@
       "clientMethod": {
         "shortName": "CreateEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6027,6 +8209,16 @@
         "shortName": "CreateEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6065,6 +8257,20 @@
       "clientMethod": {
         "shortName": "CreateEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateEvaluationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6103,6 +8309,20 @@
         "shortName": "CreateEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6140,6 +8360,20 @@
       "clientMethod": {
         "shortName": "CreateEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6178,6 +8412,20 @@
         "shortName": "CreateEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.CreateEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6215,6 +8463,16 @@
       "clientMethod": {
         "shortName": "UpdateEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.UpdateEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6254,6 +8512,16 @@
         "shortName": "UpdateEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.UpdateEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6292,6 +8560,20 @@
       "clientMethod": {
         "shortName": "UpdateEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.UpdateEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
+            "name": "evaluationJob"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6330,6 +8612,20 @@
         "shortName": "UpdateEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.UpdateEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
+            "name": "evaluationJob"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6367,6 +8663,16 @@
       "clientMethod": {
         "shortName": "GetEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6406,6 +8712,16 @@
         "shortName": "GetEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6444,6 +8760,16 @@
       "clientMethod": {
         "shortName": "GetEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6482,6 +8808,16 @@
         "shortName": "GetEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6519,6 +8855,16 @@
       "clientMethod": {
         "shortName": "GetEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJob",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6557,6 +8903,16 @@
         "shortName": "GetEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.GetEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6594,6 +8950,16 @@
       "clientMethod": {
         "shortName": "PauseEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.PauseEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -6632,6 +8998,16 @@
         "shortName": "PauseEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.PauseEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6670,6 +9046,16 @@
       "clientMethod": {
         "shortName": "PauseEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.PauseEvaluationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -6707,6 +9093,16 @@
         "shortName": "PauseEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.PauseEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6744,6 +9140,16 @@
       "clientMethod": {
         "shortName": "PauseEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.PauseEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -6781,6 +9187,16 @@
         "shortName": "PauseEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.PauseEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6818,6 +9234,16 @@
       "clientMethod": {
         "shortName": "ResumeEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ResumeEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -6856,6 +9282,16 @@
         "shortName": "ResumeEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ResumeEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6894,6 +9330,16 @@
       "clientMethod": {
         "shortName": "ResumeEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ResumeEvaluationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -6931,6 +9377,16 @@
         "shortName": "ResumeEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ResumeEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -6968,6 +9424,16 @@
       "clientMethod": {
         "shortName": "ResumeEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ResumeEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -7005,6 +9471,16 @@
         "shortName": "ResumeEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ResumeEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7042,6 +9518,16 @@
       "clientMethod": {
         "shortName": "DeleteEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -7080,6 +9566,16 @@
         "shortName": "DeleteEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7118,6 +9614,16 @@
       "clientMethod": {
         "shortName": "DeleteEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteEvaluationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -7155,6 +9661,16 @@
         "shortName": "DeleteEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7192,6 +9708,16 @@
       "clientMethod": {
         "shortName": "DeleteEvaluationJob",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteEvaluationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataLabelingServiceClient",
           "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient"
@@ -7229,6 +9755,16 @@
         "shortName": "DeleteEvaluationJobAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.DeleteEvaluationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.EvaluationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7266,6 +9802,16 @@
       "clientMethod": {
         "shortName": "ListEvaluationJobs",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListEvaluationJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse, Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7305,6 +9851,16 @@
         "shortName": "ListEvaluationJobsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListEvaluationJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse, Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7343,6 +9899,28 @@
       "clientMethod": {
         "shortName": "ListEvaluationJobs",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListEvaluationJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse, Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7381,6 +9959,28 @@
         "shortName": "ListEvaluationJobsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListEvaluationJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse, Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7418,6 +10018,28 @@
       "clientMethod": {
         "shortName": "ListEvaluationJobs",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListEvaluationJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse, Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",
@@ -7456,6 +10078,28 @@
         "shortName": "ListEvaluationJobsAsync",
         "fullName": "Google.Cloud.DataLabeling.V1Beta1.DataLabelingServiceClient.ListEvaluationJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse, Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>",
         "client": {
           "shortName": "DataLabelingServiceClient",

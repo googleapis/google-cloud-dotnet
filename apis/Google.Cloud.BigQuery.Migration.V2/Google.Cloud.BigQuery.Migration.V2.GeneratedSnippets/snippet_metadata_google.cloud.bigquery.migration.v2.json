@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.CreateMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.CreateMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+            "name": "migrationWorkflow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+            "name": "migrationWorkflow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+            "name": "migrationWorkflow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+            "name": "migrationWorkflow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "GetMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.GetMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "GetMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.GetMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "GetMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -361,6 +467,16 @@
         "shortName": "GetMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -398,6 +514,16 @@
       "clientMethod": {
         "shortName": "GetMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -436,6 +562,16 @@
         "shortName": "GetMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -473,6 +609,16 @@
       "clientMethod": {
         "shortName": "ListMigrationWorkflows",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -512,6 +658,16 @@
         "shortName": "ListMigrationWorkflowsAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -550,6 +706,24 @@
       "clientMethod": {
         "shortName": "ListMigrationWorkflows",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -588,6 +762,24 @@
         "shortName": "ListMigrationWorkflowsAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -625,6 +817,24 @@
       "clientMethod": {
         "shortName": "ListMigrationWorkflows",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflows",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -663,6 +873,24 @@
         "shortName": "ListMigrationWorkflowsAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -700,6 +928,16 @@
       "clientMethod": {
         "shortName": "DeleteMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.DeleteMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MigrationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
@@ -738,6 +976,16 @@
         "shortName": "DeleteMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.DeleteMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -776,6 +1024,16 @@
       "clientMethod": {
         "shortName": "DeleteMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MigrationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
@@ -813,6 +1071,16 @@
         "shortName": "DeleteMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -850,6 +1118,16 @@
       "clientMethod": {
         "shortName": "DeleteMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MigrationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
@@ -887,6 +1165,16 @@
         "shortName": "DeleteMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -924,6 +1212,16 @@
       "clientMethod": {
         "shortName": "StartMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.StartMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MigrationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
@@ -962,6 +1260,16 @@
         "shortName": "StartMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.StartMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1000,6 +1308,16 @@
       "clientMethod": {
         "shortName": "StartMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MigrationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
@@ -1037,6 +1355,16 @@
         "shortName": "StartMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1074,6 +1402,16 @@
       "clientMethod": {
         "shortName": "StartMigrationWorkflow",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "MigrationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
@@ -1111,6 +1449,16 @@
         "shortName": "StartMigrationWorkflowAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1148,6 +1496,16 @@
       "clientMethod": {
         "shortName": "GetMigrationSubtask",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.GetMigrationSubtaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtask",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1187,6 +1545,16 @@
         "shortName": "GetMigrationSubtaskAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.GetMigrationSubtaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1225,6 +1593,16 @@
       "clientMethod": {
         "shortName": "GetMigrationSubtask",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtask",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1263,6 +1641,16 @@
         "shortName": "GetMigrationSubtaskAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1300,6 +1688,16 @@
       "clientMethod": {
         "shortName": "GetMigrationSubtask",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtask",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1338,6 +1736,16 @@
         "shortName": "GetMigrationSubtaskAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1375,6 +1783,16 @@
       "clientMethod": {
         "shortName": "ListMigrationSubtasks",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1414,6 +1832,16 @@
         "shortName": "ListMigrationSubtasksAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1452,6 +1880,24 @@
       "clientMethod": {
         "shortName": "ListMigrationSubtasks",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1490,6 +1936,24 @@
         "shortName": "ListMigrationSubtasksAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1527,6 +1991,24 @@
       "clientMethod": {
         "shortName": "ListMigrationSubtasks",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",
@@ -1565,6 +2047,24 @@
         "shortName": "ListMigrationSubtasksAsync",
         "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
         "client": {
           "shortName": "MigrationServiceClient",

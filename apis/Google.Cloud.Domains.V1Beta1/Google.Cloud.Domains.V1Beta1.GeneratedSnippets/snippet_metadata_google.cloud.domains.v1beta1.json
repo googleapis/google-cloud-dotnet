@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "SearchDomains",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.SearchDomains",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.SearchDomainsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.SearchDomainsResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -58,6 +68,16 @@
         "shortName": "SearchDomainsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.SearchDomainsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.SearchDomainsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.SearchDomainsResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "SearchDomains",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.SearchDomains",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.SearchDomainsResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -134,6 +168,20 @@
         "shortName": "SearchDomainsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.SearchDomainsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.SearchDomainsResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "SearchDomains",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.SearchDomains",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.SearchDomainsResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -209,6 +271,20 @@
         "shortName": "SearchDomainsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.SearchDomainsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.SearchDomainsResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "RetrieveRegisterParameters",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveRegisterParameters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -285,6 +371,16 @@
         "shortName": "RetrieveRegisterParametersAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveRegisterParametersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -323,6 +419,20 @@
       "clientMethod": {
         "shortName": "RetrieveRegisterParameters",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveRegisterParameters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -361,6 +471,20 @@
         "shortName": "RetrieveRegisterParametersAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveRegisterParametersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -398,6 +522,20 @@
       "clientMethod": {
         "shortName": "RetrieveRegisterParameters",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveRegisterParameters",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -436,6 +574,20 @@
         "shortName": "RetrieveRegisterParametersAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveRegisterParametersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "RegisterDomain",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RegisterDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegisterDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -512,6 +674,16 @@
         "shortName": "RegisterDomainAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RegisterDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegisterDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "RegisterDomain",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RegisterDomain",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Type.Money",
+            "name": "yearlyPrice"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -588,6 +778,24 @@
         "shortName": "RegisterDomainAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RegisterDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Type.Money",
+            "name": "yearlyPrice"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "RegisterDomain",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RegisterDomain",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Type.Money",
+            "name": "yearlyPrice"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -663,6 +889,24 @@
         "shortName": "RegisterDomainAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RegisterDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Type.Money",
+            "name": "yearlyPrice"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "RetrieveTransferParameters",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveTransferParameters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -739,6 +993,16 @@
         "shortName": "RetrieveTransferParametersAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveTransferParametersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "RetrieveTransferParameters",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveTransferParameters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -815,6 +1093,20 @@
         "shortName": "RetrieveTransferParametersAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveTransferParametersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -852,6 +1144,20 @@
       "clientMethod": {
         "shortName": "RetrieveTransferParameters",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveTransferParameters",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse",
         "client": {
           "shortName": "DomainsClient",
@@ -890,6 +1196,20 @@
         "shortName": "RetrieveTransferParametersAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveTransferParametersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "location"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse>",
         "client": {
           "shortName": "DomainsClient",
@@ -927,6 +1247,16 @@
       "clientMethod": {
         "shortName": "TransferDomain",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.TransferDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.TransferDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -966,6 +1296,16 @@
         "shortName": "TransferDomainAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.TransferDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.TransferDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -1004,6 +1344,28 @@
       "clientMethod": {
         "shortName": "TransferDomain",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.TransferDomain",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Type.Money",
+            "name": "yearlyPrice"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
+            "name": "authorizationCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -1042,6 +1404,28 @@
         "shortName": "TransferDomainAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.TransferDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Type.Money",
+            "name": "yearlyPrice"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
+            "name": "authorizationCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -1079,6 +1463,28 @@
       "clientMethod": {
         "shortName": "TransferDomain",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.TransferDomain",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Type.Money",
+            "name": "yearlyPrice"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
+            "name": "authorizationCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -1117,6 +1523,28 @@
         "shortName": "TransferDomainAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.TransferDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Type.Money",
+            "name": "yearlyPrice"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
+            "name": "authorizationCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -1154,6 +1582,16 @@
       "clientMethod": {
         "shortName": "ListRegistrations",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ListRegistrations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse, Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1193,6 +1631,16 @@
         "shortName": "ListRegistrationsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ListRegistrationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse, Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1231,6 +1679,24 @@
       "clientMethod": {
         "shortName": "ListRegistrations",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ListRegistrations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse, Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1269,6 +1735,24 @@
         "shortName": "ListRegistrationsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ListRegistrationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse, Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1306,6 +1790,24 @@
       "clientMethod": {
         "shortName": "ListRegistrations",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ListRegistrations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse, Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1344,6 +1846,24 @@
         "shortName": "ListRegistrationsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ListRegistrationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse, Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1381,6 +1901,16 @@
       "clientMethod": {
         "shortName": "GetRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.GetRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.GetRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.Registration",
         "client": {
           "shortName": "DomainsClient",
@@ -1420,6 +1950,16 @@
         "shortName": "GetRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.GetRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.GetRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1458,6 +1998,16 @@
       "clientMethod": {
         "shortName": "GetRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.GetRegistration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.Registration",
         "client": {
           "shortName": "DomainsClient",
@@ -1496,6 +2046,16 @@
         "shortName": "GetRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.GetRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1533,6 +2093,16 @@
       "clientMethod": {
         "shortName": "GetRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.GetRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.Registration",
         "client": {
           "shortName": "DomainsClient",
@@ -1571,6 +2141,16 @@
         "shortName": "GetRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.GetRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.Registration>",
         "client": {
           "shortName": "DomainsClient",
@@ -1608,6 +2188,16 @@
       "clientMethod": {
         "shortName": "UpdateRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.UpdateRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -1647,6 +2237,16 @@
         "shortName": "UpdateRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.UpdateRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -1685,6 +2285,20 @@
       "clientMethod": {
         "shortName": "UpdateRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.UpdateRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -1723,6 +2337,20 @@
         "shortName": "UpdateRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.UpdateRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.Registration",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -1760,6 +2388,16 @@
       "clientMethod": {
         "shortName": "ConfigureManagementSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureManagementSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -1799,6 +2437,16 @@
         "shortName": "ConfigureManagementSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureManagementSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -1837,6 +2485,24 @@
       "clientMethod": {
         "shortName": "ConfigureManagementSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureManagementSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ManagementSettings",
+            "name": "managementSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -1875,6 +2541,24 @@
         "shortName": "ConfigureManagementSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureManagementSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ManagementSettings",
+            "name": "managementSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -1912,6 +2596,24 @@
       "clientMethod": {
         "shortName": "ConfigureManagementSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureManagementSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ManagementSettings",
+            "name": "managementSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -1950,6 +2652,24 @@
         "shortName": "ConfigureManagementSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureManagementSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ManagementSettings",
+            "name": "managementSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -1987,6 +2707,16 @@
       "clientMethod": {
         "shortName": "ConfigureDnsSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureDnsSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2026,6 +2756,16 @@
         "shortName": "ConfigureDnsSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureDnsSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2064,6 +2804,24 @@
       "clientMethod": {
         "shortName": "ConfigureDnsSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureDnsSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.DnsSettings",
+            "name": "dnsSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2102,6 +2860,24 @@
         "shortName": "ConfigureDnsSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureDnsSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.DnsSettings",
+            "name": "dnsSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2139,6 +2915,24 @@
       "clientMethod": {
         "shortName": "ConfigureDnsSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureDnsSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.DnsSettings",
+            "name": "dnsSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2177,6 +2971,24 @@
         "shortName": "ConfigureDnsSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureDnsSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.DnsSettings",
+            "name": "dnsSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2214,6 +3026,16 @@
       "clientMethod": {
         "shortName": "ConfigureContactSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureContactSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2253,6 +3075,16 @@
         "shortName": "ConfigureContactSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureContactSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2291,6 +3123,24 @@
       "clientMethod": {
         "shortName": "ConfigureContactSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureContactSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ContactSettings",
+            "name": "contactSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2329,6 +3179,24 @@
         "shortName": "ConfigureContactSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureContactSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ContactSettings",
+            "name": "contactSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2366,6 +3234,24 @@
       "clientMethod": {
         "shortName": "ConfigureContactSettings",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureContactSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ContactSettings",
+            "name": "contactSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2404,6 +3290,24 @@
         "shortName": "ConfigureContactSettingsAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ConfigureContactSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ContactSettings",
+            "name": "contactSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2441,6 +3345,16 @@
       "clientMethod": {
         "shortName": "ExportRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ExportRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2480,6 +3394,16 @@
         "shortName": "ExportRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ExportRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2518,6 +3442,16 @@
       "clientMethod": {
         "shortName": "ExportRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ExportRegistration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2556,6 +3490,16 @@
         "shortName": "ExportRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ExportRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2593,6 +3537,16 @@
       "clientMethod": {
         "shortName": "ExportRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ExportRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2631,6 +3585,16 @@
         "shortName": "ExportRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ExportRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Domains.V1Beta1.Registration, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2668,6 +3632,16 @@
       "clientMethod": {
         "shortName": "DeleteRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.DeleteRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2707,6 +3681,16 @@
         "shortName": "DeleteRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.DeleteRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2745,6 +3729,16 @@
       "clientMethod": {
         "shortName": "DeleteRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.DeleteRegistration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2783,6 +3777,16 @@
         "shortName": "DeleteRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.DeleteRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2820,6 +3824,16 @@
       "clientMethod": {
         "shortName": "DeleteRegistration",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.DeleteRegistration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Domains.V1Beta1.OperationMetadata>",
         "client": {
           "shortName": "DomainsClient",
@@ -2858,6 +3872,16 @@
         "shortName": "DeleteRegistrationAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.DeleteRegistrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Domains.V1Beta1.OperationMetadata>>",
         "client": {
           "shortName": "DomainsClient",
@@ -2895,6 +3919,16 @@
       "clientMethod": {
         "shortName": "RetrieveAuthorizationCode",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveAuthorizationCode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
         "client": {
           "shortName": "DomainsClient",
@@ -2934,6 +3968,16 @@
         "shortName": "RetrieveAuthorizationCodeAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveAuthorizationCodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.AuthorizationCode>",
         "client": {
           "shortName": "DomainsClient",
@@ -2972,6 +4016,16 @@
       "clientMethod": {
         "shortName": "RetrieveAuthorizationCode",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveAuthorizationCode",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
         "client": {
           "shortName": "DomainsClient",
@@ -3010,6 +4064,16 @@
         "shortName": "RetrieveAuthorizationCodeAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveAuthorizationCodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.AuthorizationCode>",
         "client": {
           "shortName": "DomainsClient",
@@ -3047,6 +4111,16 @@
       "clientMethod": {
         "shortName": "RetrieveAuthorizationCode",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveAuthorizationCode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
         "client": {
           "shortName": "DomainsClient",
@@ -3085,6 +4159,16 @@
         "shortName": "RetrieveAuthorizationCodeAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.RetrieveAuthorizationCodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.AuthorizationCode>",
         "client": {
           "shortName": "DomainsClient",
@@ -3122,6 +4206,16 @@
       "clientMethod": {
         "shortName": "ResetAuthorizationCode",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ResetAuthorizationCode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
         "client": {
           "shortName": "DomainsClient",
@@ -3161,6 +4255,16 @@
         "shortName": "ResetAuthorizationCodeAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ResetAuthorizationCodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.AuthorizationCode>",
         "client": {
           "shortName": "DomainsClient",
@@ -3199,6 +4303,16 @@
       "clientMethod": {
         "shortName": "ResetAuthorizationCode",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ResetAuthorizationCode",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
         "client": {
           "shortName": "DomainsClient",
@@ -3237,6 +4351,16 @@
         "shortName": "ResetAuthorizationCodeAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ResetAuthorizationCodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.AuthorizationCode>",
         "client": {
           "shortName": "DomainsClient",
@@ -3274,6 +4398,16 @@
       "clientMethod": {
         "shortName": "ResetAuthorizationCode",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ResetAuthorizationCode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Domains.V1Beta1.AuthorizationCode",
         "client": {
           "shortName": "DomainsClient",
@@ -3312,6 +4446,16 @@
         "shortName": "ResetAuthorizationCodeAsync",
         "fullName": "Google.Cloud.Domains.V1Beta1.DomainsClient.ResetAuthorizationCodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Domains.V1Beta1.RegistrationName",
+            "name": "registration"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Domains.V1Beta1.AuthorizationCode>",
         "client": {
           "shortName": "DomainsClient",

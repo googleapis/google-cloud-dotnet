@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.CreateKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.CreateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.CreateKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.CreateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.CreateKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiKeys.V2.Key",
+            "name": "key"
+          },
+          {
+            "type": "System.String",
+            "name": "keyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.CreateKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiKeys.V2.Key",
+            "name": "key"
+          },
+          {
+            "type": "System.String",
+            "name": "keyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.CreateKey",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiKeys.V2.Key",
+            "name": "key"
+          },
+          {
+            "type": "System.String",
+            "name": "keyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.CreateKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiKeys.V2.Key",
+            "name": "key"
+          },
+          {
+            "type": "System.String",
+            "name": "keyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ListKeys",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.ListKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.ListKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiKeys.V2.ListKeysResponse, Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -285,6 +387,16 @@
         "shortName": "ListKeysAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.ListKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.ListKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiKeys.V2.ListKeysResponse, Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -323,6 +435,24 @@
       "clientMethod": {
         "shortName": "ListKeys",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.ListKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiKeys.V2.ListKeysResponse, Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -361,6 +491,24 @@
         "shortName": "ListKeysAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.ListKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiKeys.V2.ListKeysResponse, Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -398,6 +546,24 @@
       "clientMethod": {
         "shortName": "ListKeys",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.ListKeys",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiKeys.V2.ListKeysResponse, Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -436,6 +602,24 @@
         "shortName": "ListKeysAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.ListKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiKeys.V2.ListKeysResponse, Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -473,6 +657,16 @@
       "clientMethod": {
         "shortName": "GetKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.GetKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiKeys.V2.Key",
         "client": {
           "shortName": "ApiKeysClient",
@@ -512,6 +706,16 @@
         "shortName": "GetKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.GetKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -550,6 +754,16 @@
       "clientMethod": {
         "shortName": "GetKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiKeys.V2.Key",
         "client": {
           "shortName": "ApiKeysClient",
@@ -588,6 +802,16 @@
         "shortName": "GetKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -625,6 +849,16 @@
       "clientMethod": {
         "shortName": "GetKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.KeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiKeys.V2.Key",
         "client": {
           "shortName": "ApiKeysClient",
@@ -663,6 +897,16 @@
         "shortName": "GetKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.KeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiKeys.V2.Key>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "GetKeyString",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyString",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.GetKeyStringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiKeys.V2.GetKeyStringResponse",
         "client": {
           "shortName": "ApiKeysClient",
@@ -739,6 +993,16 @@
         "shortName": "GetKeyStringAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyStringAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.GetKeyStringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiKeys.V2.GetKeyStringResponse>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -777,6 +1041,16 @@
       "clientMethod": {
         "shortName": "GetKeyString",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyString",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiKeys.V2.GetKeyStringResponse",
         "client": {
           "shortName": "ApiKeysClient",
@@ -815,6 +1089,16 @@
         "shortName": "GetKeyStringAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyStringAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiKeys.V2.GetKeyStringResponse>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -852,6 +1136,16 @@
       "clientMethod": {
         "shortName": "GetKeyString",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyString",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.KeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiKeys.V2.GetKeyStringResponse",
         "client": {
           "shortName": "ApiKeysClient",
@@ -890,6 +1184,16 @@
         "shortName": "GetKeyStringAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.GetKeyStringAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.KeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiKeys.V2.GetKeyStringResponse>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -927,6 +1231,16 @@
       "clientMethod": {
         "shortName": "UpdateKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.UpdateKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.UpdateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -966,6 +1280,16 @@
         "shortName": "UpdateKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.UpdateKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.UpdateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1004,6 +1328,20 @@
       "clientMethod": {
         "shortName": "UpdateKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.UpdateKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.Key",
+            "name": "key"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1042,6 +1380,20 @@
         "shortName": "UpdateKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.UpdateKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.Key",
+            "name": "key"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "DeleteKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.DeleteKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.DeleteKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1118,6 +1480,16 @@
         "shortName": "DeleteKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.DeleteKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.DeleteKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1156,6 +1528,16 @@
       "clientMethod": {
         "shortName": "DeleteKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.DeleteKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1194,6 +1576,16 @@
         "shortName": "DeleteKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.DeleteKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1231,6 +1623,16 @@
       "clientMethod": {
         "shortName": "DeleteKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.DeleteKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.KeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1269,6 +1671,16 @@
         "shortName": "DeleteKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.DeleteKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.KeyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1306,6 +1718,16 @@
       "clientMethod": {
         "shortName": "UndeleteKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.UndeleteKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.UndeleteKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1345,6 +1767,16 @@
         "shortName": "UndeleteKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.UndeleteKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.UndeleteKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiKeys.V2.Key, Google.Protobuf.WellKnownTypes.Empty>>",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1383,6 +1815,16 @@
       "clientMethod": {
         "shortName": "LookupKey",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.LookupKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.LookupKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiKeys.V2.LookupKeyResponse",
         "client": {
           "shortName": "ApiKeysClient",
@@ -1422,6 +1864,16 @@
         "shortName": "LookupKeyAsync",
         "fullName": "Google.Cloud.ApiKeys.V2.ApiKeysClient.LookupKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiKeys.V2.LookupKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiKeys.V2.LookupKeyResponse>",
         "client": {
           "shortName": "ApiKeysClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "SearchCatalogs",
         "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchCatalogs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Catalog>",
         "client": {
           "shortName": "PrivateCatalogClient",
@@ -58,6 +68,16 @@
         "shortName": "SearchCatalogsAsync",
         "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchCatalogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Catalog>",
         "client": {
           "shortName": "PrivateCatalogClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "SearchProducts",
         "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchProductsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Product>",
         "client": {
           "shortName": "PrivateCatalogClient",
@@ -135,6 +165,16 @@
         "shortName": "SearchProductsAsync",
         "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchProductsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Product>",
         "client": {
           "shortName": "PrivateCatalogClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "SearchVersions",
         "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchVersionsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Version>",
         "client": {
           "shortName": "PrivateCatalogClient",
@@ -212,6 +262,16 @@
         "shortName": "SearchVersionsAsync",
         "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchVersionsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Version>",
         "client": {
           "shortName": "PrivateCatalogClient",

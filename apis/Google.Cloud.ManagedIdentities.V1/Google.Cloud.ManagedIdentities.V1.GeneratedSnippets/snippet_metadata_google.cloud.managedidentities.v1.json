@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateMicrosoftAdDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.CreateMicrosoftAdDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateMicrosoftAdDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.CreateMicrosoftAdDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateMicrosoftAdDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.CreateMicrosoftAdDomain",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Domain",
+            "name": "domain"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateMicrosoftAdDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.CreateMicrosoftAdDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Domain",
+            "name": "domain"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateMicrosoftAdDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.CreateMicrosoftAdDomain",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Domain",
+            "name": "domain"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateMicrosoftAdDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.CreateMicrosoftAdDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "domainName"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Domain",
+            "name": "domain"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ResetAdminPassword",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ResetAdminPassword",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "ResetAdminPasswordAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ResetAdminPasswordAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "ResetAdminPassword",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ResetAdminPassword",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "ResetAdminPasswordAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ResetAdminPasswordAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "ResetAdminPassword",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ResetAdminPassword",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "ResetAdminPasswordAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ResetAdminPasswordAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "ListDomains",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ListDomains",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.ListDomainsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedIdentities.V1.ListDomainsResponse, Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "ListDomainsAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ListDomainsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.ListDomainsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedIdentities.V1.ListDomainsResponse, Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "ListDomains",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ListDomains",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedIdentities.V1.ListDomainsResponse, Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "ListDomainsAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ListDomainsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedIdentities.V1.ListDomainsResponse, Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "ListDomains",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ListDomains",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedIdentities.V1.ListDomainsResponse, Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "ListDomainsAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ListDomainsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedIdentities.V1.ListDomainsResponse, Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "GetDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.GetDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.GetDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ManagedIdentities.V1.Domain",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "GetDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.GetDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.GetDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -777,6 +1041,16 @@
       "clientMethod": {
         "shortName": "GetDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.GetDomain",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ManagedIdentities.V1.Domain",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -815,6 +1089,16 @@
         "shortName": "GetDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.GetDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -852,6 +1136,16 @@
       "clientMethod": {
         "shortName": "GetDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.GetDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ManagedIdentities.V1.Domain",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -890,6 +1184,16 @@
         "shortName": "GetDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.GetDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedIdentities.V1.Domain>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -927,6 +1231,16 @@
       "clientMethod": {
         "shortName": "UpdateDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.UpdateDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -966,6 +1280,16 @@
         "shortName": "UpdateDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.UpdateDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1004,6 +1328,20 @@
       "clientMethod": {
         "shortName": "UpdateDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.UpdateDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Domain",
+            "name": "domain"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1042,6 +1380,20 @@
         "shortName": "UpdateDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.UpdateDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Domain",
+            "name": "domain"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "DeleteDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DeleteDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1118,6 +1480,16 @@
         "shortName": "DeleteDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DeleteDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1156,6 +1528,16 @@
       "clientMethod": {
         "shortName": "DeleteDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DeleteDomain",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1194,6 +1576,16 @@
         "shortName": "DeleteDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DeleteDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1231,6 +1623,16 @@
       "clientMethod": {
         "shortName": "DeleteDomain",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DeleteDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1269,6 +1671,16 @@
         "shortName": "DeleteDomainAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DeleteDomainAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1306,6 +1718,16 @@
       "clientMethod": {
         "shortName": "AttachTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.AttachTrust",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.AttachTrustRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1345,6 +1767,16 @@
         "shortName": "AttachTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.AttachTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.AttachTrustRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1383,6 +1815,20 @@
       "clientMethod": {
         "shortName": "AttachTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.AttachTrust",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1421,6 +1867,20 @@
         "shortName": "AttachTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.AttachTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1458,6 +1918,20 @@
       "clientMethod": {
         "shortName": "AttachTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.AttachTrust",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1496,6 +1970,20 @@
         "shortName": "AttachTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.AttachTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1533,6 +2021,16 @@
       "clientMethod": {
         "shortName": "ReconfigureTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ReconfigureTrust",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1572,6 +2070,16 @@
         "shortName": "ReconfigureTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ReconfigureTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1610,6 +2118,24 @@
       "clientMethod": {
         "shortName": "ReconfigureTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ReconfigureTrust",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetDomainName"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "targetDnsIpAddresses"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1648,6 +2174,24 @@
         "shortName": "ReconfigureTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ReconfigureTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetDomainName"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "targetDnsIpAddresses"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1685,6 +2229,24 @@
       "clientMethod": {
         "shortName": "ReconfigureTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ReconfigureTrust",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetDomainName"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "targetDnsIpAddresses"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1723,6 +2285,24 @@
         "shortName": "ReconfigureTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ReconfigureTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "targetDomainName"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "targetDnsIpAddresses"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1760,6 +2340,16 @@
       "clientMethod": {
         "shortName": "DetachTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DetachTrust",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DetachTrustRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1799,6 +2389,16 @@
         "shortName": "DetachTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DetachTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DetachTrustRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1837,6 +2437,20 @@
       "clientMethod": {
         "shortName": "DetachTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DetachTrust",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1875,6 +2489,20 @@
         "shortName": "DetachTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DetachTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1912,6 +2540,20 @@
       "clientMethod": {
         "shortName": "DetachTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DetachTrust",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1950,6 +2592,20 @@
         "shortName": "DetachTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.DetachTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -1987,6 +2643,16 @@
       "clientMethod": {
         "shortName": "ValidateTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ValidateTrust",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -2026,6 +2692,16 @@
         "shortName": "ValidateTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ValidateTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -2064,6 +2740,20 @@
       "clientMethod": {
         "shortName": "ValidateTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ValidateTrust",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -2102,6 +2792,20 @@
         "shortName": "ValidateTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ValidateTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -2139,6 +2843,20 @@
       "clientMethod": {
         "shortName": "ValidateTrust",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ValidateTrust",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",
@@ -2177,6 +2895,20 @@
         "shortName": "ValidateTrustAsync",
         "fullName": "Google.Cloud.ManagedIdentities.V1.ManagedIdentitiesServiceClient.ValidateTrustAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.ManagedIdentities.V1.Trust",
+            "name": "trust"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedIdentities.V1.Domain, Google.Cloud.ManagedIdentities.V1.OpMetadata>>",
         "client": {
           "shortName": "ManagedIdentitiesServiceClient",

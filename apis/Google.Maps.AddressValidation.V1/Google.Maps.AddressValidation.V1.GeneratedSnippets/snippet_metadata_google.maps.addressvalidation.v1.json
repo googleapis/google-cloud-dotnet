@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ValidateAddress",
         "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient.ValidateAddress",
+        "parameters": [
+          {
+            "type": "Google.Maps.AddressValidation.V1.ValidateAddressRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.AddressValidation.V1.ValidateAddressResponse",
         "client": {
           "shortName": "AddressValidationClient",
@@ -58,6 +68,16 @@
         "shortName": "ValidateAddressAsync",
         "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient.ValidateAddressAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.AddressValidation.V1.ValidateAddressRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.AddressValidation.V1.ValidateAddressResponse>",
         "client": {
           "shortName": "AddressValidationClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "ProvideValidationFeedback",
         "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient.ProvideValidationFeedback",
+        "parameters": [
+          {
+            "type": "Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Maps.AddressValidation.V1.ProvideValidationFeedbackResponse",
         "client": {
           "shortName": "AddressValidationClient",
@@ -135,6 +165,16 @@
         "shortName": "ProvideValidationFeedbackAsync",
         "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient.ProvideValidationFeedbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Maps.AddressValidation.V1.ProvideValidationFeedbackResponse>",
         "client": {
           "shortName": "AddressValidationClient",

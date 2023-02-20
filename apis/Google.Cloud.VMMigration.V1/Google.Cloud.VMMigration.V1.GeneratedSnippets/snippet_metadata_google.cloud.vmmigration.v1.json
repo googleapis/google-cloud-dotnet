@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListSources",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListSources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListSourcesResponse, Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -58,6 +68,16 @@
         "shortName": "ListSourcesAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListSourcesResponse, Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListSources",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListSources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListSourcesResponse, Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -134,6 +172,24 @@
         "shortName": "ListSourcesAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListSourcesResponse, Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListSources",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListSources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListSourcesResponse, Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -209,6 +283,24 @@
         "shortName": "ListSourcesAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListSourcesResponse, Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.Source",
         "client": {
           "shortName": "VmMigrationClient",
@@ -285,6 +387,16 @@
         "shortName": "GetSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.Source",
         "client": {
           "shortName": "VmMigrationClient",
@@ -361,6 +483,16 @@
         "shortName": "GetSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.Source",
         "client": {
           "shortName": "VmMigrationClient",
@@ -436,6 +578,16 @@
         "shortName": "GetSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.Source>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.Source",
+            "name": "source"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.Source",
+            "name": "source"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateSource",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.Source",
+            "name": "source"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.Source",
+            "name": "source"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.Source",
+            "name": "source"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Source, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteSource",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteSourceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "FetchInventory",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchInventory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.FetchInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.FetchInventoryResponse",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1118,6 +1480,16 @@
         "shortName": "FetchInventoryAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchInventoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.FetchInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.FetchInventoryResponse>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1156,6 +1528,16 @@
       "clientMethod": {
         "shortName": "FetchInventory",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchInventory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.FetchInventoryResponse",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1194,6 +1576,16 @@
         "shortName": "FetchInventoryAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchInventoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.FetchInventoryResponse>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1231,6 +1623,16 @@
       "clientMethod": {
         "shortName": "FetchInventory",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchInventory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.FetchInventoryResponse",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1269,6 +1671,16 @@
         "shortName": "FetchInventoryAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FetchInventoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "source"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.FetchInventoryResponse>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1306,6 +1718,16 @@
       "clientMethod": {
         "shortName": "ListUtilizationReports",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListUtilizationReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListUtilizationReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse, Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1345,6 +1767,16 @@
         "shortName": "ListUtilizationReportsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListUtilizationReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListUtilizationReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse, Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1383,6 +1815,24 @@
       "clientMethod": {
         "shortName": "ListUtilizationReports",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListUtilizationReports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse, Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1421,6 +1871,24 @@
         "shortName": "ListUtilizationReportsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListUtilizationReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse, Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1458,6 +1926,24 @@
       "clientMethod": {
         "shortName": "ListUtilizationReports",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListUtilizationReports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse, Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1496,6 +1982,24 @@
         "shortName": "ListUtilizationReportsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListUtilizationReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse, Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "GetUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetUtilizationReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetUtilizationReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.UtilizationReport",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1572,6 +2086,16 @@
         "shortName": "GetUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetUtilizationReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1610,6 +2134,16 @@
       "clientMethod": {
         "shortName": "GetUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetUtilizationReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.UtilizationReport",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1648,6 +2182,16 @@
         "shortName": "GetUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1685,6 +2229,16 @@
       "clientMethod": {
         "shortName": "GetUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetUtilizationReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UtilizationReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.UtilizationReport",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1723,6 +2277,16 @@
         "shortName": "GetUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UtilizationReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.UtilizationReport>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1760,6 +2324,16 @@
       "clientMethod": {
         "shortName": "CreateUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateUtilizationReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateUtilizationReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UtilizationReport, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1799,6 +2373,16 @@
         "shortName": "CreateUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateUtilizationReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UtilizationReport, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1837,6 +2421,24 @@
       "clientMethod": {
         "shortName": "CreateUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateUtilizationReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.UtilizationReport",
+            "name": "utilizationReport"
+          },
+          {
+            "type": "System.String",
+            "name": "utilizationReportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UtilizationReport, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1875,6 +2477,24 @@
         "shortName": "CreateUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.UtilizationReport",
+            "name": "utilizationReport"
+          },
+          {
+            "type": "System.String",
+            "name": "utilizationReportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UtilizationReport, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1912,6 +2532,24 @@
       "clientMethod": {
         "shortName": "CreateUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateUtilizationReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.UtilizationReport",
+            "name": "utilizationReport"
+          },
+          {
+            "type": "System.String",
+            "name": "utilizationReportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UtilizationReport, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1950,6 +2588,24 @@
         "shortName": "CreateUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.UtilizationReport",
+            "name": "utilizationReport"
+          },
+          {
+            "type": "System.String",
+            "name": "utilizationReportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UtilizationReport, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -1987,6 +2643,16 @@
       "clientMethod": {
         "shortName": "DeleteUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteUtilizationReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteUtilizationReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2026,6 +2692,16 @@
         "shortName": "DeleteUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteUtilizationReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2064,6 +2740,16 @@
       "clientMethod": {
         "shortName": "DeleteUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteUtilizationReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2102,6 +2788,16 @@
         "shortName": "DeleteUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2139,6 +2835,16 @@
       "clientMethod": {
         "shortName": "DeleteUtilizationReport",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteUtilizationReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UtilizationReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2177,6 +2883,16 @@
         "shortName": "DeleteUtilizationReportAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteUtilizationReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UtilizationReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2214,6 +2930,16 @@
       "clientMethod": {
         "shortName": "ListDatacenterConnectors",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDatacenterConnectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListDatacenterConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListDatacenterConnectorsResponse, Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2253,6 +2979,16 @@
         "shortName": "ListDatacenterConnectorsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDatacenterConnectorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListDatacenterConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListDatacenterConnectorsResponse, Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2291,6 +3027,24 @@
       "clientMethod": {
         "shortName": "ListDatacenterConnectors",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDatacenterConnectors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListDatacenterConnectorsResponse, Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2329,6 +3083,24 @@
         "shortName": "ListDatacenterConnectorsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDatacenterConnectorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListDatacenterConnectorsResponse, Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2366,6 +3138,24 @@
       "clientMethod": {
         "shortName": "ListDatacenterConnectors",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDatacenterConnectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListDatacenterConnectorsResponse, Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2404,6 +3194,24 @@
         "shortName": "ListDatacenterConnectorsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListDatacenterConnectorsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListDatacenterConnectorsResponse, Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2441,6 +3249,16 @@
       "clientMethod": {
         "shortName": "GetDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDatacenterConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetDatacenterConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.DatacenterConnector",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2480,6 +3298,16 @@
         "shortName": "GetDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetDatacenterConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2518,6 +3346,16 @@
       "clientMethod": {
         "shortName": "GetDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDatacenterConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.DatacenterConnector",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2556,6 +3394,16 @@
         "shortName": "GetDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2593,6 +3441,16 @@
       "clientMethod": {
         "shortName": "GetDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDatacenterConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DatacenterConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.DatacenterConnector",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2631,6 +3489,16 @@
         "shortName": "GetDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DatacenterConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.DatacenterConnector>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2668,6 +3536,16 @@
       "clientMethod": {
         "shortName": "CreateDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDatacenterConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateDatacenterConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DatacenterConnector, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2707,6 +3585,16 @@
         "shortName": "CreateDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateDatacenterConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DatacenterConnector, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2745,6 +3633,24 @@
       "clientMethod": {
         "shortName": "CreateDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDatacenterConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.DatacenterConnector",
+            "name": "datacenterConnector"
+          },
+          {
+            "type": "System.String",
+            "name": "datacenterConnectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DatacenterConnector, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2783,6 +3689,24 @@
         "shortName": "CreateDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.DatacenterConnector",
+            "name": "datacenterConnector"
+          },
+          {
+            "type": "System.String",
+            "name": "datacenterConnectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DatacenterConnector, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2820,6 +3744,24 @@
       "clientMethod": {
         "shortName": "CreateDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDatacenterConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.DatacenterConnector",
+            "name": "datacenterConnector"
+          },
+          {
+            "type": "System.String",
+            "name": "datacenterConnectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DatacenterConnector, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2858,6 +3800,24 @@
         "shortName": "CreateDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.DatacenterConnector",
+            "name": "datacenterConnector"
+          },
+          {
+            "type": "System.String",
+            "name": "datacenterConnectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.DatacenterConnector, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2895,6 +3855,16 @@
       "clientMethod": {
         "shortName": "DeleteDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDatacenterConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteDatacenterConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2934,6 +3904,16 @@
         "shortName": "DeleteDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteDatacenterConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -2972,6 +3952,16 @@
       "clientMethod": {
         "shortName": "DeleteDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDatacenterConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3010,6 +4000,16 @@
         "shortName": "DeleteDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3047,6 +4047,16 @@
       "clientMethod": {
         "shortName": "DeleteDatacenterConnector",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDatacenterConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DatacenterConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3085,6 +4095,16 @@
         "shortName": "DeleteDatacenterConnectorAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteDatacenterConnectorAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DatacenterConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3122,6 +4142,16 @@
       "clientMethod": {
         "shortName": "UpgradeAppliance",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpgradeAppliance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpgradeApplianceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UpgradeApplianceResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3161,6 +4191,16 @@
         "shortName": "UpgradeApplianceAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpgradeApplianceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpgradeApplianceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.UpgradeApplianceResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3199,6 +4239,16 @@
       "clientMethod": {
         "shortName": "CreateMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateMigratingVm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateMigratingVmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3238,6 +4288,16 @@
         "shortName": "CreateMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateMigratingVmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3276,6 +4336,24 @@
       "clientMethod": {
         "shortName": "CreateMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateMigratingVm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVm",
+            "name": "migratingVm"
+          },
+          {
+            "type": "System.String",
+            "name": "migratingVmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3314,6 +4392,24 @@
         "shortName": "CreateMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVm",
+            "name": "migratingVm"
+          },
+          {
+            "type": "System.String",
+            "name": "migratingVmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3351,6 +4447,24 @@
       "clientMethod": {
         "shortName": "CreateMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateMigratingVm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVm",
+            "name": "migratingVm"
+          },
+          {
+            "type": "System.String",
+            "name": "migratingVmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3389,6 +4503,24 @@
         "shortName": "CreateMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVm",
+            "name": "migratingVm"
+          },
+          {
+            "type": "System.String",
+            "name": "migratingVmId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3426,6 +4558,16 @@
       "clientMethod": {
         "shortName": "ListMigratingVms",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListMigratingVms",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListMigratingVmsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListMigratingVmsResponse, Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3465,6 +4607,16 @@
         "shortName": "ListMigratingVmsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListMigratingVmsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListMigratingVmsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListMigratingVmsResponse, Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3503,6 +4655,24 @@
       "clientMethod": {
         "shortName": "ListMigratingVms",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListMigratingVms",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListMigratingVmsResponse, Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3541,6 +4711,24 @@
         "shortName": "ListMigratingVmsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListMigratingVmsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListMigratingVmsResponse, Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3578,6 +4766,24 @@
       "clientMethod": {
         "shortName": "ListMigratingVms",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListMigratingVms",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListMigratingVmsResponse, Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3616,6 +4822,24 @@
         "shortName": "ListMigratingVmsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListMigratingVmsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.SourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListMigratingVmsResponse, Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3653,6 +4877,16 @@
       "clientMethod": {
         "shortName": "GetMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetMigratingVm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetMigratingVmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.MigratingVm",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3692,6 +4926,16 @@
         "shortName": "GetMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetMigratingVmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3730,6 +4974,16 @@
       "clientMethod": {
         "shortName": "GetMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetMigratingVm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.MigratingVm",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3768,6 +5022,16 @@
         "shortName": "GetMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3805,6 +5069,16 @@
       "clientMethod": {
         "shortName": "GetMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetMigratingVm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.MigratingVm",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3843,6 +5117,16 @@
         "shortName": "GetMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.MigratingVm>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3880,6 +5164,16 @@
       "clientMethod": {
         "shortName": "UpdateMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateMigratingVm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateMigratingVmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3919,6 +5213,16 @@
         "shortName": "UpdateMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateMigratingVmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3957,6 +5261,20 @@
       "clientMethod": {
         "shortName": "UpdateMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateMigratingVm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVm",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -3995,6 +5313,20 @@
         "shortName": "UpdateMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVm",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.MigratingVm, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4032,6 +5364,16 @@
       "clientMethod": {
         "shortName": "DeleteMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteMigratingVm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteMigratingVmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4071,6 +5413,16 @@
         "shortName": "DeleteMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteMigratingVmRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4109,6 +5461,16 @@
       "clientMethod": {
         "shortName": "DeleteMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteMigratingVm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4147,6 +5509,16 @@
         "shortName": "DeleteMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4184,6 +5556,16 @@
       "clientMethod": {
         "shortName": "DeleteMigratingVm",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteMigratingVm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4222,6 +5604,16 @@
         "shortName": "DeleteMigratingVmAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteMigratingVmAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4259,6 +5651,16 @@
       "clientMethod": {
         "shortName": "StartMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.StartMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.StartMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.StartMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4298,6 +5700,16 @@
         "shortName": "StartMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.StartMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.StartMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.StartMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4336,6 +5748,16 @@
       "clientMethod": {
         "shortName": "StartMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.StartMigration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.StartMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4374,6 +5796,16 @@
         "shortName": "StartMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.StartMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.StartMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4411,6 +5843,16 @@
       "clientMethod": {
         "shortName": "StartMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.StartMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.StartMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4449,6 +5891,16 @@
         "shortName": "StartMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.StartMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.StartMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4486,6 +5938,16 @@
       "clientMethod": {
         "shortName": "ResumeMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ResumeMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ResumeMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ResumeMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4525,6 +5987,16 @@
         "shortName": "ResumeMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ResumeMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ResumeMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.ResumeMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4563,6 +6035,16 @@
       "clientMethod": {
         "shortName": "PauseMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.PauseMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.PauseMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.PauseMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4602,6 +6084,16 @@
         "shortName": "PauseMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.PauseMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.PauseMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.PauseMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4640,6 +6132,16 @@
       "clientMethod": {
         "shortName": "FinalizeMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FinalizeMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.FinalizeMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.FinalizeMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4679,6 +6181,16 @@
         "shortName": "FinalizeMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FinalizeMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.FinalizeMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.FinalizeMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4717,6 +6229,16 @@
       "clientMethod": {
         "shortName": "FinalizeMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FinalizeMigration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.FinalizeMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4755,6 +6277,16 @@
         "shortName": "FinalizeMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FinalizeMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.FinalizeMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4792,6 +6324,16 @@
       "clientMethod": {
         "shortName": "FinalizeMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FinalizeMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.FinalizeMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4830,6 +6372,16 @@
         "shortName": "FinalizeMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.FinalizeMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "migratingVm"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.FinalizeMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4867,6 +6419,16 @@
       "clientMethod": {
         "shortName": "CreateCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCloneJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateCloneJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CloneJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4906,6 +6468,16 @@
         "shortName": "CreateCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateCloneJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CloneJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4944,6 +6516,24 @@
       "clientMethod": {
         "shortName": "CreateCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCloneJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.CloneJob",
+            "name": "cloneJob"
+          },
+          {
+            "type": "System.String",
+            "name": "cloneJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CloneJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -4982,6 +6572,24 @@
         "shortName": "CreateCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.CloneJob",
+            "name": "cloneJob"
+          },
+          {
+            "type": "System.String",
+            "name": "cloneJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CloneJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5019,6 +6627,24 @@
       "clientMethod": {
         "shortName": "CreateCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCloneJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.CloneJob",
+            "name": "cloneJob"
+          },
+          {
+            "type": "System.String",
+            "name": "cloneJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CloneJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5057,6 +6683,24 @@
         "shortName": "CreateCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.CloneJob",
+            "name": "cloneJob"
+          },
+          {
+            "type": "System.String",
+            "name": "cloneJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CloneJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5094,6 +6738,16 @@
       "clientMethod": {
         "shortName": "CancelCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCloneJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CancelCloneJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCloneJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5133,6 +6787,16 @@
         "shortName": "CancelCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CancelCloneJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCloneJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5171,6 +6835,16 @@
       "clientMethod": {
         "shortName": "CancelCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCloneJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCloneJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5209,6 +6883,16 @@
         "shortName": "CancelCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCloneJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5246,6 +6930,16 @@
       "clientMethod": {
         "shortName": "CancelCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCloneJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CloneJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCloneJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5284,6 +6978,16 @@
         "shortName": "CancelCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CloneJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCloneJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5321,6 +7025,16 @@
       "clientMethod": {
         "shortName": "ListCloneJobs",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCloneJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListCloneJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListCloneJobsResponse, Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5360,6 +7074,16 @@
         "shortName": "ListCloneJobsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCloneJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListCloneJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListCloneJobsResponse, Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5398,6 +7122,24 @@
       "clientMethod": {
         "shortName": "ListCloneJobs",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCloneJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListCloneJobsResponse, Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5436,6 +7178,24 @@
         "shortName": "ListCloneJobsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCloneJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListCloneJobsResponse, Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5473,6 +7233,24 @@
       "clientMethod": {
         "shortName": "ListCloneJobs",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCloneJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListCloneJobsResponse, Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5511,6 +7289,24 @@
         "shortName": "ListCloneJobsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCloneJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListCloneJobsResponse, Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5548,6 +7344,16 @@
       "clientMethod": {
         "shortName": "GetCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCloneJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetCloneJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.CloneJob",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5587,6 +7393,16 @@
         "shortName": "GetCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetCloneJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5625,6 +7441,16 @@
       "clientMethod": {
         "shortName": "GetCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCloneJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.CloneJob",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5663,6 +7489,16 @@
         "shortName": "GetCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5700,6 +7536,16 @@
       "clientMethod": {
         "shortName": "GetCloneJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCloneJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CloneJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.CloneJob",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5738,6 +7584,16 @@
         "shortName": "GetCloneJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCloneJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CloneJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.CloneJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5775,6 +7631,16 @@
       "clientMethod": {
         "shortName": "CreateCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCutoverJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateCutoverJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CutoverJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5814,6 +7680,16 @@
         "shortName": "CreateCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateCutoverJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CutoverJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5852,6 +7728,24 @@
       "clientMethod": {
         "shortName": "CreateCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCutoverJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.CutoverJob",
+            "name": "cutoverJob"
+          },
+          {
+            "type": "System.String",
+            "name": "cutoverJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CutoverJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5890,6 +7784,24 @@
         "shortName": "CreateCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.CutoverJob",
+            "name": "cutoverJob"
+          },
+          {
+            "type": "System.String",
+            "name": "cutoverJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CutoverJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5927,6 +7839,24 @@
       "clientMethod": {
         "shortName": "CreateCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCutoverJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.CutoverJob",
+            "name": "cutoverJob"
+          },
+          {
+            "type": "System.String",
+            "name": "cutoverJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CutoverJob, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -5965,6 +7895,24 @@
         "shortName": "CreateCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.CutoverJob",
+            "name": "cutoverJob"
+          },
+          {
+            "type": "System.String",
+            "name": "cutoverJobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CutoverJob, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6002,6 +7950,16 @@
       "clientMethod": {
         "shortName": "CancelCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCutoverJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CancelCutoverJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCutoverJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6041,6 +7999,16 @@
         "shortName": "CancelCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CancelCutoverJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCutoverJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6079,6 +8047,16 @@
       "clientMethod": {
         "shortName": "CancelCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCutoverJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCutoverJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6117,6 +8095,16 @@
         "shortName": "CancelCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCutoverJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6154,6 +8142,16 @@
       "clientMethod": {
         "shortName": "CancelCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCutoverJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CutoverJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCutoverJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6192,6 +8190,16 @@
         "shortName": "CancelCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CancelCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CutoverJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.CancelCutoverJobResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6229,6 +8237,16 @@
       "clientMethod": {
         "shortName": "ListCutoverJobs",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCutoverJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListCutoverJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListCutoverJobsResponse, Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6268,6 +8286,16 @@
         "shortName": "ListCutoverJobsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCutoverJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListCutoverJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListCutoverJobsResponse, Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6306,6 +8334,24 @@
       "clientMethod": {
         "shortName": "ListCutoverJobs",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCutoverJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListCutoverJobsResponse, Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6344,6 +8390,24 @@
         "shortName": "ListCutoverJobsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCutoverJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListCutoverJobsResponse, Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6381,6 +8445,24 @@
       "clientMethod": {
         "shortName": "ListCutoverJobs",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCutoverJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListCutoverJobsResponse, Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6419,6 +8501,24 @@
         "shortName": "ListCutoverJobsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListCutoverJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListCutoverJobsResponse, Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6456,6 +8556,16 @@
       "clientMethod": {
         "shortName": "GetCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCutoverJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetCutoverJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.CutoverJob",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6495,6 +8605,16 @@
         "shortName": "GetCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetCutoverJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6533,6 +8653,16 @@
       "clientMethod": {
         "shortName": "GetCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCutoverJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.CutoverJob",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6571,6 +8701,16 @@
         "shortName": "GetCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6608,6 +8748,16 @@
       "clientMethod": {
         "shortName": "GetCutoverJob",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCutoverJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CutoverJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.CutoverJob",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6646,6 +8796,16 @@
         "shortName": "GetCutoverJobAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetCutoverJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CutoverJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.CutoverJob>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6683,6 +8843,16 @@
       "clientMethod": {
         "shortName": "ListGroups",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListGroupsResponse, Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6722,6 +8892,16 @@
         "shortName": "ListGroupsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListGroupsResponse, Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6760,6 +8940,24 @@
       "clientMethod": {
         "shortName": "ListGroups",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListGroupsResponse, Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6798,6 +8996,24 @@
         "shortName": "ListGroupsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListGroupsResponse, Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6835,6 +9051,24 @@
       "clientMethod": {
         "shortName": "ListGroups",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListGroups",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListGroupsResponse, Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6873,6 +9107,24 @@
         "shortName": "ListGroupsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListGroupsResponse, Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6910,6 +9162,16 @@
       "clientMethod": {
         "shortName": "GetGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.Group",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6949,6 +9211,16 @@
         "shortName": "GetGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -6987,6 +9259,16 @@
       "clientMethod": {
         "shortName": "GetGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.Group",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7025,6 +9307,16 @@
         "shortName": "GetGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7062,6 +9354,16 @@
       "clientMethod": {
         "shortName": "GetGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.Group",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7100,6 +9402,16 @@
         "shortName": "GetGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.Group>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7137,6 +9449,16 @@
       "clientMethod": {
         "shortName": "CreateGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7176,6 +9498,16 @@
         "shortName": "CreateGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7214,6 +9546,24 @@
       "clientMethod": {
         "shortName": "CreateGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.Group",
+            "name": "group"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7252,6 +9602,24 @@
         "shortName": "CreateGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.Group",
+            "name": "group"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7289,6 +9657,24 @@
       "clientMethod": {
         "shortName": "CreateGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateGroup",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.Group",
+            "name": "group"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7327,6 +9713,24 @@
         "shortName": "CreateGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.Group",
+            "name": "group"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7364,6 +9768,16 @@
       "clientMethod": {
         "shortName": "UpdateGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7403,6 +9817,16 @@
         "shortName": "UpdateGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7441,6 +9865,20 @@
       "clientMethod": {
         "shortName": "UpdateGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.Group",
+            "name": "group"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7479,6 +9917,20 @@
         "shortName": "UpdateGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.Group",
+            "name": "group"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.Group, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7516,6 +9968,16 @@
       "clientMethod": {
         "shortName": "DeleteGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7555,6 +10017,16 @@
         "shortName": "DeleteGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7593,6 +10065,16 @@
       "clientMethod": {
         "shortName": "DeleteGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7631,6 +10113,16 @@
         "shortName": "DeleteGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7668,6 +10160,16 @@
       "clientMethod": {
         "shortName": "DeleteGroup",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7706,6 +10208,16 @@
         "shortName": "DeleteGroupAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7743,6 +10255,16 @@
       "clientMethod": {
         "shortName": "AddGroupMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.AddGroupMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.AddGroupMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.AddGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7782,6 +10304,16 @@
         "shortName": "AddGroupMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.AddGroupMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.AddGroupMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.AddGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7820,6 +10352,16 @@
       "clientMethod": {
         "shortName": "AddGroupMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.AddGroupMigration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.AddGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7858,6 +10400,16 @@
         "shortName": "AddGroupMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.AddGroupMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.AddGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7895,6 +10447,16 @@
       "clientMethod": {
         "shortName": "AddGroupMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.AddGroupMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GroupName",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.AddGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7933,6 +10495,16 @@
         "shortName": "AddGroupMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.AddGroupMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GroupName",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.AddGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -7970,6 +10542,16 @@
       "clientMethod": {
         "shortName": "RemoveGroupMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RemoveGroupMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.RemoveGroupMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RemoveGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8009,6 +10591,16 @@
         "shortName": "RemoveGroupMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RemoveGroupMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.RemoveGroupMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RemoveGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8047,6 +10639,16 @@
       "clientMethod": {
         "shortName": "RemoveGroupMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RemoveGroupMigration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RemoveGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8085,6 +10687,16 @@
         "shortName": "RemoveGroupMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RemoveGroupMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RemoveGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8122,6 +10734,16 @@
       "clientMethod": {
         "shortName": "RemoveGroupMigration",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RemoveGroupMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GroupName",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RemoveGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8160,6 +10782,16 @@
         "shortName": "RemoveGroupMigrationAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.RemoveGroupMigrationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GroupName",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.RemoveGroupMigrationResponse, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8197,6 +10829,16 @@
       "clientMethod": {
         "shortName": "ListTargetProjects",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListTargetProjects",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListTargetProjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListTargetProjectsResponse, Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8236,6 +10878,16 @@
         "shortName": "ListTargetProjectsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListTargetProjectsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListTargetProjectsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListTargetProjectsResponse, Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8274,6 +10926,24 @@
       "clientMethod": {
         "shortName": "ListTargetProjects",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListTargetProjects",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListTargetProjectsResponse, Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8312,6 +10982,24 @@
         "shortName": "ListTargetProjectsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListTargetProjectsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListTargetProjectsResponse, Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8349,6 +11037,24 @@
       "clientMethod": {
         "shortName": "ListTargetProjects",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListTargetProjects",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListTargetProjectsResponse, Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8387,6 +11093,24 @@
         "shortName": "ListTargetProjectsAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListTargetProjectsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListTargetProjectsResponse, Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8424,6 +11148,16 @@
       "clientMethod": {
         "shortName": "GetTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetTargetProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetTargetProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.TargetProject",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8463,6 +11197,16 @@
         "shortName": "GetTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetTargetProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8501,6 +11245,16 @@
       "clientMethod": {
         "shortName": "GetTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetTargetProject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.TargetProject",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8539,6 +11293,16 @@
         "shortName": "GetTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8576,6 +11340,16 @@
       "clientMethod": {
         "shortName": "GetTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetTargetProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.TargetProject",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8614,6 +11388,16 @@
         "shortName": "GetTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.TargetProject>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8651,6 +11435,16 @@
       "clientMethod": {
         "shortName": "CreateTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateTargetProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateTargetProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8690,6 +11484,16 @@
         "shortName": "CreateTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.CreateTargetProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8728,6 +11532,24 @@
       "clientMethod": {
         "shortName": "CreateTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateTargetProject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProject",
+            "name": "targetProject"
+          },
+          {
+            "type": "System.String",
+            "name": "targetProjectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8766,6 +11588,24 @@
         "shortName": "CreateTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProject",
+            "name": "targetProject"
+          },
+          {
+            "type": "System.String",
+            "name": "targetProjectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8803,6 +11643,24 @@
       "clientMethod": {
         "shortName": "CreateTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateTargetProject",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProject",
+            "name": "targetProject"
+          },
+          {
+            "type": "System.String",
+            "name": "targetProjectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8841,6 +11699,24 @@
         "shortName": "CreateTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.CreateTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProject",
+            "name": "targetProject"
+          },
+          {
+            "type": "System.String",
+            "name": "targetProjectId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8878,6 +11754,16 @@
       "clientMethod": {
         "shortName": "UpdateTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateTargetProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateTargetProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8917,6 +11803,16 @@
         "shortName": "UpdateTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.UpdateTargetProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8955,6 +11851,20 @@
       "clientMethod": {
         "shortName": "UpdateTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateTargetProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProject",
+            "name": "targetProject"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -8993,6 +11903,20 @@
         "shortName": "UpdateTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.UpdateTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProject",
+            "name": "targetProject"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VMMigration.V1.TargetProject, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9030,6 +11954,16 @@
       "clientMethod": {
         "shortName": "DeleteTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteTargetProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteTargetProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9069,6 +12003,16 @@
         "shortName": "DeleteTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.DeleteTargetProjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9107,6 +12051,16 @@
       "clientMethod": {
         "shortName": "DeleteTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteTargetProject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9145,6 +12099,16 @@
         "shortName": "DeleteTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9182,6 +12146,16 @@
       "clientMethod": {
         "shortName": "DeleteTargetProject",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteTargetProject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9220,6 +12194,16 @@
         "shortName": "DeleteTargetProjectAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.DeleteTargetProjectAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.TargetProjectName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VMMigration.V1.OperationMetadata>>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9257,6 +12241,16 @@
       "clientMethod": {
         "shortName": "ListReplicationCycles",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCycles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9296,6 +12290,16 @@
         "shortName": "ListReplicationCyclesAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCyclesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9334,6 +12338,24 @@
       "clientMethod": {
         "shortName": "ListReplicationCycles",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCycles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9372,6 +12394,24 @@
         "shortName": "ListReplicationCyclesAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCyclesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9409,6 +12449,24 @@
       "clientMethod": {
         "shortName": "ListReplicationCycles",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCycles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9447,6 +12505,24 @@
         "shortName": "ListReplicationCyclesAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.ListReplicationCyclesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.MigratingVmName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse, Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9484,6 +12560,16 @@
       "clientMethod": {
         "shortName": "GetReplicationCycle",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetReplicationCycleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.ReplicationCycle",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9523,6 +12609,16 @@
         "shortName": "GetReplicationCycleAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.GetReplicationCycleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9561,6 +12657,16 @@
       "clientMethod": {
         "shortName": "GetReplicationCycle",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.ReplicationCycle",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9599,6 +12705,16 @@
         "shortName": "GetReplicationCycleAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9636,6 +12752,16 @@
       "clientMethod": {
         "shortName": "GetReplicationCycle",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycle",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ReplicationCycleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.VMMigration.V1.ReplicationCycle",
         "client": {
           "shortName": "VmMigrationClient",
@@ -9674,6 +12800,16 @@
         "shortName": "GetReplicationCycleAsync",
         "fullName": "Google.Cloud.VMMigration.V1.VmMigrationClient.GetReplicationCycleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VMMigration.V1.ReplicationCycleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.VMMigration.V1.ReplicationCycle>",
         "client": {
           "shortName": "VmMigrationClient",

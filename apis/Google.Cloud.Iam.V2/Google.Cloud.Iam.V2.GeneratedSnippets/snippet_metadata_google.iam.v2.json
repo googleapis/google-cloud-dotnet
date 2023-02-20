@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListPolicies",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.ListPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V2.ListPoliciesResponse, Google.Cloud.Iam.V2.Policy>",
         "client": {
           "shortName": "PoliciesClient",
@@ -58,6 +68,16 @@
         "shortName": "ListPoliciesAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.ListPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V2.ListPoliciesResponse, Google.Cloud.Iam.V2.Policy>",
         "client": {
           "shortName": "PoliciesClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListPolicies",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V2.ListPoliciesResponse, Google.Cloud.Iam.V2.Policy>",
         "client": {
           "shortName": "PoliciesClient",
@@ -134,6 +172,24 @@
         "shortName": "ListPoliciesAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.ListPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V2.ListPoliciesResponse, Google.Cloud.Iam.V2.Policy>",
         "client": {
           "shortName": "PoliciesClient",
@@ -171,6 +227,16 @@
       "clientMethod": {
         "shortName": "GetPolicy",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.GetPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.GetPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V2.Policy",
         "client": {
           "shortName": "PoliciesClient",
@@ -210,6 +276,16 @@
         "shortName": "GetPolicyAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.GetPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.GetPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V2.Policy>",
         "client": {
           "shortName": "PoliciesClient",
@@ -248,6 +324,16 @@
       "clientMethod": {
         "shortName": "GetPolicy",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.GetPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V2.Policy",
         "client": {
           "shortName": "PoliciesClient",
@@ -286,6 +372,16 @@
         "shortName": "GetPolicyAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.GetPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V2.Policy>",
         "client": {
           "shortName": "PoliciesClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "CreatePolicy",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.CreatePolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.CreatePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
         "client": {
           "shortName": "PoliciesClient",
@@ -362,6 +468,16 @@
         "shortName": "CreatePolicyAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.CreatePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.CreatePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
         "client": {
           "shortName": "PoliciesClient",
@@ -400,6 +516,24 @@
       "clientMethod": {
         "shortName": "CreatePolicy",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.CreatePolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V2.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "System.String",
+            "name": "policyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
         "client": {
           "shortName": "PoliciesClient",
@@ -438,6 +572,24 @@
         "shortName": "CreatePolicyAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.CreatePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V2.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "System.String",
+            "name": "policyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
         "client": {
           "shortName": "PoliciesClient",
@@ -475,6 +627,16 @@
       "clientMethod": {
         "shortName": "UpdatePolicy",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.UpdatePolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.UpdatePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
         "client": {
           "shortName": "PoliciesClient",
@@ -514,6 +676,16 @@
         "shortName": "UpdatePolicyAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.UpdatePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.UpdatePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
         "client": {
           "shortName": "PoliciesClient",
@@ -552,6 +724,16 @@
       "clientMethod": {
         "shortName": "DeletePolicy",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.DeletePolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.DeletePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
         "client": {
           "shortName": "PoliciesClient",
@@ -591,6 +773,16 @@
         "shortName": "DeletePolicyAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.DeletePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V2.DeletePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
         "client": {
           "shortName": "PoliciesClient",
@@ -629,6 +821,16 @@
       "clientMethod": {
         "shortName": "DeletePolicy",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.DeletePolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>",
         "client": {
           "shortName": "PoliciesClient",
@@ -667,6 +869,16 @@
         "shortName": "DeletePolicyAsync",
         "fullName": "Google.Cloud.Iam.V2.PoliciesClient.DeletePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V2.Policy, Google.Cloud.Iam.V2.PolicyOperationMetadata>>",
         "client": {
           "shortName": "PoliciesClient",

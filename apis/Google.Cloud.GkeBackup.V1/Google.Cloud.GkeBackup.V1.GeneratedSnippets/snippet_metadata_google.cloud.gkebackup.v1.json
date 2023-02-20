@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupPlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlan",
+            "name": "backupPlan"
+          },
+          {
+            "type": "System.String",
+            "name": "backupPlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlan",
+            "name": "backupPlan"
+          },
+          {
+            "type": "System.String",
+            "name": "backupPlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlan",
+            "name": "backupPlan"
+          },
+          {
+            "type": "System.String",
+            "name": "backupPlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlan",
+            "name": "backupPlan"
+          },
+          {
+            "type": "System.String",
+            "name": "backupPlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ListBackupPlans",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlans",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListBackupPlansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlansResponse, Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -285,6 +387,16 @@
         "shortName": "ListBackupPlansAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListBackupPlansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlansResponse, Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -323,6 +435,24 @@
       "clientMethod": {
         "shortName": "ListBackupPlans",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlans",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlansResponse, Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -361,6 +491,24 @@
         "shortName": "ListBackupPlansAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlansResponse, Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -398,6 +546,24 @@
       "clientMethod": {
         "shortName": "ListBackupPlans",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlans",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlansResponse, Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -436,6 +602,24 @@
         "shortName": "ListBackupPlansAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupPlansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupPlansResponse, Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -473,6 +657,16 @@
       "clientMethod": {
         "shortName": "GetBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.BackupPlan",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -512,6 +706,16 @@
         "shortName": "GetBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -550,6 +754,16 @@
       "clientMethod": {
         "shortName": "GetBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.BackupPlan",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -588,6 +802,16 @@
         "shortName": "GetBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -625,6 +849,16 @@
       "clientMethod": {
         "shortName": "GetBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.BackupPlan",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -663,6 +897,16 @@
         "shortName": "GetBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.BackupPlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlan",
+            "name": "backupPlan"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlan",
+            "name": "backupPlan"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.BackupPlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteBackupPlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupPlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteBackupPlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupPlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteBackupPlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupPlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1118,6 +1480,16 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1156,6 +1528,24 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1194,6 +1584,24 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1231,6 +1639,24 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1269,6 +1695,24 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1306,6 +1750,16 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupsResponse, Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1345,6 +1799,16 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupsResponse, Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1383,6 +1847,24 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupsResponse, Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1421,6 +1903,24 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupsResponse, Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1458,6 +1958,24 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListBackupsResponse, Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1496,6 +2014,24 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupPlanName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListBackupsResponse, Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1533,6 +2069,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.Backup",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1572,6 +2118,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1610,6 +2166,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.Backup",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1648,6 +2214,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1685,6 +2261,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.Backup",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1723,6 +2309,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.Backup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1760,6 +2356,16 @@
       "clientMethod": {
         "shortName": "UpdateBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1799,6 +2405,16 @@
         "shortName": "UpdateBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1837,6 +2453,20 @@
       "clientMethod": {
         "shortName": "UpdateBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1875,6 +2505,20 @@
         "shortName": "UpdateBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Backup, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1912,6 +2556,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1951,6 +2605,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -1989,6 +2653,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2027,6 +2701,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2064,6 +2748,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2102,6 +2796,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2139,6 +2843,16 @@
       "clientMethod": {
         "shortName": "ListVolumeBackups",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListVolumeBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeBackupsResponse, Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2178,6 +2892,16 @@
         "shortName": "ListVolumeBackupsAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListVolumeBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeBackupsResponse, Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2216,6 +2940,24 @@
       "clientMethod": {
         "shortName": "ListVolumeBackups",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeBackups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeBackupsResponse, Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2254,6 +2996,24 @@
         "shortName": "ListVolumeBackupsAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeBackupsResponse, Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2291,6 +3051,24 @@
       "clientMethod": {
         "shortName": "ListVolumeBackups",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeBackupsResponse, Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2329,6 +3107,24 @@
         "shortName": "ListVolumeBackupsAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeBackupsResponse, Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2366,6 +3162,16 @@
       "clientMethod": {
         "shortName": "GetVolumeBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetVolumeBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.VolumeBackup",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2405,6 +3211,16 @@
         "shortName": "GetVolumeBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetVolumeBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2443,6 +3259,16 @@
       "clientMethod": {
         "shortName": "GetVolumeBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.VolumeBackup",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2481,6 +3307,16 @@
         "shortName": "GetVolumeBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2518,6 +3354,16 @@
       "clientMethod": {
         "shortName": "GetVolumeBackup",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.VolumeBackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.VolumeBackup",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2556,6 +3402,16 @@
         "shortName": "GetVolumeBackupAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.VolumeBackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.VolumeBackup>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2593,6 +3449,16 @@
       "clientMethod": {
         "shortName": "CreateRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestorePlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateRestorePlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2632,6 +3498,16 @@
         "shortName": "CreateRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateRestorePlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2670,6 +3546,24 @@
       "clientMethod": {
         "shortName": "CreateRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestorePlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlan",
+            "name": "restorePlan"
+          },
+          {
+            "type": "System.String",
+            "name": "restorePlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2708,6 +3602,24 @@
         "shortName": "CreateRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlan",
+            "name": "restorePlan"
+          },
+          {
+            "type": "System.String",
+            "name": "restorePlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2745,6 +3657,24 @@
       "clientMethod": {
         "shortName": "CreateRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestorePlan",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlan",
+            "name": "restorePlan"
+          },
+          {
+            "type": "System.String",
+            "name": "restorePlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2783,6 +3713,24 @@
         "shortName": "CreateRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlan",
+            "name": "restorePlan"
+          },
+          {
+            "type": "System.String",
+            "name": "restorePlanId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2820,6 +3768,16 @@
       "clientMethod": {
         "shortName": "ListRestorePlans",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlans",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListRestorePlansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlansResponse, Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2859,6 +3817,16 @@
         "shortName": "ListRestorePlansAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListRestorePlansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlansResponse, Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2897,6 +3865,24 @@
       "clientMethod": {
         "shortName": "ListRestorePlans",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlans",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlansResponse, Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2935,6 +3921,24 @@
         "shortName": "ListRestorePlansAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlansResponse, Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -2972,6 +3976,24 @@
       "clientMethod": {
         "shortName": "ListRestorePlans",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlans",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlansResponse, Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3010,6 +4032,24 @@
         "shortName": "ListRestorePlansAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestorePlansAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestorePlansResponse, Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3047,6 +4087,16 @@
       "clientMethod": {
         "shortName": "GetRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetRestorePlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.RestorePlan",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3086,6 +4136,16 @@
         "shortName": "GetRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetRestorePlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3124,6 +4184,16 @@
       "clientMethod": {
         "shortName": "GetRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.RestorePlan",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3162,6 +4232,16 @@
         "shortName": "GetRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3199,6 +4279,16 @@
       "clientMethod": {
         "shortName": "GetRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.RestorePlan",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3237,6 +4327,16 @@
         "shortName": "GetRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.RestorePlan>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3274,6 +4374,16 @@
       "clientMethod": {
         "shortName": "UpdateRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestorePlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateRestorePlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3313,6 +4423,16 @@
         "shortName": "UpdateRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateRestorePlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3351,6 +4471,20 @@
       "clientMethod": {
         "shortName": "UpdateRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestorePlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlan",
+            "name": "restorePlan"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3389,6 +4523,20 @@
         "shortName": "UpdateRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlan",
+            "name": "restorePlan"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.RestorePlan, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3426,6 +4574,16 @@
       "clientMethod": {
         "shortName": "DeleteRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestorePlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteRestorePlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3465,6 +4623,16 @@
         "shortName": "DeleteRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteRestorePlanRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3503,6 +4671,16 @@
       "clientMethod": {
         "shortName": "DeleteRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestorePlan",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3541,6 +4719,16 @@
         "shortName": "DeleteRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3578,6 +4766,16 @@
       "clientMethod": {
         "shortName": "DeleteRestorePlan",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestorePlan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3616,6 +4814,16 @@
         "shortName": "DeleteRestorePlanAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestorePlanAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3653,6 +4861,16 @@
       "clientMethod": {
         "shortName": "CreateRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3692,6 +4910,16 @@
         "shortName": "CreateRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.CreateRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3730,6 +4958,24 @@
       "clientMethod": {
         "shortName": "CreateRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Restore",
+            "name": "restore"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3768,6 +5014,24 @@
         "shortName": "CreateRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Restore",
+            "name": "restore"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3805,6 +5069,24 @@
       "clientMethod": {
         "shortName": "CreateRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Restore",
+            "name": "restore"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3843,6 +5125,24 @@
         "shortName": "CreateRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.CreateRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Restore",
+            "name": "restore"
+          },
+          {
+            "type": "System.String",
+            "name": "restoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3880,6 +5180,16 @@
       "clientMethod": {
         "shortName": "ListRestores",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListRestoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestoresResponse, Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3919,6 +5229,16 @@
         "shortName": "ListRestoresAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoresAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListRestoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestoresResponse, Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3957,6 +5277,24 @@
       "clientMethod": {
         "shortName": "ListRestores",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestores",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestoresResponse, Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -3995,6 +5333,24 @@
         "shortName": "ListRestoresAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoresAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestoresResponse, Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4032,6 +5388,24 @@
       "clientMethod": {
         "shortName": "ListRestores",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListRestoresResponse, Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4070,6 +5444,24 @@
         "shortName": "ListRestoresAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListRestoresAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestorePlanName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListRestoresResponse, Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4107,6 +5499,16 @@
       "clientMethod": {
         "shortName": "GetRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.Restore",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4146,6 +5548,16 @@
         "shortName": "GetRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4184,6 +5596,16 @@
       "clientMethod": {
         "shortName": "GetRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.Restore",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4222,6 +5644,16 @@
         "shortName": "GetRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4259,6 +5691,16 @@
       "clientMethod": {
         "shortName": "GetRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.Restore",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4297,6 +5739,16 @@
         "shortName": "GetRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.Restore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4334,6 +5786,16 @@
       "clientMethod": {
         "shortName": "UpdateRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4373,6 +5835,16 @@
         "shortName": "UpdateRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.UpdateRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4411,6 +5883,20 @@
       "clientMethod": {
         "shortName": "UpdateRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Restore",
+            "name": "restore"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4449,6 +5935,20 @@
         "shortName": "UpdateRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.UpdateRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.Restore",
+            "name": "restore"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeBackup.V1.Restore, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4486,6 +5986,16 @@
       "clientMethod": {
         "shortName": "DeleteRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4525,6 +6035,16 @@
         "shortName": "DeleteRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.DeleteRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4563,6 +6083,16 @@
       "clientMethod": {
         "shortName": "DeleteRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4601,6 +6131,16 @@
         "shortName": "DeleteRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4638,6 +6178,16 @@
       "clientMethod": {
         "shortName": "DeleteRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4676,6 +6226,16 @@
         "shortName": "DeleteRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.DeleteRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeBackup.V1.OperationMetadata>>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4713,6 +6273,16 @@
       "clientMethod": {
         "shortName": "ListVolumeRestores",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeRestores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListVolumeRestoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeRestoresResponse, Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4752,6 +6322,16 @@
         "shortName": "ListVolumeRestoresAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeRestoresAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.ListVolumeRestoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeRestoresResponse, Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4790,6 +6370,24 @@
       "clientMethod": {
         "shortName": "ListVolumeRestores",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeRestores",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeRestoresResponse, Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4828,6 +6426,24 @@
         "shortName": "ListVolumeRestoresAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeRestoresAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeRestoresResponse, Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4865,6 +6481,24 @@
       "clientMethod": {
         "shortName": "ListVolumeRestores",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeRestores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeRestoresResponse, Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4903,6 +6537,24 @@
         "shortName": "ListVolumeRestoresAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.ListVolumeRestoresAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.RestoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeBackup.V1.ListVolumeRestoresResponse, Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4940,6 +6592,16 @@
       "clientMethod": {
         "shortName": "GetVolumeRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetVolumeRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.VolumeRestore",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -4979,6 +6641,16 @@
         "shortName": "GetVolumeRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetVolumeRestoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -5017,6 +6689,16 @@
       "clientMethod": {
         "shortName": "GetVolumeRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeRestore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.VolumeRestore",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -5055,6 +6737,16 @@
         "shortName": "GetVolumeRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -5092,6 +6784,16 @@
       "clientMethod": {
         "shortName": "GetVolumeRestore",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeRestore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.VolumeRestoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeBackup.V1.VolumeRestore",
         "client": {
           "shortName": "BackupForGKEClient",
@@ -5130,6 +6832,16 @@
         "shortName": "GetVolumeRestoreAsync",
         "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetVolumeRestoreAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.VolumeRestoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.VolumeRestore>",
         "client": {
           "shortName": "BackupForGKEClient",

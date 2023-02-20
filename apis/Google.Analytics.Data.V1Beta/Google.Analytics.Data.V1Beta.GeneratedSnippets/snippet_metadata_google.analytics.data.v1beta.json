@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "RunReport",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunReport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.RunReportResponse",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -58,6 +68,16 @@
         "shortName": "RunReportAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.RunReportResponse>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "RunPivotReport",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunPivotReport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunPivotReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.RunPivotReportResponse",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -135,6 +165,16 @@
         "shortName": "RunPivotReportAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunPivotReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunPivotReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.RunPivotReportResponse>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "BatchRunReports",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.BatchRunReports",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.BatchRunReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.BatchRunReportsResponse",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -212,6 +262,16 @@
         "shortName": "BatchRunReportsAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.BatchRunReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.BatchRunReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.BatchRunReportsResponse>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -250,6 +310,16 @@
       "clientMethod": {
         "shortName": "BatchRunPivotReports",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.BatchRunPivotReports",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -289,6 +359,16 @@
         "shortName": "BatchRunPivotReportsAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.BatchRunPivotReportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -327,6 +407,16 @@
       "clientMethod": {
         "shortName": "GetMetadata",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadata",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.GetMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.Metadata",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -366,6 +456,16 @@
         "shortName": "GetMetadataAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.GetMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.Metadata>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -404,6 +504,16 @@
       "clientMethod": {
         "shortName": "GetMetadata",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadata",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.Metadata",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -442,6 +552,16 @@
         "shortName": "GetMetadataAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.Metadata>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -479,6 +599,16 @@
       "clientMethod": {
         "shortName": "GetMetadata",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadata",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.MetadataName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.Metadata",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -517,6 +647,16 @@
         "shortName": "GetMetadataAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.MetadataName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.Metadata>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -554,6 +694,16 @@
       "clientMethod": {
         "shortName": "RunRealtimeReport",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunRealtimeReport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunRealtimeReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.RunRealtimeReportResponse",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -593,6 +743,16 @@
         "shortName": "RunRealtimeReportAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunRealtimeReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunRealtimeReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.RunRealtimeReportResponse>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -631,6 +791,16 @@
       "clientMethod": {
         "shortName": "CheckCompatibility",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CheckCompatibility",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.CheckCompatibilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Analytics.Data.V1Beta.CheckCompatibilityResponse",
         "client": {
           "shortName": "BetaAnalyticsDataClient",
@@ -670,6 +840,16 @@
         "shortName": "CheckCompatibilityAsync",
         "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CheckCompatibilityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.CheckCompatibilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.CheckCompatibilityResponse>",
         "client": {
           "shortName": "BetaAnalyticsDataClient",

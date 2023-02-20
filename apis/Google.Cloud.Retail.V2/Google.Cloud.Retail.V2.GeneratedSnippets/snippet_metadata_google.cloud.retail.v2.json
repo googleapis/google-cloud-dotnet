@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListCatalogs",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ListCatalogs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListCatalogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListCatalogsResponse, Google.Cloud.Retail.V2.Catalog>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListCatalogsAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ListCatalogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListCatalogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListCatalogsResponse, Google.Cloud.Retail.V2.Catalog>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListCatalogs",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ListCatalogs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListCatalogsResponse, Google.Cloud.Retail.V2.Catalog>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListCatalogsAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ListCatalogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListCatalogsResponse, Google.Cloud.Retail.V2.Catalog>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListCatalogs",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ListCatalogs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListCatalogsResponse, Google.Cloud.Retail.V2.Catalog>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListCatalogsAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ListCatalogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListCatalogsResponse, Google.Cloud.Retail.V2.Catalog>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "UpdateCatalog",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCatalog",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateCatalogRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Catalog",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "UpdateCatalogAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCatalogAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateCatalogRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Catalog>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -323,6 +435,20 @@
       "clientMethod": {
         "shortName": "UpdateCatalog",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCatalog",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Catalog",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Catalog",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -361,6 +487,20 @@
         "shortName": "UpdateCatalogAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCatalogAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Catalog",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Catalog>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -398,6 +538,16 @@
       "clientMethod": {
         "shortName": "SetDefaultBranch",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.SetDefaultBranch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.SetDefaultBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CatalogServiceClient",
           "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
@@ -436,6 +586,16 @@
         "shortName": "SetDefaultBranchAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.SetDefaultBranchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.SetDefaultBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -474,6 +634,16 @@
       "clientMethod": {
         "shortName": "SetDefaultBranch",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.SetDefaultBranch",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CatalogServiceClient",
           "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
@@ -511,6 +681,16 @@
         "shortName": "SetDefaultBranchAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.SetDefaultBranchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -548,6 +728,16 @@
       "clientMethod": {
         "shortName": "SetDefaultBranch",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.SetDefaultBranch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CatalogServiceClient",
           "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient"
@@ -585,6 +775,16 @@
         "shortName": "SetDefaultBranchAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.SetDefaultBranchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -622,6 +822,16 @@
       "clientMethod": {
         "shortName": "GetDefaultBranch",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetDefaultBranch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetDefaultBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.GetDefaultBranchResponse",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -661,6 +871,16 @@
         "shortName": "GetDefaultBranchAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetDefaultBranchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetDefaultBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GetDefaultBranchResponse>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -699,6 +919,16 @@
       "clientMethod": {
         "shortName": "GetDefaultBranch",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetDefaultBranch",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.GetDefaultBranchResponse",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -737,6 +967,16 @@
         "shortName": "GetDefaultBranchAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetDefaultBranchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GetDefaultBranchResponse>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -774,6 +1014,16 @@
       "clientMethod": {
         "shortName": "GetDefaultBranch",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetDefaultBranch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.GetDefaultBranchResponse",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -812,6 +1062,16 @@
         "shortName": "GetDefaultBranchAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetDefaultBranchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GetDefaultBranchResponse>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -849,6 +1109,16 @@
       "clientMethod": {
         "shortName": "GetCompletionConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetCompletionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -888,6 +1158,16 @@
         "shortName": "GetCompletionConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetCompletionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -926,6 +1206,16 @@
       "clientMethod": {
         "shortName": "GetCompletionConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -964,6 +1254,16 @@
         "shortName": "GetCompletionConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1001,6 +1301,16 @@
       "clientMethod": {
         "shortName": "GetCompletionConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CompletionConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1039,6 +1349,16 @@
         "shortName": "GetCompletionConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetCompletionConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CompletionConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1076,6 +1396,16 @@
       "clientMethod": {
         "shortName": "UpdateCompletionConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCompletionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateCompletionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1115,6 +1445,16 @@
         "shortName": "UpdateCompletionConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCompletionConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateCompletionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1153,6 +1493,20 @@
       "clientMethod": {
         "shortName": "UpdateCompletionConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCompletionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CompletionConfig",
+            "name": "completionConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.CompletionConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1191,6 +1545,20 @@
         "shortName": "UpdateCompletionConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateCompletionConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CompletionConfig",
+            "name": "completionConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompletionConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1228,6 +1596,16 @@
       "clientMethod": {
         "shortName": "GetAttributesConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetAttributesConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1267,6 +1645,16 @@
         "shortName": "GetAttributesConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetAttributesConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1305,6 +1693,16 @@
       "clientMethod": {
         "shortName": "GetAttributesConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1343,6 +1741,16 @@
         "shortName": "GetAttributesConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1380,6 +1788,16 @@
       "clientMethod": {
         "shortName": "GetAttributesConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AttributesConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1418,6 +1836,16 @@
         "shortName": "GetAttributesConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.GetAttributesConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AttributesConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1455,6 +1883,16 @@
       "clientMethod": {
         "shortName": "UpdateAttributesConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateAttributesConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateAttributesConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1494,6 +1932,16 @@
         "shortName": "UpdateAttributesConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateAttributesConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateAttributesConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1532,6 +1980,20 @@
       "clientMethod": {
         "shortName": "UpdateAttributesConfig",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateAttributesConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AttributesConfig",
+            "name": "attributesConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1570,6 +2032,20 @@
         "shortName": "UpdateAttributesConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.UpdateAttributesConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AttributesConfig",
+            "name": "attributesConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1607,6 +2083,16 @@
       "clientMethod": {
         "shortName": "AddCatalogAttribute",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.AddCatalogAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AddCatalogAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1646,6 +2132,16 @@
         "shortName": "AddCatalogAttributeAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.AddCatalogAttributeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AddCatalogAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1684,6 +2180,16 @@
       "clientMethod": {
         "shortName": "RemoveCatalogAttribute",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.RemoveCatalogAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1723,6 +2229,16 @@
         "shortName": "RemoveCatalogAttributeAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.RemoveCatalogAttributeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RemoveCatalogAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1761,6 +2277,16 @@
       "clientMethod": {
         "shortName": "ReplaceCatalogAttribute",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ReplaceCatalogAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.AttributesConfig",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1800,6 +2326,16 @@
         "shortName": "ReplaceCatalogAttributeAsync",
         "fullName": "Google.Cloud.Retail.V2.CatalogServiceClient.ReplaceCatalogAttributeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ReplaceCatalogAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.AttributesConfig>",
         "client": {
           "shortName": "CatalogServiceClient",
@@ -1838,6 +2374,16 @@
       "clientMethod": {
         "shortName": "CompleteQuery",
         "fullName": "Google.Cloud.Retail.V2.CompletionServiceClient.CompleteQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CompleteQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.CompleteQueryResponse",
         "client": {
           "shortName": "CompletionServiceClient",
@@ -1877,6 +2423,16 @@
         "shortName": "CompleteQueryAsync",
         "fullName": "Google.Cloud.Retail.V2.CompletionServiceClient.CompleteQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CompleteQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.CompleteQueryResponse>",
         "client": {
           "shortName": "CompletionServiceClient",
@@ -1915,6 +2471,16 @@
       "clientMethod": {
         "shortName": "ImportCompletionData",
         "fullName": "Google.Cloud.Retail.V2.CompletionServiceClient.ImportCompletionData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ImportCompletionDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.ImportCompletionDataResponse, Google.Cloud.Retail.V2.ImportMetadata>",
         "client": {
           "shortName": "CompletionServiceClient",
@@ -1954,6 +2520,16 @@
         "shortName": "ImportCompletionDataAsync",
         "fullName": "Google.Cloud.Retail.V2.CompletionServiceClient.ImportCompletionDataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ImportCompletionDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.ImportCompletionDataResponse, Google.Cloud.Retail.V2.ImportMetadata>>",
         "client": {
           "shortName": "CompletionServiceClient",
@@ -1992,6 +2568,16 @@
       "clientMethod": {
         "shortName": "CreateControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CreateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Control",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2031,6 +2617,16 @@
         "shortName": "CreateControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CreateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2069,6 +2665,24 @@
       "clientMethod": {
         "shortName": "CreateControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Control",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2107,6 +2721,24 @@
         "shortName": "CreateControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2144,6 +2776,24 @@
       "clientMethod": {
         "shortName": "CreateControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Control",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2182,6 +2832,24 @@
         "shortName": "CreateControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.CreateControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Control",
+            "name": "control"
+          },
+          {
+            "type": "System.String",
+            "name": "controlId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2219,6 +2887,16 @@
       "clientMethod": {
         "shortName": "DeleteControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.DeleteControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ControlServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
@@ -2257,6 +2935,16 @@
         "shortName": "DeleteControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.DeleteControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2295,6 +2983,16 @@
       "clientMethod": {
         "shortName": "DeleteControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ControlServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
@@ -2332,6 +3030,16 @@
         "shortName": "DeleteControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2369,6 +3077,16 @@
       "clientMethod": {
         "shortName": "DeleteControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ControlServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ControlServiceClient"
@@ -2406,6 +3124,16 @@
         "shortName": "DeleteControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.DeleteControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2443,6 +3171,16 @@
       "clientMethod": {
         "shortName": "UpdateControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.UpdateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Control",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2482,6 +3220,16 @@
         "shortName": "UpdateControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.UpdateControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2520,6 +3268,20 @@
       "clientMethod": {
         "shortName": "UpdateControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.UpdateControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Control",
+            "name": "control"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Control",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2558,6 +3320,20 @@
         "shortName": "UpdateControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.UpdateControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Control",
+            "name": "control"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2595,6 +3371,16 @@
       "clientMethod": {
         "shortName": "GetControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Control",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2634,6 +3420,16 @@
         "shortName": "GetControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2672,6 +3468,16 @@
       "clientMethod": {
         "shortName": "GetControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Control",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2710,6 +3516,16 @@
         "shortName": "GetControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2747,6 +3563,16 @@
       "clientMethod": {
         "shortName": "GetControl",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Control",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2785,6 +3611,16 @@
         "shortName": "GetControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.GetControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ControlName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2822,6 +3658,16 @@
       "clientMethod": {
         "shortName": "ListControls",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2861,6 +3707,16 @@
         "shortName": "ListControlsAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControlsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListControlsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2899,6 +3755,24 @@
       "clientMethod": {
         "shortName": "ListControls",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2937,6 +3811,24 @@
         "shortName": "ListControlsAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControlsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -2974,6 +3866,24 @@
       "clientMethod": {
         "shortName": "ListControls",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControls",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -3012,6 +3922,24 @@
         "shortName": "ListControlsAsync",
         "fullName": "Google.Cloud.Retail.V2.ControlServiceClient.ListControlsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListControlsResponse, Google.Cloud.Retail.V2.Control>",
         "client": {
           "shortName": "ControlServiceClient",
@@ -3049,6 +3977,16 @@
       "clientMethod": {
         "shortName": "Predict",
         "fullName": "Google.Cloud.Retail.V2.PredictionServiceClient.Predict",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.PredictResponse",
         "client": {
           "shortName": "PredictionServiceClient",
@@ -3088,6 +4026,16 @@
         "shortName": "PredictAsync",
         "fullName": "Google.Cloud.Retail.V2.PredictionServiceClient.PredictAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.PredictResponse>",
         "client": {
           "shortName": "PredictionServiceClient",
@@ -3126,6 +4074,16 @@
       "clientMethod": {
         "shortName": "CreateProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.CreateProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CreateProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Product",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3165,6 +4123,16 @@
         "shortName": "CreateProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.CreateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CreateProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3203,6 +4171,24 @@
       "clientMethod": {
         "shortName": "CreateProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.CreateProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Product",
+            "name": "product"
+          },
+          {
+            "type": "System.String",
+            "name": "productId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Product",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3241,6 +4227,24 @@
         "shortName": "CreateProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.CreateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Product",
+            "name": "product"
+          },
+          {
+            "type": "System.String",
+            "name": "productId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3278,6 +4282,24 @@
       "clientMethod": {
         "shortName": "CreateProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.CreateProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Product",
+            "name": "product"
+          },
+          {
+            "type": "System.String",
+            "name": "productId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Product",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3316,6 +4338,24 @@
         "shortName": "CreateProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.CreateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Product",
+            "name": "product"
+          },
+          {
+            "type": "System.String",
+            "name": "productId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3353,6 +4393,16 @@
       "clientMethod": {
         "shortName": "GetProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.GetProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Product",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3392,6 +4442,16 @@
         "shortName": "GetProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.GetProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3430,6 +4490,16 @@
       "clientMethod": {
         "shortName": "GetProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.GetProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Product",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3468,6 +4538,16 @@
         "shortName": "GetProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.GetProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3505,6 +4585,16 @@
       "clientMethod": {
         "shortName": "GetProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.GetProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Product",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3543,6 +4633,16 @@
         "shortName": "GetProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.GetProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3580,6 +4680,16 @@
       "clientMethod": {
         "shortName": "ListProducts",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.ListProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListProductsResponse, Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3619,6 +4729,16 @@
         "shortName": "ListProductsAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.ListProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListProductsResponse, Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3657,6 +4777,24 @@
       "clientMethod": {
         "shortName": "ListProducts",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.ListProducts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListProductsResponse, Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3695,6 +4833,24 @@
         "shortName": "ListProductsAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.ListProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListProductsResponse, Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3732,6 +4888,24 @@
       "clientMethod": {
         "shortName": "ListProducts",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.ListProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListProductsResponse, Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3770,6 +4944,24 @@
         "shortName": "ListProductsAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.ListProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListProductsResponse, Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3807,6 +4999,16 @@
       "clientMethod": {
         "shortName": "UpdateProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.UpdateProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Product",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3846,6 +5048,16 @@
         "shortName": "UpdateProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.UpdateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3884,6 +5096,20 @@
       "clientMethod": {
         "shortName": "UpdateProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.UpdateProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Product",
+            "name": "product"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.Product",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3922,6 +5148,20 @@
         "shortName": "UpdateProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.UpdateProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Product",
+            "name": "product"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Product>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -3959,6 +5199,16 @@
       "clientMethod": {
         "shortName": "DeleteProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.DeleteProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.DeleteProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
@@ -3997,6 +5247,16 @@
         "shortName": "DeleteProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.DeleteProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.DeleteProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4035,6 +5295,16 @@
       "clientMethod": {
         "shortName": "DeleteProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.DeleteProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
@@ -4072,6 +5342,16 @@
         "shortName": "DeleteProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.DeleteProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4109,6 +5389,16 @@
       "clientMethod": {
         "shortName": "DeleteProduct",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.DeleteProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ProductServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
@@ -4146,6 +5436,16 @@
         "shortName": "DeleteProductAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.DeleteProductAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4183,6 +5483,16 @@
       "clientMethod": {
         "shortName": "ImportProducts",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.ImportProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ImportProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.ImportProductsResponse, Google.Cloud.Retail.V2.ImportMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4222,6 +5532,16 @@
         "shortName": "ImportProductsAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.ImportProductsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ImportProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.ImportProductsResponse, Google.Cloud.Retail.V2.ImportMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4260,6 +5580,16 @@
       "clientMethod": {
         "shortName": "SetInventory",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.SetInventory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.SetInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.SetInventoryResponse, Google.Cloud.Retail.V2.SetInventoryMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4299,6 +5629,16 @@
         "shortName": "SetInventoryAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.SetInventoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.SetInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.SetInventoryResponse, Google.Cloud.Retail.V2.SetInventoryMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4337,6 +5677,20 @@
       "clientMethod": {
         "shortName": "SetInventory",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.SetInventory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Product",
+            "name": "inventory"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "setMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.SetInventoryResponse, Google.Cloud.Retail.V2.SetInventoryMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4375,6 +5729,20 @@
         "shortName": "SetInventoryAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.SetInventoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Product",
+            "name": "inventory"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "setMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.SetInventoryResponse, Google.Cloud.Retail.V2.SetInventoryMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4412,6 +5780,16 @@
       "clientMethod": {
         "shortName": "AddFulfillmentPlaces",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddFulfillmentPlaces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse, Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4451,6 +5829,16 @@
         "shortName": "AddFulfillmentPlacesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddFulfillmentPlacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AddFulfillmentPlacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse, Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4489,6 +5877,16 @@
       "clientMethod": {
         "shortName": "AddFulfillmentPlaces",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddFulfillmentPlaces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse, Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4527,6 +5925,16 @@
         "shortName": "AddFulfillmentPlacesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddFulfillmentPlacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse, Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4564,6 +5972,16 @@
       "clientMethod": {
         "shortName": "AddFulfillmentPlaces",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddFulfillmentPlaces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse, Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4602,6 +6020,16 @@
         "shortName": "AddFulfillmentPlacesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddFulfillmentPlacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddFulfillmentPlacesResponse, Google.Cloud.Retail.V2.AddFulfillmentPlacesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4639,6 +6067,16 @@
       "clientMethod": {
         "shortName": "RemoveFulfillmentPlaces",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveFulfillmentPlaces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse, Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4678,6 +6116,16 @@
         "shortName": "RemoveFulfillmentPlacesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveFulfillmentPlacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RemoveFulfillmentPlacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse, Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4716,6 +6164,16 @@
       "clientMethod": {
         "shortName": "RemoveFulfillmentPlaces",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveFulfillmentPlaces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse, Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4754,6 +6212,16 @@
         "shortName": "RemoveFulfillmentPlacesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveFulfillmentPlacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse, Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4791,6 +6259,16 @@
       "clientMethod": {
         "shortName": "RemoveFulfillmentPlaces",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveFulfillmentPlaces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse, Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4829,6 +6307,16 @@
         "shortName": "RemoveFulfillmentPlacesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveFulfillmentPlacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveFulfillmentPlacesResponse, Google.Cloud.Retail.V2.RemoveFulfillmentPlacesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4866,6 +6354,16 @@
       "clientMethod": {
         "shortName": "AddLocalInventories",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AddLocalInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4905,6 +6403,16 @@
         "shortName": "AddLocalInventoriesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AddLocalInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4943,6 +6451,16 @@
       "clientMethod": {
         "shortName": "AddLocalInventories",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -4981,6 +6499,16 @@
         "shortName": "AddLocalInventoriesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5018,6 +6546,16 @@
       "clientMethod": {
         "shortName": "AddLocalInventories",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5056,6 +6594,16 @@
         "shortName": "AddLocalInventoriesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.AddLocalInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.AddLocalInventoriesResponse, Google.Cloud.Retail.V2.AddLocalInventoriesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5093,6 +6641,16 @@
       "clientMethod": {
         "shortName": "RemoveLocalInventories",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5132,6 +6690,16 @@
         "shortName": "RemoveLocalInventoriesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RemoveLocalInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5170,6 +6738,16 @@
       "clientMethod": {
         "shortName": "RemoveLocalInventories",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5208,6 +6786,16 @@
         "shortName": "RemoveLocalInventoriesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5245,6 +6833,16 @@
       "clientMethod": {
         "shortName": "RemoveLocalInventories",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5283,6 +6881,16 @@
         "shortName": "RemoveLocalInventoriesAsync",
         "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.RemoveLocalInventoriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ProductName",
+            "name": "product"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RemoveLocalInventoriesResponse, Google.Cloud.Retail.V2.RemoveLocalInventoriesMetadata>>",
         "client": {
           "shortName": "ProductServiceClient",
@@ -5320,6 +6928,16 @@
       "clientMethod": {
         "shortName": "Search",
         "fullName": "Google.Cloud.Retail.V2.SearchServiceClient.Search",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.SearchResponse, Google.Cloud.Retail.V2.SearchResponse+Types+SearchResult>",
         "client": {
           "shortName": "SearchServiceClient",
@@ -5359,6 +6977,16 @@
         "shortName": "SearchAsync",
         "fullName": "Google.Cloud.Retail.V2.SearchServiceClient.SearchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.SearchResponse, Google.Cloud.Retail.V2.SearchResponse+Types+SearchResult>",
         "client": {
           "shortName": "SearchServiceClient",
@@ -5397,6 +7025,16 @@
       "clientMethod": {
         "shortName": "CreateServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CreateServingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5436,6 +7074,16 @@
         "shortName": "CreateServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CreateServingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5474,6 +7122,24 @@
       "clientMethod": {
         "shortName": "CreateServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfig",
+            "name": "servingConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "servingConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5512,6 +7178,24 @@
         "shortName": "CreateServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfig",
+            "name": "servingConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "servingConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5549,6 +7233,24 @@
       "clientMethod": {
         "shortName": "CreateServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfig",
+            "name": "servingConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "servingConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5587,6 +7289,24 @@
         "shortName": "CreateServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.CreateServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfig",
+            "name": "servingConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "servingConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5624,6 +7344,16 @@
       "clientMethod": {
         "shortName": "DeleteServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.DeleteServingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ServingConfigServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
@@ -5662,6 +7392,16 @@
         "shortName": "DeleteServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.DeleteServingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5700,6 +7440,16 @@
       "clientMethod": {
         "shortName": "DeleteServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ServingConfigServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
@@ -5737,6 +7487,16 @@
         "shortName": "DeleteServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5774,6 +7534,16 @@
       "clientMethod": {
         "shortName": "DeleteServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ServingConfigServiceClient",
           "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient"
@@ -5811,6 +7581,16 @@
         "shortName": "DeleteServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.DeleteServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5848,6 +7628,16 @@
       "clientMethod": {
         "shortName": "UpdateServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.UpdateServingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateServingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5887,6 +7677,16 @@
         "shortName": "UpdateServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.UpdateServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateServingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5925,6 +7725,20 @@
       "clientMethod": {
         "shortName": "UpdateServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.UpdateServingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfig",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -5963,6 +7777,20 @@
         "shortName": "UpdateServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.UpdateServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfig",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6000,6 +7828,16 @@
       "clientMethod": {
         "shortName": "GetServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetServingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6039,6 +7877,16 @@
         "shortName": "GetServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetServingConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6077,6 +7925,16 @@
       "clientMethod": {
         "shortName": "GetServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6115,6 +7973,16 @@
         "shortName": "GetServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6152,6 +8020,16 @@
       "clientMethod": {
         "shortName": "GetServingConfig",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6190,6 +8068,16 @@
         "shortName": "GetServingConfigAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.GetServingConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6227,6 +8115,16 @@
       "clientMethod": {
         "shortName": "ListServingConfigs",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListServingConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6266,6 +8164,16 @@
         "shortName": "ListServingConfigsAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListServingConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6304,6 +8212,24 @@
       "clientMethod": {
         "shortName": "ListServingConfigs",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6342,6 +8268,24 @@
         "shortName": "ListServingConfigsAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6379,6 +8323,24 @@
       "clientMethod": {
         "shortName": "ListServingConfigs",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6417,6 +8379,24 @@
         "shortName": "ListServingConfigsAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.ListServingConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListServingConfigsResponse, Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6454,6 +8434,16 @@
       "clientMethod": {
         "shortName": "AddControl",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AddControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6493,6 +8483,16 @@
         "shortName": "AddControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.AddControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6531,6 +8531,16 @@
       "clientMethod": {
         "shortName": "AddControl",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6569,6 +8579,16 @@
         "shortName": "AddControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6606,6 +8626,16 @@
       "clientMethod": {
         "shortName": "AddControl",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfigName",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6644,6 +8674,16 @@
         "shortName": "AddControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.AddControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfigName",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6681,6 +8721,16 @@
       "clientMethod": {
         "shortName": "RemoveControl",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RemoveControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6720,6 +8770,16 @@
         "shortName": "RemoveControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RemoveControlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6758,6 +8818,16 @@
       "clientMethod": {
         "shortName": "RemoveControl",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6796,6 +8866,16 @@
         "shortName": "RemoveControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6833,6 +8913,16 @@
       "clientMethod": {
         "shortName": "RemoveControl",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfigName",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.ServingConfig",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6871,6 +8961,16 @@
         "shortName": "RemoveControlAsync",
         "fullName": "Google.Cloud.Retail.V2.ServingConfigServiceClient.RemoveControlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ServingConfigName",
+            "name": "servingConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ServingConfig>",
         "client": {
           "shortName": "ServingConfigServiceClient",
@@ -6908,6 +9008,16 @@
       "clientMethod": {
         "shortName": "WriteUserEvent",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.WriteUserEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.WriteUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Retail.V2.UserEvent",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -6947,6 +9057,16 @@
         "shortName": "WriteUserEventAsync",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.WriteUserEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.WriteUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.UserEvent>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -6985,6 +9105,16 @@
       "clientMethod": {
         "shortName": "CollectUserEvent",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.CollectUserEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CollectUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.HttpBody",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -7024,6 +9154,16 @@
         "shortName": "CollectUserEventAsync",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.CollectUserEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CollectUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -7062,6 +9202,16 @@
       "clientMethod": {
         "shortName": "PurgeUserEvents",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.PurgeUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PurgeUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.PurgeUserEventsResponse, Google.Cloud.Retail.V2.PurgeMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -7101,6 +9251,16 @@
         "shortName": "PurgeUserEventsAsync",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.PurgeUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PurgeUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.PurgeUserEventsResponse, Google.Cloud.Retail.V2.PurgeMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -7139,6 +9299,16 @@
       "clientMethod": {
         "shortName": "ImportUserEvents",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.ImportUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ImportUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.ImportUserEventsResponse, Google.Cloud.Retail.V2.ImportMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -7178,6 +9348,16 @@
         "shortName": "ImportUserEventsAsync",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.ImportUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ImportUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.ImportUserEventsResponse, Google.Cloud.Retail.V2.ImportMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -7216,6 +9396,16 @@
       "clientMethod": {
         "shortName": "RejoinUserEvents",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.RejoinUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RejoinUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.RejoinUserEventsResponse, Google.Cloud.Retail.V2.RejoinUserEventsMetadata>",
         "client": {
           "shortName": "UserEventServiceClient",
@@ -7255,6 +9445,16 @@
         "shortName": "RejoinUserEventsAsync",
         "fullName": "Google.Cloud.Retail.V2.UserEventServiceClient.RejoinUserEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.RejoinUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.RejoinUserEventsResponse, Google.Cloud.Retail.V2.RejoinUserEventsMetadata>>",
         "client": {
           "shortName": "UserEventServiceClient",

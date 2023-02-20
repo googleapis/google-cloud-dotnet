@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.ListClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ListClustersResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -58,6 +68,16 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.ListClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListClustersResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ListClustersResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -134,6 +168,20 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListClustersResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -171,6 +219,16 @@
       "clientMethod": {
         "shortName": "ListClusters",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ListClustersResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -209,6 +267,16 @@
         "shortName": "ListClustersAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListClustersResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -246,6 +314,16 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Cluster",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -285,6 +363,16 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Cluster>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -323,6 +411,24 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Cluster",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -361,6 +467,24 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Cluster>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -398,6 +522,16 @@
       "clientMethod": {
         "shortName": "GetCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Cluster",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -436,6 +570,16 @@
         "shortName": "GetClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Cluster>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -473,6 +617,16 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CreateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -512,6 +666,16 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CreateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -550,6 +714,24 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -588,6 +770,24 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -625,6 +825,20 @@
       "clientMethod": {
         "shortName": "CreateCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -663,6 +877,20 @@
         "shortName": "CreateClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -700,6 +928,16 @@
       "clientMethod": {
         "shortName": "UpdateCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.UpdateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -739,6 +977,16 @@
         "shortName": "UpdateClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.UpdateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -777,6 +1025,28 @@
       "clientMethod": {
         "shortName": "UpdateCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.ClusterUpdate",
+            "name": "update"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -815,6 +1085,28 @@
         "shortName": "UpdateClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.ClusterUpdate",
+            "name": "update"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -852,6 +1144,20 @@
       "clientMethod": {
         "shortName": "UpdateCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.ClusterUpdate",
+            "name": "update"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -890,6 +1196,20 @@
         "shortName": "UpdateClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.ClusterUpdate",
+            "name": "update"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -927,6 +1247,16 @@
       "clientMethod": {
         "shortName": "UpdateNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.UpdateNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -966,6 +1296,16 @@
         "shortName": "UpdateNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.UpdateNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1004,6 +1344,16 @@
       "clientMethod": {
         "shortName": "SetNodePoolAutoscaling",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNodePoolAutoscaling",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1043,6 +1393,16 @@
         "shortName": "SetNodePoolAutoscalingAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNodePoolAutoscalingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1081,6 +1441,16 @@
       "clientMethod": {
         "shortName": "SetLoggingService",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLoggingService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetLoggingServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1120,6 +1490,16 @@
         "shortName": "SetLoggingServiceAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLoggingServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetLoggingServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1158,6 +1538,28 @@
       "clientMethod": {
         "shortName": "SetLoggingService",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLoggingService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "loggingService"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1196,6 +1598,28 @@
         "shortName": "SetLoggingServiceAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLoggingServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "loggingService"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1233,6 +1657,20 @@
       "clientMethod": {
         "shortName": "SetLoggingService",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLoggingService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "loggingService"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1271,6 +1709,20 @@
         "shortName": "SetLoggingServiceAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLoggingServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "loggingService"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1308,6 +1760,16 @@
       "clientMethod": {
         "shortName": "SetMonitoringService",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMonitoringService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetMonitoringServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1347,6 +1809,16 @@
         "shortName": "SetMonitoringServiceAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMonitoringServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetMonitoringServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1385,6 +1857,28 @@
       "clientMethod": {
         "shortName": "SetMonitoringService",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMonitoringService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "monitoringService"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1423,6 +1917,28 @@
         "shortName": "SetMonitoringServiceAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMonitoringServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "monitoringService"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1460,6 +1976,20 @@
       "clientMethod": {
         "shortName": "SetMonitoringService",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMonitoringService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "monitoringService"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1498,6 +2028,20 @@
         "shortName": "SetMonitoringServiceAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMonitoringServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "monitoringService"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1535,6 +2079,16 @@
       "clientMethod": {
         "shortName": "SetAddonsConfig",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetAddonsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetAddonsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1574,6 +2128,16 @@
         "shortName": "SetAddonsConfigAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetAddonsConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetAddonsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1612,6 +2176,28 @@
       "clientMethod": {
         "shortName": "SetAddonsConfig",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetAddonsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.AddonsConfig",
+            "name": "addonsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1650,6 +2236,28 @@
         "shortName": "SetAddonsConfigAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetAddonsConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.AddonsConfig",
+            "name": "addonsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1687,6 +2295,20 @@
       "clientMethod": {
         "shortName": "SetAddonsConfig",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetAddonsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.AddonsConfig",
+            "name": "addonsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1725,6 +2347,20 @@
         "shortName": "SetAddonsConfigAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetAddonsConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.AddonsConfig",
+            "name": "addonsConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1762,6 +2398,16 @@
       "clientMethod": {
         "shortName": "SetLocations",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLocations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetLocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1801,6 +2447,16 @@
         "shortName": "SetLocationsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLocationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetLocationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1839,6 +2495,28 @@
       "clientMethod": {
         "shortName": "SetLocations",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLocations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "locations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1877,6 +2555,28 @@
         "shortName": "SetLocationsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLocationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "locations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1914,6 +2614,20 @@
       "clientMethod": {
         "shortName": "SetLocations",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLocations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "locations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1952,6 +2666,20 @@
         "shortName": "SetLocationsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLocationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "locations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -1989,6 +2717,16 @@
       "clientMethod": {
         "shortName": "UpdateMaster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateMaster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.UpdateMasterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2028,6 +2766,16 @@
         "shortName": "UpdateMasterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateMasterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.UpdateMasterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2066,6 +2814,28 @@
       "clientMethod": {
         "shortName": "UpdateMaster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateMaster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "masterVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2104,6 +2874,28 @@
         "shortName": "UpdateMasterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateMasterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "masterVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2141,6 +2933,20 @@
       "clientMethod": {
         "shortName": "UpdateMaster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateMaster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "masterVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2179,6 +2985,20 @@
         "shortName": "UpdateMasterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.UpdateMasterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "masterVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2216,6 +3036,16 @@
       "clientMethod": {
         "shortName": "SetMasterAuth",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMasterAuth",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetMasterAuthRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2255,6 +3085,16 @@
         "shortName": "SetMasterAuthAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMasterAuthAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetMasterAuthRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2293,6 +3133,16 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.DeleteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2332,6 +3182,16 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.DeleteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2370,6 +3230,24 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2408,6 +3286,24 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2445,6 +3341,16 @@
       "clientMethod": {
         "shortName": "DeleteCluster",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2483,6 +3389,16 @@
         "shortName": "DeleteClusterAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2520,6 +3436,16 @@
       "clientMethod": {
         "shortName": "ListOperations",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListOperations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.ListOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ListOperationsResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2559,6 +3485,16 @@
         "shortName": "ListOperationsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListOperationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.ListOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListOperationsResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2597,6 +3533,20 @@
       "clientMethod": {
         "shortName": "ListOperations",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListOperations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ListOperationsResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2635,6 +3585,20 @@
         "shortName": "ListOperationsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListOperationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListOperationsResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2672,6 +3636,16 @@
       "clientMethod": {
         "shortName": "GetOperation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetOperation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2711,6 +3685,16 @@
         "shortName": "GetOperationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2749,6 +3733,24 @@
       "clientMethod": {
         "shortName": "GetOperation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "operationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2787,6 +3789,24 @@
         "shortName": "GetOperationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "operationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2824,6 +3844,16 @@
       "clientMethod": {
         "shortName": "GetOperation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2862,6 +3892,16 @@
         "shortName": "GetOperationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2899,6 +3939,16 @@
       "clientMethod": {
         "shortName": "CancelOperation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CancelOperation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CancelOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ClusterManagerClient",
           "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
@@ -2937,6 +3987,16 @@
         "shortName": "CancelOperationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CancelOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CancelOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -2975,6 +4035,24 @@
       "clientMethod": {
         "shortName": "CancelOperation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CancelOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "operationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ClusterManagerClient",
           "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
@@ -3012,6 +4090,24 @@
         "shortName": "CancelOperationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CancelOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "operationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3049,6 +4145,16 @@
       "clientMethod": {
         "shortName": "CancelOperation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CancelOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ClusterManagerClient",
           "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
@@ -3086,6 +4192,16 @@
         "shortName": "CancelOperationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CancelOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3123,6 +4239,16 @@
       "clientMethod": {
         "shortName": "GetServerConfig",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ServerConfig",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3162,6 +4288,16 @@
         "shortName": "GetServerConfigAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ServerConfig>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3200,6 +4336,20 @@
       "clientMethod": {
         "shortName": "GetServerConfig",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetServerConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ServerConfig",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3238,6 +4388,20 @@
         "shortName": "GetServerConfigAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ServerConfig>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3275,6 +4439,16 @@
       "clientMethod": {
         "shortName": "GetServerConfig",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetServerConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ServerConfig",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3313,6 +4487,16 @@
         "shortName": "GetServerConfigAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ServerConfig>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3350,6 +4534,16 @@
       "clientMethod": {
         "shortName": "GetJSONWebKeys",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetJSONWebKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetJSONWebKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.GetJSONWebKeysResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3389,6 +4583,16 @@
         "shortName": "GetJSONWebKeysAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetJSONWebKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetJSONWebKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.GetJSONWebKeysResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3427,6 +4631,16 @@
       "clientMethod": {
         "shortName": "ListNodePools",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListNodePools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.ListNodePoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ListNodePoolsResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3466,6 +4680,16 @@
         "shortName": "ListNodePoolsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.ListNodePoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListNodePoolsResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3504,6 +4728,24 @@
       "clientMethod": {
         "shortName": "ListNodePools",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListNodePools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ListNodePoolsResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3542,6 +4784,24 @@
         "shortName": "ListNodePoolsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListNodePoolsResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3579,6 +4839,16 @@
       "clientMethod": {
         "shortName": "ListNodePools",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListNodePools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.ListNodePoolsResponse",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3617,6 +4887,16 @@
         "shortName": "ListNodePoolsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.ListNodePoolsResponse>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3654,6 +4934,16 @@
       "clientMethod": {
         "shortName": "GetNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.NodePool",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3693,6 +4983,16 @@
         "shortName": "GetNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.GetNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.NodePool>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3731,6 +5031,28 @@
       "clientMethod": {
         "shortName": "GetNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "nodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.NodePool",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3769,6 +5091,28 @@
         "shortName": "GetNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "nodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.NodePool>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3806,6 +5150,16 @@
       "clientMethod": {
         "shortName": "GetNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.NodePool",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3844,6 +5198,16 @@
         "shortName": "GetNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.GetNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.NodePool>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3881,6 +5245,16 @@
       "clientMethod": {
         "shortName": "CreateNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CreateNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3920,6 +5294,16 @@
         "shortName": "CreateNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CreateNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3958,6 +5342,28 @@
       "clientMethod": {
         "shortName": "CreateNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.NodePool",
+            "name": "nodePool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -3996,6 +5402,28 @@
         "shortName": "CreateNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.NodePool",
+            "name": "nodePool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4033,6 +5461,20 @@
       "clientMethod": {
         "shortName": "CreateNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.NodePool",
+            "name": "nodePool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4071,6 +5513,20 @@
         "shortName": "CreateNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CreateNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.NodePool",
+            "name": "nodePool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4108,6 +5564,16 @@
       "clientMethod": {
         "shortName": "DeleteNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.DeleteNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4147,6 +5613,16 @@
         "shortName": "DeleteNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.DeleteNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4185,6 +5661,28 @@
       "clientMethod": {
         "shortName": "DeleteNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "nodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4223,6 +5721,28 @@
         "shortName": "DeleteNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "nodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4260,6 +5780,16 @@
       "clientMethod": {
         "shortName": "DeleteNodePool",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4298,6 +5828,16 @@
         "shortName": "DeleteNodePoolAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.DeleteNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4335,6 +5875,16 @@
       "clientMethod": {
         "shortName": "CompleteNodePoolUpgrade",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteNodePoolUpgrade",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ClusterManagerClient",
           "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
@@ -4373,6 +5923,16 @@
         "shortName": "CompleteNodePoolUpgradeAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteNodePoolUpgradeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CompleteNodePoolUpgradeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4411,6 +5971,16 @@
       "clientMethod": {
         "shortName": "RollbackNodePoolUpgrade",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.RollbackNodePoolUpgrade",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4450,6 +6020,16 @@
         "shortName": "RollbackNodePoolUpgradeAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.RollbackNodePoolUpgradeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4488,6 +6068,28 @@
       "clientMethod": {
         "shortName": "RollbackNodePoolUpgrade",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.RollbackNodePoolUpgrade",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "nodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4526,6 +6128,28 @@
         "shortName": "RollbackNodePoolUpgradeAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.RollbackNodePoolUpgradeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.String",
+            "name": "nodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4563,6 +6187,16 @@
       "clientMethod": {
         "shortName": "RollbackNodePoolUpgrade",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.RollbackNodePoolUpgrade",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4601,6 +6235,16 @@
         "shortName": "RollbackNodePoolUpgradeAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.RollbackNodePoolUpgradeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4638,6 +6282,16 @@
       "clientMethod": {
         "shortName": "SetNodePoolManagement",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNodePoolManagement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetNodePoolManagementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4677,6 +6331,16 @@
         "shortName": "SetNodePoolManagementAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNodePoolManagementAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetNodePoolManagementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4715,6 +6379,16 @@
       "clientMethod": {
         "shortName": "SetLabels",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLabels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetLabelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4754,6 +6428,16 @@
         "shortName": "SetLabelsAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLabelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetLabelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4792,6 +6476,16 @@
       "clientMethod": {
         "shortName": "SetLegacyAbac",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLegacyAbac",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetLegacyAbacRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4831,6 +6525,16 @@
         "shortName": "SetLegacyAbacAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLegacyAbacAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetLegacyAbacRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4869,6 +6573,28 @@
       "clientMethod": {
         "shortName": "SetLegacyAbac",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLegacyAbac",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "enabled"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4907,6 +6633,28 @@
         "shortName": "SetLegacyAbacAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLegacyAbacAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "enabled"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4944,6 +6692,20 @@
       "clientMethod": {
         "shortName": "SetLegacyAbac",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLegacyAbac",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "enabled"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -4982,6 +6744,20 @@
         "shortName": "SetLegacyAbacAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetLegacyAbacAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "enabled"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5019,6 +6795,16 @@
       "clientMethod": {
         "shortName": "StartIPRotation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.StartIPRotation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.StartIPRotationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5058,6 +6844,16 @@
         "shortName": "StartIPRotationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.StartIPRotationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.StartIPRotationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5096,6 +6892,24 @@
       "clientMethod": {
         "shortName": "StartIPRotation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.StartIPRotation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5134,6 +6948,24 @@
         "shortName": "StartIPRotationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.StartIPRotationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5171,6 +7003,16 @@
       "clientMethod": {
         "shortName": "StartIPRotation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.StartIPRotation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5209,6 +7051,16 @@
         "shortName": "StartIPRotationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.StartIPRotationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5246,6 +7098,16 @@
       "clientMethod": {
         "shortName": "CompleteIPRotation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteIPRotation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CompleteIPRotationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5285,6 +7147,16 @@
         "shortName": "CompleteIPRotationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteIPRotationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CompleteIPRotationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5323,6 +7195,24 @@
       "clientMethod": {
         "shortName": "CompleteIPRotation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteIPRotation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5361,6 +7251,24 @@
         "shortName": "CompleteIPRotationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteIPRotationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5398,6 +7306,16 @@
       "clientMethod": {
         "shortName": "CompleteIPRotation",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteIPRotation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5436,6 +7354,16 @@
         "shortName": "CompleteIPRotationAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CompleteIPRotationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5473,6 +7401,16 @@
       "clientMethod": {
         "shortName": "SetNodePoolSize",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNodePoolSize",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetNodePoolSizeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5512,6 +7450,16 @@
         "shortName": "SetNodePoolSizeAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNodePoolSizeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetNodePoolSizeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5550,6 +7498,16 @@
       "clientMethod": {
         "shortName": "SetNetworkPolicy",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNetworkPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5589,6 +7547,16 @@
         "shortName": "SetNetworkPolicyAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetNetworkPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5627,6 +7595,28 @@
       "clientMethod": {
         "shortName": "SetNetworkPolicy",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNetworkPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5665,6 +7655,28 @@
         "shortName": "SetNetworkPolicyAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5702,6 +7714,20 @@
       "clientMethod": {
         "shortName": "SetNetworkPolicy",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNetworkPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5740,6 +7766,20 @@
         "shortName": "SetNetworkPolicyAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetNetworkPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.NetworkPolicy",
+            "name": "networkPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5777,6 +7817,16 @@
       "clientMethod": {
         "shortName": "SetMaintenancePolicy",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMaintenancePolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetMaintenancePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5816,6 +7866,16 @@
         "shortName": "SetMaintenancePolicyAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMaintenancePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.SetMaintenancePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5854,6 +7914,28 @@
       "clientMethod": {
         "shortName": "SetMaintenancePolicy",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMaintenancePolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.MaintenancePolicy",
+            "name": "maintenancePolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5892,6 +7974,28 @@
         "shortName": "SetMaintenancePolicyAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMaintenancePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.MaintenancePolicy",
+            "name": "maintenancePolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5929,6 +8033,20 @@
       "clientMethod": {
         "shortName": "SetMaintenancePolicy",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMaintenancePolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.MaintenancePolicy",
+            "name": "maintenancePolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Container.V1.Operation",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -5967,6 +8085,20 @@
         "shortName": "SetMaintenancePolicyAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.SetMaintenancePolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Container.V1.MaintenancePolicy",
+            "name": "maintenancePolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.Operation>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -6004,6 +8136,16 @@
       "clientMethod": {
         "shortName": "ListUsableSubnetworks",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListUsableSubnetworks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.ListUsableSubnetworksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Container.V1.ListUsableSubnetworksResponse, Google.Cloud.Container.V1.UsableSubnetwork>",
         "client": {
           "shortName": "ClusterManagerClient",
@@ -6043,6 +8185,16 @@
         "shortName": "ListUsableSubnetworksAsync",
         "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.ListUsableSubnetworksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.ListUsableSubnetworksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Container.V1.ListUsableSubnetworksResponse, Google.Cloud.Container.V1.UsableSubnetwork>",
         "client": {
           "shortName": "ClusterManagerClient",
