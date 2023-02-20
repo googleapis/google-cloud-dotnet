@@ -831,7 +831,7 @@
       "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
       "dependencies": {
         "Google.Api.Gax.Rest": "4.2.0",
-        "Google.Apis.Bigquery.v2": "1.57.0.2718"
+        "Google.Apis.Bigquery.v2": "1.60.0.2949"
       },
       "testDependencies": {
         "Google.Cloud.Storage.V1": "project",
@@ -3317,7 +3317,7 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.3.0",
-        "Google.Apis.CloudResourceManager.v1": "1.57.0.2677",
+        "Google.Apis.CloudResourceManager.v1": "1.60.0.2950",
         "Microsoft.Extensions.DependencyInjection": "6.0.0",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.4.1"
@@ -4060,11 +4060,11 @@
       "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
       "dependencies": {
         "Google.Api.Gax.Rest": "4.3.1",
-        "Google.Apis.Storage.v1": "1.59.0.2742"
+        "Google.Apis.Storage.v1": "1.60.0.2742"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.3.1",
-        "Google.Apis.Iam.v1": "1.57.0.2702",
+        "Google.Apis.Iam.v1": "1.60.0.2961",
         "Google.Cloud.PubSub.V1": "project"
       },
       "tags": [
@@ -4328,7 +4328,7 @@
       "description": "Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
       "dependencies": {
         "Google.Api.Gax.Rest": "4.3.0",
-        "Google.Apis.Translate.v2": "1.57.0.875"
+        "Google.Apis.Translate.v2": "1.60.0.875"
       },
       "tags": [
         "Translate",
