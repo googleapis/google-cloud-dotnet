@@ -1,0 +1,214 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.VideoIntelligence.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.videointelligence.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_sync",
+      "title": "AnnotateVideoRequestObject",
+      "description": "Snippet for AnnotateVideo",
+      "file": "VideoIntelligenceServiceClient.AnnotateVideoRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateVideo",
+        "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.AnnotateVideo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse, Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress>",
+        "client": {
+          "shortName": "VideoIntelligenceServiceClient",
+          "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateVideo",
+          "fullName": "google.cloud.videointelligence.v1.VideoIntelligenceService.AnnotateVideo",
+          "service": {
+            "shortName": "VideoIntelligenceService",
+            "fullName": "google.cloud.videointelligence.v1.VideoIntelligenceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 70,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 68,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_async",
+      "title": "AnnotateVideoRequestObjectAsync",
+      "description": "Snippet for AnnotateVideoAsync",
+      "file": "VideoIntelligenceServiceClient.AnnotateVideoRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateVideoAsync",
+        "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.AnnotateVideoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse, Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress>>",
+        "client": {
+          "shortName": "VideoIntelligenceServiceClient",
+          "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateVideo",
+          "fullName": "google.cloud.videointelligence.v1.VideoIntelligenceService.AnnotateVideo",
+          "service": {
+            "shortName": "VideoIntelligenceService",
+            "fullName": "google.cloud.videointelligence.v1.VideoIntelligenceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 71,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 69,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_sync_flattened",
+      "title": "AnnotateVideo",
+      "description": "Snippet for AnnotateVideo",
+      "file": "VideoIntelligenceServiceClient.AnnotateVideoSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateVideo",
+        "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.AnnotateVideo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "inputUri"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VideoIntelligence.V1.Feature>",
+            "name": "features"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse, Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress>",
+        "client": {
+          "shortName": "VideoIntelligenceServiceClient",
+          "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateVideo",
+          "fullName": "google.cloud.videointelligence.v1.VideoIntelligenceService.AnnotateVideo",
+          "service": {
+            "shortName": "VideoIntelligenceService",
+            "fullName": "google.cloud.videointelligence.v1.VideoIntelligenceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_async_flattened",
+      "title": "AnnotateVideoAsync",
+      "description": "Snippet for AnnotateVideoAsync",
+      "file": "VideoIntelligenceServiceClient.AnnotateVideoAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateVideoAsync",
+        "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.AnnotateVideoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "inputUri"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VideoIntelligence.V1.Feature>",
+            "name": "features"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse, Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress>>",
+        "client": {
+          "shortName": "VideoIntelligenceServiceClient",
+          "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateVideo",
+          "fullName": "google.cloud.videointelligence.v1.VideoIntelligenceService.AnnotateVideo",
+          "service": {
+            "shortName": "VideoIntelligenceService",
+            "fullName": "google.cloud.videointelligence.v1.VideoIntelligenceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

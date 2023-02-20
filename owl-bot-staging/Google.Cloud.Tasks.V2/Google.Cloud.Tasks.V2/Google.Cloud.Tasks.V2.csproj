@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+
+    <!-- TODO: Version defaults to 1.0.0-alpha01, edit as required -->
+    <Version>1.0.0-alpha01</Version>
+
+    <!-- TODO: NuGet packaging options -->
+    <!--
+      <Description>
+        TODO: Description of this library.
+      </Description>
+      <PackageTags>TODO;Library;Tags</PackageTags>
+      <Copyright>TODO: Copyright Statement</Copyright>
+      <Authors>TODO:Authors</Authors>
+      *** TODO: These Icon, License, Project, and repo settings *MUST* be checked and edited ***
+      *** The values given are just examples ***
+      <PackageIconUrl>TODO: https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+      <PackageLicenseUrl>TODO: https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+      <PackageProjectUrl>TODO: https://github.com/googleapis/google-cloud-dotnet</PackageProjectUrl>
+      <RepositoryType>TODO: git</RepositoryType>
+      <RepositoryUrl>TODO: https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
+    -->
+
+    <!-- TODO: Configure package signing -->
+    <!--
+      <AssemblyOriginatorKeyFile>...</AssemblyOriginatorKeyFile>
+      <SignAssembly>true</SignAssembly>
+      <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
+    -->
+
+    <!-- These items should not require editing -->
+    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Deterministic>true</Deterministic>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.3.1, 5.0.0)" />
+    <PackageReference Include="Grpc.Core" Version="[2.46.5, 3.0.0)" Condition="'$(TargetFramework)'=='net462'" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
