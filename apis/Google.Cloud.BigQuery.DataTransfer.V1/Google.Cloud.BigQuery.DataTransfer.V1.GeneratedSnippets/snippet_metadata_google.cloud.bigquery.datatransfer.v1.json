@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetDataSource",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetDataSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.DataSource",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "GetDataSourceAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetDataSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetDataSource",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetDataSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.DataSource",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -134,6 +164,16 @@
         "shortName": "GetDataSourceAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetDataSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetDataSource",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetDataSource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.DataSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.DataSource",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -209,6 +259,16 @@
         "shortName": "GetDataSourceAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetDataSourceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.DataSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "ListDataSources",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListDataSources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse, Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -285,6 +355,16 @@
         "shortName": "ListDataSourcesAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListDataSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse, Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -323,6 +403,24 @@
       "clientMethod": {
         "shortName": "ListDataSources",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListDataSources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse, Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -361,6 +459,24 @@
         "shortName": "ListDataSourcesAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListDataSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse, Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -398,6 +514,24 @@
       "clientMethod": {
         "shortName": "ListDataSources",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListDataSources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse, Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -436,6 +570,24 @@
         "shortName": "ListDataSourcesAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListDataSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse, Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -473,6 +625,24 @@
       "clientMethod": {
         "shortName": "ListDataSources",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListDataSources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse, Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -511,6 +681,24 @@
         "shortName": "ListDataSourcesAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListDataSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse, Google.Cloud.BigQuery.DataTransfer.V1.DataSource>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -548,6 +736,16 @@
       "clientMethod": {
         "shortName": "CreateTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CreateTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -587,6 +785,16 @@
         "shortName": "CreateTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CreateTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -625,6 +833,20 @@
       "clientMethod": {
         "shortName": "CreateTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CreateTransferConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
+            "name": "transferConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -663,6 +885,20 @@
         "shortName": "CreateTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CreateTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
+            "name": "transferConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -700,6 +936,20 @@
       "clientMethod": {
         "shortName": "CreateTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CreateTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
+            "name": "transferConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -738,6 +988,20 @@
         "shortName": "CreateTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CreateTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
+            "name": "transferConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -775,6 +1039,20 @@
       "clientMethod": {
         "shortName": "CreateTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CreateTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
+            "name": "transferConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -813,6 +1091,20 @@
         "shortName": "CreateTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CreateTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
+            "name": "transferConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -850,6 +1142,16 @@
       "clientMethod": {
         "shortName": "UpdateTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.UpdateTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -889,6 +1191,16 @@
         "shortName": "UpdateTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.UpdateTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -927,6 +1239,20 @@
       "clientMethod": {
         "shortName": "UpdateTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.UpdateTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
+            "name": "transferConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -965,6 +1291,20 @@
         "shortName": "UpdateTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.UpdateTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
+            "name": "transferConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1002,6 +1342,16 @@
       "clientMethod": {
         "shortName": "DeleteTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataTransferServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
@@ -1040,6 +1390,16 @@
         "shortName": "DeleteTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1078,6 +1438,16 @@
       "clientMethod": {
         "shortName": "DeleteTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataTransferServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
@@ -1115,6 +1485,16 @@
         "shortName": "DeleteTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1152,6 +1532,16 @@
       "clientMethod": {
         "shortName": "DeleteTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataTransferServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
@@ -1189,6 +1579,16 @@
         "shortName": "DeleteTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1226,6 +1626,16 @@
       "clientMethod": {
         "shortName": "GetTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1265,6 +1675,16 @@
         "shortName": "GetTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1303,6 +1723,16 @@
       "clientMethod": {
         "shortName": "GetTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1341,6 +1771,16 @@
         "shortName": "GetTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1378,6 +1818,16 @@
       "clientMethod": {
         "shortName": "GetTransferConfig",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1416,6 +1866,16 @@
         "shortName": "GetTransferConfigAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1453,6 +1913,16 @@
       "clientMethod": {
         "shortName": "ListTransferConfigs",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1492,6 +1962,16 @@
         "shortName": "ListTransferConfigsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1530,6 +2010,24 @@
       "clientMethod": {
         "shortName": "ListTransferConfigs",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1568,6 +2066,24 @@
         "shortName": "ListTransferConfigsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1605,6 +2121,24 @@
       "clientMethod": {
         "shortName": "ListTransferConfigs",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1643,6 +2177,24 @@
         "shortName": "ListTransferConfigsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1680,6 +2232,24 @@
       "clientMethod": {
         "shortName": "ListTransferConfigs",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1718,6 +2288,24 @@
         "shortName": "ListTransferConfigsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1755,6 +2343,16 @@
       "clientMethod": {
         "shortName": "ScheduleTransferRuns",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ScheduleTransferRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1794,6 +2392,16 @@
         "shortName": "ScheduleTransferRunsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ScheduleTransferRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1832,6 +2440,24 @@
       "clientMethod": {
         "shortName": "ScheduleTransferRuns",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ScheduleTransferRuns",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1870,6 +2496,24 @@
         "shortName": "ScheduleTransferRunsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ScheduleTransferRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1907,6 +2551,24 @@
       "clientMethod": {
         "shortName": "ScheduleTransferRuns",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ScheduleTransferRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1945,6 +2607,24 @@
         "shortName": "ScheduleTransferRunsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ScheduleTransferRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "startTime"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "endTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -1982,6 +2662,16 @@
       "clientMethod": {
         "shortName": "StartManualTransferRuns",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.StartManualTransferRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2021,6 +2711,16 @@
         "shortName": "StartManualTransferRunsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.StartManualTransferRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2059,6 +2759,16 @@
       "clientMethod": {
         "shortName": "GetTransferRun",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferRun",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2098,6 +2808,16 @@
         "shortName": "GetTransferRunAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2136,6 +2856,16 @@
       "clientMethod": {
         "shortName": "GetTransferRun",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferRun",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2174,6 +2904,16 @@
         "shortName": "GetTransferRunAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2211,6 +2951,16 @@
       "clientMethod": {
         "shortName": "GetTransferRun",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.RunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.TransferRun",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2249,6 +2999,16 @@
         "shortName": "GetTransferRunAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.GetTransferRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.RunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2286,6 +3046,16 @@
       "clientMethod": {
         "shortName": "DeleteTransferRun",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataTransferServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
@@ -2324,6 +3094,16 @@
         "shortName": "DeleteTransferRunAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2362,6 +3142,16 @@
       "clientMethod": {
         "shortName": "DeleteTransferRun",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataTransferServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
@@ -2399,6 +3189,16 @@
         "shortName": "DeleteTransferRunAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2436,6 +3236,16 @@
       "clientMethod": {
         "shortName": "DeleteTransferRun",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.RunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataTransferServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
@@ -2473,6 +3283,16 @@
         "shortName": "DeleteTransferRunAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.DeleteTransferRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.RunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2510,6 +3330,16 @@
       "clientMethod": {
         "shortName": "ListTransferRuns",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2549,6 +3379,16 @@
         "shortName": "ListTransferRunsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2587,6 +3427,24 @@
       "clientMethod": {
         "shortName": "ListTransferRuns",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferRuns",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2625,6 +3483,24 @@
         "shortName": "ListTransferRunsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2662,6 +3538,24 @@
       "clientMethod": {
         "shortName": "ListTransferRuns",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2700,6 +3594,24 @@
         "shortName": "ListTransferRunsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.TransferConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2737,6 +3649,16 @@
       "clientMethod": {
         "shortName": "ListTransferLogs",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferLogs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2776,6 +3698,16 @@
         "shortName": "ListTransferLogsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2814,6 +3746,24 @@
       "clientMethod": {
         "shortName": "ListTransferLogs",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferLogs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2852,6 +3802,24 @@
         "shortName": "ListTransferLogsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2889,6 +3857,24 @@
       "clientMethod": {
         "shortName": "ListTransferLogs",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferLogs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.RunName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2927,6 +3913,24 @@
         "shortName": "ListTransferLogsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.ListTransferLogsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.RunName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse, Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -2964,6 +3968,16 @@
       "clientMethod": {
         "shortName": "CheckValidCreds",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CheckValidCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -3003,6 +4017,16 @@
         "shortName": "CheckValidCredsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CheckValidCredsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -3041,6 +4065,16 @@
       "clientMethod": {
         "shortName": "CheckValidCreds",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CheckValidCreds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -3079,6 +4113,16 @@
         "shortName": "CheckValidCredsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CheckValidCredsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -3116,6 +4160,16 @@
       "clientMethod": {
         "shortName": "CheckValidCreds",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CheckValidCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.DataSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -3154,6 +4208,16 @@
         "shortName": "CheckValidCredsAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.CheckValidCredsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.DataSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse>",
         "client": {
           "shortName": "DataTransferServiceClient",
@@ -3191,6 +4255,16 @@
       "clientMethod": {
         "shortName": "EnrollDataSources",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.EnrollDataSources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataTransferServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
@@ -3229,6 +4303,16 @@
         "shortName": "EnrollDataSourcesAsync",
         "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.EnrollDataSourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataTransferServiceClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "SearchCatalog",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SearchCatalog",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.SearchCatalogRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.SearchCatalogResponse, Google.Cloud.DataCatalog.V1.SearchCatalogResult>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -58,6 +68,16 @@
         "shortName": "SearchCatalogAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SearchCatalogAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.SearchCatalogRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.SearchCatalogResponse, Google.Cloud.DataCatalog.V1.SearchCatalogResult>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -96,6 +116,28 @@
       "clientMethod": {
         "shortName": "SearchCatalog",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SearchCatalog",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.SearchCatalogRequest+Types+Scope",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.SearchCatalogResponse, Google.Cloud.DataCatalog.V1.SearchCatalogResult>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -134,6 +176,28 @@
         "shortName": "SearchCatalogAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SearchCatalogAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.SearchCatalogRequest+Types+Scope",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.SearchCatalogResponse, Google.Cloud.DataCatalog.V1.SearchCatalogResult>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -171,6 +235,16 @@
       "clientMethod": {
         "shortName": "CreateEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -210,6 +284,16 @@
         "shortName": "CreateEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -248,6 +332,24 @@
       "clientMethod": {
         "shortName": "CreateEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "entryGroupId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroup",
+            "name": "entryGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -286,6 +388,24 @@
         "shortName": "CreateEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "entryGroupId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroup",
+            "name": "entryGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -323,6 +443,24 @@
       "clientMethod": {
         "shortName": "CreateEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "entryGroupId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroup",
+            "name": "entryGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -361,6 +499,24 @@
         "shortName": "CreateEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "entryGroupId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroup",
+            "name": "entryGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -398,6 +554,16 @@
       "clientMethod": {
         "shortName": "GetEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetEntryGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -437,6 +603,16 @@
         "shortName": "GetEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetEntryGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -475,6 +651,16 @@
       "clientMethod": {
         "shortName": "GetEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -513,6 +699,16 @@
         "shortName": "GetEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -550,6 +746,16 @@
       "clientMethod": {
         "shortName": "GetEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -588,6 +794,16 @@
         "shortName": "GetEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -625,6 +841,20 @@
       "clientMethod": {
         "shortName": "GetEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "readMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -663,6 +893,20 @@
         "shortName": "GetEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "readMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -700,6 +944,20 @@
       "clientMethod": {
         "shortName": "GetEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "readMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -738,6 +996,20 @@
         "shortName": "GetEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "readMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -775,6 +1047,16 @@
       "clientMethod": {
         "shortName": "UpdateEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -814,6 +1096,16 @@
         "shortName": "UpdateEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "UpdateEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroup",
+            "name": "entryGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -890,6 +1192,16 @@
         "shortName": "UpdateEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroup",
+            "name": "entryGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -927,6 +1239,20 @@
       "clientMethod": {
         "shortName": "UpdateEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroup",
+            "name": "entryGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryGroup",
         "client": {
           "shortName": "DataCatalogClient",
@@ -965,6 +1291,20 @@
         "shortName": "UpdateEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroup",
+            "name": "entryGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1002,6 +1342,16 @@
       "clientMethod": {
         "shortName": "DeleteEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteEntryGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -1040,6 +1390,16 @@
         "shortName": "DeleteEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteEntryGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1078,6 +1438,16 @@
       "clientMethod": {
         "shortName": "DeleteEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -1115,6 +1485,16 @@
         "shortName": "DeleteEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1152,6 +1532,16 @@
       "clientMethod": {
         "shortName": "DeleteEntryGroup",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -1189,6 +1579,16 @@
         "shortName": "DeleteEntryGroupAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1226,6 +1626,16 @@
       "clientMethod": {
         "shortName": "ListEntryGroups",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntryGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListEntryGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse, Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1265,6 +1675,16 @@
         "shortName": "ListEntryGroupsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntryGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListEntryGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse, Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1303,6 +1723,24 @@
       "clientMethod": {
         "shortName": "ListEntryGroups",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntryGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse, Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1341,6 +1779,24 @@
         "shortName": "ListEntryGroupsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntryGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse, Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1378,6 +1834,24 @@
       "clientMethod": {
         "shortName": "ListEntryGroups",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntryGroups",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse, Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1416,6 +1890,24 @@
         "shortName": "ListEntryGroupsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntryGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse, Google.Cloud.DataCatalog.V1.EntryGroup>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1453,6 +1945,16 @@
       "clientMethod": {
         "shortName": "CreateEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1492,6 +1994,16 @@
         "shortName": "CreateEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1530,6 +2042,24 @@
       "clientMethod": {
         "shortName": "CreateEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "entryId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Entry",
+            "name": "entry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1568,6 +2098,24 @@
         "shortName": "CreateEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "entryId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Entry",
+            "name": "entry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1605,6 +2153,24 @@
       "clientMethod": {
         "shortName": "CreateEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "entryId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Entry",
+            "name": "entry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1643,6 +2209,24 @@
         "shortName": "CreateEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "entryId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Entry",
+            "name": "entry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1680,6 +2264,16 @@
       "clientMethod": {
         "shortName": "UpdateEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1719,6 +2313,16 @@
         "shortName": "UpdateEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1757,6 +2361,16 @@
       "clientMethod": {
         "shortName": "UpdateEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Entry",
+            "name": "entry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1795,6 +2409,16 @@
         "shortName": "UpdateEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Entry",
+            "name": "entry"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1832,6 +2456,20 @@
       "clientMethod": {
         "shortName": "UpdateEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Entry",
+            "name": "entry"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1870,6 +2508,20 @@
         "shortName": "UpdateEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Entry",
+            "name": "entry"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1907,6 +2559,16 @@
       "clientMethod": {
         "shortName": "DeleteEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -1945,6 +2607,16 @@
         "shortName": "DeleteEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -1983,6 +2655,16 @@
       "clientMethod": {
         "shortName": "DeleteEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -2020,6 +2702,16 @@
         "shortName": "DeleteEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2057,6 +2749,16 @@
       "clientMethod": {
         "shortName": "DeleteEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -2094,6 +2796,16 @@
         "shortName": "DeleteEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2131,6 +2843,16 @@
       "clientMethod": {
         "shortName": "GetEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2170,6 +2892,16 @@
         "shortName": "GetEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2208,6 +2940,16 @@
       "clientMethod": {
         "shortName": "GetEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2246,6 +2988,16 @@
         "shortName": "GetEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2283,6 +3035,16 @@
       "clientMethod": {
         "shortName": "GetEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2321,6 +3083,16 @@
         "shortName": "GetEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2358,6 +3130,16 @@
       "clientMethod": {
         "shortName": "LookupEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.LookupEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.LookupEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Entry",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2397,6 +3179,16 @@
         "shortName": "LookupEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.LookupEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.LookupEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2435,6 +3227,16 @@
       "clientMethod": {
         "shortName": "ListEntries",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListEntriesResponse, Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2474,6 +3276,16 @@
         "shortName": "ListEntriesAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListEntriesResponse, Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2512,6 +3324,24 @@
       "clientMethod": {
         "shortName": "ListEntries",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListEntriesResponse, Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2550,6 +3380,24 @@
         "shortName": "ListEntriesAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListEntriesResponse, Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2587,6 +3435,24 @@
       "clientMethod": {
         "shortName": "ListEntries",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListEntriesResponse, Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2625,6 +3491,24 @@
         "shortName": "ListEntriesAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListEntriesResponse, Google.Cloud.DataCatalog.V1.Entry>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2662,6 +3546,16 @@
       "clientMethod": {
         "shortName": "ModifyEntryOverview",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ModifyEntryOverview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.EntryOverview",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2701,6 +3595,16 @@
         "shortName": "ModifyEntryOverviewAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ModifyEntryOverviewAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.EntryOverview>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2739,6 +3643,16 @@
       "clientMethod": {
         "shortName": "ModifyEntryContacts",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ModifyEntryContacts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Contacts",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2778,6 +3692,16 @@
         "shortName": "ModifyEntryContactsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ModifyEntryContactsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Contacts>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2816,6 +3740,16 @@
       "clientMethod": {
         "shortName": "CreateTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2855,6 +3789,16 @@
         "shortName": "CreateTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2893,6 +3837,24 @@
       "clientMethod": {
         "shortName": "CreateTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tagTemplateId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplate",
+            "name": "tagTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2931,6 +3893,24 @@
         "shortName": "CreateTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tagTemplateId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplate",
+            "name": "tagTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -2968,6 +3948,24 @@
       "clientMethod": {
         "shortName": "CreateTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tagTemplateId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplate",
+            "name": "tagTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3006,6 +4004,24 @@
         "shortName": "CreateTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tagTemplateId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplate",
+            "name": "tagTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3043,6 +4059,16 @@
       "clientMethod": {
         "shortName": "GetTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetTagTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3082,6 +4108,16 @@
         "shortName": "GetTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetTagTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3120,6 +4156,16 @@
       "clientMethod": {
         "shortName": "GetTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetTagTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3158,6 +4204,16 @@
         "shortName": "GetTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3195,6 +4251,16 @@
       "clientMethod": {
         "shortName": "GetTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3233,6 +4299,16 @@
         "shortName": "GetTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3270,6 +4346,16 @@
       "clientMethod": {
         "shortName": "UpdateTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateTagTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3309,6 +4395,16 @@
         "shortName": "UpdateTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateTagTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3347,6 +4443,16 @@
       "clientMethod": {
         "shortName": "UpdateTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplate",
+            "name": "tagTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3385,6 +4491,16 @@
         "shortName": "UpdateTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplate",
+            "name": "tagTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3422,6 +4538,20 @@
       "clientMethod": {
         "shortName": "UpdateTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplate",
+            "name": "tagTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplate",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3460,6 +4590,20 @@
         "shortName": "UpdateTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplate",
+            "name": "tagTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplate>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3497,6 +4641,16 @@
       "clientMethod": {
         "shortName": "DeleteTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteTagTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -3535,6 +4689,16 @@
         "shortName": "DeleteTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteTagTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3573,6 +4737,20 @@
       "clientMethod": {
         "shortName": "DeleteTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -3610,6 +4788,20 @@
         "shortName": "DeleteTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3647,6 +4839,20 @@
       "clientMethod": {
         "shortName": "DeleteTagTemplate",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -3684,6 +4890,20 @@
         "shortName": "DeleteTagTemplateAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3721,6 +4941,16 @@
       "clientMethod": {
         "shortName": "CreateTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateTagTemplateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3760,6 +4990,16 @@
         "shortName": "CreateTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateTagTemplateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3798,6 +5038,24 @@
       "clientMethod": {
         "shortName": "CreateTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateField",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tagTemplateFieldId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3836,6 +5094,24 @@
         "shortName": "CreateTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tagTemplateFieldId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3873,6 +5149,24 @@
       "clientMethod": {
         "shortName": "CreateTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tagTemplateFieldId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3911,6 +5205,24 @@
         "shortName": "CreateTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "tagTemplateFieldId"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3948,6 +5260,16 @@
       "clientMethod": {
         "shortName": "UpdateTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -3987,6 +5309,16 @@
         "shortName": "UpdateTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4025,6 +5357,20 @@
       "clientMethod": {
         "shortName": "UpdateTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateField",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4063,6 +5409,20 @@
         "shortName": "UpdateTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4100,6 +5460,20 @@
       "clientMethod": {
         "shortName": "UpdateTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4138,6 +5512,20 @@
         "shortName": "UpdateTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4175,6 +5563,24 @@
       "clientMethod": {
         "shortName": "UpdateTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateField",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4213,6 +5619,24 @@
         "shortName": "UpdateTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4250,6 +5674,24 @@
       "clientMethod": {
         "shortName": "UpdateTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4288,6 +5730,24 @@
         "shortName": "UpdateTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateField",
+            "name": "tagTemplateField"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4325,6 +5785,16 @@
       "clientMethod": {
         "shortName": "RenameTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4364,6 +5834,16 @@
         "shortName": "RenameTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4402,6 +5882,20 @@
       "clientMethod": {
         "shortName": "RenameTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateField",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "newTagTemplateFieldId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4440,6 +5934,20 @@
         "shortName": "RenameTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "newTagTemplateFieldId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4477,6 +5985,20 @@
       "clientMethod": {
         "shortName": "RenameTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "newTagTemplateFieldId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4515,6 +6037,20 @@
         "shortName": "RenameTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "newTagTemplateFieldId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4552,6 +6088,16 @@
       "clientMethod": {
         "shortName": "RenameTagTemplateFieldEnumValue",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldEnumValue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4591,6 +6137,16 @@
         "shortName": "RenameTagTemplateFieldEnumValueAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldEnumValueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4629,6 +6185,20 @@
       "clientMethod": {
         "shortName": "RenameTagTemplateFieldEnumValue",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldEnumValue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "newEnumValueDisplayName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4667,6 +6237,20 @@
         "shortName": "RenameTagTemplateFieldEnumValueAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldEnumValueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "newEnumValueDisplayName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4704,6 +6288,20 @@
       "clientMethod": {
         "shortName": "RenameTagTemplateFieldEnumValue",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldEnumValue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldEnumValueName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "newEnumValueDisplayName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.TagTemplateField",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4742,6 +6340,20 @@
         "shortName": "RenameTagTemplateFieldEnumValueAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.RenameTagTemplateFieldEnumValueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldEnumValueName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "newEnumValueDisplayName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.TagTemplateField>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4779,6 +6391,16 @@
       "clientMethod": {
         "shortName": "DeleteTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -4817,6 +6439,16 @@
         "shortName": "DeleteTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4855,6 +6487,20 @@
       "clientMethod": {
         "shortName": "DeleteTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateField",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -4892,6 +6538,20 @@
         "shortName": "DeleteTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -4929,6 +6589,20 @@
       "clientMethod": {
         "shortName": "DeleteTagTemplateField",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -4966,6 +6640,20 @@
         "shortName": "DeleteTagTemplateFieldAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagTemplateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TagTemplateFieldName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5003,6 +6691,16 @@
       "clientMethod": {
         "shortName": "CreateTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Tag",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5042,6 +6740,16 @@
         "shortName": "CreateTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5080,6 +6788,20 @@
       "clientMethod": {
         "shortName": "CreateTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTag",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Tag",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5118,6 +6840,20 @@
         "shortName": "CreateTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5155,6 +6891,20 @@
       "clientMethod": {
         "shortName": "CreateTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Tag",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5193,6 +6943,20 @@
         "shortName": "CreateTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.CreateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5230,6 +6994,16 @@
       "clientMethod": {
         "shortName": "UpdateTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Tag",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5269,6 +7043,16 @@
         "shortName": "UpdateTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5307,6 +7091,16 @@
       "clientMethod": {
         "shortName": "UpdateTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Tag",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5345,6 +7139,16 @@
         "shortName": "UpdateTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5382,6 +7186,20 @@
       "clientMethod": {
         "shortName": "UpdateTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Tag",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5420,6 +7238,20 @@
         "shortName": "UpdateTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UpdateTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Tag",
+            "name": "tag"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5457,6 +7289,16 @@
       "clientMethod": {
         "shortName": "DeleteTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -5495,6 +7337,16 @@
         "shortName": "DeleteTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5533,6 +7385,16 @@
       "clientMethod": {
         "shortName": "DeleteTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTag",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -5570,6 +7432,16 @@
         "shortName": "DeleteTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5607,6 +7479,16 @@
       "clientMethod": {
         "shortName": "DeleteTag",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataCatalogClient",
           "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
@@ -5644,6 +7526,16 @@
         "shortName": "DeleteTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.DeleteTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5681,6 +7573,16 @@
       "clientMethod": {
         "shortName": "ListTags",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListTags",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListTagsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListTagsResponse, Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5720,6 +7622,16 @@
         "shortName": "ListTagsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListTagsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListTagsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListTagsResponse, Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5758,6 +7670,24 @@
       "clientMethod": {
         "shortName": "ListTags",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListTags",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListTagsResponse, Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5796,6 +7726,24 @@
         "shortName": "ListTagsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListTagsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListTagsResponse, Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5833,6 +7781,24 @@
       "clientMethod": {
         "shortName": "ListTags",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListTags",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListTagsResponse, Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5871,6 +7837,24 @@
         "shortName": "ListTagsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ListTagsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListTagsResponse, Google.Cloud.DataCatalog.V1.Tag>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5908,6 +7892,16 @@
       "clientMethod": {
         "shortName": "StarEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.StarEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.StarEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.StarEntryResponse",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5947,6 +7941,16 @@
         "shortName": "StarEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.StarEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.StarEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.StarEntryResponse>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -5985,6 +7989,16 @@
       "clientMethod": {
         "shortName": "StarEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.StarEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.StarEntryResponse",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6023,6 +8037,16 @@
         "shortName": "StarEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.StarEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.StarEntryResponse>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6060,6 +8084,16 @@
       "clientMethod": {
         "shortName": "StarEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.StarEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.StarEntryResponse",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6098,6 +8132,16 @@
         "shortName": "StarEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.StarEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.StarEntryResponse>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6135,6 +8179,16 @@
       "clientMethod": {
         "shortName": "UnstarEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UnstarEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UnstarEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.UnstarEntryResponse",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6174,6 +8228,16 @@
         "shortName": "UnstarEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UnstarEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UnstarEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.UnstarEntryResponse>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6212,6 +8276,16 @@
       "clientMethod": {
         "shortName": "UnstarEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UnstarEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.UnstarEntryResponse",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6250,6 +8324,16 @@
         "shortName": "UnstarEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UnstarEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.UnstarEntryResponse>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6287,6 +8371,16 @@
       "clientMethod": {
         "shortName": "UnstarEntry",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UnstarEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.UnstarEntryResponse",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6325,6 +8419,16 @@
         "shortName": "UnstarEntryAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.UnstarEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.EntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.UnstarEntryResponse>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6362,6 +8466,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6401,6 +8515,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6439,6 +8563,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6477,6 +8615,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6514,6 +8666,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6552,6 +8718,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6589,6 +8769,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6628,6 +8818,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6666,6 +8866,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6704,6 +8914,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6741,6 +8961,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6779,6 +9009,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6816,6 +9056,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6855,6 +9105,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "DataCatalogClient",
@@ -6893,6 +9153,16 @@
       "clientMethod": {
         "shortName": "CreateTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreateTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -6932,6 +9202,16 @@
         "shortName": "CreateTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreateTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreateTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -6970,6 +9250,20 @@
       "clientMethod": {
         "shortName": "CreateTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreateTaxonomy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Taxonomy",
+            "name": "taxonomy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7008,6 +9302,20 @@
         "shortName": "CreateTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreateTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Taxonomy",
+            "name": "taxonomy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7045,6 +9353,20 @@
       "clientMethod": {
         "shortName": "CreateTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreateTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Taxonomy",
+            "name": "taxonomy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7083,6 +9405,20 @@
         "shortName": "CreateTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreateTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Taxonomy",
+            "name": "taxonomy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7120,6 +9456,16 @@
       "clientMethod": {
         "shortName": "DeleteTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeleteTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PolicyTagManagerClient",
           "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient"
@@ -7158,6 +9504,16 @@
         "shortName": "DeleteTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeleteTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeleteTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7196,6 +9552,16 @@
       "clientMethod": {
         "shortName": "DeleteTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeleteTaxonomy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PolicyTagManagerClient",
           "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient"
@@ -7233,6 +9599,16 @@
         "shortName": "DeleteTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeleteTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7270,6 +9646,16 @@
       "clientMethod": {
         "shortName": "DeleteTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeleteTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TaxonomyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PolicyTagManagerClient",
           "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient"
@@ -7307,6 +9693,16 @@
         "shortName": "DeleteTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeleteTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TaxonomyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7344,6 +9740,16 @@
       "clientMethod": {
         "shortName": "UpdateTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.UpdateTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7383,6 +9789,16 @@
         "shortName": "UpdateTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.UpdateTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdateTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7421,6 +9837,16 @@
       "clientMethod": {
         "shortName": "UpdateTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.UpdateTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Taxonomy",
+            "name": "taxonomy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7459,6 +9885,16 @@
         "shortName": "UpdateTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.UpdateTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.Taxonomy",
+            "name": "taxonomy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7496,6 +9932,16 @@
       "clientMethod": {
         "shortName": "ListTaxonomies",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListTaxonomies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListTaxonomiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse, Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7535,6 +9981,16 @@
         "shortName": "ListTaxonomiesAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListTaxonomiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListTaxonomiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse, Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7573,6 +10029,24 @@
       "clientMethod": {
         "shortName": "ListTaxonomies",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListTaxonomies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse, Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7611,6 +10085,24 @@
         "shortName": "ListTaxonomiesAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListTaxonomiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse, Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7648,6 +10140,24 @@
       "clientMethod": {
         "shortName": "ListTaxonomies",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListTaxonomies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse, Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7686,6 +10196,24 @@
         "shortName": "ListTaxonomiesAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListTaxonomiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListTaxonomiesResponse, Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7723,6 +10251,16 @@
       "clientMethod": {
         "shortName": "GetTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7762,6 +10300,16 @@
         "shortName": "GetTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7800,6 +10348,16 @@
       "clientMethod": {
         "shortName": "GetTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetTaxonomy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7838,6 +10396,16 @@
         "shortName": "GetTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7875,6 +10443,16 @@
       "clientMethod": {
         "shortName": "GetTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TaxonomyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7913,6 +10491,16 @@
         "shortName": "GetTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TaxonomyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7950,6 +10538,16 @@
       "clientMethod": {
         "shortName": "CreatePolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreatePolicyTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreatePolicyTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.PolicyTag",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -7989,6 +10587,16 @@
         "shortName": "CreatePolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreatePolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.CreatePolicyTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8027,6 +10635,20 @@
       "clientMethod": {
         "shortName": "CreatePolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreatePolicyTag",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTag",
+            "name": "policyTag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.PolicyTag",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8065,6 +10687,20 @@
         "shortName": "CreatePolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreatePolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTag",
+            "name": "policyTag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8102,6 +10738,20 @@
       "clientMethod": {
         "shortName": "CreatePolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreatePolicyTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TaxonomyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTag",
+            "name": "policyTag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.PolicyTag",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8140,6 +10790,20 @@
         "shortName": "CreatePolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.CreatePolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TaxonomyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTag",
+            "name": "policyTag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8177,6 +10841,16 @@
       "clientMethod": {
         "shortName": "DeletePolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeletePolicyTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeletePolicyTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PolicyTagManagerClient",
           "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient"
@@ -8215,6 +10889,16 @@
         "shortName": "DeletePolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeletePolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.DeletePolicyTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8253,6 +10937,16 @@
       "clientMethod": {
         "shortName": "DeletePolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeletePolicyTag",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PolicyTagManagerClient",
           "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient"
@@ -8290,6 +10984,16 @@
         "shortName": "DeletePolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeletePolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8327,6 +11031,16 @@
       "clientMethod": {
         "shortName": "DeletePolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeletePolicyTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTagName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "PolicyTagManagerClient",
           "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient"
@@ -8364,6 +11078,16 @@
         "shortName": "DeletePolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.DeletePolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTagName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8401,6 +11125,16 @@
       "clientMethod": {
         "shortName": "UpdatePolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.UpdatePolicyTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdatePolicyTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.PolicyTag",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8440,6 +11174,16 @@
         "shortName": "UpdatePolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.UpdatePolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.UpdatePolicyTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8478,6 +11222,16 @@
       "clientMethod": {
         "shortName": "UpdatePolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.UpdatePolicyTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTag",
+            "name": "policyTag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.PolicyTag",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8516,6 +11270,16 @@
         "shortName": "UpdatePolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.UpdatePolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTag",
+            "name": "policyTag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8553,6 +11317,16 @@
       "clientMethod": {
         "shortName": "ListPolicyTags",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListPolicyTags",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListPolicyTagsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse, Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8592,6 +11366,16 @@
         "shortName": "ListPolicyTagsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListPolicyTagsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ListPolicyTagsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse, Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8630,6 +11414,24 @@
       "clientMethod": {
         "shortName": "ListPolicyTags",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListPolicyTags",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse, Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8668,6 +11470,24 @@
         "shortName": "ListPolicyTagsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListPolicyTagsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse, Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8705,6 +11525,24 @@
       "clientMethod": {
         "shortName": "ListPolicyTags",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListPolicyTags",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TaxonomyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse, Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8743,6 +11581,24 @@
         "shortName": "ListPolicyTagsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.ListPolicyTagsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.TaxonomyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.V1.ListPolicyTagsResponse, Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8780,6 +11636,16 @@
       "clientMethod": {
         "shortName": "GetPolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetPolicyTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetPolicyTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.PolicyTag",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8819,6 +11685,16 @@
         "shortName": "GetPolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetPolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.GetPolicyTagRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8857,6 +11733,16 @@
       "clientMethod": {
         "shortName": "GetPolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetPolicyTag",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.PolicyTag",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8895,6 +11781,16 @@
         "shortName": "GetPolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetPolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8932,6 +11828,16 @@
       "clientMethod": {
         "shortName": "GetPolicyTag",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetPolicyTag",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTagName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.PolicyTag",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -8970,6 +11876,16 @@
         "shortName": "GetPolicyTagAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetPolicyTagAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.PolicyTagName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.PolicyTag>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -9007,6 +11923,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -9046,6 +11972,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -9084,6 +12020,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -9123,6 +12069,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -9161,6 +12117,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -9200,6 +12166,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "PolicyTagManagerClient",
@@ -9238,6 +12214,16 @@
       "clientMethod": {
         "shortName": "ReplaceTaxonomy",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerSerializationClient.ReplaceTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.Taxonomy",
         "client": {
           "shortName": "PolicyTagManagerSerializationClient",
@@ -9277,6 +12263,16 @@
         "shortName": "ReplaceTaxonomyAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerSerializationClient.ReplaceTaxonomyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ReplaceTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.Taxonomy>",
         "client": {
           "shortName": "PolicyTagManagerSerializationClient",
@@ -9315,6 +12311,16 @@
       "clientMethod": {
         "shortName": "ImportTaxonomies",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerSerializationClient.ImportTaxonomies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.ImportTaxonomiesResponse",
         "client": {
           "shortName": "PolicyTagManagerSerializationClient",
@@ -9354,6 +12360,16 @@
         "shortName": "ImportTaxonomiesAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerSerializationClient.ImportTaxonomiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ImportTaxonomiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.ImportTaxonomiesResponse>",
         "client": {
           "shortName": "PolicyTagManagerSerializationClient",
@@ -9392,6 +12408,16 @@
       "clientMethod": {
         "shortName": "ExportTaxonomies",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerSerializationClient.ExportTaxonomies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ExportTaxonomiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.V1.ExportTaxonomiesResponse",
         "client": {
           "shortName": "PolicyTagManagerSerializationClient",
@@ -9431,6 +12457,16 @@
         "shortName": "ExportTaxonomiesAsync",
         "fullName": "Google.Cloud.DataCatalog.V1.PolicyTagManagerSerializationClient.ExportTaxonomiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ExportTaxonomiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.V1.ExportTaxonomiesResponse>",
         "client": {
           "shortName": "PolicyTagManagerSerializationClient",

@@ -18,6 +18,16 @@
       "clientMethod": {
         "shortName": "ListOperations",
         "fullName": "Google.LongRunning.OperationsClient.ListOperations",
+        "parameters": [
+          {
+            "type": "Google.LongRunning.ListOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.LongRunning.ListOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "OperationsClient",
@@ -57,6 +67,16 @@
         "shortName": "ListOperationsAsync",
         "fullName": "Google.LongRunning.OperationsClient.ListOperationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.LongRunning.ListOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.LongRunning.ListOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "OperationsClient",
@@ -95,6 +115,28 @@
       "clientMethod": {
         "shortName": "ListOperations",
         "fullName": "Google.LongRunning.OperationsClient.ListOperations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.LongRunning.ListOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "OperationsClient",
@@ -133,6 +175,28 @@
         "shortName": "ListOperationsAsync",
         "fullName": "Google.LongRunning.OperationsClient.ListOperationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.LongRunning.ListOperationsResponse, Google.LongRunning.Operation>",
         "client": {
           "shortName": "OperationsClient",
@@ -170,6 +234,16 @@
       "clientMethod": {
         "shortName": "GetOperation",
         "fullName": "Google.LongRunning.OperationsClient.GetOperation",
+        "parameters": [
+          {
+            "type": "Google.LongRunning.GetOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation",
         "client": {
           "shortName": "OperationsClient",
@@ -209,6 +283,16 @@
         "shortName": "GetOperationAsync",
         "fullName": "Google.LongRunning.OperationsClient.GetOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.LongRunning.GetOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation>",
         "client": {
           "shortName": "OperationsClient",
@@ -247,6 +331,16 @@
       "clientMethod": {
         "shortName": "GetOperation",
         "fullName": "Google.LongRunning.OperationsClient.GetOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation",
         "client": {
           "shortName": "OperationsClient",
@@ -285,6 +379,16 @@
         "shortName": "GetOperationAsync",
         "fullName": "Google.LongRunning.OperationsClient.GetOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation>",
         "client": {
           "shortName": "OperationsClient",
@@ -322,6 +426,16 @@
       "clientMethod": {
         "shortName": "DeleteOperation",
         "fullName": "Google.LongRunning.OperationsClient.DeleteOperation",
+        "parameters": [
+          {
+            "type": "Google.LongRunning.DeleteOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OperationsClient",
           "fullName": "Google.LongRunning.OperationsClient"
@@ -360,6 +474,16 @@
         "shortName": "DeleteOperationAsync",
         "fullName": "Google.LongRunning.OperationsClient.DeleteOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.LongRunning.DeleteOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OperationsClient",
@@ -398,6 +522,16 @@
       "clientMethod": {
         "shortName": "DeleteOperation",
         "fullName": "Google.LongRunning.OperationsClient.DeleteOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OperationsClient",
           "fullName": "Google.LongRunning.OperationsClient"
@@ -435,6 +569,16 @@
         "shortName": "DeleteOperationAsync",
         "fullName": "Google.LongRunning.OperationsClient.DeleteOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OperationsClient",
@@ -472,6 +616,16 @@
       "clientMethod": {
         "shortName": "CancelOperation",
         "fullName": "Google.LongRunning.OperationsClient.CancelOperation",
+        "parameters": [
+          {
+            "type": "Google.LongRunning.CancelOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OperationsClient",
           "fullName": "Google.LongRunning.OperationsClient"
@@ -510,6 +664,16 @@
         "shortName": "CancelOperationAsync",
         "fullName": "Google.LongRunning.OperationsClient.CancelOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.LongRunning.CancelOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OperationsClient",
@@ -548,6 +712,16 @@
       "clientMethod": {
         "shortName": "CancelOperation",
         "fullName": "Google.LongRunning.OperationsClient.CancelOperation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "OperationsClient",
           "fullName": "Google.LongRunning.OperationsClient"
@@ -585,6 +759,16 @@
         "shortName": "CancelOperationAsync",
         "fullName": "Google.LongRunning.OperationsClient.CancelOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "OperationsClient",
@@ -622,6 +806,16 @@
       "clientMethod": {
         "shortName": "WaitOperation",
         "fullName": "Google.LongRunning.OperationsClient.WaitOperation",
+        "parameters": [
+          {
+            "type": "Google.LongRunning.WaitOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation",
         "client": {
           "shortName": "OperationsClient",
@@ -661,6 +855,16 @@
         "shortName": "WaitOperationAsync",
         "fullName": "Google.LongRunning.OperationsClient.WaitOperationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.LongRunning.WaitOperationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation>",
         "client": {
           "shortName": "OperationsClient",

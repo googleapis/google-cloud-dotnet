@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ResolveService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.LookupServiceClient.ResolveService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ResolveServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.ResolveServiceResponse",
         "client": {
           "shortName": "LookupServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ResolveServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.LookupServiceClient.ResolveServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ResolveServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.ResolveServiceResponse>",
         "client": {
           "shortName": "LookupServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "CreateNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateNamespace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.CreateNamespaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -135,6 +165,16 @@
         "shortName": "CreateNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.CreateNamespaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -173,6 +213,24 @@
       "clientMethod": {
         "shortName": "CreateNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateNamespace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
+            "name": "namespace"
+          },
+          {
+            "type": "System.String",
+            "name": "namespaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -211,6 +269,24 @@
         "shortName": "CreateNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
+            "name": "namespace"
+          },
+          {
+            "type": "System.String",
+            "name": "namespaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -248,6 +324,24 @@
       "clientMethod": {
         "shortName": "CreateNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateNamespace",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
+            "name": "namespace"
+          },
+          {
+            "type": "System.String",
+            "name": "namespaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -286,6 +380,24 @@
         "shortName": "CreateNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
+            "name": "namespace"
+          },
+          {
+            "type": "System.String",
+            "name": "namespaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "ListNamespaces",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListNamespaces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ListNamespacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListNamespacesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -362,6 +484,16 @@
         "shortName": "ListNamespacesAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListNamespacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ListNamespacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListNamespacesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -400,6 +532,24 @@
       "clientMethod": {
         "shortName": "ListNamespaces",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListNamespaces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListNamespacesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -438,6 +588,24 @@
         "shortName": "ListNamespacesAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListNamespacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListNamespacesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -475,6 +643,24 @@
       "clientMethod": {
         "shortName": "ListNamespaces",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListNamespaces",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListNamespacesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -513,6 +699,24 @@
         "shortName": "ListNamespacesAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListNamespacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListNamespacesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -550,6 +754,16 @@
       "clientMethod": {
         "shortName": "GetNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetNamespace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.GetNamespaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -589,6 +803,16 @@
         "shortName": "GetNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.GetNamespaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -627,6 +851,16 @@
       "clientMethod": {
         "shortName": "GetNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetNamespace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -665,6 +899,16 @@
         "shortName": "GetNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -702,6 +946,16 @@
       "clientMethod": {
         "shortName": "GetNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetNamespace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.NamespaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -740,6 +994,16 @@
         "shortName": "GetNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.NamespaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -777,6 +1041,16 @@
       "clientMethod": {
         "shortName": "UpdateNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateNamespace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.UpdateNamespaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -816,6 +1090,16 @@
         "shortName": "UpdateNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.UpdateNamespaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -854,6 +1138,20 @@
       "clientMethod": {
         "shortName": "UpdateNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateNamespace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
+            "name": "namespace"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -892,6 +1190,20 @@
         "shortName": "UpdateNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Namespace",
+            "name": "namespace"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Namespace>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteNamespace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.DeleteNamespaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -967,6 +1289,16 @@
         "shortName": "DeleteNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.DeleteNamespaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1005,6 +1337,16 @@
       "clientMethod": {
         "shortName": "DeleteNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteNamespace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "DeleteNamespace",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteNamespace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.NamespaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -1116,6 +1478,16 @@
         "shortName": "DeleteNamespaceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteNamespaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.NamespaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1153,6 +1525,16 @@
       "clientMethod": {
         "shortName": "CreateService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.CreateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1192,6 +1574,16 @@
         "shortName": "CreateServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.CreateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1230,6 +1622,24 @@
       "clientMethod": {
         "shortName": "CreateService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1268,6 +1678,24 @@
         "shortName": "CreateServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1305,6 +1733,24 @@
       "clientMethod": {
         "shortName": "CreateService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.NamespaceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1343,6 +1789,24 @@
         "shortName": "CreateServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.NamespaceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1380,6 +1844,16 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListServicesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1419,6 +1893,16 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListServicesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1457,6 +1941,24 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListServices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListServicesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1495,6 +1997,24 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListServicesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1532,6 +2052,24 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.NamespaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListServicesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1570,6 +2108,24 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.NamespaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListServicesResponse, Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1607,6 +2163,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1646,6 +2212,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1684,6 +2260,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1722,6 +2308,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1759,6 +2355,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1797,6 +2403,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1834,6 +2450,16 @@
       "clientMethod": {
         "shortName": "UpdateService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.UpdateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1873,6 +2499,16 @@
         "shortName": "UpdateServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.UpdateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1911,6 +2547,20 @@
       "clientMethod": {
         "shortName": "UpdateService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
+            "name": "service"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1949,6 +2599,20 @@
         "shortName": "UpdateServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Service",
+            "name": "service"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Service>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -1986,6 +2650,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -2024,6 +2698,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2062,6 +2746,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -2099,6 +2793,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2136,6 +2840,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -2173,6 +2887,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2210,6 +2934,16 @@
       "clientMethod": {
         "shortName": "CreateEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.CreateEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2249,6 +2983,16 @@
         "shortName": "CreateEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.CreateEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2287,6 +3031,24 @@
       "clientMethod": {
         "shortName": "CreateEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateEndpoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
+            "name": "endpoint"
+          },
+          {
+            "type": "System.String",
+            "name": "endpointId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2325,6 +3087,24 @@
         "shortName": "CreateEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
+            "name": "endpoint"
+          },
+          {
+            "type": "System.String",
+            "name": "endpointId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2362,6 +3142,24 @@
       "clientMethod": {
         "shortName": "CreateEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
+            "name": "endpoint"
+          },
+          {
+            "type": "System.String",
+            "name": "endpointId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2400,6 +3198,24 @@
         "shortName": "CreateEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.CreateEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
+            "name": "endpoint"
+          },
+          {
+            "type": "System.String",
+            "name": "endpointId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2437,6 +3253,16 @@
       "clientMethod": {
         "shortName": "ListEndpoints",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListEndpoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ListEndpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListEndpointsResponse, Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2476,6 +3302,16 @@
         "shortName": "ListEndpointsAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListEndpointsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ListEndpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListEndpointsResponse, Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2514,6 +3350,24 @@
       "clientMethod": {
         "shortName": "ListEndpoints",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListEndpoints",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListEndpointsResponse, Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2552,6 +3406,24 @@
         "shortName": "ListEndpointsAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListEndpointsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListEndpointsResponse, Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2589,6 +3461,24 @@
       "clientMethod": {
         "shortName": "ListEndpoints",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListEndpoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListEndpointsResponse, Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2627,6 +3517,24 @@
         "shortName": "ListEndpointsAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.ListEndpointsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ServiceDirectory.V1Beta1.ListEndpointsResponse, Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2664,6 +3572,16 @@
       "clientMethod": {
         "shortName": "GetEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.GetEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2703,6 +3621,16 @@
         "shortName": "GetEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.GetEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2741,6 +3669,16 @@
       "clientMethod": {
         "shortName": "GetEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetEndpoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2779,6 +3717,16 @@
         "shortName": "GetEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2816,6 +3764,16 @@
       "clientMethod": {
         "shortName": "GetEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2854,6 +3812,16 @@
         "shortName": "GetEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2891,6 +3859,16 @@
       "clientMethod": {
         "shortName": "UpdateEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.UpdateEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2930,6 +3908,16 @@
         "shortName": "UpdateEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.UpdateEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -2968,6 +3956,20 @@
       "clientMethod": {
         "shortName": "UpdateEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
+            "name": "endpoint"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3006,6 +4008,20 @@
         "shortName": "UpdateEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.UpdateEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.Endpoint",
+            "name": "endpoint"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3043,6 +4059,16 @@
       "clientMethod": {
         "shortName": "DeleteEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.DeleteEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -3081,6 +4107,16 @@
         "shortName": "DeleteEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.DeleteEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3119,6 +4155,16 @@
       "clientMethod": {
         "shortName": "DeleteEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteEndpoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -3156,6 +4202,16 @@
         "shortName": "DeleteEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3193,6 +4249,16 @@
       "clientMethod": {
         "shortName": "DeleteEndpoint",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RegistrationServiceClient",
           "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient"
@@ -3230,6 +4296,16 @@
         "shortName": "DeleteEndpointAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.DeleteEndpointAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceDirectory.V1Beta1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3267,6 +4343,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3306,6 +4392,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3344,6 +4440,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3383,6 +4489,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3421,6 +4537,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "RegistrationServiceClient",
@@ -3460,6 +4586,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.ServiceDirectory.V1Beta1.RegistrationServiceClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "RegistrationServiceClient",

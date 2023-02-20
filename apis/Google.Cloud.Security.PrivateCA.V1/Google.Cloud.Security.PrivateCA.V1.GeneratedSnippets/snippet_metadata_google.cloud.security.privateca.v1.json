@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CreateCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CreateCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "GetCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "GetCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "GetCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "ListCertificates",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCertificatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificatesResponse, Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "ListCertificatesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCertificatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificatesResponse, Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "ListCertificates",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificatesResponse, Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "ListCertificatesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificatesResponse, Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "ListCertificates",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificatesResponse, Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "ListCertificatesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificatesResponse, Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "RevokeCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.RevokeCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.RevokeCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "RevokeCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.RevokeCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.RevokeCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -777,6 +1041,16 @@
       "clientMethod": {
         "shortName": "RevokeCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.RevokeCertificate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -815,6 +1089,16 @@
         "shortName": "RevokeCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.RevokeCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -852,6 +1136,16 @@
       "clientMethod": {
         "shortName": "RevokeCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.RevokeCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -890,6 +1184,16 @@
         "shortName": "RevokeCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.RevokeCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -927,6 +1231,16 @@
       "clientMethod": {
         "shortName": "UpdateCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -966,6 +1280,16 @@
         "shortName": "UpdateCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1004,6 +1328,20 @@
       "clientMethod": {
         "shortName": "UpdateCertificate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.Certificate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1042,6 +1380,20 @@
         "shortName": "UpdateCertificateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.Certificate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "ActivateCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ActivateCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ActivateCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1118,6 +1480,16 @@
         "shortName": "ActivateCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ActivateCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ActivateCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1156,6 +1528,16 @@
       "clientMethod": {
         "shortName": "ActivateCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ActivateCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1194,6 +1576,16 @@
         "shortName": "ActivateCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ActivateCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1231,6 +1623,16 @@
       "clientMethod": {
         "shortName": "ActivateCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ActivateCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1269,6 +1671,16 @@
         "shortName": "ActivateCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ActivateCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1306,6 +1718,16 @@
       "clientMethod": {
         "shortName": "CreateCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CreateCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1345,6 +1767,16 @@
         "shortName": "CreateCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CreateCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1383,6 +1815,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
+            "name": "certificateAuthority"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateAuthorityId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1421,6 +1871,24 @@
         "shortName": "CreateCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
+            "name": "certificateAuthority"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateAuthorityId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1458,6 +1926,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
+            "name": "certificateAuthority"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateAuthorityId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1496,6 +1982,24 @@
         "shortName": "CreateCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
+            "name": "certificateAuthority"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateAuthorityId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "DisableCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DisableCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.DisableCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1572,6 +2086,16 @@
         "shortName": "DisableCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DisableCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.DisableCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1610,6 +2134,16 @@
       "clientMethod": {
         "shortName": "DisableCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DisableCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1648,6 +2182,16 @@
         "shortName": "DisableCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DisableCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1685,6 +2229,16 @@
       "clientMethod": {
         "shortName": "DisableCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DisableCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1723,6 +2277,16 @@
         "shortName": "DisableCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DisableCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1760,6 +2324,16 @@
       "clientMethod": {
         "shortName": "EnableCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.EnableCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.EnableCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1799,6 +2373,16 @@
         "shortName": "EnableCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.EnableCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.EnableCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1837,6 +2421,16 @@
       "clientMethod": {
         "shortName": "EnableCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.EnableCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1875,6 +2469,16 @@
         "shortName": "EnableCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.EnableCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1912,6 +2516,16 @@
       "clientMethod": {
         "shortName": "EnableCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.EnableCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1950,6 +2564,16 @@
         "shortName": "EnableCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.EnableCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -1987,6 +2611,16 @@
       "clientMethod": {
         "shortName": "FetchCertificateAuthorityCsr",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCertificateAuthorityCsr",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.FetchCertificateAuthorityCsrRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.FetchCertificateAuthorityCsrResponse",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2026,6 +2660,16 @@
         "shortName": "FetchCertificateAuthorityCsrAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCertificateAuthorityCsrAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.FetchCertificateAuthorityCsrRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.FetchCertificateAuthorityCsrResponse>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2064,6 +2708,16 @@
       "clientMethod": {
         "shortName": "FetchCertificateAuthorityCsr",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCertificateAuthorityCsr",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.FetchCertificateAuthorityCsrResponse",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2102,6 +2756,16 @@
         "shortName": "FetchCertificateAuthorityCsrAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCertificateAuthorityCsrAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.FetchCertificateAuthorityCsrResponse>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2139,6 +2803,16 @@
       "clientMethod": {
         "shortName": "FetchCertificateAuthorityCsr",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCertificateAuthorityCsr",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.FetchCertificateAuthorityCsrResponse",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2177,6 +2851,16 @@
         "shortName": "FetchCertificateAuthorityCsrAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCertificateAuthorityCsrAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.FetchCertificateAuthorityCsrResponse>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2214,6 +2898,16 @@
       "clientMethod": {
         "shortName": "GetCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2253,6 +2947,16 @@
         "shortName": "GetCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2291,6 +2995,16 @@
       "clientMethod": {
         "shortName": "GetCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2329,6 +3043,16 @@
         "shortName": "GetCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2366,6 +3090,16 @@
       "clientMethod": {
         "shortName": "GetCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2404,6 +3138,16 @@
         "shortName": "GetCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2441,6 +3185,16 @@
       "clientMethod": {
         "shortName": "ListCertificateAuthorities",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateAuthorities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCertificateAuthoritiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateAuthoritiesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2480,6 +3234,16 @@
         "shortName": "ListCertificateAuthoritiesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateAuthoritiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCertificateAuthoritiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateAuthoritiesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2518,6 +3282,24 @@
       "clientMethod": {
         "shortName": "ListCertificateAuthorities",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateAuthorities",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateAuthoritiesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2556,6 +3338,24 @@
         "shortName": "ListCertificateAuthoritiesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateAuthoritiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateAuthoritiesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2593,6 +3393,24 @@
       "clientMethod": {
         "shortName": "ListCertificateAuthorities",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateAuthorities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateAuthoritiesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2631,6 +3449,24 @@
         "shortName": "ListCertificateAuthoritiesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateAuthoritiesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateAuthoritiesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2668,6 +3504,16 @@
       "clientMethod": {
         "shortName": "UndeleteCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UndeleteCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UndeleteCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2707,6 +3553,16 @@
         "shortName": "UndeleteCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UndeleteCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UndeleteCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2745,6 +3601,16 @@
       "clientMethod": {
         "shortName": "UndeleteCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UndeleteCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2783,6 +3649,16 @@
         "shortName": "UndeleteCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UndeleteCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2820,6 +3696,16 @@
       "clientMethod": {
         "shortName": "UndeleteCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UndeleteCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2858,6 +3744,16 @@
         "shortName": "UndeleteCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UndeleteCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2895,6 +3791,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.DeleteCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2934,6 +3840,16 @@
         "shortName": "DeleteCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.DeleteCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -2972,6 +3888,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateAuthority",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3010,6 +3936,16 @@
         "shortName": "DeleteCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3047,6 +3983,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3085,6 +4031,16 @@
         "shortName": "DeleteCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3122,6 +4078,16 @@
       "clientMethod": {
         "shortName": "UpdateCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3161,6 +4127,16 @@
         "shortName": "UpdateCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCertificateAuthorityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3199,6 +4175,20 @@
       "clientMethod": {
         "shortName": "UpdateCertificateAuthority",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateAuthority",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
+            "name": "certificateAuthority"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3237,6 +4227,20 @@
         "shortName": "UpdateCertificateAuthorityAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateAuthorityAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthority",
+            "name": "certificateAuthority"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateAuthority, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3274,6 +4278,16 @@
       "clientMethod": {
         "shortName": "CreateCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCaPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CreateCaPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3313,6 +4327,16 @@
         "shortName": "CreateCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CreateCaPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3351,6 +4375,24 @@
       "clientMethod": {
         "shortName": "CreateCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCaPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPool",
+            "name": "caPool"
+          },
+          {
+            "type": "System.String",
+            "name": "caPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3389,6 +4431,24 @@
         "shortName": "CreateCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPool",
+            "name": "caPool"
+          },
+          {
+            "type": "System.String",
+            "name": "caPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3426,6 +4486,24 @@
       "clientMethod": {
         "shortName": "CreateCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCaPool",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPool",
+            "name": "caPool"
+          },
+          {
+            "type": "System.String",
+            "name": "caPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3464,6 +4542,24 @@
         "shortName": "CreateCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPool",
+            "name": "caPool"
+          },
+          {
+            "type": "System.String",
+            "name": "caPoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3501,6 +4597,16 @@
       "clientMethod": {
         "shortName": "UpdateCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCaPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCaPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3540,6 +4646,16 @@
         "shortName": "UpdateCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCaPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3578,6 +4694,20 @@
       "clientMethod": {
         "shortName": "UpdateCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCaPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPool",
+            "name": "caPool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3616,6 +4746,20 @@
         "shortName": "UpdateCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPool",
+            "name": "caPool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CaPool, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3653,6 +4797,16 @@
       "clientMethod": {
         "shortName": "GetCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCaPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCaPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CaPool",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3692,6 +4846,16 @@
         "shortName": "GetCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCaPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3730,6 +4894,16 @@
       "clientMethod": {
         "shortName": "GetCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCaPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CaPool",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3768,6 +4942,16 @@
         "shortName": "GetCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3805,6 +4989,16 @@
       "clientMethod": {
         "shortName": "GetCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCaPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CaPool",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3843,6 +5037,16 @@
         "shortName": "GetCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3880,6 +5084,16 @@
       "clientMethod": {
         "shortName": "ListCaPools",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCaPools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCaPoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCaPoolsResponse, Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3919,6 +5133,16 @@
         "shortName": "ListCaPoolsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCaPoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCaPoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCaPoolsResponse, Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3957,6 +5181,24 @@
       "clientMethod": {
         "shortName": "ListCaPools",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCaPools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCaPoolsResponse, Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -3995,6 +5237,24 @@
         "shortName": "ListCaPoolsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCaPoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCaPoolsResponse, Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4032,6 +5292,24 @@
       "clientMethod": {
         "shortName": "ListCaPools",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCaPools",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCaPoolsResponse, Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4070,6 +5348,24 @@
         "shortName": "ListCaPoolsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCaPoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCaPoolsResponse, Google.Cloud.Security.PrivateCA.V1.CaPool>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4107,6 +5403,16 @@
       "clientMethod": {
         "shortName": "DeleteCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCaPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.DeleteCaPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4146,6 +5452,16 @@
         "shortName": "DeleteCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.DeleteCaPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4184,6 +5500,16 @@
       "clientMethod": {
         "shortName": "DeleteCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCaPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4222,6 +5548,16 @@
         "shortName": "DeleteCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4259,6 +5595,16 @@
       "clientMethod": {
         "shortName": "DeleteCaPool",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCaPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4297,6 +5643,16 @@
         "shortName": "DeleteCaPoolAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCaPoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4334,6 +5690,16 @@
       "clientMethod": {
         "shortName": "FetchCaCerts",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCaCerts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.FetchCaCertsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4373,6 +5739,16 @@
         "shortName": "FetchCaCertsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCaCertsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.FetchCaCertsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4411,6 +5787,16 @@
       "clientMethod": {
         "shortName": "FetchCaCerts",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCaCerts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "caPool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4449,6 +5835,16 @@
         "shortName": "FetchCaCertsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCaCertsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "caPool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4486,6 +5882,16 @@
       "clientMethod": {
         "shortName": "FetchCaCerts",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCaCerts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "caPool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4524,6 +5930,16 @@
         "shortName": "FetchCaCertsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.FetchCaCertsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CaPoolName",
+            "name": "caPool"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4561,6 +5977,16 @@
       "clientMethod": {
         "shortName": "GetCertificateRevocationList",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateRevocationList",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCertificateRevocationListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4600,6 +6026,16 @@
         "shortName": "GetCertificateRevocationListAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateRevocationListAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCertificateRevocationListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4638,6 +6074,16 @@
       "clientMethod": {
         "shortName": "GetCertificateRevocationList",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateRevocationList",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4676,6 +6122,16 @@
         "shortName": "GetCertificateRevocationListAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateRevocationListAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4713,6 +6169,16 @@
       "clientMethod": {
         "shortName": "GetCertificateRevocationList",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateRevocationList",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateRevocationListName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4751,6 +6217,16 @@
         "shortName": "GetCertificateRevocationListAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateRevocationListAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateRevocationListName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4788,6 +6264,16 @@
       "clientMethod": {
         "shortName": "ListCertificateRevocationLists",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateRevocationLists",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCertificateRevocationListsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateRevocationListsResponse, Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4827,6 +6313,16 @@
         "shortName": "ListCertificateRevocationListsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateRevocationListsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCertificateRevocationListsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateRevocationListsResponse, Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4865,6 +6361,24 @@
       "clientMethod": {
         "shortName": "ListCertificateRevocationLists",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateRevocationLists",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateRevocationListsResponse, Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4903,6 +6417,24 @@
         "shortName": "ListCertificateRevocationListsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateRevocationListsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateRevocationListsResponse, Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4940,6 +6472,24 @@
       "clientMethod": {
         "shortName": "ListCertificateRevocationLists",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateRevocationLists",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateRevocationListsResponse, Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -4978,6 +6528,24 @@
         "shortName": "ListCertificateRevocationListsAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateRevocationListsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateRevocationListsResponse, Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5015,6 +6583,16 @@
       "clientMethod": {
         "shortName": "UpdateCertificateRevocationList",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateRevocationList",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCertificateRevocationListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5054,6 +6632,16 @@
         "shortName": "UpdateCertificateRevocationListAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateRevocationListAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCertificateRevocationListRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5092,6 +6680,20 @@
       "clientMethod": {
         "shortName": "UpdateCertificateRevocationList",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateRevocationList",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList",
+            "name": "certificateRevocationList"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5130,6 +6732,20 @@
         "shortName": "UpdateCertificateRevocationListAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateRevocationListAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList",
+            "name": "certificateRevocationList"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5167,6 +6783,16 @@
       "clientMethod": {
         "shortName": "CreateCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CreateCertificateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5206,6 +6832,16 @@
         "shortName": "CreateCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CreateCertificateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5244,6 +6880,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
+            "name": "certificateTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5282,6 +6936,24 @@
         "shortName": "CreateCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
+            "name": "certificateTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5319,6 +6991,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
+            "name": "certificateTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5357,6 +7047,24 @@
         "shortName": "CreateCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.CreateCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
+            "name": "certificateTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5394,6 +7102,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.DeleteCertificateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5433,6 +7151,16 @@
         "shortName": "DeleteCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.DeleteCertificateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5471,6 +7199,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5509,6 +7247,16 @@
         "shortName": "DeleteCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5546,6 +7294,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5584,6 +7342,16 @@
         "shortName": "DeleteCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.DeleteCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5621,6 +7389,16 @@
       "clientMethod": {
         "shortName": "GetCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCertificateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5660,6 +7438,16 @@
         "shortName": "GetCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.GetCertificateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5698,6 +7486,16 @@
       "clientMethod": {
         "shortName": "GetCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5736,6 +7534,16 @@
         "shortName": "GetCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5773,6 +7581,16 @@
       "clientMethod": {
         "shortName": "GetCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5811,6 +7629,16 @@
         "shortName": "GetCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.GetCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5848,6 +7676,16 @@
       "clientMethod": {
         "shortName": "ListCertificateTemplates",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCertificateTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateTemplatesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5887,6 +7725,16 @@
         "shortName": "ListCertificateTemplatesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateTemplatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.ListCertificateTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateTemplatesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5925,6 +7773,24 @@
       "clientMethod": {
         "shortName": "ListCertificateTemplates",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateTemplatesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -5963,6 +7829,24 @@
         "shortName": "ListCertificateTemplatesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateTemplatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateTemplatesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -6000,6 +7884,24 @@
       "clientMethod": {
         "shortName": "ListCertificateTemplates",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateTemplates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateTemplatesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -6038,6 +7940,24 @@
         "shortName": "ListCertificateTemplatesAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.ListCertificateTemplatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Security.PrivateCA.V1.ListCertificateTemplatesResponse, Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -6075,6 +7995,16 @@
       "clientMethod": {
         "shortName": "UpdateCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCertificateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -6114,6 +8044,16 @@
         "shortName": "UpdateCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.UpdateCertificateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -6152,6 +8092,20 @@
       "clientMethod": {
         "shortName": "UpdateCertificateTemplate",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
+            "name": "certificateTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",
@@ -6190,6 +8144,20 @@
         "shortName": "UpdateCertificateTemplateAsync",
         "fullName": "Google.Cloud.Security.PrivateCA.V1.CertificateAuthorityServiceClient.UpdateCertificateTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PrivateCA.V1.CertificateTemplate",
+            "name": "certificateTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Security.PrivateCA.V1.CertificateTemplate, Google.Cloud.Security.PrivateCA.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateAuthorityServiceClient",

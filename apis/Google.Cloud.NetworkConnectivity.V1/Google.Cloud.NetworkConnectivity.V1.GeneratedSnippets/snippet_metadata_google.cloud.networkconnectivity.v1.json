@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListHubs",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListHubs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListHubsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListHubsResponse, Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListHubsAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListHubsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListHubsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListHubsResponse, Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListHubs",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListHubs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListHubsResponse, Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListHubsAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListHubsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListHubsResponse, Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListHubs",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListHubs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListHubsResponse, Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListHubsAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListHubsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListHubsResponse, Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetHub",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetHubRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.NetworkConnectivity.V1.Hub",
         "client": {
           "shortName": "HubServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "GetHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetHubRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetHub",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.NetworkConnectivity.V1.Hub",
         "client": {
           "shortName": "HubServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "GetHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetHub",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.HubName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.NetworkConnectivity.V1.Hub",
         "client": {
           "shortName": "HubServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "GetHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.HubName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Hub>",
         "client": {
           "shortName": "HubServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateHub",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateHubRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateHubRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateHub",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Hub",
+            "name": "hub"
+          },
+          {
+            "type": "System.String",
+            "name": "hubId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Hub",
+            "name": "hub"
+          },
+          {
+            "type": "System.String",
+            "name": "hubId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateHub",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Hub",
+            "name": "hub"
+          },
+          {
+            "type": "System.String",
+            "name": "hubId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Hub",
+            "name": "hub"
+          },
+          {
+            "type": "System.String",
+            "name": "hubId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateHub",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateHubRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateHubRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateHub",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Hub",
+            "name": "hub"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Hub",
+            "name": "hub"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Hub, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteHub",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteHubRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteHubRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteHub",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteHub",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteHub",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.HubName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteHubAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteHubAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.HubName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "ListSpokes",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListSpokes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListSpokesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse, Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1118,6 +1480,16 @@
         "shortName": "ListSpokesAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListSpokesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListSpokesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse, Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1156,6 +1528,24 @@
       "clientMethod": {
         "shortName": "ListSpokes",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListSpokes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse, Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1194,6 +1584,24 @@
         "shortName": "ListSpokesAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListSpokesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse, Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1231,6 +1639,24 @@
       "clientMethod": {
         "shortName": "ListSpokes",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListSpokes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse, Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1269,6 +1695,24 @@
         "shortName": "ListSpokesAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.ListSpokesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListSpokesResponse, Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1306,6 +1750,16 @@
       "clientMethod": {
         "shortName": "GetSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetSpoke",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetSpokeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.NetworkConnectivity.V1.Spoke",
         "client": {
           "shortName": "HubServiceClient",
@@ -1345,6 +1799,16 @@
         "shortName": "GetSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetSpokeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1383,6 +1847,16 @@
       "clientMethod": {
         "shortName": "GetSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetSpoke",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.NetworkConnectivity.V1.Spoke",
         "client": {
           "shortName": "HubServiceClient",
@@ -1421,6 +1895,16 @@
         "shortName": "GetSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1458,6 +1942,16 @@
       "clientMethod": {
         "shortName": "GetSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetSpoke",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.SpokeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.NetworkConnectivity.V1.Spoke",
         "client": {
           "shortName": "HubServiceClient",
@@ -1496,6 +1990,16 @@
         "shortName": "GetSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.GetSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.SpokeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Spoke>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "CreateSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateSpoke",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1572,6 +2086,16 @@
         "shortName": "CreateSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateSpokeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1610,6 +2134,24 @@
       "clientMethod": {
         "shortName": "CreateSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateSpoke",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Spoke",
+            "name": "spoke"
+          },
+          {
+            "type": "System.String",
+            "name": "spokeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1648,6 +2190,24 @@
         "shortName": "CreateSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Spoke",
+            "name": "spoke"
+          },
+          {
+            "type": "System.String",
+            "name": "spokeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1685,6 +2245,24 @@
       "clientMethod": {
         "shortName": "CreateSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateSpoke",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Spoke",
+            "name": "spoke"
+          },
+          {
+            "type": "System.String",
+            "name": "spokeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1723,6 +2301,24 @@
         "shortName": "CreateSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.CreateSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Spoke",
+            "name": "spoke"
+          },
+          {
+            "type": "System.String",
+            "name": "spokeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1760,6 +2356,16 @@
       "clientMethod": {
         "shortName": "UpdateSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateSpoke",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1799,6 +2405,16 @@
         "shortName": "UpdateSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1837,6 +2453,20 @@
       "clientMethod": {
         "shortName": "UpdateSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateSpoke",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Spoke",
+            "name": "spoke"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1875,6 +2505,20 @@
         "shortName": "UpdateSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.UpdateSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Spoke",
+            "name": "spoke"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Spoke, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1912,6 +2556,16 @@
       "clientMethod": {
         "shortName": "DeleteSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteSpoke",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1951,6 +2605,16 @@
         "shortName": "DeleteSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -1989,6 +2653,16 @@
       "clientMethod": {
         "shortName": "DeleteSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteSpoke",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -2027,6 +2701,16 @@
         "shortName": "DeleteSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",
@@ -2064,6 +2748,16 @@
       "clientMethod": {
         "shortName": "DeleteSpoke",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteSpoke",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.SpokeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
         "client": {
           "shortName": "HubServiceClient",
@@ -2102,6 +2796,16 @@
         "shortName": "DeleteSpokeAsync",
         "fullName": "Google.Cloud.NetworkConnectivity.V1.HubServiceClient.DeleteSpokeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.SpokeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
         "client": {
           "shortName": "HubServiceClient",

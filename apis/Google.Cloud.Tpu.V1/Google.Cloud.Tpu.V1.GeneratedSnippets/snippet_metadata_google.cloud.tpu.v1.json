@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListNodes",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListNodes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.ListNodesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListNodesResponse, Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -58,6 +68,16 @@
         "shortName": "ListNodesAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListNodesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.ListNodesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListNodesResponse, Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListNodes",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListNodes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListNodesResponse, Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -134,6 +172,24 @@
         "shortName": "ListNodesAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListNodesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListNodesResponse, Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListNodes",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListNodes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListNodesResponse, Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -209,6 +283,24 @@
         "shortName": "ListNodesAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListNodesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListNodesResponse, Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetNode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.GetNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.Node",
         "client": {
           "shortName": "TpuClient",
@@ -285,6 +387,16 @@
         "shortName": "GetNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.GetNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetNode",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.Node",
         "client": {
           "shortName": "TpuClient",
@@ -361,6 +483,16 @@
         "shortName": "GetNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetNode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.NodeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.Node",
         "client": {
           "shortName": "TpuClient",
@@ -436,6 +578,16 @@
         "shortName": "GetNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.NodeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.Node>",
         "client": {
           "shortName": "TpuClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.CreateNode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.CreateNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.CreateNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.CreateNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.CreateNode",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tpu.V1.Node",
+            "name": "node"
+          },
+          {
+            "type": "System.String",
+            "name": "nodeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.CreateNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tpu.V1.Node",
+            "name": "node"
+          },
+          {
+            "type": "System.String",
+            "name": "nodeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.CreateNode",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tpu.V1.Node",
+            "name": "node"
+          },
+          {
+            "type": "System.String",
+            "name": "nodeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.CreateNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tpu.V1.Node",
+            "name": "node"
+          },
+          {
+            "type": "System.String",
+            "name": "nodeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "DeleteNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.DeleteNode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.DeleteNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -739,6 +993,16 @@
         "shortName": "DeleteNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.DeleteNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.DeleteNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -777,6 +1041,16 @@
       "clientMethod": {
         "shortName": "DeleteNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.DeleteNode",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -815,6 +1089,16 @@
         "shortName": "DeleteNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.DeleteNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -852,6 +1136,16 @@
       "clientMethod": {
         "shortName": "DeleteNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.DeleteNode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.NodeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -890,6 +1184,16 @@
         "shortName": "DeleteNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.DeleteNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.NodeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -927,6 +1231,16 @@
       "clientMethod": {
         "shortName": "ReimageNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ReimageNode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.ReimageNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -966,6 +1280,16 @@
         "shortName": "ReimageNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ReimageNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.ReimageNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -1004,6 +1328,16 @@
       "clientMethod": {
         "shortName": "StopNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.StopNode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.StopNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -1043,6 +1377,16 @@
         "shortName": "StopNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.StopNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.StopNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -1081,6 +1425,16 @@
       "clientMethod": {
         "shortName": "StartNode",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.StartNode",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.StartNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>",
         "client": {
           "shortName": "TpuClient",
@@ -1120,6 +1474,16 @@
         "shortName": "StartNodeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.StartNodeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.StartNodeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tpu.V1.Node, Google.Cloud.Tpu.V1.OperationMetadata>>",
         "client": {
           "shortName": "TpuClient",
@@ -1158,6 +1522,16 @@
       "clientMethod": {
         "shortName": "ListTensorFlowVersions",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListTensorFlowVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse, Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1197,6 +1571,16 @@
         "shortName": "ListTensorFlowVersionsAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListTensorFlowVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse, Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1235,6 +1619,24 @@
       "clientMethod": {
         "shortName": "ListTensorFlowVersions",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListTensorFlowVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse, Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1273,6 +1675,24 @@
         "shortName": "ListTensorFlowVersionsAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListTensorFlowVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse, Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1310,6 +1730,24 @@
       "clientMethod": {
         "shortName": "ListTensorFlowVersions",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListTensorFlowVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.TensorFlowVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse, Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1348,6 +1786,24 @@
         "shortName": "ListTensorFlowVersionsAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListTensorFlowVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.TensorFlowVersionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse, Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1385,6 +1841,16 @@
       "clientMethod": {
         "shortName": "GetTensorFlowVersion",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetTensorFlowVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.TensorFlowVersion",
         "client": {
           "shortName": "TpuClient",
@@ -1424,6 +1890,16 @@
         "shortName": "GetTensorFlowVersionAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetTensorFlowVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1462,6 +1938,16 @@
       "clientMethod": {
         "shortName": "GetTensorFlowVersion",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetTensorFlowVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.TensorFlowVersion",
         "client": {
           "shortName": "TpuClient",
@@ -1500,6 +1986,16 @@
         "shortName": "GetTensorFlowVersionAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetTensorFlowVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1537,6 +2033,16 @@
       "clientMethod": {
         "shortName": "GetTensorFlowVersion",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetTensorFlowVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.TensorFlowVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.TensorFlowVersion",
         "client": {
           "shortName": "TpuClient",
@@ -1575,6 +2081,16 @@
         "shortName": "GetTensorFlowVersionAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetTensorFlowVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.TensorFlowVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.TensorFlowVersion>",
         "client": {
           "shortName": "TpuClient",
@@ -1612,6 +2128,16 @@
       "clientMethod": {
         "shortName": "ListAcceleratorTypes",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListAcceleratorTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse, Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",
@@ -1651,6 +2177,16 @@
         "shortName": "ListAcceleratorTypesAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListAcceleratorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse, Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",
@@ -1689,6 +2225,24 @@
       "clientMethod": {
         "shortName": "ListAcceleratorTypes",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListAcceleratorTypes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse, Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",
@@ -1727,6 +2281,24 @@
         "shortName": "ListAcceleratorTypesAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListAcceleratorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse, Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",
@@ -1764,6 +2336,24 @@
       "clientMethod": {
         "shortName": "ListAcceleratorTypes",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListAcceleratorTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.AcceleratorTypeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse, Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",
@@ -1802,6 +2392,24 @@
         "shortName": "ListAcceleratorTypesAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.ListAcceleratorTypesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.AcceleratorTypeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse, Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",
@@ -1839,6 +2447,16 @@
       "clientMethod": {
         "shortName": "GetAcceleratorType",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetAcceleratorType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.AcceleratorType",
         "client": {
           "shortName": "TpuClient",
@@ -1878,6 +2496,16 @@
         "shortName": "GetAcceleratorTypeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetAcceleratorTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",
@@ -1916,6 +2544,16 @@
       "clientMethod": {
         "shortName": "GetAcceleratorType",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetAcceleratorType",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.AcceleratorType",
         "client": {
           "shortName": "TpuClient",
@@ -1954,6 +2592,16 @@
         "shortName": "GetAcceleratorTypeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetAcceleratorTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",
@@ -1991,6 +2639,16 @@
       "clientMethod": {
         "shortName": "GetAcceleratorType",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetAcceleratorType",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.AcceleratorTypeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tpu.V1.AcceleratorType",
         "client": {
           "shortName": "TpuClient",
@@ -2029,6 +2687,16 @@
         "shortName": "GetAcceleratorTypeAsync",
         "fullName": "Google.Cloud.Tpu.V1.TpuClient.GetAcceleratorTypeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tpu.V1.AcceleratorTypeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tpu.V1.AcceleratorType>",
         "client": {
           "shortName": "TpuClient",

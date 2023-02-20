@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListTraces",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.ListTraces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.ListTracesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Trace.V1.ListTracesResponse, Google.Cloud.Trace.V1.Trace>",
         "client": {
           "shortName": "TraceServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListTracesAsync",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.ListTracesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Trace.V1.ListTracesResponse, Google.Cloud.Trace.V1.Trace>",
         "client": {
           "shortName": "TraceServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListTraces",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.ListTraces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Trace.V1.ListTracesResponse, Google.Cloud.Trace.V1.Trace>",
         "client": {
           "shortName": "TraceServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListTracesAsync",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Trace.V1.ListTracesResponse, Google.Cloud.Trace.V1.Trace>",
         "client": {
           "shortName": "TraceServiceClient",
@@ -171,6 +227,16 @@
       "clientMethod": {
         "shortName": "GetTrace",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.GetTrace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.GetTraceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Trace.V1.Trace",
         "client": {
           "shortName": "TraceServiceClient",
@@ -210,6 +276,16 @@
         "shortName": "GetTraceAsync",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.GetTraceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Trace.V1.Trace>",
         "client": {
           "shortName": "TraceServiceClient",
@@ -248,6 +324,20 @@
       "clientMethod": {
         "shortName": "GetTrace",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.GetTrace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "traceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Trace.V1.Trace",
         "client": {
           "shortName": "TraceServiceClient",
@@ -286,6 +376,20 @@
         "shortName": "GetTraceAsync",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "traceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Trace.V1.Trace>",
         "client": {
           "shortName": "TraceServiceClient",
@@ -323,6 +427,16 @@
       "clientMethod": {
         "shortName": "PatchTraces",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.PatchTracesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TraceServiceClient",
           "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
@@ -361,6 +475,16 @@
         "shortName": "PatchTracesAsync",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.PatchTracesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TraceServiceClient",
@@ -399,6 +523,20 @@
       "clientMethod": {
         "shortName": "PatchTraces",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Trace.V1.Traces",
+            "name": "traces"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TraceServiceClient",
           "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
@@ -436,6 +574,20 @@
         "shortName": "PatchTracesAsync",
         "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Trace.V1.Traces",
+            "name": "traces"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TraceServiceClient",

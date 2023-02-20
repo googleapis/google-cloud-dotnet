@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.CreateEntityReconciliationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.CreateEntityReconciliationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+            "name": "entityReconciliationJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+            "name": "entityReconciliationJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+            "name": "entityReconciliationJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CreateEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
+            "name": "entityReconciliationJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "GetEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.GetEntityReconciliationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "GetEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.GetEntityReconciliationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "GetEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -361,6 +467,16 @@
         "shortName": "GetEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -398,6 +514,16 @@
       "clientMethod": {
         "shortName": "GetEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -436,6 +562,16 @@
         "shortName": "GetEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.GetEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -473,6 +609,16 @@
       "clientMethod": {
         "shortName": "ListEntityReconciliationJobs",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -512,6 +658,16 @@
         "shortName": "ListEntityReconciliationJobsAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -550,6 +706,24 @@
       "clientMethod": {
         "shortName": "ListEntityReconciliationJobs",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -588,6 +762,24 @@
         "shortName": "ListEntityReconciliationJobsAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -625,6 +817,24 @@
       "clientMethod": {
         "shortName": "ListEntityReconciliationJobs",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -663,6 +873,24 @@
         "shortName": "ListEntityReconciliationJobsAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.ListEntityReconciliationJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.EnterpriseKnowledgeGraph.V1.ListEntityReconciliationJobsResponse, Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJob>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -700,6 +928,16 @@
       "clientMethod": {
         "shortName": "CancelEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.CancelEntityReconciliationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
           "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
@@ -738,6 +976,16 @@
         "shortName": "CancelEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.CancelEntityReconciliationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -776,6 +1024,16 @@
       "clientMethod": {
         "shortName": "CancelEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
           "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
@@ -813,6 +1071,16 @@
         "shortName": "CancelEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -850,6 +1118,16 @@
       "clientMethod": {
         "shortName": "CancelEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
           "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
@@ -887,6 +1165,16 @@
         "shortName": "CancelEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.CancelEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -924,6 +1212,16 @@
       "clientMethod": {
         "shortName": "DeleteEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.DeleteEntityReconciliationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
           "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
@@ -962,6 +1260,16 @@
         "shortName": "DeleteEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.DeleteEntityReconciliationJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1000,6 +1308,16 @@
       "clientMethod": {
         "shortName": "DeleteEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
           "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
@@ -1037,6 +1355,16 @@
         "shortName": "DeleteEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1074,6 +1402,16 @@
       "clientMethod": {
         "shortName": "DeleteEntityReconciliationJob",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
           "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient"
@@ -1111,6 +1449,16 @@
         "shortName": "DeleteEntityReconciliationJobAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.DeleteEntityReconciliationJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EntityReconciliationJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1148,6 +1496,16 @@
       "clientMethod": {
         "shortName": "Lookup",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Lookup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1187,6 +1545,16 @@
         "shortName": "LookupAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1225,6 +1593,20 @@
       "clientMethod": {
         "shortName": "Lookup",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Lookup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ids"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1263,6 +1645,20 @@
         "shortName": "LookupAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ids"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1300,6 +1696,20 @@
       "clientMethod": {
         "shortName": "Lookup",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Lookup",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ids"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1338,6 +1748,20 @@
         "shortName": "LookupAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ids"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1375,6 +1799,16 @@
       "clientMethod": {
         "shortName": "Search",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Search",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1414,6 +1848,16 @@
         "shortName": "SearchAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1452,6 +1896,20 @@
       "clientMethod": {
         "shortName": "Search",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Search",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1490,6 +1948,20 @@
         "shortName": "SearchAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1527,6 +1999,20 @@
       "clientMethod": {
         "shortName": "Search",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.Search",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1565,6 +2051,20 @@
         "shortName": "SearchAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1602,6 +2102,16 @@
       "clientMethod": {
         "shortName": "LookupPublicKg",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKg",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1641,6 +2151,16 @@
         "shortName": "LookupPublicKgAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1679,6 +2199,20 @@
       "clientMethod": {
         "shortName": "LookupPublicKg",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKg",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ids"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1717,6 +2251,20 @@
         "shortName": "LookupPublicKgAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ids"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1754,6 +2302,20 @@
       "clientMethod": {
         "shortName": "LookupPublicKg",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKg",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ids"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1792,6 +2354,20 @@
         "shortName": "LookupPublicKgAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.LookupPublicKgAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "ids"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.LookupPublicKgResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1829,6 +2405,16 @@
       "clientMethod": {
         "shortName": "SearchPublicKg",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKg",
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1868,6 +2454,16 @@
         "shortName": "SearchPublicKgAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1906,6 +2502,20 @@
       "clientMethod": {
         "shortName": "SearchPublicKg",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKg",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1944,6 +2554,20 @@
         "shortName": "SearchPublicKgAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -1981,6 +2605,20 @@
       "clientMethod": {
         "shortName": "SearchPublicKg",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKg",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",
@@ -2019,6 +2657,20 @@
         "shortName": "SearchPublicKgAsync",
         "fullName": "Google.Cloud.EnterpriseKnowledgeGraph.V1.EnterpriseKnowledgeGraphServiceClient.SearchPublicKgAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.EnterpriseKnowledgeGraph.V1.SearchPublicKgResponse>",
         "client": {
           "shortName": "EnterpriseKnowledgeGraphServiceClient",

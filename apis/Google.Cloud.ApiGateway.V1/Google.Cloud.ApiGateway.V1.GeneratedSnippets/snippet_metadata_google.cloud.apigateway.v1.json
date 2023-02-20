@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListGateways",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListGateways",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ListGatewaysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListGatewaysResponse, Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListGatewaysAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListGatewaysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ListGatewaysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListGatewaysResponse, Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListGateways",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListGateways",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListGatewaysResponse, Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListGatewaysAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListGatewaysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListGatewaysResponse, Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListGateways",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListGateways",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListGatewaysResponse, Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListGatewaysAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListGatewaysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListGatewaysResponse, Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GetGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.Gateway",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "GetGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GetGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetGateway",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.Gateway",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "GetGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GatewayName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.Gateway",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "GetGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GatewayName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.Gateway>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.CreateGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.CreateGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateGateway",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Gateway",
+            "name": "gateway"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Gateway",
+            "name": "gateway"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateGateway",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Gateway",
+            "name": "gateway"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Gateway",
+            "name": "gateway"
+          },
+          {
+            "type": "System.String",
+            "name": "gatewayId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.UpdateGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.UpdateGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Gateway",
+            "name": "gateway"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Gateway",
+            "name": "gateway"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Gateway, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.DeleteGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.DeleteGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteGateway",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteGateway",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GatewayName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteGatewayAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteGatewayAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GatewayName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "ListApis",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApis",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ListApisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListApisResponse, Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1118,6 +1480,16 @@
         "shortName": "ListApisAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ListApisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListApisResponse, Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1156,6 +1528,24 @@
       "clientMethod": {
         "shortName": "ListApis",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApis",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListApisResponse, Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1194,6 +1584,24 @@
         "shortName": "ListApisAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListApisResponse, Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1231,6 +1639,24 @@
       "clientMethod": {
         "shortName": "ListApis",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApis",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListApisResponse, Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1269,6 +1695,24 @@
         "shortName": "ListApisAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListApisResponse, Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1306,6 +1750,16 @@
       "clientMethod": {
         "shortName": "GetApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GetApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.Api",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1345,6 +1799,16 @@
         "shortName": "GetApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GetApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1383,6 +1847,16 @@
       "clientMethod": {
         "shortName": "GetApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApi",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.Api",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1421,6 +1895,16 @@
         "shortName": "GetApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1458,6 +1942,16 @@
       "clientMethod": {
         "shortName": "GetApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.Api",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1496,6 +1990,16 @@
         "shortName": "GetApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.Api>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "CreateApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.CreateApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1572,6 +2086,16 @@
         "shortName": "CreateApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.CreateApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1610,6 +2134,24 @@
       "clientMethod": {
         "shortName": "CreateApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApi",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "System.String",
+            "name": "apiId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1648,6 +2190,24 @@
         "shortName": "CreateApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "System.String",
+            "name": "apiId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1685,6 +2245,24 @@
       "clientMethod": {
         "shortName": "CreateApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApi",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "System.String",
+            "name": "apiId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1723,6 +2301,24 @@
         "shortName": "CreateApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "System.String",
+            "name": "apiId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1760,6 +2356,16 @@
       "clientMethod": {
         "shortName": "UpdateApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.UpdateApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1799,6 +2405,16 @@
         "shortName": "UpdateApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.UpdateApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1837,6 +2453,20 @@
       "clientMethod": {
         "shortName": "UpdateApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1875,6 +2505,20 @@
         "shortName": "UpdateApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.Api",
+            "name": "api"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.Api, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1912,6 +2556,16 @@
       "clientMethod": {
         "shortName": "DeleteApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.DeleteApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1951,6 +2605,16 @@
         "shortName": "DeleteApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.DeleteApiRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -1989,6 +2653,16 @@
       "clientMethod": {
         "shortName": "DeleteApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApi",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2027,6 +2701,16 @@
         "shortName": "DeleteApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2064,6 +2748,16 @@
       "clientMethod": {
         "shortName": "DeleteApi",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApi",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2102,6 +2796,16 @@
         "shortName": "DeleteApiAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2139,6 +2843,16 @@
       "clientMethod": {
         "shortName": "ListApiConfigs",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApiConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ListApiConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListApiConfigsResponse, Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2178,6 +2892,16 @@
         "shortName": "ListApiConfigsAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApiConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ListApiConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListApiConfigsResponse, Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2216,6 +2940,24 @@
       "clientMethod": {
         "shortName": "ListApiConfigs",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApiConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListApiConfigsResponse, Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2254,6 +2996,24 @@
         "shortName": "ListApiConfigsAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApiConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListApiConfigsResponse, Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2291,6 +3051,24 @@
       "clientMethod": {
         "shortName": "ListApiConfigs",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApiConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApiGateway.V1.ListApiConfigsResponse, Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2329,6 +3107,24 @@
         "shortName": "ListApiConfigsAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.ListApiConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApiGateway.V1.ListApiConfigsResponse, Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2366,6 +3162,16 @@
       "clientMethod": {
         "shortName": "GetApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GetApiConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.ApiConfig",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2405,6 +3211,16 @@
         "shortName": "GetApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.GetApiConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2443,6 +3259,16 @@
       "clientMethod": {
         "shortName": "GetApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.ApiConfig",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2481,6 +3307,16 @@
         "shortName": "GetApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2518,6 +3354,16 @@
       "clientMethod": {
         "shortName": "GetApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ApiGateway.V1.ApiConfig",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2556,6 +3402,16 @@
         "shortName": "GetApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.GetApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ApiGateway.V1.ApiConfig>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2593,6 +3449,16 @@
       "clientMethod": {
         "shortName": "CreateApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.CreateApiConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2632,6 +3498,16 @@
         "shortName": "CreateApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.CreateApiConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2670,6 +3546,24 @@
       "clientMethod": {
         "shortName": "CreateApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfig",
+            "name": "apiConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "apiConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2708,6 +3602,24 @@
         "shortName": "CreateApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfig",
+            "name": "apiConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "apiConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2745,6 +3657,24 @@
       "clientMethod": {
         "shortName": "CreateApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfig",
+            "name": "apiConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "apiConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2783,6 +3713,24 @@
         "shortName": "CreateApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.CreateApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfig",
+            "name": "apiConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "apiConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2820,6 +3768,16 @@
       "clientMethod": {
         "shortName": "UpdateApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateApiConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2859,6 +3817,16 @@
         "shortName": "UpdateApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2897,6 +3865,20 @@
       "clientMethod": {
         "shortName": "UpdateApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateApiConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfig",
+            "name": "apiConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2935,6 +3917,20 @@
         "shortName": "UpdateApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.UpdateApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfig",
+            "name": "apiConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ApiGateway.V1.ApiConfig, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -2972,6 +3968,16 @@
       "clientMethod": {
         "shortName": "DeleteApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -3011,6 +4017,16 @@
         "shortName": "DeleteApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -3049,6 +4065,16 @@
       "clientMethod": {
         "shortName": "DeleteApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -3087,6 +4113,16 @@
         "shortName": "DeleteApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -3124,6 +4160,16 @@
       "clientMethod": {
         "shortName": "DeleteApiConfig",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>",
         "client": {
           "shortName": "ApiGatewayServiceClient",
@@ -3162,6 +4208,16 @@
         "shortName": "DeleteApiConfigAsync",
         "fullName": "Google.Cloud.ApiGateway.V1.ApiGatewayServiceClient.DeleteApiConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApiGateway.V1.ApiConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ApiGateway.V1.OperationMetadata>>",
         "client": {
           "shortName": "ApiGatewayServiceClient",

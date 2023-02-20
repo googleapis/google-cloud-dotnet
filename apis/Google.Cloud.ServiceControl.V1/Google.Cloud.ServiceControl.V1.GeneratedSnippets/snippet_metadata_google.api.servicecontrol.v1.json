@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "AllocateQuota",
         "fullName": "Google.Cloud.ServiceControl.V1.QuotaControllerClient.AllocateQuota",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceControl.V1.AllocateQuotaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceControl.V1.AllocateQuotaResponse",
         "client": {
           "shortName": "QuotaControllerClient",
@@ -58,6 +68,16 @@
         "shortName": "AllocateQuotaAsync",
         "fullName": "Google.Cloud.ServiceControl.V1.QuotaControllerClient.AllocateQuotaAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceControl.V1.AllocateQuotaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceControl.V1.AllocateQuotaResponse>",
         "client": {
           "shortName": "QuotaControllerClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "Check",
         "fullName": "Google.Cloud.ServiceControl.V1.ServiceControllerClient.Check",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceControl.V1.CheckRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceControl.V1.CheckResponse",
         "client": {
           "shortName": "ServiceControllerClient",
@@ -135,6 +165,16 @@
         "shortName": "CheckAsync",
         "fullName": "Google.Cloud.ServiceControl.V1.ServiceControllerClient.CheckAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceControl.V1.CheckRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceControl.V1.CheckResponse>",
         "client": {
           "shortName": "ServiceControllerClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "Report",
         "fullName": "Google.Cloud.ServiceControl.V1.ServiceControllerClient.Report",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceControl.V1.ReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ServiceControl.V1.ReportResponse",
         "client": {
           "shortName": "ServiceControllerClient",
@@ -212,6 +262,16 @@
         "shortName": "ReportAsync",
         "fullName": "Google.Cloud.ServiceControl.V1.ServiceControllerClient.ReportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ServiceControl.V1.ReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ServiceControl.V1.ReportResponse>",
         "client": {
           "shortName": "ServiceControllerClient",

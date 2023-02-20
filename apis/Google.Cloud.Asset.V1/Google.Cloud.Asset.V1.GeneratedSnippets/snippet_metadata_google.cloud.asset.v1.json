@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ExportAssets",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ExportAssets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.ExportAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Asset.V1.ExportAssetsResponse, Google.Cloud.Asset.V1.ExportAssetsRequest>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ExportAssetsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ExportAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.ExportAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Asset.V1.ExportAssetsResponse, Google.Cloud.Asset.V1.ExportAssetsRequest>>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "ListAssets",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListAssets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.ListAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListAssetsResponse, Google.Cloud.Asset.V1.Asset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -135,6 +165,16 @@
         "shortName": "ListAssetsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.ListAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListAssetsResponse, Google.Cloud.Asset.V1.Asset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -173,6 +213,24 @@
       "clientMethod": {
         "shortName": "ListAssets",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListAssets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListAssetsResponse, Google.Cloud.Asset.V1.Asset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -211,6 +269,24 @@
         "shortName": "ListAssetsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListAssetsResponse, Google.Cloud.Asset.V1.Asset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -248,6 +324,24 @@
       "clientMethod": {
         "shortName": "ListAssets",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListAssets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListAssetsResponse, Google.Cloud.Asset.V1.Asset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -286,6 +380,24 @@
         "shortName": "ListAssetsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListAssetsResponse, Google.Cloud.Asset.V1.Asset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "BatchGetAssetsHistory",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.BatchGetAssetsHistory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse",
         "client": {
           "shortName": "AssetServiceClient",
@@ -362,6 +484,16 @@
         "shortName": "BatchGetAssetsHistoryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.BatchGetAssetsHistoryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -400,6 +532,16 @@
       "clientMethod": {
         "shortName": "CreateFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.CreateFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.Feed",
         "client": {
           "shortName": "AssetServiceClient",
@@ -439,6 +581,16 @@
         "shortName": "CreateFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.CreateFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.Feed>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -477,6 +629,16 @@
       "clientMethod": {
         "shortName": "CreateFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.Feed",
         "client": {
           "shortName": "AssetServiceClient",
@@ -515,6 +677,16 @@
         "shortName": "CreateFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.Feed>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -552,6 +724,16 @@
       "clientMethod": {
         "shortName": "GetFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.GetFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.Feed",
         "client": {
           "shortName": "AssetServiceClient",
@@ -591,6 +773,16 @@
         "shortName": "GetFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.GetFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.Feed>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -629,6 +821,16 @@
       "clientMethod": {
         "shortName": "GetFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.Feed",
         "client": {
           "shortName": "AssetServiceClient",
@@ -667,6 +869,16 @@
         "shortName": "GetFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.Feed>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -704,6 +916,16 @@
       "clientMethod": {
         "shortName": "GetFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.Feed",
         "client": {
           "shortName": "AssetServiceClient",
@@ -742,6 +964,16 @@
         "shortName": "GetFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.Feed>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -779,6 +1011,16 @@
       "clientMethod": {
         "shortName": "ListFeeds",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListFeeds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.ListFeedsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.ListFeedsResponse",
         "client": {
           "shortName": "AssetServiceClient",
@@ -818,6 +1060,16 @@
         "shortName": "ListFeedsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListFeedsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.ListFeedsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.ListFeedsResponse>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -856,6 +1108,16 @@
       "clientMethod": {
         "shortName": "ListFeeds",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListFeeds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.ListFeedsResponse",
         "client": {
           "shortName": "AssetServiceClient",
@@ -894,6 +1156,16 @@
         "shortName": "ListFeedsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListFeedsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.ListFeedsResponse>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -931,6 +1203,16 @@
       "clientMethod": {
         "shortName": "UpdateFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.UpdateFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.Feed",
         "client": {
           "shortName": "AssetServiceClient",
@@ -970,6 +1252,16 @@
         "shortName": "UpdateFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.UpdateFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.Feed>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1008,6 +1300,16 @@
       "clientMethod": {
         "shortName": "UpdateFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.Feed",
+            "name": "feed"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.Feed",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1046,6 +1348,16 @@
         "shortName": "UpdateFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.Feed",
+            "name": "feed"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.Feed>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1083,6 +1395,16 @@
       "clientMethod": {
         "shortName": "DeleteFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.DeleteFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssetServiceClient",
           "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
@@ -1121,6 +1443,16 @@
         "shortName": "DeleteFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.DeleteFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1159,6 +1491,16 @@
       "clientMethod": {
         "shortName": "DeleteFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssetServiceClient",
           "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
@@ -1196,6 +1538,16 @@
         "shortName": "DeleteFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1233,6 +1585,16 @@
       "clientMethod": {
         "shortName": "DeleteFeed",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssetServiceClient",
           "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
@@ -1270,6 +1632,16 @@
         "shortName": "DeleteFeedAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteFeedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1307,6 +1679,16 @@
       "clientMethod": {
         "shortName": "SearchAllResources",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.SearchAllResources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SearchAllResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.SearchAllResourcesResponse, Google.Cloud.Asset.V1.ResourceSearchResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1346,6 +1728,16 @@
         "shortName": "SearchAllResourcesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.SearchAllResourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SearchAllResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.SearchAllResourcesResponse, Google.Cloud.Asset.V1.ResourceSearchResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1384,6 +1776,32 @@
       "clientMethod": {
         "shortName": "SearchAllResources",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.SearchAllResources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "assetTypes"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.SearchAllResourcesResponse, Google.Cloud.Asset.V1.ResourceSearchResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1422,6 +1840,32 @@
         "shortName": "SearchAllResourcesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.SearchAllResourcesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "assetTypes"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.SearchAllResourcesResponse, Google.Cloud.Asset.V1.ResourceSearchResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1459,6 +1903,16 @@
       "clientMethod": {
         "shortName": "SearchAllIamPolicies",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.SearchAllIamPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse, Google.Cloud.Asset.V1.IamPolicySearchResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1498,6 +1952,16 @@
         "shortName": "SearchAllIamPoliciesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.SearchAllIamPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse, Google.Cloud.Asset.V1.IamPolicySearchResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1536,6 +2000,28 @@
       "clientMethod": {
         "shortName": "SearchAllIamPolicies",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.SearchAllIamPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse, Google.Cloud.Asset.V1.IamPolicySearchResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1574,6 +2060,28 @@
         "shortName": "SearchAllIamPoliciesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.SearchAllIamPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse, Google.Cloud.Asset.V1.IamPolicySearchResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1611,6 +2119,16 @@
       "clientMethod": {
         "shortName": "AnalyzeIamPolicy",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1650,6 +2168,16 @@
         "shortName": "AnalyzeIamPolicyAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1688,6 +2216,16 @@
       "clientMethod": {
         "shortName": "AnalyzeIamPolicyLongrunning",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeIamPolicyLongrunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningResponse, Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningMetadata>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1727,6 +2265,16 @@
         "shortName": "AnalyzeIamPolicyLongrunningAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeIamPolicyLongrunningAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningResponse, Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningMetadata>>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1765,6 +2313,16 @@
       "clientMethod": {
         "shortName": "AnalyzeMove",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeMove",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeMoveRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.AnalyzeMoveResponse",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1804,6 +2362,16 @@
         "shortName": "AnalyzeMoveAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeMoveAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeMoveRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.AnalyzeMoveResponse>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1842,6 +2410,16 @@
       "clientMethod": {
         "shortName": "QueryAssets",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.QueryAssets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.QueryAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.QueryAssetsResponse",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1881,6 +2459,16 @@
         "shortName": "QueryAssetsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.QueryAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.QueryAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.QueryAssetsResponse>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1919,6 +2507,16 @@
       "clientMethod": {
         "shortName": "CreateSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.CreateSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1958,6 +2556,16 @@
         "shortName": "CreateSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.CreateSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -1996,6 +2604,24 @@
       "clientMethod": {
         "shortName": "CreateSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "savedQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2034,6 +2660,24 @@
         "shortName": "CreateSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "savedQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2071,6 +2715,24 @@
       "clientMethod": {
         "shortName": "CreateSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "savedQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2109,6 +2771,24 @@
         "shortName": "CreateSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "savedQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2146,6 +2826,24 @@
       "clientMethod": {
         "shortName": "CreateSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "savedQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2184,6 +2882,24 @@
         "shortName": "CreateSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "savedQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2221,6 +2937,24 @@
       "clientMethod": {
         "shortName": "CreateSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "savedQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2259,6 +2993,24 @@
         "shortName": "CreateSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.CreateSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "System.String",
+            "name": "savedQueryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2296,6 +3048,16 @@
       "clientMethod": {
         "shortName": "GetSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.GetSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2335,6 +3097,16 @@
         "shortName": "GetSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.GetSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2373,6 +3145,16 @@
       "clientMethod": {
         "shortName": "GetSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2411,6 +3193,16 @@
         "shortName": "GetSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2448,6 +3240,16 @@
       "clientMethod": {
         "shortName": "GetSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2486,6 +3288,16 @@
         "shortName": "GetSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.GetSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2523,6 +3335,16 @@
       "clientMethod": {
         "shortName": "ListSavedQueries",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.ListSavedQueriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2562,6 +3384,16 @@
         "shortName": "ListSavedQueriesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.ListSavedQueriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2600,6 +3432,24 @@
       "clientMethod": {
         "shortName": "ListSavedQueries",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2638,6 +3488,24 @@
         "shortName": "ListSavedQueriesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2675,6 +3543,24 @@
       "clientMethod": {
         "shortName": "ListSavedQueries",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2713,6 +3599,24 @@
         "shortName": "ListSavedQueriesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2750,6 +3654,24 @@
       "clientMethod": {
         "shortName": "ListSavedQueries",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2788,6 +3710,24 @@
         "shortName": "ListSavedQueriesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.FolderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2825,6 +3765,24 @@
       "clientMethod": {
         "shortName": "ListSavedQueries",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2863,6 +3821,24 @@
         "shortName": "ListSavedQueriesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.ListSavedQueriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.ListSavedQueriesResponse, Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2900,6 +3876,16 @@
       "clientMethod": {
         "shortName": "UpdateSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.UpdateSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2939,6 +3925,16 @@
         "shortName": "UpdateSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.UpdateSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -2977,6 +3973,20 @@
       "clientMethod": {
         "shortName": "UpdateSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.SavedQuery",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3015,6 +4025,20 @@
         "shortName": "UpdateSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.UpdateSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQuery",
+            "name": "savedQuery"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.SavedQuery>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3052,6 +4076,16 @@
       "clientMethod": {
         "shortName": "DeleteSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.DeleteSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssetServiceClient",
           "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
@@ -3090,6 +4124,16 @@
         "shortName": "DeleteSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.DeleteSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3128,6 +4172,16 @@
       "clientMethod": {
         "shortName": "DeleteSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssetServiceClient",
           "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
@@ -3165,6 +4219,16 @@
         "shortName": "DeleteSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3202,6 +4266,16 @@
       "clientMethod": {
         "shortName": "DeleteSavedQuery",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AssetServiceClient",
           "fullName": "Google.Cloud.Asset.V1.AssetServiceClient"
@@ -3239,6 +4313,16 @@
         "shortName": "DeleteSavedQueryAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.DeleteSavedQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.SavedQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3276,6 +4360,16 @@
       "clientMethod": {
         "shortName": "BatchGetEffectiveIamPolicies",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.BatchGetEffectiveIamPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3315,6 +4409,16 @@
         "shortName": "BatchGetEffectiveIamPoliciesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.BatchGetEffectiveIamPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3353,6 +4457,16 @@
       "clientMethod": {
         "shortName": "AnalyzeOrgPolicies",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse, Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse+Types+OrgPolicyResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3392,6 +4506,16 @@
         "shortName": "AnalyzeOrgPoliciesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse, Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse+Types+OrgPolicyResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3430,6 +4554,32 @@
       "clientMethod": {
         "shortName": "AnalyzeOrgPolicies",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "constraint"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse, Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse+Types+OrgPolicyResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3468,6 +4618,32 @@
         "shortName": "AnalyzeOrgPoliciesAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "constraint"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse, Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse+Types+OrgPolicyResult>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3505,6 +4681,16 @@
       "clientMethod": {
         "shortName": "AnalyzeOrgPolicyGovernedContainers",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedContainers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse+Types+GovernedContainer>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3544,6 +4730,16 @@
         "shortName": "AnalyzeOrgPolicyGovernedContainersAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedContainersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse+Types+GovernedContainer>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3582,6 +4778,32 @@
       "clientMethod": {
         "shortName": "AnalyzeOrgPolicyGovernedContainers",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedContainers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "constraint"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse+Types+GovernedContainer>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3620,6 +4842,32 @@
         "shortName": "AnalyzeOrgPolicyGovernedContainersAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedContainersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "constraint"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse+Types+GovernedContainer>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3657,6 +4905,16 @@
       "clientMethod": {
         "shortName": "AnalyzeOrgPolicyGovernedAssets",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedAssets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse+Types+GovernedAsset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3696,6 +4954,16 @@
         "shortName": "AnalyzeOrgPolicyGovernedAssetsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse+Types+GovernedAsset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3734,6 +5002,32 @@
       "clientMethod": {
         "shortName": "AnalyzeOrgPolicyGovernedAssets",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedAssets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "constraint"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse+Types+GovernedAsset>",
         "client": {
           "shortName": "AssetServiceClient",
@@ -3772,6 +5066,32 @@
         "shortName": "AnalyzeOrgPolicyGovernedAssetsAsync",
         "fullName": "Google.Cloud.Asset.V1.AssetServiceClient.AnalyzeOrgPolicyGovernedAssetsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "System.String",
+            "name": "constraint"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse, Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse+Types+GovernedAsset>",
         "client": {
           "shortName": "AssetServiceClient",

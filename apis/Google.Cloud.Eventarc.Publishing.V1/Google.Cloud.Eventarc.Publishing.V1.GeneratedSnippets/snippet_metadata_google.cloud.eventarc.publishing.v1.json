@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "PublishChannelConnectionEvents",
         "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient.PublishChannelConnectionEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsResponse",
         "client": {
           "shortName": "PublisherClient",
@@ -58,6 +68,16 @@
         "shortName": "PublishChannelConnectionEventsAsync",
         "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient.PublishChannelConnectionEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.Publishing.V1.PublishChannelConnectionEventsResponse>",
         "client": {
           "shortName": "PublisherClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "PublishEvents",
         "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient.PublishEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse",
         "client": {
           "shortName": "PublisherClient",
@@ -135,6 +165,16 @@
         "shortName": "PublishEventsAsync",
         "fullName": "Google.Cloud.Eventarc.Publishing.V1.PublisherClient.PublishEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.Publishing.V1.PublishEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.Publishing.V1.PublishEventsResponse>",
         "client": {
           "shortName": "PublisherClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListQueues",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueues",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ListQueuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -58,6 +68,16 @@
         "shortName": "ListQueuesAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueuesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ListQueuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListQueues",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueues",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -134,6 +172,24 @@
         "shortName": "ListQueuesAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueuesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListQueues",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueues",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -209,6 +283,24 @@
         "shortName": "ListQueuesAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueuesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -285,6 +387,16 @@
         "shortName": "GetQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -361,6 +483,16 @@
         "shortName": "GetQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -436,6 +578,16 @@
         "shortName": "GetQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CreateQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CreateQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -550,6 +722,20 @@
       "clientMethod": {
         "shortName": "CreateQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -588,6 +774,20 @@
         "shortName": "CreateQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -625,6 +825,20 @@
       "clientMethod": {
         "shortName": "CreateQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueue",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -663,6 +877,20 @@
         "shortName": "CreateQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -700,6 +928,16 @@
       "clientMethod": {
         "shortName": "UpdateQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -739,6 +977,16 @@
         "shortName": "UpdateQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -777,6 +1025,20 @@
       "clientMethod": {
         "shortName": "UpdateQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -815,6 +1077,20 @@
         "shortName": "UpdateQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -852,6 +1128,16 @@
       "clientMethod": {
         "shortName": "DeleteQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudTasksClient",
           "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
@@ -890,6 +1176,16 @@
         "shortName": "DeleteQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -928,6 +1224,16 @@
       "clientMethod": {
         "shortName": "DeleteQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudTasksClient",
           "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
@@ -965,6 +1271,16 @@
         "shortName": "DeleteQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1002,6 +1318,16 @@
       "clientMethod": {
         "shortName": "DeleteQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudTasksClient",
           "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
@@ -1039,6 +1365,16 @@
         "shortName": "DeleteQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1076,6 +1412,16 @@
       "clientMethod": {
         "shortName": "PurgeQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1115,6 +1461,16 @@
         "shortName": "PurgeQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1153,6 +1509,16 @@
       "clientMethod": {
         "shortName": "PurgeQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1191,6 +1557,16 @@
         "shortName": "PurgeQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1228,6 +1604,16 @@
       "clientMethod": {
         "shortName": "PurgeQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1266,6 +1652,16 @@
         "shortName": "PurgeQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1303,6 +1699,16 @@
       "clientMethod": {
         "shortName": "PauseQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.PauseQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1342,6 +1748,16 @@
         "shortName": "PauseQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.PauseQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1380,6 +1796,16 @@
       "clientMethod": {
         "shortName": "PauseQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1418,6 +1844,16 @@
         "shortName": "PauseQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1455,6 +1891,16 @@
       "clientMethod": {
         "shortName": "PauseQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1493,6 +1939,16 @@
         "shortName": "PauseQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1530,6 +1986,16 @@
       "clientMethod": {
         "shortName": "ResumeQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1569,6 +2035,16 @@
         "shortName": "ResumeQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1607,6 +2083,16 @@
       "clientMethod": {
         "shortName": "ResumeQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1645,6 +2131,16 @@
         "shortName": "ResumeQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1682,6 +2178,16 @@
       "clientMethod": {
         "shortName": "ResumeQueue",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1720,6 +2226,16 @@
         "shortName": "ResumeQueueAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueueAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1757,6 +2273,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1796,6 +2322,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1834,6 +2370,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1872,6 +2418,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1909,6 +2465,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1947,6 +2513,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -1984,6 +2560,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2023,6 +2609,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2061,6 +2657,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2099,6 +2709,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2136,6 +2760,20 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2174,6 +2812,20 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2211,6 +2863,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2250,6 +2912,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2288,6 +2960,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2326,6 +3012,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2363,6 +3063,20 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2401,6 +3115,20 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2438,6 +3166,16 @@
       "clientMethod": {
         "shortName": "ListTasks",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ListTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2477,6 +3215,16 @@
         "shortName": "ListTasksAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ListTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2515,6 +3263,24 @@
       "clientMethod": {
         "shortName": "ListTasks",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2553,6 +3319,24 @@
         "shortName": "ListTasksAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2590,6 +3374,24 @@
       "clientMethod": {
         "shortName": "ListTasks",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2628,6 +3430,24 @@
         "shortName": "ListTasksAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2665,6 +3485,16 @@
       "clientMethod": {
         "shortName": "GetTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2704,6 +3534,16 @@
         "shortName": "GetTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2742,6 +3582,16 @@
       "clientMethod": {
         "shortName": "GetTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2780,6 +3630,16 @@
         "shortName": "GetTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2817,6 +3677,16 @@
       "clientMethod": {
         "shortName": "GetTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2855,6 +3725,16 @@
         "shortName": "GetTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2892,6 +3772,16 @@
       "clientMethod": {
         "shortName": "CreateTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CreateTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2931,6 +3821,16 @@
         "shortName": "CreateTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CreateTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -2969,6 +3869,20 @@
       "clientMethod": {
         "shortName": "CreateTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Task",
+            "name": "task"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3007,6 +3921,20 @@
         "shortName": "CreateTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Task",
+            "name": "task"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3044,6 +3972,20 @@
       "clientMethod": {
         "shortName": "CreateTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Task",
+            "name": "task"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3082,6 +4024,20 @@
         "shortName": "CreateTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Task",
+            "name": "task"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3119,6 +4075,16 @@
       "clientMethod": {
         "shortName": "DeleteTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudTasksClient",
           "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
@@ -3157,6 +4123,16 @@
         "shortName": "DeleteTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3195,6 +4171,16 @@
       "clientMethod": {
         "shortName": "DeleteTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudTasksClient",
           "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
@@ -3232,6 +4218,16 @@
         "shortName": "DeleteTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3269,6 +4265,16 @@
       "clientMethod": {
         "shortName": "DeleteTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "CloudTasksClient",
           "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
@@ -3306,6 +4312,16 @@
         "shortName": "DeleteTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3343,6 +4359,16 @@
       "clientMethod": {
         "shortName": "RunTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.RunTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3382,6 +4408,16 @@
         "shortName": "RunTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.RunTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3420,6 +4456,16 @@
       "clientMethod": {
         "shortName": "RunTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3458,6 +4504,16 @@
         "shortName": "RunTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3495,6 +4551,16 @@
       "clientMethod": {
         "shortName": "RunTask",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
         "client": {
           "shortName": "CloudTasksClient",
@@ -3533,6 +4599,16 @@
         "shortName": "RunTaskAsync",
         "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTaskAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
         "client": {
           "shortName": "CloudTasksClient",

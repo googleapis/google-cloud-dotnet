@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Session",
         "client": {
           "shortName": "SpannerClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "CreateSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CreateSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Session",
         "client": {
           "shortName": "SpannerClient",
@@ -134,6 +164,16 @@
         "shortName": "CreateSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "CreateSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Session",
         "client": {
           "shortName": "SpannerClient",
@@ -209,6 +259,16 @@
         "shortName": "CreateSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CreateSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "BatchCreateSessions",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchCreateSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.BatchCreateSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.BatchCreateSessionsResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -285,6 +355,16 @@
         "shortName": "BatchCreateSessionsAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchCreateSessionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.BatchCreateSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.BatchCreateSessionsResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -323,6 +403,20 @@
       "clientMethod": {
         "shortName": "BatchCreateSessions",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchCreateSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.Int32",
+            "name": "sessionCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.BatchCreateSessionsResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -361,6 +455,20 @@
         "shortName": "BatchCreateSessionsAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchCreateSessionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.Int32",
+            "name": "sessionCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.BatchCreateSessionsResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -398,6 +506,20 @@
       "clientMethod": {
         "shortName": "BatchCreateSessions",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchCreateSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "System.Int32",
+            "name": "sessionCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.BatchCreateSessionsResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -436,6 +558,20 @@
         "shortName": "BatchCreateSessionsAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BatchCreateSessionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "System.Int32",
+            "name": "sessionCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.BatchCreateSessionsResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -473,6 +609,16 @@
       "clientMethod": {
         "shortName": "GetSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Session",
         "client": {
           "shortName": "SpannerClient",
@@ -512,6 +658,16 @@
         "shortName": "GetSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -550,6 +706,16 @@
       "clientMethod": {
         "shortName": "GetSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.GetSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Session",
         "client": {
           "shortName": "SpannerClient",
@@ -588,6 +754,16 @@
         "shortName": "GetSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -625,6 +801,16 @@
       "clientMethod": {
         "shortName": "GetSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Session",
         "client": {
           "shortName": "SpannerClient",
@@ -663,6 +849,16 @@
         "shortName": "GetSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.GetSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -700,6 +896,16 @@
       "clientMethod": {
         "shortName": "ListSessions",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.V1.ListSessionsResponse, Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -739,6 +945,16 @@
         "shortName": "ListSessionsAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.V1.ListSessionsResponse, Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -777,6 +993,24 @@
       "clientMethod": {
         "shortName": "ListSessions",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ListSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.V1.ListSessionsResponse, Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -815,6 +1049,24 @@
         "shortName": "ListSessionsAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.V1.ListSessionsResponse, Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -852,6 +1104,24 @@
       "clientMethod": {
         "shortName": "ListSessions",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.V1.ListSessionsResponse, Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -890,6 +1160,24 @@
         "shortName": "ListSessionsAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ListSessionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.V1.ListSessionsResponse, Google.Cloud.Spanner.V1.Session>",
         "client": {
           "shortName": "SpannerClient",
@@ -927,6 +1215,16 @@
       "clientMethod": {
         "shortName": "DeleteSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SpannerClient",
           "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
@@ -965,6 +1263,16 @@
         "shortName": "DeleteSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SpannerClient",
@@ -1003,6 +1311,16 @@
       "clientMethod": {
         "shortName": "DeleteSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SpannerClient",
           "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
@@ -1040,6 +1358,16 @@
         "shortName": "DeleteSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SpannerClient",
@@ -1077,6 +1405,16 @@
       "clientMethod": {
         "shortName": "DeleteSession",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SpannerClient",
           "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
@@ -1114,6 +1452,16 @@
         "shortName": "DeleteSessionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.DeleteSessionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SpannerClient",
@@ -1151,6 +1499,16 @@
       "clientMethod": {
         "shortName": "ExecuteSql",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ExecuteSql",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ExecuteSqlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.ResultSet",
         "client": {
           "shortName": "SpannerClient",
@@ -1190,6 +1548,16 @@
         "shortName": "ExecuteSqlAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ExecuteSqlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ExecuteSqlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.ResultSet>",
         "client": {
           "shortName": "SpannerClient",
@@ -1228,6 +1596,16 @@
       "clientMethod": {
         "shortName": "ExecuteStreamingSql",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ExecuteStreamingSql",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ExecuteSqlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.SpannerClient+ExecuteStreamingSqlStream",
         "client": {
           "shortName": "SpannerClient",
@@ -1266,6 +1644,16 @@
       "clientMethod": {
         "shortName": "ExecuteBatchDml",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ExecuteBatchDml",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -1305,6 +1693,16 @@
         "shortName": "ExecuteBatchDmlAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ExecuteBatchDmlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -1343,6 +1741,16 @@
       "clientMethod": {
         "shortName": "Read",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Read",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ReadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.ResultSet",
         "client": {
           "shortName": "SpannerClient",
@@ -1382,6 +1790,16 @@
         "shortName": "ReadAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.ReadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ReadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.ResultSet>",
         "client": {
           "shortName": "SpannerClient",
@@ -1420,6 +1838,16 @@
       "clientMethod": {
         "shortName": "StreamingRead",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.StreamingRead",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.ReadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.SpannerClient+StreamingReadStream",
         "client": {
           "shortName": "SpannerClient",
@@ -1458,6 +1886,16 @@
       "clientMethod": {
         "shortName": "BeginTransaction",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.BeginTransactionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Transaction",
         "client": {
           "shortName": "SpannerClient",
@@ -1497,6 +1935,16 @@
         "shortName": "BeginTransactionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.BeginTransactionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Transaction>",
         "client": {
           "shortName": "SpannerClient",
@@ -1535,6 +1983,20 @@
       "clientMethod": {
         "shortName": "BeginTransaction",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "Google.Cloud.Spanner.V1.TransactionOptions",
+            "name": "options"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Transaction",
         "client": {
           "shortName": "SpannerClient",
@@ -1573,6 +2035,20 @@
         "shortName": "BeginTransactionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "Google.Cloud.Spanner.V1.TransactionOptions",
+            "name": "options"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Transaction>",
         "client": {
           "shortName": "SpannerClient",
@@ -1610,6 +2086,20 @@
       "clientMethod": {
         "shortName": "BeginTransaction",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "Google.Cloud.Spanner.V1.TransactionOptions",
+            "name": "options"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.Transaction",
         "client": {
           "shortName": "SpannerClient",
@@ -1648,6 +2138,20 @@
         "shortName": "BeginTransactionAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.BeginTransactionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "Google.Cloud.Spanner.V1.TransactionOptions",
+            "name": "options"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.Transaction>",
         "client": {
           "shortName": "SpannerClient",
@@ -1685,6 +2189,16 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Commit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.CommitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.CommitResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -1724,6 +2238,16 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.CommitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.CommitResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -1762,6 +2286,24 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Commit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transactionId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.CommitResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -1800,6 +2342,24 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transactionId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.CommitResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -1837,6 +2397,24 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Commit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transactionId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.CommitResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -1875,6 +2453,24 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transactionId"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.CommitResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -1912,6 +2508,24 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Commit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "Google.Cloud.Spanner.V1.TransactionOptions",
+            "name": "singleUseTransaction"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.CommitResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -1950,6 +2564,24 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "Google.Cloud.Spanner.V1.TransactionOptions",
+            "name": "singleUseTransaction"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.CommitResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -1987,6 +2619,24 @@
       "clientMethod": {
         "shortName": "Commit",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Commit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "Google.Cloud.Spanner.V1.TransactionOptions",
+            "name": "singleUseTransaction"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.CommitResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -2025,6 +2675,24 @@
         "shortName": "CommitAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.CommitAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "Google.Cloud.Spanner.V1.TransactionOptions",
+            "name": "singleUseTransaction"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.V1.Mutation>",
+            "name": "mutations"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.CommitResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -2062,6 +2730,16 @@
       "clientMethod": {
         "shortName": "Rollback",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Rollback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.RollbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SpannerClient",
           "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
@@ -2100,6 +2778,16 @@
         "shortName": "RollbackAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.RollbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SpannerClient",
@@ -2138,6 +2826,20 @@
       "clientMethod": {
         "shortName": "Rollback",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Rollback",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transactionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SpannerClient",
           "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
@@ -2175,6 +2877,20 @@
         "shortName": "RollbackAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transactionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SpannerClient",
@@ -2212,6 +2928,20 @@
       "clientMethod": {
         "shortName": "Rollback",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.Rollback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transactionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "SpannerClient",
           "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
@@ -2249,6 +2979,20 @@
         "shortName": "RollbackAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.RollbackAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.SessionName",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transactionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "SpannerClient",
@@ -2286,6 +3030,16 @@
       "clientMethod": {
         "shortName": "PartitionQuery",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.PartitionQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.PartitionQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.PartitionResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -2325,6 +3079,16 @@
         "shortName": "PartitionQueryAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.PartitionQueryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.PartitionQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.PartitionResponse>",
         "client": {
           "shortName": "SpannerClient",
@@ -2363,6 +3127,16 @@
       "clientMethod": {
         "shortName": "PartitionRead",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.PartitionRead",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.PartitionReadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Spanner.V1.PartitionResponse",
         "client": {
           "shortName": "SpannerClient",
@@ -2402,6 +3176,16 @@
         "shortName": "PartitionReadAsync",
         "fullName": "Google.Cloud.Spanner.V1.SpannerClient.PartitionReadAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.PartitionReadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.V1.PartitionResponse>",
         "client": {
           "shortName": "SpannerClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListServicesResponse, Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -58,6 +68,16 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListServicesResponse, Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListServices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListServicesResponse, Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -134,6 +172,24 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListServicesResponse, Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListServicesResponse, Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -209,6 +283,24 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListServicesResponse, Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Service",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -285,6 +387,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Service",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -361,6 +483,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Service",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -436,6 +578,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Service>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.CreateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.CreateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateService",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.UpdateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.UpdateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.UpdateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.UpdateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.UpdateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Service",
+            "name": "service"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.UpdateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Service",
+            "name": "service"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Service, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "ListMetadataImports",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListMetadataImports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ListMetadataImportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListMetadataImportsResponse, Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1118,6 +1480,16 @@
         "shortName": "ListMetadataImportsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListMetadataImportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ListMetadataImportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListMetadataImportsResponse, Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1156,6 +1528,24 @@
       "clientMethod": {
         "shortName": "ListMetadataImports",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListMetadataImports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListMetadataImportsResponse, Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1194,6 +1584,24 @@
         "shortName": "ListMetadataImportsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListMetadataImportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListMetadataImportsResponse, Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1231,6 +1639,24 @@
       "clientMethod": {
         "shortName": "ListMetadataImports",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListMetadataImports",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListMetadataImportsResponse, Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1269,6 +1695,24 @@
         "shortName": "ListMetadataImportsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListMetadataImportsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListMetadataImportsResponse, Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1306,6 +1750,16 @@
       "clientMethod": {
         "shortName": "GetMetadataImport",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetMetadataImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.GetMetadataImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1345,6 +1799,16 @@
         "shortName": "GetMetadataImportAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetMetadataImportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.GetMetadataImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1383,6 +1847,16 @@
       "clientMethod": {
         "shortName": "GetMetadataImport",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetMetadataImport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1421,6 +1895,16 @@
         "shortName": "GetMetadataImportAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetMetadataImportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1458,6 +1942,16 @@
       "clientMethod": {
         "shortName": "GetMetadataImport",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetMetadataImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MetadataImportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1496,6 +1990,16 @@
         "shortName": "GetMetadataImportAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetMetadataImportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MetadataImportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.MetadataImport>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "CreateMetadataImport",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateMetadataImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.CreateMetadataImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1572,6 +2086,16 @@
         "shortName": "CreateMetadataImportAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateMetadataImportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.CreateMetadataImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1610,6 +2134,24 @@
       "clientMethod": {
         "shortName": "CreateMetadataImport",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateMetadataImport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
+            "name": "metadataImport"
+          },
+          {
+            "type": "System.String",
+            "name": "metadataImportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1648,6 +2190,24 @@
         "shortName": "CreateMetadataImportAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateMetadataImportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
+            "name": "metadataImport"
+          },
+          {
+            "type": "System.String",
+            "name": "metadataImportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1685,6 +2245,24 @@
       "clientMethod": {
         "shortName": "CreateMetadataImport",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateMetadataImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
+            "name": "metadataImport"
+          },
+          {
+            "type": "System.String",
+            "name": "metadataImportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1723,6 +2301,24 @@
         "shortName": "CreateMetadataImportAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateMetadataImportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
+            "name": "metadataImport"
+          },
+          {
+            "type": "System.String",
+            "name": "metadataImportId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1760,6 +2356,16 @@
       "clientMethod": {
         "shortName": "UpdateMetadataImport",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.UpdateMetadataImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.UpdateMetadataImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1799,6 +2405,16 @@
         "shortName": "UpdateMetadataImportAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.UpdateMetadataImportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.UpdateMetadataImportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1837,6 +2453,20 @@
       "clientMethod": {
         "shortName": "UpdateMetadataImport",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.UpdateMetadataImport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
+            "name": "metadataImport"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1875,6 +2505,20 @@
         "shortName": "UpdateMetadataImportAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.UpdateMetadataImportAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MetadataImport",
+            "name": "metadataImport"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataImport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1912,6 +2556,16 @@
       "clientMethod": {
         "shortName": "ExportMetadata",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ExportMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ExportMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataExport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1951,6 +2605,16 @@
         "shortName": "ExportMetadataAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ExportMetadataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ExportMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MetadataExport, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -1989,6 +2653,16 @@
       "clientMethod": {
         "shortName": "RestoreService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.RestoreService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.RestoreServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Restore, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2028,6 +2702,16 @@
         "shortName": "RestoreServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.RestoreServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.RestoreServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Restore, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2066,6 +2750,20 @@
       "clientMethod": {
         "shortName": "RestoreService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.RestoreService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Restore, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2104,6 +2802,20 @@
         "shortName": "RestoreServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.RestoreServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Restore, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2141,6 +2853,20 @@
       "clientMethod": {
         "shortName": "RestoreService",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.RestoreService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "service"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.BackupName",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Restore, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2179,6 +2905,20 @@
         "shortName": "RestoreServiceAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.RestoreServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "service"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.BackupName",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Restore, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2216,6 +2956,16 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListBackupsResponse, Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2255,6 +3005,16 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ListBackupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListBackupsResponse, Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2293,6 +3053,24 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListBackups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListBackupsResponse, Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2331,6 +3109,24 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListBackupsResponse, Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2368,6 +3164,24 @@
       "clientMethod": {
         "shortName": "ListBackups",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListBackups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListBackupsResponse, Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2406,6 +3220,24 @@
         "shortName": "ListBackupsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.ListBackupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListBackupsResponse, Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2443,6 +3275,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Backup",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2482,6 +3324,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.GetBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2520,6 +3372,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Backup",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2558,6 +3420,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2595,6 +3467,16 @@
       "clientMethod": {
         "shortName": "GetBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Backup",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2633,6 +3515,16 @@
         "shortName": "GetBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.GetBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Backup>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2670,6 +3562,16 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.CreateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Backup, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2709,6 +3611,16 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.CreateBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Backup, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2747,6 +3659,24 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Backup, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2785,6 +3715,24 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Backup, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2822,6 +3770,24 @@
       "clientMethod": {
         "shortName": "CreateBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Backup, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2860,6 +3826,24 @@
         "shortName": "CreateBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.CreateBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Backup",
+            "name": "backup"
+          },
+          {
+            "type": "System.String",
+            "name": "backupId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Backup, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2897,6 +3881,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2936,6 +3930,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.DeleteBackupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -2974,6 +3978,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3012,6 +4026,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3049,6 +4073,16 @@
       "clientMethod": {
         "shortName": "DeleteBackup",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteBackup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3087,6 +4121,16 @@
         "shortName": "DeleteBackupAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.DeleteBackupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.BackupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3124,6 +4168,16 @@
       "clientMethod": {
         "shortName": "RemoveIamPolicy",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.RemoveIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3163,6 +4217,16 @@
         "shortName": "RemoveIamPolicyAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.RemoveIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.RemoveIamPolicyResponse>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3201,6 +4265,16 @@
       "clientMethod": {
         "shortName": "QueryMetadata",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.QueryMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.QueryMetadataResponse, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3240,6 +4314,16 @@
         "shortName": "QueryMetadataAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.QueryMetadataAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.QueryMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.QueryMetadataResponse, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3278,6 +4362,16 @@
       "clientMethod": {
         "shortName": "MoveTableToDatabase",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.MoveTableToDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseResponse, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3317,6 +4411,16 @@
         "shortName": "MoveTableToDatabaseAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.MoveTableToDatabaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.MoveTableToDatabaseResponse, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3355,6 +4459,16 @@
       "clientMethod": {
         "shortName": "AlterMetadataResourceLocation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.AlterMetadataResourceLocation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationResponse, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3394,6 +4508,16 @@
         "shortName": "AlterMetadataResourceLocationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreClient.AlterMetadataResourceLocationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.AlterMetadataResourceLocationResponse, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreClient",
@@ -3432,6 +4556,16 @@
       "clientMethod": {
         "shortName": "ListFederations",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ListFederationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3471,6 +4605,16 @@
         "shortName": "ListFederationsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.ListFederationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3509,6 +4653,24 @@
       "clientMethod": {
         "shortName": "ListFederations",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3547,6 +4709,24 @@
         "shortName": "ListFederationsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3584,6 +4764,24 @@
       "clientMethod": {
         "shortName": "ListFederations",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3622,6 +4820,24 @@
         "shortName": "ListFederationsAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.ListFederationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Metastore.V1Alpha.ListFederationsResponse, Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3659,6 +4875,16 @@
       "clientMethod": {
         "shortName": "GetFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.GetFederationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Federation",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3698,6 +4924,16 @@
         "shortName": "GetFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.GetFederationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3736,6 +4972,16 @@
       "clientMethod": {
         "shortName": "GetFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Federation",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3774,6 +5020,16 @@
         "shortName": "GetFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3811,6 +5067,16 @@
       "clientMethod": {
         "shortName": "GetFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.FederationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Metastore.V1Alpha.Federation",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3849,6 +5115,16 @@
         "shortName": "GetFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.GetFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.FederationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Metastore.V1Alpha.Federation>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3886,6 +5162,16 @@
       "clientMethod": {
         "shortName": "CreateFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.CreateFederationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3925,6 +5211,16 @@
         "shortName": "CreateFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.CreateFederationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -3963,6 +5259,24 @@
       "clientMethod": {
         "shortName": "CreateFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Federation",
+            "name": "federation"
+          },
+          {
+            "type": "System.String",
+            "name": "federationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4001,6 +5315,24 @@
         "shortName": "CreateFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Federation",
+            "name": "federation"
+          },
+          {
+            "type": "System.String",
+            "name": "federationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4038,6 +5370,24 @@
       "clientMethod": {
         "shortName": "CreateFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederation",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Federation",
+            "name": "federation"
+          },
+          {
+            "type": "System.String",
+            "name": "federationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4076,6 +5426,24 @@
         "shortName": "CreateFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.CreateFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Federation",
+            "name": "federation"
+          },
+          {
+            "type": "System.String",
+            "name": "federationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4113,6 +5481,16 @@
       "clientMethod": {
         "shortName": "UpdateFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.UpdateFederation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.UpdateFederationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4152,6 +5530,16 @@
         "shortName": "UpdateFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.UpdateFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.UpdateFederationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4190,6 +5578,20 @@
       "clientMethod": {
         "shortName": "UpdateFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.UpdateFederation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Federation",
+            "name": "federation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4228,6 +5630,20 @@
         "shortName": "UpdateFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.UpdateFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.Federation",
+            "name": "federation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Metastore.V1Alpha.Federation, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4265,6 +5681,16 @@
       "clientMethod": {
         "shortName": "DeleteFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.DeleteFederationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4304,6 +5730,16 @@
         "shortName": "DeleteFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.DeleteFederationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4342,6 +5778,16 @@
       "clientMethod": {
         "shortName": "DeleteFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4380,6 +5826,16 @@
         "shortName": "DeleteFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4417,6 +5873,16 @@
       "clientMethod": {
         "shortName": "DeleteFederation",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.FederationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",
@@ -4455,6 +5921,16 @@
         "shortName": "DeleteFederationAsync",
         "fullName": "Google.Cloud.Metastore.V1Alpha.DataprocMetastoreFederationClient.DeleteFederationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Metastore.V1Alpha.FederationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Metastore.V1Alpha.OperationMetadata>>",
         "client": {
           "shortName": "DataprocMetastoreFederationClient",

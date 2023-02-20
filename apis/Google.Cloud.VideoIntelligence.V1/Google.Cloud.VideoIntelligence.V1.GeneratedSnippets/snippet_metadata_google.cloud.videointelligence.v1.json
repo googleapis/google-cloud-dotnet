@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "AnnotateVideo",
         "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.AnnotateVideo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse, Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress>",
         "client": {
           "shortName": "VideoIntelligenceServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "AnnotateVideoAsync",
         "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.AnnotateVideoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse, Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress>>",
         "client": {
           "shortName": "VideoIntelligenceServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "AnnotateVideo",
         "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.AnnotateVideo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "inputUri"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VideoIntelligence.V1.Feature>",
+            "name": "features"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse, Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress>",
         "client": {
           "shortName": "VideoIntelligenceServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "AnnotateVideoAsync",
         "fullName": "Google.Cloud.VideoIntelligence.V1.VideoIntelligenceServiceClient.AnnotateVideoAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "inputUri"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.VideoIntelligence.V1.Feature>",
+            "name": "features"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse, Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress>>",
         "client": {
           "shortName": "VideoIntelligenceServiceClient",

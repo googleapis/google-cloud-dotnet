@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetAuthorization",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Authorization",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -58,6 +68,16 @@
         "shortName": "GetAuthorizationAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Authorization>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetAuthorization",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorization",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Authorization",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -134,6 +164,16 @@
         "shortName": "GetAuthorizationAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Authorization>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetAuthorization",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.AuthorizationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Authorization",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -209,6 +259,16 @@
         "shortName": "GetAuthorizationAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.AuthorizationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Authorization>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "CreateDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -285,6 +355,16 @@
         "shortName": "CreateDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -323,6 +403,24 @@
       "clientMethod": {
         "shortName": "CreateDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -361,6 +459,24 @@
         "shortName": "CreateDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -398,6 +514,24 @@
       "clientMethod": {
         "shortName": "CreateDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeployment",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -436,6 +570,24 @@
         "shortName": "CreateDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "ReplaceDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ReplaceDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -512,6 +674,16 @@
         "shortName": "ReplaceDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ReplaceDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -550,6 +722,16 @@
       "clientMethod": {
         "shortName": "ReplaceDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ReplaceDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -588,6 +770,16 @@
         "shortName": "ReplaceDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ReplaceDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -625,6 +817,16 @@
       "clientMethod": {
         "shortName": "GetDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -664,6 +866,16 @@
         "shortName": "GetDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -702,6 +914,16 @@
       "clientMethod": {
         "shortName": "GetDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -740,6 +962,16 @@
         "shortName": "GetDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -777,6 +1009,16 @@
       "clientMethod": {
         "shortName": "GetDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -815,6 +1057,16 @@
         "shortName": "GetDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -852,6 +1104,16 @@
       "clientMethod": {
         "shortName": "ListDeployments",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -891,6 +1153,16 @@
         "shortName": "ListDeploymentsAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -929,6 +1201,24 @@
       "clientMethod": {
         "shortName": "ListDeployments",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeployments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -967,6 +1257,24 @@
         "shortName": "ListDeploymentsAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1004,6 +1312,24 @@
       "clientMethod": {
         "shortName": "ListDeployments",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeployments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1042,6 +1368,24 @@
         "shortName": "ListDeploymentsAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeploymentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1079,6 +1423,16 @@
       "clientMethod": {
         "shortName": "DeleteDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1117,6 +1471,16 @@
         "shortName": "DeleteDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1155,6 +1519,16 @@
       "clientMethod": {
         "shortName": "DeleteDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1192,6 +1566,16 @@
         "shortName": "DeleteDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1229,6 +1613,16 @@
       "clientMethod": {
         "shortName": "DeleteDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1266,6 +1660,16 @@
         "shortName": "DeleteDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1303,6 +1707,16 @@
       "clientMethod": {
         "shortName": "InstallDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1341,6 +1755,16 @@
         "shortName": "InstallDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1379,6 +1803,16 @@
       "clientMethod": {
         "shortName": "InstallDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1416,6 +1850,16 @@
         "shortName": "InstallDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1453,6 +1897,16 @@
       "clientMethod": {
         "shortName": "InstallDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1490,6 +1944,16 @@
         "shortName": "InstallDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1527,6 +1991,16 @@
       "clientMethod": {
         "shortName": "UninstallDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1565,6 +2039,16 @@
         "shortName": "UninstallDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1603,6 +2087,16 @@
       "clientMethod": {
         "shortName": "UninstallDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1640,6 +2134,16 @@
         "shortName": "UninstallDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1677,6 +2181,16 @@
       "clientMethod": {
         "shortName": "UninstallDeployment",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "GSuiteAddOnsClient",
           "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
@@ -1714,6 +2228,16 @@
         "shortName": "UninstallDeploymentAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeploymentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1751,6 +2275,16 @@
       "clientMethod": {
         "shortName": "GetInstallStatus",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.InstallStatus",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1790,6 +2324,16 @@
         "shortName": "GetInstallStatusAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.InstallStatus>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1828,6 +2372,16 @@
       "clientMethod": {
         "shortName": "GetInstallStatus",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.InstallStatus",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1866,6 +2420,16 @@
         "shortName": "GetInstallStatusAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.InstallStatus>",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1903,6 +2467,16 @@
       "clientMethod": {
         "shortName": "GetInstallStatus",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.InstallStatusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GSuiteAddOns.V1.InstallStatus",
         "client": {
           "shortName": "GSuiteAddOnsClient",
@@ -1941,6 +2515,16 @@
         "shortName": "GetInstallStatusAsync",
         "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatusAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.InstallStatusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.InstallStatus>",
         "client": {
           "shortName": "GSuiteAddOnsClient",

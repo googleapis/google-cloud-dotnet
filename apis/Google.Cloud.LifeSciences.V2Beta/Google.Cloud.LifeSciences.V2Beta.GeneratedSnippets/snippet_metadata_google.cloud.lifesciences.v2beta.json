@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "RunPipeline",
         "fullName": "Google.Cloud.LifeSciences.V2Beta.WorkflowsServiceV2BetaClient.RunPipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LifeSciences.V2Beta.RunPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.LifeSciences.V2Beta.RunPipelineResponse, Google.Cloud.LifeSciences.V2Beta.Metadata>",
         "client": {
           "shortName": "WorkflowsServiceV2BetaClient",
@@ -58,6 +68,16 @@
         "shortName": "RunPipelineAsync",
         "fullName": "Google.Cloud.LifeSciences.V2Beta.WorkflowsServiceV2BetaClient.RunPipelineAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LifeSciences.V2Beta.RunPipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.LifeSciences.V2Beta.RunPipelineResponse, Google.Cloud.LifeSciences.V2Beta.Metadata>>",
         "client": {
           "shortName": "WorkflowsServiceV2BetaClient",

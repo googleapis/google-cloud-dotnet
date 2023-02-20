@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateExternalAccountKey",
         "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PublicCA.V1Beta1.CreateExternalAccountKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
         "client": {
           "shortName": "PublicCertificateAuthorityServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateExternalAccountKeyAsync",
         "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Security.PublicCA.V1Beta1.CreateExternalAccountKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey>",
         "client": {
           "shortName": "PublicCertificateAuthorityServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateExternalAccountKey",
         "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
+            "name": "externalAccountKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
         "client": {
           "shortName": "PublicCertificateAuthorityServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateExternalAccountKeyAsync",
         "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
+            "name": "externalAccountKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey>",
         "client": {
           "shortName": "PublicCertificateAuthorityServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateExternalAccountKey",
         "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKey",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
+            "name": "externalAccountKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
         "client": {
           "shortName": "PublicCertificateAuthorityServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateExternalAccountKeyAsync",
         "fullName": "Google.Cloud.Security.PublicCA.V1Beta1.PublicCertificateAuthorityServiceClient.CreateExternalAccountKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey",
+            "name": "externalAccountKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey>",
         "client": {
           "shortName": "PublicCertificateAuthorityServiceClient",

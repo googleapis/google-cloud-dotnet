@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateAssessment",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.CreateAssessment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Assessment",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateAssessmentAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.CreateAssessmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Assessment>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateAssessment",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.CreateAssessment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.Assessment",
+            "name": "assessment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Assessment",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateAssessmentAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.CreateAssessmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.Assessment",
+            "name": "assessment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Assessment>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateAssessment",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.CreateAssessment",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.Assessment",
+            "name": "assessment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Assessment",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateAssessmentAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.CreateAssessmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.Assessment",
+            "name": "assessment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Assessment>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "AnnotateAssessment",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AnnotateAssessment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "AnnotateAssessmentAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AnnotateAssessmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -323,6 +419,20 @@
       "clientMethod": {
         "shortName": "AnnotateAssessment",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AnnotateAssessment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest+Types+Annotation",
+            "name": "annotation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -361,6 +471,20 @@
         "shortName": "AnnotateAssessmentAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AnnotateAssessmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest+Types+Annotation",
+            "name": "annotation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -398,6 +522,20 @@
       "clientMethod": {
         "shortName": "AnnotateAssessment",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AnnotateAssessment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AssessmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest+Types+Annotation",
+            "name": "annotation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -436,6 +574,20 @@
         "shortName": "AnnotateAssessmentAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.AnnotateAssessmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AssessmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentRequest+Types+Annotation",
+            "name": "annotation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.AnnotateAssessmentResponse>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateKey",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.CreateKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.CreateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Key",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateKeyAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.CreateKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.CreateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Key>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -550,6 +722,16 @@
       "clientMethod": {
         "shortName": "ListKeys",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListKeys",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.ListKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse, Google.Cloud.RecaptchaEnterprise.V1.Key>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -589,6 +771,16 @@
         "shortName": "ListKeysAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListKeysAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.ListKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListKeysResponse, Google.Cloud.RecaptchaEnterprise.V1.Key>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -627,6 +819,16 @@
       "clientMethod": {
         "shortName": "RetrieveLegacySecretKey",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.RetrieveLegacySecretKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -666,6 +868,16 @@
         "shortName": "RetrieveLegacySecretKeyAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.RetrieveLegacySecretKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -704,6 +916,16 @@
       "clientMethod": {
         "shortName": "RetrieveLegacySecretKey",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.RetrieveLegacySecretKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "key"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -742,6 +964,16 @@
         "shortName": "RetrieveLegacySecretKeyAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.RetrieveLegacySecretKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "key"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -779,6 +1011,16 @@
       "clientMethod": {
         "shortName": "RetrieveLegacySecretKey",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.RetrieveLegacySecretKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.KeyName",
+            "name": "key"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -817,6 +1059,16 @@
         "shortName": "RetrieveLegacySecretKeyAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.RetrieveLegacySecretKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.KeyName",
+            "name": "key"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.RetrieveLegacySecretKeyResponse>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -854,6 +1106,16 @@
       "clientMethod": {
         "shortName": "GetKey",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Key",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -893,6 +1155,16 @@
         "shortName": "GetKeyAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Key>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -931,6 +1203,16 @@
       "clientMethod": {
         "shortName": "UpdateKey",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.UpdateKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Key",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -970,6 +1252,16 @@
         "shortName": "UpdateKeyAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.UpdateKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Key>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1008,6 +1300,16 @@
       "clientMethod": {
         "shortName": "DeleteKey",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.DeleteKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
           "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
@@ -1046,6 +1348,16 @@
         "shortName": "DeleteKeyAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.DeleteKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1084,6 +1396,16 @@
       "clientMethod": {
         "shortName": "MigrateKey",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.MigrateKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Key",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1123,6 +1445,16 @@
         "shortName": "MigrateKeyAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.MigrateKeyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Key>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1161,6 +1493,16 @@
       "clientMethod": {
         "shortName": "GetMetrics",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetMetrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Metrics",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1200,6 +1542,16 @@
         "shortName": "GetMetricsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Metrics>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1238,6 +1590,16 @@
       "clientMethod": {
         "shortName": "GetMetrics",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetMetrics",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Metrics",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1276,6 +1638,16 @@
         "shortName": "GetMetricsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Metrics>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1313,6 +1685,16 @@
       "clientMethod": {
         "shortName": "GetMetrics",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetMetrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.MetricsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Metrics",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1351,6 +1733,16 @@
         "shortName": "GetMetricsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetMetricsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.MetricsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Metrics>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1388,6 +1780,16 @@
       "clientMethod": {
         "shortName": "ListRelatedAccountGroups",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1427,6 +1829,16 @@
         "shortName": "ListRelatedAccountGroupsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1465,6 +1877,24 @@
       "clientMethod": {
         "shortName": "ListRelatedAccountGroups",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1503,6 +1933,24 @@
         "shortName": "ListRelatedAccountGroupsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1540,6 +1988,24 @@
       "clientMethod": {
         "shortName": "ListRelatedAccountGroups",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroups",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1578,6 +2044,24 @@
         "shortName": "ListRelatedAccountGroupsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroup>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1615,6 +2099,16 @@
       "clientMethod": {
         "shortName": "ListRelatedAccountGroupMemberships",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupMemberships",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1654,6 +2148,16 @@
         "shortName": "ListRelatedAccountGroupMembershipsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1692,6 +2196,24 @@
       "clientMethod": {
         "shortName": "ListRelatedAccountGroupMemberships",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupMemberships",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1730,6 +2252,24 @@
         "shortName": "ListRelatedAccountGroupMembershipsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1767,6 +2307,24 @@
       "clientMethod": {
         "shortName": "ListRelatedAccountGroupMemberships",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupMemberships",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1805,6 +2363,24 @@
         "shortName": "ListRelatedAccountGroupMembershipsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1842,6 +2418,16 @@
       "clientMethod": {
         "shortName": "SearchRelatedAccountGroupMemberships",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1881,6 +2467,16 @@
         "shortName": "SearchRelatedAccountGroupMembershipsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1919,6 +2515,28 @@
       "clientMethod": {
         "shortName": "SearchRelatedAccountGroupMemberships",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "hashedAccountId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1957,6 +2575,28 @@
         "shortName": "SearchRelatedAccountGroupMembershipsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "hashedAccountId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -1994,6 +2634,28 @@
       "clientMethod": {
         "shortName": "SearchRelatedAccountGroupMemberships",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupName",
+            "name": "project"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "hashedAccountId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",
@@ -2032,6 +2694,28 @@
         "shortName": "SearchRelatedAccountGroupMembershipsAsync",
         "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupName",
+            "name": "project"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "hashedAccountId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse, Google.Cloud.RecaptchaEnterprise.V1.RelatedAccountGroupMembership>",
         "client": {
           "shortName": "RecaptchaEnterpriseServiceClient",

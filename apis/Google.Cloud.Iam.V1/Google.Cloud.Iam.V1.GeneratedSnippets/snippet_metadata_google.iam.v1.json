@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.Iam.V1.IAMPolicyClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "IAMPolicyClient",
@@ -58,6 +68,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.Iam.V1.IAMPolicyClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "IAMPolicyClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.Iam.V1.IAMPolicyClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "IAMPolicyClient",
@@ -135,6 +165,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.Iam.V1.IAMPolicyClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "IAMPolicyClient",
@@ -173,6 +213,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.Iam.V1.IAMPolicyClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "IAMPolicyClient",
@@ -212,6 +262,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.Iam.V1.IAMPolicyClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "IAMPolicyClient",

@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ComputeThreatListDiff",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.ComputeThreatListDiff",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -58,6 +68,16 @@
         "shortName": "ComputeThreatListDiffAsync",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.ComputeThreatListDiffAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse>",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ComputeThreatListDiff",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.ComputeThreatListDiff",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.ThreatType",
+            "name": "threatType"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "versionToken"
+          },
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest+Types+Constraints",
+            "name": "constraints"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -134,6 +172,24 @@
         "shortName": "ComputeThreatListDiffAsync",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.ComputeThreatListDiffAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.ThreatType",
+            "name": "threatType"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "versionToken"
+          },
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest+Types+Constraints",
+            "name": "constraints"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse>",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -171,6 +227,16 @@
       "clientMethod": {
         "shortName": "SearchUris",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.SearchUris",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -210,6 +276,16 @@
         "shortName": "SearchUrisAsync",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.SearchUrisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse>",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -248,6 +324,20 @@
       "clientMethod": {
         "shortName": "SearchUris",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.SearchUris",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.WebRisk.V1Beta1.ThreatType>",
+            "name": "threatTypes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -286,6 +376,20 @@
         "shortName": "SearchUrisAsync",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.SearchUrisAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.WebRisk.V1Beta1.ThreatType>",
+            "name": "threatTypes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse>",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -323,6 +427,16 @@
       "clientMethod": {
         "shortName": "SearchHashes",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.SearchHashes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -362,6 +476,16 @@
         "shortName": "SearchHashesAsync",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.SearchHashesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse>",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -400,6 +524,20 @@
       "clientMethod": {
         "shortName": "SearchHashes",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.SearchHashes",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "hashPrefix"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.WebRisk.V1Beta1.ThreatType>",
+            "name": "threatTypes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",
@@ -438,6 +576,20 @@
         "shortName": "SearchHashesAsync",
         "fullName": "Google.Cloud.WebRisk.V1Beta1.WebRiskServiceV1Beta1Client.SearchHashesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "hashPrefix"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.WebRisk.V1Beta1.ThreatType>",
+            "name": "threatTypes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse>",
         "client": {
           "shortName": "WebRiskServiceV1Beta1Client",

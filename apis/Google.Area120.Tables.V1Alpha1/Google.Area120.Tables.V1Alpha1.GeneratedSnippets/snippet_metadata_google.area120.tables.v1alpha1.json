@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetTable",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetTable",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.GetTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Table",
         "client": {
           "shortName": "TablesServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "GetTableAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.GetTableRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Table>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetTable",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetTable",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Table",
         "client": {
           "shortName": "TablesServiceClient",
@@ -134,6 +164,16 @@
         "shortName": "GetTableAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Table>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetTable",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetTable",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Table",
         "client": {
           "shortName": "TablesServiceClient",
@@ -209,6 +259,16 @@
         "shortName": "GetTableAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetTableAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.TableName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Table>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "ListTables",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.ListTables",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.ListTablesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Area120.Tables.V1Alpha1.ListTablesResponse, Google.Area120.Tables.V1Alpha1.Table>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -285,6 +355,16 @@
         "shortName": "ListTablesAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.ListTablesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.ListTablesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Area120.Tables.V1Alpha1.ListTablesResponse, Google.Area120.Tables.V1Alpha1.Table>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "GetWorkspace",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Workspace",
         "client": {
           "shortName": "TablesServiceClient",
@@ -362,6 +452,16 @@
         "shortName": "GetWorkspaceAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Workspace>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -400,6 +500,16 @@
       "clientMethod": {
         "shortName": "GetWorkspace",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetWorkspace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Workspace",
         "client": {
           "shortName": "TablesServiceClient",
@@ -438,6 +548,16 @@
         "shortName": "GetWorkspaceAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Workspace>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -475,6 +595,16 @@
       "clientMethod": {
         "shortName": "GetWorkspace",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.WorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Workspace",
         "client": {
           "shortName": "TablesServiceClient",
@@ -513,6 +643,16 @@
         "shortName": "GetWorkspaceAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetWorkspaceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.WorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Workspace>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -550,6 +690,16 @@
       "clientMethod": {
         "shortName": "ListWorkspaces",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.ListWorkspaces",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse, Google.Area120.Tables.V1Alpha1.Workspace>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -589,6 +739,16 @@
         "shortName": "ListWorkspacesAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.ListWorkspacesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse, Google.Area120.Tables.V1Alpha1.Workspace>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -627,6 +787,16 @@
       "clientMethod": {
         "shortName": "GetRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetRow",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.GetRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Row",
         "client": {
           "shortName": "TablesServiceClient",
@@ -666,6 +836,16 @@
         "shortName": "GetRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.GetRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -704,6 +884,16 @@
       "clientMethod": {
         "shortName": "GetRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Row",
         "client": {
           "shortName": "TablesServiceClient",
@@ -742,6 +932,16 @@
         "shortName": "GetRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -779,6 +979,16 @@
       "clientMethod": {
         "shortName": "GetRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetRow",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.RowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Row",
         "client": {
           "shortName": "TablesServiceClient",
@@ -817,6 +1027,16 @@
         "shortName": "GetRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.GetRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.RowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -854,6 +1074,16 @@
       "clientMethod": {
         "shortName": "ListRows",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.ListRows",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.ListRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Area120.Tables.V1Alpha1.ListRowsResponse, Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -893,6 +1123,16 @@
         "shortName": "ListRowsAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.ListRowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.ListRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Area120.Tables.V1Alpha1.ListRowsResponse, Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -931,6 +1171,24 @@
       "clientMethod": {
         "shortName": "ListRows",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.ListRows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Area120.Tables.V1Alpha1.ListRowsResponse, Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -969,6 +1227,24 @@
         "shortName": "ListRowsAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.ListRowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Area120.Tables.V1Alpha1.ListRowsResponse, Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1006,6 +1282,16 @@
       "clientMethod": {
         "shortName": "CreateRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.CreateRow",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.CreateRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Row",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1045,6 +1331,16 @@
         "shortName": "CreateRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.CreateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.CreateRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1083,6 +1379,20 @@
       "clientMethod": {
         "shortName": "CreateRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.CreateRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.Row",
+            "name": "row"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Row",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1121,6 +1431,20 @@
         "shortName": "CreateRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.CreateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.Row",
+            "name": "row"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1158,6 +1482,16 @@
       "clientMethod": {
         "shortName": "BatchCreateRows",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.BatchCreateRows",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1197,6 +1531,16 @@
         "shortName": "BatchCreateRowsAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.BatchCreateRowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1235,6 +1579,16 @@
       "clientMethod": {
         "shortName": "UpdateRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.UpdateRow",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.UpdateRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Row",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1274,6 +1628,16 @@
         "shortName": "UpdateRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.UpdateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.UpdateRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1312,6 +1676,20 @@
       "clientMethod": {
         "shortName": "UpdateRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.UpdateRow",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.Row",
+            "name": "row"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.Row",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1350,6 +1728,20 @@
         "shortName": "UpdateRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.UpdateRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.Row",
+            "name": "row"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.Row>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1387,6 +1779,16 @@
       "clientMethod": {
         "shortName": "BatchUpdateRows",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.BatchUpdateRows",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1426,6 +1828,16 @@
         "shortName": "BatchUpdateRowsAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.BatchUpdateRowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse>",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1464,6 +1876,16 @@
       "clientMethod": {
         "shortName": "DeleteRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.DeleteRow",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.DeleteRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TablesServiceClient",
           "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient"
@@ -1502,6 +1924,16 @@
         "shortName": "DeleteRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.DeleteRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.DeleteRowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1540,6 +1972,16 @@
       "clientMethod": {
         "shortName": "DeleteRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.DeleteRow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TablesServiceClient",
           "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient"
@@ -1577,6 +2019,16 @@
         "shortName": "DeleteRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.DeleteRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1614,6 +2066,16 @@
       "clientMethod": {
         "shortName": "DeleteRow",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.DeleteRow",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.RowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TablesServiceClient",
           "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient"
@@ -1651,6 +2113,16 @@
         "shortName": "DeleteRowAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.DeleteRowAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.RowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TablesServiceClient",
@@ -1688,6 +2160,16 @@
       "clientMethod": {
         "shortName": "BatchDeleteRows",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.BatchDeleteRows",
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TablesServiceClient",
           "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient"
@@ -1726,6 +2208,16 @@
         "shortName": "BatchDeleteRowsAsync",
         "fullName": "Google.Area120.Tables.V1Alpha1.TablesServiceClient.BatchDeleteRowsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TablesServiceClient",

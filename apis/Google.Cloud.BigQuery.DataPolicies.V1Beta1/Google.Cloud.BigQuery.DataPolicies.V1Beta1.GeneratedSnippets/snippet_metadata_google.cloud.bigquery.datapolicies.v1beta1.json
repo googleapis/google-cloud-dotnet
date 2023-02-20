@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.CreateDataPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.CreateDataPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.CreateDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.CreateDataPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.CreateDataPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
+            "name": "dataPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.CreateDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
+            "name": "dataPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.CreateDataPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
+            "name": "dataPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.CreateDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
+            "name": "dataPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "UpdateDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.UpdateDataPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.UpdateDataPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "UpdateDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.UpdateDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.UpdateDataPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -323,6 +419,20 @@
       "clientMethod": {
         "shortName": "UpdateDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.UpdateDataPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
+            "name": "dataPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -361,6 +471,20 @@
         "shortName": "UpdateDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.UpdateDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
+            "name": "dataPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -398,6 +522,16 @@
       "clientMethod": {
         "shortName": "DeleteDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.DeleteDataPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DeleteDataPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataPolicyServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient"
@@ -436,6 +570,16 @@
         "shortName": "DeleteDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.DeleteDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DeleteDataPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -474,6 +618,16 @@
       "clientMethod": {
         "shortName": "DeleteDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.DeleteDataPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataPolicyServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient"
@@ -511,6 +665,16 @@
         "shortName": "DeleteDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.DeleteDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -548,6 +712,16 @@
       "clientMethod": {
         "shortName": "DeleteDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.DeleteDataPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "DataPolicyServiceClient",
           "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient"
@@ -585,6 +759,16 @@
         "shortName": "DeleteDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.DeleteDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -622,6 +806,16 @@
       "clientMethod": {
         "shortName": "GetDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.GetDataPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.GetDataPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -661,6 +855,16 @@
         "shortName": "GetDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.GetDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.GetDataPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -699,6 +903,16 @@
       "clientMethod": {
         "shortName": "GetDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.GetDataPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -737,6 +951,16 @@
         "shortName": "GetDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.GetDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -774,6 +998,16 @@
       "clientMethod": {
         "shortName": "GetDataPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.GetDataPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -812,6 +1046,16 @@
         "shortName": "GetDataPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.GetDataPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -849,6 +1093,16 @@
       "clientMethod": {
         "shortName": "ListDataPolicies",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.ListDataPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.ListDataPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataPolicies.V1Beta1.ListDataPoliciesResponse, Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -888,6 +1142,16 @@
         "shortName": "ListDataPoliciesAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.ListDataPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.ListDataPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataPolicies.V1Beta1.ListDataPoliciesResponse, Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -926,6 +1190,24 @@
       "clientMethod": {
         "shortName": "ListDataPolicies",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.ListDataPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataPolicies.V1Beta1.ListDataPoliciesResponse, Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -964,6 +1246,24 @@
         "shortName": "ListDataPoliciesAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.ListDataPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataPolicies.V1Beta1.ListDataPoliciesResponse, Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -1001,6 +1301,24 @@
       "clientMethod": {
         "shortName": "ListDataPolicies",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.ListDataPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.DataPolicies.V1Beta1.ListDataPoliciesResponse, Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -1039,6 +1357,24 @@
         "shortName": "ListDataPoliciesAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.ListDataPoliciesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.DataPolicies.V1Beta1.ListDataPoliciesResponse, Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -1076,6 +1412,16 @@
       "clientMethod": {
         "shortName": "GetIamPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -1115,6 +1461,16 @@
         "shortName": "GetIamPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.GetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -1153,6 +1509,16 @@
       "clientMethod": {
         "shortName": "SetIamPolicy",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.Policy",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -1192,6 +1558,16 @@
         "shortName": "SetIamPolicyAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.SetIamPolicyAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -1230,6 +1606,16 @@
       "clientMethod": {
         "shortName": "TestIamPermissions",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
         "client": {
           "shortName": "DataPolicyServiceClient",
@@ -1269,6 +1655,16 @@
         "shortName": "TestIamPermissionsAsync",
         "fullName": "Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicyServiceClient.TestIamPermissionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
         "client": {
           "shortName": "DataPolicyServiceClient",

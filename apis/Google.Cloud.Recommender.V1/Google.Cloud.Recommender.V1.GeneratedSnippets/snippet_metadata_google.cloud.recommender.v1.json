@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListInsights",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListInsights",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.ListInsightsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListInsightsResponse, Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -58,6 +68,16 @@
         "shortName": "ListInsightsAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListInsightsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.ListInsightsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListInsightsResponse, Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListInsights",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListInsights",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListInsightsResponse, Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -134,6 +172,24 @@
         "shortName": "ListInsightsAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListInsightsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListInsightsResponse, Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListInsights",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListInsights",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightTypeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListInsightsResponse, Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -209,6 +283,24 @@
         "shortName": "ListInsightsAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListInsightsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightTypeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListInsightsResponse, Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetInsight",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsight",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.GetInsightRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Insight",
         "client": {
           "shortName": "RecommenderClient",
@@ -285,6 +387,16 @@
         "shortName": "GetInsightAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.GetInsightRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetInsight",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsight",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Insight",
         "client": {
           "shortName": "RecommenderClient",
@@ -361,6 +483,16 @@
         "shortName": "GetInsightAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetInsight",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsight",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Insight",
         "client": {
           "shortName": "RecommenderClient",
@@ -436,6 +578,16 @@
         "shortName": "GetInsightAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "MarkInsightAccepted",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkInsightAccepted",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Insight",
         "client": {
           "shortName": "RecommenderClient",
@@ -512,6 +674,16 @@
         "shortName": "MarkInsightAcceptedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkInsightAcceptedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "MarkInsightAccepted",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkInsightAccepted",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Insight",
         "client": {
           "shortName": "RecommenderClient",
@@ -588,6 +778,24 @@
         "shortName": "MarkInsightAcceptedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkInsightAcceptedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "MarkInsightAccepted",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkInsightAccepted",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Insight",
         "client": {
           "shortName": "RecommenderClient",
@@ -663,6 +889,24 @@
         "shortName": "MarkInsightAcceptedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkInsightAcceptedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Insight>",
         "client": {
           "shortName": "RecommenderClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "ListRecommendations",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.ListRecommendationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -739,6 +993,16 @@
         "shortName": "ListRecommendationsAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.ListRecommendationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -777,6 +1041,24 @@
       "clientMethod": {
         "shortName": "ListRecommendations",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -815,6 +1097,24 @@
         "shortName": "ListRecommendationsAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -852,6 +1152,24 @@
       "clientMethod": {
         "shortName": "ListRecommendations",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommenderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -890,6 +1208,24 @@
         "shortName": "ListRecommendationsAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommenderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -927,6 +1263,28 @@
       "clientMethod": {
         "shortName": "ListRecommendations",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -965,6 +1323,28 @@
         "shortName": "ListRecommendationsAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1002,6 +1382,28 @@
       "clientMethod": {
         "shortName": "ListRecommendations",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommenderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1040,6 +1442,28 @@
         "shortName": "ListRecommendationsAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommenderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListRecommendationsResponse, Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1077,6 +1501,16 @@
       "clientMethod": {
         "shortName": "GetRecommendation",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommendation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.GetRecommendationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1116,6 +1550,16 @@
         "shortName": "GetRecommendationAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommendationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.GetRecommendationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1154,6 +1598,16 @@
       "clientMethod": {
         "shortName": "GetRecommendation",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommendation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1192,6 +1646,16 @@
         "shortName": "GetRecommendationAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommendationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1229,6 +1693,16 @@
       "clientMethod": {
         "shortName": "GetRecommendation",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommendation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommendationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1267,6 +1741,16 @@
         "shortName": "GetRecommendationAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommendationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommendationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1304,6 +1788,16 @@
       "clientMethod": {
         "shortName": "MarkRecommendationClaimed",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationClaimed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1343,6 +1837,16 @@
         "shortName": "MarkRecommendationClaimedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationClaimedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1381,6 +1885,24 @@
       "clientMethod": {
         "shortName": "MarkRecommendationClaimed",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationClaimed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1419,6 +1941,24 @@
         "shortName": "MarkRecommendationClaimedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationClaimedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1456,6 +1996,24 @@
       "clientMethod": {
         "shortName": "MarkRecommendationClaimed",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationClaimed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommendationName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1494,6 +2052,24 @@
         "shortName": "MarkRecommendationClaimedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationClaimedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommendationName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1531,6 +2107,16 @@
       "clientMethod": {
         "shortName": "MarkRecommendationSucceeded",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationSucceeded",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1570,6 +2156,16 @@
         "shortName": "MarkRecommendationSucceededAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationSucceededAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1608,6 +2204,24 @@
       "clientMethod": {
         "shortName": "MarkRecommendationSucceeded",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationSucceeded",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1646,6 +2260,24 @@
         "shortName": "MarkRecommendationSucceededAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationSucceededAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1683,6 +2315,24 @@
       "clientMethod": {
         "shortName": "MarkRecommendationSucceeded",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationSucceeded",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommendationName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1721,6 +2371,24 @@
         "shortName": "MarkRecommendationSucceededAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationSucceededAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommendationName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1758,6 +2426,16 @@
       "clientMethod": {
         "shortName": "MarkRecommendationFailed",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationFailed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1797,6 +2475,16 @@
         "shortName": "MarkRecommendationFailedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationFailedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1835,6 +2523,24 @@
       "clientMethod": {
         "shortName": "MarkRecommendationFailed",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationFailed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1873,6 +2579,24 @@
         "shortName": "MarkRecommendationFailedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationFailedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1910,6 +2634,24 @@
       "clientMethod": {
         "shortName": "MarkRecommendationFailed",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationFailed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommendationName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.Recommendation",
         "client": {
           "shortName": "RecommenderClient",
@@ -1948,6 +2690,24 @@
         "shortName": "MarkRecommendationFailedAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.MarkRecommendationFailedAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommendationName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "stateMetadata"
+          },
+          {
+            "type": "System.String",
+            "name": "etag"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.Recommendation>",
         "client": {
           "shortName": "RecommenderClient",
@@ -1985,6 +2745,16 @@
       "clientMethod": {
         "shortName": "GetRecommenderConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.GetRecommenderConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2024,6 +2794,16 @@
         "shortName": "GetRecommenderConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.GetRecommenderConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2062,6 +2842,16 @@
       "clientMethod": {
         "shortName": "GetRecommenderConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2100,6 +2890,16 @@
         "shortName": "GetRecommenderConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2137,6 +2937,16 @@
       "clientMethod": {
         "shortName": "GetRecommenderConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommenderConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2175,6 +2985,16 @@
         "shortName": "GetRecommenderConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetRecommenderConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommenderConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2212,6 +3032,16 @@
       "clientMethod": {
         "shortName": "UpdateRecommenderConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateRecommenderConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2251,6 +3081,16 @@
         "shortName": "UpdateRecommenderConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateRecommenderConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2289,6 +3129,20 @@
       "clientMethod": {
         "shortName": "UpdateRecommenderConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateRecommenderConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommenderConfig",
+            "name": "recommenderConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.RecommenderConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2327,6 +3181,20 @@
         "shortName": "UpdateRecommenderConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateRecommenderConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.RecommenderConfig",
+            "name": "recommenderConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.RecommenderConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2364,6 +3232,16 @@
       "clientMethod": {
         "shortName": "GetInsightTypeConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2403,6 +3281,16 @@
         "shortName": "GetInsightTypeConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2441,6 +3329,16 @@
       "clientMethod": {
         "shortName": "GetInsightTypeConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2479,6 +3377,16 @@
         "shortName": "GetInsightTypeConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2516,6 +3424,16 @@
       "clientMethod": {
         "shortName": "GetInsightTypeConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightTypeConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2554,6 +3472,16 @@
         "shortName": "GetInsightTypeConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.GetInsightTypeConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightTypeConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2591,6 +3519,16 @@
       "clientMethod": {
         "shortName": "UpdateInsightTypeConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateInsightTypeConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2630,6 +3568,16 @@
         "shortName": "UpdateInsightTypeConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateInsightTypeConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
         "client": {
           "shortName": "RecommenderClient",
@@ -2668,6 +3616,20 @@
       "clientMethod": {
         "shortName": "UpdateInsightTypeConfig",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateInsightTypeConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightTypeConfig",
+            "name": "insightTypeConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Recommender.V1.InsightTypeConfig",
         "client": {
           "shortName": "RecommenderClient",
@@ -2706,6 +3668,20 @@
         "shortName": "UpdateInsightTypeConfigAsync",
         "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.UpdateInsightTypeConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.InsightTypeConfig",
+            "name": "insightTypeConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Recommender.V1.InsightTypeConfig>",
         "client": {
           "shortName": "RecommenderClient",

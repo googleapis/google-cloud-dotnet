@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateProcess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Process",
         "client": {
           "shortName": "LineageClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateProcess",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Process",
+            "name": "process"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Process",
         "client": {
           "shortName": "LineageClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Process",
+            "name": "process"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateProcess",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Process",
+            "name": "process"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Process",
         "client": {
           "shortName": "LineageClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Process",
+            "name": "process"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "UpdateProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.UpdateProcess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.UpdateProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Process",
         "client": {
           "shortName": "LineageClient",
@@ -285,6 +371,16 @@
         "shortName": "UpdateProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.UpdateProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.UpdateProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -323,6 +419,20 @@
       "clientMethod": {
         "shortName": "UpdateProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.UpdateProcess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Process",
+            "name": "process"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Process",
         "client": {
           "shortName": "LineageClient",
@@ -361,6 +471,20 @@
         "shortName": "UpdateProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.UpdateProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Process",
+            "name": "process"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -398,6 +522,16 @@
       "clientMethod": {
         "shortName": "GetProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetProcess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.GetProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Process",
         "client": {
           "shortName": "LineageClient",
@@ -437,6 +571,16 @@
         "shortName": "GetProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.GetProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -475,6 +619,16 @@
       "clientMethod": {
         "shortName": "GetProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetProcess",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Process",
         "client": {
           "shortName": "LineageClient",
@@ -513,6 +667,16 @@
         "shortName": "GetProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -550,6 +714,16 @@
       "clientMethod": {
         "shortName": "GetProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetProcess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Process",
         "client": {
           "shortName": "LineageClient",
@@ -588,6 +762,16 @@
         "shortName": "GetProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -625,6 +809,16 @@
       "clientMethod": {
         "shortName": "ListProcesses",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListProcesses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ListProcessesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListProcessesResponse, Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -664,6 +858,16 @@
         "shortName": "ListProcessesAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListProcessesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ListProcessesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListProcessesResponse, Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -702,6 +906,24 @@
       "clientMethod": {
         "shortName": "ListProcesses",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListProcesses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListProcessesResponse, Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -740,6 +962,24 @@
         "shortName": "ListProcessesAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListProcessesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListProcessesResponse, Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -777,6 +1017,24 @@
       "clientMethod": {
         "shortName": "ListProcesses",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListProcesses",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListProcessesResponse, Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -815,6 +1073,24 @@
         "shortName": "ListProcessesAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListProcessesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListProcessesResponse, Google.Cloud.DataCatalog.Lineage.V1.Process>",
         "client": {
           "shortName": "LineageClient",
@@ -852,6 +1128,16 @@
       "clientMethod": {
         "shortName": "DeleteProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteProcess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.DeleteProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>",
         "client": {
           "shortName": "LineageClient",
@@ -891,6 +1177,16 @@
         "shortName": "DeleteProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.DeleteProcessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>>",
         "client": {
           "shortName": "LineageClient",
@@ -929,6 +1225,16 @@
       "clientMethod": {
         "shortName": "DeleteProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteProcess",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>",
         "client": {
           "shortName": "LineageClient",
@@ -967,6 +1273,16 @@
         "shortName": "DeleteProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>>",
         "client": {
           "shortName": "LineageClient",
@@ -1004,6 +1320,16 @@
       "clientMethod": {
         "shortName": "DeleteProcess",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteProcess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>",
         "client": {
           "shortName": "LineageClient",
@@ -1042,6 +1368,16 @@
         "shortName": "DeleteProcessAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteProcessAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>>",
         "client": {
           "shortName": "LineageClient",
@@ -1079,6 +1415,16 @@
       "clientMethod": {
         "shortName": "CreateRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.CreateRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Run",
         "client": {
           "shortName": "LineageClient",
@@ -1118,6 +1464,16 @@
         "shortName": "CreateRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.CreateRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1156,6 +1512,20 @@
       "clientMethod": {
         "shortName": "CreateRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Run",
+            "name": "run"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Run",
         "client": {
           "shortName": "LineageClient",
@@ -1194,6 +1564,20 @@
         "shortName": "CreateRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Run",
+            "name": "run"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1231,6 +1615,20 @@
       "clientMethod": {
         "shortName": "CreateRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Run",
+            "name": "run"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Run",
         "client": {
           "shortName": "LineageClient",
@@ -1269,6 +1667,20 @@
         "shortName": "CreateRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Run",
+            "name": "run"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1306,6 +1718,16 @@
       "clientMethod": {
         "shortName": "UpdateRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.UpdateRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.UpdateRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Run",
         "client": {
           "shortName": "LineageClient",
@@ -1345,6 +1767,16 @@
         "shortName": "UpdateRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.UpdateRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.UpdateRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1383,6 +1815,20 @@
       "clientMethod": {
         "shortName": "UpdateRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.UpdateRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Run",
+            "name": "run"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Run",
         "client": {
           "shortName": "LineageClient",
@@ -1421,6 +1867,20 @@
         "shortName": "UpdateRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.UpdateRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.Run",
+            "name": "run"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1458,6 +1918,16 @@
       "clientMethod": {
         "shortName": "GetRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.GetRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Run",
         "client": {
           "shortName": "LineageClient",
@@ -1497,6 +1967,16 @@
         "shortName": "GetRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.GetRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1535,6 +2015,16 @@
       "clientMethod": {
         "shortName": "GetRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Run",
         "client": {
           "shortName": "LineageClient",
@@ -1573,6 +2063,16 @@
         "shortName": "GetRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1610,6 +2110,16 @@
       "clientMethod": {
         "shortName": "GetRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.RunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.Run",
         "client": {
           "shortName": "LineageClient",
@@ -1648,6 +2158,16 @@
         "shortName": "GetRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.RunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1685,6 +2205,16 @@
       "clientMethod": {
         "shortName": "ListRuns",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ListRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListRunsResponse, Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1724,6 +2254,16 @@
         "shortName": "ListRunsAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ListRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListRunsResponse, Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1762,6 +2302,24 @@
       "clientMethod": {
         "shortName": "ListRuns",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListRuns",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListRunsResponse, Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1800,6 +2358,24 @@
         "shortName": "ListRunsAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListRunsResponse, Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1837,6 +2413,24 @@
       "clientMethod": {
         "shortName": "ListRuns",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListRunsResponse, Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1875,6 +2469,24 @@
         "shortName": "ListRunsAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListRunsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ProcessName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListRunsResponse, Google.Cloud.DataCatalog.Lineage.V1.Run>",
         "client": {
           "shortName": "LineageClient",
@@ -1912,6 +2524,16 @@
       "clientMethod": {
         "shortName": "DeleteRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.DeleteRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>",
         "client": {
           "shortName": "LineageClient",
@@ -1951,6 +2573,16 @@
         "shortName": "DeleteRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.DeleteRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>>",
         "client": {
           "shortName": "LineageClient",
@@ -1989,6 +2621,16 @@
       "clientMethod": {
         "shortName": "DeleteRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>",
         "client": {
           "shortName": "LineageClient",
@@ -2027,6 +2669,16 @@
         "shortName": "DeleteRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>>",
         "client": {
           "shortName": "LineageClient",
@@ -2064,6 +2716,16 @@
       "clientMethod": {
         "shortName": "DeleteRun",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.RunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>",
         "client": {
           "shortName": "LineageClient",
@@ -2102,6 +2764,16 @@
         "shortName": "DeleteRunAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteRunAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.RunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata>>",
         "client": {
           "shortName": "LineageClient",
@@ -2139,6 +2811,16 @@
       "clientMethod": {
         "shortName": "CreateLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateLineageEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.CreateLineageEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
         "client": {
           "shortName": "LineageClient",
@@ -2178,6 +2860,16 @@
         "shortName": "CreateLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.CreateLineageEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2216,6 +2908,20 @@
       "clientMethod": {
         "shortName": "CreateLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateLineageEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
+            "name": "lineageEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
         "client": {
           "shortName": "LineageClient",
@@ -2254,6 +2960,20 @@
         "shortName": "CreateLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
+            "name": "lineageEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2291,6 +3011,20 @@
       "clientMethod": {
         "shortName": "CreateLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateLineageEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.RunName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
+            "name": "lineageEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
         "client": {
           "shortName": "LineageClient",
@@ -2329,6 +3063,20 @@
         "shortName": "CreateLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.CreateLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.RunName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
+            "name": "lineageEvent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2366,6 +3114,16 @@
       "clientMethod": {
         "shortName": "GetLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetLineageEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.GetLineageEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
         "client": {
           "shortName": "LineageClient",
@@ -2405,6 +3163,16 @@
         "shortName": "GetLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.GetLineageEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2443,6 +3211,16 @@
       "clientMethod": {
         "shortName": "GetLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetLineageEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
         "client": {
           "shortName": "LineageClient",
@@ -2481,6 +3259,16 @@
         "shortName": "GetLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2518,6 +3306,16 @@
       "clientMethod": {
         "shortName": "GetLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetLineageEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.LineageEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.DataCatalog.Lineage.V1.LineageEvent",
         "client": {
           "shortName": "LineageClient",
@@ -2556,6 +3354,16 @@
         "shortName": "GetLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.GetLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.LineageEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2593,6 +3401,16 @@
       "clientMethod": {
         "shortName": "ListLineageEvents",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListLineageEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsResponse, Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2632,6 +3450,16 @@
         "shortName": "ListLineageEventsAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListLineageEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsResponse, Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2670,6 +3498,24 @@
       "clientMethod": {
         "shortName": "ListLineageEvents",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListLineageEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsResponse, Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2708,6 +3554,24 @@
         "shortName": "ListLineageEventsAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListLineageEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsResponse, Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2745,6 +3609,24 @@
       "clientMethod": {
         "shortName": "ListLineageEvents",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListLineageEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.RunName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsResponse, Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2783,6 +3665,24 @@
         "shortName": "ListLineageEventsAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.ListLineageEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.RunName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsResponse, Google.Cloud.DataCatalog.Lineage.V1.LineageEvent>",
         "client": {
           "shortName": "LineageClient",
@@ -2820,6 +3720,16 @@
       "clientMethod": {
         "shortName": "DeleteLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteLineageEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.DeleteLineageEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LineageClient",
           "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient"
@@ -2858,6 +3768,16 @@
         "shortName": "DeleteLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.DeleteLineageEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LineageClient",
@@ -2896,6 +3816,16 @@
       "clientMethod": {
         "shortName": "DeleteLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteLineageEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LineageClient",
           "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient"
@@ -2933,6 +3863,16 @@
         "shortName": "DeleteLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LineageClient",
@@ -2970,6 +3910,16 @@
       "clientMethod": {
         "shortName": "DeleteLineageEvent",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteLineageEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.LineageEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "LineageClient",
           "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient"
@@ -3007,6 +3957,16 @@
         "shortName": "DeleteLineageEventAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.DeleteLineageEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.LineageEventName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "LineageClient",
@@ -3044,6 +4004,16 @@
       "clientMethod": {
         "shortName": "SearchLinks",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.SearchLinks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.SearchLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.SearchLinksResponse, Google.Cloud.DataCatalog.Lineage.V1.Link>",
         "client": {
           "shortName": "LineageClient",
@@ -3083,6 +4053,16 @@
         "shortName": "SearchLinksAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.SearchLinksAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.SearchLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.SearchLinksResponse, Google.Cloud.DataCatalog.Lineage.V1.Link>",
         "client": {
           "shortName": "LineageClient",
@@ -3121,6 +4101,16 @@
       "clientMethod": {
         "shortName": "BatchSearchLinkProcesses",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.BatchSearchLinkProcesses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse, Google.Cloud.DataCatalog.Lineage.V1.ProcessLinks>",
         "client": {
           "shortName": "LineageClient",
@@ -3160,6 +4150,16 @@
         "shortName": "BatchSearchLinkProcessesAsync",
         "fullName": "Google.Cloud.DataCatalog.Lineage.V1.LineageClient.BatchSearchLinkProcessesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse, Google.Cloud.DataCatalog.Lineage.V1.ProcessLinks>",
         "client": {
           "shortName": "LineageClient",

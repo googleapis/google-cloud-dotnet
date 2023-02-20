@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetApplication",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.GetApplication",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetApplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.Application",
         "client": {
           "shortName": "ApplicationsClient",
@@ -58,6 +68,16 @@
         "shortName": "GetApplicationAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.GetApplicationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetApplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.Application>",
         "client": {
           "shortName": "ApplicationsClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetApplication",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.GetApplication",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.Application",
         "client": {
           "shortName": "ApplicationsClient",
@@ -134,6 +164,16 @@
         "shortName": "GetApplicationAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.GetApplicationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.Application>",
         "client": {
           "shortName": "ApplicationsClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "CreateApplication",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.CreateApplication",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateApplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Application, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "ApplicationsClient",
@@ -210,6 +260,16 @@
         "shortName": "CreateApplicationAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.CreateApplicationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateApplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Application, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "ApplicationsClient",
@@ -248,6 +308,16 @@
       "clientMethod": {
         "shortName": "UpdateApplication",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.UpdateApplication",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateApplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Application, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "ApplicationsClient",
@@ -287,6 +357,16 @@
         "shortName": "UpdateApplicationAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.UpdateApplicationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateApplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Application, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "ApplicationsClient",
@@ -325,6 +405,16 @@
       "clientMethod": {
         "shortName": "RepairApplication",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.RepairApplication",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.RepairApplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Application, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "ApplicationsClient",
@@ -364,6 +454,16 @@
         "shortName": "RepairApplicationAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ApplicationsClient.RepairApplicationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.RepairApplicationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Application, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "ApplicationsClient",
@@ -402,6 +502,16 @@
       "clientMethod": {
         "shortName": "ListAuthorizedCertificates",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.ListAuthorizedCertificates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse, Google.Cloud.AppEngine.V1.AuthorizedCertificate>",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -441,6 +551,16 @@
         "shortName": "ListAuthorizedCertificatesAsync",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.ListAuthorizedCertificatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse, Google.Cloud.AppEngine.V1.AuthorizedCertificate>",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -479,6 +599,16 @@
       "clientMethod": {
         "shortName": "GetAuthorizedCertificate",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.GetAuthorizedCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.AuthorizedCertificate",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -518,6 +648,16 @@
         "shortName": "GetAuthorizedCertificateAsync",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.GetAuthorizedCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.AuthorizedCertificate>",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -556,6 +696,16 @@
       "clientMethod": {
         "shortName": "CreateAuthorizedCertificate",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.CreateAuthorizedCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.AuthorizedCertificate",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -595,6 +745,16 @@
         "shortName": "CreateAuthorizedCertificateAsync",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.CreateAuthorizedCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.AuthorizedCertificate>",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -633,6 +793,16 @@
       "clientMethod": {
         "shortName": "UpdateAuthorizedCertificate",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.UpdateAuthorizedCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.AuthorizedCertificate",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -672,6 +842,16 @@
         "shortName": "UpdateAuthorizedCertificateAsync",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.UpdateAuthorizedCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.AuthorizedCertificate>",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -710,6 +890,16 @@
       "clientMethod": {
         "shortName": "DeleteAuthorizedCertificate",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.DeleteAuthorizedCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AuthorizedCertificatesClient",
           "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient"
@@ -748,6 +938,16 @@
         "shortName": "DeleteAuthorizedCertificateAsync",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedCertificatesClient.DeleteAuthorizedCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AuthorizedCertificatesClient",
@@ -786,6 +986,16 @@
       "clientMethod": {
         "shortName": "ListAuthorizedDomains",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedDomainsClient.ListAuthorizedDomains",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse, Google.Cloud.AppEngine.V1.AuthorizedDomain>",
         "client": {
           "shortName": "AuthorizedDomainsClient",
@@ -825,6 +1035,16 @@
         "shortName": "ListAuthorizedDomainsAsync",
         "fullName": "Google.Cloud.AppEngine.V1.AuthorizedDomainsClient.ListAuthorizedDomainsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse, Google.Cloud.AppEngine.V1.AuthorizedDomain>",
         "client": {
           "shortName": "AuthorizedDomainsClient",
@@ -863,6 +1083,16 @@
       "clientMethod": {
         "shortName": "ListDomainMappings",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.ListDomainMappings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListDomainMappingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppEngine.V1.ListDomainMappingsResponse, Google.Cloud.AppEngine.V1.DomainMapping>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -902,6 +1132,16 @@
         "shortName": "ListDomainMappingsAsync",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.ListDomainMappingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListDomainMappingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppEngine.V1.ListDomainMappingsResponse, Google.Cloud.AppEngine.V1.DomainMapping>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -940,6 +1180,16 @@
       "clientMethod": {
         "shortName": "GetDomainMapping",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.GetDomainMapping",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetDomainMappingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.DomainMapping",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -979,6 +1229,16 @@
         "shortName": "GetDomainMappingAsync",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.GetDomainMappingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetDomainMappingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.DomainMapping>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -1017,6 +1277,16 @@
       "clientMethod": {
         "shortName": "CreateDomainMapping",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.CreateDomainMapping",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateDomainMappingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.DomainMapping, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -1056,6 +1326,16 @@
         "shortName": "CreateDomainMappingAsync",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.CreateDomainMappingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateDomainMappingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.DomainMapping, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -1094,6 +1374,16 @@
       "clientMethod": {
         "shortName": "UpdateDomainMapping",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.UpdateDomainMapping",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.DomainMapping, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -1133,6 +1423,16 @@
         "shortName": "UpdateDomainMappingAsync",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.UpdateDomainMappingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.DomainMapping, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -1171,6 +1471,16 @@
       "clientMethod": {
         "shortName": "DeleteDomainMapping",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.DeleteDomainMapping",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -1210,6 +1520,16 @@
         "shortName": "DeleteDomainMappingAsync",
         "fullName": "Google.Cloud.AppEngine.V1.DomainMappingsClient.DeleteDomainMappingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "DomainMappingsClient",
@@ -1248,6 +1568,16 @@
       "clientMethod": {
         "shortName": "ListIngressRules",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.ListIngressRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListIngressRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppEngine.V1.ListIngressRulesResponse, Google.Cloud.AppEngine.V1.FirewallRule>",
         "client": {
           "shortName": "FirewallClient",
@@ -1287,6 +1617,16 @@
         "shortName": "ListIngressRulesAsync",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.ListIngressRulesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListIngressRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppEngine.V1.ListIngressRulesResponse, Google.Cloud.AppEngine.V1.FirewallRule>",
         "client": {
           "shortName": "FirewallClient",
@@ -1325,6 +1665,16 @@
       "clientMethod": {
         "shortName": "BatchUpdateIngressRules",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.BatchUpdateIngressRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse",
         "client": {
           "shortName": "FirewallClient",
@@ -1364,6 +1714,16 @@
         "shortName": "BatchUpdateIngressRulesAsync",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.BatchUpdateIngressRulesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse>",
         "client": {
           "shortName": "FirewallClient",
@@ -1402,6 +1762,16 @@
       "clientMethod": {
         "shortName": "CreateIngressRule",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.CreateIngressRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateIngressRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.FirewallRule",
         "client": {
           "shortName": "FirewallClient",
@@ -1441,6 +1811,16 @@
         "shortName": "CreateIngressRuleAsync",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.CreateIngressRuleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateIngressRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.FirewallRule>",
         "client": {
           "shortName": "FirewallClient",
@@ -1479,6 +1859,16 @@
       "clientMethod": {
         "shortName": "GetIngressRule",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.GetIngressRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetIngressRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.FirewallRule",
         "client": {
           "shortName": "FirewallClient",
@@ -1518,6 +1908,16 @@
         "shortName": "GetIngressRuleAsync",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.GetIngressRuleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetIngressRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.FirewallRule>",
         "client": {
           "shortName": "FirewallClient",
@@ -1556,6 +1956,16 @@
       "clientMethod": {
         "shortName": "UpdateIngressRule",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.UpdateIngressRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.FirewallRule",
         "client": {
           "shortName": "FirewallClient",
@@ -1595,6 +2005,16 @@
         "shortName": "UpdateIngressRuleAsync",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.UpdateIngressRuleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.FirewallRule>",
         "client": {
           "shortName": "FirewallClient",
@@ -1633,6 +2053,16 @@
       "clientMethod": {
         "shortName": "DeleteIngressRule",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.DeleteIngressRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "FirewallClient",
           "fullName": "Google.Cloud.AppEngine.V1.FirewallClient"
@@ -1671,6 +2101,16 @@
         "shortName": "DeleteIngressRuleAsync",
         "fullName": "Google.Cloud.AppEngine.V1.FirewallClient.DeleteIngressRuleAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "FirewallClient",
@@ -1709,6 +2149,16 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.AppEngine.V1.InstancesClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppEngine.V1.ListInstancesResponse, Google.Cloud.AppEngine.V1.Instance>",
         "client": {
           "shortName": "InstancesClient",
@@ -1748,6 +2198,16 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.AppEngine.V1.InstancesClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppEngine.V1.ListInstancesResponse, Google.Cloud.AppEngine.V1.Instance>",
         "client": {
           "shortName": "InstancesClient",
@@ -1786,6 +2246,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.AppEngine.V1.InstancesClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.Instance",
         "client": {
           "shortName": "InstancesClient",
@@ -1825,6 +2295,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.AppEngine.V1.InstancesClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.Instance>",
         "client": {
           "shortName": "InstancesClient",
@@ -1863,6 +2343,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.AppEngine.V1.InstancesClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "InstancesClient",
@@ -1902,6 +2392,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.AppEngine.V1.InstancesClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "InstancesClient",
@@ -1940,6 +2440,16 @@
       "clientMethod": {
         "shortName": "DebugInstance",
         "fullName": "Google.Cloud.AppEngine.V1.InstancesClient.DebugInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DebugInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Instance, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "InstancesClient",
@@ -1979,6 +2489,16 @@
         "shortName": "DebugInstanceAsync",
         "fullName": "Google.Cloud.AppEngine.V1.InstancesClient.DebugInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DebugInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Instance, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "InstancesClient",
@@ -2017,6 +2537,16 @@
       "clientMethod": {
         "shortName": "ListServices",
         "fullName": "Google.Cloud.AppEngine.V1.ServicesClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppEngine.V1.ListServicesResponse, Google.Cloud.AppEngine.V1.Service>",
         "client": {
           "shortName": "ServicesClient",
@@ -2056,6 +2586,16 @@
         "shortName": "ListServicesAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ServicesClient.ListServicesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppEngine.V1.ListServicesResponse, Google.Cloud.AppEngine.V1.Service>",
         "client": {
           "shortName": "ServicesClient",
@@ -2094,6 +2634,16 @@
       "clientMethod": {
         "shortName": "GetService",
         "fullName": "Google.Cloud.AppEngine.V1.ServicesClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.Service",
         "client": {
           "shortName": "ServicesClient",
@@ -2133,6 +2683,16 @@
         "shortName": "GetServiceAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ServicesClient.GetServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.Service>",
         "client": {
           "shortName": "ServicesClient",
@@ -2171,6 +2731,16 @@
       "clientMethod": {
         "shortName": "UpdateService",
         "fullName": "Google.Cloud.AppEngine.V1.ServicesClient.UpdateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Service, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "ServicesClient",
@@ -2210,6 +2780,16 @@
         "shortName": "UpdateServiceAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ServicesClient.UpdateServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Service, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "ServicesClient",
@@ -2248,6 +2828,16 @@
       "clientMethod": {
         "shortName": "DeleteService",
         "fullName": "Google.Cloud.AppEngine.V1.ServicesClient.DeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "ServicesClient",
@@ -2287,6 +2877,16 @@
         "shortName": "DeleteServiceAsync",
         "fullName": "Google.Cloud.AppEngine.V1.ServicesClient.DeleteServiceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "ServicesClient",
@@ -2325,6 +2925,16 @@
       "clientMethod": {
         "shortName": "ListVersions",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.ListVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppEngine.V1.ListVersionsResponse, Google.Cloud.AppEngine.V1.Version>",
         "client": {
           "shortName": "VersionsClient",
@@ -2364,6 +2974,16 @@
         "shortName": "ListVersionsAsync",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.ListVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.ListVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppEngine.V1.ListVersionsResponse, Google.Cloud.AppEngine.V1.Version>",
         "client": {
           "shortName": "VersionsClient",
@@ -2402,6 +3022,16 @@
       "clientMethod": {
         "shortName": "GetVersion",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.GetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.AppEngine.V1.Version",
         "client": {
           "shortName": "VersionsClient",
@@ -2441,6 +3071,16 @@
         "shortName": "GetVersionAsync",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.GetVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.GetVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppEngine.V1.Version>",
         "client": {
           "shortName": "VersionsClient",
@@ -2479,6 +3119,16 @@
       "clientMethod": {
         "shortName": "CreateVersion",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.CreateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Version, Google.Cloud.AppEngine.V1.CreateVersionMetadataV1>",
         "client": {
           "shortName": "VersionsClient",
@@ -2518,6 +3168,16 @@
         "shortName": "CreateVersionAsync",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.CreateVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.CreateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Version, Google.Cloud.AppEngine.V1.CreateVersionMetadataV1>>",
         "client": {
           "shortName": "VersionsClient",
@@ -2556,6 +3216,16 @@
       "clientMethod": {
         "shortName": "UpdateVersion",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.UpdateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Version, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "VersionsClient",
@@ -2595,6 +3265,16 @@
         "shortName": "UpdateVersionAsync",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.UpdateVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.UpdateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppEngine.V1.Version, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "VersionsClient",
@@ -2633,6 +3313,16 @@
       "clientMethod": {
         "shortName": "DeleteVersion",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.DeleteVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AppEngine.V1.OperationMetadataV1>",
         "client": {
           "shortName": "VersionsClient",
@@ -2672,6 +3362,16 @@
         "shortName": "DeleteVersionAsync",
         "fullName": "Google.Cloud.AppEngine.V1.VersionsClient.DeleteVersionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppEngine.V1.DeleteVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AppEngine.V1.OperationMetadataV1>>",
         "client": {
           "shortName": "VersionsClient",

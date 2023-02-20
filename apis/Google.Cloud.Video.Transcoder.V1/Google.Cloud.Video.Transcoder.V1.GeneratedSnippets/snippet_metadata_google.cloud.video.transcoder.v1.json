@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.Job",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.Job",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.Job",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "ListJobs",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobsResponse, Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -285,6 +371,16 @@
         "shortName": "ListJobsAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobsResponse, Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -323,6 +419,24 @@
       "clientMethod": {
         "shortName": "ListJobs",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobsResponse, Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -361,6 +475,24 @@
         "shortName": "ListJobsAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobsResponse, Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -398,6 +530,24 @@
       "clientMethod": {
         "shortName": "ListJobs",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobsResponse, Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -436,6 +586,24 @@
         "shortName": "ListJobsAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobsResponse, Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -473,6 +641,16 @@
       "clientMethod": {
         "shortName": "GetJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.Job",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -512,6 +690,16 @@
         "shortName": "GetJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -550,6 +738,16 @@
       "clientMethod": {
         "shortName": "GetJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.Job",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -588,6 +786,16 @@
         "shortName": "GetJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -625,6 +833,16 @@
       "clientMethod": {
         "shortName": "GetJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.Job",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -663,6 +881,16 @@
         "shortName": "GetJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.Job>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -700,6 +928,16 @@
       "clientMethod": {
         "shortName": "DeleteJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.DeleteJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TranscoderServiceClient",
           "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient"
@@ -738,6 +976,16 @@
         "shortName": "DeleteJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.DeleteJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -776,6 +1024,16 @@
       "clientMethod": {
         "shortName": "DeleteJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TranscoderServiceClient",
           "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient"
@@ -813,6 +1071,16 @@
         "shortName": "DeleteJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -850,6 +1118,16 @@
       "clientMethod": {
         "shortName": "DeleteJob",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TranscoderServiceClient",
           "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient"
@@ -887,6 +1165,16 @@
         "shortName": "DeleteJobAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -924,6 +1212,16 @@
       "clientMethod": {
         "shortName": "CreateJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -963,6 +1261,16 @@
         "shortName": "CreateJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1001,6 +1309,24 @@
       "clientMethod": {
         "shortName": "CreateJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
+            "name": "jobTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "jobTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1039,6 +1365,24 @@
         "shortName": "CreateJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
+            "name": "jobTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "jobTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1076,6 +1420,24 @@
       "clientMethod": {
         "shortName": "CreateJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobTemplate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
+            "name": "jobTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "jobTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1114,6 +1476,24 @@
         "shortName": "CreateJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.CreateJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
+            "name": "jobTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "jobTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1151,6 +1531,16 @@
       "clientMethod": {
         "shortName": "ListJobTemplates",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse, Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1190,6 +1580,16 @@
         "shortName": "ListJobTemplatesAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobTemplatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse, Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1228,6 +1628,24 @@
       "clientMethod": {
         "shortName": "ListJobTemplates",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse, Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1266,6 +1684,24 @@
         "shortName": "ListJobTemplatesAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobTemplatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse, Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1303,6 +1739,24 @@
       "clientMethod": {
         "shortName": "ListJobTemplates",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobTemplates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse, Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1341,6 +1795,24 @@
         "shortName": "ListJobTemplatesAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.ListJobTemplatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse, Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1378,6 +1850,16 @@
       "clientMethod": {
         "shortName": "GetJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1417,6 +1899,16 @@
         "shortName": "GetJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1455,6 +1947,16 @@
       "clientMethod": {
         "shortName": "GetJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1493,6 +1995,16 @@
         "shortName": "GetJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1530,6 +2042,16 @@
       "clientMethod": {
         "shortName": "GetJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Video.Transcoder.V1.JobTemplate",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1568,6 +2090,16 @@
         "shortName": "GetJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.GetJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.Transcoder.V1.JobTemplate>",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1605,6 +2137,16 @@
       "clientMethod": {
         "shortName": "DeleteJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TranscoderServiceClient",
           "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient"
@@ -1643,6 +2185,16 @@
         "shortName": "DeleteJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1681,6 +2233,16 @@
       "clientMethod": {
         "shortName": "DeleteJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TranscoderServiceClient",
           "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient"
@@ -1718,6 +2280,16 @@
         "shortName": "DeleteJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TranscoderServiceClient",
@@ -1755,6 +2327,16 @@
       "clientMethod": {
         "shortName": "DeleteJobTemplate",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "TranscoderServiceClient",
           "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient"
@@ -1792,6 +2374,16 @@
         "shortName": "DeleteJobTemplateAsync",
         "fullName": "Google.Cloud.Video.Transcoder.V1.TranscoderServiceClient.DeleteJobTemplateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.Transcoder.V1.JobTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "TranscoderServiceClient",

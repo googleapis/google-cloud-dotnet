@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Trigger",
         "client": {
           "shortName": "EventarcClient",
@@ -58,6 +68,16 @@
         "shortName": "GetTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetTrigger",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Trigger",
         "client": {
           "shortName": "EventarcClient",
@@ -134,6 +164,16 @@
         "shortName": "GetTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.TriggerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Trigger",
         "client": {
           "shortName": "EventarcClient",
@@ -209,6 +259,16 @@
         "shortName": "GetTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.TriggerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "ListTriggers",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListTriggers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListTriggersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListTriggersResponse, Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -285,6 +355,16 @@
         "shortName": "ListTriggersAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListTriggersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListTriggersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListTriggersResponse, Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -323,6 +403,24 @@
       "clientMethod": {
         "shortName": "ListTriggers",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListTriggers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListTriggersResponse, Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -361,6 +459,24 @@
         "shortName": "ListTriggersAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListTriggersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListTriggersResponse, Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -398,6 +514,24 @@
       "clientMethod": {
         "shortName": "ListTriggers",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListTriggers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListTriggersResponse, Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -436,6 +570,24 @@
         "shortName": "ListTriggersAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListTriggersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListTriggersResponse, Google.Cloud.Eventarc.V1.Trigger>",
         "client": {
           "shortName": "EventarcClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateTrigger",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Trigger",
+            "name": "trigger"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Trigger",
+            "name": "trigger"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateTrigger",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Trigger",
+            "name": "trigger"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Trigger",
+            "name": "trigger"
+          },
+          {
+            "type": "System.String",
+            "name": "triggerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -777,6 +1041,24 @@
       "clientMethod": {
         "shortName": "UpdateTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.Trigger",
+            "name": "trigger"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "allowMissing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -815,6 +1097,24 @@
         "shortName": "UpdateTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.Trigger",
+            "name": "trigger"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "allowMissing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -852,6 +1152,16 @@
       "clientMethod": {
         "shortName": "DeleteTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -891,6 +1201,16 @@
         "shortName": "DeleteTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteTriggerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -929,6 +1249,20 @@
       "clientMethod": {
         "shortName": "DeleteTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteTrigger",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "allowMissing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -967,6 +1301,20 @@
         "shortName": "DeleteTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "allowMissing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -1004,6 +1352,20 @@
       "clientMethod": {
         "shortName": "DeleteTrigger",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteTrigger",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.TriggerName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "allowMissing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -1042,6 +1404,20 @@
         "shortName": "DeleteTriggerAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteTriggerAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.TriggerName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "allowMissing"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Trigger, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -1079,6 +1455,16 @@
       "clientMethod": {
         "shortName": "GetChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Channel",
         "client": {
           "shortName": "EventarcClient",
@@ -1118,6 +1504,16 @@
         "shortName": "GetChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1156,6 +1552,16 @@
       "clientMethod": {
         "shortName": "GetChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Channel",
         "client": {
           "shortName": "EventarcClient",
@@ -1194,6 +1600,16 @@
         "shortName": "GetChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1231,6 +1647,16 @@
       "clientMethod": {
         "shortName": "GetChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Channel",
         "client": {
           "shortName": "EventarcClient",
@@ -1269,6 +1695,16 @@
         "shortName": "GetChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1306,6 +1742,16 @@
       "clientMethod": {
         "shortName": "ListChannels",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListChannelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListChannelsResponse, Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1345,6 +1791,16 @@
         "shortName": "ListChannelsAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListChannelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListChannelsResponse, Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1383,6 +1839,24 @@
       "clientMethod": {
         "shortName": "ListChannels",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListChannelsResponse, Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1421,6 +1895,24 @@
         "shortName": "ListChannelsAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListChannelsResponse, Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1458,6 +1950,24 @@
       "clientMethod": {
         "shortName": "ListChannels",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannels",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListChannelsResponse, Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1496,6 +2006,24 @@
         "shortName": "ListChannelsAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListChannelsResponse, Google.Cloud.Eventarc.V1.Channel>",
         "client": {
           "shortName": "EventarcClient",
@@ -1533,6 +2061,16 @@
       "clientMethod": {
         "shortName": "CreateChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -1572,6 +2110,16 @@
         "shortName": "CreateChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -1610,6 +2158,24 @@
       "clientMethod": {
         "shortName": "CreateChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "System.String",
+            "name": "channelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -1648,6 +2214,24 @@
         "shortName": "CreateChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "System.String",
+            "name": "channelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -1685,6 +2269,24 @@
       "clientMethod": {
         "shortName": "CreateChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "System.String",
+            "name": "channelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -1723,6 +2325,24 @@
         "shortName": "CreateChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "System.String",
+            "name": "channelId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -1760,6 +2380,16 @@
       "clientMethod": {
         "shortName": "UpdateChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -1799,6 +2429,16 @@
         "shortName": "UpdateChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -1837,6 +2477,20 @@
       "clientMethod": {
         "shortName": "UpdateChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -1875,6 +2529,20 @@
         "shortName": "UpdateChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.Channel",
+            "name": "channel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -1912,6 +2580,16 @@
       "clientMethod": {
         "shortName": "DeleteChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -1951,6 +2629,16 @@
         "shortName": "DeleteChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteChannelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -1989,6 +2677,16 @@
       "clientMethod": {
         "shortName": "DeleteChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -2027,6 +2725,16 @@
         "shortName": "DeleteChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -2064,6 +2772,16 @@
       "clientMethod": {
         "shortName": "DeleteChannel",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -2102,6 +2820,16 @@
         "shortName": "DeleteChannelAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.Channel, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -2139,6 +2867,16 @@
       "clientMethod": {
         "shortName": "GetProvider",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProvider",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetProviderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Provider",
         "client": {
           "shortName": "EventarcClient",
@@ -2178,6 +2916,16 @@
         "shortName": "GetProviderAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProviderAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetProviderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2216,6 +2964,16 @@
       "clientMethod": {
         "shortName": "GetProvider",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProvider",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Provider",
         "client": {
           "shortName": "EventarcClient",
@@ -2254,6 +3012,16 @@
         "shortName": "GetProviderAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProviderAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2291,6 +3059,16 @@
       "clientMethod": {
         "shortName": "GetProvider",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProvider",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ProviderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.Provider",
         "client": {
           "shortName": "EventarcClient",
@@ -2329,6 +3107,16 @@
         "shortName": "GetProviderAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetProviderAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ProviderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2366,6 +3154,16 @@
       "clientMethod": {
         "shortName": "ListProviders",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProviders",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListProvidersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2405,6 +3203,16 @@
         "shortName": "ListProvidersAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProvidersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListProvidersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2443,6 +3251,24 @@
       "clientMethod": {
         "shortName": "ListProviders",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProviders",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2481,6 +3307,24 @@
         "shortName": "ListProvidersAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProvidersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2518,6 +3362,24 @@
       "clientMethod": {
         "shortName": "ListProviders",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProviders",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2556,6 +3418,24 @@
         "shortName": "ListProvidersAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListProvidersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListProvidersResponse, Google.Cloud.Eventarc.V1.Provider>",
         "client": {
           "shortName": "EventarcClient",
@@ -2593,6 +3473,16 @@
       "clientMethod": {
         "shortName": "GetChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetChannelConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.ChannelConnection",
         "client": {
           "shortName": "EventarcClient",
@@ -2632,6 +3522,16 @@
         "shortName": "GetChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetChannelConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -2670,6 +3570,16 @@
       "clientMethod": {
         "shortName": "GetChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.ChannelConnection",
         "client": {
           "shortName": "EventarcClient",
@@ -2708,6 +3618,16 @@
         "shortName": "GetChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -2745,6 +3665,16 @@
       "clientMethod": {
         "shortName": "GetChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.ChannelConnection",
         "client": {
           "shortName": "EventarcClient",
@@ -2783,6 +3713,16 @@
         "shortName": "GetChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -2820,6 +3760,16 @@
       "clientMethod": {
         "shortName": "ListChannelConnections",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListChannelConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListChannelConnectionsResponse, Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -2859,6 +3809,16 @@
         "shortName": "ListChannelConnectionsAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ListChannelConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListChannelConnectionsResponse, Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -2897,6 +3857,24 @@
       "clientMethod": {
         "shortName": "ListChannelConnections",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListChannelConnectionsResponse, Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -2935,6 +3913,24 @@
         "shortName": "ListChannelConnectionsAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListChannelConnectionsResponse, Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -2972,6 +3968,24 @@
       "clientMethod": {
         "shortName": "ListChannelConnections",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Eventarc.V1.ListChannelConnectionsResponse, Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -3010,6 +4024,24 @@
         "shortName": "ListChannelConnectionsAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.ListChannelConnectionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Eventarc.V1.ListChannelConnectionsResponse, Google.Cloud.Eventarc.V1.ChannelConnection>",
         "client": {
           "shortName": "EventarcClient",
@@ -3047,6 +4079,16 @@
       "clientMethod": {
         "shortName": "CreateChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateChannelConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -3086,6 +4128,16 @@
         "shortName": "CreateChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.CreateChannelConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -3124,6 +4176,24 @@
       "clientMethod": {
         "shortName": "CreateChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelConnection",
+            "name": "channelConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "channelConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -3162,6 +4232,24 @@
         "shortName": "CreateChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelConnection",
+            "name": "channelConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "channelConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -3199,6 +4287,24 @@
       "clientMethod": {
         "shortName": "CreateChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelConnection",
+            "name": "channelConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "channelConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -3237,6 +4343,24 @@
         "shortName": "CreateChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.CreateChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelConnection",
+            "name": "channelConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "channelConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -3274,6 +4398,16 @@
       "clientMethod": {
         "shortName": "DeleteChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteChannelConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -3313,6 +4447,16 @@
         "shortName": "DeleteChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.DeleteChannelConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -3351,6 +4495,16 @@
       "clientMethod": {
         "shortName": "DeleteChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -3389,6 +4543,16 @@
         "shortName": "DeleteChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -3426,6 +4590,16 @@
       "clientMethod": {
         "shortName": "DeleteChannelConnection",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>",
         "client": {
           "shortName": "EventarcClient",
@@ -3464,6 +4638,16 @@
         "shortName": "DeleteChannelConnectionAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.DeleteChannelConnectionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.ChannelConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Eventarc.V1.ChannelConnection, Google.Cloud.Eventarc.V1.OperationMetadata>>",
         "client": {
           "shortName": "EventarcClient",
@@ -3501,6 +4685,16 @@
       "clientMethod": {
         "shortName": "GetGoogleChannelConfig",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
         "client": {
           "shortName": "EventarcClient",
@@ -3540,6 +4734,16 @@
         "shortName": "GetGoogleChannelConfigAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GetGoogleChannelConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
         "client": {
           "shortName": "EventarcClient",
@@ -3578,6 +4782,16 @@
       "clientMethod": {
         "shortName": "GetGoogleChannelConfig",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
         "client": {
           "shortName": "EventarcClient",
@@ -3616,6 +4830,16 @@
         "shortName": "GetGoogleChannelConfigAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
         "client": {
           "shortName": "EventarcClient",
@@ -3653,6 +4877,16 @@
       "clientMethod": {
         "shortName": "GetGoogleChannelConfig",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleChannelConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
         "client": {
           "shortName": "EventarcClient",
@@ -3691,6 +4925,16 @@
         "shortName": "GetGoogleChannelConfigAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.GetGoogleChannelConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleChannelConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
         "client": {
           "shortName": "EventarcClient",
@@ -3728,6 +4972,16 @@
       "clientMethod": {
         "shortName": "UpdateGoogleChannelConfig",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleChannelConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
         "client": {
           "shortName": "EventarcClient",
@@ -3767,6 +5021,16 @@
         "shortName": "UpdateGoogleChannelConfigAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleChannelConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.UpdateGoogleChannelConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
         "client": {
           "shortName": "EventarcClient",
@@ -3805,6 +5069,20 @@
       "clientMethod": {
         "shortName": "UpdateGoogleChannelConfig",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleChannelConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
+            "name": "googleChannelConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
         "client": {
           "shortName": "EventarcClient",
@@ -3843,6 +5121,20 @@
         "shortName": "UpdateGoogleChannelConfigAsync",
         "fullName": "Google.Cloud.Eventarc.V1.EventarcClient.UpdateGoogleChannelConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Eventarc.V1.GoogleChannelConfig",
+            "name": "googleChannelConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Eventarc.V1.GoogleChannelConfig>",
         "client": {
           "shortName": "EventarcClient",

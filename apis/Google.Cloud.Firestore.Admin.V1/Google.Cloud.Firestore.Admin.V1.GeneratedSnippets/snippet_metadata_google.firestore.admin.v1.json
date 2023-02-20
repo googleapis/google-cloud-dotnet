@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CreateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Index, Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CreateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Index, Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateIndex",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Index, Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Index, Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -171,6 +219,20 @@
       "clientMethod": {
         "shortName": "CreateIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CollectionGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Index, Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -209,6 +271,20 @@
         "shortName": "CreateIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CollectionGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Index",
+            "name": "index"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Index, Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -246,6 +322,16 @@
       "clientMethod": {
         "shortName": "ListIndexes",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListIndexes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ListIndexesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.Admin.V1.ListIndexesResponse, Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -285,6 +371,16 @@
         "shortName": "ListIndexesAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListIndexesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ListIndexesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.Admin.V1.ListIndexesResponse, Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -323,6 +419,24 @@
       "clientMethod": {
         "shortName": "ListIndexes",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListIndexes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.Admin.V1.ListIndexesResponse, Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -361,6 +475,24 @@
         "shortName": "ListIndexesAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListIndexesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.Admin.V1.ListIndexesResponse, Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -398,6 +530,24 @@
       "clientMethod": {
         "shortName": "ListIndexes",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListIndexes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CollectionGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.Admin.V1.ListIndexesResponse, Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -436,6 +586,24 @@
         "shortName": "ListIndexesAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListIndexesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CollectionGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.Admin.V1.ListIndexesResponse, Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -473,6 +641,16 @@
       "clientMethod": {
         "shortName": "GetIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.GetIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Index",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -512,6 +690,16 @@
         "shortName": "GetIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.GetIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -550,6 +738,16 @@
       "clientMethod": {
         "shortName": "GetIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetIndex",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Index",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -588,6 +786,16 @@
         "shortName": "GetIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -625,6 +833,16 @@
       "clientMethod": {
         "shortName": "GetIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.IndexName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Index",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -663,6 +881,16 @@
         "shortName": "GetIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.IndexName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Index>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -700,6 +928,16 @@
       "clientMethod": {
         "shortName": "DeleteIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "FirestoreAdminClient",
           "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
@@ -738,6 +976,16 @@
         "shortName": "DeleteIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DeleteIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -776,6 +1024,16 @@
       "clientMethod": {
         "shortName": "DeleteIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteIndex",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "FirestoreAdminClient",
           "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
@@ -813,6 +1071,16 @@
         "shortName": "DeleteIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -850,6 +1118,16 @@
       "clientMethod": {
         "shortName": "DeleteIndex",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.IndexName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "FirestoreAdminClient",
           "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
@@ -887,6 +1165,16 @@
         "shortName": "DeleteIndexAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteIndexAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.IndexName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -924,6 +1212,16 @@
       "clientMethod": {
         "shortName": "GetField",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.GetFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Field",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -963,6 +1261,16 @@
         "shortName": "GetFieldAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.GetFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1001,6 +1309,16 @@
       "clientMethod": {
         "shortName": "GetField",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetField",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Field",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1039,6 +1357,16 @@
         "shortName": "GetFieldAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1076,6 +1404,16 @@
       "clientMethod": {
         "shortName": "GetField",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.FieldName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Field",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1114,6 +1452,16 @@
         "shortName": "GetFieldAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.FieldName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1151,6 +1499,16 @@
       "clientMethod": {
         "shortName": "UpdateField",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.UpdateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Field, Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1190,6 +1548,16 @@
         "shortName": "UpdateFieldAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.UpdateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UpdateFieldRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Field, Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1228,6 +1596,16 @@
       "clientMethod": {
         "shortName": "UpdateField",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.UpdateField",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Field",
+            "name": "field"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Field, Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1266,6 +1644,16 @@
         "shortName": "UpdateFieldAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.UpdateFieldAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Field",
+            "name": "field"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Field, Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1303,6 +1691,16 @@
       "clientMethod": {
         "shortName": "ListFields",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListFields",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ListFieldsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.Admin.V1.ListFieldsResponse, Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1342,6 +1740,16 @@
         "shortName": "ListFieldsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListFieldsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ListFieldsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.Admin.V1.ListFieldsResponse, Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1380,6 +1788,24 @@
       "clientMethod": {
         "shortName": "ListFields",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListFields",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.Admin.V1.ListFieldsResponse, Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1418,6 +1844,24 @@
         "shortName": "ListFieldsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListFieldsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.Admin.V1.ListFieldsResponse, Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1455,6 +1899,24 @@
       "clientMethod": {
         "shortName": "ListFields",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListFields",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CollectionGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.Admin.V1.ListFieldsResponse, Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1493,6 +1955,24 @@
         "shortName": "ListFieldsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListFieldsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CollectionGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.Admin.V1.ListFieldsResponse, Google.Cloud.Firestore.Admin.V1.Field>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1530,6 +2010,16 @@
       "clientMethod": {
         "shortName": "ExportDocuments",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ExportDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse, Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1569,6 +2059,16 @@
         "shortName": "ExportDocumentsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ExportDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse, Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1607,6 +2107,16 @@
       "clientMethod": {
         "shortName": "ExportDocuments",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ExportDocuments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse, Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1645,6 +2155,16 @@
         "shortName": "ExportDocumentsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ExportDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse, Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1682,6 +2202,16 @@
       "clientMethod": {
         "shortName": "ExportDocuments",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ExportDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse, Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1720,6 +2250,16 @@
         "shortName": "ExportDocumentsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ExportDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse, Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1757,6 +2297,16 @@
       "clientMethod": {
         "shortName": "ImportDocuments",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ImportDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1796,6 +2346,16 @@
         "shortName": "ImportDocumentsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ImportDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1834,6 +2394,16 @@
       "clientMethod": {
         "shortName": "ImportDocuments",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ImportDocuments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1872,6 +2442,16 @@
         "shortName": "ImportDocumentsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ImportDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1909,6 +2489,16 @@
       "clientMethod": {
         "shortName": "ImportDocuments",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ImportDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1947,6 +2537,16 @@
         "shortName": "ImportDocumentsAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ImportDocumentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -1984,6 +2584,16 @@
       "clientMethod": {
         "shortName": "GetDatabase",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Database",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2023,6 +2633,16 @@
         "shortName": "GetDatabaseAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetDatabaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Database>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2061,6 +2681,16 @@
       "clientMethod": {
         "shortName": "GetDatabase",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetDatabase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Database",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2099,6 +2729,16 @@
         "shortName": "GetDatabaseAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetDatabaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Database>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2136,6 +2776,16 @@
       "clientMethod": {
         "shortName": "GetDatabase",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.Database",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2174,6 +2824,16 @@
         "shortName": "GetDatabaseAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetDatabaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.Database>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2211,6 +2871,16 @@
       "clientMethod": {
         "shortName": "ListDatabases",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListDatabases",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2250,6 +2920,16 @@
         "shortName": "ListDatabasesAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListDatabasesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2288,6 +2968,16 @@
       "clientMethod": {
         "shortName": "ListDatabases",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListDatabases",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2326,6 +3016,16 @@
         "shortName": "ListDatabasesAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListDatabasesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2363,6 +3063,16 @@
       "clientMethod": {
         "shortName": "ListDatabases",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListDatabases",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2401,6 +3111,16 @@
         "shortName": "ListDatabasesAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListDatabasesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2438,6 +3158,16 @@
       "clientMethod": {
         "shortName": "UpdateDatabase",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.UpdateDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.UpdateDatabaseMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2477,6 +3207,16 @@
         "shortName": "UpdateDatabaseAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.UpdateDatabaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.UpdateDatabaseMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2515,6 +3255,20 @@
       "clientMethod": {
         "shortName": "UpdateDatabase",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.UpdateDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Database",
+            "name": "database"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.UpdateDatabaseMetadata>",
         "client": {
           "shortName": "FirestoreAdminClient",
@@ -2553,6 +3307,20 @@
         "shortName": "UpdateDatabaseAsync",
         "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.UpdateDatabaseAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Database",
+            "name": "database"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.UpdateDatabaseMetadata>>",
         "client": {
           "shortName": "FirestoreAdminClient",

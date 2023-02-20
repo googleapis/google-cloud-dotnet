@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListSettings",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.ListSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ResourceSettings.V1.ListSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ResourceSettings.V1.ListSettingsResponse, Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListSettingsAsync",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.ListSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ResourceSettings.V1.ListSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ResourceSettings.V1.ListSettingsResponse, Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListSettings",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.ListSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ResourceSettings.V1.ListSettingsResponse, Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListSettingsAsync",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.ListSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ResourceSettings.V1.ListSettingsResponse, Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListSettings",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.ListSettings",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ResourceSettings.V1.ListSettingsResponse, Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "ListSettingsAsync",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.ListSettingsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ResourceSettings.V1.ListSettingsResponse, Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetSetting",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.GetSetting",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ResourceSettings.V1.GetSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ResourceSettings.V1.Setting",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "GetSettingAsync",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.GetSettingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ResourceSettings.V1.GetSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetSetting",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.GetSetting",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ResourceSettings.V1.Setting",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -361,6 +483,16 @@
         "shortName": "GetSettingAsync",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.GetSettingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetSetting",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.GetSetting",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ResourceSettings.V1.SettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ResourceSettings.V1.Setting",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -436,6 +578,16 @@
         "shortName": "GetSettingAsync",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.GetSettingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ResourceSettings.V1.SettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "UpdateSetting",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.UpdateSetting",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ResourceSettings.V1.UpdateSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ResourceSettings.V1.Setting",
         "client": {
           "shortName": "ResourceSettingsServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "UpdateSettingAsync",
         "fullName": "Google.Cloud.ResourceSettings.V1.ResourceSettingsServiceClient.UpdateSettingAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ResourceSettings.V1.UpdateSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ResourceSettings.V1.Setting>",
         "client": {
           "shortName": "ResourceSettingsServiceClient",

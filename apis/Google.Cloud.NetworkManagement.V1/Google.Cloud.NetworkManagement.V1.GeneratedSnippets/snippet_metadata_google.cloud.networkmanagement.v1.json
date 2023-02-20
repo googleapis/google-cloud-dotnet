@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListConnectivityTests",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTests",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "ListConnectivityTestsAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTestsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListConnectivityTests",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTests",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "ListConnectivityTestsAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTestsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -171,6 +227,16 @@
       "clientMethod": {
         "shortName": "GetConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -210,6 +276,16 @@
         "shortName": "GetConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -248,6 +324,16 @@
       "clientMethod": {
         "shortName": "GetConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTest",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -286,6 +372,16 @@
         "shortName": "GetConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -323,6 +419,16 @@
       "clientMethod": {
         "shortName": "CreateConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -362,6 +468,16 @@
         "shortName": "CreateConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -400,6 +516,24 @@
       "clientMethod": {
         "shortName": "CreateConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTest",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "testId"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -438,6 +572,24 @@
         "shortName": "CreateConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "testId"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -475,6 +627,16 @@
       "clientMethod": {
         "shortName": "UpdateConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.UpdateConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -514,6 +676,16 @@
         "shortName": "UpdateConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.UpdateConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -552,6 +724,20 @@
       "clientMethod": {
         "shortName": "UpdateConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.UpdateConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -590,6 +776,20 @@
         "shortName": "UpdateConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.UpdateConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -627,6 +827,16 @@
       "clientMethod": {
         "shortName": "RerunConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.RerunConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -666,6 +876,16 @@
         "shortName": "RerunConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.RerunConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -704,6 +924,16 @@
       "clientMethod": {
         "shortName": "DeleteConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -743,6 +973,16 @@
         "shortName": "DeleteConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -781,6 +1021,16 @@
       "clientMethod": {
         "shortName": "DeleteConnectivityTest",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTest",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
         "client": {
           "shortName": "ReachabilityServiceClient",
@@ -819,6 +1069,16 @@
         "shortName": "DeleteConnectivityTestAsync",
         "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
         "client": {
           "shortName": "ReachabilityServiceClient",

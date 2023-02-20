@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateEnvironment",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.CreateEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.Environment, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateEnvironmentAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.CreateEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.Environment, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -96,6 +116,20 @@
       "clientMethod": {
         "shortName": "CreateEnvironment",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateEnvironment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.Environment",
+            "name": "environment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.Environment, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -134,6 +168,20 @@
         "shortName": "CreateEnvironmentAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.Environment",
+            "name": "environment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.Environment, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -171,6 +219,16 @@
       "clientMethod": {
         "shortName": "GetEnvironment",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.GetEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.Environment",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -210,6 +268,16 @@
         "shortName": "GetEnvironmentAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.GetEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.Environment>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -248,6 +316,16 @@
       "clientMethod": {
         "shortName": "GetEnvironment",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetEnvironment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.Environment",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -286,6 +364,16 @@
         "shortName": "GetEnvironmentAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.Environment>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -323,6 +411,16 @@
       "clientMethod": {
         "shortName": "ListEnvironments",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListEnvironments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.Environment>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -362,6 +460,16 @@
         "shortName": "ListEnvironmentsAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListEnvironmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.Environment>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -400,6 +508,24 @@
       "clientMethod": {
         "shortName": "ListEnvironments",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListEnvironments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.Environment>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -438,6 +564,24 @@
         "shortName": "ListEnvironmentsAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListEnvironmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.Environment>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -475,6 +619,16 @@
       "clientMethod": {
         "shortName": "UpdateEnvironment",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UpdateEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.Environment, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -514,6 +668,16 @@
         "shortName": "UpdateEnvironmentAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UpdateEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.Environment, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -552,6 +716,24 @@
       "clientMethod": {
         "shortName": "UpdateEnvironment",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateEnvironment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.Environment",
+            "name": "environment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.Environment, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -590,6 +772,24 @@
         "shortName": "UpdateEnvironmentAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.Environment",
+            "name": "environment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.Environment, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -627,6 +827,16 @@
       "clientMethod": {
         "shortName": "DeleteEnvironment",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteEnvironment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -666,6 +876,16 @@
         "shortName": "DeleteEnvironmentAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -704,6 +924,16 @@
       "clientMethod": {
         "shortName": "DeleteEnvironment",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteEnvironment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -742,6 +972,16 @@
         "shortName": "DeleteEnvironmentAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteEnvironmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -779,6 +1019,16 @@
       "clientMethod": {
         "shortName": "SaveSnapshot",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.SaveSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -818,6 +1068,16 @@
         "shortName": "SaveSnapshotAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.SaveSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -856,6 +1116,16 @@
       "clientMethod": {
         "shortName": "LoadSnapshot",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.LoadSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -895,6 +1165,16 @@
         "shortName": "LoadSnapshotAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.LoadSnapshotAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
         "client": {
           "shortName": "EnvironmentsClient",
@@ -933,6 +1213,16 @@
       "clientMethod": {
         "shortName": "ListImageVersions",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersionsClient.ListImageVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListImageVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListImageVersionsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersion>",
         "client": {
           "shortName": "ImageVersionsClient",
@@ -972,6 +1262,16 @@
         "shortName": "ListImageVersionsAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersionsClient.ListImageVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListImageVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListImageVersionsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersion>",
         "client": {
           "shortName": "ImageVersionsClient",
@@ -1010,6 +1310,24 @@
       "clientMethod": {
         "shortName": "ListImageVersions",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersionsClient.ListImageVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListImageVersionsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersion>",
         "client": {
           "shortName": "ImageVersionsClient",
@@ -1048,6 +1366,24 @@
         "shortName": "ListImageVersionsAsync",
         "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersionsClient.ListImageVersionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListImageVersionsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersion>",
         "client": {
           "shortName": "ImageVersionsClient",

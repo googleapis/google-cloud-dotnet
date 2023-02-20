@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetGroup",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "GetGroupAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetGroup",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "groupName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -134,6 +164,16 @@
         "shortName": "GetGroupAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "groupName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetGroup",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupName",
+            "name": "groupName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -209,6 +259,16 @@
         "shortName": "GetGroupAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupName",
+            "name": "groupName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "UpdateGroup",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.UpdateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -285,6 +355,16 @@
         "shortName": "UpdateGroupAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.UpdateGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -323,6 +403,16 @@
       "clientMethod": {
         "shortName": "UpdateGroup",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.UpdateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -361,6 +451,16 @@
         "shortName": "UpdateGroupAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.UpdateGroupAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
         "client": {
           "shortName": "ErrorGroupServiceClient",
@@ -398,6 +498,16 @@
       "clientMethod": {
         "shortName": "ListGroupStats",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -437,6 +547,16 @@
         "shortName": "ListGroupStatsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -475,6 +595,28 @@
       "clientMethod": {
         "shortName": "ListGroupStats",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange",
+            "name": "timeRange"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -513,6 +655,28 @@
         "shortName": "ListGroupStatsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange",
+            "name": "timeRange"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -550,6 +714,28 @@
       "clientMethod": {
         "shortName": "ListGroupStats",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange",
+            "name": "timeRange"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -588,6 +774,28 @@
         "shortName": "ListGroupStatsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange",
+            "name": "timeRange"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -625,6 +833,16 @@
       "clientMethod": {
         "shortName": "ListEvents",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -664,6 +882,16 @@
         "shortName": "ListEventsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -702,6 +930,28 @@
       "clientMethod": {
         "shortName": "ListEvents",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -740,6 +990,28 @@
         "shortName": "ListEventsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -777,6 +1049,28 @@
       "clientMethod": {
         "shortName": "ListEvents",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -815,6 +1109,28 @@
         "shortName": "ListEventsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -852,6 +1168,16 @@
       "clientMethod": {
         "shortName": "DeleteEvents",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -891,6 +1217,16 @@
         "shortName": "DeleteEventsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -929,6 +1265,16 @@
       "clientMethod": {
         "shortName": "DeleteEvents",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -967,6 +1313,16 @@
         "shortName": "DeleteEventsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -1004,6 +1360,16 @@
       "clientMethod": {
         "shortName": "DeleteEvents",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -1042,6 +1408,16 @@
         "shortName": "DeleteEventsAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>",
         "client": {
           "shortName": "ErrorStatsServiceClient",
@@ -1079,6 +1455,16 @@
       "clientMethod": {
         "shortName": "ReportErrorEvent",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse",
         "client": {
           "shortName": "ReportErrorsServiceClient",
@@ -1118,6 +1504,16 @@
         "shortName": "ReportErrorEventAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse>",
         "client": {
           "shortName": "ReportErrorsServiceClient",
@@ -1156,6 +1552,20 @@
       "clientMethod": {
         "shortName": "ReportErrorEvent",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse",
         "client": {
           "shortName": "ReportErrorsServiceClient",
@@ -1194,6 +1604,20 @@
         "shortName": "ReportErrorEventAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse>",
         "client": {
           "shortName": "ReportErrorsServiceClient",
@@ -1231,6 +1655,20 @@
       "clientMethod": {
         "shortName": "ReportErrorEvent",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse",
         "client": {
           "shortName": "ReportErrorsServiceClient",
@@ -1269,6 +1707,20 @@
         "shortName": "ReportErrorEventAsync",
         "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse>",
         "client": {
           "shortName": "ReportErrorsServiceClient",

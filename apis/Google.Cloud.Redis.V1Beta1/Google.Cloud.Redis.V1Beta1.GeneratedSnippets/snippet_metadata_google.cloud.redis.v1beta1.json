@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -58,6 +68,16 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -134,6 +172,24 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListInstances",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -209,6 +283,24 @@
         "shortName": "ListInstancesAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstancesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Redis.V1Beta1.Instance",
         "client": {
           "shortName": "CloudRedisClient",
@@ -285,6 +387,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Redis.V1Beta1.Instance",
         "client": {
           "shortName": "CloudRedisClient",
@@ -361,6 +483,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Redis.V1Beta1.Instance",
         "client": {
           "shortName": "CloudRedisClient",
@@ -436,6 +578,16 @@
         "shortName": "GetInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.Instance>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "GetInstanceAuthString",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthString",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Redis.V1Beta1.InstanceAuthString",
         "client": {
           "shortName": "CloudRedisClient",
@@ -512,6 +674,16 @@
         "shortName": "GetInstanceAuthStringAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthStringAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.InstanceAuthString>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -550,6 +722,16 @@
       "clientMethod": {
         "shortName": "GetInstanceAuthString",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthString",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Redis.V1Beta1.InstanceAuthString",
         "client": {
           "shortName": "CloudRedisClient",
@@ -588,6 +770,16 @@
         "shortName": "GetInstanceAuthStringAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthStringAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.InstanceAuthString>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -625,6 +817,16 @@
       "clientMethod": {
         "shortName": "GetInstanceAuthString",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthString",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Redis.V1Beta1.InstanceAuthString",
         "client": {
           "shortName": "CloudRedisClient",
@@ -663,6 +865,16 @@
         "shortName": "GetInstanceAuthStringAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthStringAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.InstanceAuthString>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -700,6 +912,16 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -739,6 +961,16 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -777,6 +1009,24 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -815,6 +1065,24 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -852,6 +1120,24 @@
       "clientMethod": {
         "shortName": "CreateInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -890,6 +1176,24 @@
         "shortName": "CreateInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -927,6 +1231,16 @@
       "clientMethod": {
         "shortName": "UpdateInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -966,6 +1280,16 @@
         "shortName": "UpdateInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1004,6 +1328,20 @@
       "clientMethod": {
         "shortName": "UpdateInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1042,6 +1380,20 @@
         "shortName": "UpdateInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpdateInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "UpgradeInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1118,6 +1480,16 @@
         "shortName": "UpgradeInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1156,6 +1528,20 @@
       "clientMethod": {
         "shortName": "UpgradeInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "redisVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1194,6 +1580,20 @@
         "shortName": "UpgradeInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "redisVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1231,6 +1631,20 @@
       "clientMethod": {
         "shortName": "UpgradeInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "redisVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1269,6 +1683,20 @@
         "shortName": "UpgradeInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "redisVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1306,6 +1734,16 @@
       "clientMethod": {
         "shortName": "ImportInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ImportInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ImportInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1345,6 +1783,16 @@
         "shortName": "ImportInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ImportInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ImportInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1383,6 +1831,20 @@
       "clientMethod": {
         "shortName": "ImportInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ImportInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1421,6 +1883,20 @@
         "shortName": "ImportInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ImportInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1458,6 +1934,16 @@
       "clientMethod": {
         "shortName": "ExportInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ExportInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ExportInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1497,6 +1983,16 @@
         "shortName": "ExportInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ExportInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ExportInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1535,6 +2031,20 @@
       "clientMethod": {
         "shortName": "ExportInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ExportInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1573,6 +2083,20 @@
         "shortName": "ExportInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ExportInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1610,6 +2134,16 @@
       "clientMethod": {
         "shortName": "FailoverInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1649,6 +2183,16 @@
         "shortName": "FailoverInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1687,6 +2231,20 @@
       "clientMethod": {
         "shortName": "FailoverInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest+Types+DataProtectionMode",
+            "name": "dataProtectionMode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1725,6 +2283,20 @@
         "shortName": "FailoverInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest+Types+DataProtectionMode",
+            "name": "dataProtectionMode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1762,6 +2334,20 @@
       "clientMethod": {
         "shortName": "FailoverInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest+Types+DataProtectionMode",
+            "name": "dataProtectionMode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1800,6 +2386,20 @@
         "shortName": "FailoverInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest+Types+DataProtectionMode",
+            "name": "dataProtectionMode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1837,6 +2437,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1876,6 +2486,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1914,6 +2534,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1952,6 +2582,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -1989,6 +2629,16 @@
       "clientMethod": {
         "shortName": "DeleteInstance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -2027,6 +2677,16 @@
         "shortName": "DeleteInstanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -2064,6 +2724,16 @@
       "clientMethod": {
         "shortName": "RescheduleMaintenance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -2103,6 +2773,16 @@
         "shortName": "RescheduleMaintenanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -2141,6 +2821,24 @@
       "clientMethod": {
         "shortName": "RescheduleMaintenance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -2179,6 +2877,24 @@
         "shortName": "RescheduleMaintenanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -2216,6 +2932,24 @@
       "clientMethod": {
         "shortName": "RescheduleMaintenance",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
         "client": {
           "shortName": "CloudRedisClient",
@@ -2254,6 +2988,24 @@
         "shortName": "RescheduleMaintenanceAsync",
         "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenanceAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
         "client": {
           "shortName": "CloudRedisClient",

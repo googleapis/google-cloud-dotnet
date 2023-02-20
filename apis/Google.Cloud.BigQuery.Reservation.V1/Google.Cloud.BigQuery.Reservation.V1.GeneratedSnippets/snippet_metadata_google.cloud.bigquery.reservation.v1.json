@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateReservation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
+            "name": "reservation"
+          },
+          {
+            "type": "System.String",
+            "name": "reservationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
+            "name": "reservation"
+          },
+          {
+            "type": "System.String",
+            "name": "reservationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateReservation",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
+            "name": "reservation"
+          },
+          {
+            "type": "System.String",
+            "name": "reservationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
+            "name": "reservation"
+          },
+          {
+            "type": "System.String",
+            "name": "reservationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ListReservations",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse, Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -285,6 +387,16 @@
         "shortName": "ListReservationsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse, Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -323,6 +435,24 @@
       "clientMethod": {
         "shortName": "ListReservations",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse, Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -361,6 +491,24 @@
         "shortName": "ListReservationsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse, Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -398,6 +546,24 @@
       "clientMethod": {
         "shortName": "ListReservations",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse, Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -436,6 +602,24 @@
         "shortName": "ListReservationsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse, Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -473,6 +657,16 @@
       "clientMethod": {
         "shortName": "GetReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -512,6 +706,16 @@
         "shortName": "GetReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -550,6 +754,16 @@
       "clientMethod": {
         "shortName": "GetReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -588,6 +802,16 @@
         "shortName": "GetReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -625,6 +849,16 @@
       "clientMethod": {
         "shortName": "GetReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -663,6 +897,16 @@
         "shortName": "GetReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "DeleteReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -738,6 +992,16 @@
         "shortName": "DeleteReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -776,6 +1040,16 @@
       "clientMethod": {
         "shortName": "DeleteReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -813,6 +1087,16 @@
         "shortName": "DeleteReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -850,6 +1134,16 @@
       "clientMethod": {
         "shortName": "DeleteReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -887,6 +1181,16 @@
         "shortName": "DeleteReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -924,6 +1228,16 @@
       "clientMethod": {
         "shortName": "UpdateReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -963,6 +1277,16 @@
         "shortName": "UpdateReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1001,6 +1325,20 @@
       "clientMethod": {
         "shortName": "UpdateReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
+            "name": "reservation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1039,6 +1377,20 @@
         "shortName": "UpdateReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Reservation",
+            "name": "reservation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Reservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1076,6 +1428,16 @@
       "clientMethod": {
         "shortName": "CreateCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1115,6 +1477,16 @@
         "shortName": "CreateCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1153,6 +1525,20 @@
       "clientMethod": {
         "shortName": "CreateCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateCapacityCommitment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
+            "name": "capacityCommitment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1191,6 +1577,20 @@
         "shortName": "CreateCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
+            "name": "capacityCommitment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1228,6 +1628,20 @@
       "clientMethod": {
         "shortName": "CreateCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
+            "name": "capacityCommitment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1266,6 +1680,20 @@
         "shortName": "CreateCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
+            "name": "capacityCommitment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1303,6 +1731,16 @@
       "clientMethod": {
         "shortName": "ListCapacityCommitments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListCapacityCommitments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse, Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1342,6 +1780,16 @@
         "shortName": "ListCapacityCommitmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListCapacityCommitmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse, Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1380,6 +1828,24 @@
       "clientMethod": {
         "shortName": "ListCapacityCommitments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListCapacityCommitments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse, Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1418,6 +1884,24 @@
         "shortName": "ListCapacityCommitmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListCapacityCommitmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse, Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1455,6 +1939,24 @@
       "clientMethod": {
         "shortName": "ListCapacityCommitments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListCapacityCommitments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse, Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1493,6 +1995,24 @@
         "shortName": "ListCapacityCommitmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListCapacityCommitmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse, Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1530,6 +2050,16 @@
       "clientMethod": {
         "shortName": "GetCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1569,6 +2099,16 @@
         "shortName": "GetCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1607,6 +2147,16 @@
       "clientMethod": {
         "shortName": "GetCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetCapacityCommitment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1645,6 +2195,16 @@
         "shortName": "GetCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1682,6 +2242,16 @@
       "clientMethod": {
         "shortName": "GetCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1720,6 +2290,16 @@
         "shortName": "GetCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1757,6 +2337,16 @@
       "clientMethod": {
         "shortName": "DeleteCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -1795,6 +2385,16 @@
         "shortName": "DeleteCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1833,6 +2433,16 @@
       "clientMethod": {
         "shortName": "DeleteCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteCapacityCommitment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -1870,6 +2480,16 @@
         "shortName": "DeleteCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1907,6 +2527,16 @@
       "clientMethod": {
         "shortName": "DeleteCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -1944,6 +2574,16 @@
         "shortName": "DeleteCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -1981,6 +2621,16 @@
       "clientMethod": {
         "shortName": "UpdateCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2020,6 +2670,16 @@
         "shortName": "UpdateCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2058,6 +2718,20 @@
       "clientMethod": {
         "shortName": "UpdateCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
+            "name": "capacityCommitment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2096,6 +2770,20 @@
         "shortName": "UpdateCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
+            "name": "capacityCommitment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2133,6 +2821,16 @@
       "clientMethod": {
         "shortName": "SplitCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SplitCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2172,6 +2870,16 @@
         "shortName": "SplitCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SplitCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2210,6 +2918,20 @@
       "clientMethod": {
         "shortName": "SplitCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SplitCapacityCommitment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Int64",
+            "name": "slotCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2248,6 +2970,20 @@
         "shortName": "SplitCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SplitCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Int64",
+            "name": "slotCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2285,6 +3021,20 @@
       "clientMethod": {
         "shortName": "SplitCapacityCommitment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SplitCapacityCommitment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitmentName",
+            "name": "name"
+          },
+          {
+            "type": "System.Int64",
+            "name": "slotCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2323,6 +3073,20 @@
         "shortName": "SplitCapacityCommitmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SplitCapacityCommitmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitmentName",
+            "name": "name"
+          },
+          {
+            "type": "System.Int64",
+            "name": "slotCount"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2360,6 +3124,16 @@
       "clientMethod": {
         "shortName": "MergeCapacityCommitments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MergeCapacityCommitments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2399,6 +3173,16 @@
         "shortName": "MergeCapacityCommitmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MergeCapacityCommitmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2437,6 +3221,20 @@
       "clientMethod": {
         "shortName": "MergeCapacityCommitments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MergeCapacityCommitments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "capacityCommitmentIds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2475,6 +3273,20 @@
         "shortName": "MergeCapacityCommitmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MergeCapacityCommitmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "capacityCommitmentIds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2512,6 +3324,20 @@
       "clientMethod": {
         "shortName": "MergeCapacityCommitments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MergeCapacityCommitments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "capacityCommitmentIds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2550,6 +3376,20 @@
         "shortName": "MergeCapacityCommitmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MergeCapacityCommitmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "capacityCommitmentIds"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2587,6 +3427,16 @@
       "clientMethod": {
         "shortName": "CreateAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2626,6 +3476,16 @@
         "shortName": "CreateAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2664,6 +3524,20 @@
       "clientMethod": {
         "shortName": "CreateAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateAssignment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
+            "name": "assignment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2702,6 +3576,20 @@
         "shortName": "CreateAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
+            "name": "assignment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2739,6 +3627,20 @@
       "clientMethod": {
         "shortName": "CreateAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
+            "name": "assignment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2777,6 +3679,20 @@
         "shortName": "CreateAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
+            "name": "assignment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2814,6 +3730,16 @@
       "clientMethod": {
         "shortName": "ListAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListAssignments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2853,6 +3779,16 @@
         "shortName": "ListAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2891,6 +3827,24 @@
       "clientMethod": {
         "shortName": "ListAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListAssignments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2929,6 +3883,24 @@
         "shortName": "ListAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -2966,6 +3938,24 @@
       "clientMethod": {
         "shortName": "ListAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListAssignments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3004,6 +3994,24 @@
         "shortName": "ListAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3041,6 +4049,16 @@
       "clientMethod": {
         "shortName": "DeleteAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -3079,6 +4097,16 @@
         "shortName": "DeleteAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3117,6 +4145,16 @@
       "clientMethod": {
         "shortName": "DeleteAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteAssignment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -3154,6 +4192,16 @@
         "shortName": "DeleteAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3191,6 +4239,16 @@
       "clientMethod": {
         "shortName": "DeleteAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.AssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "ReservationServiceClient",
           "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
@@ -3228,6 +4286,16 @@
         "shortName": "DeleteAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.AssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3265,6 +4333,16 @@
       "clientMethod": {
         "shortName": "SearchAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAssignments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3304,6 +4382,16 @@
         "shortName": "SearchAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3342,6 +4430,28 @@
       "clientMethod": {
         "shortName": "SearchAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAssignments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3380,6 +4490,28 @@
         "shortName": "SearchAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3417,6 +4549,28 @@
       "clientMethod": {
         "shortName": "SearchAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAssignments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3455,6 +4609,28 @@
         "shortName": "SearchAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3492,6 +4668,16 @@
       "clientMethod": {
         "shortName": "SearchAllAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAllAssignments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3531,6 +4717,16 @@
         "shortName": "SearchAllAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAllAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3569,6 +4765,28 @@
       "clientMethod": {
         "shortName": "SearchAllAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAllAssignments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3607,6 +4825,28 @@
         "shortName": "SearchAllAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAllAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3644,6 +4884,28 @@
       "clientMethod": {
         "shortName": "SearchAllAssignments",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAllAssignments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3682,6 +4944,28 @@
         "shortName": "SearchAllAssignmentsAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SearchAllAssignmentsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse, Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3719,6 +5003,16 @@
       "clientMethod": {
         "shortName": "MoveAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MoveAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3758,6 +5052,16 @@
         "shortName": "MoveAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MoveAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3796,6 +5100,20 @@
       "clientMethod": {
         "shortName": "MoveAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MoveAssignment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3834,6 +5152,20 @@
         "shortName": "MoveAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MoveAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3871,6 +5203,20 @@
       "clientMethod": {
         "shortName": "MoveAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MoveAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.AssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "destinationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3909,6 +5255,20 @@
         "shortName": "MoveAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.MoveAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.AssignmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationName",
+            "name": "destinationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3946,6 +5306,16 @@
       "clientMethod": {
         "shortName": "UpdateAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -3985,6 +5355,16 @@
         "shortName": "UpdateAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4023,6 +5403,20 @@
       "clientMethod": {
         "shortName": "UpdateAssignment",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateAssignment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
+            "name": "assignment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4061,6 +5455,20 @@
         "shortName": "UpdateAssignmentAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateAssignmentAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.Assignment",
+            "name": "assignment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.Assignment>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4098,6 +5506,16 @@
       "clientMethod": {
         "shortName": "GetBiReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetBiReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.BiReservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4137,6 +5555,16 @@
         "shortName": "GetBiReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetBiReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.BiReservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4175,6 +5603,16 @@
       "clientMethod": {
         "shortName": "GetBiReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetBiReservation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.BiReservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4213,6 +5651,16 @@
         "shortName": "GetBiReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetBiReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.BiReservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4250,6 +5698,16 @@
       "clientMethod": {
         "shortName": "GetBiReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetBiReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.BiReservationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.BiReservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4288,6 +5746,16 @@
         "shortName": "GetBiReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetBiReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.BiReservationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.BiReservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4325,6 +5793,16 @@
       "clientMethod": {
         "shortName": "UpdateBiReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateBiReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.BiReservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4364,6 +5842,16 @@
         "shortName": "UpdateBiReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateBiReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.BiReservation>",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4402,6 +5890,20 @@
       "clientMethod": {
         "shortName": "UpdateBiReservation",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateBiReservation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.BiReservation",
+            "name": "biReservation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.BigQuery.Reservation.V1.BiReservation",
         "client": {
           "shortName": "ReservationServiceClient",
@@ -4440,6 +5942,20 @@
         "shortName": "UpdateBiReservationAsync",
         "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateBiReservationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.BiReservation",
+            "name": "biReservation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.BiReservation>",
         "client": {
           "shortName": "ReservationServiceClient",

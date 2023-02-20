@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "GetFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GetFunction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.GetFunctionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Functions.V2.Function",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -58,6 +68,16 @@
         "shortName": "GetFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GetFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.GetFunctionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -96,6 +116,16 @@
       "clientMethod": {
         "shortName": "GetFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GetFunction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Functions.V2.Function",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -134,6 +164,16 @@
         "shortName": "GetFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GetFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -171,6 +211,16 @@
       "clientMethod": {
         "shortName": "GetFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GetFunction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.FunctionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Functions.V2.Function",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -209,6 +259,16 @@
         "shortName": "GetFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GetFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.FunctionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -246,6 +306,16 @@
       "clientMethod": {
         "shortName": "ListFunctions",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListFunctions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.ListFunctionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Functions.V2.ListFunctionsResponse, Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -285,6 +355,16 @@
         "shortName": "ListFunctionsAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListFunctionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.ListFunctionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Functions.V2.ListFunctionsResponse, Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -323,6 +403,24 @@
       "clientMethod": {
         "shortName": "ListFunctions",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListFunctions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Functions.V2.ListFunctionsResponse, Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -361,6 +459,24 @@
         "shortName": "ListFunctionsAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListFunctionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Functions.V2.ListFunctionsResponse, Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -398,6 +514,24 @@
       "clientMethod": {
         "shortName": "ListFunctions",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListFunctions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Functions.V2.ListFunctionsResponse, Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -436,6 +570,24 @@
         "shortName": "ListFunctionsAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListFunctionsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Functions.V2.ListFunctionsResponse, Google.Cloud.Functions.V2.Function>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.CreateFunction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.CreateFunctionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.CreateFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.CreateFunctionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.CreateFunction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Functions.V2.Function",
+            "name": "function"
+          },
+          {
+            "type": "System.String",
+            "name": "functionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.CreateFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Functions.V2.Function",
+            "name": "function"
+          },
+          {
+            "type": "System.String",
+            "name": "functionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.CreateFunction",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Functions.V2.Function",
+            "name": "function"
+          },
+          {
+            "type": "System.String",
+            "name": "functionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.CreateFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Functions.V2.Function",
+            "name": "function"
+          },
+          {
+            "type": "System.String",
+            "name": "functionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.UpdateFunction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.UpdateFunctionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.UpdateFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.UpdateFunctionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.UpdateFunction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.Function",
+            "name": "function"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.UpdateFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.Function",
+            "name": "function"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Functions.V2.Function, Google.Cloud.Functions.V2.OperationMetadata>>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.DeleteFunction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.DeleteFunctionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Functions.V2.OperationMetadata>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.DeleteFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.DeleteFunctionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Functions.V2.OperationMetadata>>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.DeleteFunction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Functions.V2.OperationMetadata>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.DeleteFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Functions.V2.OperationMetadata>>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteFunction",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.DeleteFunction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.FunctionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Functions.V2.OperationMetadata>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteFunctionAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.DeleteFunctionAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.FunctionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Functions.V2.OperationMetadata>>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "GenerateUploadUrl",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GenerateUploadUrl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.GenerateUploadUrlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Functions.V2.GenerateUploadUrlResponse",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1118,6 +1480,16 @@
         "shortName": "GenerateUploadUrlAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GenerateUploadUrlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.GenerateUploadUrlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Functions.V2.GenerateUploadUrlResponse>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1156,6 +1528,16 @@
       "clientMethod": {
         "shortName": "GenerateDownloadUrl",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GenerateDownloadUrl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.GenerateDownloadUrlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Functions.V2.GenerateDownloadUrlResponse",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1195,6 +1577,16 @@
         "shortName": "GenerateDownloadUrlAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.GenerateDownloadUrlAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.GenerateDownloadUrlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Functions.V2.GenerateDownloadUrlResponse>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1233,6 +1625,16 @@
       "clientMethod": {
         "shortName": "ListRuntimes",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListRuntimes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.ListRuntimesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Functions.V2.ListRuntimesResponse",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1272,6 +1674,16 @@
         "shortName": "ListRuntimesAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListRuntimesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Functions.V2.ListRuntimesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Functions.V2.ListRuntimesResponse>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1310,6 +1722,16 @@
       "clientMethod": {
         "shortName": "ListRuntimes",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListRuntimes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Functions.V2.ListRuntimesResponse",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1348,6 +1770,16 @@
         "shortName": "ListRuntimesAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListRuntimesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Functions.V2.ListRuntimesResponse>",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1385,6 +1817,16 @@
       "clientMethod": {
         "shortName": "ListRuntimes",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListRuntimes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Functions.V2.ListRuntimesResponse",
         "client": {
           "shortName": "FunctionServiceClient",
@@ -1423,6 +1865,16 @@
         "shortName": "ListRuntimesAsync",
         "fullName": "Google.Cloud.Functions.V2.FunctionServiceClient.ListRuntimesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Functions.V2.ListRuntimesResponse>",
         "client": {
           "shortName": "FunctionServiceClient",

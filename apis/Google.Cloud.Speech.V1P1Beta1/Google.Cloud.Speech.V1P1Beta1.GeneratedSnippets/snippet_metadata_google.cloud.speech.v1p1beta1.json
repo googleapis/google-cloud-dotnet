@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreatePhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreatePhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
         "client": {
           "shortName": "AdaptationClient",
@@ -58,6 +68,16 @@
         "shortName": "CreatePhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreatePhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreatePhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreatePhraseSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
+            "name": "phraseSet"
+          },
+          {
+            "type": "System.String",
+            "name": "phraseSetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
         "client": {
           "shortName": "AdaptationClient",
@@ -134,6 +172,24 @@
         "shortName": "CreatePhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreatePhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
+            "name": "phraseSet"
+          },
+          {
+            "type": "System.String",
+            "name": "phraseSetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreatePhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreatePhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
+            "name": "phraseSet"
+          },
+          {
+            "type": "System.String",
+            "name": "phraseSetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
         "client": {
           "shortName": "AdaptationClient",
@@ -209,6 +283,24 @@
         "shortName": "CreatePhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreatePhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
+            "name": "phraseSet"
+          },
+          {
+            "type": "System.String",
+            "name": "phraseSetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetPhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetPhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
         "client": {
           "shortName": "AdaptationClient",
@@ -285,6 +387,16 @@
         "shortName": "GetPhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetPhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetPhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetPhraseSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
         "client": {
           "shortName": "AdaptationClient",
@@ -361,6 +483,16 @@
         "shortName": "GetPhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetPhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetPhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetPhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
         "client": {
           "shortName": "AdaptationClient",
@@ -436,6 +578,16 @@
         "shortName": "GetPhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetPhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "ListPhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListPhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse, Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -512,6 +674,16 @@
         "shortName": "ListPhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListPhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse, Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "ListPhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListPhraseSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse, Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -588,6 +778,24 @@
         "shortName": "ListPhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListPhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse, Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "ListPhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListPhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse, Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -663,6 +889,24 @@
         "shortName": "ListPhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListPhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse, Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdatePhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.UpdatePhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
         "client": {
           "shortName": "AdaptationClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdatePhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.UpdatePhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdatePhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.UpdatePhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
+            "name": "phraseSet"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
         "client": {
           "shortName": "AdaptationClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdatePhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.UpdatePhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSet",
+            "name": "phraseSet"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.PhraseSet>",
         "client": {
           "shortName": "AdaptationClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeletePhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeletePhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AdaptationClient",
           "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient"
@@ -890,6 +1192,16 @@
         "shortName": "DeletePhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeletePhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AdaptationClient",
@@ -928,6 +1240,16 @@
       "clientMethod": {
         "shortName": "DeletePhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeletePhraseSet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AdaptationClient",
           "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient"
@@ -965,6 +1287,16 @@
         "shortName": "DeletePhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeletePhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AdaptationClient",
@@ -1002,6 +1334,16 @@
       "clientMethod": {
         "shortName": "DeletePhraseSet",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeletePhraseSet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AdaptationClient",
           "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient"
@@ -1039,6 +1381,16 @@
         "shortName": "DeletePhraseSetAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeletePhraseSetAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.PhraseSetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AdaptationClient",
@@ -1076,6 +1428,16 @@
       "clientMethod": {
         "shortName": "CreateCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreateCustomClass",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
         "client": {
           "shortName": "AdaptationClient",
@@ -1115,6 +1477,16 @@
         "shortName": "CreateCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreateCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1153,6 +1525,24 @@
       "clientMethod": {
         "shortName": "CreateCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreateCustomClass",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
+            "name": "customClass"
+          },
+          {
+            "type": "System.String",
+            "name": "customClassId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
         "client": {
           "shortName": "AdaptationClient",
@@ -1191,6 +1581,24 @@
         "shortName": "CreateCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreateCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
+            "name": "customClass"
+          },
+          {
+            "type": "System.String",
+            "name": "customClassId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1228,6 +1636,24 @@
       "clientMethod": {
         "shortName": "CreateCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreateCustomClass",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
+            "name": "customClass"
+          },
+          {
+            "type": "System.String",
+            "name": "customClassId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
         "client": {
           "shortName": "AdaptationClient",
@@ -1266,6 +1692,24 @@
         "shortName": "CreateCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.CreateCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
+            "name": "customClass"
+          },
+          {
+            "type": "System.String",
+            "name": "customClassId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1303,6 +1747,16 @@
       "clientMethod": {
         "shortName": "GetCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetCustomClass",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
         "client": {
           "shortName": "AdaptationClient",
@@ -1342,6 +1796,16 @@
         "shortName": "GetCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1380,6 +1844,16 @@
       "clientMethod": {
         "shortName": "GetCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetCustomClass",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
         "client": {
           "shortName": "AdaptationClient",
@@ -1418,6 +1892,16 @@
         "shortName": "GetCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1455,6 +1939,16 @@
       "clientMethod": {
         "shortName": "GetCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetCustomClass",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClassName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
         "client": {
           "shortName": "AdaptationClient",
@@ -1493,6 +1987,16 @@
         "shortName": "GetCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.GetCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClassName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1530,6 +2034,16 @@
       "clientMethod": {
         "shortName": "ListCustomClasses",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListCustomClasses",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse, Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1569,6 +2083,16 @@
         "shortName": "ListCustomClassesAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListCustomClassesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse, Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1607,6 +2131,24 @@
       "clientMethod": {
         "shortName": "ListCustomClasses",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListCustomClasses",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse, Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1645,6 +2187,24 @@
         "shortName": "ListCustomClassesAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListCustomClassesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse, Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1682,6 +2242,24 @@
       "clientMethod": {
         "shortName": "ListCustomClasses",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListCustomClasses",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse, Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1720,6 +2298,24 @@
         "shortName": "ListCustomClassesAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.ListCustomClassesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse, Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1757,6 +2353,16 @@
       "clientMethod": {
         "shortName": "UpdateCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.UpdateCustomClass",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
         "client": {
           "shortName": "AdaptationClient",
@@ -1796,6 +2402,16 @@
         "shortName": "UpdateCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.UpdateCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1834,6 +2450,20 @@
       "clientMethod": {
         "shortName": "UpdateCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.UpdateCustomClass",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
+            "name": "customClass"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
         "client": {
           "shortName": "AdaptationClient",
@@ -1872,6 +2502,20 @@
         "shortName": "UpdateCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.UpdateCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClass",
+            "name": "customClass"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.CustomClass>",
         "client": {
           "shortName": "AdaptationClient",
@@ -1909,6 +2553,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeleteCustomClass",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AdaptationClient",
           "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient"
@@ -1947,6 +2601,16 @@
         "shortName": "DeleteCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeleteCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AdaptationClient",
@@ -1985,6 +2649,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeleteCustomClass",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AdaptationClient",
           "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient"
@@ -2022,6 +2696,16 @@
         "shortName": "DeleteCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeleteCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AdaptationClient",
@@ -2059,6 +2743,16 @@
       "clientMethod": {
         "shortName": "DeleteCustomClass",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeleteCustomClass",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClassName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "client": {
           "shortName": "AdaptationClient",
           "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient"
@@ -2096,6 +2790,16 @@
         "shortName": "DeleteCustomClassAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.AdaptationClient.DeleteCustomClassAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.CustomClassName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task",
         "client": {
           "shortName": "AdaptationClient",
@@ -2133,6 +2837,16 @@
       "clientMethod": {
         "shortName": "Recognize",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.Recognize",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognizeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.RecognizeResponse",
         "client": {
           "shortName": "SpeechClient",
@@ -2172,6 +2886,16 @@
         "shortName": "RecognizeAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.RecognizeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognizeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.RecognizeResponse>",
         "client": {
           "shortName": "SpeechClient",
@@ -2210,6 +2934,20 @@
       "clientMethod": {
         "shortName": "Recognize",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.Recognize",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognitionConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognitionAudio",
+            "name": "audio"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.RecognizeResponse",
         "client": {
           "shortName": "SpeechClient",
@@ -2248,6 +2986,20 @@
         "shortName": "RecognizeAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.RecognizeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognitionConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognitionAudio",
+            "name": "audio"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.Speech.V1P1Beta1.RecognizeResponse>",
         "client": {
           "shortName": "SpeechClient",
@@ -2285,6 +3037,16 @@
       "clientMethod": {
         "shortName": "LongRunningRecognize",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.LongRunningRecognize",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeResponse, Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeMetadata>",
         "client": {
           "shortName": "SpeechClient",
@@ -2324,6 +3086,16 @@
         "shortName": "LongRunningRecognizeAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.LongRunningRecognizeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeResponse, Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeMetadata>>",
         "client": {
           "shortName": "SpeechClient",
@@ -2362,6 +3134,20 @@
       "clientMethod": {
         "shortName": "LongRunningRecognize",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.LongRunningRecognize",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognitionConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognitionAudio",
+            "name": "audio"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeResponse, Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeMetadata>",
         "client": {
           "shortName": "SpeechClient",
@@ -2400,6 +3186,20 @@
         "shortName": "LongRunningRecognizeAsync",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.LongRunningRecognizeAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognitionConfig",
+            "name": "config"
+          },
+          {
+            "type": "Google.Cloud.Speech.V1P1Beta1.RecognitionAudio",
+            "name": "audio"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeResponse, Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeMetadata>>",
         "client": {
           "shortName": "SpeechClient",
@@ -2437,6 +3237,16 @@
       "clientMethod": {
         "shortName": "StreamingRecognize",
         "fullName": "Google.Cloud.Speech.V1P1Beta1.SpeechClient.StreamingRecognize",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
         "resultType": "Google.Cloud.Speech.V1P1Beta1.SpeechClient+StreamingRecognizeStream",
         "client": {
           "shortName": "SpeechClient",

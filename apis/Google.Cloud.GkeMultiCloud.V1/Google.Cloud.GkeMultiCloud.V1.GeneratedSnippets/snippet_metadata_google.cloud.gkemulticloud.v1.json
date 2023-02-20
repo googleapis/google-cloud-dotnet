@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "CreateAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -58,6 +68,16 @@
         "shortName": "CreateAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "CreateAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+            "name": "attachedCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "attachedClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -134,6 +172,24 @@
         "shortName": "CreateAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+            "name": "attachedCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "attachedClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "CreateAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+            "name": "attachedCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "attachedClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -209,6 +283,24 @@
         "shortName": "CreateAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.CreateAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+            "name": "attachedCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "attachedClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "UpdateAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.UpdateAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -285,6 +387,16 @@
         "shortName": "UpdateAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.UpdateAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -323,6 +435,20 @@
       "clientMethod": {
         "shortName": "UpdateAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.UpdateAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+            "name": "attachedCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -361,6 +487,20 @@
         "shortName": "UpdateAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.UpdateAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
+            "name": "attachedCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -398,6 +538,16 @@
       "clientMethod": {
         "shortName": "ImportAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ImportAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -437,6 +587,16 @@
         "shortName": "ImportAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ImportAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -475,6 +635,20 @@
       "clientMethod": {
         "shortName": "ImportAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "fleetMembership"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -513,6 +687,20 @@
         "shortName": "ImportAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "fleetMembership"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -550,6 +738,20 @@
       "clientMethod": {
         "shortName": "ImportAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "fleetMembership"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -588,6 +790,20 @@
         "shortName": "ImportAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ImportAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "fleetMembership"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AttachedCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -625,6 +841,16 @@
       "clientMethod": {
         "shortName": "GetAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -664,6 +890,16 @@
         "shortName": "GetAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -702,6 +938,16 @@
       "clientMethod": {
         "shortName": "GetAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -740,6 +986,16 @@
         "shortName": "GetAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -777,6 +1033,16 @@
       "clientMethod": {
         "shortName": "GetAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedCluster",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -815,6 +1081,16 @@
         "shortName": "GetAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -852,6 +1128,16 @@
       "clientMethod": {
         "shortName": "ListAttachedClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -891,6 +1177,16 @@
         "shortName": "ListAttachedClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -929,6 +1225,24 @@
       "clientMethod": {
         "shortName": "ListAttachedClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -967,6 +1281,24 @@
         "shortName": "ListAttachedClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1004,6 +1336,24 @@
       "clientMethod": {
         "shortName": "ListAttachedClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClusters",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1042,6 +1392,24 @@
         "shortName": "ListAttachedClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.ListAttachedClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAttachedClustersResponse, Google.Cloud.GkeMultiCloud.V1.AttachedCluster>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1079,6 +1447,16 @@
       "clientMethod": {
         "shortName": "DeleteAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1118,6 +1496,16 @@
         "shortName": "DeleteAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAttachedClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1156,6 +1544,16 @@
       "clientMethod": {
         "shortName": "DeleteAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1194,6 +1592,16 @@
         "shortName": "DeleteAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1231,6 +1639,16 @@
       "clientMethod": {
         "shortName": "DeleteAttachedCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1269,6 +1687,16 @@
         "shortName": "DeleteAttachedClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.DeleteAttachedClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1306,6 +1734,16 @@
       "clientMethod": {
         "shortName": "GetAttachedServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAttachedServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1345,6 +1783,16 @@
         "shortName": "GetAttachedServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAttachedServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1383,6 +1831,16 @@
       "clientMethod": {
         "shortName": "GetAttachedServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1421,6 +1879,16 @@
         "shortName": "GetAttachedServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1458,6 +1926,16 @@
       "clientMethod": {
         "shortName": "GetAttachedServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1496,6 +1974,16 @@
         "shortName": "GetAttachedServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GetAttachedServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AttachedServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AttachedServerConfig>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1533,6 +2021,16 @@
       "clientMethod": {
         "shortName": "GenerateAttachedClusterInstallManifest",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1572,6 +2070,16 @@
         "shortName": "GenerateAttachedClusterInstallManifestAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1610,6 +2118,20 @@
       "clientMethod": {
         "shortName": "GenerateAttachedClusterInstallManifest",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifest",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "attachedClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1648,6 +2170,20 @@
         "shortName": "GenerateAttachedClusterInstallManifestAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "attachedClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1685,6 +2221,20 @@
       "clientMethod": {
         "shortName": "GenerateAttachedClusterInstallManifest",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifest",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "attachedClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1723,6 +2273,20 @@
         "shortName": "GenerateAttachedClusterInstallManifestAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AttachedClustersClient.GenerateAttachedClusterInstallManifestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "attachedClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAttachedClusterInstallManifestResponse>",
         "client": {
           "shortName": "AttachedClustersClient",
@@ -1760,6 +2324,16 @@
       "clientMethod": {
         "shortName": "CreateAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAwsClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -1799,6 +2373,16 @@
         "shortName": "CreateAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAwsClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -1837,6 +2421,24 @@
       "clientMethod": {
         "shortName": "CreateAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+            "name": "awsCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "awsClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -1875,6 +2477,24 @@
         "shortName": "CreateAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+            "name": "awsCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "awsClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -1912,6 +2532,24 @@
       "clientMethod": {
         "shortName": "CreateAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsCluster",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+            "name": "awsCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "awsClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -1950,6 +2588,24 @@
         "shortName": "CreateAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+            "name": "awsCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "awsClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -1987,6 +2643,16 @@
       "clientMethod": {
         "shortName": "UpdateAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAwsClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2026,6 +2692,16 @@
         "shortName": "UpdateAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAwsClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2064,6 +2740,20 @@
       "clientMethod": {
         "shortName": "UpdateAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+            "name": "awsCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2102,6 +2792,20 @@
         "shortName": "UpdateAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
+            "name": "awsCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2139,6 +2843,16 @@
       "clientMethod": {
         "shortName": "GetAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2178,6 +2892,16 @@
         "shortName": "GetAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2216,6 +2940,16 @@
       "clientMethod": {
         "shortName": "GetAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2254,6 +2988,16 @@
         "shortName": "GetAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2291,6 +3035,16 @@
       "clientMethod": {
         "shortName": "GetAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsCluster",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2329,6 +3083,16 @@
         "shortName": "GetAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2366,6 +3130,16 @@
       "clientMethod": {
         "shortName": "ListAwsClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAwsClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2405,6 +3179,16 @@
         "shortName": "ListAwsClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAwsClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2443,6 +3227,24 @@
       "clientMethod": {
         "shortName": "ListAwsClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2481,6 +3283,24 @@
         "shortName": "ListAwsClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2518,6 +3338,24 @@
       "clientMethod": {
         "shortName": "ListAwsClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClusters",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2556,6 +3394,24 @@
         "shortName": "ListAwsClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse, Google.Cloud.GkeMultiCloud.V1.AwsCluster>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2593,6 +3449,16 @@
       "clientMethod": {
         "shortName": "DeleteAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2632,6 +3498,16 @@
         "shortName": "DeleteAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2670,6 +3546,16 @@
       "clientMethod": {
         "shortName": "DeleteAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2708,6 +3594,16 @@
         "shortName": "DeleteAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2745,6 +3641,16 @@
       "clientMethod": {
         "shortName": "DeleteAwsCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2783,6 +3689,16 @@
         "shortName": "DeleteAwsClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2820,6 +3736,16 @@
       "clientMethod": {
         "shortName": "GenerateAwsAccessToken",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GenerateAwsAccessToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2859,6 +3785,16 @@
         "shortName": "GenerateAwsAccessTokenAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GenerateAwsAccessTokenAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2897,6 +3833,16 @@
       "clientMethod": {
         "shortName": "CreateAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2936,6 +3882,16 @@
         "shortName": "CreateAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -2974,6 +3930,24 @@
       "clientMethod": {
         "shortName": "CreateAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+            "name": "awsNodePool"
+          },
+          {
+            "type": "System.String",
+            "name": "awsNodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3012,6 +3986,24 @@
         "shortName": "CreateAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+            "name": "awsNodePool"
+          },
+          {
+            "type": "System.String",
+            "name": "awsNodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3049,6 +4041,24 @@
       "clientMethod": {
         "shortName": "CreateAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+            "name": "awsNodePool"
+          },
+          {
+            "type": "System.String",
+            "name": "awsNodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3087,6 +4097,24 @@
         "shortName": "CreateAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.CreateAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+            "name": "awsNodePool"
+          },
+          {
+            "type": "System.String",
+            "name": "awsNodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3124,6 +4152,16 @@
       "clientMethod": {
         "shortName": "UpdateAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3163,6 +4201,16 @@
         "shortName": "UpdateAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3201,6 +4249,20 @@
       "clientMethod": {
         "shortName": "UpdateAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+            "name": "awsNodePool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3239,6 +4301,20 @@
         "shortName": "UpdateAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.UpdateAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
+            "name": "awsNodePool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AwsNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3276,6 +4352,16 @@
       "clientMethod": {
         "shortName": "GetAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3315,6 +4401,16 @@
         "shortName": "GetAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3353,6 +4449,16 @@
       "clientMethod": {
         "shortName": "GetAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3391,6 +4497,16 @@
         "shortName": "GetAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3428,6 +4544,16 @@
       "clientMethod": {
         "shortName": "GetAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsNodePool",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3466,6 +4592,16 @@
         "shortName": "GetAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3503,6 +4639,16 @@
       "clientMethod": {
         "shortName": "ListAwsNodePools",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3542,6 +4688,16 @@
         "shortName": "ListAwsNodePoolsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3580,6 +4736,24 @@
       "clientMethod": {
         "shortName": "ListAwsNodePools",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3618,6 +4792,24 @@
         "shortName": "ListAwsNodePoolsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3655,6 +4847,24 @@
       "clientMethod": {
         "shortName": "ListAwsNodePools",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3693,6 +4903,24 @@
         "shortName": "ListAwsNodePoolsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.ListAwsNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AwsNodePool>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3730,6 +4958,16 @@
       "clientMethod": {
         "shortName": "DeleteAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3769,6 +5007,16 @@
         "shortName": "DeleteAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3807,6 +5055,16 @@
       "clientMethod": {
         "shortName": "DeleteAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3845,6 +5103,16 @@
         "shortName": "DeleteAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3882,6 +5150,16 @@
       "clientMethod": {
         "shortName": "DeleteAwsNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3920,6 +5198,16 @@
         "shortName": "DeleteAwsNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.DeleteAwsNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3957,6 +5245,16 @@
       "clientMethod": {
         "shortName": "GetAwsServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsServerConfig",
         "client": {
           "shortName": "AwsClustersClient",
@@ -3996,6 +5294,16 @@
         "shortName": "GetAwsServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsServerConfig>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -4034,6 +5342,16 @@
       "clientMethod": {
         "shortName": "GetAwsServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsServerConfig",
         "client": {
           "shortName": "AwsClustersClient",
@@ -4072,6 +5390,16 @@
         "shortName": "GetAwsServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsServerConfig>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -4109,6 +5437,16 @@
       "clientMethod": {
         "shortName": "GetAwsServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AwsServerConfig",
         "client": {
           "shortName": "AwsClustersClient",
@@ -4147,6 +5485,16 @@
         "shortName": "GetAwsServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AwsClustersClient.GetAwsServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AwsServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AwsServerConfig>",
         "client": {
           "shortName": "AwsClustersClient",
@@ -4184,6 +5532,16 @@
       "clientMethod": {
         "shortName": "CreateAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClient",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAzureClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4223,6 +5581,16 @@
         "shortName": "CreateAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAzureClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4261,6 +5629,24 @@
       "clientMethod": {
         "shortName": "CreateAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClient",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
+            "name": "azureClient"
+          },
+          {
+            "type": "System.String",
+            "name": "azureClientId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4299,6 +5685,24 @@
         "shortName": "CreateAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
+            "name": "azureClient"
+          },
+          {
+            "type": "System.String",
+            "name": "azureClientId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4336,6 +5740,24 @@
       "clientMethod": {
         "shortName": "CreateAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClient",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
+            "name": "azureClient"
+          },
+          {
+            "type": "System.String",
+            "name": "azureClientId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4374,6 +5796,24 @@
         "shortName": "CreateAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
+            "name": "azureClient"
+          },
+          {
+            "type": "System.String",
+            "name": "azureClientId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureClient, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4411,6 +5851,16 @@
       "clientMethod": {
         "shortName": "GetAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClient",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4450,6 +5900,16 @@
         "shortName": "GetAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4488,6 +5948,16 @@
       "clientMethod": {
         "shortName": "GetAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClient",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4526,6 +5996,16 @@
         "shortName": "GetAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4563,6 +6043,16 @@
       "clientMethod": {
         "shortName": "GetAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClient",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClientName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureClient",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4601,6 +6091,16 @@
         "shortName": "GetAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClientName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4638,6 +6138,16 @@
       "clientMethod": {
         "shortName": "ListAzureClients",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClients",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAzureClientsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4677,6 +6187,16 @@
         "shortName": "ListAzureClientsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClientsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAzureClientsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4715,6 +6235,24 @@
       "clientMethod": {
         "shortName": "ListAzureClients",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClients",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4753,6 +6291,24 @@
         "shortName": "ListAzureClientsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClientsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4790,6 +6346,24 @@
       "clientMethod": {
         "shortName": "ListAzureClients",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClients",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4828,6 +6402,24 @@
         "shortName": "ListAzureClientsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClientsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClientsResponse, Google.Cloud.GkeMultiCloud.V1.AzureClient>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4865,6 +6457,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClient",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAzureClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4904,6 +6506,16 @@
         "shortName": "DeleteAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAzureClientRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4942,6 +6554,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClient",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -4980,6 +6602,16 @@
         "shortName": "DeleteAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5017,6 +6649,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureClient",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClient",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClientName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5055,6 +6697,16 @@
         "shortName": "DeleteAzureClientAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClientAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClientName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5092,6 +6744,16 @@
       "clientMethod": {
         "shortName": "CreateAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAzureClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5131,6 +6793,16 @@
         "shortName": "CreateAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAzureClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5169,6 +6841,24 @@
       "clientMethod": {
         "shortName": "CreateAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+            "name": "azureCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "azureClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5207,6 +6897,24 @@
         "shortName": "CreateAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+            "name": "azureCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "azureClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5244,6 +6952,24 @@
       "clientMethod": {
         "shortName": "CreateAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureCluster",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+            "name": "azureCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "azureClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5282,6 +7008,24 @@
         "shortName": "CreateAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+            "name": "azureCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "azureClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5319,6 +7063,16 @@
       "clientMethod": {
         "shortName": "UpdateAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAzureClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5358,6 +7112,16 @@
         "shortName": "UpdateAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAzureClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5396,6 +7160,20 @@
       "clientMethod": {
         "shortName": "UpdateAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5434,6 +7212,20 @@
         "shortName": "UpdateAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
+            "name": "azureCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureCluster, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5471,6 +7263,16 @@
       "clientMethod": {
         "shortName": "GetAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5510,6 +7312,16 @@
         "shortName": "GetAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5548,6 +7360,16 @@
       "clientMethod": {
         "shortName": "GetAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5586,6 +7408,16 @@
         "shortName": "GetAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5623,6 +7455,16 @@
       "clientMethod": {
         "shortName": "GetAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureCluster",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5661,6 +7503,16 @@
         "shortName": "GetAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5698,6 +7550,16 @@
       "clientMethod": {
         "shortName": "ListAzureClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAzureClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5737,6 +7599,16 @@
         "shortName": "ListAzureClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAzureClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5775,6 +7647,24 @@
       "clientMethod": {
         "shortName": "ListAzureClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5813,6 +7703,24 @@
         "shortName": "ListAzureClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5850,6 +7758,24 @@
       "clientMethod": {
         "shortName": "ListAzureClusters",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClusters",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5888,6 +7814,24 @@
         "shortName": "ListAzureClustersAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureClustersAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureClustersResponse, Google.Cloud.GkeMultiCloud.V1.AzureCluster>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5925,6 +7869,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAzureClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -5964,6 +7918,16 @@
         "shortName": "DeleteAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAzureClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6002,6 +7966,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6040,6 +8014,16 @@
         "shortName": "DeleteAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6077,6 +8061,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureCluster",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6115,6 +8109,16 @@
         "shortName": "DeleteAzureClusterAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureClusterAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6152,6 +8156,16 @@
       "clientMethod": {
         "shortName": "GenerateAzureAccessToken",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GenerateAzureAccessToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6191,6 +8205,16 @@
         "shortName": "GenerateAzureAccessTokenAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GenerateAzureAccessTokenAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.GenerateAzureAccessTokenResponse>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6229,6 +8253,16 @@
       "clientMethod": {
         "shortName": "CreateAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAzureNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6268,6 +8302,16 @@
         "shortName": "CreateAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.CreateAzureNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6306,6 +8350,24 @@
       "clientMethod": {
         "shortName": "CreateAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+            "name": "azureNodePool"
+          },
+          {
+            "type": "System.String",
+            "name": "azureNodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6344,6 +8406,24 @@
         "shortName": "CreateAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+            "name": "azureNodePool"
+          },
+          {
+            "type": "System.String",
+            "name": "azureNodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6381,6 +8461,24 @@
       "clientMethod": {
         "shortName": "CreateAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+            "name": "azureNodePool"
+          },
+          {
+            "type": "System.String",
+            "name": "azureNodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6419,6 +8517,24 @@
         "shortName": "CreateAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.CreateAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+            "name": "azureNodePool"
+          },
+          {
+            "type": "System.String",
+            "name": "azureNodePoolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6456,6 +8572,16 @@
       "clientMethod": {
         "shortName": "UpdateAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAzureNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6495,6 +8621,16 @@
         "shortName": "UpdateAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.UpdateAzureNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6533,6 +8669,20 @@
       "clientMethod": {
         "shortName": "UpdateAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+            "name": "azureNodePool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6571,6 +8721,20 @@
         "shortName": "UpdateAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.UpdateAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
+            "name": "azureNodePool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeMultiCloud.V1.AzureNodePool, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6608,6 +8772,16 @@
       "clientMethod": {
         "shortName": "GetAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6647,6 +8821,16 @@
         "shortName": "GetAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6685,6 +8869,16 @@
       "clientMethod": {
         "shortName": "GetAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6723,6 +8917,16 @@
         "shortName": "GetAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6760,6 +8964,16 @@
       "clientMethod": {
         "shortName": "GetAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureNodePool",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6798,6 +9012,16 @@
         "shortName": "GetAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6835,6 +9059,16 @@
       "clientMethod": {
         "shortName": "ListAzureNodePools",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6874,6 +9108,16 @@
         "shortName": "ListAzureNodePoolsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6912,6 +9156,24 @@
       "clientMethod": {
         "shortName": "ListAzureNodePools",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6950,6 +9212,24 @@
         "shortName": "ListAzureNodePoolsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -6987,6 +9267,24 @@
       "clientMethod": {
         "shortName": "ListAzureNodePools",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7025,6 +9323,24 @@
         "shortName": "ListAzureNodePoolsAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.ListAzureNodePoolsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeMultiCloud.V1.ListAzureNodePoolsResponse, Google.Cloud.GkeMultiCloud.V1.AzureNodePool>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7062,6 +9378,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAzureNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7101,6 +9427,16 @@
         "shortName": "DeleteAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.DeleteAzureNodePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7139,6 +9475,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7177,6 +9523,16 @@
         "shortName": "DeleteAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7214,6 +9570,16 @@
       "clientMethod": {
         "shortName": "DeleteAzureNodePool",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7252,6 +9618,16 @@
         "shortName": "DeleteAzureNodePoolAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.DeleteAzureNodePoolAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureNodePoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeMultiCloud.V1.OperationMetadata>>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7289,6 +9665,16 @@
       "clientMethod": {
         "shortName": "GetAzureServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureServerConfig",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7328,6 +9714,16 @@
         "shortName": "GetAzureServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.GetAzureServerConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureServerConfig>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7366,6 +9762,16 @@
       "clientMethod": {
         "shortName": "GetAzureServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureServerConfig",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7404,6 +9810,16 @@
         "shortName": "GetAzureServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureServerConfig>",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7441,6 +9857,16 @@
       "clientMethod": {
         "shortName": "GetAzureServerConfig",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeMultiCloud.V1.AzureServerConfig",
         "client": {
           "shortName": "AzureClustersClient",
@@ -7479,6 +9905,16 @@
         "shortName": "GetAzureServerConfigAsync",
         "fullName": "Google.Cloud.GkeMultiCloud.V1.AzureClustersClient.GetAzureServerConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeMultiCloud.V1.AzureServerConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeMultiCloud.V1.AzureServerConfig>",
         "client": {
           "shortName": "AzureClustersClient",

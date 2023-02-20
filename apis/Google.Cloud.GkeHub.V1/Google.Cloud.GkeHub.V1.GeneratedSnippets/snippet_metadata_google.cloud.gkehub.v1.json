@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListMemberships",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMemberships",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.ListMembershipsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -58,6 +68,16 @@
         "shortName": "ListMembershipsAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.ListMembershipsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListMemberships",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMemberships",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -134,6 +172,24 @@
         "shortName": "ListMembershipsAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListMemberships",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMemberships",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -209,6 +283,24 @@
         "shortName": "ListMembershipsAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListMembershipsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListMembershipsResponse, Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "ListFeatures",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeatures",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.ListFeaturesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -285,6 +387,16 @@
         "shortName": "ListFeaturesAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeaturesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.ListFeaturesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -323,6 +435,24 @@
       "clientMethod": {
         "shortName": "ListFeatures",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeatures",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -361,6 +491,24 @@
         "shortName": "ListFeaturesAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeaturesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -398,6 +546,24 @@
       "clientMethod": {
         "shortName": "ListFeatures",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeatures",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -436,6 +602,24 @@
         "shortName": "ListFeaturesAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.ListFeaturesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeHub.V1.ListFeaturesResponse, Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -473,6 +657,16 @@
       "clientMethod": {
         "shortName": "GetMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GetMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeHub.V1.Membership",
         "client": {
           "shortName": "GkeHubClient",
@@ -512,6 +706,16 @@
         "shortName": "GetMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GetMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -550,6 +754,16 @@
       "clientMethod": {
         "shortName": "GetMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembership",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeHub.V1.Membership",
         "client": {
           "shortName": "GkeHubClient",
@@ -588,6 +802,16 @@
         "shortName": "GetMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -625,6 +849,16 @@
       "clientMethod": {
         "shortName": "GetMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeHub.V1.Membership",
         "client": {
           "shortName": "GkeHubClient",
@@ -663,6 +897,16 @@
         "shortName": "GetMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Membership>",
         "client": {
           "shortName": "GkeHubClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "GetFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GetFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeHub.V1.Feature",
         "client": {
           "shortName": "GkeHubClient",
@@ -739,6 +993,16 @@
         "shortName": "GetFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GetFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -777,6 +1041,16 @@
       "clientMethod": {
         "shortName": "GetFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeature",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeHub.V1.Feature",
         "client": {
           "shortName": "GkeHubClient",
@@ -815,6 +1089,16 @@
         "shortName": "GetFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -852,6 +1136,16 @@
       "clientMethod": {
         "shortName": "GetFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeHub.V1.Feature",
         "client": {
           "shortName": "GkeHubClient",
@@ -890,6 +1184,16 @@
         "shortName": "GetFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GetFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.Feature>",
         "client": {
           "shortName": "GkeHubClient",
@@ -927,6 +1231,16 @@
       "clientMethod": {
         "shortName": "CreateMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.CreateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -966,6 +1280,16 @@
         "shortName": "CreateMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.CreateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1004,6 +1328,24 @@
       "clientMethod": {
         "shortName": "CreateMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembership",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "membershipId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1042,6 +1384,24 @@
         "shortName": "CreateMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "membershipId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1079,6 +1439,24 @@
       "clientMethod": {
         "shortName": "CreateMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembership",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "membershipId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1117,6 +1495,24 @@
         "shortName": "CreateMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "membershipId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1154,6 +1550,16 @@
       "clientMethod": {
         "shortName": "CreateFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.CreateFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1193,6 +1599,16 @@
         "shortName": "CreateFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.CreateFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1231,6 +1647,24 @@
       "clientMethod": {
         "shortName": "CreateFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeature",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "featureId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1269,6 +1703,24 @@
         "shortName": "CreateFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "featureId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1306,6 +1758,24 @@
       "clientMethod": {
         "shortName": "CreateFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeature",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "featureId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1344,6 +1814,24 @@
         "shortName": "CreateFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.CreateFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "System.String",
+            "name": "featureId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1381,6 +1869,16 @@
       "clientMethod": {
         "shortName": "DeleteMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.DeleteMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1420,6 +1918,16 @@
         "shortName": "DeleteMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.DeleteMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1458,6 +1966,16 @@
       "clientMethod": {
         "shortName": "DeleteMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembership",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1496,6 +2014,16 @@
         "shortName": "DeleteMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1533,6 +2061,16 @@
       "clientMethod": {
         "shortName": "DeleteMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1571,6 +2109,16 @@
         "shortName": "DeleteMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1608,6 +2156,16 @@
       "clientMethod": {
         "shortName": "DeleteFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.DeleteFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1647,6 +2205,16 @@
         "shortName": "DeleteFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.DeleteFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1685,6 +2253,16 @@
       "clientMethod": {
         "shortName": "DeleteFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeature",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1723,6 +2301,16 @@
         "shortName": "DeleteFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1760,6 +2348,16 @@
       "clientMethod": {
         "shortName": "DeleteFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1798,6 +2396,16 @@
         "shortName": "DeleteFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.DeleteFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1835,6 +2443,16 @@
       "clientMethod": {
         "shortName": "UpdateMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.UpdateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1874,6 +2492,16 @@
         "shortName": "UpdateMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.UpdateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1912,6 +2540,24 @@
       "clientMethod": {
         "shortName": "UpdateMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembership",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1950,6 +2596,24 @@
         "shortName": "UpdateMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -1987,6 +2651,24 @@
       "clientMethod": {
         "shortName": "UpdateMembership",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembership",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -2025,6 +2707,24 @@
         "shortName": "UpdateMembershipAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateMembershipAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.MembershipName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Membership",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Membership, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -2062,6 +2762,16 @@
       "clientMethod": {
         "shortName": "UpdateFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.UpdateFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -2101,6 +2811,16 @@
         "shortName": "UpdateFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.UpdateFeatureRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -2139,6 +2859,24 @@
       "clientMethod": {
         "shortName": "UpdateFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeature",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -2177,6 +2915,24 @@
         "shortName": "UpdateFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -2214,6 +2970,24 @@
       "clientMethod": {
         "shortName": "UpdateFeature",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeature",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>",
         "client": {
           "shortName": "GkeHubClient",
@@ -2252,6 +3026,24 @@
         "shortName": "UpdateFeatureAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.UpdateFeatureAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.FeatureName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.GkeHub.V1.Feature",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GkeHub.V1.Feature, Google.Cloud.GkeHub.V1.OperationMetadata>>",
         "client": {
           "shortName": "GkeHubClient",
@@ -2289,6 +3081,16 @@
       "clientMethod": {
         "shortName": "GenerateConnectManifest",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GenerateConnectManifest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GenerateConnectManifestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.GkeHub.V1.GenerateConnectManifestResponse",
         "client": {
           "shortName": "GkeHubClient",
@@ -2328,6 +3130,16 @@
         "shortName": "GenerateConnectManifestAsync",
         "fullName": "Google.Cloud.GkeHub.V1.GkeHubClient.GenerateConnectManifestAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeHub.V1.GenerateConnectManifestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeHub.V1.GenerateConnectManifestResponse>",
         "client": {
           "shortName": "GkeHubClient",

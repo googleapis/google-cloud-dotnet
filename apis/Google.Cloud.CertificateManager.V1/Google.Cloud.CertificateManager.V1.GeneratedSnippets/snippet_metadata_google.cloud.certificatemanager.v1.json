@@ -19,6 +19,16 @@
       "clientMethod": {
         "shortName": "ListCertificates",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListCertificatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificatesResponse, Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -58,6 +68,16 @@
         "shortName": "ListCertificatesAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListCertificatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificatesResponse, Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -96,6 +116,24 @@
       "clientMethod": {
         "shortName": "ListCertificates",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificatesResponse, Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -134,6 +172,24 @@
         "shortName": "ListCertificatesAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificatesResponse, Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -171,6 +227,24 @@
       "clientMethod": {
         "shortName": "ListCertificates",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificatesResponse, Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -209,6 +283,24 @@
         "shortName": "ListCertificatesAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificatesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificatesResponse, Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -246,6 +338,16 @@
       "clientMethod": {
         "shortName": "GetCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.Certificate",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -285,6 +387,16 @@
         "shortName": "GetCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -323,6 +435,16 @@
       "clientMethod": {
         "shortName": "GetCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.Certificate",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -361,6 +483,16 @@
         "shortName": "GetCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -398,6 +530,16 @@
       "clientMethod": {
         "shortName": "GetCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.Certificate",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -436,6 +578,16 @@
         "shortName": "GetCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.Certificate>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -473,6 +625,16 @@
       "clientMethod": {
         "shortName": "CreateCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -512,6 +674,16 @@
         "shortName": "CreateCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -550,6 +722,24 @@
       "clientMethod": {
         "shortName": "CreateCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -588,6 +778,24 @@
         "shortName": "CreateCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -625,6 +833,24 @@
       "clientMethod": {
         "shortName": "CreateCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -663,6 +889,24 @@
         "shortName": "CreateCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -700,6 +944,16 @@
       "clientMethod": {
         "shortName": "UpdateCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -739,6 +993,16 @@
         "shortName": "UpdateCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -777,6 +1041,20 @@
       "clientMethod": {
         "shortName": "UpdateCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -815,6 +1093,20 @@
         "shortName": "UpdateCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.Certificate",
+            "name": "certificate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.Certificate, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -852,6 +1144,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -891,6 +1193,16 @@
         "shortName": "DeleteCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteCertificateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -929,6 +1241,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -967,6 +1289,16 @@
         "shortName": "DeleteCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1004,6 +1336,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificate",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1042,6 +1384,16 @@
         "shortName": "DeleteCertificateAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1079,6 +1431,16 @@
       "clientMethod": {
         "shortName": "ListCertificateMaps",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMaps",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListCertificateMapsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapsResponse, Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1118,6 +1480,16 @@
         "shortName": "ListCertificateMapsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListCertificateMapsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapsResponse, Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1156,6 +1528,24 @@
       "clientMethod": {
         "shortName": "ListCertificateMaps",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMaps",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapsResponse, Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1194,6 +1584,24 @@
         "shortName": "ListCertificateMapsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapsResponse, Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1231,6 +1639,24 @@
       "clientMethod": {
         "shortName": "ListCertificateMaps",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMaps",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapsResponse, Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1269,6 +1695,24 @@
         "shortName": "ListCertificateMapsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapsResponse, Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1306,6 +1750,16 @@
       "clientMethod": {
         "shortName": "GetCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetCertificateMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateMap",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1345,6 +1799,16 @@
         "shortName": "GetCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetCertificateMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1383,6 +1847,16 @@
       "clientMethod": {
         "shortName": "GetCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMap",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateMap",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1421,6 +1895,16 @@
         "shortName": "GetCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1458,6 +1942,16 @@
       "clientMethod": {
         "shortName": "GetCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateMap",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1496,6 +1990,16 @@
         "shortName": "GetCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateMap>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1533,6 +2037,16 @@
       "clientMethod": {
         "shortName": "CreateCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateCertificateMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1572,6 +2086,16 @@
         "shortName": "CreateCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateCertificateMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1610,6 +2134,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMap",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMap",
+            "name": "certificateMap"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateMapId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1648,6 +2190,24 @@
         "shortName": "CreateCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMap",
+            "name": "certificateMap"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateMapId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1685,6 +2245,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMap",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMap",
+            "name": "certificateMap"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateMapId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1723,6 +2301,24 @@
         "shortName": "CreateCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMap",
+            "name": "certificateMap"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateMapId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1760,6 +2356,16 @@
       "clientMethod": {
         "shortName": "UpdateCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateCertificateMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1799,6 +2405,16 @@
         "shortName": "UpdateCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateCertificateMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1837,6 +2453,20 @@
       "clientMethod": {
         "shortName": "UpdateCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMap",
+            "name": "certificateMap"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1875,6 +2505,20 @@
         "shortName": "UpdateCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMap",
+            "name": "certificateMap"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMap, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1912,6 +2556,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteCertificateMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1951,6 +2605,16 @@
         "shortName": "DeleteCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteCertificateMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -1989,6 +2653,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMap",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2027,6 +2701,16 @@
         "shortName": "DeleteCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2064,6 +2748,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateMap",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2102,6 +2796,16 @@
         "shortName": "DeleteCertificateMapAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2139,6 +2843,16 @@
       "clientMethod": {
         "shortName": "ListCertificateMapEntries",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListCertificateMapEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapEntriesResponse, Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2178,6 +2892,16 @@
         "shortName": "ListCertificateMapEntriesAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListCertificateMapEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapEntriesResponse, Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2216,6 +2940,24 @@
       "clientMethod": {
         "shortName": "ListCertificateMapEntries",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapEntries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapEntriesResponse, Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2254,6 +2996,24 @@
         "shortName": "ListCertificateMapEntriesAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapEntriesResponse, Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2291,6 +3051,24 @@
       "clientMethod": {
         "shortName": "ListCertificateMapEntries",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapEntriesResponse, Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2329,6 +3107,24 @@
         "shortName": "ListCertificateMapEntriesAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateMapEntriesAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateMapEntriesResponse, Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2366,6 +3162,16 @@
       "clientMethod": {
         "shortName": "GetCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetCertificateMapEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2405,6 +3211,16 @@
         "shortName": "GetCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetCertificateMapEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2443,6 +3259,16 @@
       "clientMethod": {
         "shortName": "GetCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2481,6 +3307,16 @@
         "shortName": "GetCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2518,6 +3354,16 @@
       "clientMethod": {
         "shortName": "GetCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2556,6 +3402,16 @@
         "shortName": "GetCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateMapEntry>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2593,6 +3449,16 @@
       "clientMethod": {
         "shortName": "CreateCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateCertificateMapEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2632,6 +3498,16 @@
         "shortName": "CreateCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateCertificateMapEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2670,6 +3546,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
+            "name": "certificateMapEntry"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateMapEntryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2708,6 +3602,24 @@
         "shortName": "CreateCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
+            "name": "certificateMapEntry"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateMapEntryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2745,6 +3657,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
+            "name": "certificateMapEntry"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateMapEntryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2783,6 +3713,24 @@
         "shortName": "CreateCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
+            "name": "certificateMapEntry"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateMapEntryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2820,6 +3768,16 @@
       "clientMethod": {
         "shortName": "UpdateCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateCertificateMapEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2859,6 +3817,16 @@
         "shortName": "UpdateCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateCertificateMapEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2897,6 +3865,20 @@
       "clientMethod": {
         "shortName": "UpdateCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
+            "name": "certificateMapEntry"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2935,6 +3917,20 @@
         "shortName": "UpdateCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntry",
+            "name": "certificateMapEntry"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateMapEntry, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -2972,6 +3968,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteCertificateMapEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3011,6 +4017,16 @@
         "shortName": "DeleteCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteCertificateMapEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3049,6 +4065,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3087,6 +4113,16 @@
         "shortName": "DeleteCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3124,6 +4160,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateMapEntry",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3162,6 +4208,16 @@
         "shortName": "DeleteCertificateMapEntryAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateMapEntryAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateMapEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3199,6 +4255,16 @@
       "clientMethod": {
         "shortName": "ListDnsAuthorizations",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListDnsAuthorizations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListDnsAuthorizationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListDnsAuthorizationsResponse, Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3238,6 +4304,16 @@
         "shortName": "ListDnsAuthorizationsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListDnsAuthorizationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListDnsAuthorizationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListDnsAuthorizationsResponse, Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3276,6 +4352,24 @@
       "clientMethod": {
         "shortName": "ListDnsAuthorizations",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListDnsAuthorizations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListDnsAuthorizationsResponse, Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3314,6 +4408,24 @@
         "shortName": "ListDnsAuthorizationsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListDnsAuthorizationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListDnsAuthorizationsResponse, Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3351,6 +4463,24 @@
       "clientMethod": {
         "shortName": "ListDnsAuthorizations",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListDnsAuthorizations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListDnsAuthorizationsResponse, Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3389,6 +4519,24 @@
         "shortName": "ListDnsAuthorizationsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListDnsAuthorizationsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListDnsAuthorizationsResponse, Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3426,6 +4574,16 @@
       "clientMethod": {
         "shortName": "GetDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetDnsAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetDnsAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3465,6 +4623,16 @@
         "shortName": "GetDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetDnsAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3503,6 +4671,16 @@
       "clientMethod": {
         "shortName": "GetDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetDnsAuthorization",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3541,6 +4719,16 @@
         "shortName": "GetDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3578,6 +4766,16 @@
       "clientMethod": {
         "shortName": "GetDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetDnsAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorizationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3616,6 +4814,16 @@
         "shortName": "GetDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorizationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.DnsAuthorization>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3653,6 +4861,16 @@
       "clientMethod": {
         "shortName": "CreateDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateDnsAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateDnsAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3692,6 +4910,16 @@
         "shortName": "CreateDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateDnsAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3730,6 +4958,24 @@
       "clientMethod": {
         "shortName": "CreateDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateDnsAuthorization",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
+            "name": "dnsAuthorization"
+          },
+          {
+            "type": "System.String",
+            "name": "dnsAuthorizationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3768,6 +5014,24 @@
         "shortName": "CreateDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
+            "name": "dnsAuthorization"
+          },
+          {
+            "type": "System.String",
+            "name": "dnsAuthorizationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3805,6 +5069,24 @@
       "clientMethod": {
         "shortName": "CreateDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateDnsAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
+            "name": "dnsAuthorization"
+          },
+          {
+            "type": "System.String",
+            "name": "dnsAuthorizationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3843,6 +5125,24 @@
         "shortName": "CreateDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
+            "name": "dnsAuthorization"
+          },
+          {
+            "type": "System.String",
+            "name": "dnsAuthorizationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3880,6 +5180,16 @@
       "clientMethod": {
         "shortName": "UpdateDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateDnsAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateDnsAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3919,6 +5229,16 @@
         "shortName": "UpdateDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateDnsAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3957,6 +5277,20 @@
       "clientMethod": {
         "shortName": "UpdateDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateDnsAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
+            "name": "dnsAuthorization"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -3995,6 +5329,20 @@
         "shortName": "UpdateDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorization",
+            "name": "dnsAuthorization"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.DnsAuthorization, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4032,6 +5380,16 @@
       "clientMethod": {
         "shortName": "DeleteDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteDnsAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteDnsAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4071,6 +5429,16 @@
         "shortName": "DeleteDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteDnsAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4109,6 +5477,16 @@
       "clientMethod": {
         "shortName": "DeleteDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteDnsAuthorization",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4147,6 +5525,16 @@
         "shortName": "DeleteDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4184,6 +5572,16 @@
       "clientMethod": {
         "shortName": "DeleteDnsAuthorization",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteDnsAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorizationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4222,6 +5620,16 @@
         "shortName": "DeleteDnsAuthorizationAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteDnsAuthorizationAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DnsAuthorizationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4259,6 +5667,16 @@
       "clientMethod": {
         "shortName": "ListCertificateIssuanceConfigs",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4298,6 +5716,16 @@
         "shortName": "ListCertificateIssuanceConfigsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4336,6 +5764,24 @@
       "clientMethod": {
         "shortName": "ListCertificateIssuanceConfigs",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4374,6 +5820,24 @@
         "shortName": "ListCertificateIssuanceConfigsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4411,6 +5875,24 @@
       "clientMethod": {
         "shortName": "ListCertificateIssuanceConfigs",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4449,6 +5931,24 @@
         "shortName": "ListCertificateIssuanceConfigsAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListCertificateIssuanceConfigsAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListCertificateIssuanceConfigsResponse, Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4486,6 +5986,16 @@
       "clientMethod": {
         "shortName": "GetCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4525,6 +6035,16 @@
         "shortName": "GetCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4563,6 +6083,16 @@
       "clientMethod": {
         "shortName": "GetCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4601,6 +6131,16 @@
         "shortName": "GetCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4638,6 +6178,16 @@
       "clientMethod": {
         "shortName": "GetCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4676,6 +6226,16 @@
         "shortName": "GetCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4713,6 +6273,16 @@
       "clientMethod": {
         "shortName": "CreateCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4752,6 +6322,16 @@
         "shortName": "CreateCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4790,6 +6370,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+            "name": "certificateIssuanceConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateIssuanceConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4828,6 +6426,24 @@
         "shortName": "CreateCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+            "name": "certificateIssuanceConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateIssuanceConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4865,6 +6481,24 @@
       "clientMethod": {
         "shortName": "CreateCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+            "name": "certificateIssuanceConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateIssuanceConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4903,6 +6537,24 @@
         "shortName": "CreateCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig",
+            "name": "certificateIssuanceConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "certificateIssuanceConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4940,6 +6592,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -4979,6 +6641,16 @@
         "shortName": "DeleteCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -5017,6 +6689,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -5055,6 +6737,16 @@
         "shortName": "DeleteCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -5092,6 +6784,16 @@
       "clientMethod": {
         "shortName": "DeleteCertificateIssuanceConfig",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
         "client": {
           "shortName": "CertificateManagerClient",
@@ -5130,6 +6832,16 @@
         "shortName": "DeleteCertificateIssuanceConfigAsync",
         "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteCertificateIssuanceConfigAsync",
         "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CertificateIssuanceConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
         "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
         "client": {
           "shortName": "CertificateManagerClient",
