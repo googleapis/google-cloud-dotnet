@@ -44,6 +44,9 @@ namespace Google.Cloud.Translate.V3.Snippets
                 Model = "",
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
                 Labels = { { "", "" }, },
+                CustomizedAttribution = "",
+                IsTranslateNativePdfOnly = false,
+                EnableShadowRemovalNativePdf = false,
             };
             // Make the request
             TranslateDocumentResponse response = translationServiceClient.TranslateDocument(request);

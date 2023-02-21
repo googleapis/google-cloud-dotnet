@@ -491,14 +491,13 @@ namespace Google.Cloud.Translate.V3
         /// location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -533,14 +532,13 @@ namespace Google.Cloud.Translate.V3
         /// location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -575,14 +573,13 @@ namespace Google.Cloud.Translate.V3
         /// location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -609,14 +606,13 @@ namespace Google.Cloud.Translate.V3
         /// location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -651,14 +647,13 @@ namespace Google.Cloud.Translate.V3
         /// location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -693,14 +688,13 @@ namespace Google.Cloud.Translate.V3
         /// location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -749,21 +743,20 @@ namespace Google.Cloud.Translate.V3
         /// "text/plain". If left blank, the MIME type defaults to "text/html".
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Optional. The BCP-47 language code of the input text if
+        /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
         /// listed in Language Support. If the source language isn't specified, the API
         /// attempts to identify the source language automatically and returns the
         /// source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -823,21 +816,20 @@ namespace Google.Cloud.Translate.V3
         /// "text/plain". If left blank, the MIME type defaults to "text/html".
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Optional. The BCP-47 language code of the input text if
+        /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
         /// listed in Language Support. If the source language isn't specified, the API
         /// attempts to identify the source language automatically and returns the
         /// source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -897,21 +889,20 @@ namespace Google.Cloud.Translate.V3
         /// "text/plain". If left blank, the MIME type defaults to "text/html".
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Optional. The BCP-47 language code of the input text if
+        /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
         /// listed in Language Support. If the source language isn't specified, the API
         /// attempts to identify the source language automatically and returns the
         /// source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -960,21 +951,20 @@ namespace Google.Cloud.Translate.V3
         /// "text/plain". If left blank, the MIME type defaults to "text/html".
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Optional. The BCP-47 language code of the input text if
+        /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
         /// listed in Language Support. If the source language isn't specified, the API
         /// attempts to identify the source language automatically and returns the
         /// source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1034,21 +1024,20 @@ namespace Google.Cloud.Translate.V3
         /// "text/plain". If left blank, the MIME type defaults to "text/html".
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Optional. The BCP-47 language code of the input text if
+        /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
         /// listed in Language Support. If the source language isn't specified, the API
         /// attempts to identify the source language automatically and returns the
         /// source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1108,21 +1097,20 @@ namespace Google.Cloud.Translate.V3
         /// "text/plain". If left blank, the MIME type defaults to "text/html".
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Optional. The BCP-47 language code of the input text if
+        /// Optional. The ISO-639 language code of the input text if
         /// known, for example, "en-US" or "sr-Latn". Supported language codes are
         /// listed in Language Support. If the source language isn't specified, the API
         /// attempts to identify the source language automatically and returns the
         /// source language within the response.
         /// </param>
         /// <param name="targetLanguageCode">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// text, set to one of the language codes listed in Language Support.
         /// </param>
         /// <param name="contents">
         /// Required. The content of the input in string format.
-        /// We recommend the total content be less than 30k codepoints. The max length
-        /// of this field is 1024.
-        /// Use BatchTranslateText for larger text.
+        /// We recommend the total content be less than 30,000 codepoints. The max
+        /// length of this field is 1024. Use BatchTranslateText for larger text.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1911,12 +1899,12 @@ namespace Google.Cloud.Translate.V3
         /// error is returned.
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Required. The BCP-47 language code of the input document if known, for
+        /// Required. The ISO-639 language code of the input document if known, for
         /// example, "en-US" or "sr-Latn". Supported language codes are listed in
-        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// [Language Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="targetLanguageCodes">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// document. Specify up to 10 language codes here.
         /// </param>
         /// <param name="inputConfigs">
@@ -1969,12 +1957,12 @@ namespace Google.Cloud.Translate.V3
         /// error is returned.
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Required. The BCP-47 language code of the input document if known, for
+        /// Required. The ISO-639 language code of the input document if known, for
         /// example, "en-US" or "sr-Latn". Supported language codes are listed in
-        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// [Language Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="targetLanguageCodes">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// document. Specify up to 10 language codes here.
         /// </param>
         /// <param name="inputConfigs">
@@ -2027,12 +2015,12 @@ namespace Google.Cloud.Translate.V3
         /// error is returned.
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Required. The BCP-47 language code of the input document if known, for
+        /// Required. The ISO-639 language code of the input document if known, for
         /// example, "en-US" or "sr-Latn". Supported language codes are listed in
-        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// [Language Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="targetLanguageCodes">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// document. Specify up to 10 language codes here.
         /// </param>
         /// <param name="inputConfigs">
@@ -2072,12 +2060,12 @@ namespace Google.Cloud.Translate.V3
         /// error is returned.
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Required. The BCP-47 language code of the input document if known, for
+        /// Required. The ISO-639 language code of the input document if known, for
         /// example, "en-US" or "sr-Latn". Supported language codes are listed in
-        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// [Language Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="targetLanguageCodes">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// document. Specify up to 10 language codes here.
         /// </param>
         /// <param name="inputConfigs">
@@ -2130,12 +2118,12 @@ namespace Google.Cloud.Translate.V3
         /// error is returned.
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Required. The BCP-47 language code of the input document if known, for
+        /// Required. The ISO-639 language code of the input document if known, for
         /// example, "en-US" or "sr-Latn". Supported language codes are listed in
-        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// [Language Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="targetLanguageCodes">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// document. Specify up to 10 language codes here.
         /// </param>
         /// <param name="inputConfigs">
@@ -2188,12 +2176,12 @@ namespace Google.Cloud.Translate.V3
         /// error is returned.
         /// </param>
         /// <param name="sourceLanguageCode">
-        /// Required. The BCP-47 language code of the input document if known, for
+        /// Required. The ISO-639 language code of the input document if known, for
         /// example, "en-US" or "sr-Latn". Supported language codes are listed in
-        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// [Language Support](https://cloud.google.com/translate/docs/languages).
         /// </param>
         /// <param name="targetLanguageCodes">
-        /// Required. The BCP-47 language code to use for translation of the input
+        /// Required. The ISO-639 language code to use for translation of the input
         /// document. Specify up to 10 language codes here.
         /// </param>
         /// <param name="inputConfigs">

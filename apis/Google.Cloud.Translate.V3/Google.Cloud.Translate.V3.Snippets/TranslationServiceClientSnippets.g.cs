@@ -433,6 +433,9 @@ namespace Google.Cloud.Translate.V3.Snippets
                 Model = "",
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
                 Labels = { { "", "" }, },
+                CustomizedAttribution = "",
+                IsTranslateNativePdfOnly = false,
+                EnableShadowRemovalNativePdf = false,
             };
             // Make the request
             TranslateDocumentResponse response = translationServiceClient.TranslateDocument(request);
@@ -457,6 +460,9 @@ namespace Google.Cloud.Translate.V3.Snippets
                 Model = "",
                 GlossaryConfig = new TranslateTextGlossaryConfig(),
                 Labels = { { "", "" }, },
+                CustomizedAttribution = "",
+                IsTranslateNativePdfOnly = false,
+                EnableShadowRemovalNativePdf = false,
             };
             // Make the request
             TranslateDocumentResponse response = await translationServiceClient.TranslateDocumentAsync(request);
@@ -580,6 +586,7 @@ namespace Google.Cloud.Translate.V3.Snippets
                     },
                 },
                 FormatConversions = { { "", "" }, },
+                CustomizedAttribution = "",
             };
             // Make the request
             Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = translationServiceClient.BatchTranslateDocument(request);
@@ -629,6 +636,7 @@ namespace Google.Cloud.Translate.V3.Snippets
                     },
                 },
                 FormatConversions = { { "", "" }, },
+                CustomizedAttribution = "",
             };
             // Make the request
             Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = await translationServiceClient.BatchTranslateDocumentAsync(request);

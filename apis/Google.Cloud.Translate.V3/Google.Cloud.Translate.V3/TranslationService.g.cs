@@ -79,7 +79,7 @@ namespace Google.Cloud.Translate.V3 {
             "KAlCCAoGc291cmNlIooBChREb2N1bWVudE91dHB1dENvbmZpZxJLCg9nY3Nf",
             "ZGVzdGluYXRpb24YASABKAsyKy5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24u",
             "djMuR2NzRGVzdGluYXRpb25CA+BBAUgAEhYKCW1pbWVfdHlwZRgDIAEoCUID",
-            "4EEBQg0KC2Rlc3RpbmF0aW9uIpYEChhUcmFuc2xhdGVEb2N1bWVudFJlcXVl",
+            "4EEBQg0KC2Rlc3RpbmF0aW9uIpUFChhUcmFuc2xhdGVEb2N1bWVudFJlcXVl",
             "c3QSEwoGcGFyZW50GAEgASgJQgPgQQISIQoUc291cmNlX2xhbmd1YWdlX2Nv",
             "ZGUYAiABKAlCA+BBARIhChR0YXJnZXRfbGFuZ3VhZ2VfY29kZRgDIAEoCUID",
             "4EECElQKFWRvY3VtZW50X2lucHV0X2NvbmZpZxgEIAEoCzIwLmdvb2dsZS5j",
@@ -90,195 +90,200 @@ namespace Google.Cloud.Translate.V3 {
             "Z29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0ZVRleHRHbG9z",
             "c2FyeUNvbmZpZ0ID4EEBElYKBmxhYmVscxgIIAMoCzJBLmdvb2dsZS5jbG91",
             "ZC50cmFuc2xhdGlvbi52My5UcmFuc2xhdGVEb2N1bWVudFJlcXVlc3QuTGFi",
-            "ZWxzRW50cnlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBImUKE0RvY3VtZW50VHJhbnNsYXRpb24SGwoTYnl0",
-            "ZV9zdHJlYW1fb3V0cHV0cxgBIAMoDBIRCgltaW1lX3R5cGUYAiABKAkSHgoW",
-            "ZGV0ZWN0ZWRfbGFuZ3VhZ2VfY29kZRgDIAEoCSKmAgoZVHJhbnNsYXRlRG9j",
-            "dW1lbnRSZXNwb25zZRJOChRkb2N1bWVudF90cmFuc2xhdGlvbhgBIAEoCzIw",
-            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5Eb2N1bWVudFRyYW5zbGF0",
-            "aW9uElcKHWdsb3NzYXJ5X2RvY3VtZW50X3RyYW5zbGF0aW9uGAIgASgLMjAu",
-            "Z29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkRvY3VtZW50VHJhbnNsYXRp",
-            "b24SDQoFbW9kZWwYAyABKAkSUQoPZ2xvc3NhcnlfY29uZmlnGAQgASgLMjgu",
-            "Z29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0ZVRleHRHbG9z",
-            "c2FyeUNvbmZpZyKIBgoZQmF0Y2hUcmFuc2xhdGVUZXh0UmVxdWVzdBI5CgZw",
-            "YXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29t",
-            "L0xvY2F0aW9uEiEKFHNvdXJjZV9sYW5ndWFnZV9jb2RlGAIgASgJQgPgQQIS",
-            "IgoVdGFyZ2V0X2xhbmd1YWdlX2NvZGVzGAMgAygJQgPgQQISVwoGbW9kZWxz",
-            "GAQgAygLMkIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkJhdGNoVHJh",
-            "bnNsYXRlVGV4dFJlcXVlc3QuTW9kZWxzRW50cnlCA+BBARJECg1pbnB1dF9j",
-            "b25maWdzGAUgAygLMiguZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLklu",
-            "cHV0Q29uZmlnQgPgQQISRQoNb3V0cHV0X2NvbmZpZxgGIAEoCzIpLmdvb2ds",
-            "ZS5jbG91ZC50cmFuc2xhdGlvbi52My5PdXRwdXRDb25maWdCA+BBAhJfCgpn",
-            "bG9zc2FyaWVzGAcgAygLMkYuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYz",
-            "LkJhdGNoVHJhbnNsYXRlVGV4dFJlcXVlc3QuR2xvc3Nhcmllc0VudHJ5QgPg",
-            "QQESVwoGbGFiZWxzGAkgAygLMkIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9u",
-            "LnYzLkJhdGNoVHJhbnNsYXRlVGV4dFJlcXVlc3QuTGFiZWxzRW50cnlCA+BB",
-            "ARotCgtNb2RlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBGmsKD0dsb3NzYXJpZXNFbnRyeRILCgNrZXkYASABKAkSRwoFdmFsdWUY",
-            "AiABKAsyOC5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJhbnNsYXRl",
-            "VGV4dEdsb3NzYXJ5Q29uZmlnOgI4ARotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIs4CChZCYXRjaFRyYW5zbGF0ZU1l",
-            "dGFkYXRhEkgKBXN0YXRlGAEgASgOMjkuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0",
-            "aW9uLnYzLkJhdGNoVHJhbnNsYXRlTWV0YWRhdGEuU3RhdGUSHQoVdHJhbnNs",
-            "YXRlZF9jaGFyYWN0ZXJzGAIgASgDEhkKEWZhaWxlZF9jaGFyYWN0ZXJzGAMg",
-            "ASgDEhgKEHRvdGFsX2NoYXJhY3RlcnMYBCABKAMSLwoLc3VibWl0X3RpbWUY",
-            "BSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wImUKBVN0YXRlEhUK",
-            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxABEg0KCVNVQ0NFRURF",
-            "RBACEgoKBkZBSUxFRBADEg4KCkNBTkNFTExJTkcQBBINCglDQU5DRUxMRUQQ",
-            "BSLLAQoWQmF0Y2hUcmFuc2xhdGVSZXNwb25zZRIYChB0b3RhbF9jaGFyYWN0",
-            "ZXJzGAEgASgDEh0KFXRyYW5zbGF0ZWRfY2hhcmFjdGVycxgCIAEoAxIZChFm",
-            "YWlsZWRfY2hhcmFjdGVycxgDIAEoAxIvCgtzdWJtaXRfdGltZRgEIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYBSABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIl0KE0dsb3NzYXJ5SW5wdXRD",
-            "b25maWcSPAoKZ2NzX3NvdXJjZRgBIAEoCzImLmdvb2dsZS5jbG91ZC50cmFu",
-            "c2xhdGlvbi52My5HY3NTb3VyY2VIAEIICgZzb3VyY2Ui/wQKCEdsb3NzYXJ5",
-            "EhEKBG5hbWUYASABKAlCA+BBAhJPCg1sYW5ndWFnZV9wYWlyGAMgASgLMjYu",
-            "Z29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkdsb3NzYXJ5Lkxhbmd1YWdl",
-            "Q29kZVBhaXJIABJUChJsYW5ndWFnZV9jb2Rlc19zZXQYBCABKAsyNi5nb29n",
-            "bGUuY2xvdWQudHJhbnNsYXRpb24udjMuR2xvc3NhcnkuTGFuZ3VhZ2VDb2Rl",
-            "c1NldEgAEkYKDGlucHV0X2NvbmZpZxgFIAEoCzIwLmdvb2dsZS5jbG91ZC50",
-            "cmFuc2xhdGlvbi52My5HbG9zc2FyeUlucHV0Q29uZmlnEhgKC2VudHJ5X2Nv",
-            "dW50GAYgASgFQgPgQQMSNAoLc3VibWl0X3RpbWUYByABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYCCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaTgoQTGFuZ3VhZ2VDb2Rl",
-            "UGFpchIcChRzb3VyY2VfbGFuZ3VhZ2VfY29kZRgBIAEoCRIcChR0YXJnZXRf",
-            "bGFuZ3VhZ2VfY29kZRgCIAEoCRoqChBMYW5ndWFnZUNvZGVzU2V0EhYKDmxh",
-            "bmd1YWdlX2NvZGVzGAEgAygJOmXqQWIKIXRyYW5zbGF0ZS5nb29nbGVhcGlz",
-            "LmNvbS9HbG9zc2FyeRI9cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2dsb3NzYXJpZXMve2dsb3NzYXJ5fUILCglsYW5ndWFnZXMi",
-            "kAEKFUNyZWF0ZUdsb3NzYXJ5UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBB",
-            "AvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEjwKCGds",
-            "b3NzYXJ5GAIgASgLMiUuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkds",
-            "b3NzYXJ5QgPgQQIiTQoSR2V0R2xvc3NhcnlSZXF1ZXN0EjcKBG5hbWUYASAB",
-            "KAlCKeBBAvpBIwohdHJhbnNsYXRlLmdvb2dsZWFwaXMuY29tL0dsb3NzYXJ5",
-            "IlAKFURlbGV0ZUdsb3NzYXJ5UmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6",
-            "QSMKIXRyYW5zbGF0ZS5nb29nbGVhcGlzLmNvbS9HbG9zc2FyeSKYAQoVTGlz",
-            "dEdsb3NzYXJpZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFs",
-            "b2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SFgoJcGFnZV9zaXpl",
-            "GAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRl",
-            "chgEIAEoCUID4EEBImwKFkxpc3RHbG9zc2FyaWVzUmVzcG9uc2USOQoKZ2xv",
-            "c3NhcmllcxgBIAMoCzIlLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5H",
-            "bG9zc2FyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiiAIKFkNyZWF0ZUds",
-            "b3NzYXJ5TWV0YWRhdGESDAoEbmFtZRgBIAEoCRJICgVzdGF0ZRgCIAEoDjI5",
-            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5DcmVhdGVHbG9zc2FyeU1l",
-            "dGFkYXRhLlN0YXRlEi8KC3N1Ym1pdF90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcCJlCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
-            "RBAAEgsKB1JVTk5JTkcQARINCglTVUNDRUVERUQQAhIKCgZGQUlMRUQQAxIO",
-            "CgpDQU5DRUxMSU5HEAQSDQoJQ0FOQ0VMTEVEEAUiiAIKFkRlbGV0ZUdsb3Nz",
-            "YXJ5TWV0YWRhdGESDAoEbmFtZRgBIAEoCRJICgVzdGF0ZRgCIAEoDjI5Lmdv",
-            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5EZWxldGVHbG9zc2FyeU1ldGFk",
-            "YXRhLlN0YXRlEi8KC3N1Ym1pdF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcCJlCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
-            "EgsKB1JVTk5JTkcQARINCglTVUNDRUVERUQQAhIKCgZGQUlMRUQQAxIOCgpD",
-            "QU5DRUxMSU5HEAQSDQoJQ0FOQ0VMTEVEEAUihQEKFkRlbGV0ZUdsb3NzYXJ5",
-            "UmVzcG9uc2USDAoEbmFtZRgBIAEoCRIvCgtzdWJtaXRfdGltZRgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wItQGCh1CYXRjaFRyYW5zbGF0",
-            "ZURvY3VtZW50UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9j",
-            "YXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEiEKFHNvdXJjZV9sYW5n",
-            "dWFnZV9jb2RlGAIgASgJQgPgQQISIgoVdGFyZ2V0X2xhbmd1YWdlX2NvZGVz",
-            "GAMgAygJQgPgQQISUQoNaW5wdXRfY29uZmlncxgEIAMoCzI1Lmdvb2dsZS5j",
-            "bG91ZC50cmFuc2xhdGlvbi52My5CYXRjaERvY3VtZW50SW5wdXRDb25maWdC",
-            "A+BBAhJSCg1vdXRwdXRfY29uZmlnGAUgASgLMjYuZ29vZ2xlLmNsb3VkLnRy",
-            "YW5zbGF0aW9uLnYzLkJhdGNoRG9jdW1lbnRPdXRwdXRDb25maWdCA+BBAhJb",
-            "CgZtb2RlbHMYBiADKAsyRi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
-            "QmF0Y2hUcmFuc2xhdGVEb2N1bWVudFJlcXVlc3QuTW9kZWxzRW50cnlCA+BB",
-            "ARJjCgpnbG9zc2FyaWVzGAcgAygLMkouZ29vZ2xlLmNsb3VkLnRyYW5zbGF0",
-            "aW9uLnYzLkJhdGNoVHJhbnNsYXRlRG9jdW1lbnRSZXF1ZXN0Lkdsb3NzYXJp",
-            "ZXNFbnRyeUID4EEBEnIKEmZvcm1hdF9jb252ZXJzaW9ucxgIIAMoCzJRLmdv",
-            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaFRyYW5zbGF0ZURvY3Vt",
-            "ZW50UmVxdWVzdC5Gb3JtYXRDb252ZXJzaW9uc0VudHJ5QgPgQQEaLQoLTW9k",
+            "ZWxzRW50cnlCA+BBARIjChZjdXN0b21pemVkX2F0dHJpYnV0aW9uGAogASgJ",
+            "QgPgQQESKQocaXNfdHJhbnNsYXRlX25hdGl2ZV9wZGZfb25seRgLIAEoCEID",
+            "4EEBEi0KIGVuYWJsZV9zaGFkb3dfcmVtb3ZhbF9uYXRpdmVfcGRmGAwgASgI",
+            "QgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ASJlChNEb2N1bWVudFRyYW5zbGF0aW9uEhsKE2J5dGVfc3RyZWFt",
+            "X291dHB1dHMYASADKAwSEQoJbWltZV90eXBlGAIgASgJEh4KFmRldGVjdGVk",
+            "X2xhbmd1YWdlX2NvZGUYAyABKAkipgIKGVRyYW5zbGF0ZURvY3VtZW50UmVz",
+            "cG9uc2USTgoUZG9jdW1lbnRfdHJhbnNsYXRpb24YASABKAsyMC5nb29nbGUu",
+            "Y2xvdWQudHJhbnNsYXRpb24udjMuRG9jdW1lbnRUcmFuc2xhdGlvbhJXCh1n",
+            "bG9zc2FyeV9kb2N1bWVudF90cmFuc2xhdGlvbhgCIAEoCzIwLmdvb2dsZS5j",
+            "bG91ZC50cmFuc2xhdGlvbi52My5Eb2N1bWVudFRyYW5zbGF0aW9uEg0KBW1v",
+            "ZGVsGAMgASgJElEKD2dsb3NzYXJ5X2NvbmZpZxgEIAEoCzI4Lmdvb2dsZS5j",
+            "bG91ZC50cmFuc2xhdGlvbi52My5UcmFuc2xhdGVUZXh0R2xvc3NhcnlDb25m",
+            "aWciiAYKGUJhdGNoVHJhbnNsYXRlVGV4dFJlcXVlc3QSOQoGcGFyZW50GAEg",
+            "ASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlv",
+            "bhIhChRzb3VyY2VfbGFuZ3VhZ2VfY29kZRgCIAEoCUID4EECEiIKFXRhcmdl",
+            "dF9sYW5ndWFnZV9jb2RlcxgDIAMoCUID4EECElcKBm1vZGVscxgEIAMoCzJC",
+            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaFRyYW5zbGF0ZVRl",
+            "eHRSZXF1ZXN0Lk1vZGVsc0VudHJ5QgPgQQESRAoNaW5wdXRfY29uZmlncxgF",
+            "IAMoCzIoLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5JbnB1dENvbmZp",
+            "Z0ID4EECEkUKDW91dHB1dF9jb25maWcYBiABKAsyKS5nb29nbGUuY2xvdWQu",
+            "dHJhbnNsYXRpb24udjMuT3V0cHV0Q29uZmlnQgPgQQISXwoKZ2xvc3Nhcmll",
+            "cxgHIAMoCzJGLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaFRy",
+            "YW5zbGF0ZVRleHRSZXF1ZXN0Lkdsb3NzYXJpZXNFbnRyeUID4EEBElcKBmxh",
+            "YmVscxgJIAMoCzJCLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRj",
+            "aFRyYW5zbGF0ZVRleHRSZXF1ZXN0LkxhYmVsc0VudHJ5QgPgQQEaLQoLTW9k",
             "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARprCg9H",
             "bG9zc2FyaWVzRW50cnkSCwoDa2V5GAEgASgJEkcKBXZhbHVlGAIgASgLMjgu",
             "Z29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0ZVRleHRHbG9z",
-            "c2FyeUNvbmZpZzoCOAEaOAoWRm9ybWF0Q29udmVyc2lvbnNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImIKGEJhdGNoRG9jdW1lbnRJ",
-            "bnB1dENvbmZpZxI8CgpnY3Nfc291cmNlGAEgASgLMiYuZ29vZ2xlLmNsb3Vk",
-            "LnRyYW5zbGF0aW9uLnYzLkdjc1NvdXJjZUgAQggKBnNvdXJjZSJyChlCYXRj",
-            "aERvY3VtZW50T3V0cHV0Q29uZmlnEkYKD2djc19kZXN0aW5hdGlvbhgBIAEo",
-            "CzIrLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HY3NEZXN0aW5hdGlv",
-            "bkgAQg0KC2Rlc3RpbmF0aW9uItkCCh5CYXRjaFRyYW5zbGF0ZURvY3VtZW50",
-            "UmVzcG9uc2USEwoLdG90YWxfcGFnZXMYASABKAMSGAoQdHJhbnNsYXRlZF9w",
-            "YWdlcxgCIAEoAxIUCgxmYWlsZWRfcGFnZXMYAyABKAMSHAoUdG90YWxfYmls",
-            "bGFibGVfcGFnZXMYBCABKAMSGAoQdG90YWxfY2hhcmFjdGVycxgFIAEoAxId",
-            "ChV0cmFuc2xhdGVkX2NoYXJhY3RlcnMYBiABKAMSGQoRZmFpbGVkX2NoYXJh",
-            "Y3RlcnMYByABKAMSIQoZdG90YWxfYmlsbGFibGVfY2hhcmFjdGVycxgIIAEo",
-            "AxIvCgtzdWJtaXRfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASLAoIZW5kX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wIuQDCh5CYXRjaFRyYW5zbGF0ZURvY3VtZW50TWV0YWRhdGESUAoF",
-            "c3RhdGUYASABKA4yQS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQmF0",
-            "Y2hUcmFuc2xhdGVEb2N1bWVudE1ldGFkYXRhLlN0YXRlEhMKC3RvdGFsX3Bh",
-            "Z2VzGAIgASgDEhgKEHRyYW5zbGF0ZWRfcGFnZXMYAyABKAMSFAoMZmFpbGVk",
-            "X3BhZ2VzGAQgASgDEhwKFHRvdGFsX2JpbGxhYmxlX3BhZ2VzGAUgASgDEhgK",
-            "EHRvdGFsX2NoYXJhY3RlcnMYBiABKAMSHQoVdHJhbnNsYXRlZF9jaGFyYWN0",
-            "ZXJzGAcgASgDEhkKEWZhaWxlZF9jaGFyYWN0ZXJzGAggASgDEiEKGXRvdGFs",
-            "X2JpbGxhYmxlX2NoYXJhY3RlcnMYCSABKAMSLwoLc3VibWl0X3RpbWUYCiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wImUKBVN0YXRlEhUKEVNU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxABEg0KCVNVQ0NFRURFRBAC",
-            "EgoKBkZBSUxFRBADEg4KCkNBTkNFTExJTkcQBBINCglDQU5DRUxMRUQQBTKm",
-            "FAoSVHJhbnNsYXRpb25TZXJ2aWNlEtQCCg1UcmFuc2xhdGVUZXh0EjEuZ29v",
-            "Z2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0ZVRleHRSZXF1ZXN0",
-            "GjIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0ZVRleHRS",
-            "ZXNwb25zZSLbAYLT5JMCYiIxL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKn06dHJhbnNsYXRlVGV4dDoBKloqIiUvdjMve3BhcmVudD1wcm9q",
-            "ZWN0cy8qfTp0cmFuc2xhdGVUZXh0OgEq2kEkcGFyZW50LHRhcmdldF9sYW5n",
-            "dWFnZV9jb2RlLGNvbnRlbnRz2kFJcGFyZW50LG1vZGVsLG1pbWVfdHlwZSxz",
-            "b3VyY2VfbGFuZ3VhZ2VfY29kZSx0YXJnZXRfbGFuZ3VhZ2VfY29kZSxjb250",
-            "ZW50cxKHAgoORGV0ZWN0TGFuZ3VhZ2USMi5nb29nbGUuY2xvdWQudHJhbnNs",
-            "YXRpb24udjMuRGV0ZWN0TGFuZ3VhZ2VSZXF1ZXN0GjMuZ29vZ2xlLmNsb3Vk",
-            "LnRyYW5zbGF0aW9uLnYzLkRldGVjdExhbmd1YWdlUmVzcG9uc2UiiwGC0+ST",
-            "AmQiMi92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9OmRldGVj",
-            "dExhbmd1YWdlOgEqWisiJi92My97cGFyZW50PXByb2plY3RzLyp9OmRldGVj",
-            "dExhbmd1YWdlOgEq2kEecGFyZW50LG1vZGVsLG1pbWVfdHlwZSxjb250ZW50",
-            "EpcCChVHZXRTdXBwb3J0ZWRMYW5ndWFnZXMSOS5nb29nbGUuY2xvdWQudHJh",
-            "bnNsYXRpb24udjMuR2V0U3VwcG9ydGVkTGFuZ3VhZ2VzUmVxdWVzdBovLmdv",
-            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5TdXBwb3J0ZWRMYW5ndWFnZXMi",
-            "kQGC0+STAmYSNi92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L3N1cHBvcnRlZExhbmd1YWdlc1osEiovdjMve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9zdXBwb3J0ZWRMYW5ndWFnZXPaQSJwYXJlbnQsbW9kZWwsZGlzcGxheV9s",
-            "YW5ndWFnZV9jb2RlEsQBChFUcmFuc2xhdGVEb2N1bWVudBI1Lmdvb2dsZS5j",
-            "bG91ZC50cmFuc2xhdGlvbi52My5UcmFuc2xhdGVEb2N1bWVudFJlcXVlc3Qa",
-            "Ni5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJhbnNsYXRlRG9jdW1l",
-            "bnRSZXNwb25zZSJAgtPkkwI6IjUvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfTp0cmFuc2xhdGVEb2N1bWVudDoBKhLhAQoSQmF0Y2hUcmFu",
-            "c2xhdGVUZXh0EjYuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkJhdGNo",
-            "VHJhbnNsYXRlVGV4dFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uInSC0+STAjsiNi92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyp9OmJhdGNoVHJhbnNsYXRlVGV4dDoBKspBMAoWQmF0Y2hUcmFuc2xh",
-            "dGVSZXNwb25zZRIWQmF0Y2hUcmFuc2xhdGVNZXRhZGF0YRLOAgoWQmF0Y2hU",
-            "cmFuc2xhdGVEb2N1bWVudBI6Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52",
-            "My5CYXRjaFRyYW5zbGF0ZURvY3VtZW50UmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24i2AGC0+STAj8iOi92My97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9OmJhdGNoVHJhbnNsYXRlRG9jdW1lbnQ6ASra",
-            "QU1wYXJlbnQsc291cmNlX2xhbmd1YWdlX2NvZGUsdGFyZ2V0X2xhbmd1YWdl",
-            "X2NvZGVzLGlucHV0X2NvbmZpZ3Msb3V0cHV0X2NvbmZpZ8pBQAoeQmF0Y2hU",
-            "cmFuc2xhdGVEb2N1bWVudFJlc3BvbnNlEh5CYXRjaFRyYW5zbGF0ZURvY3Vt",
-            "ZW50TWV0YWRhdGES3AEKDkNyZWF0ZUdsb3NzYXJ5EjIuZ29vZ2xlLmNsb3Vk",
-            "LnRyYW5zbGF0aW9uLnYzLkNyZWF0ZUdsb3NzYXJ5UmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24id4LT5JMCOiIuL3YzL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZ2xvc3NhcmllczoIZ2xvc3Nhcnna",
-            "QQ9wYXJlbnQsZ2xvc3NhcnnKQSIKCEdsb3NzYXJ5EhZDcmVhdGVHbG9zc2Fy",
-            "eU1ldGFkYXRhEroBCg5MaXN0R2xvc3NhcmllcxIyLmdvb2dsZS5jbG91ZC50",
-            "cmFuc2xhdGlvbi52My5MaXN0R2xvc3Nhcmllc1JlcXVlc3QaMy5nb29nbGUu",
-            "Y2xvdWQudHJhbnNsYXRpb24udjMuTGlzdEdsb3NzYXJpZXNSZXNwb25zZSI/",
-            "gtPkkwIwEi4vdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9n",
-            "bG9zc2FyaWVz2kEGcGFyZW50EqQBCgtHZXRHbG9zc2FyeRIvLmdvb2dsZS5j",
-            "bG91ZC50cmFuc2xhdGlvbi52My5HZXRHbG9zc2FyeVJlcXVlc3QaJS5nb29n",
-            "bGUuY2xvdWQudHJhbnNsYXRpb24udjMuR2xvc3NhcnkiPYLT5JMCMBIuL3Yz",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZ2xvc3Nhcmllcy8qfdpB",
-            "BG5hbWUS1QEKDkRlbGV0ZUdsb3NzYXJ5EjIuZ29vZ2xlLmNsb3VkLnRyYW5z",
-            "bGF0aW9uLnYzLkRlbGV0ZUdsb3NzYXJ5UmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24icILT5JMCMCouL3YzL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovZ2xvc3Nhcmllcy8qfdpBBG5hbWXKQTAKFkRlbGV0",
-            "ZUdsb3NzYXJ5UmVzcG9uc2USFkRlbGV0ZUdsb3NzYXJ5TWV0YWRhdGEafspB",
-            "GHRyYW5zbGF0ZS5nb29nbGVhcGlzLmNvbdJBYGh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC10cmFuc2xhdGlvbkLXAQodY29tLmdv",
-            "b2dsZS5jbG91ZC50cmFuc2xhdGUudjNCF1RyYW5zbGF0aW9uU2VydmljZVBy",
-            "b3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vdHJhbnNsYXRpb24vYXBpdjMv",
-            "dHJhbnNsYXRpb25wYjt0cmFuc2xhdGlvbnBi+AEBqgIZR29vZ2xlLkNsb3Vk",
-            "LlRyYW5zbGF0ZS5WM8oCGUdvb2dsZVxDbG91ZFxUcmFuc2xhdGVcVjPqAhxH",
-            "b29nbGU6OkNsb3VkOjpUcmFuc2xhdGU6OlYzYgZwcm90bzM="));
+            "c2FyeUNvbmZpZzoCOAEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ASLOAgoWQmF0Y2hUcmFuc2xhdGVNZXRhZGF0YRJI",
+            "CgVzdGF0ZRgBIAEoDjI5Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5C",
+            "YXRjaFRyYW5zbGF0ZU1ldGFkYXRhLlN0YXRlEh0KFXRyYW5zbGF0ZWRfY2hh",
+            "cmFjdGVycxgCIAEoAxIZChFmYWlsZWRfY2hhcmFjdGVycxgDIAEoAxIYChB0",
+            "b3RhbF9jaGFyYWN0ZXJzGAQgASgDEi8KC3N1Ym1pdF90aW1lGAUgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJlCgVTdGF0ZRIVChFTVEFURV9V",
+            "TlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQARINCglTVUNDRUVERUQQAhIKCgZG",
+            "QUlMRUQQAxIOCgpDQU5DRUxMSU5HEAQSDQoJQ0FOQ0VMTEVEEAUiywEKFkJh",
+            "dGNoVHJhbnNsYXRlUmVzcG9uc2USGAoQdG90YWxfY2hhcmFjdGVycxgBIAEo",
+            "AxIdChV0cmFuc2xhdGVkX2NoYXJhY3RlcnMYAiABKAMSGQoRZmFpbGVkX2No",
+            "YXJhY3RlcnMYAyABKAMSLwoLc3VibWl0X3RpbWUYBCABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcCJdChNHbG9zc2FyeUlucHV0Q29uZmlnEjwK",
+            "Cmdjc19zb3VyY2UYASABKAsyJi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24u",
+            "djMuR2NzU291cmNlSABCCAoGc291cmNlIpoFCghHbG9zc2FyeRIRCgRuYW1l",
+            "GAEgASgJQgPgQQISTwoNbGFuZ3VhZ2VfcGFpchgDIAEoCzI2Lmdvb2dsZS5j",
+            "bG91ZC50cmFuc2xhdGlvbi52My5HbG9zc2FyeS5MYW5ndWFnZUNvZGVQYWly",
+            "SAASVAoSbGFuZ3VhZ2VfY29kZXNfc2V0GAQgASgLMjYuZ29vZ2xlLmNsb3Vk",
+            "LnRyYW5zbGF0aW9uLnYzLkdsb3NzYXJ5Lkxhbmd1YWdlQ29kZXNTZXRIABJG",
+            "CgxpbnB1dF9jb25maWcYBSABKAsyMC5nb29nbGUuY2xvdWQudHJhbnNsYXRp",
+            "b24udjMuR2xvc3NhcnlJbnB1dENvbmZpZxIYCgtlbnRyeV9jb3VudBgGIAEo",
+            "BUID4EEDEjQKC3N1Ym1pdF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAggASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEhkKDGRpc3BsYXlfbmFtZRgJIAEoCUID",
+            "4EEBGk4KEExhbmd1YWdlQ29kZVBhaXISHAoUc291cmNlX2xhbmd1YWdlX2Nv",
+            "ZGUYASABKAkSHAoUdGFyZ2V0X2xhbmd1YWdlX2NvZGUYAiABKAkaKgoQTGFu",
+            "Z3VhZ2VDb2Rlc1NldBIWCg5sYW5ndWFnZV9jb2RlcxgBIAMoCTpl6kFiCiF0",
+            "cmFuc2xhdGUuZ29vZ2xlYXBpcy5jb20vR2xvc3NhcnkSPXByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9nbG9zc2FyaWVzL3tnbG9z",
+            "c2FyeX1CCwoJbGFuZ3VhZ2VzIpABChVDcmVhdGVHbG9zc2FyeVJlcXVlc3QS",
+            "OQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlz",
+            "LmNvbS9Mb2NhdGlvbhI8CghnbG9zc2FyeRgCIAEoCzIlLmdvb2dsZS5jbG91",
+            "ZC50cmFuc2xhdGlvbi52My5HbG9zc2FyeUID4EECIk0KEkdldEdsb3NzYXJ5",
+            "UmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIXRyYW5zbGF0ZS5nb29n",
+            "bGVhcGlzLmNvbS9HbG9zc2FyeSJQChVEZWxldGVHbG9zc2FyeVJlcXVlc3QS",
+            "NwoEbmFtZRgBIAEoCUIp4EEC+kEjCiF0cmFuc2xhdGUuZ29vZ2xlYXBpcy5j",
+            "b20vR2xvc3NhcnkimAEKFUxpc3RHbG9zc2FyaWVzUmVxdWVzdBI5CgZwYXJl",
+            "bnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xv",
+            "Y2F0aW9uEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4Y",
+            "AyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBASJsChZMaXN0R2xvc3Nh",
+            "cmllc1Jlc3BvbnNlEjkKCmdsb3NzYXJpZXMYASADKAsyJS5nb29nbGUuY2xv",
+            "dWQudHJhbnNsYXRpb24udjMuR2xvc3NhcnkSFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJIogCChZDcmVhdGVHbG9zc2FyeU1ldGFkYXRhEgwKBG5hbWUYASAB",
+            "KAkSSAoFc3RhdGUYAiABKA4yOS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24u",
+            "djMuQ3JlYXRlR2xvc3NhcnlNZXRhZGF0YS5TdGF0ZRIvCgtzdWJtaXRfdGlt",
+            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiZQoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESDQoJU1VDQ0VF",
+            "REVEEAISCgoGRkFJTEVEEAMSDgoKQ0FOQ0VMTElORxAEEg0KCUNBTkNFTExF",
+            "RBAFIogCChZEZWxldGVHbG9zc2FyeU1ldGFkYXRhEgwKBG5hbWUYASABKAkS",
+            "SAoFc3RhdGUYAiABKA4yOS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
+            "RGVsZXRlR2xvc3NhcnlNZXRhZGF0YS5TdGF0ZRIvCgtzdWJtaXRfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiZQoFU3RhdGUSFQoR",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESDQoJU1VDQ0VFREVE",
+            "EAISCgoGRkFJTEVEEAMSDgoKQ0FOQ0VMTElORxAEEg0KCUNBTkNFTExFRBAF",
+            "IoUBChZEZWxldGVHbG9zc2FyeVJlc3BvbnNlEgwKBG5hbWUYASABKAkSLwoL",
+            "c3VibWl0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EiwKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cCL5BgodQmF0Y2hUcmFuc2xhdGVEb2N1bWVudFJlcXVlc3QSOQoGcGFyZW50",
+            "GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2Nh",
+            "dGlvbhIhChRzb3VyY2VfbGFuZ3VhZ2VfY29kZRgCIAEoCUID4EECEiIKFXRh",
+            "cmdldF9sYW5ndWFnZV9jb2RlcxgDIAMoCUID4EECElEKDWlucHV0X2NvbmZp",
+            "Z3MYBCADKAsyNS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQmF0Y2hE",
+            "b2N1bWVudElucHV0Q29uZmlnQgPgQQISUgoNb3V0cHV0X2NvbmZpZxgFIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaERvY3VtZW50",
+            "T3V0cHV0Q29uZmlnQgPgQQISWwoGbW9kZWxzGAYgAygLMkYuZ29vZ2xlLmNs",
+            "b3VkLnRyYW5zbGF0aW9uLnYzLkJhdGNoVHJhbnNsYXRlRG9jdW1lbnRSZXF1",
+            "ZXN0Lk1vZGVsc0VudHJ5QgPgQQESYwoKZ2xvc3NhcmllcxgHIAMoCzJKLmdv",
+            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaFRyYW5zbGF0ZURvY3Vt",
+            "ZW50UmVxdWVzdC5HbG9zc2FyaWVzRW50cnlCA+BBARJyChJmb3JtYXRfY29u",
+            "dmVyc2lvbnMYCCADKAsyUS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
+            "QmF0Y2hUcmFuc2xhdGVEb2N1bWVudFJlcXVlc3QuRm9ybWF0Q29udmVyc2lv",
+            "bnNFbnRyeUID4EEBEiMKFmN1c3RvbWl6ZWRfYXR0cmlidXRpb24YCiABKAlC",
+            "A+BBARotCgtNb2RlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBGmsKD0dsb3NzYXJpZXNFbnRyeRILCgNrZXkYASABKAkSRwoFdmFs",
+            "dWUYAiABKAsyOC5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJhbnNs",
+            "YXRlVGV4dEdsb3NzYXJ5Q29uZmlnOgI4ARo4ChZGb3JtYXRDb252ZXJzaW9u",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYgoYQmF0",
+            "Y2hEb2N1bWVudElucHV0Q29uZmlnEjwKCmdjc19zb3VyY2UYASABKAsyJi5n",
+            "b29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuR2NzU291cmNlSABCCAoGc291",
+            "cmNlInIKGUJhdGNoRG9jdW1lbnRPdXRwdXRDb25maWcSRgoPZ2NzX2Rlc3Rp",
+            "bmF0aW9uGAEgASgLMisuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkdj",
+            "c0Rlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24i2QIKHkJhdGNoVHJhbnNs",
+            "YXRlRG9jdW1lbnRSZXNwb25zZRITCgt0b3RhbF9wYWdlcxgBIAEoAxIYChB0",
+            "cmFuc2xhdGVkX3BhZ2VzGAIgASgDEhQKDGZhaWxlZF9wYWdlcxgDIAEoAxIc",
+            "ChR0b3RhbF9iaWxsYWJsZV9wYWdlcxgEIAEoAxIYChB0b3RhbF9jaGFyYWN0",
+            "ZXJzGAUgASgDEh0KFXRyYW5zbGF0ZWRfY2hhcmFjdGVycxgGIAEoAxIZChFm",
+            "YWlsZWRfY2hhcmFjdGVycxgHIAEoAxIhChl0b3RhbF9iaWxsYWJsZV9jaGFy",
+            "YWN0ZXJzGAggASgDEi8KC3N1Ym1pdF90aW1lGAkgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgKIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXAi5AMKHkJhdGNoVHJhbnNsYXRlRG9jdW1lbnRN",
+            "ZXRhZGF0YRJQCgVzdGF0ZRgBIAEoDjJBLmdvb2dsZS5jbG91ZC50cmFuc2xh",
+            "dGlvbi52My5CYXRjaFRyYW5zbGF0ZURvY3VtZW50TWV0YWRhdGEuU3RhdGUS",
+            "EwoLdG90YWxfcGFnZXMYAiABKAMSGAoQdHJhbnNsYXRlZF9wYWdlcxgDIAEo",
+            "AxIUCgxmYWlsZWRfcGFnZXMYBCABKAMSHAoUdG90YWxfYmlsbGFibGVfcGFn",
+            "ZXMYBSABKAMSGAoQdG90YWxfY2hhcmFjdGVycxgGIAEoAxIdChV0cmFuc2xh",
+            "dGVkX2NoYXJhY3RlcnMYByABKAMSGQoRZmFpbGVkX2NoYXJhY3RlcnMYCCAB",
+            "KAMSIQoZdG90YWxfYmlsbGFibGVfY2hhcmFjdGVycxgJIAEoAxIvCgtzdWJt",
+            "aXRfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiZQoF",
+            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESDQoJ",
+            "U1VDQ0VFREVEEAISCgoGRkFJTEVEEAMSDgoKQ0FOQ0VMTElORxAEEg0KCUNB",
+            "TkNFTExFRBAFMqYUChJUcmFuc2xhdGlvblNlcnZpY2US1AIKDVRyYW5zbGF0",
+            "ZVRleHQSMS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJhbnNsYXRl",
+            "VGV4dFJlcXVlc3QaMi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJh",
+            "bnNsYXRlVGV4dFJlc3BvbnNlItsBgtPkkwJiIjEvdjMve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qfTp0cmFuc2xhdGVUZXh0OgEqWioiJS92My97",
+            "cGFyZW50PXByb2plY3RzLyp9OnRyYW5zbGF0ZVRleHQ6ASraQSRwYXJlbnQs",
+            "dGFyZ2V0X2xhbmd1YWdlX2NvZGUsY29udGVudHPaQUlwYXJlbnQsbW9kZWws",
+            "bWltZV90eXBlLHNvdXJjZV9sYW5ndWFnZV9jb2RlLHRhcmdldF9sYW5ndWFn",
+            "ZV9jb2RlLGNvbnRlbnRzEocCCg5EZXRlY3RMYW5ndWFnZRIyLmdvb2dsZS5j",
+            "bG91ZC50cmFuc2xhdGlvbi52My5EZXRlY3RMYW5ndWFnZVJlcXVlc3QaMy5n",
+            "b29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuRGV0ZWN0TGFuZ3VhZ2VSZXNw",
+            "b25zZSKLAYLT5JMCZCIyL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn06ZGV0ZWN0TGFuZ3VhZ2U6ASpaKyImL3YzL3twYXJlbnQ9cHJvamVj",
+            "dHMvKn06ZGV0ZWN0TGFuZ3VhZ2U6ASraQR5wYXJlbnQsbW9kZWwsbWltZV90",
+            "eXBlLGNvbnRlbnQSlwIKFUdldFN1cHBvcnRlZExhbmd1YWdlcxI5Lmdvb2ds",
+            "ZS5jbG91ZC50cmFuc2xhdGlvbi52My5HZXRTdXBwb3J0ZWRMYW5ndWFnZXNS",
+            "ZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlN1cHBvcnRl",
+            "ZExhbmd1YWdlcyKRAYLT5JMCZhI2L3YzL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vc3VwcG9ydGVkTGFuZ3VhZ2VzWiwSKi92My97cGFyZW50",
+            "PXByb2plY3RzLyp9L3N1cHBvcnRlZExhbmd1YWdlc9pBInBhcmVudCxtb2Rl",
+            "bCxkaXNwbGF5X2xhbmd1YWdlX2NvZGUSxAEKEVRyYW5zbGF0ZURvY3VtZW50",
+            "EjUuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0ZURvY3Vt",
+            "ZW50UmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5UcmFu",
+            "c2xhdGVEb2N1bWVudFJlc3BvbnNlIkCC0+STAjoiNS92My97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9OnRyYW5zbGF0ZURvY3VtZW50OgEqEuEB",
+            "ChJCYXRjaFRyYW5zbGF0ZVRleHQSNi5nb29nbGUuY2xvdWQudHJhbnNsYXRp",
+            "b24udjMuQmF0Y2hUcmFuc2xhdGVUZXh0UmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24idILT5JMCOyI2L3YzL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn06YmF0Y2hUcmFuc2xhdGVUZXh0OgEqykEwChZC",
+            "YXRjaFRyYW5zbGF0ZVJlc3BvbnNlEhZCYXRjaFRyYW5zbGF0ZU1ldGFkYXRh",
+            "Es4CChZCYXRjaFRyYW5zbGF0ZURvY3VtZW50EjouZ29vZ2xlLmNsb3VkLnRy",
+            "YW5zbGF0aW9uLnYzLkJhdGNoVHJhbnNsYXRlRG9jdW1lbnRSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLYAYLT5JMCPyI6L3YzL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06YmF0Y2hUcmFuc2xhdGVE",
+            "b2N1bWVudDoBKtpBTXBhcmVudCxzb3VyY2VfbGFuZ3VhZ2VfY29kZSx0YXJn",
+            "ZXRfbGFuZ3VhZ2VfY29kZXMsaW5wdXRfY29uZmlncyxvdXRwdXRfY29uZmln",
+            "ykFACh5CYXRjaFRyYW5zbGF0ZURvY3VtZW50UmVzcG9uc2USHkJhdGNoVHJh",
+            "bnNsYXRlRG9jdW1lbnRNZXRhZGF0YRLcAQoOQ3JlYXRlR2xvc3NhcnkSMi5n",
+            "b29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQ3JlYXRlR2xvc3NhcnlSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ3gtPkkwI6Ii4v",
+            "djMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9nbG9zc2FyaWVz",
+            "OghnbG9zc2FyedpBD3BhcmVudCxnbG9zc2FyecpBIgoIR2xvc3NhcnkSFkNy",
+            "ZWF0ZUdsb3NzYXJ5TWV0YWRhdGESugEKDkxpc3RHbG9zc2FyaWVzEjIuZ29v",
+            "Z2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkxpc3RHbG9zc2FyaWVzUmVxdWVz",
+            "dBozLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5MaXN0R2xvc3Nhcmll",
+            "c1Jlc3BvbnNlIj+C0+STAjASLi92My97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9L2dsb3NzYXJpZXPaQQZwYXJlbnQSpAEKC0dldEdsb3NzYXJ5",
+            "Ei8uZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkdldEdsb3NzYXJ5UmVx",
+            "dWVzdBolLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HbG9zc2FyeSI9",
+            "gtPkkwIwEi4vdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9nbG9z",
+            "c2FyaWVzLyp92kEEbmFtZRLVAQoORGVsZXRlR2xvc3NhcnkSMi5nb29nbGUu",
+            "Y2xvdWQudHJhbnNsYXRpb24udjMuRGVsZXRlR2xvc3NhcnlSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJwgtPkkwIwKi4vdjMve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9nbG9zc2FyaWVzLyp92kEEbmFt",
+            "ZcpBMAoWRGVsZXRlR2xvc3NhcnlSZXNwb25zZRIWRGVsZXRlR2xvc3NhcnlN",
+            "ZXRhZGF0YRp+ykEYdHJhbnNsYXRlLmdvb2dsZWFwaXMuY29t0kFgaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXRyYW5zbGF0aW9u",
+            "QtcBCh1jb20uZ29vZ2xlLmNsb3VkLnRyYW5zbGF0ZS52M0IXVHJhbnNsYXRp",
+            "b25TZXJ2aWNlUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby90cmFuc2xh",
+            "dGlvbi9hcGl2My90cmFuc2xhdGlvbnBiO3RyYW5zbGF0aW9ucGL4AQGqAhlH",
+            "b29nbGUuQ2xvdWQuVHJhbnNsYXRlLlYzygIZR29vZ2xlXENsb3VkXFRyYW5z",
+            "bGF0ZVxWM+oCHEdvb2dsZTo6Q2xvdWQ6OlRyYW5zbGF0ZTo6VjNiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -298,14 +303,14 @@ namespace Google.Cloud.Translate.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.OutputConfig), global::Google.Cloud.Translate.V3.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DocumentInputConfig), global::Google.Cloud.Translate.V3.DocumentInputConfig.Parser, new[]{ "Content", "GcsSource", "MimeType" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DocumentOutputConfig), global::Google.Cloud.Translate.V3.DocumentOutputConfig.Parser, new[]{ "GcsDestination", "MimeType" }, new[]{ "Destination" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.TranslateDocumentRequest), global::Google.Cloud.Translate.V3.TranslateDocumentRequest.Parser, new[]{ "Parent", "SourceLanguageCode", "TargetLanguageCode", "DocumentInputConfig", "DocumentOutputConfig", "Model", "GlossaryConfig", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.TranslateDocumentRequest), global::Google.Cloud.Translate.V3.TranslateDocumentRequest.Parser, new[]{ "Parent", "SourceLanguageCode", "TargetLanguageCode", "DocumentInputConfig", "DocumentOutputConfig", "Model", "GlossaryConfig", "Labels", "CustomizedAttribution", "IsTranslateNativePdfOnly", "EnableShadowRemovalNativePdf" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DocumentTranslation), global::Google.Cloud.Translate.V3.DocumentTranslation.Parser, new[]{ "ByteStreamOutputs", "MimeType", "DetectedLanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.TranslateDocumentResponse), global::Google.Cloud.Translate.V3.TranslateDocumentResponse.Parser, new[]{ "DocumentTranslation", "GlossaryDocumentTranslation", "Model", "GlossaryConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateTextRequest), global::Google.Cloud.Translate.V3.BatchTranslateTextRequest.Parser, new[]{ "Parent", "SourceLanguageCode", "TargetLanguageCodes", "Models", "InputConfigs", "OutputConfig", "Glossaries", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateMetadata), global::Google.Cloud.Translate.V3.BatchTranslateMetadata.Parser, new[]{ "State", "TranslatedCharacters", "FailedCharacters", "TotalCharacters", "SubmitTime" }, null, new[]{ typeof(global::Google.Cloud.Translate.V3.BatchTranslateMetadata.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateResponse), global::Google.Cloud.Translate.V3.BatchTranslateResponse.Parser, new[]{ "TotalCharacters", "TranslatedCharacters", "FailedCharacters", "SubmitTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.GlossaryInputConfig), global::Google.Cloud.Translate.V3.GlossaryInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.Glossary), global::Google.Cloud.Translate.V3.Glossary.Parser, new[]{ "Name", "LanguagePair", "LanguageCodesSet", "InputConfig", "EntryCount", "SubmitTime", "EndTime" }, new[]{ "Languages" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.Glossary.Types.LanguageCodePair), global::Google.Cloud.Translate.V3.Glossary.Types.LanguageCodePair.Parser, new[]{ "SourceLanguageCode", "TargetLanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.Glossary), global::Google.Cloud.Translate.V3.Glossary.Parser, new[]{ "Name", "LanguagePair", "LanguageCodesSet", "InputConfig", "EntryCount", "SubmitTime", "EndTime", "DisplayName" }, new[]{ "Languages" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.Glossary.Types.LanguageCodePair), global::Google.Cloud.Translate.V3.Glossary.Types.LanguageCodePair.Parser, new[]{ "SourceLanguageCode", "TargetLanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.Glossary.Types.LanguageCodesSet), global::Google.Cloud.Translate.V3.Glossary.Types.LanguageCodesSet.Parser, new[]{ "LanguageCodes" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.CreateGlossaryRequest), global::Google.Cloud.Translate.V3.CreateGlossaryRequest.Parser, new[]{ "Parent", "Glossary" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.GetGlossaryRequest), global::Google.Cloud.Translate.V3.GetGlossaryRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -315,7 +320,7 @@ namespace Google.Cloud.Translate.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.CreateGlossaryMetadata), global::Google.Cloud.Translate.V3.CreateGlossaryMetadata.Parser, new[]{ "Name", "State", "SubmitTime" }, null, new[]{ typeof(global::Google.Cloud.Translate.V3.CreateGlossaryMetadata.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DeleteGlossaryMetadata), global::Google.Cloud.Translate.V3.DeleteGlossaryMetadata.Parser, new[]{ "Name", "State", "SubmitTime" }, null, new[]{ typeof(global::Google.Cloud.Translate.V3.DeleteGlossaryMetadata.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DeleteGlossaryResponse), global::Google.Cloud.Translate.V3.DeleteGlossaryResponse.Parser, new[]{ "Name", "SubmitTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest), global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest.Parser, new[]{ "Parent", "SourceLanguageCode", "TargetLanguageCodes", "InputConfigs", "OutputConfig", "Models", "Glossaries", "FormatConversions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest), global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest.Parser, new[]{ "Parent", "SourceLanguageCode", "TargetLanguageCodes", "InputConfigs", "OutputConfig", "Models", "Glossaries", "FormatConversions", "CustomizedAttribution" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchDocumentInputConfig), global::Google.Cloud.Translate.V3.BatchDocumentInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig), global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateDocumentResponse), global::Google.Cloud.Translate.V3.BatchTranslateDocumentResponse.Parser, new[]{ "TotalPages", "TranslatedPages", "FailedPages", "TotalBillablePages", "TotalCharacters", "TranslatedCharacters", "FailedCharacters", "TotalBillableCharacters", "SubmitTime", "EndTime" }, null, null, null, null),
@@ -381,9 +386,9 @@ namespace Google.Cloud.Translate.V3 {
     /// <summary>
     /// Required. The `glossary` to be applied for this translation.
     ///
-    /// The format depends on glossary:
+    /// The format depends on the glossary:
     ///
-    /// - User provided custom glossary:
+    /// - User-provided custom glossary:
     ///   `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -399,8 +404,8 @@ namespace Google.Cloud.Translate.V3 {
     public const int IgnoreCaseFieldNumber = 2;
     private bool ignoreCase_;
     /// <summary>
-    /// Optional. Indicates match is case-insensitive.
-    /// Default value is false if missing.
+    /// Optional. Indicates match is case insensitive. The default value is `false`
+    /// if missing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -629,9 +634,8 @@ namespace Google.Cloud.Translate.V3 {
     private readonly pbc::RepeatedField<string> contents_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. The content of the input in string format.
-    /// We recommend the total content be less than 30k codepoints. The max length
-    /// of this field is 1024.
-    /// Use BatchTranslateText for larger text.
+    /// We recommend the total content be less than 30,000 codepoints. The max
+    /// length of this field is 1024. Use BatchTranslateText for larger text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -659,7 +663,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int SourceLanguageCodeFieldNumber = 4;
     private string sourceLanguageCode_ = "";
     /// <summary>
-    /// Optional. The BCP-47 language code of the input text if
+    /// Optional. The ISO-639 language code of the input text if
     /// known, for example, "en-US" or "sr-Latn". Supported language codes are
     /// listed in Language Support. If the source language isn't specified, the API
     /// attempts to identify the source language automatically and returns the
@@ -678,7 +682,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int TargetLanguageCodeFieldNumber = 5;
     private string targetLanguageCode_ = "";
     /// <summary>
-    /// Required. The BCP-47 language code to use for translation of the input
+    /// Required. The ISO-639 language code to use for translation of the input
     /// text, set to one of the language codes listed in Language Support.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1385,7 +1389,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int DetectedLanguageCodeFieldNumber = 4;
     private string detectedLanguageCode_ = "";
     /// <summary>
-    /// The BCP-47 language code of source text in the initial request, detected
+    /// The ISO-639 language code of source text in the initial request, detected
     /// automatically, if no source language was passed within the initial
     /// request. If the source language was passed, auto-detection of the language
     /// does not occur and this field is empty.
@@ -2081,7 +2085,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int LanguageCodeFieldNumber = 1;
     private string languageCode_ = "";
     /// <summary>
-    /// The BCP-47 language code of source content in the request, detected
+    /// The ISO-639 language code of the source content in the request, detected
     /// automatically.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2991,9 +2995,9 @@ namespace Google.Cloud.Translate.V3 {
     private string languageCode_ = "";
     /// <summary>
     /// Supported language code, generally consisting of its ISO 639-1
-    /// identifier, for example, 'en', 'ja'. In certain cases, BCP-47 codes
+    /// identifier, for example, 'en', 'ja'. In certain cases, ISO-639 codes
     /// including language and region identifiers are returned (for example,
-    /// 'zh-TW' and 'zh-CN')
+    /// 'zh-TW' and 'zh-CN').
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3008,7 +3012,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Human readable name of the language localized in the display language
+    /// Human-readable name of the language localized in the display language
     /// specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3024,7 +3028,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int SupportSourceFieldNumber = 3;
     private bool supportSource_;
     /// <summary>
-    /// Can be used as source language.
+    /// Can be used as a source language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3039,7 +3043,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int SupportTargetFieldNumber = 4;
     private bool supportTarget_;
     /// <summary>
-    /// Can be used as target language.
+    /// Can be used as a target language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4037,7 +4041,7 @@ namespace Google.Cloud.Translate.V3 {
     /// Since index.csv will be keeping updated during the process, please make
     /// sure there is no custom retention policy applied on the output bucket
     /// that may avoid file updating.
-    /// (https://cloud.google.com/storage/docs/bucket-lock?hl=en#retention-policy)
+    /// (https://cloud.google.com/storage/docs/bucket-lock#retention-policy)
     ///
     /// The format of translations_file (for target language code 'trg') is:
     /// `gs://translation_test/a_b_c_'trg'_translations.[extension]`
@@ -4957,6 +4961,9 @@ namespace Google.Cloud.Translate.V3 {
       model_ = other.model_;
       glossaryConfig_ = other.glossaryConfig_ != null ? other.glossaryConfig_.Clone() : null;
       labels_ = other.labels_.Clone();
+      customizedAttribution_ = other.customizedAttribution_;
+      isTranslateNativePdfOnly_ = other.isTranslateNativePdfOnly_;
+      enableShadowRemovalNativePdf_ = other.enableShadowRemovalNativePdf_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4996,7 +5003,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int SourceLanguageCodeFieldNumber = 2;
     private string sourceLanguageCode_ = "";
     /// <summary>
-    /// Optional. The BCP-47 language code of the input document if known, for
+    /// Optional. The ISO-639 language code of the input document if known, for
     /// example, "en-US" or "sr-Latn". Supported language codes are listed in
     /// Language Support. If the source language isn't specified, the API attempts
     /// to identify the source language automatically and returns the source
@@ -5016,7 +5023,7 @@ namespace Google.Cloud.Translate.V3 {
     public const int TargetLanguageCodeFieldNumber = 3;
     private string targetLanguageCode_ = "";
     /// <summary>
-    /// Required. The BCP-47 language code to use for translation of the input
+    /// Required. The ISO-639 language code to use for translation of the input
     /// document, set to one of the language codes listed in Language Support.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5127,6 +5134,58 @@ namespace Google.Cloud.Translate.V3 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "customized_attribution" field.</summary>
+    public const int CustomizedAttributionFieldNumber = 10;
+    private string customizedAttribution_ = "";
+    /// <summary>
+    /// Optional. This flag is to support user customized attribution.
+    /// If not provided, the default is `Machine Translated by Google`.
+    /// Customized attribution should follow rules in
+    /// https://cloud.google.com/translate/attribution#attribution_and_logos
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomizedAttribution {
+      get { return customizedAttribution_; }
+      set {
+        customizedAttribution_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "is_translate_native_pdf_only" field.</summary>
+    public const int IsTranslateNativePdfOnlyFieldNumber = 11;
+    private bool isTranslateNativePdfOnly_;
+    /// <summary>
+    /// Optional. If true, the page limit of online native pdf translation is 300
+    /// and only native pdf pages will be translated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsTranslateNativePdfOnly {
+      get { return isTranslateNativePdfOnly_; }
+      set {
+        isTranslateNativePdfOnly_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enable_shadow_removal_native_pdf" field.</summary>
+    public const int EnableShadowRemovalNativePdfFieldNumber = 12;
+    private bool enableShadowRemovalNativePdf_;
+    /// <summary>
+    /// Optional. If true, use the text removal to remove the shadow text on
+    /// background image for native pdf translation.
+    /// Shadow removal feature can only be enabled when
+    /// is_translate_native_pdf_only is false
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableShadowRemovalNativePdf {
+      get { return enableShadowRemovalNativePdf_; }
+      set {
+        enableShadowRemovalNativePdf_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5150,6 +5209,9 @@ namespace Google.Cloud.Translate.V3 {
       if (Model != other.Model) return false;
       if (!object.Equals(GlossaryConfig, other.GlossaryConfig)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (CustomizedAttribution != other.CustomizedAttribution) return false;
+      if (IsTranslateNativePdfOnly != other.IsTranslateNativePdfOnly) return false;
+      if (EnableShadowRemovalNativePdf != other.EnableShadowRemovalNativePdf) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5165,6 +5227,9 @@ namespace Google.Cloud.Translate.V3 {
       if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (glossaryConfig_ != null) hash ^= GlossaryConfig.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (CustomizedAttribution.Length != 0) hash ^= CustomizedAttribution.GetHashCode();
+      if (IsTranslateNativePdfOnly != false) hash ^= IsTranslateNativePdfOnly.GetHashCode();
+      if (EnableShadowRemovalNativePdf != false) hash ^= EnableShadowRemovalNativePdf.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5212,6 +5277,18 @@ namespace Google.Cloud.Translate.V3 {
         output.WriteMessage(GlossaryConfig);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (CustomizedAttribution.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CustomizedAttribution);
+      }
+      if (IsTranslateNativePdfOnly != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsTranslateNativePdfOnly);
+      }
+      if (EnableShadowRemovalNativePdf != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(EnableShadowRemovalNativePdf);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5251,6 +5328,18 @@ namespace Google.Cloud.Translate.V3 {
         output.WriteMessage(GlossaryConfig);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (CustomizedAttribution.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CustomizedAttribution);
+      }
+      if (IsTranslateNativePdfOnly != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsTranslateNativePdfOnly);
+      }
+      if (EnableShadowRemovalNativePdf != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(EnableShadowRemovalNativePdf);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5283,6 +5372,15 @@ namespace Google.Cloud.Translate.V3 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GlossaryConfig);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (CustomizedAttribution.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomizedAttribution);
+      }
+      if (IsTranslateNativePdfOnly != false) {
+        size += 1 + 1;
+      }
+      if (EnableShadowRemovalNativePdf != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5326,6 +5424,15 @@ namespace Google.Cloud.Translate.V3 {
         GlossaryConfig.MergeFrom(other.GlossaryConfig);
       }
       labels_.Add(other.labels_);
+      if (other.CustomizedAttribution.Length != 0) {
+        CustomizedAttribution = other.CustomizedAttribution;
+      }
+      if (other.IsTranslateNativePdfOnly != false) {
+        IsTranslateNativePdfOnly = other.IsTranslateNativePdfOnly;
+      }
+      if (other.EnableShadowRemovalNativePdf != false) {
+        EnableShadowRemovalNativePdf = other.EnableShadowRemovalNativePdf;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5382,6 +5489,18 @@ namespace Google.Cloud.Translate.V3 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 82: {
+            CustomizedAttribution = input.ReadString();
+            break;
+          }
+          case 88: {
+            IsTranslateNativePdfOnly = input.ReadBool();
+            break;
+          }
+          case 96: {
+            EnableShadowRemovalNativePdf = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -5436,6 +5555,18 @@ namespace Google.Cloud.Translate.V3 {
           }
           case 66: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 82: {
+            CustomizedAttribution = input.ReadString();
+            break;
+          }
+          case 88: {
+            IsTranslateNativePdfOnly = input.ReadBool();
+            break;
+          }
+          case 96: {
+            EnableShadowRemovalNativePdf = input.ReadBool();
             break;
           }
         }
@@ -7380,10 +7511,10 @@ namespace Google.Cloud.Translate.V3 {
     ///
     /// For unidirectional glossaries:
     ///
-    /// - TSV/CSV (`.tsv`/`.csv`): 2 column file, tab- or comma-separated.
+    /// - TSV/CSV (`.tsv`/`.csv`): Two column file, tab- or comma-separated.
     ///   The first column is source text. The second column is target text.
-    ///   The file must not contain headers. That is, the first row is data, not
-    ///   column names.
+    ///   No headers in this file. The first row contains data and not column
+    ///   names.
     ///
     /// - TMX (`.tmx`): TMX file with parallel data defining source/target term
     /// pairs.
@@ -7576,7 +7707,7 @@ namespace Google.Cloud.Translate.V3 {
   }
 
   /// <summary>
-  /// Represents a glossary built from user provided data.
+  /// Represents a glossary built from user-provided data.
   /// </summary>
   public sealed partial class Glossary : pb::IMessage<Glossary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7617,6 +7748,7 @@ namespace Google.Cloud.Translate.V3 {
       entryCount_ = other.entryCount_;
       submitTime_ = other.submitTime_ != null ? other.submitTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      displayName_ = other.displayName_;
       switch (other.LanguagesCase) {
         case LanguagesOneofCase.LanguagePair:
           LanguagePair = other.LanguagePair.Clone();
@@ -7742,6 +7874,21 @@ namespace Google.Cloud.Translate.V3 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 9;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional. The display name of the glossary.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object languages_;
     /// <summary>Enum of possible cases for the "languages" oneof.</summary>
     public enum LanguagesOneofCase {
@@ -7785,6 +7932,7 @@ namespace Google.Cloud.Translate.V3 {
       if (EntryCount != other.EntryCount) return false;
       if (!object.Equals(SubmitTime, other.SubmitTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (DisplayName != other.DisplayName) return false;
       if (LanguagesCase != other.LanguagesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7800,6 +7948,7 @@ namespace Google.Cloud.Translate.V3 {
       if (EntryCount != 0) hash ^= EntryCount.GetHashCode();
       if (submitTime_ != null) hash ^= SubmitTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       hash ^= (int) languagesCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7847,6 +7996,10 @@ namespace Google.Cloud.Translate.V3 {
         output.WriteRawTag(66);
         output.WriteMessage(EndTime);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7885,6 +8038,10 @@ namespace Google.Cloud.Translate.V3 {
         output.WriteRawTag(66);
         output.WriteMessage(EndTime);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7915,6 +8072,9 @@ namespace Google.Cloud.Translate.V3 {
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7951,6 +8111,9 @@ namespace Google.Cloud.Translate.V3 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
       }
       switch (other.LanguagesCase) {
         case LanguagesOneofCase.LanguagePair:
@@ -8029,6 +8192,10 @@ namespace Google.Cloud.Translate.V3 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 74: {
+            DisplayName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -8089,6 +8256,10 @@ namespace Google.Cloud.Translate.V3 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 74: {
+            DisplayName = input.ReadString();
             break;
           }
         }
@@ -8153,7 +8324,7 @@ namespace Google.Cloud.Translate.V3 {
         public const int SourceLanguageCodeFieldNumber = 1;
         private string sourceLanguageCode_ = "";
         /// <summary>
-        /// Required. The BCP-47 language code of the input text, for example,
+        /// Required. The ISO-639 language code of the input text, for example,
         /// "en-US". Expected to be an exact match for GlossaryTerm.language_code.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8169,7 +8340,7 @@ namespace Google.Cloud.Translate.V3 {
         public const int TargetLanguageCodeFieldNumber = 2;
         private string targetLanguageCode_ = "";
         /// <summary>
-        /// Required. The BCP-47 language code for translation output, for example,
+        /// Required. The ISO-639 language code for translation output, for example,
         /// "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8391,7 +8562,7 @@ namespace Google.Cloud.Translate.V3 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> languageCodes_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The BCP-47 language code(s) for terms defined in the glossary.
+        /// The ISO-639 language code(s) for terms defined in the glossary.
         /// All entries are unique. The list contains at least two entries.
         /// Expected to be an exact match for GlossaryTerm.language_code.
         /// </summary>
@@ -10715,6 +10886,7 @@ namespace Google.Cloud.Translate.V3 {
       models_ = other.models_.Clone();
       glossaries_ = other.glossaries_.Clone();
       formatConversions_ = other.formatConversions_.Clone();
+      customizedAttribution_ = other.customizedAttribution_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10751,9 +10923,9 @@ namespace Google.Cloud.Translate.V3 {
     public const int SourceLanguageCodeFieldNumber = 2;
     private string sourceLanguageCode_ = "";
     /// <summary>
-    /// Required. The BCP-47 language code of the input document if known, for
+    /// Required. The ISO-639 language code of the input document if known, for
     /// example, "en-US" or "sr-Latn". Supported language codes are listed in
-    /// Language Support (https://cloud.google.com/translate/docs/languages).
+    /// [Language Support](https://cloud.google.com/translate/docs/languages).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10770,7 +10942,7 @@ namespace Google.Cloud.Translate.V3 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> targetLanguageCodes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. The BCP-47 language code to use for translation of the input
+    /// Required. The ISO-639 language code to use for translation of the input
     /// document. Specify up to 10 language codes here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10877,6 +11049,24 @@ namespace Google.Cloud.Translate.V3 {
       get { return formatConversions_; }
     }
 
+    /// <summary>Field number for the "customized_attribution" field.</summary>
+    public const int CustomizedAttributionFieldNumber = 10;
+    private string customizedAttribution_ = "";
+    /// <summary>
+    /// Optional. This flag is to support user customized attribution.
+    /// If not provided, the default is `Machine Translated by Google`.
+    /// Customized attribution should follow rules in
+    /// https://cloud.google.com/translate/attribution#attribution_and_logos
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomizedAttribution {
+      get { return customizedAttribution_; }
+      set {
+        customizedAttribution_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -10900,6 +11090,7 @@ namespace Google.Cloud.Translate.V3 {
       if (!Models.Equals(other.Models)) return false;
       if (!Glossaries.Equals(other.Glossaries)) return false;
       if (!FormatConversions.Equals(other.FormatConversions)) return false;
+      if (CustomizedAttribution != other.CustomizedAttribution) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10915,6 +11106,7 @@ namespace Google.Cloud.Translate.V3 {
       hash ^= Models.GetHashCode();
       hash ^= Glossaries.GetHashCode();
       hash ^= FormatConversions.GetHashCode();
+      if (CustomizedAttribution.Length != 0) hash ^= CustomizedAttribution.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10950,6 +11142,10 @@ namespace Google.Cloud.Translate.V3 {
       models_.WriteTo(output, _map_models_codec);
       glossaries_.WriteTo(output, _map_glossaries_codec);
       formatConversions_.WriteTo(output, _map_formatConversions_codec);
+      if (CustomizedAttribution.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CustomizedAttribution);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10977,6 +11173,10 @@ namespace Google.Cloud.Translate.V3 {
       models_.WriteTo(ref output, _map_models_codec);
       glossaries_.WriteTo(ref output, _map_glossaries_codec);
       formatConversions_.WriteTo(ref output, _map_formatConversions_codec);
+      if (CustomizedAttribution.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CustomizedAttribution);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11001,6 +11201,9 @@ namespace Google.Cloud.Translate.V3 {
       size += models_.CalculateSize(_map_models_codec);
       size += glossaries_.CalculateSize(_map_glossaries_codec);
       size += formatConversions_.CalculateSize(_map_formatConversions_codec);
+      if (CustomizedAttribution.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomizedAttribution);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -11030,6 +11233,9 @@ namespace Google.Cloud.Translate.V3 {
       models_.Add(other.models_);
       glossaries_.Add(other.glossaries_);
       formatConversions_.Add(other.formatConversions_);
+      if (other.CustomizedAttribution.Length != 0) {
+        CustomizedAttribution = other.CustomizedAttribution;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -11080,6 +11286,10 @@ namespace Google.Cloud.Translate.V3 {
             formatConversions_.AddEntriesFrom(input, _map_formatConversions_codec);
             break;
           }
+          case 82: {
+            CustomizedAttribution = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -11128,6 +11338,10 @@ namespace Google.Cloud.Translate.V3 {
           }
           case 66: {
             formatConversions_.AddEntriesFrom(ref input, _map_formatConversions_codec);
+            break;
+          }
+          case 82: {
+            CustomizedAttribution = input.ReadString();
             break;
           }
         }
@@ -11479,7 +11693,7 @@ namespace Google.Cloud.Translate.V3 {
     /// Since index.csv will be keeping updated during the process, please make
     /// sure there is no custom retention policy applied on the output bucket
     /// that may avoid file updating.
-    /// (https://cloud.google.com/storage/docs/bucket-lock?hl=en#retention-policy)
+    /// (https://cloud.google.com/storage/docs/bucket-lock#retention-policy)
     ///
     /// The naming format of translation output files follows (for target
     /// language code [trg]): `translation_output`:
