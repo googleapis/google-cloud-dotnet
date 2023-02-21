@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.0.0-alpha06, released 2023-02-21
+
+### New features
+
+- Add `CreateAccessBinding`, `GetAccessBinding`, `UpdateAccessBinding`, `DeleteAccessBinding`, `ListAccessBindings`, `BatchCreateAccessBindings`, `BatchGetAccessBindings`, `BatchUpdateAccessBindings`, `BatchDeleteAccessBindings` methods to the Admin API v1alpha ([commit 60827e8](https://github.com/googleapis/google-cloud-dotnet/commit/60827e81ee3eed5a4c92b26070385b7e46451172))
+- Add `GetExpandedDataSet`, `ListExpandedDataSets`, `CreateExpandedDataSet`, `UpdateExpandedDataSet`, `DeleteExpandedDataSet` methods to the Admin API v1alpha ([commit 60827e8](https://github.com/googleapis/google-cloud-dotnet/commit/60827e81ee3eed5a4c92b26070385b7e46451172))
+- Add `AccessBinding`, `ExpandedDataSet`, `ExpandedDataSetFilter`, `ExpandedDataSetFilterExpression`, `ExpandedDataSetFilterExpressionList` resource types to the Admin API v1alpha ([commit 60827e8](https://github.com/googleapis/google-cloud-dotnet/commit/60827e81ee3eed5a4c92b26070385b7e46451172))
+
 ## Version 2.0.0-alpha05, released 2023-02-08
 
 ### Bug fixes
