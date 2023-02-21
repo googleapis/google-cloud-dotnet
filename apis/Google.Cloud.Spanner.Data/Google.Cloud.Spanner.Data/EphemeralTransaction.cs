@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -48,6 +48,27 @@ namespace Google.Cloud.Spanner.Data
 
                 return await ((ISpannerTransaction)transaction)
                     .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
+                    .ConfigureAwait(false);
+            }
+        }
+
+        /// <summary>
+        /// Executes a DML statement and returns affected rows values via ReliableStreamReader.
+        /// The reader does not return any data if the DML statement does not contain a THEN RETURN clause, but the DML statement is executed.
+        /// </summary>
+        /// <returns> An instance of <see cref="ReliableStreamReader"/>.</returns>
+        public Task<ReliableStreamReader> ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                () => _connection.RunWithRetriableTransactionAsync(Impl, cancellationToken), "EphemeralTransaction.ExecuteDmlReaderAsync", _connection.Logger);
+
+            async Task<ReliableStreamReader> Impl(SpannerTransaction transaction)
+            {
+                transaction.CommitTimeout = timeoutSeconds;
+                transaction.CommitPriority = _commitPriority;
+
+                return await ((ISpannerTransaction) transaction)
+                    .ExecuteDmlReaderAsync(request, cancellationToken, timeoutSeconds)
                     .ConfigureAwait(false);
             }
         }

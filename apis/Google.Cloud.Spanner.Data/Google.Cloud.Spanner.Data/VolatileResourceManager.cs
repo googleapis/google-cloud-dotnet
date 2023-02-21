@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -209,6 +209,13 @@ namespace Google.Cloud.Spanner.Data
             _hasExecutedDml = true;
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
             return await transaction.ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+        }
+
+        public async Task<ReliableStreamReader> ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            _hasExecutedDml = true;
+            ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
+            return await transaction.ExecuteDmlReaderAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
         public async Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
