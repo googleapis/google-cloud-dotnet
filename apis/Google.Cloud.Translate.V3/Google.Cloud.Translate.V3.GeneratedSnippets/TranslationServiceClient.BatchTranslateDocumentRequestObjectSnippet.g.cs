@@ -55,6 +55,7 @@ namespace Google.Cloud.Translate.V3.Snippets
                     },
                 },
                 FormatConversions = { { "", "" }, },
+                CustomizedAttribution = "",
             };
             // Make the request
             Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = translationServiceClient.BatchTranslateDocument(request);
