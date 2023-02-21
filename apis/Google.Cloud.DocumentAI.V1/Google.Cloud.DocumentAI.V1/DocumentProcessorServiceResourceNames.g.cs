@@ -486,6 +486,18 @@ namespace Google.Cloud.DocumentAI.V1
         }
     }
 
+    public partial class TrainProcessorVersionRequest
+    {
+        /// <summary>
+        /// <see cref="ProcessorName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProcessorName ParentAsProcessorName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ProcessorName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ReviewDocumentRequest
     {
         /// <summary>
@@ -496,6 +508,43 @@ namespace Google.Cloud.DocumentAI.V1
         {
             get => string.IsNullOrEmpty(HumanReviewConfig) ? null : HumanReviewConfigName.Parse(HumanReviewConfig, allowUnparsed: true);
             set => HumanReviewConfig = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EvaluateProcessorVersionRequest
+    {
+        /// <summary>
+        /// <see cref="ProcessorVersionName"/>-typed view over the <see cref="ProcessorVersion"/> resource name
+        /// property.
+        /// </summary>
+        public ProcessorVersionName ProcessorVersionAsProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(ProcessorVersion) ? null : ProcessorVersionName.Parse(ProcessorVersion, allowUnparsed: true);
+            set => ProcessorVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEvaluationRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EvaluationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EvaluationName EvaluationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EvaluationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListEvaluationsRequest
+    {
+        /// <summary>
+        /// <see cref="ProcessorVersionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProcessorVersionName ParentAsProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ProcessorVersionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }

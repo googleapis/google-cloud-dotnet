@@ -95,6 +95,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.Processor> __Marshaller_google_cloud_documentai_v1_Processor = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.Processor.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest> __Marshaller_google_cloud_documentai_v1_TrainProcessorVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.GetProcessorVersionRequest> __Marshaller_google_cloud_documentai_v1_GetProcessorVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.GetProcessorVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ProcessorVersion> __Marshaller_google_cloud_documentai_v1_ProcessorVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ProcessorVersion.Parser));
@@ -120,6 +122,16 @@ namespace Google.Cloud.DocumentAI.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.SetDefaultProcessorVersionRequest> __Marshaller_google_cloud_documentai_v1_SetDefaultProcessorVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.SetDefaultProcessorVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest> __Marshaller_google_cloud_documentai_v1_ReviewDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest> __Marshaller_google_cloud_documentai_v1_EvaluateProcessorVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest> __Marshaller_google_cloud_documentai_v1_GetEvaluationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.Evaluation> __Marshaller_google_cloud_documentai_v1_Evaluation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.Evaluation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest> __Marshaller_google_cloud_documentai_v1_ListEvaluationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse> __Marshaller_google_cloud_documentai_v1_ListEvaluationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.ProcessRequest, global::Google.Cloud.DocumentAI.V1.ProcessResponse> __Method_ProcessDocument = new grpc::Method<global::Google.Cloud.DocumentAI.V1.ProcessRequest, global::Google.Cloud.DocumentAI.V1.ProcessResponse>(
@@ -176,6 +188,14 @@ namespace Google.Cloud.DocumentAI.V1 {
         "GetProcessor",
         __Marshaller_google_cloud_documentai_v1_GetProcessorRequest,
         __Marshaller_google_cloud_documentai_v1_Processor);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest, global::Google.LongRunning.Operation> __Method_TrainProcessorVersion = new grpc::Method<global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TrainProcessorVersion",
+        __Marshaller_google_cloud_documentai_v1_TrainProcessorVersionRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.GetProcessorVersionRequest, global::Google.Cloud.DocumentAI.V1.ProcessorVersion> __Method_GetProcessorVersion = new grpc::Method<global::Google.Cloud.DocumentAI.V1.GetProcessorVersionRequest, global::Google.Cloud.DocumentAI.V1.ProcessorVersion>(
@@ -264,6 +284,30 @@ namespace Google.Cloud.DocumentAI.V1 {
         "ReviewDocument",
         __Marshaller_google_cloud_documentai_v1_ReviewDocumentRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest, global::Google.LongRunning.Operation> __Method_EvaluateProcessorVersion = new grpc::Method<global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EvaluateProcessorVersion",
+        __Marshaller_google_cloud_documentai_v1_EvaluateProcessorVersionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest, global::Google.Cloud.DocumentAI.V1.Evaluation> __Method_GetEvaluation = new grpc::Method<global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest, global::Google.Cloud.DocumentAI.V1.Evaluation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEvaluation",
+        __Marshaller_google_cloud_documentai_v1_GetEvaluationRequest,
+        __Marshaller_google_cloud_documentai_v1_Evaluation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest, global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse> __Method_ListEvaluations = new grpc::Method<global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest, global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListEvaluations",
+        __Marshaller_google_cloud_documentai_v1_ListEvaluationsRequest,
+        __Marshaller_google_cloud_documentai_v1_ListEvaluationsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -357,6 +401,20 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1.Processor> GetProcessor(global::Google.Cloud.DocumentAI.V1.GetProcessorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Trains a new processor version.
+      /// Operation metadata is returned as
+      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TrainProcessorVersion(global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -497,6 +555,43 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReviewDocument(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Evaluates a ProcessorVersion against annotated documents, producing an
+      /// Evaluation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EvaluateProcessorVersion(global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a specific evaluation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1.Evaluation> GetEvaluation(global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a set of evaluations for a given processor version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse> ListEvaluations(global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -873,6 +968,62 @@ namespace Google.Cloud.DocumentAI.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.Processor> GetProcessorAsync(global::Google.Cloud.DocumentAI.V1.GetProcessorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetProcessor, null, options, request);
+      }
+      /// <summary>
+      /// Trains a new processor version.
+      /// Operation metadata is returned as
+      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TrainProcessorVersion(global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TrainProcessorVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Trains a new processor version.
+      /// Operation metadata is returned as
+      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TrainProcessorVersion(global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TrainProcessorVersion, null, options, request);
+      }
+      /// <summary>
+      /// Trains a new processor version.
+      /// Operation metadata is returned as
+      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TrainProcessorVersionAsync(global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TrainProcessorVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Trains a new processor version.
+      /// Operation metadata is returned as
+      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TrainProcessorVersionAsync(global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TrainProcessorVersion, null, options, request);
       }
       /// <summary>
       /// Gets a processor version detail.
@@ -1434,6 +1585,154 @@ namespace Google.Cloud.DocumentAI.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReviewDocument, null, options, request);
       }
+      /// <summary>
+      /// Evaluates a ProcessorVersion against annotated documents, producing an
+      /// Evaluation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EvaluateProcessorVersion(global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EvaluateProcessorVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Evaluates a ProcessorVersion against annotated documents, producing an
+      /// Evaluation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EvaluateProcessorVersion(global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EvaluateProcessorVersion, null, options, request);
+      }
+      /// <summary>
+      /// Evaluates a ProcessorVersion against annotated documents, producing an
+      /// Evaluation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EvaluateProcessorVersionAsync(global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EvaluateProcessorVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Evaluates a ProcessorVersion against annotated documents, producing an
+      /// Evaluation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EvaluateProcessorVersionAsync(global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EvaluateProcessorVersion, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a specific evaluation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DocumentAI.V1.Evaluation GetEvaluation(global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEvaluation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a specific evaluation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DocumentAI.V1.Evaluation GetEvaluation(global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEvaluation, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a specific evaluation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.Evaluation> GetEvaluationAsync(global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEvaluationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a specific evaluation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.Evaluation> GetEvaluationAsync(global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEvaluation, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a set of evaluations for a given processor version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse ListEvaluations(global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEvaluations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a set of evaluations for a given processor version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse ListEvaluations(global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListEvaluations, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a set of evaluations for a given processor version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse> ListEvaluationsAsync(global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEvaluationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a set of evaluations for a given processor version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse> ListEvaluationsAsync(global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListEvaluations, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DocumentProcessorServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1455,6 +1754,7 @@ namespace Google.Cloud.DocumentAI.V1 {
           .AddMethod(__Method_GetProcessorType, serviceImpl.GetProcessorType)
           .AddMethod(__Method_ListProcessors, serviceImpl.ListProcessors)
           .AddMethod(__Method_GetProcessor, serviceImpl.GetProcessor)
+          .AddMethod(__Method_TrainProcessorVersion, serviceImpl.TrainProcessorVersion)
           .AddMethod(__Method_GetProcessorVersion, serviceImpl.GetProcessorVersion)
           .AddMethod(__Method_ListProcessorVersions, serviceImpl.ListProcessorVersions)
           .AddMethod(__Method_DeleteProcessorVersion, serviceImpl.DeleteProcessorVersion)
@@ -1465,7 +1765,10 @@ namespace Google.Cloud.DocumentAI.V1 {
           .AddMethod(__Method_EnableProcessor, serviceImpl.EnableProcessor)
           .AddMethod(__Method_DisableProcessor, serviceImpl.DisableProcessor)
           .AddMethod(__Method_SetDefaultProcessorVersion, serviceImpl.SetDefaultProcessorVersion)
-          .AddMethod(__Method_ReviewDocument, serviceImpl.ReviewDocument).Build();
+          .AddMethod(__Method_ReviewDocument, serviceImpl.ReviewDocument)
+          .AddMethod(__Method_EvaluateProcessorVersion, serviceImpl.EvaluateProcessorVersion)
+          .AddMethod(__Method_GetEvaluation, serviceImpl.GetEvaluation)
+          .AddMethod(__Method_ListEvaluations, serviceImpl.ListEvaluations).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1482,6 +1785,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       serviceBinder.AddMethod(__Method_GetProcessorType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.GetProcessorTypeRequest, global::Google.Cloud.DocumentAI.V1.ProcessorType>(serviceImpl.GetProcessorType));
       serviceBinder.AddMethod(__Method_ListProcessors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.ListProcessorsRequest, global::Google.Cloud.DocumentAI.V1.ListProcessorsResponse>(serviceImpl.ListProcessors));
       serviceBinder.AddMethod(__Method_GetProcessor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.GetProcessorRequest, global::Google.Cloud.DocumentAI.V1.Processor>(serviceImpl.GetProcessor));
+      serviceBinder.AddMethod(__Method_TrainProcessorVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.TrainProcessorVersion));
       serviceBinder.AddMethod(__Method_GetProcessorVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.GetProcessorVersionRequest, global::Google.Cloud.DocumentAI.V1.ProcessorVersion>(serviceImpl.GetProcessorVersion));
       serviceBinder.AddMethod(__Method_ListProcessorVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.ListProcessorVersionsRequest, global::Google.Cloud.DocumentAI.V1.ListProcessorVersionsResponse>(serviceImpl.ListProcessorVersions));
       serviceBinder.AddMethod(__Method_DeleteProcessorVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.DeleteProcessorVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteProcessorVersion));
@@ -1493,6 +1797,9 @@ namespace Google.Cloud.DocumentAI.V1 {
       serviceBinder.AddMethod(__Method_DisableProcessor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.DisableProcessorRequest, global::Google.LongRunning.Operation>(serviceImpl.DisableProcessor));
       serviceBinder.AddMethod(__Method_SetDefaultProcessorVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.SetDefaultProcessorVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.SetDefaultProcessorVersion));
       serviceBinder.AddMethod(__Method_ReviewDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.ReviewDocument));
+      serviceBinder.AddMethod(__Method_EvaluateProcessorVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.EvaluateProcessorVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.EvaluateProcessorVersion));
+      serviceBinder.AddMethod(__Method_GetEvaluation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.GetEvaluationRequest, global::Google.Cloud.DocumentAI.V1.Evaluation>(serviceImpl.GetEvaluation));
+      serviceBinder.AddMethod(__Method_ListEvaluations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.ListEvaluationsRequest, global::Google.Cloud.DocumentAI.V1.ListEvaluationsResponse>(serviceImpl.ListEvaluations));
     }
 
   }

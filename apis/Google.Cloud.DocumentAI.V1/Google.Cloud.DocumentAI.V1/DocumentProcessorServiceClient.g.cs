@@ -59,6 +59,8 @@ namespace Google.Cloud.DocumentAI.V1
             GetProcessorTypeSettings = existing.GetProcessorTypeSettings;
             ListProcessorsSettings = existing.ListProcessorsSettings;
             GetProcessorSettings = existing.GetProcessorSettings;
+            TrainProcessorVersionSettings = existing.TrainProcessorVersionSettings;
+            TrainProcessorVersionOperationsSettings = existing.TrainProcessorVersionOperationsSettings.Clone();
             GetProcessorVersionSettings = existing.GetProcessorVersionSettings;
             ListProcessorVersionsSettings = existing.ListProcessorVersionsSettings;
             DeleteProcessorVersionSettings = existing.DeleteProcessorVersionSettings;
@@ -78,6 +80,10 @@ namespace Google.Cloud.DocumentAI.V1
             SetDefaultProcessorVersionOperationsSettings = existing.SetDefaultProcessorVersionOperationsSettings.Clone();
             ReviewDocumentSettings = existing.ReviewDocumentSettings;
             ReviewDocumentOperationsSettings = existing.ReviewDocumentOperationsSettings.Clone();
+            EvaluateProcessorVersionSettings = existing.EvaluateProcessorVersionSettings;
+            EvaluateProcessorVersionOperationsSettings = existing.EvaluateProcessorVersionOperationsSettings.Clone();
+            GetEvaluationSettings = existing.GetEvaluationSettings;
+            ListEvaluationsSettings = existing.ListEvaluationsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -210,6 +216,37 @@ namespace Google.Cloud.DocumentAI.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetProcessorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentProcessorServiceClient.TrainProcessorVersion</c> and
+        /// <c>DocumentProcessorServiceClient.TrainProcessorVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TrainProcessorVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DocumentProcessorServiceClient.TrainProcessorVersion</c> and
+        /// <c>DocumentProcessorServiceClient.TrainProcessorVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings TrainProcessorVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -506,6 +543,63 @@ namespace Google.Cloud.DocumentAI.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentProcessorServiceClient.EvaluateProcessorVersion</c> and
+        /// <c>DocumentProcessorServiceClient.EvaluateProcessorVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EvaluateProcessorVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DocumentProcessorServiceClient.EvaluateProcessorVersion</c>
+        /// and <c>DocumentProcessorServiceClient.EvaluateProcessorVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings EvaluateProcessorVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentProcessorServiceClient.GetEvaluation</c> and <c>DocumentProcessorServiceClient.GetEvaluationAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEvaluationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentProcessorServiceClient.ListEvaluations</c> and
+        /// <c>DocumentProcessorServiceClient.ListEvaluationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEvaluationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1567,6 +1661,190 @@ namespace Google.Cloud.DocumentAI.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Processor> GetProcessorAsync(ProcessorName name, st::CancellationToken cancellationToken) =>
             GetProcessorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> TrainProcessorVersion(TrainProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>> TrainProcessorVersionAsync(TrainProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>> TrainProcessorVersionAsync(TrainProcessorVersionRequest request, st::CancellationToken cancellationToken) =>
+            TrainProcessorVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>TrainProcessorVersion</c>.</summary>
+        public virtual lro::OperationsClient TrainProcessorVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>TrainProcessorVersion</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> PollOnceTrainProcessorVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TrainProcessorVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>TrainProcessorVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>> PollOnceTrainProcessorVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TrainProcessorVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project, location and processor) to create the new
+        /// version for. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`.
+        /// </param>
+        /// <param name="processorVersion">
+        /// Required. The processor version to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> TrainProcessorVersion(string parent, ProcessorVersion processorVersion, gaxgrpc::CallSettings callSettings = null) =>
+            TrainProcessorVersion(new TrainProcessorVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ProcessorVersion = gax::GaxPreconditions.CheckNotNull(processorVersion, nameof(processorVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project, location and processor) to create the new
+        /// version for. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`.
+        /// </param>
+        /// <param name="processorVersion">
+        /// Required. The processor version to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>> TrainProcessorVersionAsync(string parent, ProcessorVersion processorVersion, gaxgrpc::CallSettings callSettings = null) =>
+            TrainProcessorVersionAsync(new TrainProcessorVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ProcessorVersion = gax::GaxPreconditions.CheckNotNull(processorVersion, nameof(processorVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project, location and processor) to create the new
+        /// version for. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`.
+        /// </param>
+        /// <param name="processorVersion">
+        /// Required. The processor version to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>> TrainProcessorVersionAsync(string parent, ProcessorVersion processorVersion, st::CancellationToken cancellationToken) =>
+            TrainProcessorVersionAsync(parent, processorVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project, location and processor) to create the new
+        /// version for. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`.
+        /// </param>
+        /// <param name="processorVersion">
+        /// Required. The processor version to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> TrainProcessorVersion(ProcessorName parent, ProcessorVersion processorVersion, gaxgrpc::CallSettings callSettings = null) =>
+            TrainProcessorVersion(new TrainProcessorVersionRequest
+            {
+                ParentAsProcessorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ProcessorVersion = gax::GaxPreconditions.CheckNotNull(processorVersion, nameof(processorVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project, location and processor) to create the new
+        /// version for. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`.
+        /// </param>
+        /// <param name="processorVersion">
+        /// Required. The processor version to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>> TrainProcessorVersionAsync(ProcessorName parent, ProcessorVersion processorVersion, gaxgrpc::CallSettings callSettings = null) =>
+            TrainProcessorVersionAsync(new TrainProcessorVersionRequest
+            {
+                ParentAsProcessorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ProcessorVersion = gax::GaxPreconditions.CheckNotNull(processorVersion, nameof(processorVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project, location and processor) to create the new
+        /// version for. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`.
+        /// </param>
+        /// <param name="processorVersion">
+        /// Required. The processor version to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>> TrainProcessorVersionAsync(ProcessorName parent, ProcessorVersion processorVersion, st::CancellationToken cancellationToken) =>
+            TrainProcessorVersionAsync(parent, processorVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a processor version detail.
@@ -2811,6 +3089,408 @@ namespace Google.Cloud.DocumentAI.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>> ReviewDocumentAsync(HumanReviewConfigName humanReviewConfig, st::CancellationToken cancellationToken) =>
             ReviewDocumentAsync(humanReviewConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> EvaluateProcessorVersion(EvaluateProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>> EvaluateProcessorVersionAsync(EvaluateProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>> EvaluateProcessorVersionAsync(EvaluateProcessorVersionRequest request, st::CancellationToken cancellationToken) =>
+            EvaluateProcessorVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>EvaluateProcessorVersion</c>.</summary>
+        public virtual lro::OperationsClient EvaluateProcessorVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EvaluateProcessorVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> PollOnceEvaluateProcessorVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EvaluateProcessorVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EvaluateProcessorVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>> PollOnceEvaluateProcessorVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EvaluateProcessorVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="processorVersion">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to
+        /// evaluate.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> EvaluateProcessorVersion(string processorVersion, gaxgrpc::CallSettings callSettings = null) =>
+            EvaluateProcessorVersion(new EvaluateProcessorVersionRequest
+            {
+                ProcessorVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(processorVersion, nameof(processorVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="processorVersion">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to
+        /// evaluate.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>> EvaluateProcessorVersionAsync(string processorVersion, gaxgrpc::CallSettings callSettings = null) =>
+            EvaluateProcessorVersionAsync(new EvaluateProcessorVersionRequest
+            {
+                ProcessorVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(processorVersion, nameof(processorVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="processorVersion">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to
+        /// evaluate.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>> EvaluateProcessorVersionAsync(string processorVersion, st::CancellationToken cancellationToken) =>
+            EvaluateProcessorVersionAsync(processorVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="processorVersion">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to
+        /// evaluate.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> EvaluateProcessorVersion(ProcessorVersionName processorVersion, gaxgrpc::CallSettings callSettings = null) =>
+            EvaluateProcessorVersion(new EvaluateProcessorVersionRequest
+            {
+                ProcessorVersionAsProcessorVersionName = gax::GaxPreconditions.CheckNotNull(processorVersion, nameof(processorVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="processorVersion">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to
+        /// evaluate.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>> EvaluateProcessorVersionAsync(ProcessorVersionName processorVersion, gaxgrpc::CallSettings callSettings = null) =>
+            EvaluateProcessorVersionAsync(new EvaluateProcessorVersionRequest
+            {
+                ProcessorVersionAsProcessorVersionName = gax::GaxPreconditions.CheckNotNull(processorVersion, nameof(processorVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="processorVersion">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to
+        /// evaluate.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>> EvaluateProcessorVersionAsync(ProcessorVersionName processorVersion, st::CancellationToken cancellationToken) =>
+            EvaluateProcessorVersionAsync(processorVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Evaluation GetEvaluation(GetEvaluationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Evaluation> GetEvaluationAsync(GetEvaluationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Evaluation> GetEvaluationAsync(GetEvaluationRequest request, st::CancellationToken cancellationToken) =>
+            GetEvaluationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the
+        /// [Evaluation][google.cloud.documentai.v1.Evaluation] to get.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Evaluation GetEvaluation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEvaluation(new GetEvaluationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the
+        /// [Evaluation][google.cloud.documentai.v1.Evaluation] to get.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Evaluation> GetEvaluationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEvaluationAsync(new GetEvaluationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the
+        /// [Evaluation][google.cloud.documentai.v1.Evaluation] to get.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Evaluation> GetEvaluationAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEvaluationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the
+        /// [Evaluation][google.cloud.documentai.v1.Evaluation] to get.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Evaluation GetEvaluation(EvaluationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEvaluation(new GetEvaluationRequest
+            {
+                EvaluationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the
+        /// [Evaluation][google.cloud.documentai.v1.Evaluation] to get.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Evaluation> GetEvaluationAsync(EvaluationName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEvaluationAsync(new GetEvaluationRequest
+            {
+                EvaluationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the
+        /// [Evaluation][google.cloud.documentai.v1.Evaluation] to get.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}/evaluations/{evaluation}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Evaluation> GetEvaluationAsync(EvaluationName name, st::CancellationToken cancellationToken) =>
+            GetEvaluationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a set of evaluations for a given processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(ListEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a set of evaluations for a given processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(ListEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a set of evaluations for a given processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to list
+        /// evaluations for.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEvaluations(new ListEvaluationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a set of evaluations for a given processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to list
+        /// evaluations for.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEvaluationsAsync(new ListEvaluationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a set of evaluations for a given processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to list
+        /// evaluations for.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEvaluations(new ListEvaluationsRequest
+            {
+                ParentAsProcessorVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a set of evaluations for a given processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] to list
+        /// evaluations for.
+        /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(ProcessorVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEvaluationsAsync(new ListEvaluationsRequest
+            {
+                ParentAsProcessorVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>DocumentProcessorService client wrapper implementation, for convenient use.</summary>
@@ -2836,6 +3516,8 @@ namespace Google.Cloud.DocumentAI.V1
 
         private readonly gaxgrpc::ApiCall<GetProcessorRequest, Processor> _callGetProcessor;
 
+        private readonly gaxgrpc::ApiCall<TrainProcessorVersionRequest, lro::Operation> _callTrainProcessorVersion;
+
         private readonly gaxgrpc::ApiCall<GetProcessorVersionRequest, ProcessorVersion> _callGetProcessorVersion;
 
         private readonly gaxgrpc::ApiCall<ListProcessorVersionsRequest, ListProcessorVersionsResponse> _callListProcessorVersions;
@@ -2858,6 +3540,12 @@ namespace Google.Cloud.DocumentAI.V1
 
         private readonly gaxgrpc::ApiCall<ReviewDocumentRequest, lro::Operation> _callReviewDocument;
 
+        private readonly gaxgrpc::ApiCall<EvaluateProcessorVersionRequest, lro::Operation> _callEvaluateProcessorVersion;
+
+        private readonly gaxgrpc::ApiCall<GetEvaluationRequest, Evaluation> _callGetEvaluation;
+
+        private readonly gaxgrpc::ApiCall<ListEvaluationsRequest, ListEvaluationsResponse> _callListEvaluations;
+
         /// <summary>
         /// Constructs a client wrapper for the DocumentProcessorService service, with the specified gRPC client and
         /// settings.
@@ -2873,6 +3561,7 @@ namespace Google.Cloud.DocumentAI.V1
             DocumentProcessorServiceSettings effectiveSettings = settings ?? DocumentProcessorServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             BatchProcessDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchProcessDocumentsOperationsSettings, logger);
+            TrainProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TrainProcessorVersionOperationsSettings, logger);
             DeleteProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteProcessorVersionOperationsSettings, logger);
             DeployProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployProcessorVersionOperationsSettings, logger);
             UndeployProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployProcessorVersionOperationsSettings, logger);
@@ -2881,6 +3570,7 @@ namespace Google.Cloud.DocumentAI.V1
             DisableProcessorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableProcessorOperationsSettings, logger);
             SetDefaultProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetDefaultProcessorVersionOperationsSettings, logger);
             ReviewDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReviewDocumentOperationsSettings, logger);
+            EvaluateProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EvaluateProcessorVersionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callProcessDocument = clientHelper.BuildApiCall<ProcessRequest, ProcessResponse>("ProcessDocument", grpcClient.ProcessDocumentAsync, grpcClient.ProcessDocument, effectiveSettings.ProcessDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callProcessDocument);
@@ -2903,6 +3593,9 @@ namespace Google.Cloud.DocumentAI.V1
             _callGetProcessor = clientHelper.BuildApiCall<GetProcessorRequest, Processor>("GetProcessor", grpcClient.GetProcessorAsync, grpcClient.GetProcessor, effectiveSettings.GetProcessorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProcessor);
             Modify_GetProcessorApiCall(ref _callGetProcessor);
+            _callTrainProcessorVersion = clientHelper.BuildApiCall<TrainProcessorVersionRequest, lro::Operation>("TrainProcessorVersion", grpcClient.TrainProcessorVersionAsync, grpcClient.TrainProcessorVersion, effectiveSettings.TrainProcessorVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callTrainProcessorVersion);
+            Modify_TrainProcessorVersionApiCall(ref _callTrainProcessorVersion);
             _callGetProcessorVersion = clientHelper.BuildApiCall<GetProcessorVersionRequest, ProcessorVersion>("GetProcessorVersion", grpcClient.GetProcessorVersionAsync, grpcClient.GetProcessorVersion, effectiveSettings.GetProcessorVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProcessorVersion);
             Modify_GetProcessorVersionApiCall(ref _callGetProcessorVersion);
@@ -2936,6 +3629,15 @@ namespace Google.Cloud.DocumentAI.V1
             _callReviewDocument = clientHelper.BuildApiCall<ReviewDocumentRequest, lro::Operation>("ReviewDocument", grpcClient.ReviewDocumentAsync, grpcClient.ReviewDocument, effectiveSettings.ReviewDocumentSettings).WithGoogleRequestParam("human_review_config", request => request.HumanReviewConfig);
             Modify_ApiCall(ref _callReviewDocument);
             Modify_ReviewDocumentApiCall(ref _callReviewDocument);
+            _callEvaluateProcessorVersion = clientHelper.BuildApiCall<EvaluateProcessorVersionRequest, lro::Operation>("EvaluateProcessorVersion", grpcClient.EvaluateProcessorVersionAsync, grpcClient.EvaluateProcessorVersion, effectiveSettings.EvaluateProcessorVersionSettings).WithGoogleRequestParam("processor_version", request => request.ProcessorVersion);
+            Modify_ApiCall(ref _callEvaluateProcessorVersion);
+            Modify_EvaluateProcessorVersionApiCall(ref _callEvaluateProcessorVersion);
+            _callGetEvaluation = clientHelper.BuildApiCall<GetEvaluationRequest, Evaluation>("GetEvaluation", grpcClient.GetEvaluationAsync, grpcClient.GetEvaluation, effectiveSettings.GetEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEvaluation);
+            Modify_GetEvaluationApiCall(ref _callGetEvaluation);
+            _callListEvaluations = clientHelper.BuildApiCall<ListEvaluationsRequest, ListEvaluationsResponse>("ListEvaluations", grpcClient.ListEvaluationsAsync, grpcClient.ListEvaluations, effectiveSettings.ListEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEvaluations);
+            Modify_ListEvaluationsApiCall(ref _callListEvaluations);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2954,6 +3656,8 @@ namespace Google.Cloud.DocumentAI.V1
         partial void Modify_ListProcessorsApiCall(ref gaxgrpc::ApiCall<ListProcessorsRequest, ListProcessorsResponse> call);
 
         partial void Modify_GetProcessorApiCall(ref gaxgrpc::ApiCall<GetProcessorRequest, Processor> call);
+
+        partial void Modify_TrainProcessorVersionApiCall(ref gaxgrpc::ApiCall<TrainProcessorVersionRequest, lro::Operation> call);
 
         partial void Modify_GetProcessorVersionApiCall(ref gaxgrpc::ApiCall<GetProcessorVersionRequest, ProcessorVersion> call);
 
@@ -2977,6 +3681,12 @@ namespace Google.Cloud.DocumentAI.V1
 
         partial void Modify_ReviewDocumentApiCall(ref gaxgrpc::ApiCall<ReviewDocumentRequest, lro::Operation> call);
 
+        partial void Modify_EvaluateProcessorVersionApiCall(ref gaxgrpc::ApiCall<EvaluateProcessorVersionRequest, lro::Operation> call);
+
+        partial void Modify_GetEvaluationApiCall(ref gaxgrpc::ApiCall<GetEvaluationRequest, Evaluation> call);
+
+        partial void Modify_ListEvaluationsApiCall(ref gaxgrpc::ApiCall<ListEvaluationsRequest, ListEvaluationsResponse> call);
+
         partial void OnConstruction(DocumentProcessorService.DocumentProcessorServiceClient grpcClient, DocumentProcessorServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DocumentProcessorService client</summary>
@@ -2999,6 +3709,8 @@ namespace Google.Cloud.DocumentAI.V1
 
         partial void Modify_GetProcessorRequest(ref GetProcessorRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_TrainProcessorVersionRequest(ref TrainProcessorVersionRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetProcessorVersionRequest(ref GetProcessorVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListProcessorVersionsRequest(ref ListProcessorVersionsRequest request, ref gaxgrpc::CallSettings settings);
@@ -3020,6 +3732,12 @@ namespace Google.Cloud.DocumentAI.V1
         partial void Modify_SetDefaultProcessorVersionRequest(ref SetDefaultProcessorVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReviewDocumentRequest(ref ReviewDocumentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_EvaluateProcessorVersionRequest(ref EvaluateProcessorVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEvaluationRequest(ref GetEvaluationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListEvaluationsRequest(ref ListEvaluationsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Processes a single document.
@@ -3194,6 +3912,37 @@ namespace Google.Cloud.DocumentAI.V1
         {
             Modify_GetProcessorRequest(ref request, ref callSettings);
             return _callGetProcessor.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>TrainProcessorVersion</c>.</summary>
+        public override lro::OperationsClient TrainProcessorVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> TrainProcessorVersion(TrainProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TrainProcessorVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>(_callTrainProcessorVersion.Sync(request, callSettings), TrainProcessorVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Trains a new processor version.
+        /// Operation metadata is returned as
+        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>> TrainProcessorVersionAsync(TrainProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TrainProcessorVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata>(await _callTrainProcessorVersion.Async(request, callSettings).ConfigureAwait(false), TrainProcessorVersionOperationsClient);
         }
 
         /// <summary>
@@ -3499,6 +4248,83 @@ namespace Google.Cloud.DocumentAI.V1
             Modify_ReviewDocumentRequest(ref request, ref callSettings);
             return new lro::Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata>(await _callReviewDocument.Async(request, callSettings).ConfigureAwait(false), ReviewDocumentOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>EvaluateProcessorVersion</c>.</summary>
+        public override lro::OperationsClient EvaluateProcessorVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> EvaluateProcessorVersion(EvaluateProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EvaluateProcessorVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>(_callEvaluateProcessorVersion.Sync(request, callSettings), EvaluateProcessorVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Evaluates a ProcessorVersion against annotated documents, producing an
+        /// Evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>> EvaluateProcessorVersionAsync(EvaluateProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EvaluateProcessorVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata>(await _callEvaluateProcessorVersion.Async(request, callSettings).ConfigureAwait(false), EvaluateProcessorVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Evaluation GetEvaluation(GetEvaluationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEvaluationRequest(ref request, ref callSettings);
+            return _callGetEvaluation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a specific evaluation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Evaluation> GetEvaluationAsync(GetEvaluationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEvaluationRequest(ref request, ref callSettings);
+            return _callGetEvaluation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a set of evaluations for a given processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Evaluation"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluations(ListEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEvaluationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEvaluationsRequest, ListEvaluationsResponse, Evaluation>(_callListEvaluations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a set of evaluations for a given processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Evaluation"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> ListEvaluationsAsync(ListEvaluationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEvaluationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEvaluationsRequest, ListEvaluationsResponse, Evaluation>(_callListEvaluations, request, callSettings);
+        }
     }
 
     public partial class ListProcessorTypesRequest : gaxgrpc::IPageRequest
@@ -3510,6 +4336,10 @@ namespace Google.Cloud.DocumentAI.V1
     }
 
     public partial class ListProcessorVersionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEvaluationsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3533,6 +4363,14 @@ namespace Google.Cloud.DocumentAI.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ProcessorVersion> GetEnumerator() => ProcessorVersions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEvaluationsResponse : gaxgrpc::IPageResponse<Evaluation>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Evaluation> GetEnumerator() => Evaluations.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
