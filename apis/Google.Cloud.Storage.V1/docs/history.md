@@ -1,5 +1,12 @@
 # Version history
 
+## Version 4.4.0, released 2023-02-21
+
+### New features
+
+- Improve exception thrown on failure to upload/download ([commit 4782e03](https://github.com/googleapis/google-cloud-dotnet/commit/4782e0302c8feb4a3f631e5d064aad3564fc55ee))
+- Update Google.Apis.Storage.v1 dependency to 1.60.0.2742
+
 ## Version 4.3.0, released 2023-02-08
 
 ### New features
