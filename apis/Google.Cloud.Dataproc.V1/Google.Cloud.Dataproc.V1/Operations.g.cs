@@ -43,7 +43,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "A+BBAxIYCgtpbm5lcl9zdGF0ZRgCIAEoCUID4EEDEhQKB2RldGFpbHMYAyAB",
             "KAlCA+BBAxI5ChBzdGF0ZV9zdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
             "b3RvYnVmLlRpbWVzdGFtcEID4EEDIjgKBVN0YXRlEgsKB1VOS05PV04QABIL",
-            "CgdQRU5ESU5HEAESCwoHUlVOTklORxACEggKBERPTkUQAyLaAwoYQ2x1c3Rl",
+            "CgdQRU5ESU5HEAESCwoHUlVOTklORxACEggKBERPTkUQAyK4AwoYQ2x1c3Rl",
             "ck9wZXJhdGlvbk1ldGFkYXRhEhkKDGNsdXN0ZXJfbmFtZRgHIAEoCUID4EED",
             "EhkKDGNsdXN0ZXJfdXVpZBgIIAEoCUID4EEDEkUKBnN0YXR1cxgJIAEoCzIw",
             "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uU3Rh",
@@ -52,32 +52,31 @@ namespace Google.Cloud.Dataproc.V1 {
             "Dm9wZXJhdGlvbl90eXBlGAsgASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YDCAB",
             "KAlCA+BBAxJTCgZsYWJlbHMYDSADKAsyPi5nb29nbGUuY2xvdWQuZGF0YXBy",
             "b2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFkYXRhLkxhYmVsc0VudHJ5QgPg",
-            "QQMSFQoId2FybmluZ3MYDiADKAlCA+BBAxIgChNjaGlsZF9vcGVyYXRpb25f",
-            "aWRzGA8gAygJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ASL6BAoaTm9kZUdyb3VwT3BlcmF0aW9uTWV0YWRh",
-            "dGESGgoNbm9kZV9ncm91cF9pZBgBIAEoCUID4EEDEhkKDGNsdXN0ZXJfdXVp",
-            "ZBgCIAEoCUID4EEDEkUKBnN0YXR1cxgDIAEoCzIwLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uU3RhdHVzQgPgQQMSTQoOc3Rh",
-            "dHVzX2hpc3RvcnkYBCADKAsyMC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "Q2x1c3Rlck9wZXJhdGlvblN0YXR1c0ID4EEDEmMKDm9wZXJhdGlvbl90eXBl",
-            "GAUgASgOMksuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLk5vZGVHcm91cE9w",
-            "ZXJhdGlvbk1ldGFkYXRhLk5vZGVHcm91cE9wZXJhdGlvblR5cGUSGAoLZGVz",
-            "Y3JpcHRpb24YBiABKAlCA+BBAxJVCgZsYWJlbHMYByADKAsyQC5nb29nbGUu",
-            "Y2xvdWQuZGF0YXByb2MudjEuTm9kZUdyb3VwT3BlcmF0aW9uTWV0YWRhdGEu",
-            "TGFiZWxzRW50cnlCA+BBAxIVCgh3YXJuaW5ncxgIIAMoCUID4EEDGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEicwoW",
-            "Tm9kZUdyb3VwT3BlcmF0aW9uVHlwZRIpCiVOT0RFX0dST1VQX09QRVJBVElP",
-            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGQ1JFQVRFEAESCgoGVVBEQVRFEAIS",
-            "CgoGREVMRVRFEAMSCgoGUkVTSVpFEARCawocY29tLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcHJvYy52MUIPT3BlcmF0aW9uc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vZGF0YXByb2MvYXBpdjEvZGF0YXByb2NwYjtkYXRhcHJvY3BiYgZw",
-            "cm90bzM="));
+            "QQMSFQoId2FybmluZ3MYDiADKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIvoEChpOb2RlR3JvdXBPcGVy",
+            "YXRpb25NZXRhZGF0YRIaCg1ub2RlX2dyb3VwX2lkGAEgASgJQgPgQQMSGQoM",
+            "Y2x1c3Rlcl91dWlkGAIgASgJQgPgQQMSRQoGc3RhdHVzGAMgASgLMjAuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25TdGF0dXNC",
+            "A+BBAxJNCg5zdGF0dXNfaGlzdG9yeRgEIAMoCzIwLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uU3RhdHVzQgPgQQMSYwoOb3Bl",
+            "cmF0aW9uX3R5cGUYBSABKA4ySy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
+            "Tm9kZUdyb3VwT3BlcmF0aW9uTWV0YWRhdGEuTm9kZUdyb3VwT3BlcmF0aW9u",
+            "VHlwZRIYCgtkZXNjcmlwdGlvbhgGIAEoCUID4EEDElUKBmxhYmVscxgHIAMo",
+            "CzJALmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ob2RlR3JvdXBPcGVyYXRp",
+            "b25NZXRhZGF0YS5MYWJlbHNFbnRyeUID4EEDEhUKCHdhcm5pbmdzGAggAygJ",
+            "QgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ASJzChZOb2RlR3JvdXBPcGVyYXRpb25UeXBlEikKJU5PREVfR1JP",
+            "VVBfT1BFUkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZDUkVBVEUQARIK",
+            "CgZVUERBVEUQAhIKCgZERUxFVEUQAxIKCgZSRVNJWkUQBEJrChxjb20uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxQg9PcGVyYXRpb25zUHJvdG9QAVo4Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9kYXRhcHJvYy9hcGl2MS9kYXRhcHJvY3BiO2Rh",
+            "dGFwcm9jcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.BatchOperationMetadata), global::Google.Cloud.Dataproc.V1.BatchOperationMetadata.Parser, new[]{ "Batch", "BatchUuid", "CreateTime", "DoneTime", "OperationType", "Description", "Labels", "Warnings" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.BatchOperationMetadata.Types.BatchOperationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus), global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Parser, new[]{ "State", "InnerState", "Details", "StateStartTime" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata), global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata.Parser, new[]{ "ClusterName", "ClusterUuid", "Status", "StatusHistory", "OperationType", "Description", "Labels", "Warnings", "ChildOperationIds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata), global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata.Parser, new[]{ "ClusterName", "ClusterUuid", "Status", "StatusHistory", "OperationType", "Description", "Labels", "Warnings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata), global::Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata.Parser, new[]{ "NodeGroupId", "ClusterUuid", "Status", "StatusHistory", "OperationType", "Description", "Labels", "Warnings" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata.Types.NodeGroupOperationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -977,7 +976,6 @@ namespace Google.Cloud.Dataproc.V1 {
       description_ = other.description_;
       labels_ = other.labels_.Clone();
       warnings_ = other.warnings_.Clone();
-      childOperationIds_ = other.childOperationIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1104,20 +1102,6 @@ namespace Google.Cloud.Dataproc.V1 {
       get { return warnings_; }
     }
 
-    /// <summary>Field number for the "child_operation_ids" field.</summary>
-    public const int ChildOperationIdsFieldNumber = 15;
-    private static readonly pb::FieldCodec<string> _repeated_childOperationIds_codec
-        = pb::FieldCodec.ForString(122);
-    private readonly pbc::RepeatedField<string> childOperationIds_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Output only. Child operation ids
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> ChildOperationIds {
-      get { return childOperationIds_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1141,7 +1125,6 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Description != other.Description) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if(!warnings_.Equals(other.warnings_)) return false;
-      if(!childOperationIds_.Equals(other.childOperationIds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1157,7 +1140,6 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= warnings_.GetHashCode();
-      hash ^= childOperationIds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1199,7 +1181,6 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       labels_.WriteTo(output, _map_labels_codec);
       warnings_.WriteTo(output, _repeated_warnings_codec);
-      childOperationIds_.WriteTo(output, _repeated_childOperationIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1233,7 +1214,6 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       labels_.WriteTo(ref output, _map_labels_codec);
       warnings_.WriteTo(ref output, _repeated_warnings_codec);
-      childOperationIds_.WriteTo(ref output, _repeated_childOperationIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1262,7 +1242,6 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       size += labels_.CalculateSize(_map_labels_codec);
       size += warnings_.CalculateSize(_repeated_warnings_codec);
-      size += childOperationIds_.CalculateSize(_repeated_childOperationIds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1296,7 +1275,6 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       labels_.Add(other.labels_);
       warnings_.Add(other.warnings_);
-      childOperationIds_.Add(other.childOperationIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1347,10 +1325,6 @@ namespace Google.Cloud.Dataproc.V1 {
             warnings_.AddEntriesFrom(input, _repeated_warnings_codec);
             break;
           }
-          case 122: {
-            childOperationIds_.AddEntriesFrom(input, _repeated_childOperationIds_codec);
-            break;
-          }
         }
       }
     #endif
@@ -1399,10 +1373,6 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 114: {
             warnings_.AddEntriesFrom(ref input, _repeated_warnings_codec);
-            break;
-          }
-          case 122: {
-            childOperationIds_.AddEntriesFrom(ref input, _repeated_childOperationIds_codec);
             break;
           }
         }

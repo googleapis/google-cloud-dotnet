@@ -17,7 +17,6 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -51,7 +50,6 @@ namespace Google.Cloud.Dataproc.V1
             ResizeNodeGroupSettings = existing.ResizeNodeGroupSettings;
             ResizeNodeGroupOperationsSettings = existing.ResizeNodeGroupOperationsSettings.Clone();
             GetNodeGroupSettings = existing.GetNodeGroupSettings;
-            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -128,11 +126,6 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetNodeGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
-
-        /// <summary>
-        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
-        /// </summary>
-        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="NodeGroupControllerSettings"/> object.</returns>
@@ -278,9 +271,6 @@ namespace Google.Cloud.Dataproc.V1
 
         /// <summary>The underlying gRPC NodeGroupController client</summary>
         public virtual NodeGroupController.NodeGroupControllerClient GrpcClient => throw new sys::NotImplementedException();
-
-        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
-        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a node group in a cluster. The returned
@@ -786,7 +776,6 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             CreateNodeGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNodeGroupOperationsSettings, logger);
             ResizeNodeGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResizeNodeGroupOperationsSettings, logger);
-            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateNodeGroup = clientHelper.BuildApiCall<CreateNodeGroupRequest, lro::Operation>("CreateNodeGroup", grpcClient.CreateNodeGroupAsync, grpcClient.CreateNodeGroup, effectiveSettings.CreateNodeGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateNodeGroup);
             Modify_CreateNodeGroupApiCall(ref _callCreateNodeGroup);
@@ -811,9 +800,6 @@ namespace Google.Cloud.Dataproc.V1
 
         /// <summary>The underlying gRPC NodeGroupController client</summary>
         public override NodeGroupController.NodeGroupControllerClient GrpcClient { get; }
-
-        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
-        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateNodeGroupRequest(ref CreateNodeGroupRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -921,22 +907,6 @@ namespace Google.Cloud.Dataproc.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
-        }
-    }
-
-    public static partial class NodeGroupController
-    {
-        public partial class NodeGroupControllerClient
-        {
-            /// <summary>
-            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
-            /// this client.
-            /// </summary>
-            /// <returns>
-            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
-            /// </returns>
-            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
-                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

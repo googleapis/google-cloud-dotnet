@@ -530,7 +530,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int GracefulDecommissionTimeoutFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Duration gracefulDecommissionTimeout_;
     /// <summary>
-    /// Optional. Timeout for graceful YARN decomissioning. [Graceful
+    /// Optional. Timeout for graceful YARN decommissioning. [Graceful
     /// decommissioning]
     /// (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/scaling-clusters#graceful_decommissioning)
     /// allows the removal of nodes from the Compute Engine node group
