@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All rights reserved.
+// Copyright 2017 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -321,6 +321,7 @@ namespace Google.Cloud.Bigtable.V2
                 }
                 owner.Assert(chunk.ValueSize >= 0, "NewCell valueSize can't be negative");
 
+                bool familyNameChanged = false;
                 if (chunk.FamilyName != null)
                 {
                     if (chunk.FamilyName != owner._currentCell.Family?.Name)
@@ -328,11 +329,12 @@ namespace Google.Cloud.Bigtable.V2
                         owner._currentCell.Family = new Family { Name = chunk.FamilyName };
                         Debug.Assert(!owner._currentFamilies.ContainsKey(chunk.FamilyName));
                         owner._currentFamilies[chunk.FamilyName] = owner._currentCell.Family;
+                        familyNameChanged = true;
                     }
                     owner.Assert(chunk.Qualifier != null, "NewCell has a familyName, but no qualifier");
                 }
 
-                if (chunk.Qualifier != null && chunk.Qualifier != owner._currentCell.Column?.Qualifier)
+                if (chunk.Qualifier != null && (chunk.Qualifier != owner._currentCell.Column?.Qualifier || familyNameChanged))
                 {
                     owner._currentCell.Column = new Column { Qualifier = chunk.Qualifier };
                     owner.Assert(
