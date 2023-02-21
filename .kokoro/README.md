@@ -14,12 +14,10 @@ distribution.
 `pip-compile` is used to generate the hashes. Install that first,
 manually, using a hash from pypi.org.
 
-Edit the requirements.txt file to specify the version of the
+Edit the requirements.in file to specify the version of the
 dependency you want, then run:
 
 ```sh
-grep == requirements.txt | sed 's/ \\//g' > requirements.in
 rm requirements.txt
 pip-compile --generate-hashes requirements.in
-rm requirements.in
 ```
