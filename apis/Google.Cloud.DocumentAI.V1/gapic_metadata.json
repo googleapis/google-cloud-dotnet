@@ -52,10 +52,22 @@
                 "EnableProcessorAsync"
               ]
             },
+            "EvaluateProcessorVersion": {
+              "methods": [
+                "EvaluateProcessorVersion",
+                "EvaluateProcessorVersionAsync"
+              ]
+            },
             "FetchProcessorTypes": {
               "methods": [
                 "FetchProcessorTypes",
                 "FetchProcessorTypesAsync"
+              ]
+            },
+            "GetEvaluation": {
+              "methods": [
+                "GetEvaluation",
+                "GetEvaluationAsync"
               ]
             },
             "GetProcessor": {
@@ -74,6 +86,12 @@
               "methods": [
                 "GetProcessorVersion",
                 "GetProcessorVersionAsync"
+              ]
+            },
+            "ListEvaluations": {
+              "methods": [
+                "ListEvaluations",
+                "ListEvaluationsAsync"
               ]
             },
             "ListProcessorTypes": {
@@ -110,6 +128,12 @@
               "methods": [
                 "SetDefaultProcessorVersion",
                 "SetDefaultProcessorVersionAsync"
+              ]
+            },
+            "TrainProcessorVersion": {
+              "methods": [
+                "TrainProcessorVersion",
+                "TrainProcessorVersionAsync"
               ]
             },
             "UndeployProcessorVersion": {

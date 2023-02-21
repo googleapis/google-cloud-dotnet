@@ -521,7 +521,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property> properties_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.DocumentSchema.Types.EntityType.Types.Property>();
         /// <summary>
-        /// Describing the nested structure, or composition of an entity.
+        /// Description the nested structure, or composition of an entity.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1245,9 +1245,15 @@ namespace Google.Cloud.DocumentAI.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
-              /// Types of occurrences of the entity type in the document.  Note: this
-              /// represents the number of instances of an entity types, not number of
-              /// mentions of a given entity instance.
+              /// Types of occurrences of the entity type in the document.  This
+              /// represents the number of instances of instances of an entity, not
+              /// number of mentions of an entity.  For example, a bank statement may
+              /// only have one `account_number`, but this account number may be
+              /// mentioned in several places on the document.  In this case the
+              /// 'account_number' would be considered a `REQUIRED_ONCE` entity type. If,
+              /// on the other hand, we expect a bank statement to contain the status of
+              /// multiple different accounts for the customers, the occurrence type will
+              /// be set to `REQUIRED_MULTIPLE`.
               /// </summary>
               public enum OccurrenceType {
                 /// <summary>
@@ -1255,7 +1261,8 @@ namespace Google.Cloud.DocumentAI.V1 {
                 /// </summary>
                 [pbr::OriginalName("OCCURRENCE_TYPE_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
-                /// There will be zero or one instance of this entity type.
+                /// There will be zero or one instance of this entity type.  The same
+                /// entity instance may be mentioned multiple times.
                 /// </summary>
                 [pbr::OriginalName("OPTIONAL_ONCE")] OptionalOnce = 1,
                 /// <summary>
@@ -1263,7 +1270,8 @@ namespace Google.Cloud.DocumentAI.V1 {
                 /// </summary>
                 [pbr::OriginalName("OPTIONAL_MULTIPLE")] OptionalMultiple = 2,
                 /// <summary>
-                /// The entity type will only appear exactly once.
+                /// The entity type will only appear exactly once.  The same
+                /// entity instance may be mentioned multiple times.
                 /// </summary>
                 [pbr::OriginalName("REQUIRED_ONCE")] RequiredOnce = 3,
                 /// <summary>

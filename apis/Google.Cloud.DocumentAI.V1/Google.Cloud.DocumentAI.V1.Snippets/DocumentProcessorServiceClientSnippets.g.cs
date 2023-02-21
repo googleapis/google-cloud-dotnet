@@ -1122,6 +1122,201 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TrainProcessorVersion</summary>
+        public void TrainProcessorVersionRequestObject()
+        {
+            // Snippet: TrainProcessorVersion(TrainProcessorVersionRequest, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            TrainProcessorVersionRequest request = new TrainProcessorVersionRequest
+            {
+                ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                ProcessorVersion = new ProcessorVersion(),
+                InputData = new TrainProcessorVersionRequest.Types.InputData(),
+                BaseProcessorVersion = "",
+                DocumentSchema = new DocumentSchema(),
+            };
+            // Make the request
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> response = documentProcessorServiceClient.TrainProcessorVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TrainProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceTrainProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrainProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TrainProcessorVersionAsync</summary>
+        public async Task TrainProcessorVersionRequestObjectAsync()
+        {
+            // Snippet: TrainProcessorVersionAsync(TrainProcessorVersionRequest, CallSettings)
+            // Additional: TrainProcessorVersionAsync(TrainProcessorVersionRequest, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TrainProcessorVersionRequest request = new TrainProcessorVersionRequest
+            {
+                ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                ProcessorVersion = new ProcessorVersion(),
+                InputData = new TrainProcessorVersionRequest.Types.InputData(),
+                BaseProcessorVersion = "",
+                DocumentSchema = new DocumentSchema(),
+            };
+            // Make the request
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> response = await documentProcessorServiceClient.TrainProcessorVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TrainProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceTrainProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrainProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TrainProcessorVersion</summary>
+        public void TrainProcessorVersion()
+        {
+            // Snippet: TrainProcessorVersion(string, ProcessorVersion, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]";
+            ProcessorVersion processorVersion = new ProcessorVersion();
+            // Make the request
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> response = documentProcessorServiceClient.TrainProcessorVersion(parent, processorVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TrainProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceTrainProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrainProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TrainProcessorVersionAsync</summary>
+        public async Task TrainProcessorVersionAsync()
+        {
+            // Snippet: TrainProcessorVersionAsync(string, ProcessorVersion, CallSettings)
+            // Additional: TrainProcessorVersionAsync(string, ProcessorVersion, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]";
+            ProcessorVersion processorVersion = new ProcessorVersion();
+            // Make the request
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> response = await documentProcessorServiceClient.TrainProcessorVersionAsync(parent, processorVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TrainProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceTrainProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrainProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TrainProcessorVersion</summary>
+        public void TrainProcessorVersionResourceNames()
+        {
+            // Snippet: TrainProcessorVersion(ProcessorName, ProcessorVersion, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            ProcessorName parent = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            ProcessorVersion processorVersion = new ProcessorVersion();
+            // Make the request
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> response = documentProcessorServiceClient.TrainProcessorVersion(parent, processorVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TrainProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceTrainProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrainProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TrainProcessorVersionAsync</summary>
+        public async Task TrainProcessorVersionResourceNamesAsync()
+        {
+            // Snippet: TrainProcessorVersionAsync(ProcessorName, ProcessorVersion, CallSettings)
+            // Additional: TrainProcessorVersionAsync(ProcessorName, ProcessorVersion, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProcessorName parent = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            ProcessorVersion processorVersion = new ProcessorVersion();
+            // Make the request
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> response = await documentProcessorServiceClient.TrainProcessorVersionAsync(parent, processorVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TrainProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceTrainProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrainProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetProcessorVersion</summary>
         public void GetProcessorVersionRequestObject()
         {
@@ -2695,6 +2890,554 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
                 // If it has completed, then access the result
                 ReviewDocumentResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvaluateProcessorVersion</summary>
+        public void EvaluateProcessorVersionRequestObject()
+        {
+            // Snippet: EvaluateProcessorVersion(EvaluateProcessorVersionRequest, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            EvaluateProcessorVersionRequest request = new EvaluateProcessorVersionRequest
+            {
+                ProcessorVersionAsProcessorVersionName = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]"),
+                EvaluationDocuments = new BatchDocumentsInputConfig(),
+            };
+            // Make the request
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> response = documentProcessorServiceClient.EvaluateProcessorVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            EvaluateProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceEvaluateProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EvaluateProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvaluateProcessorVersionAsync</summary>
+        public async Task EvaluateProcessorVersionRequestObjectAsync()
+        {
+            // Snippet: EvaluateProcessorVersionAsync(EvaluateProcessorVersionRequest, CallSettings)
+            // Additional: EvaluateProcessorVersionAsync(EvaluateProcessorVersionRequest, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EvaluateProcessorVersionRequest request = new EvaluateProcessorVersionRequest
+            {
+                ProcessorVersionAsProcessorVersionName = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]"),
+                EvaluationDocuments = new BatchDocumentsInputConfig(),
+            };
+            // Make the request
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> response = await documentProcessorServiceClient.EvaluateProcessorVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            EvaluateProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceEvaluateProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EvaluateProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvaluateProcessorVersion</summary>
+        public void EvaluateProcessorVersion()
+        {
+            // Snippet: EvaluateProcessorVersion(string, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            string processorVersion = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/processorVersions/[PROCESSOR_VERSION]";
+            // Make the request
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> response = documentProcessorServiceClient.EvaluateProcessorVersion(processorVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            EvaluateProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceEvaluateProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EvaluateProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvaluateProcessorVersionAsync</summary>
+        public async Task EvaluateProcessorVersionAsync()
+        {
+            // Snippet: EvaluateProcessorVersionAsync(string, CallSettings)
+            // Additional: EvaluateProcessorVersionAsync(string, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string processorVersion = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/processorVersions/[PROCESSOR_VERSION]";
+            // Make the request
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> response = await documentProcessorServiceClient.EvaluateProcessorVersionAsync(processorVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            EvaluateProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceEvaluateProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EvaluateProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvaluateProcessorVersion</summary>
+        public void EvaluateProcessorVersionResourceNames()
+        {
+            // Snippet: EvaluateProcessorVersion(ProcessorVersionName, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            ProcessorVersionName processorVersion = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]");
+            // Make the request
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> response = documentProcessorServiceClient.EvaluateProcessorVersion(processorVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            EvaluateProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceEvaluateProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EvaluateProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvaluateProcessorVersionAsync</summary>
+        public async Task EvaluateProcessorVersionResourceNamesAsync()
+        {
+            // Snippet: EvaluateProcessorVersionAsync(ProcessorVersionName, CallSettings)
+            // Additional: EvaluateProcessorVersionAsync(ProcessorVersionName, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProcessorVersionName processorVersion = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]");
+            // Make the request
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> response = await documentProcessorServiceClient.EvaluateProcessorVersionAsync(processorVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            EvaluateProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EvaluateProcessorVersionResponse, EvaluateProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceEvaluateProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EvaluateProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEvaluation</summary>
+        public void GetEvaluationRequestObject()
+        {
+            // Snippet: GetEvaluation(GetEvaluationRequest, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            GetEvaluationRequest request = new GetEvaluationRequest
+            {
+                EvaluationName = EvaluationName.FromProjectLocationProcessorProcessorVersionEvaluation("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]", "[EVALUATION]"),
+            };
+            // Make the request
+            Evaluation response = documentProcessorServiceClient.GetEvaluation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEvaluationAsync</summary>
+        public async Task GetEvaluationRequestObjectAsync()
+        {
+            // Snippet: GetEvaluationAsync(GetEvaluationRequest, CallSettings)
+            // Additional: GetEvaluationAsync(GetEvaluationRequest, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEvaluationRequest request = new GetEvaluationRequest
+            {
+                EvaluationName = EvaluationName.FromProjectLocationProcessorProcessorVersionEvaluation("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]", "[EVALUATION]"),
+            };
+            // Make the request
+            Evaluation response = await documentProcessorServiceClient.GetEvaluationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEvaluation</summary>
+        public void GetEvaluation()
+        {
+            // Snippet: GetEvaluation(string, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/processorVersions/[PROCESSOR_VERSION]/evaluations/[EVALUATION]";
+            // Make the request
+            Evaluation response = documentProcessorServiceClient.GetEvaluation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEvaluationAsync</summary>
+        public async Task GetEvaluationAsync()
+        {
+            // Snippet: GetEvaluationAsync(string, CallSettings)
+            // Additional: GetEvaluationAsync(string, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/processorVersions/[PROCESSOR_VERSION]/evaluations/[EVALUATION]";
+            // Make the request
+            Evaluation response = await documentProcessorServiceClient.GetEvaluationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEvaluation</summary>
+        public void GetEvaluationResourceNames()
+        {
+            // Snippet: GetEvaluation(EvaluationName, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            EvaluationName name = EvaluationName.FromProjectLocationProcessorProcessorVersionEvaluation("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]", "[EVALUATION]");
+            // Make the request
+            Evaluation response = documentProcessorServiceClient.GetEvaluation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEvaluationAsync</summary>
+        public async Task GetEvaluationResourceNamesAsync()
+        {
+            // Snippet: GetEvaluationAsync(EvaluationName, CallSettings)
+            // Additional: GetEvaluationAsync(EvaluationName, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EvaluationName name = EvaluationName.FromProjectLocationProcessorProcessorVersionEvaluation("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]", "[EVALUATION]");
+            // Make the request
+            Evaluation response = await documentProcessorServiceClient.GetEvaluationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvaluations</summary>
+        public void ListEvaluationsRequestObject()
+        {
+            // Snippet: ListEvaluations(ListEvaluationsRequest, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            ListEvaluationsRequest request = new ListEvaluationsRequest
+            {
+                ParentAsProcessorVersionName = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListEvaluationsResponse, Evaluation> response = documentProcessorServiceClient.ListEvaluations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Evaluation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEvaluationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Evaluation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Evaluation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Evaluation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvaluationsAsync</summary>
+        public async Task ListEvaluationsRequestObjectAsync()
+        {
+            // Snippet: ListEvaluationsAsync(ListEvaluationsRequest, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListEvaluationsRequest request = new ListEvaluationsRequest
+            {
+                ParentAsProcessorVersionName = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> response = documentProcessorServiceClient.ListEvaluationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Evaluation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEvaluationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Evaluation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Evaluation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Evaluation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvaluations</summary>
+        public void ListEvaluations()
+        {
+            // Snippet: ListEvaluations(string, string, int?, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/processorVersions/[PROCESSOR_VERSION]";
+            // Make the request
+            PagedEnumerable<ListEvaluationsResponse, Evaluation> response = documentProcessorServiceClient.ListEvaluations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Evaluation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEvaluationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Evaluation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Evaluation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Evaluation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvaluationsAsync</summary>
+        public async Task ListEvaluationsAsync()
+        {
+            // Snippet: ListEvaluationsAsync(string, string, int?, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/processorVersions/[PROCESSOR_VERSION]";
+            // Make the request
+            PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> response = documentProcessorServiceClient.ListEvaluationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Evaluation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEvaluationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Evaluation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Evaluation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Evaluation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvaluations</summary>
+        public void ListEvaluationsResourceNames()
+        {
+            // Snippet: ListEvaluations(ProcessorVersionName, string, int?, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            ProcessorVersionName parent = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]");
+            // Make the request
+            PagedEnumerable<ListEvaluationsResponse, Evaluation> response = documentProcessorServiceClient.ListEvaluations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Evaluation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEvaluationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Evaluation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Evaluation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Evaluation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEvaluationsAsync</summary>
+        public async Task ListEvaluationsResourceNamesAsync()
+        {
+            // Snippet: ListEvaluationsAsync(ProcessorVersionName, string, int?, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProcessorVersionName parent = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]");
+            // Make the request
+            PagedAsyncEnumerable<ListEvaluationsResponse, Evaluation> response = documentProcessorServiceClient.ListEvaluationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Evaluation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEvaluationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Evaluation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Evaluation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Evaluation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }
