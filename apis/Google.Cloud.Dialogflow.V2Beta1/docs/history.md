@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2023-02-22
+
+### New features
+
+- Add PhraseSetName resource name ([commit 4a33a31](https://github.com/googleapis/google-cloud-dotnet/commit/4a33a31648f1fcdcd0e249c0566d641ebd3d8271))
+
 ## Version 1.0.0-beta04, released 2023-01-20
 
 ### New features
