@@ -71,22 +71,16 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         {
             var src = new JArray();
 
-            var allApisToGenerate = GenerateApiSet(catalog, rootApi);
-            foreach (var api in allApisToGenerate)
-            {
-                src.Add(new JObject
-                {
-                    ["files"] = new JArray { $"{api}/{api}.csproj" },
-                    ["cwd"] = $"../../../apis/{api}"
-                });
-            }
-
             var json = new JObject
             {
                 ["metadata"] = new JArray {
                     new JObject
                     {
-                        ["src"] = src,
+                        ["src"] = new JObject
+                        {
+                            ["files"] = new JArray { $"{rootApi.Id}/{rootApi.Id}.csproj" },
+                            ["cwd"] = $"../../../apis/{rootApi.Id}"
+                        },
                         ["dest"] = "obj/api",
                         ["filter"] = "filterConfig.yml",
                     }
@@ -127,7 +121,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 }
             };
             File.WriteAllText(Path.Combine(outputDirectory, "docfx.json"), json.ToString());
-            File.WriteAllText(Path.Combine(outputDirectory, "dependencies.txt"), string.Join(" ", allApisToGenerate.Select(api => api)));
         }
 
         /// <summary>
@@ -135,11 +128,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         /// </summary>
         private static void CreateDevsiteDocfxJson(ApiCatalog catalog, ApiMetadata rootApi, string outputDirectory)
         {
-            // Pick whichever framework is listed first. (This could cause problems if a dependency
-            // doesn't target the given framework, but that seems unlikely.)
-            // Default to netstandard2.1 if nothing is listed.
-            string targetFramework = rootApi.TargetFrameworks?.Split(';').First() ?? "netstandard2.1";
-
             var json = new JObject
             {
                 ["metadata"] = new JArray {
@@ -151,36 +139,11 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                             ["cwd"] = $"../../../apis/{rootApi.Id}"
                         },
                         ["dest"] = "obj/bareapi",
-                        ["filter"] = "filterConfig.yml",
-                        ["properties"] = new JObject { ["TargetFramework"] = targetFramework }
+                        ["filter"] = "filterConfig.yml"
                     },
                 }
             };
             File.WriteAllText(Path.Combine(outputDirectory, "docfx-devsite.json"), json.ToString());
-        }
-
-        /// <summary>
-        /// Given an initial starting API, return a set of all API IDs in the recursive set of dependencies.
-        /// This does not include GAX etc.
-        /// </summary>
-        private static IEnumerable<string> GenerateApiSet(ApiCatalog catalog, ApiMetadata api)
-        {
-            var apiIds = catalog.CreateIdHashSet();
-            HashSet<string> set = new HashSet<string>();
-            Queue<string> processingQueue = new Queue<string>();
-            processingQueue.Enqueue(api.Id);
-            while (processingQueue.TryDequeue(out var next))
-            {
-                if (set.Add(next))
-                {
-                    var childApiDependencies = catalog[next].Dependencies.Keys.Intersect(apiIds).ToList();
-                    foreach (var childApiDependency in childApiDependencies)
-                    {
-                        processingQueue.Enqueue(childApiDependency);
-                    }
-                }
-            }
-            return set;
         }
 
         private static void CopyAndGenerateArticles(ApiMetadata api, string inputDirectory, string outputDirectory)
