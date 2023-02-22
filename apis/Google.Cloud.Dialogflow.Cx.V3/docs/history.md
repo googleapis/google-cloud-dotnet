@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.5.0, released 2023-02-22
+
+### New features
+
+- Added gcs.proto. added support for GcsDestination and TextToSpeechSettings ([commit c799095](https://github.com/googleapis/google-cloud-dotnet/commit/c7990957ad016f53bd9c783a07a22456310bef2d))
+- Remove [REQUIRED] for VersionConfig ([commit c799095](https://github.com/googleapis/google-cloud-dotnet/commit/c7990957ad016f53bd9c783a07a22456310bef2d))
+
+### Documentation improvements
+
+- Add more meaningful comments ([commit c799095](https://github.com/googleapis/google-cloud-dotnet/commit/c7990957ad016f53bd9c783a07a22456310bef2d))
+
 ## Version 2.4.0, released 2023-01-25
 
 ### New features
