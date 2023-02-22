@@ -33,6 +33,12 @@ build_api_docs() {
     dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   fi
   cp filterConfig.yml output/$api
+  
+  # Make sure all dependencies are built. Even if the target package refers to a
+  # dependency in this repo by NuGet version rather than as a project reference,
+  # we need it for googleapis.dev
+  (cd ..; ./build.sh --notests $(cat docs/output/$api/dependencies.txt))
+  
   dotnet docfx metadata --logLevel Warning output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
 

@@ -65,7 +65,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         }
 
         /// <summary>
-        /// Generates the docfx.json file used to build googleapis.dev and GitHub pages sites.
+        /// Generates the docfx.json file used to build the googleapis.dev site.
         /// </summary>
         private static void CreateGoogleApisDevDocfxJson(ApiCatalog catalog, ApiMetadata rootApi, string outputDirectory)
         {
@@ -127,6 +127,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 }
             };
             File.WriteAllText(Path.Combine(outputDirectory, "docfx.json"), json.ToString());
+            File.WriteAllText(Path.Combine(outputDirectory, "dependencies.txt"), string.Join(" ", allApisToGenerate.Select(api => api)));
         }
 
         /// <summary>
