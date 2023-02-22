@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.8.0, released 2023-02-22
+
+### New features
+
+- Added support for AssistQueryParameters and SynthesizeSpeechConfig ([commit 22e5419](https://github.com/googleapis/google-cloud-dotnet/commit/22e5419cf66c7db39753a3c17588fa5324eb7bfe))
+
+### Documentation improvements
+
+- Add more meaningful comments ([commit 22e5419](https://github.com/googleapis/google-cloud-dotnet/commit/22e5419cf66c7db39753a3c17588fa5324eb7bfe))
+
 ## Version 4.7.0, released 2023-01-19
 
 ### New features
