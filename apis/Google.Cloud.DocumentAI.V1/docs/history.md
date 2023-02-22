@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.6.0, released 2023-02-22
+
+### New features
+
+- Added Training and Evaluation functions, request, responses and metadata to document_processor_service.proto ([commit 7fb7b5f](https://github.com/googleapis/google-cloud-dotnet/commit/7fb7b5fab9ff8368ca99ed2e6468d2853bc7fa55))
+- Added evaluation.proto ([commit 7fb7b5f](https://github.com/googleapis/google-cloud-dotnet/commit/7fb7b5fab9ff8368ca99ed2e6468d2853bc7fa55))
+- Added latest_evaluation to processor.proto ([commit 7fb7b5f](https://github.com/googleapis/google-cloud-dotnet/commit/7fb7b5fab9ff8368ca99ed2e6468d2853bc7fa55))
+
 ## Version 3.5.0, released 2023-01-20
 
 ### New features
