@@ -161,20 +161,21 @@ done
 
 log_build_action "(End) Building"
 
-log_build_action "(Start) Client creation tests"
-dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
-for api in ${apis[*]}
-do
-  if [[ "$api" == "tools" ]]
-  then
-    continue
-  fi
-  dotnet run --no-build --project tools/Google.Cloud.Tools.ReleaseManager -- create-clients $api
-done
-log_build_action "(End) Client creation tests"
-
 if [[ "$runtests" = true ]]
 then
+
+  log_build_action "(Start) Client creation tests"
+  dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
+  for api in ${apis[*]}
+  do
+    if [[ "$api" == "tools" ]]
+    then
+      continue
+    fi
+    dotnet run --no-build --project tools/Google.Cloud.Tools.ReleaseManager -- create-clients $api
+  done
+  log_build_action "(End) Client creation tests"
+
   log_build_action "(Start) Unit tests"
   # Could use xargs, but this is more flexible
   while read testproject
