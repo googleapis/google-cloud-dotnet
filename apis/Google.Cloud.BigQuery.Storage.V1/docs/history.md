@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.6.0, released 2023-02-22
+
+### New features
+
+- Add default_value_expression to TableFieldSchema ([commit d97c2ac](https://github.com/googleapis/google-cloud-dotnet/commit/d97c2acecbca8b6ff15810a2f263079fcf83b63e))
+
 ## Version 3.5.0, released 2022-12-14
 
 ### New features
