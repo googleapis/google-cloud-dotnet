@@ -3615,7 +3615,7 @@
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "type": "grpc",
       "productName": "Certificate Authority",
       "productUrl": "https://cloud.google.com/certificate-authority-service/",
@@ -3626,7 +3626,7 @@
         "private-ca"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",

@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2023-02-22
+
+### New features
+
+- Add X.509 Name Constraints support ([commit c8464c9](https://github.com/googleapis/google-cloud-dotnet/commit/c8464c97d205d49bd267aeff3aad64165f7d89dd))
+
 ## Version 3.1.0, released 2023-01-19
 
 ### New features
