@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2023-02-22
+
+### New features
+
+- Add supported fields in document translation request and refresh translation v3 GA service proto documentation ([commit 5f9b413](https://github.com/googleapis/google-cloud-dotnet/commit/5f9b4132fcc06028136c126862cf6ad7b85c3643))
+
 ## Version 3.1.0, released 2023-01-17
 
 ### New features
