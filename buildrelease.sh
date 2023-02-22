@@ -58,12 +58,6 @@ else
   git checkout $commit
 fi
 
-# Temporary hack to fix build for broken releases
-# TODO: Remove this as soon as the 4 broken releases have gone through.
-cp ../.config/dotnet-tools.json .config
-cp ../docs/builddocs.sh docs
-cp ../tools/Google.Cloud.Tools.GenerateDocfxSources/Program.cs tools/Google.Cloud.Tools.GenerateDocfxSources
-
 # Turn the multi-line output of git tag --points-at into space-separated list of projects
 projects=$(git tag --points-at $commit | sed 's/-.*//g' | awk -vORS=\  '{print $1}' | sed 's/ $//')
 
