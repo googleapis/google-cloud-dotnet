@@ -48,30 +48,36 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "DjIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLk91dHB1dEF1ZGlv",
             "RW5jb2RpbmdCA+BBAhIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRJXChhz",
             "eW50aGVzaXplX3NwZWVjaF9jb25maWcYAyABKAsyNS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy5jeC52My5TeW50aGVzaXplU3BlZWNoQ29uZmlnKvsBCg1B",
-            "dWRpb0VuY29kaW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAAS",
-            "HAoYQVVESU9fRU5DT0RJTkdfTElORUFSXzE2EAESFwoTQVVESU9fRU5DT0RJ",
-            "TkdfRkxBQxACEhgKFEFVRElPX0VOQ09ESU5HX01VTEFXEAMSFgoSQVVESU9f",
-            "RU5DT0RJTkdfQU1SEAQSGQoVQVVESU9fRU5DT0RJTkdfQU1SX1dCEAUSGwoX",
-            "QVVESU9fRU5DT0RJTkdfT0dHX09QVVMQBhIpCiVBVURJT19FTkNPRElOR19T",
-            "UEVFWF9XSVRIX0hFQURFUl9CWVRFEAcqdgoSU3BlZWNoTW9kZWxWYXJpYW50",
-            "EiQKIFNQRUVDSF9NT0RFTF9WQVJJQU5UX1VOU1BFQ0lGSUVEEAASFgoSVVNF",
-            "X0JFU1RfQVZBSUxBQkxFEAESEAoMVVNFX1NUQU5EQVJEEAISEAoMVVNFX0VO",
-            "SEFOQ0VEEAMqjQEKD1NzbWxWb2ljZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dF",
-            "TkRFUl9VTlNQRUNJRklFRBAAEhoKFlNTTUxfVk9JQ0VfR0VOREVSX01BTEUQ",
-            "ARIcChhTU01MX1ZPSUNFX0dFTkRFUl9GRU1BTEUQAhIdChlTU01MX1ZPSUNF",
-            "X0dFTkRFUl9ORVVUUkFMEAMq7AEKE091dHB1dEF1ZGlvRW5jb2RpbmcSJQoh",
-            "T1VUUFVUX0FVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASIwofT1VUUFVU",
-            "X0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEh0KGU9VVFBVVF9BVURJT19F",
-            "TkNPRElOR19NUDMQAhIlCiFPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzXzY0",
-            "X0tCUFMQBBIiCh5PVVRQVVRfQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQAxIf",
-            "ChtPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVVMQVcQBUKOAgohY29tLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQhBBdWRpb0NvbmZpZ1Byb3RvUAFa",
-            "MWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBi",
-            "O2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz",
-            "6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYz6kFVChthdXRv",
-            "bWwuZ29vZ2xlYXBpcy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfWIGcHJvdG8z"));
+            "ZGlhbG9nZmxvdy5jeC52My5TeW50aGVzaXplU3BlZWNoQ29uZmlnIoICChRU",
+            "ZXh0VG9TcGVlY2hTZXR0aW5ncxJzChlzeW50aGVzaXplX3NwZWVjaF9jb25m",
+            "aWdzGAEgAygLMlAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVGV4",
+            "dFRvU3BlZWNoU2V0dGluZ3MuU3ludGhlc2l6ZVNwZWVjaENvbmZpZ3NFbnRy",
+            "eRp1ChxTeW50aGVzaXplU3BlZWNoQ29uZmlnc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRJECgV2YWx1ZRgCIAEoCzI1Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
+            "LnYzLlN5bnRoZXNpemVTcGVlY2hDb25maWc6AjgBKvsBCg1BdWRpb0VuY29k",
+            "aW5nEh4KGkFVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASHAoYQVVESU9f",
+            "RU5DT0RJTkdfTElORUFSXzE2EAESFwoTQVVESU9fRU5DT0RJTkdfRkxBQxAC",
+            "EhgKFEFVRElPX0VOQ09ESU5HX01VTEFXEAMSFgoSQVVESU9fRU5DT0RJTkdf",
+            "QU1SEAQSGQoVQVVESU9fRU5DT0RJTkdfQU1SX1dCEAUSGwoXQVVESU9fRU5D",
+            "T0RJTkdfT0dHX09QVVMQBhIpCiVBVURJT19FTkNPRElOR19TUEVFWF9XSVRI",
+            "X0hFQURFUl9CWVRFEAcqdgoSU3BlZWNoTW9kZWxWYXJpYW50EiQKIFNQRUVD",
+            "SF9NT0RFTF9WQVJJQU5UX1VOU1BFQ0lGSUVEEAASFgoSVVNFX0JFU1RfQVZB",
+            "SUxBQkxFEAESEAoMVVNFX1NUQU5EQVJEEAISEAoMVVNFX0VOSEFOQ0VEEAMq",
+            "jQEKD1NzbWxWb2ljZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQ",
+            "RUNJRklFRBAAEhoKFlNTTUxfVk9JQ0VfR0VOREVSX01BTEUQARIcChhTU01M",
+            "X1ZPSUNFX0dFTkRFUl9GRU1BTEUQAhIdChlTU01MX1ZPSUNFX0dFTkRFUl9O",
+            "RVVUUkFMEAMq7AEKE091dHB1dEF1ZGlvRW5jb2RpbmcSJQohT1VUUFVUX0FV",
+            "RElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASIwofT1VUUFVUX0FVRElPX0VO",
+            "Q09ESU5HX0xJTkVBUl8xNhABEh0KGU9VVFBVVF9BVURJT19FTkNPRElOR19N",
+            "UDMQAhIlCiFPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzXzY0X0tCUFMQBBIi",
+            "Ch5PVVRQVVRfQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQAxIfChtPVVRQVVRf",
+            "QVVESU9fRU5DT0RJTkdfTVVMQVcQBUKOAgohY29tLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzQhBBdWRpb0NvbmZpZ1Byb3RvUAFaMWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBiO2N4cGL4AQGi",
+            "AgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xl",
+            "OjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYz6kFVChthdXRvbWwuZ29vZ2xl",
+            "YXBpcy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.Cx.V3.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.Cx.V3.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -79,7 +85,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.InputAudioConfig), global::Google.Cloud.Dialogflow.Cx.V3.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "EnableWordInfo", "PhraseHints", "Model", "ModelVariant", "SingleUtterance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.VoiceSelectionParams), global::Google.Cloud.Dialogflow.Cx.V3.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.OutputAudioConfig), global::Google.Cloud.Dialogflow.Cx.V3.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.OutputAudioConfig), global::Google.Cloud.Dialogflow.Cx.V3.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.TextToSpeechSettings), global::Google.Cloud.Dialogflow.Cx.V3.TextToSpeechSettings.Parser, new[]{ "SynthesizeSpeechConfigs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -1948,6 +1955,192 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
               SynthesizeSpeechConfig = new global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig();
             }
             input.ReadMessage(SynthesizeSpeechConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Settings related to speech generating.
+  /// </summary>
+  public sealed partial class TextToSpeechSettings : pb::IMessage<TextToSpeechSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TextToSpeechSettings> _parser = new pb::MessageParser<TextToSpeechSettings>(() => new TextToSpeechSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TextToSpeechSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.AudioConfigReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TextToSpeechSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TextToSpeechSettings(TextToSpeechSettings other) : this() {
+      synthesizeSpeechConfigs_ = other.synthesizeSpeechConfigs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TextToSpeechSettings Clone() {
+      return new TextToSpeechSettings(this);
+    }
+
+    /// <summary>Field number for the "synthesize_speech_configs" field.</summary>
+    public const int SynthesizeSpeechConfigsFieldNumber = 1;
+    private static readonly pbc::MapField<string, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig>.Codec _map_synthesizeSpeechConfigs_codec
+        = new pbc::MapField<string, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig.Parser), 10);
+    private readonly pbc::MapField<string, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig> synthesizeSpeechConfigs_ = new pbc::MapField<string, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig>();
+    /// <summary>
+    /// Configuration of how speech should be synthesized, mapping from
+    /// language (https://dialogflow.com/docs/reference/language) to
+    /// SynthesizeSpeechConfig.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig> SynthesizeSpeechConfigs {
+      get { return synthesizeSpeechConfigs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TextToSpeechSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TextToSpeechSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!SynthesizeSpeechConfigs.Equals(other.SynthesizeSpeechConfigs)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= SynthesizeSpeechConfigs.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      synthesizeSpeechConfigs_.WriteTo(output, _map_synthesizeSpeechConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      synthesizeSpeechConfigs_.WriteTo(ref output, _map_synthesizeSpeechConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += synthesizeSpeechConfigs_.CalculateSize(_map_synthesizeSpeechConfigs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TextToSpeechSettings other) {
+      if (other == null) {
+        return;
+      }
+      synthesizeSpeechConfigs_.Add(other.synthesizeSpeechConfigs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            synthesizeSpeechConfigs_.AddEntriesFrom(input, _map_synthesizeSpeechConfigs_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            synthesizeSpeechConfigs_.AddEntriesFrom(ref input, _map_synthesizeSpeechConfigs_codec);
             break;
           }
         }

@@ -26,20 +26,23 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "CjVnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9hZHZhbmNlZF9zZXR0",
             "aW5ncy5wcm90bxIdZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMaH2dv",
-            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8iyAEKEEFkdmFuY2VkU2V0",
-            "dGluZ3MSWQoQbG9nZ2luZ19zZXR0aW5ncxgGIAEoCzI/Lmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LmN4LnYzLkFkdmFuY2VkU2V0dGluZ3MuTG9nZ2luZ1Nl",
-            "dHRpbmdzGlkKD0xvZ2dpbmdTZXR0aW5ncxIiChplbmFibGVfc3RhY2tkcml2",
-            "ZXJfbG9nZ2luZxgCIAEoCBIiChplbmFibGVfaW50ZXJhY3Rpb25fbG9nZ2lu",
-            "ZxgDIAEoCEK7AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
-            "QhVBZHZhbmNlZFNldHRpbmdzUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29v",
-            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpE",
-            "aWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aJ2dvb2dsZS9jbG91ZC9k",
+            "aWFsb2dmbG93L2N4L3YzL2djcy5wcm90byKdAgoQQWR2YW5jZWRTZXR0aW5n",
+            "cxJTChxhdWRpb19leHBvcnRfZ2NzX2Rlc3RpbmF0aW9uGAIgASgLMi0uZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuR2NzRGVzdGluYXRpb24SWQoQ",
+            "bG9nZ2luZ19zZXR0aW5ncxgGIAEoCzI/Lmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LmN4LnYzLkFkdmFuY2VkU2V0dGluZ3MuTG9nZ2luZ1NldHRpbmdzGlkK",
+            "D0xvZ2dpbmdTZXR0aW5ncxIiChplbmFibGVfc3RhY2tkcml2ZXJfbG9nZ2lu",
+            "ZxgCIAEoCBIiChplbmFibGVfaW50ZXJhY3Rpb25fbG9nZ2luZxgDIAEoCEK7",
+            "AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQhVBZHZhbmNl",
+            "ZFNldHRpbmdzUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dm",
+            "bG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3Vk",
+            "LkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93",
+            "OjpDWDo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.GcsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings), global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Parser, new[]{ "LoggingSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings), global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings.Parser, new[]{ "EnableStackdriverLogging", "EnableInteractionLogging" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings), global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Parser, new[]{ "AudioExportGcsDestination", "LoggingSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings), global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings.Parser, new[]{ "EnableStackdriverLogging", "EnableInteractionLogging" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -93,6 +96,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdvancedSettings(AdvancedSettings other) : this() {
+      audioExportGcsDestination_ = other.audioExportGcsDestination_ != null ? other.audioExportGcsDestination_.Clone() : null;
       loggingSettings_ = other.loggingSettings_ != null ? other.loggingSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -101,6 +105,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdvancedSettings Clone() {
       return new AdvancedSettings(this);
+    }
+
+    /// <summary>Field number for the "audio_export_gcs_destination" field.</summary>
+    public const int AudioExportGcsDestinationFieldNumber = 2;
+    private global::Google.Cloud.Dialogflow.Cx.V3.GcsDestination audioExportGcsDestination_;
+    /// <summary>
+    /// If present, incoming audio is exported by Dialogflow to the configured
+    /// Google Cloud Storage destination.
+    /// Exposed at the following levels:
+    /// - Agent level
+    /// - Flow level
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.GcsDestination AudioExportGcsDestination {
+      get { return audioExportGcsDestination_; }
+      set {
+        audioExportGcsDestination_ = value;
+      }
     }
 
     /// <summary>Field number for the "logging_settings" field.</summary>
@@ -137,6 +160,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(AudioExportGcsDestination, other.AudioExportGcsDestination)) return false;
       if (!object.Equals(LoggingSettings, other.LoggingSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,6 +169,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (audioExportGcsDestination_ != null) hash ^= AudioExportGcsDestination.GetHashCode();
       if (loggingSettings_ != null) hash ^= LoggingSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -164,6 +189,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (audioExportGcsDestination_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AudioExportGcsDestination);
+      }
       if (loggingSettings_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(LoggingSettings);
@@ -178,6 +207,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (audioExportGcsDestination_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AudioExportGcsDestination);
+      }
       if (loggingSettings_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(LoggingSettings);
@@ -192,6 +225,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (audioExportGcsDestination_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AudioExportGcsDestination);
+      }
       if (loggingSettings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoggingSettings);
       }
@@ -206,6 +242,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public void MergeFrom(AdvancedSettings other) {
       if (other == null) {
         return;
+      }
+      if (other.audioExportGcsDestination_ != null) {
+        if (audioExportGcsDestination_ == null) {
+          AudioExportGcsDestination = new global::Google.Cloud.Dialogflow.Cx.V3.GcsDestination();
+        }
+        AudioExportGcsDestination.MergeFrom(other.AudioExportGcsDestination);
       }
       if (other.loggingSettings_ != null) {
         if (loggingSettings_ == null) {
@@ -228,6 +270,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 18: {
+            if (audioExportGcsDestination_ == null) {
+              AudioExportGcsDestination = new global::Google.Cloud.Dialogflow.Cx.V3.GcsDestination();
+            }
+            input.ReadMessage(AudioExportGcsDestination);
+            break;
+          }
           case 50: {
             if (loggingSettings_ == null) {
               LoggingSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings();
@@ -250,6 +299,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 18: {
+            if (audioExportGcsDestination_ == null) {
+              AudioExportGcsDestination = new global::Google.Cloud.Dialogflow.Cx.V3.GcsDestination();
+            }
+            input.ReadMessage(AudioExportGcsDestination);
+            break;
+          }
           case 50: {
             if (loggingSettings_ == null) {
               LoggingSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings();
