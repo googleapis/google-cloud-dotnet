@@ -447,5 +447,24 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             long count = results["count"].IntegerValue;
             Assert.Equal(2, count);
         }
+
+        [Fact]
+        public void OrQueries()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("OrQuery");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("1"), ["age"] = 12,["level"] = 1  },
+                new Entity { Key = keyFactory.CreateKey("2"), ["age"] = 12,["level"] = 2  },
+                new Entity { Key = keyFactory.CreateKey("3"), ["age"] = 14,["level"] = 2  },
+                new Entity { Key = keyFactory.CreateKey("4"), ["age"] = 11,["level"] = 2  }
+            };
+
+            db.Insert(entities);
+            var query = new Query("OrQuery") { Filter = Filter.And(Filter.Equal("level", 2), Filter.Or(Filter.Equal("age", 14), Filter.Equal("age", 12))) };
+            var result = db.RunQuery(query);
+            Assert.Equal(2, result.Entities.Count);
+        }
     }
 }

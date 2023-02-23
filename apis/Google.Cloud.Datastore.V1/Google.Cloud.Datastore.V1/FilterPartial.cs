@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,7 +51,35 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="filters">Set of filters to combine. Must not be null or empty, or contain null references.</param>
         /// <returns>A filter representing the logical "AND" of all the elements in <paramref name="filters"/>.</returns>
         public static Filter And(params Filter[] filters) => And((IEnumerable<Filter>) filters);
-        
+
+        /// <summary>
+        /// Creates a composite filter which is the logical "OR" of all the specified filters.
+        /// </summary>
+        /// <param name="filters">Set of filters to combine. Must not be null or empty, or contain null references.</param>
+        /// <returns>A filter representing the logical "OR" of all the elements in <paramref name="filters"/>.</returns>
+        public static Filter Or(IEnumerable<Filter> filters)
+        {
+
+            Filter filter = new Filter
+            {
+                CompositeFilter = new CompositeFilter
+                {
+                    Op = CompositeFilter.Types.Operator.Or,
+                    Filters = { filters }
+                }
+            };
+            GaxPreconditions.CheckArgument(filter.CompositeFilter.Filters.Count != 0,
+                nameof(filters), "Filter collection must not be empty");
+            return filter;
+        }
+
+        /// <summary>
+        /// Creates a composite filter which is the logical "OR" of all the specified filters.
+        /// </summary>
+        /// <param name="filters">Set of filters to combine. Must not be null or empty, or contain null references.</param>
+        /// <returns>A filter representing the logical "OR" of all the elements in <paramref name="filters"/>.</returns>
+        public static Filter Or(params Filter[] filters) => Or((IEnumerable<Filter>) filters);
+
         /// <summary>
         /// Creates a filter to check that the specified property is equal to a given value.
         /// </summary>
