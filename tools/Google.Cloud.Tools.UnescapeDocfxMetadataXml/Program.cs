@@ -14,7 +14,7 @@
 
 
 // This console application finds all the yml files in the specified directory,
-// and removes any XML escaping from summary comments, only within backticks.
+// and removes any XML escaping from summary comments and parameter descriptions, only within backticks.
 
 using System.Text;
 using System.Text.RegularExpressions;
@@ -25,7 +25,9 @@ if (args.Length != 1)
     return 1;
 }
 
-Regex summaryRegex = new Regex("^  summary: \"(.*)\"$");
+// We assume that any "description" line with a suitable amount of whitespace should be
+// unescaped. This is definitely true for parameter descriptions, and is very unlikely to be harmful of other things.
+Regex pattern = new Regex("^(?<prefix>  summary:|      description:) \"(?<value>.*)\"$");
 
 foreach (var file in Directory.GetFiles(args[0], "*.yml"))
 {
@@ -36,11 +38,11 @@ foreach (var file in Directory.GetFiles(args[0], "*.yml"))
     var lines = File.ReadAllLines(file);
     for (int i = 0; i < lines.Length; i++)
     {
-        var match = summaryRegex.Match(lines[i]);
+        var match = pattern.Match(lines[i]);
         if (match.Success)
         {
-            var unescaped = Unescape(match.Groups[1].Value);
-            lines[i] = $"  summary: \"{unescaped}\"";
+            var unescaped = Unescape(match.Groups["value"].Value);
+            lines[i] = $"{match.Groups["prefix"].Value} \"{unescaped}\"";
         }
     }
     File.WriteAllLines(file, lines);
