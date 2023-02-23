@@ -59,7 +59,6 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>A filter representing the logical "OR" of all the elements in <paramref name="filters"/>.</returns>
         public static Filter Or(IEnumerable<Filter> filters)
         {
-
             Filter filter = new Filter
             {
                 CompositeFilter = new CompositeFilter
