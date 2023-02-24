@@ -1095,7 +1095,7 @@
       "type": "grpc",
       "productName": "Cloud Build",
       "productUrl": "https://cloud.google.com/cloud-build",
-      "description": "Recommended Google client library to access the Google Cloud Build API, which creates and manages builds on Google Cloud Platform.",
+      "description": "Recommended Google client library to access the Google Cloud Build API v1, which creates and manages builds on Google Cloud Platform.",
       "tags": [
         "build",
         "cloudbuild"
@@ -1111,6 +1111,27 @@
       "serviceConfigFile": "cloudbuild_v1.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest"
+    },
+    {
+      "id": "Google.Cloud.CloudBuild.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Build",
+      "description": "Recommended Google client library to access the Google Cloud Build API v2, which creates and manages builds on Google Cloud Platform.",
+      "tags": [
+        "build",
+        "cloudbuild"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/devtools/cloudbuild/v2",
+      "shortName": "cloudbuild",
+      "serviceConfigFile": "cloudbuild_v2.yaml",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.CloudDms.V1",
