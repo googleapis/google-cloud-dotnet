@@ -46,14 +46,11 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
             Console.WriteLine($"Finish analyzing changes.");
 
+            // Map from package group ID to all the changed APIs within it.
+            var skippedPackageGroups = new Dictionary<string, List<string>>();
+
             foreach (var api in catalog.Apis)
             {
-                // Don't even bother proposing package groups at the moment.
-                if (api.PackageGroup is object)
-                {
-                    continue;
-                }
-
                 var commits = pendingChangesByApi[api].Commits;
 
                 // Don't propose packages that haven't changed.
@@ -90,9 +87,30 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                     }
                 }
 
+                // Don't even bother proposing package groups at the moment.
+                if (api.PackageGroup is { Id: string packageGroupId })
+                {
+                    if (!skippedPackageGroups.TryGetValue(packageGroupId, out var changedApis))
+                    {
+                        changedApis = new List<string>();
+                        skippedPackageGroups[packageGroupId] = changedApis;
+                    }
+                    changedApis.Add(api.Id);
+                    continue;
+                }
+
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
                 yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
+            }
+
+            if (skippedPackageGroups.Any())
+            {
+                Console.WriteLine("Additionally, the following package groups had changes:");
+                foreach (var pair in skippedPackageGroups.OrderBy(pair => pair.Key, StringComparer.Ordinal))
+                {
+                    Console.WriteLine($"{pair.Key}: Changes in {string.Join(",", pair.Value)}");
+                }
             }
         }
     }
