@@ -13,7 +13,7 @@ declare -r DOTCOVER_VERSION=2019.3.4
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.21.3
 declare -r GRPC_VERSION=2.47.0
-declare -r GAPIC_GENERATOR_VERSION=1.4.10
+declare -r GAPIC_GENERATOR_VERSION=1.4.11
 
 # Tools that only run under Windows (at the moment)
 declare -r DOTCOVER=$TOOL_PACKAGES/JetBrains.dotCover.CommandLineTools.$DOTCOVER_VERSION/tools/dotCover.exe
