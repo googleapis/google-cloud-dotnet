@@ -14,13 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace Google.Cloud.ApigeeConnect.V1.Snippets
 {
     // [START apigeeconnect_v1_generated_Tether_Egress_sync]
     using Google.Api.Gax.Grpc;
-    using Google.Cloud.ApigeeConnect.V1;
     using Google.Rpc;
     using System.Threading.Tasks;
+    using gcav = Google.Cloud.ApigeeConnect.V1;
 
     public sealed partial class GeneratedTetherClientSnippets
     {
@@ -63,7 +65,7 @@ namespace Google.Cloud.ApigeeConnect.V1.Snippets
                 EgressResponse request = new EgressResponse
                 {
                     Id = "",
-                    HttpResponse = new HttpResponse(),
+                    HttpResponse = new gcav::HttpResponse(),
                     Status = new Status(),
                     Project = "",
                     TraceId = "",

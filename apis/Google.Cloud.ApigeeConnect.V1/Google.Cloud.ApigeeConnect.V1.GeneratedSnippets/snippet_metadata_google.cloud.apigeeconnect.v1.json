@@ -366,13 +366,13 @@
       "origin": "API_DEFINITION",
       "segments": [
         {
-          "start": 20,
-          "end": 84,
+          "start": 22,
+          "end": 86,
           "type": "FULL"
         },
         {
-          "start": 37,
-          "end": 82,
+          "start": 39,
+          "end": 84,
           "type": "SHORT"
         }
       ]
