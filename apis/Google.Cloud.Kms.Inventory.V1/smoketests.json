@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListCryptoKeys",
+    "client": "KeyDashboardServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]

@@ -2512,6 +2512,27 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.Kms.Inventory.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "KMS Inventory",
+      "productUrl": "https://cloud.google.com/kms/docs/",
+      "description": "Recommended Google client library to access the Google Cloud KMS Inventory API.",
+      "tags": [
+        "kms",
+        "keys",
+        "cryptography"
+      ],
+      "dependencies": {
+        "Google.Cloud.Kms.V1": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/kms/inventory/v1",
+      "shortName": "kmsinventory",
+      "serviceConfigFile": "kmsinventory_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Kms.V1",
       "generator": "micro",
       "protoPath": "google/cloud/kms/v1",
