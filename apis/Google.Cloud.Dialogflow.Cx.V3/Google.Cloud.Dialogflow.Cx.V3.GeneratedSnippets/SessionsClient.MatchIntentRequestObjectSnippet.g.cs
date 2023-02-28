@@ -39,6 +39,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                 SessionAsSessionName = SessionName.FromProjectLocationAgentSession("[PROJECT]", "[LOCATION]", "[AGENT]", "[SESSION]"),
                 QueryParams = new QueryParameters(),
                 QueryInput = new QueryInput(),
+                PersistParameterChanges = false,
             };
             // Make the request
             MatchIntentResponse response = sessionsClient.MatchIntent(request);
