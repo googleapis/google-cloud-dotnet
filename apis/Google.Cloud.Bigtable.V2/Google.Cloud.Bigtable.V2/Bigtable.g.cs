@@ -100,7 +100,7 @@ namespace Google.Cloud.Bigtable.V2 {
             "djIuU3RyZWFtQ29udGludWF0aW9uVG9rZW5zSAASLAoIZW5kX3RpbWUYBSAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjUKEmhlYXJ0YmVhdF9k",
             "dXJhdGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkIMCgpz",
-            "dGFydF9mcm9tIusJChhSZWFkQ2hhbmdlU3RyZWFtUmVzcG9uc2USTgoLZGF0",
+            "dGFydF9mcm9tIqkKChhSZWFkQ2hhbmdlU3RyZWFtUmVzcG9uc2USTgoLZGF0",
             "YV9jaGFuZ2UYASABKAsyNy5nb29nbGUuYmlndGFibGUudjIuUmVhZENoYW5n",
             "ZVN0cmVhbVJlc3BvbnNlLkRhdGFDaGFuZ2VIABJLCgloZWFydGJlYXQYAiAB",
             "KAsyNi5nb29nbGUuYmlndGFibGUudjIuUmVhZENoYW5nZVN0cmVhbVJlc3Bv",
@@ -125,88 +125,90 @@ namespace Google.Cloud.Bigtable.V2 {
             "dGJlYXQSRwoSY29udGludWF0aW9uX3Rva2VuGAEgASgLMisuZ29vZ2xlLmJp",
             "Z3RhYmxlLnYyLlN0cmVhbUNvbnRpbnVhdGlvblRva2VuEjsKF2VzdGltYXRl",
             "ZF9sb3dfd2F0ZXJtYXJrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBp7CgtDbG9zZVN0cmVhbRIiCgZzdGF0dXMYASABKAsyEi5nb29nbGUu",
-            "cnBjLlN0YXR1cxJIChNjb250aW51YXRpb25fdG9rZW5zGAIgAygLMisuZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyLlN0cmVhbUNvbnRpbnVhdGlvblRva2VuQg8KDXN0",
-            "cmVhbV9yZWNvcmQy1xgKCEJpZ3RhYmxlEpsCCghSZWFkUm93cxIjLmdvb2ds",
-            "ZS5iaWd0YWJsZS52Mi5SZWFkUm93c1JlcXVlc3QaJC5nb29nbGUuYmlndGFi",
-            "bGUudjIuUmVhZFJvd3NSZXNwb25zZSLBAYLT5JMCPiI5L3YyL3t0YWJsZV9u",
-            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9OnJlYWRSb3dz",
-            "OgEqitPkkwJOEjoKCnRhYmxlX25hbWUSLHt0YWJsZV9uYW1lPXByb2plY3Rz",
-            "LyovaW5zdGFuY2VzLyovdGFibGVzLyp9EhAKDmFwcF9wcm9maWxlX2lk2kEK",
-            "dGFibGVfbmFtZdpBGXRhYmxlX25hbWUsYXBwX3Byb2ZpbGVfaWQwARKsAgoN",
-            "U2FtcGxlUm93S2V5cxIoLmdvb2dsZS5iaWd0YWJsZS52Mi5TYW1wbGVSb3dL",
-            "ZXlzUmVxdWVzdBopLmdvb2dsZS5iaWd0YWJsZS52Mi5TYW1wbGVSb3dLZXlz",
-            "UmVzcG9uc2UiwwGC0+STAkASPi92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8q",
-            "L2luc3RhbmNlcy8qL3RhYmxlcy8qfTpzYW1wbGVSb3dLZXlzitPkkwJOEjoK",
-            "CnRhYmxlX25hbWUSLHt0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2Vz",
-            "LyovdGFibGVzLyp9EhAKDmFwcF9wcm9maWxlX2lk2kEKdGFibGVfbmFtZdpB",
-            "GXRhYmxlX25hbWUsYXBwX3Byb2ZpbGVfaWQwARLBAgoJTXV0YXRlUm93EiQu",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0ZVJvd1JlcXVlc3QaJS5nb29nbGUu",
-            "YmlndGFibGUudjIuTXV0YXRlUm93UmVzcG9uc2Ui5gGC0+STAj8iOi92Mi97",
-            "dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpt",
-            "dXRhdGVSb3c6ASqK0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9",
-            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2Zp",
-            "bGVfaWTaQRx0YWJsZV9uYW1lLHJvd19rZXksbXV0YXRpb25z2kErdGFibGVf",
-            "bmFtZSxyb3dfa2V5LG11dGF0aW9ucyxhcHBfcHJvZmlsZV9pZBKzAgoKTXV0",
-            "YXRlUm93cxIlLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVxdWVz",
-            "dBomLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dzUmVzcG9uc2Ui0wGC",
-            "0+STAkAiOy92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
-            "L3RhYmxlcy8qfTptdXRhdGVSb3dzOgEqitPkkwJOEjoKCnRhYmxlX25hbWUS",
-            "LHt0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9",
-            "EhAKDmFwcF9wcm9maWxlX2lk2kESdGFibGVfbmFtZSxlbnRyaWVz2kEhdGFi",
-            "bGVfbmFtZSxlbnRyaWVzLGFwcF9wcm9maWxlX2lkMAESrQMKEUNoZWNrQW5k",
-            "TXV0YXRlUm93EiwuZ29vZ2xlLmJpZ3RhYmxlLnYyLkNoZWNrQW5kTXV0YXRl",
-            "Um93UmVxdWVzdBotLmdvb2dsZS5iaWd0YWJsZS52Mi5DaGVja0FuZE11dGF0",
-            "ZVJvd1Jlc3BvbnNlIroCgtPkkwJHIkIvdjIve3RhYmxlX25hbWU9cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06Y2hlY2tBbmRNdXRhdGVSb3c6",
-            "ASqK0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2ZpbGVfaWTaQUJ0",
-            "YWJsZV9uYW1lLHJvd19rZXkscHJlZGljYXRlX2ZpbHRlcix0cnVlX211dGF0",
-            "aW9ucyxmYWxzZV9tdXRhdGlvbnPaQVF0YWJsZV9uYW1lLHJvd19rZXkscHJl",
-            "ZGljYXRlX2ZpbHRlcix0cnVlX211dGF0aW9ucyxmYWxzZV9tdXRhdGlvbnMs",
-            "YXBwX3Byb2ZpbGVfaWQS7gEKC1BpbmdBbmRXYXJtEiYuZ29vZ2xlLmJpZ3Rh",
-            "YmxlLnYyLlBpbmdBbmRXYXJtUmVxdWVzdBonLmdvb2dsZS5iaWd0YWJsZS52",
-            "Mi5QaW5nQW5kV2FybVJlc3BvbnNlIo0BgtPkkwIrIiYvdjIve25hbWU9cHJv",
-            "amVjdHMvKi9pbnN0YW5jZXMvKn06cGluZzoBKorT5JMCORIlCgRuYW1lEh17",
-            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfRIQCg5hcHBfcHJvZmlsZV9p",
-            "ZNpBBG5hbWXaQRNuYW1lLGFwcF9wcm9maWxlX2lkEt0CChJSZWFkTW9kaWZ5",
-            "V3JpdGVSb3cSLS5nb29nbGUuYmlndGFibGUudjIuUmVhZE1vZGlmeVdyaXRl",
-            "Um93UmVxdWVzdBouLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkTW9kaWZ5V3Jp",
-            "dGVSb3dSZXNwb25zZSLnAYLT5JMCSCJDL3YyL3t0YWJsZV9uYW1lPXByb2pl",
-            "Y3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9OnJlYWRNb2RpZnlXcml0ZVJv",
-            "dzoBKorT5JMCThI6Cgp0YWJsZV9uYW1lEix7dGFibGVfbmFtZT1wcm9qZWN0",
-            "cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfRIQCg5hcHBfcHJvZmlsZV9pZNpB",
-            "GHRhYmxlX25hbWUscm93X2tleSxydWxlc9pBJ3RhYmxlX25hbWUscm93X2tl",
-            "eSxydWxlcyxhcHBfcHJvZmlsZV9pZBK7AgolR2VuZXJhdGVJbml0aWFsQ2hh",
-            "bmdlU3RyZWFtUGFydGl0aW9ucxJALmdvb2dsZS5iaWd0YWJsZS52Mi5HZW5l",
-            "cmF0ZUluaXRpYWxDaGFuZ2VTdHJlYW1QYXJ0aXRpb25zUmVxdWVzdBpBLmdv",
-            "b2dsZS5iaWd0YWJsZS52Mi5HZW5lcmF0ZUluaXRpYWxDaGFuZ2VTdHJlYW1Q",
-            "YXJ0aXRpb25zUmVzcG9uc2UiigGC0+STAlsiVi92Mi97dGFibGVfbmFtZT1w",
-            "cm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpnZW5lcmF0ZUluaXRp",
-            "YWxDaGFuZ2VTdHJlYW1QYXJ0aXRpb25zOgEq2kEKdGFibGVfbmFtZdpBGXRh",
-            "YmxlX25hbWUsYXBwX3Byb2ZpbGVfaWQwARLmAQoQUmVhZENoYW5nZVN0cmVh",
-            "bRIrLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdlU3RyZWFtUmVxdWVz",
-            "dBosLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdlU3RyZWFtUmVzcG9u",
-            "c2UidYLT5JMCRiJBL3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFu",
-            "Y2VzLyovdGFibGVzLyp9OnJlYWRDaGFuZ2VTdHJlYW06ASraQQp0YWJsZV9u",
-            "YW1l2kEZdGFibGVfbmFtZSxhcHBfcHJvZmlsZV9pZDABGtsCykEXYmlndGFi",
-            "bGUuZ29vZ2xlYXBpcy5jb23SQb0CaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9iaWd0YWJsZS5kYXRhLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvYmlndGFibGUuZGF0YS5yZWFkb25seSxodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLWJpZ3RhYmxlLmRhdGEsaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1iaWd0YWJsZS5kYXRh",
-            "LnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
-            "dWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybS5yZWFkLW9ubHlC6wIKFmNvbS5nb29nbGUuYmlndGFi",
-            "bGUudjJCDUJpZ3RhYmxlUHJvdG9QAVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS92MjtiaWd0YWJsZaoCGEdvb2ds",
-            "ZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJsZVxW",
-            "MuoCG0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMupBUAolYmlndGFibGVh",
-            "ZG1pbi5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2pl",
-            "Y3R9L2luc3RhbmNlcy97aW5zdGFuY2V96kFcCiJiaWd0YWJsZWFkbWluLmdv",
-            "b2dsZWFwaXMuY29tL1RhYmxlEjZwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFu",
-            "Y2VzL3tpbnN0YW5jZX0vdGFibGVzL3t0YWJsZX1iBnByb3RvMw=="));
+            "dGFtcBq4AQoLQ2xvc2VTdHJlYW0SIgoGc3RhdHVzGAEgASgLMhIuZ29vZ2xl",
+            "LnJwYy5TdGF0dXMSSAoTY29udGludWF0aW9uX3Rva2VucxgCIAMoCzIrLmdv",
+            "b2dsZS5iaWd0YWJsZS52Mi5TdHJlYW1Db250aW51YXRpb25Ub2tlbhI7Cg5u",
+            "ZXdfcGFydGl0aW9ucxgDIAMoCzIjLmdvb2dsZS5iaWd0YWJsZS52Mi5TdHJl",
+            "YW1QYXJ0aXRpb25CDwoNc3RyZWFtX3JlY29yZDLXGAoIQmlndGFibGUSmwIK",
+            "CFJlYWRSb3dzEiMuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRSb3dzUmVxdWVz",
+            "dBokLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1Jlc3BvbnNlIsEBgtPk",
+            "kwI+IjkvdjIve3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90",
+            "YWJsZXMvKn06cmVhZFJvd3M6ASqK0+STAk4SOgoKdGFibGVfbmFtZRIse3Rh",
+            "YmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoO",
+            "YXBwX3Byb2ZpbGVfaWTaQQp0YWJsZV9uYW1l2kEZdGFibGVfbmFtZSxhcHBf",
+            "cHJvZmlsZV9pZDABEqwCCg1TYW1wbGVSb3dLZXlzEiguZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyLlNhbXBsZVJvd0tleXNSZXF1ZXN0GikuZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLlNhbXBsZVJvd0tleXNSZXNwb25zZSLDAYLT5JMCQBI+L3YyL3t0YWJs",
+            "ZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9OnNhbXBs",
+            "ZVJvd0tleXOK0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9cHJv",
+            "amVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2ZpbGVf",
+            "aWTaQQp0YWJsZV9uYW1l2kEZdGFibGVfbmFtZSxhcHBfcHJvZmlsZV9pZDAB",
+            "EsECCglNdXRhdGVSb3cSJC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRlUm93",
+            "UmVxdWVzdBolLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dSZXNwb25z",
+            "ZSLmAYLT5JMCPyI6L3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyovdGFibGVzLyp9Om11dGF0ZVJvdzoBKorT5JMCThI6Cgp0YWJsZV9u",
+            "YW1lEix7dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxl",
+            "cy8qfRIQCg5hcHBfcHJvZmlsZV9pZNpBHHRhYmxlX25hbWUscm93X2tleSxt",
+            "dXRhdGlvbnPaQSt0YWJsZV9uYW1lLHJvd19rZXksbXV0YXRpb25zLGFwcF9w",
+            "cm9maWxlX2lkErMCCgpNdXRhdGVSb3dzEiUuZ29vZ2xlLmJpZ3RhYmxlLnYy",
+            "Lk11dGF0ZVJvd3NSZXF1ZXN0GiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0",
+            "ZVJvd3NSZXNwb25zZSLTAYLT5JMCQCI7L3YyL3t0YWJsZV9uYW1lPXByb2pl",
+            "Y3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9Om11dGF0ZVJvd3M6ASqK0+ST",
+            "Ak4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0",
+            "YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2ZpbGVfaWTaQRJ0YWJsZV9u",
+            "YW1lLGVudHJpZXPaQSF0YWJsZV9uYW1lLGVudHJpZXMsYXBwX3Byb2ZpbGVf",
+            "aWQwARKtAwoRQ2hlY2tBbmRNdXRhdGVSb3cSLC5nb29nbGUuYmlndGFibGUu",
+            "djIuQ2hlY2tBbmRNdXRhdGVSb3dSZXF1ZXN0Gi0uZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLkNoZWNrQW5kTXV0YXRlUm93UmVzcG9uc2UiugKC0+STAkciQi92Mi97",
+            "dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpj",
+            "aGVja0FuZE11dGF0ZVJvdzoBKorT5JMCThI6Cgp0YWJsZV9uYW1lEix7dGFi",
+            "bGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfRIQCg5h",
+            "cHBfcHJvZmlsZV9pZNpBQnRhYmxlX25hbWUscm93X2tleSxwcmVkaWNhdGVf",
+            "ZmlsdGVyLHRydWVfbXV0YXRpb25zLGZhbHNlX211dGF0aW9uc9pBUXRhYmxl",
+            "X25hbWUscm93X2tleSxwcmVkaWNhdGVfZmlsdGVyLHRydWVfbXV0YXRpb25z",
+            "LGZhbHNlX211dGF0aW9ucyxhcHBfcHJvZmlsZV9pZBLuAQoLUGluZ0FuZFdh",
+            "cm0SJi5nb29nbGUuYmlndGFibGUudjIuUGluZ0FuZFdhcm1SZXF1ZXN0Gicu",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlBpbmdBbmRXYXJtUmVzcG9uc2UijQGC0+ST",
+            "AisiJi92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfTpwaW5nOgEq",
+            "itPkkwI5EiUKBG5hbWUSHXtuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9",
+            "EhAKDmFwcF9wcm9maWxlX2lk2kEEbmFtZdpBE25hbWUsYXBwX3Byb2ZpbGVf",
+            "aWQS3QIKElJlYWRNb2RpZnlXcml0ZVJvdxItLmdvb2dsZS5iaWd0YWJsZS52",
+            "Mi5SZWFkTW9kaWZ5V3JpdGVSb3dSZXF1ZXN0Gi4uZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLlJlYWRNb2RpZnlXcml0ZVJvd1Jlc3BvbnNlIucBgtPkkwJIIkMvdjIv",
+            "e3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06",
+            "cmVhZE1vZGlmeVdyaXRlUm93OgEqitPkkwJOEjoKCnRhYmxlX25hbWUSLHt0",
+            "YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9EhAK",
+            "DmFwcF9wcm9maWxlX2lk2kEYdGFibGVfbmFtZSxyb3dfa2V5LHJ1bGVz2kEn",
+            "dGFibGVfbmFtZSxyb3dfa2V5LHJ1bGVzLGFwcF9wcm9maWxlX2lkErsCCiVH",
+            "ZW5lcmF0ZUluaXRpYWxDaGFuZ2VTdHJlYW1QYXJ0aXRpb25zEkAuZ29vZ2xl",
+            "LmJpZ3RhYmxlLnYyLkdlbmVyYXRlSW5pdGlhbENoYW5nZVN0cmVhbVBhcnRp",
+            "dGlvbnNSZXF1ZXN0GkEuZ29vZ2xlLmJpZ3RhYmxlLnYyLkdlbmVyYXRlSW5p",
+            "dGlhbENoYW5nZVN0cmVhbVBhcnRpdGlvbnNSZXNwb25zZSKKAYLT5JMCWyJW",
+            "L3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVz",
+            "Lyp9OmdlbmVyYXRlSW5pdGlhbENoYW5nZVN0cmVhbVBhcnRpdGlvbnM6ASra",
+            "QQp0YWJsZV9uYW1l2kEZdGFibGVfbmFtZSxhcHBfcHJvZmlsZV9pZDABEuYB",
+            "ChBSZWFkQ2hhbmdlU3RyZWFtEisuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRD",
+            "aGFuZ2VTdHJlYW1SZXF1ZXN0GiwuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRD",
+            "aGFuZ2VTdHJlYW1SZXNwb25zZSJ1gtPkkwJGIkEvdjIve3RhYmxlX25hbWU9",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06cmVhZENoYW5nZVN0",
+            "cmVhbToBKtpBCnRhYmxlX25hbWXaQRl0YWJsZV9uYW1lLGFwcF9wcm9maWxl",
+            "X2lkMAEa2wLKQRdiaWd0YWJsZS5nb29nbGVhcGlzLmNvbdJBvQJodHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3RhYmxlLmRhdGEsaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9iaWd0YWJsZS5kYXRhLnJlYWRv",
+            "bmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtYmln",
+            "dGFibGUuZGF0YSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
+            "b3VkLWJpZ3RhYmxlLmRhdGEucmVhZG9ubHksaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seULrAgoW",
+            "Y29tLmdvb2dsZS5iaWd0YWJsZS52MkINQmlndGFibGVQcm90b1ABWjpnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL3Yy",
+            "O2JpZ3RhYmxlqgIYR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xl",
+            "XENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6",
+            "OlYy6kFQCiViaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNl",
+            "Eidwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX3qQVwK",
+            "ImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSNnByb2plY3Rz",
+            "L3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS90YWJsZXMve3RhYmxl",
+            "fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor, global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -230,7 +232,7 @@ namespace Google.Cloud.Bigtable.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Parser, new[]{ "DataChange", "Heartbeat", "CloseStream" }, new[]{ "StreamRecord" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Parser, new[]{ "ChunkInfo", "Mutation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.MutationChunk.Types.ChunkInfo.Parser, new[]{ "ChunkedValueSize", "ChunkedValueOffset", "LastChunk" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Parser, new[]{ "Type", "SourceClusterId", "RowKey", "CommitTimestamp", "Tiebreaker", "Chunks", "Done", "Token", "EstimatedLowWatermark" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.DataChange.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.Heartbeat.Parser, new[]{ "ContinuationToken", "EstimatedLowWatermark" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream.Parser, new[]{ "Status", "ContinuationTokens" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream), global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Types.CloseStream.Parser, new[]{ "Status", "ContinuationTokens", "NewPartitions" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -7689,10 +7691,25 @@ namespace Google.Cloud.Bigtable.V2 {
 
       /// <summary>
       /// A message indicating that the client should stop reading from the stream.
-      /// If status is OK and `continuation_tokens` is empty, the stream has finished
-      /// (for example if there was an `end_time` specified).
-      /// If `continuation_tokens` is present, then a change in partitioning requires
-      /// the client to open a new stream for each token to resume reading.
+      /// If status is OK and `continuation_tokens` &amp; `new_partitions` are empty, the
+      /// stream has finished (for example if there was an `end_time` specified).
+      /// If `continuation_tokens` &amp; `new_partitions` are present, then a change in
+      /// partitioning requires the client to open a new stream for each token to
+      /// resume reading. Example:
+      ///                                  [B,      D) ends
+      ///                                       |
+      ///                                       v
+      ///               new_partitions:  [A,  C) [C,  E)
+      /// continuation_tokens.partitions:  [B,C) [C,D)
+      ///                                  ^---^ ^---^
+      ///                                  ^     ^
+      ///                                  |     |
+      ///                                  |     StreamContinuationToken 2
+      ///                                  |
+      ///                                  StreamContinuationToken 1
+      /// To read the new partition [A,C), supply the continuation tokens whose
+      /// ranges cover the new partition, for example ContinuationToken[A,B) &amp;
+      /// ContinuationToken[B,C).
       /// </summary>
       public sealed partial class CloseStream : pb::IMessage<CloseStream>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7730,6 +7747,7 @@ namespace Google.Cloud.Bigtable.V2 {
         public CloseStream(CloseStream other) : this() {
           status_ = other.status_ != null ? other.status_.Clone() : null;
           continuationTokens_ = other.continuationTokens_.Clone();
+          newPartitions_ = other.newPartitions_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -7760,13 +7778,29 @@ namespace Google.Cloud.Bigtable.V2 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.V2.StreamContinuationToken.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamContinuationToken> continuationTokens_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamContinuationToken>();
         /// <summary>
-        /// If non-empty, contains the information needed to start reading the new
-        /// partition(s) that contain segments of this partition's row range.
+        /// If non-empty, contains the information needed to resume reading their
+        /// associated partitions.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamContinuationToken> ContinuationTokens {
           get { return continuationTokens_; }
+        }
+
+        /// <summary>Field number for the "new_partitions" field.</summary>
+        public const int NewPartitionsFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.StreamPartition> _repeated_newPartitions_codec
+            = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Bigtable.V2.StreamPartition.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamPartition> newPartitions_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamPartition>();
+        /// <summary>
+        /// If non-empty, contains the new partitions to start reading from, which
+        /// are related to but not necessarily identical to the partitions for the
+        /// above `continuation_tokens`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.StreamPartition> NewPartitions {
+          get { return newPartitions_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7786,6 +7820,7 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           if (!object.Equals(Status, other.Status)) return false;
           if(!continuationTokens_.Equals(other.continuationTokens_)) return false;
+          if(!newPartitions_.Equals(other.newPartitions_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -7795,6 +7830,7 @@ namespace Google.Cloud.Bigtable.V2 {
           int hash = 1;
           if (status_ != null) hash ^= Status.GetHashCode();
           hash ^= continuationTokens_.GetHashCode();
+          hash ^= newPartitions_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -7818,6 +7854,7 @@ namespace Google.Cloud.Bigtable.V2 {
             output.WriteMessage(Status);
           }
           continuationTokens_.WriteTo(output, _repeated_continuationTokens_codec);
+          newPartitions_.WriteTo(output, _repeated_newPartitions_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -7833,6 +7870,7 @@ namespace Google.Cloud.Bigtable.V2 {
             output.WriteMessage(Status);
           }
           continuationTokens_.WriteTo(ref output, _repeated_continuationTokens_codec);
+          newPartitions_.WriteTo(ref output, _repeated_newPartitions_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -7847,6 +7885,7 @@ namespace Google.Cloud.Bigtable.V2 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
           }
           size += continuationTokens_.CalculateSize(_repeated_continuationTokens_codec);
+          size += newPartitions_.CalculateSize(_repeated_newPartitions_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -7866,6 +7905,7 @@ namespace Google.Cloud.Bigtable.V2 {
             Status.MergeFrom(other.Status);
           }
           continuationTokens_.Add(other.continuationTokens_);
+          newPartitions_.Add(other.newPartitions_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -7892,6 +7932,10 @@ namespace Google.Cloud.Bigtable.V2 {
                 continuationTokens_.AddEntriesFrom(input, _repeated_continuationTokens_codec);
                 break;
               }
+              case 26: {
+                newPartitions_.AddEntriesFrom(input, _repeated_newPartitions_codec);
+                break;
+              }
             }
           }
         #endif
@@ -7916,6 +7960,10 @@ namespace Google.Cloud.Bigtable.V2 {
               }
               case 18: {
                 continuationTokens_.AddEntriesFrom(ref input, _repeated_continuationTokens_codec);
+                break;
+              }
+              case 26: {
+                newPartitions_.AddEntriesFrom(ref input, _repeated_newPartitions_codec);
                 break;
               }
             }
