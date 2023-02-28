@@ -17,6 +17,14 @@ sed -i s/SubscriberServiceApi.Descriptor/Subscriber.Descriptor/g Google.Cloud.Pu
 sed -i 's/"PublisherServiceApi": {/"Publisher": {/g' gapic_metadata.json
 sed -i 's/"SubscriberServiceApi": {/"Subscriber": {/g' gapic_metadata.json
 
+# Fix up the snippet metadata (carefully)
+sed -i 's/v1.PublisherServiceApi/v1.Publisher/g' Google.Cloud.PubSub.V1.GeneratedSnippets/snippet_metadata_google.pubsub.v1.json
+sed -i 's/v1.SubscriberServiceApi/v1.Subscriber/g' Google.Cloud.PubSub.V1.GeneratedSnippets/snippet_metadata_google.pubsub.v1.json
+sed -i 's/generated_PublisherServiceApi/generated_Publisher/g' Google.Cloud.PubSub.V1.GeneratedSnippets/snippet_metadata_google.pubsub.v1.json
+sed -i 's/generated_SubscriberServiceApi/generated_Subscriber/g' Google.Cloud.PubSub.V1.GeneratedSnippets/snippet_metadata_google.pubsub.v1.json
+sed -i 's/"shortName": "PublisherServiceApi"/"shortName": "Publisher"/g' Google.Cloud.PubSub.V1.GeneratedSnippets/snippet_metadata_google.pubsub.v1.json
+sed -i 's/"shortName": "SubscriberServiceApi"/"shortName": "Subscriber"/g' Google.Cloud.PubSub.V1.GeneratedSnippets/snippet_metadata_google.pubsub.v1.json
+
 # Fix up generated partial classes for the gRPC clients.
 # (The matching is slightly fiddly as we generate other, similarly named, partial classes.)
 sed -i 's/static partial class PublisherServiceApi/static partial class Publisher/g' Google.Cloud.PubSub.V1/PublisherServiceApiClient.g.cs
