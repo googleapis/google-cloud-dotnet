@@ -11,7 +11,7 @@
   },
   "snippets": [
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadRows_sync",
       "title": "ReadRowsRequestObject",
       "description": "Snippet for ReadRows",
       "file": "BigtableServiceApiClient.ReadRowsRequestObjectSnippet.g.cs",
@@ -36,10 +36,10 @@
         },
         "method": {
           "shortName": "ReadRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "fullName": "google.bigtable.v2.Bigtable.ReadRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadRows_sync_flattened1",
       "title": "ReadRows1",
       "description": "Snippet for ReadRows",
       "file": "BigtableServiceApiClient.ReadRows1Snippet.g.cs",
@@ -84,10 +84,10 @@
         },
         "method": {
           "shortName": "ReadRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "fullName": "google.bigtable.v2.Bigtable.ReadRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadRows_sync_flattened1_resourceNames",
       "title": "ReadRows1ResourceNames",
       "description": "Snippet for ReadRows",
       "file": "BigtableServiceApiClient.ReadRows1ResourceNamesSnippet.g.cs",
@@ -131,10 +131,10 @@
         },
         "method": {
           "shortName": "ReadRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "fullName": "google.bigtable.v2.Bigtable.ReadRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadRows_sync_flattened2",
       "title": "ReadRows2",
       "description": "Snippet for ReadRows",
       "file": "BigtableServiceApiClient.ReadRows2Snippet.g.cs",
@@ -182,10 +182,10 @@
         },
         "method": {
           "shortName": "ReadRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "fullName": "google.bigtable.v2.Bigtable.ReadRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -204,7 +204,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadRows_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadRows_sync_flattened2_resourceNames",
       "title": "ReadRows2ResourceNames",
       "description": "Snippet for ReadRows",
       "file": "BigtableServiceApiClient.ReadRows2ResourceNamesSnippet.g.cs",
@@ -233,10 +233,10 @@
         },
         "method": {
           "shortName": "ReadRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadRows",
+          "fullName": "google.bigtable.v2.Bigtable.ReadRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_SampleRowKeys_sync",
       "title": "SampleRowKeysRequestObject",
       "description": "Snippet for SampleRowKeys",
       "file": "BigtableServiceApiClient.SampleRowKeysRequestObjectSnippet.g.cs",
@@ -280,10 +280,10 @@
         },
         "method": {
           "shortName": "SampleRowKeys",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "fullName": "google.bigtable.v2.Bigtable.SampleRowKeys",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened1",
       "title": "SampleRowKeys1",
       "description": "Snippet for SampleRowKeys",
       "file": "BigtableServiceApiClient.SampleRowKeys1Snippet.g.cs",
@@ -328,10 +328,10 @@
         },
         "method": {
           "shortName": "SampleRowKeys",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "fullName": "google.bigtable.v2.Bigtable.SampleRowKeys",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -350,7 +350,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened1_resourceNames",
       "title": "SampleRowKeys1ResourceNames",
       "description": "Snippet for SampleRowKeys",
       "file": "BigtableServiceApiClient.SampleRowKeys1ResourceNamesSnippet.g.cs",
@@ -375,10 +375,10 @@
         },
         "method": {
           "shortName": "SampleRowKeys",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "fullName": "google.bigtable.v2.Bigtable.SampleRowKeys",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -397,7 +397,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened2",
       "title": "SampleRowKeys2",
       "description": "Snippet for SampleRowKeys",
       "file": "BigtableServiceApiClient.SampleRowKeys2Snippet.g.cs",
@@ -426,10 +426,10 @@
         },
         "method": {
           "shortName": "SampleRowKeys",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "fullName": "google.bigtable.v2.Bigtable.SampleRowKeys",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -448,7 +448,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened2_resourceNames",
       "title": "SampleRowKeys2ResourceNames",
       "description": "Snippet for SampleRowKeys",
       "file": "BigtableServiceApiClient.SampleRowKeys2ResourceNamesSnippet.g.cs",
@@ -477,10 +477,10 @@
         },
         "method": {
           "shortName": "SampleRowKeys",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.SampleRowKeys",
+          "fullName": "google.bigtable.v2.Bigtable.SampleRowKeys",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -499,7 +499,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_sync",
       "title": "MutateRowRequestObject",
       "description": "Snippet for MutateRow",
       "file": "BigtableServiceApiClient.MutateRowRequestObjectSnippet.g.cs",
@@ -524,10 +524,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -547,7 +547,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_async",
       "title": "MutateRowRequestObjectAsync",
       "description": "Snippet for MutateRowAsync",
       "file": "BigtableServiceApiClient.MutateRowRequestObjectAsyncSnippet.g.cs",
@@ -573,10 +573,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -596,7 +596,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_sync_flattened1",
       "title": "MutateRow1",
       "description": "Snippet for MutateRow",
       "file": "BigtableServiceApiClient.MutateRow1Snippet.g.cs",
@@ -629,10 +629,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -651,7 +651,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_async_flattened1",
       "title": "MutateRow1Async",
       "description": "Snippet for MutateRowAsync",
       "file": "BigtableServiceApiClient.MutateRow1AsyncSnippet.g.cs",
@@ -685,10 +685,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -707,7 +707,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_sync_flattened1_resourceNames",
       "title": "MutateRow1ResourceNames",
       "description": "Snippet for MutateRow",
       "file": "BigtableServiceApiClient.MutateRow1ResourceNamesSnippet.g.cs",
@@ -740,10 +740,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -762,7 +762,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_async_flattened1_resourceNames",
       "title": "MutateRow1ResourceNamesAsync",
       "description": "Snippet for MutateRowAsync",
       "file": "BigtableServiceApiClient.MutateRow1ResourceNamesAsyncSnippet.g.cs",
@@ -796,10 +796,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -818,7 +818,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_sync_flattened2",
       "title": "MutateRow2",
       "description": "Snippet for MutateRow",
       "file": "BigtableServiceApiClient.MutateRow2Snippet.g.cs",
@@ -855,10 +855,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -877,7 +877,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_async_flattened2",
       "title": "MutateRow2Async",
       "description": "Snippet for MutateRowAsync",
       "file": "BigtableServiceApiClient.MutateRow2AsyncSnippet.g.cs",
@@ -915,10 +915,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -937,7 +937,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_sync_flattened2_resourceNames",
       "title": "MutateRow2ResourceNames",
       "description": "Snippet for MutateRow",
       "file": "BigtableServiceApiClient.MutateRow2ResourceNamesSnippet.g.cs",
@@ -974,10 +974,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -996,7 +996,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRow_async_flattened2_resourceNames",
       "title": "MutateRow2ResourceNamesAsync",
       "description": "Snippet for MutateRowAsync",
       "file": "BigtableServiceApiClient.MutateRow2ResourceNamesAsyncSnippet.g.cs",
@@ -1034,10 +1034,10 @@
         },
         "method": {
           "shortName": "MutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1056,7 +1056,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRows_sync",
       "title": "MutateRowsRequestObject",
       "description": "Snippet for MutateRows",
       "file": "BigtableServiceApiClient.MutateRowsRequestObjectSnippet.g.cs",
@@ -1081,10 +1081,10 @@
         },
         "method": {
           "shortName": "MutateRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1104,7 +1104,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRows_sync_flattened1",
       "title": "MutateRows1",
       "description": "Snippet for MutateRows",
       "file": "BigtableServiceApiClient.MutateRows1Snippet.g.cs",
@@ -1133,10 +1133,10 @@
         },
         "method": {
           "shortName": "MutateRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1155,7 +1155,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRows_sync_flattened1_resourceNames",
       "title": "MutateRows1ResourceNames",
       "description": "Snippet for MutateRows",
       "file": "BigtableServiceApiClient.MutateRows1ResourceNamesSnippet.g.cs",
@@ -1184,10 +1184,10 @@
         },
         "method": {
           "shortName": "MutateRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1206,7 +1206,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRows_sync_flattened2",
       "title": "MutateRows2",
       "description": "Snippet for MutateRows",
       "file": "BigtableServiceApiClient.MutateRows2Snippet.g.cs",
@@ -1239,10 +1239,10 @@
         },
         "method": {
           "shortName": "MutateRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1261,7 +1261,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_MutateRows_sync_flattened2_resourceNames",
       "title": "MutateRows2ResourceNames",
       "description": "Snippet for MutateRows",
       "file": "BigtableServiceApiClient.MutateRows2ResourceNamesSnippet.g.cs",
@@ -1294,10 +1294,10 @@
         },
         "method": {
           "shortName": "MutateRows",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.MutateRows",
+          "fullName": "google.bigtable.v2.Bigtable.MutateRows",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1316,7 +1316,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_sync",
       "title": "CheckAndMutateRowRequestObject",
       "description": "Snippet for CheckAndMutateRow",
       "file": "BigtableServiceApiClient.CheckAndMutateRowRequestObjectSnippet.g.cs",
@@ -1341,10 +1341,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1364,7 +1364,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_async",
       "title": "CheckAndMutateRowRequestObjectAsync",
       "description": "Snippet for CheckAndMutateRowAsync",
       "file": "BigtableServiceApiClient.CheckAndMutateRowRequestObjectAsyncSnippet.g.cs",
@@ -1390,10 +1390,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1413,7 +1413,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_sync_flattened1",
       "title": "CheckAndMutateRow1",
       "description": "Snippet for CheckAndMutateRow",
       "file": "BigtableServiceApiClient.CheckAndMutateRow1Snippet.g.cs",
@@ -1454,10 +1454,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1476,7 +1476,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_async_flattened1",
       "title": "CheckAndMutateRow1Async",
       "description": "Snippet for CheckAndMutateRowAsync",
       "file": "BigtableServiceApiClient.CheckAndMutateRow1AsyncSnippet.g.cs",
@@ -1518,10 +1518,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1540,7 +1540,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_sync_flattened1_resourceNames",
       "title": "CheckAndMutateRow1ResourceNames",
       "description": "Snippet for CheckAndMutateRow",
       "file": "BigtableServiceApiClient.CheckAndMutateRow1ResourceNamesSnippet.g.cs",
@@ -1581,10 +1581,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1603,7 +1603,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_async_flattened1_resourceNames",
       "title": "CheckAndMutateRow1ResourceNamesAsync",
       "description": "Snippet for CheckAndMutateRowAsync",
       "file": "BigtableServiceApiClient.CheckAndMutateRow1ResourceNamesAsyncSnippet.g.cs",
@@ -1645,10 +1645,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1667,7 +1667,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_sync_flattened2",
       "title": "CheckAndMutateRow2",
       "description": "Snippet for CheckAndMutateRow",
       "file": "BigtableServiceApiClient.CheckAndMutateRow2Snippet.g.cs",
@@ -1712,10 +1712,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1734,7 +1734,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_async_flattened2",
       "title": "CheckAndMutateRow2Async",
       "description": "Snippet for CheckAndMutateRowAsync",
       "file": "BigtableServiceApiClient.CheckAndMutateRow2AsyncSnippet.g.cs",
@@ -1780,10 +1780,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1802,7 +1802,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_sync_flattened2_resourceNames",
       "title": "CheckAndMutateRow2ResourceNames",
       "description": "Snippet for CheckAndMutateRow",
       "file": "BigtableServiceApiClient.CheckAndMutateRow2ResourceNamesSnippet.g.cs",
@@ -1847,10 +1847,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1869,7 +1869,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_CheckAndMutateRow_async_flattened2_resourceNames",
       "title": "CheckAndMutateRow2ResourceNamesAsync",
       "description": "Snippet for CheckAndMutateRowAsync",
       "file": "BigtableServiceApiClient.CheckAndMutateRow2ResourceNamesAsyncSnippet.g.cs",
@@ -1915,10 +1915,10 @@
         },
         "method": {
           "shortName": "CheckAndMutateRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.CheckAndMutateRow",
+          "fullName": "google.bigtable.v2.Bigtable.CheckAndMutateRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1937,7 +1937,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_sync",
       "title": "PingAndWarmRequestObject",
       "description": "Snippet for PingAndWarm",
       "file": "BigtableServiceApiClient.PingAndWarmRequestObjectSnippet.g.cs",
@@ -1962,10 +1962,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -1985,7 +1985,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_async",
       "title": "PingAndWarmRequestObjectAsync",
       "description": "Snippet for PingAndWarmAsync",
       "file": "BigtableServiceApiClient.PingAndWarmRequestObjectAsyncSnippet.g.cs",
@@ -2011,10 +2011,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2034,7 +2034,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_sync_flattened1",
       "title": "PingAndWarm1",
       "description": "Snippet for PingAndWarm",
       "file": "BigtableServiceApiClient.PingAndWarm1Snippet.g.cs",
@@ -2059,10 +2059,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2081,7 +2081,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_async_flattened1",
       "title": "PingAndWarm1Async",
       "description": "Snippet for PingAndWarmAsync",
       "file": "BigtableServiceApiClient.PingAndWarm1AsyncSnippet.g.cs",
@@ -2107,10 +2107,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2129,7 +2129,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_sync_flattened1_resourceNames",
       "title": "PingAndWarm1ResourceNames",
       "description": "Snippet for PingAndWarm",
       "file": "BigtableServiceApiClient.PingAndWarm1ResourceNamesSnippet.g.cs",
@@ -2154,10 +2154,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2176,7 +2176,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_async_flattened1_resourceNames",
       "title": "PingAndWarm1ResourceNamesAsync",
       "description": "Snippet for PingAndWarmAsync",
       "file": "BigtableServiceApiClient.PingAndWarm1ResourceNamesAsyncSnippet.g.cs",
@@ -2202,10 +2202,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2224,7 +2224,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_sync_flattened2",
       "title": "PingAndWarm2",
       "description": "Snippet for PingAndWarm",
       "file": "BigtableServiceApiClient.PingAndWarm2Snippet.g.cs",
@@ -2253,10 +2253,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2275,7 +2275,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_async_flattened2",
       "title": "PingAndWarm2Async",
       "description": "Snippet for PingAndWarmAsync",
       "file": "BigtableServiceApiClient.PingAndWarm2AsyncSnippet.g.cs",
@@ -2305,10 +2305,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2327,7 +2327,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_sync_flattened2_resourceNames",
       "title": "PingAndWarm2ResourceNames",
       "description": "Snippet for PingAndWarm",
       "file": "BigtableServiceApiClient.PingAndWarm2ResourceNamesSnippet.g.cs",
@@ -2356,10 +2356,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2378,7 +2378,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_PingAndWarm_async_flattened2_resourceNames",
       "title": "PingAndWarm2ResourceNamesAsync",
       "description": "Snippet for PingAndWarmAsync",
       "file": "BigtableServiceApiClient.PingAndWarm2ResourceNamesAsyncSnippet.g.cs",
@@ -2408,10 +2408,10 @@
         },
         "method": {
           "shortName": "PingAndWarm",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.PingAndWarm",
+          "fullName": "google.bigtable.v2.Bigtable.PingAndWarm",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2430,7 +2430,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_sync",
       "title": "ReadModifyWriteRowRequestObject",
       "description": "Snippet for ReadModifyWriteRow",
       "file": "BigtableServiceApiClient.ReadModifyWriteRowRequestObjectSnippet.g.cs",
@@ -2455,10 +2455,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2478,7 +2478,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_async",
       "title": "ReadModifyWriteRowRequestObjectAsync",
       "description": "Snippet for ReadModifyWriteRowAsync",
       "file": "BigtableServiceApiClient.ReadModifyWriteRowRequestObjectAsyncSnippet.g.cs",
@@ -2504,10 +2504,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2527,7 +2527,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_sync_flattened1",
       "title": "ReadModifyWriteRow1",
       "description": "Snippet for ReadModifyWriteRow",
       "file": "BigtableServiceApiClient.ReadModifyWriteRow1Snippet.g.cs",
@@ -2560,10 +2560,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2582,7 +2582,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_async_flattened1",
       "title": "ReadModifyWriteRow1Async",
       "description": "Snippet for ReadModifyWriteRowAsync",
       "file": "BigtableServiceApiClient.ReadModifyWriteRow1AsyncSnippet.g.cs",
@@ -2616,10 +2616,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2638,7 +2638,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_sync_flattened1_resourceNames",
       "title": "ReadModifyWriteRow1ResourceNames",
       "description": "Snippet for ReadModifyWriteRow",
       "file": "BigtableServiceApiClient.ReadModifyWriteRow1ResourceNamesSnippet.g.cs",
@@ -2671,10 +2671,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2693,7 +2693,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_async_flattened1_resourceNames",
       "title": "ReadModifyWriteRow1ResourceNamesAsync",
       "description": "Snippet for ReadModifyWriteRowAsync",
       "file": "BigtableServiceApiClient.ReadModifyWriteRow1ResourceNamesAsyncSnippet.g.cs",
@@ -2727,10 +2727,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2749,7 +2749,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_sync_flattened2",
       "title": "ReadModifyWriteRow2",
       "description": "Snippet for ReadModifyWriteRow",
       "file": "BigtableServiceApiClient.ReadModifyWriteRow2Snippet.g.cs",
@@ -2786,10 +2786,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2808,7 +2808,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_async_flattened2",
       "title": "ReadModifyWriteRow2Async",
       "description": "Snippet for ReadModifyWriteRowAsync",
       "file": "BigtableServiceApiClient.ReadModifyWriteRow2AsyncSnippet.g.cs",
@@ -2846,10 +2846,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2868,7 +2868,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_sync_flattened2_resourceNames",
       "title": "ReadModifyWriteRow2ResourceNames",
       "description": "Snippet for ReadModifyWriteRow",
       "file": "BigtableServiceApiClient.ReadModifyWriteRow2ResourceNamesSnippet.g.cs",
@@ -2905,10 +2905,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2927,7 +2927,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadModifyWriteRow_async_flattened2_resourceNames",
       "title": "ReadModifyWriteRow2ResourceNamesAsync",
       "description": "Snippet for ReadModifyWriteRowAsync",
       "file": "BigtableServiceApiClient.ReadModifyWriteRow2ResourceNamesAsyncSnippet.g.cs",
@@ -2965,10 +2965,10 @@
         },
         "method": {
           "shortName": "ReadModifyWriteRow",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadModifyWriteRow",
+          "fullName": "google.bigtable.v2.Bigtable.ReadModifyWriteRow",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -2987,7 +2987,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_GenerateInitialChangeStreamPartitions_sync",
       "title": "GenerateInitialChangeStreamPartitionsRequestObject",
       "description": "Snippet for GenerateInitialChangeStreamPartitions",
       "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsRequestObjectSnippet.g.cs",
@@ -3012,10 +3012,10 @@
         },
         "method": {
           "shortName": "GenerateInitialChangeStreamPartitions",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.Bigtable.GenerateInitialChangeStreamPartitions",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3035,7 +3035,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_GenerateInitialChangeStreamPartitions_sync_flattened1",
       "title": "GenerateInitialChangeStreamPartitions1",
       "description": "Snippet for GenerateInitialChangeStreamPartitions",
       "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitions1Snippet.g.cs",
@@ -3060,10 +3060,10 @@
         },
         "method": {
           "shortName": "GenerateInitialChangeStreamPartitions",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.Bigtable.GenerateInitialChangeStreamPartitions",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3082,7 +3082,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_GenerateInitialChangeStreamPartitions_sync_flattened1_resourceNames",
       "title": "GenerateInitialChangeStreamPartitions1ResourceNames",
       "description": "Snippet for GenerateInitialChangeStreamPartitions",
       "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitions1ResourceNamesSnippet.g.cs",
@@ -3107,10 +3107,10 @@
         },
         "method": {
           "shortName": "GenerateInitialChangeStreamPartitions",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.Bigtable.GenerateInitialChangeStreamPartitions",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3129,7 +3129,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_GenerateInitialChangeStreamPartitions_sync_flattened2",
       "title": "GenerateInitialChangeStreamPartitions2",
       "description": "Snippet for GenerateInitialChangeStreamPartitions",
       "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitions2Snippet.g.cs",
@@ -3158,10 +3158,10 @@
         },
         "method": {
           "shortName": "GenerateInitialChangeStreamPartitions",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.Bigtable.GenerateInitialChangeStreamPartitions",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3180,7 +3180,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_GenerateInitialChangeStreamPartitions_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_GenerateInitialChangeStreamPartitions_sync_flattened2_resourceNames",
       "title": "GenerateInitialChangeStreamPartitions2ResourceNames",
       "description": "Snippet for GenerateInitialChangeStreamPartitions",
       "file": "BigtableServiceApiClient.GenerateInitialChangeStreamPartitions2ResourceNamesSnippet.g.cs",
@@ -3209,10 +3209,10 @@
         },
         "method": {
           "shortName": "GenerateInitialChangeStreamPartitions",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.GenerateInitialChangeStreamPartitions",
+          "fullName": "google.bigtable.v2.Bigtable.GenerateInitialChangeStreamPartitions",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3231,7 +3231,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadChangeStream_sync",
       "title": "ReadChangeStreamRequestObject",
       "description": "Snippet for ReadChangeStream",
       "file": "BigtableServiceApiClient.ReadChangeStreamRequestObjectSnippet.g.cs",
@@ -3256,10 +3256,10 @@
         },
         "method": {
           "shortName": "ReadChangeStream",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "fullName": "google.bigtable.v2.Bigtable.ReadChangeStream",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3279,7 +3279,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened1",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadChangeStream_sync_flattened1",
       "title": "ReadChangeStream1",
       "description": "Snippet for ReadChangeStream",
       "file": "BigtableServiceApiClient.ReadChangeStream1Snippet.g.cs",
@@ -3304,10 +3304,10 @@
         },
         "method": {
           "shortName": "ReadChangeStream",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "fullName": "google.bigtable.v2.Bigtable.ReadChangeStream",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3326,7 +3326,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened1_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadChangeStream_sync_flattened1_resourceNames",
       "title": "ReadChangeStream1ResourceNames",
       "description": "Snippet for ReadChangeStream",
       "file": "BigtableServiceApiClient.ReadChangeStream1ResourceNamesSnippet.g.cs",
@@ -3351,10 +3351,10 @@
         },
         "method": {
           "shortName": "ReadChangeStream",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "fullName": "google.bigtable.v2.Bigtable.ReadChangeStream",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3373,7 +3373,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened2",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadChangeStream_sync_flattened2",
       "title": "ReadChangeStream2",
       "description": "Snippet for ReadChangeStream",
       "file": "BigtableServiceApiClient.ReadChangeStream2Snippet.g.cs",
@@ -3402,10 +3402,10 @@
         },
         "method": {
           "shortName": "ReadChangeStream",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "fullName": "google.bigtable.v2.Bigtable.ReadChangeStream",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },
@@ -3424,7 +3424,7 @@
       ]
     },
     {
-      "regionTag": "bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened2_resourceNames",
+      "regionTag": "bigtable_v2_generated_Bigtable_ReadChangeStream_sync_flattened2_resourceNames",
       "title": "ReadChangeStream2ResourceNames",
       "description": "Snippet for ReadChangeStream",
       "file": "BigtableServiceApiClient.ReadChangeStream2ResourceNamesSnippet.g.cs",
@@ -3453,10 +3453,10 @@
         },
         "method": {
           "shortName": "ReadChangeStream",
-          "fullName": "google.bigtable.v2.BigtableServiceApi.ReadChangeStream",
+          "fullName": "google.bigtable.v2.Bigtable.ReadChangeStream",
           "service": {
-            "shortName": "BigtableServiceApi",
-            "fullName": "google.bigtable.v2.BigtableServiceApi"
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
           }
         }
       },

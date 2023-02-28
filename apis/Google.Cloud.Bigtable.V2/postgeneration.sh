@@ -15,6 +15,11 @@ sed -i s/BigtableServiceApi.Descriptor/Bigtable.Descriptor/g Google.Cloud.Bigtab
 # Fix up the metadata
 sed -i 's/"BigtableServiceApi": {/"Bigtable": {/g' gapic_metadata.json
 
+# Fix up the snippet metadata (carefully)
+sed -i 's/v2.BigtableServiceApi/v2.Bigtable/g' Google.Cloud.Bigtable.V2.GeneratedSnippets/snippet_metadata_google.bigtable.v2.json
+sed -i 's/generated_BigtableServiceApi/generated_Bigtable/g' Google.Cloud.Bigtable.V2.GeneratedSnippets/snippet_metadata_google.bigtable.v2.json
+sed -i 's/"shortName": "BigtableServiceApi"/"shortName": "Bigtable"/g' Google.Cloud.Bigtable.V2.GeneratedSnippets/snippet_metadata_google.bigtable.v2.json
+
 # Generate BigtableClient
 dotnet run --project Google.Cloud.Bigtable.V2.GenerateClient \
   Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.csproj \
