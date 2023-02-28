@@ -11,7 +11,7 @@
   },
   "snippets": [
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_sync",
       "title": "ListApprovalRequestsRequestObject",
       "description": "Snippet for ListApprovalRequests",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsRequestObjectSnippet.g.cs",
@@ -36,10 +36,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_async",
       "title": "ListApprovalRequestsRequestObjectAsync",
       "description": "Snippet for ListApprovalRequestsAsync",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsRequestObjectAsyncSnippet.g.cs",
@@ -85,10 +85,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_sync_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_sync_flattened",
       "title": "ListApprovalRequests",
       "description": "Snippet for ListApprovalRequests",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsSnippet.g.cs",
@@ -141,10 +141,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_async_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_async_flattened",
       "title": "ListApprovalRequestsAsync",
       "description": "Snippet for ListApprovalRequestsAsync",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsAsyncSnippet.g.cs",
@@ -197,10 +197,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -219,7 +219,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_sync_flattened_resourceNames1",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_sync_flattened_resourceNames1",
       "title": "ListApprovalRequestsResourceNames1",
       "description": "Snippet for ListApprovalRequests",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsResourceNames1Snippet.g.cs",
@@ -252,10 +252,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -274,7 +274,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_async_flattened_resourceNames1",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_async_flattened_resourceNames1",
       "title": "ListApprovalRequestsResourceNames1Async",
       "description": "Snippet for ListApprovalRequestsAsync",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsResourceNames1AsyncSnippet.g.cs",
@@ -308,10 +308,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -330,7 +330,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_sync_flattened_resourceNames2",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_sync_flattened_resourceNames2",
       "title": "ListApprovalRequestsResourceNames2",
       "description": "Snippet for ListApprovalRequests",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsResourceNames2Snippet.g.cs",
@@ -363,10 +363,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -385,7 +385,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_async_flattened_resourceNames2",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_async_flattened_resourceNames2",
       "title": "ListApprovalRequestsResourceNames2Async",
       "description": "Snippet for ListApprovalRequestsAsync",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsResourceNames2AsyncSnippet.g.cs",
@@ -419,10 +419,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -441,7 +441,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_sync_flattened_resourceNames3",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_sync_flattened_resourceNames3",
       "title": "ListApprovalRequestsResourceNames3",
       "description": "Snippet for ListApprovalRequests",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsResourceNames3Snippet.g.cs",
@@ -474,10 +474,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -496,7 +496,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_async_flattened_resourceNames3",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ListApprovalRequests_async_flattened_resourceNames3",
       "title": "ListApprovalRequestsResourceNames3Async",
       "description": "Snippet for ListApprovalRequestsAsync",
       "file": "AccessApprovalServiceClient.ListApprovalRequestsResourceNames3AsyncSnippet.g.cs",
@@ -530,10 +530,10 @@
         },
         "method": {
           "shortName": "ListApprovalRequests",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ListApprovalRequests",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ListApprovalRequests",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -552,7 +552,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetApprovalRequest_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetApprovalRequest_sync",
       "title": "GetApprovalRequestRequestObject",
       "description": "Snippet for GetApprovalRequest",
       "file": "AccessApprovalServiceClient.GetApprovalRequestRequestObjectSnippet.g.cs",
@@ -577,10 +577,10 @@
         },
         "method": {
           "shortName": "GetApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -600,7 +600,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetApprovalRequest_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetApprovalRequest_async",
       "title": "GetApprovalRequestRequestObjectAsync",
       "description": "Snippet for GetApprovalRequestAsync",
       "file": "AccessApprovalServiceClient.GetApprovalRequestRequestObjectAsyncSnippet.g.cs",
@@ -626,10 +626,10 @@
         },
         "method": {
           "shortName": "GetApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -649,7 +649,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetApprovalRequest_sync_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetApprovalRequest_sync_flattened",
       "title": "GetApprovalRequest",
       "description": "Snippet for GetApprovalRequest",
       "file": "AccessApprovalServiceClient.GetApprovalRequestSnippet.g.cs",
@@ -674,10 +674,10 @@
         },
         "method": {
           "shortName": "GetApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -696,7 +696,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetApprovalRequest_async_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetApprovalRequest_async_flattened",
       "title": "GetApprovalRequestAsync",
       "description": "Snippet for GetApprovalRequestAsync",
       "file": "AccessApprovalServiceClient.GetApprovalRequestAsyncSnippet.g.cs",
@@ -722,10 +722,10 @@
         },
         "method": {
           "shortName": "GetApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -744,7 +744,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetApprovalRequest_sync_flattened_resourceNames",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetApprovalRequest_sync_flattened_resourceNames",
       "title": "GetApprovalRequestResourceNames",
       "description": "Snippet for GetApprovalRequest",
       "file": "AccessApprovalServiceClient.GetApprovalRequestResourceNamesSnippet.g.cs",
@@ -769,10 +769,10 @@
         },
         "method": {
           "shortName": "GetApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -791,7 +791,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetApprovalRequest_async_flattened_resourceNames",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetApprovalRequest_async_flattened_resourceNames",
       "title": "GetApprovalRequestResourceNamesAsync",
       "description": "Snippet for GetApprovalRequestAsync",
       "file": "AccessApprovalServiceClient.GetApprovalRequestResourceNamesAsyncSnippet.g.cs",
@@ -817,10 +817,10 @@
         },
         "method": {
           "shortName": "GetApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -839,7 +839,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ApproveApprovalRequest_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ApproveApprovalRequest_sync",
       "title": "ApproveApprovalRequestRequestObject",
       "description": "Snippet for ApproveApprovalRequest",
       "file": "AccessApprovalServiceClient.ApproveApprovalRequestRequestObjectSnippet.g.cs",
@@ -864,10 +864,10 @@
         },
         "method": {
           "shortName": "ApproveApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ApproveApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ApproveApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -887,7 +887,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_ApproveApprovalRequest_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_ApproveApprovalRequest_async",
       "title": "ApproveApprovalRequestRequestObjectAsync",
       "description": "Snippet for ApproveApprovalRequestAsync",
       "file": "AccessApprovalServiceClient.ApproveApprovalRequestRequestObjectAsyncSnippet.g.cs",
@@ -913,10 +913,10 @@
         },
         "method": {
           "shortName": "ApproveApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.ApproveApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.ApproveApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -936,7 +936,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_DismissApprovalRequest_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_DismissApprovalRequest_sync",
       "title": "DismissApprovalRequestRequestObject",
       "description": "Snippet for DismissApprovalRequest",
       "file": "AccessApprovalServiceClient.DismissApprovalRequestRequestObjectSnippet.g.cs",
@@ -961,10 +961,10 @@
         },
         "method": {
           "shortName": "DismissApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DismissApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.DismissApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -984,7 +984,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_DismissApprovalRequest_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_DismissApprovalRequest_async",
       "title": "DismissApprovalRequestRequestObjectAsync",
       "description": "Snippet for DismissApprovalRequestAsync",
       "file": "AccessApprovalServiceClient.DismissApprovalRequestRequestObjectAsyncSnippet.g.cs",
@@ -1010,10 +1010,10 @@
         },
         "method": {
           "shortName": "DismissApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DismissApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.DismissApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1033,7 +1033,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_InvalidateApprovalRequest_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_InvalidateApprovalRequest_sync",
       "title": "InvalidateApprovalRequestRequestObject",
       "description": "Snippet for InvalidateApprovalRequest",
       "file": "AccessApprovalServiceClient.InvalidateApprovalRequestRequestObjectSnippet.g.cs",
@@ -1058,10 +1058,10 @@
         },
         "method": {
           "shortName": "InvalidateApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.InvalidateApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.InvalidateApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1081,7 +1081,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_InvalidateApprovalRequest_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_InvalidateApprovalRequest_async",
       "title": "InvalidateApprovalRequestRequestObjectAsync",
       "description": "Snippet for InvalidateApprovalRequestAsync",
       "file": "AccessApprovalServiceClient.InvalidateApprovalRequestRequestObjectAsyncSnippet.g.cs",
@@ -1107,10 +1107,10 @@
         },
         "method": {
           "shortName": "InvalidateApprovalRequest",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.InvalidateApprovalRequest",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.InvalidateApprovalRequest",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1130,7 +1130,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_sync",
       "title": "GetAccessApprovalSettingsRequestObject",
       "description": "Snippet for GetAccessApprovalSettings",
       "file": "AccessApprovalServiceClient.GetAccessApprovalSettingsRequestObjectSnippet.g.cs",
@@ -1155,10 +1155,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1178,7 +1178,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_async",
       "title": "GetAccessApprovalSettingsRequestObjectAsync",
       "description": "Snippet for GetAccessApprovalSettingsAsync",
       "file": "AccessApprovalServiceClient.GetAccessApprovalSettingsRequestObjectAsyncSnippet.g.cs",
@@ -1204,10 +1204,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1227,7 +1227,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_sync_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_sync_flattened",
       "title": "GetAccessApprovalSettings",
       "description": "Snippet for GetAccessApprovalSettings",
       "file": "AccessApprovalServiceClient.GetAccessApprovalSettingsSnippet.g.cs",
@@ -1252,10 +1252,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1274,7 +1274,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_async_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_async_flattened",
       "title": "GetAccessApprovalSettingsAsync",
       "description": "Snippet for GetAccessApprovalSettingsAsync",
       "file": "AccessApprovalServiceClient.GetAccessApprovalSettingsAsyncSnippet.g.cs",
@@ -1300,10 +1300,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1322,7 +1322,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_sync_flattened_resourceNames",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_sync_flattened_resourceNames",
       "title": "GetAccessApprovalSettingsResourceNames",
       "description": "Snippet for GetAccessApprovalSettings",
       "file": "AccessApprovalServiceClient.GetAccessApprovalSettingsResourceNamesSnippet.g.cs",
@@ -1347,10 +1347,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1369,7 +1369,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_async_flattened_resourceNames",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_async_flattened_resourceNames",
       "title": "GetAccessApprovalSettingsResourceNamesAsync",
       "description": "Snippet for GetAccessApprovalSettingsAsync",
       "file": "AccessApprovalServiceClient.GetAccessApprovalSettingsResourceNamesAsyncSnippet.g.cs",
@@ -1395,10 +1395,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1417,7 +1417,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_UpdateAccessApprovalSettings_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_UpdateAccessApprovalSettings_sync",
       "title": "UpdateAccessApprovalSettingsRequestObject",
       "description": "Snippet for UpdateAccessApprovalSettings",
       "file": "AccessApprovalServiceClient.UpdateAccessApprovalSettingsRequestObjectSnippet.g.cs",
@@ -1442,10 +1442,10 @@
         },
         "method": {
           "shortName": "UpdateAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.UpdateAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.UpdateAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1465,7 +1465,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_UpdateAccessApprovalSettings_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_UpdateAccessApprovalSettings_async",
       "title": "UpdateAccessApprovalSettingsRequestObjectAsync",
       "description": "Snippet for UpdateAccessApprovalSettingsAsync",
       "file": "AccessApprovalServiceClient.UpdateAccessApprovalSettingsRequestObjectAsyncSnippet.g.cs",
@@ -1491,10 +1491,10 @@
         },
         "method": {
           "shortName": "UpdateAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.UpdateAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.UpdateAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1514,7 +1514,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_UpdateAccessApprovalSettings_sync_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_UpdateAccessApprovalSettings_sync_flattened",
       "title": "UpdateAccessApprovalSettings",
       "description": "Snippet for UpdateAccessApprovalSettings",
       "file": "AccessApprovalServiceClient.UpdateAccessApprovalSettingsSnippet.g.cs",
@@ -1543,10 +1543,10 @@
         },
         "method": {
           "shortName": "UpdateAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.UpdateAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.UpdateAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1565,7 +1565,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_UpdateAccessApprovalSettings_async_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_UpdateAccessApprovalSettings_async_flattened",
       "title": "UpdateAccessApprovalSettingsAsync",
       "description": "Snippet for UpdateAccessApprovalSettingsAsync",
       "file": "AccessApprovalServiceClient.UpdateAccessApprovalSettingsAsyncSnippet.g.cs",
@@ -1595,10 +1595,10 @@
         },
         "method": {
           "shortName": "UpdateAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.UpdateAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.UpdateAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1617,7 +1617,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_sync",
       "title": "DeleteAccessApprovalSettingsRequestObject",
       "description": "Snippet for DeleteAccessApprovalSettings",
       "file": "AccessApprovalServiceClient.DeleteAccessApprovalSettingsRequestObjectSnippet.g.cs",
@@ -1641,10 +1641,10 @@
         },
         "method": {
           "shortName": "DeleteAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DeleteAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.DeleteAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1664,7 +1664,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_async",
       "title": "DeleteAccessApprovalSettingsRequestObjectAsync",
       "description": "Snippet for DeleteAccessApprovalSettingsAsync",
       "file": "AccessApprovalServiceClient.DeleteAccessApprovalSettingsRequestObjectAsyncSnippet.g.cs",
@@ -1690,10 +1690,10 @@
         },
         "method": {
           "shortName": "DeleteAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DeleteAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.DeleteAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1713,7 +1713,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_sync_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_sync_flattened",
       "title": "DeleteAccessApprovalSettings",
       "description": "Snippet for DeleteAccessApprovalSettings",
       "file": "AccessApprovalServiceClient.DeleteAccessApprovalSettingsSnippet.g.cs",
@@ -1737,10 +1737,10 @@
         },
         "method": {
           "shortName": "DeleteAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DeleteAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.DeleteAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1759,7 +1759,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_async_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_async_flattened",
       "title": "DeleteAccessApprovalSettingsAsync",
       "description": "Snippet for DeleteAccessApprovalSettingsAsync",
       "file": "AccessApprovalServiceClient.DeleteAccessApprovalSettingsAsyncSnippet.g.cs",
@@ -1785,10 +1785,10 @@
         },
         "method": {
           "shortName": "DeleteAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DeleteAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.DeleteAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1807,7 +1807,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_sync_flattened_resourceNames",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_sync_flattened_resourceNames",
       "title": "DeleteAccessApprovalSettingsResourceNames",
       "description": "Snippet for DeleteAccessApprovalSettings",
       "file": "AccessApprovalServiceClient.DeleteAccessApprovalSettingsResourceNamesSnippet.g.cs",
@@ -1831,10 +1831,10 @@
         },
         "method": {
           "shortName": "DeleteAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DeleteAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.DeleteAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1853,7 +1853,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_async_flattened_resourceNames",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_async_flattened_resourceNames",
       "title": "DeleteAccessApprovalSettingsResourceNamesAsync",
       "description": "Snippet for DeleteAccessApprovalSettingsAsync",
       "file": "AccessApprovalServiceClient.DeleteAccessApprovalSettingsResourceNamesAsyncSnippet.g.cs",
@@ -1879,10 +1879,10 @@
         },
         "method": {
           "shortName": "DeleteAccessApprovalSettings",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.DeleteAccessApprovalSettings",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.DeleteAccessApprovalSettings",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1901,7 +1901,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_sync",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalServiceAccount_sync",
       "title": "GetAccessApprovalServiceAccountRequestObject",
       "description": "Snippet for GetAccessApprovalServiceAccount",
       "file": "AccessApprovalServiceClient.GetAccessApprovalServiceAccountRequestObjectSnippet.g.cs",
@@ -1926,10 +1926,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalServiceAccount",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalServiceAccount",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalServiceAccount",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1949,7 +1949,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_async",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalServiceAccount_async",
       "title": "GetAccessApprovalServiceAccountRequestObjectAsync",
       "description": "Snippet for GetAccessApprovalServiceAccountAsync",
       "file": "AccessApprovalServiceClient.GetAccessApprovalServiceAccountRequestObjectAsyncSnippet.g.cs",
@@ -1975,10 +1975,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalServiceAccount",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalServiceAccount",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalServiceAccount",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -1998,7 +1998,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_sync_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalServiceAccount_sync_flattened",
       "title": "GetAccessApprovalServiceAccount",
       "description": "Snippet for GetAccessApprovalServiceAccount",
       "file": "AccessApprovalServiceClient.GetAccessApprovalServiceAccountSnippet.g.cs",
@@ -2023,10 +2023,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalServiceAccount",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalServiceAccount",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalServiceAccount",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
@@ -2045,7 +2045,7 @@
       ]
     },
     {
-      "regionTag": "accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_async_flattened",
+      "regionTag": "accessapproval_v1_generated_AccessApproval_GetAccessApprovalServiceAccount_async_flattened",
       "title": "GetAccessApprovalServiceAccountAsync",
       "description": "Snippet for GetAccessApprovalServiceAccountAsync",
       "file": "AccessApprovalServiceClient.GetAccessApprovalServiceAccountAsyncSnippet.g.cs",
@@ -2071,10 +2071,10 @@
         },
         "method": {
           "shortName": "GetAccessApprovalServiceAccount",
-          "fullName": "google.cloud.accessapproval.v1.AccessApprovalService.GetAccessApprovalServiceAccount",
+          "fullName": "google.cloud.accessapproval.v1.AccessApproval.GetAccessApprovalServiceAccount",
           "service": {
-            "shortName": "AccessApprovalService",
-            "fullName": "google.cloud.accessapproval.v1.AccessApprovalService"
+            "shortName": "AccessApproval",
+            "fullName": "google.cloud.accessapproval.v1.AccessApproval"
           }
         }
       },
