@@ -11,7 +11,7 @@
   },
   "snippets": [
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_CreateTopic_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_sync",
       "title": "CreateTopicRequestObject",
       "description": "Snippet for CreateTopic",
       "file": "PublisherServiceApiClient.CreateTopicRequestObjectSnippet.g.cs",
@@ -36,10 +36,10 @@
         },
         "method": {
           "shortName": "CreateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_CreateTopic_async",
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_async",
       "title": "CreateTopicRequestObjectAsync",
       "description": "Snippet for CreateTopicAsync",
       "file": "PublisherServiceApiClient.CreateTopicRequestObjectAsyncSnippet.g.cs",
@@ -85,10 +85,10 @@
         },
         "method": {
           "shortName": "CreateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_CreateTopic_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_sync_flattened",
       "title": "CreateTopic",
       "description": "Snippet for CreateTopic",
       "file": "PublisherServiceApiClient.CreateTopicSnippet.g.cs",
@@ -133,10 +133,10 @@
         },
         "method": {
           "shortName": "CreateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -155,7 +155,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_CreateTopic_async_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_async_flattened",
       "title": "CreateTopicAsync",
       "description": "Snippet for CreateTopicAsync",
       "file": "PublisherServiceApiClient.CreateTopicAsyncSnippet.g.cs",
@@ -181,10 +181,10 @@
         },
         "method": {
           "shortName": "CreateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -203,7 +203,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_CreateTopic_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_sync_flattened_resourceNames",
       "title": "CreateTopicResourceNames",
       "description": "Snippet for CreateTopic",
       "file": "PublisherServiceApiClient.CreateTopicResourceNamesSnippet.g.cs",
@@ -228,10 +228,10 @@
         },
         "method": {
           "shortName": "CreateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -250,7 +250,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_CreateTopic_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_CreateTopic_async_flattened_resourceNames",
       "title": "CreateTopicResourceNamesAsync",
       "description": "Snippet for CreateTopicAsync",
       "file": "PublisherServiceApiClient.CreateTopicResourceNamesAsyncSnippet.g.cs",
@@ -276,10 +276,10 @@
         },
         "method": {
           "shortName": "CreateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.CreateTopic",
+          "fullName": "google.pubsub.v1.Publisher.CreateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -298,7 +298,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_UpdateTopic_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_UpdateTopic_sync",
       "title": "UpdateTopicRequestObject",
       "description": "Snippet for UpdateTopic",
       "file": "PublisherServiceApiClient.UpdateTopicRequestObjectSnippet.g.cs",
@@ -323,10 +323,10 @@
         },
         "method": {
           "shortName": "UpdateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.UpdateTopic",
+          "fullName": "google.pubsub.v1.Publisher.UpdateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -346,7 +346,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_UpdateTopic_async",
+      "regionTag": "pubsub_v1_generated_Publisher_UpdateTopic_async",
       "title": "UpdateTopicRequestObjectAsync",
       "description": "Snippet for UpdateTopicAsync",
       "file": "PublisherServiceApiClient.UpdateTopicRequestObjectAsyncSnippet.g.cs",
@@ -372,10 +372,10 @@
         },
         "method": {
           "shortName": "UpdateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.UpdateTopic",
+          "fullName": "google.pubsub.v1.Publisher.UpdateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -395,7 +395,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_UpdateTopic_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_UpdateTopic_sync_flattened",
       "title": "UpdateTopic",
       "description": "Snippet for UpdateTopic",
       "file": "PublisherServiceApiClient.UpdateTopicSnippet.g.cs",
@@ -424,10 +424,10 @@
         },
         "method": {
           "shortName": "UpdateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.UpdateTopic",
+          "fullName": "google.pubsub.v1.Publisher.UpdateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -446,7 +446,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_UpdateTopic_async_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_UpdateTopic_async_flattened",
       "title": "UpdateTopicAsync",
       "description": "Snippet for UpdateTopicAsync",
       "file": "PublisherServiceApiClient.UpdateTopicAsyncSnippet.g.cs",
@@ -476,10 +476,10 @@
         },
         "method": {
           "shortName": "UpdateTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.UpdateTopic",
+          "fullName": "google.pubsub.v1.Publisher.UpdateTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -498,7 +498,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_Publish_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_sync",
       "title": "PublishRequestObject",
       "description": "Snippet for Publish",
       "file": "PublisherServiceApiClient.PublishRequestObjectSnippet.g.cs",
@@ -523,10 +523,10 @@
         },
         "method": {
           "shortName": "Publish",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -546,7 +546,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_Publish_async",
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_async",
       "title": "PublishRequestObjectAsync",
       "description": "Snippet for PublishAsync",
       "file": "PublisherServiceApiClient.PublishRequestObjectAsyncSnippet.g.cs",
@@ -572,10 +572,10 @@
         },
         "method": {
           "shortName": "Publish",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -595,7 +595,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_Publish_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_sync_flattened",
       "title": "Publish",
       "description": "Snippet for Publish",
       "file": "PublisherServiceApiClient.PublishSnippet.g.cs",
@@ -624,10 +624,10 @@
         },
         "method": {
           "shortName": "Publish",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -646,7 +646,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_Publish_async_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_async_flattened",
       "title": "PublishAsync",
       "description": "Snippet for PublishAsync",
       "file": "PublisherServiceApiClient.PublishAsyncSnippet.g.cs",
@@ -676,10 +676,10 @@
         },
         "method": {
           "shortName": "Publish",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -698,7 +698,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_Publish_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_sync_flattened_resourceNames",
       "title": "PublishResourceNames",
       "description": "Snippet for Publish",
       "file": "PublisherServiceApiClient.PublishResourceNamesSnippet.g.cs",
@@ -727,10 +727,10 @@
         },
         "method": {
           "shortName": "Publish",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -749,7 +749,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_Publish_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_Publish_async_flattened_resourceNames",
       "title": "PublishResourceNamesAsync",
       "description": "Snippet for PublishAsync",
       "file": "PublisherServiceApiClient.PublishResourceNamesAsyncSnippet.g.cs",
@@ -779,10 +779,10 @@
         },
         "method": {
           "shortName": "Publish",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.Publish",
+          "fullName": "google.pubsub.v1.Publisher.Publish",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -801,7 +801,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_GetTopic_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_sync",
       "title": "GetTopicRequestObject",
       "description": "Snippet for GetTopic",
       "file": "PublisherServiceApiClient.GetTopicRequestObjectSnippet.g.cs",
@@ -826,10 +826,10 @@
         },
         "method": {
           "shortName": "GetTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -849,7 +849,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_GetTopic_async",
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_async",
       "title": "GetTopicRequestObjectAsync",
       "description": "Snippet for GetTopicAsync",
       "file": "PublisherServiceApiClient.GetTopicRequestObjectAsyncSnippet.g.cs",
@@ -875,10 +875,10 @@
         },
         "method": {
           "shortName": "GetTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -898,7 +898,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_GetTopic_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_sync_flattened",
       "title": "GetTopic",
       "description": "Snippet for GetTopic",
       "file": "PublisherServiceApiClient.GetTopicSnippet.g.cs",
@@ -923,10 +923,10 @@
         },
         "method": {
           "shortName": "GetTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -945,7 +945,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_GetTopic_async_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_async_flattened",
       "title": "GetTopicAsync",
       "description": "Snippet for GetTopicAsync",
       "file": "PublisherServiceApiClient.GetTopicAsyncSnippet.g.cs",
@@ -971,10 +971,10 @@
         },
         "method": {
           "shortName": "GetTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -993,7 +993,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_GetTopic_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_sync_flattened_resourceNames",
       "title": "GetTopicResourceNames",
       "description": "Snippet for GetTopic",
       "file": "PublisherServiceApiClient.GetTopicResourceNamesSnippet.g.cs",
@@ -1018,10 +1018,10 @@
         },
         "method": {
           "shortName": "GetTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1040,7 +1040,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_GetTopic_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_GetTopic_async_flattened_resourceNames",
       "title": "GetTopicResourceNamesAsync",
       "description": "Snippet for GetTopicAsync",
       "file": "PublisherServiceApiClient.GetTopicResourceNamesAsyncSnippet.g.cs",
@@ -1066,10 +1066,10 @@
         },
         "method": {
           "shortName": "GetTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.GetTopic",
+          "fullName": "google.pubsub.v1.Publisher.GetTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1088,7 +1088,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopics_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_sync",
       "title": "ListTopicsRequestObject",
       "description": "Snippet for ListTopics",
       "file": "PublisherServiceApiClient.ListTopicsRequestObjectSnippet.g.cs",
@@ -1113,10 +1113,10 @@
         },
         "method": {
           "shortName": "ListTopics",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1136,7 +1136,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopics_async",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_async",
       "title": "ListTopicsRequestObjectAsync",
       "description": "Snippet for ListTopicsAsync",
       "file": "PublisherServiceApiClient.ListTopicsRequestObjectAsyncSnippet.g.cs",
@@ -1162,10 +1162,10 @@
         },
         "method": {
           "shortName": "ListTopics",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1185,7 +1185,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopics_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_sync_flattened",
       "title": "ListTopics",
       "description": "Snippet for ListTopics",
       "file": "PublisherServiceApiClient.ListTopicsSnippet.g.cs",
@@ -1218,10 +1218,10 @@
         },
         "method": {
           "shortName": "ListTopics",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1240,7 +1240,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopics_async_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_async_flattened",
       "title": "ListTopicsAsync",
       "description": "Snippet for ListTopicsAsync",
       "file": "PublisherServiceApiClient.ListTopicsAsyncSnippet.g.cs",
@@ -1274,10 +1274,10 @@
         },
         "method": {
           "shortName": "ListTopics",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1296,7 +1296,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopics_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_sync_flattened_resourceNames",
       "title": "ListTopicsResourceNames",
       "description": "Snippet for ListTopics",
       "file": "PublisherServiceApiClient.ListTopicsResourceNamesSnippet.g.cs",
@@ -1329,10 +1329,10 @@
         },
         "method": {
           "shortName": "ListTopics",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1351,7 +1351,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopics_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopics_async_flattened_resourceNames",
       "title": "ListTopicsResourceNamesAsync",
       "description": "Snippet for ListTopicsAsync",
       "file": "PublisherServiceApiClient.ListTopicsResourceNamesAsyncSnippet.g.cs",
@@ -1385,10 +1385,10 @@
         },
         "method": {
           "shortName": "ListTopics",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopics",
+          "fullName": "google.pubsub.v1.Publisher.ListTopics",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1407,7 +1407,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSubscriptions_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_sync",
       "title": "ListTopicSubscriptionsRequestObject",
       "description": "Snippet for ListTopicSubscriptions",
       "file": "PublisherServiceApiClient.ListTopicSubscriptionsRequestObjectSnippet.g.cs",
@@ -1432,10 +1432,10 @@
         },
         "method": {
           "shortName": "ListTopicSubscriptions",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1455,7 +1455,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSubscriptions_async",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_async",
       "title": "ListTopicSubscriptionsRequestObjectAsync",
       "description": "Snippet for ListTopicSubscriptionsAsync",
       "file": "PublisherServiceApiClient.ListTopicSubscriptionsRequestObjectAsyncSnippet.g.cs",
@@ -1481,10 +1481,10 @@
         },
         "method": {
           "shortName": "ListTopicSubscriptions",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1504,7 +1504,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSubscriptions_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_sync_flattened",
       "title": "ListTopicSubscriptions",
       "description": "Snippet for ListTopicSubscriptions",
       "file": "PublisherServiceApiClient.ListTopicSubscriptionsSnippet.g.cs",
@@ -1537,10 +1537,10 @@
         },
         "method": {
           "shortName": "ListTopicSubscriptions",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1559,7 +1559,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSubscriptions_async_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_async_flattened",
       "title": "ListTopicSubscriptionsAsync",
       "description": "Snippet for ListTopicSubscriptionsAsync",
       "file": "PublisherServiceApiClient.ListTopicSubscriptionsAsyncSnippet.g.cs",
@@ -1593,10 +1593,10 @@
         },
         "method": {
           "shortName": "ListTopicSubscriptions",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1615,7 +1615,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSubscriptions_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_sync_flattened_resourceNames",
       "title": "ListTopicSubscriptionsResourceNames",
       "description": "Snippet for ListTopicSubscriptions",
       "file": "PublisherServiceApiClient.ListTopicSubscriptionsResourceNamesSnippet.g.cs",
@@ -1648,10 +1648,10 @@
         },
         "method": {
           "shortName": "ListTopicSubscriptions",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1670,7 +1670,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSubscriptions_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSubscriptions_async_flattened_resourceNames",
       "title": "ListTopicSubscriptionsResourceNamesAsync",
       "description": "Snippet for ListTopicSubscriptionsAsync",
       "file": "PublisherServiceApiClient.ListTopicSubscriptionsResourceNamesAsyncSnippet.g.cs",
@@ -1704,10 +1704,10 @@
         },
         "method": {
           "shortName": "ListTopicSubscriptions",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSubscriptions",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSubscriptions",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1726,7 +1726,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSnapshots_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_sync",
       "title": "ListTopicSnapshotsRequestObject",
       "description": "Snippet for ListTopicSnapshots",
       "file": "PublisherServiceApiClient.ListTopicSnapshotsRequestObjectSnippet.g.cs",
@@ -1751,10 +1751,10 @@
         },
         "method": {
           "shortName": "ListTopicSnapshots",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1774,7 +1774,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSnapshots_async",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_async",
       "title": "ListTopicSnapshotsRequestObjectAsync",
       "description": "Snippet for ListTopicSnapshotsAsync",
       "file": "PublisherServiceApiClient.ListTopicSnapshotsRequestObjectAsyncSnippet.g.cs",
@@ -1800,10 +1800,10 @@
         },
         "method": {
           "shortName": "ListTopicSnapshots",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1823,7 +1823,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSnapshots_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_sync_flattened",
       "title": "ListTopicSnapshots",
       "description": "Snippet for ListTopicSnapshots",
       "file": "PublisherServiceApiClient.ListTopicSnapshotsSnippet.g.cs",
@@ -1856,10 +1856,10 @@
         },
         "method": {
           "shortName": "ListTopicSnapshots",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1878,7 +1878,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSnapshots_async_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_async_flattened",
       "title": "ListTopicSnapshotsAsync",
       "description": "Snippet for ListTopicSnapshotsAsync",
       "file": "PublisherServiceApiClient.ListTopicSnapshotsAsyncSnippet.g.cs",
@@ -1912,10 +1912,10 @@
         },
         "method": {
           "shortName": "ListTopicSnapshots",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1934,7 +1934,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSnapshots_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_sync_flattened_resourceNames",
       "title": "ListTopicSnapshotsResourceNames",
       "description": "Snippet for ListTopicSnapshots",
       "file": "PublisherServiceApiClient.ListTopicSnapshotsResourceNamesSnippet.g.cs",
@@ -1967,10 +1967,10 @@
         },
         "method": {
           "shortName": "ListTopicSnapshots",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -1989,7 +1989,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_ListTopicSnapshots_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_ListTopicSnapshots_async_flattened_resourceNames",
       "title": "ListTopicSnapshotsResourceNamesAsync",
       "description": "Snippet for ListTopicSnapshotsAsync",
       "file": "PublisherServiceApiClient.ListTopicSnapshotsResourceNamesAsyncSnippet.g.cs",
@@ -2023,10 +2023,10 @@
         },
         "method": {
           "shortName": "ListTopicSnapshots",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.ListTopicSnapshots",
+          "fullName": "google.pubsub.v1.Publisher.ListTopicSnapshots",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -2045,7 +2045,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_DeleteTopic_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_sync",
       "title": "DeleteTopicRequestObject",
       "description": "Snippet for DeleteTopic",
       "file": "PublisherServiceApiClient.DeleteTopicRequestObjectSnippet.g.cs",
@@ -2069,10 +2069,10 @@
         },
         "method": {
           "shortName": "DeleteTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -2092,7 +2092,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_DeleteTopic_async",
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_async",
       "title": "DeleteTopicRequestObjectAsync",
       "description": "Snippet for DeleteTopicAsync",
       "file": "PublisherServiceApiClient.DeleteTopicRequestObjectAsyncSnippet.g.cs",
@@ -2118,10 +2118,10 @@
         },
         "method": {
           "shortName": "DeleteTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -2141,7 +2141,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_DeleteTopic_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_sync_flattened",
       "title": "DeleteTopic",
       "description": "Snippet for DeleteTopic",
       "file": "PublisherServiceApiClient.DeleteTopicSnippet.g.cs",
@@ -2165,10 +2165,10 @@
         },
         "method": {
           "shortName": "DeleteTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -2187,7 +2187,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_DeleteTopic_async_flattened",
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_async_flattened",
       "title": "DeleteTopicAsync",
       "description": "Snippet for DeleteTopicAsync",
       "file": "PublisherServiceApiClient.DeleteTopicAsyncSnippet.g.cs",
@@ -2213,10 +2213,10 @@
         },
         "method": {
           "shortName": "DeleteTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -2235,7 +2235,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_DeleteTopic_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_sync_flattened_resourceNames",
       "title": "DeleteTopicResourceNames",
       "description": "Snippet for DeleteTopic",
       "file": "PublisherServiceApiClient.DeleteTopicResourceNamesSnippet.g.cs",
@@ -2259,10 +2259,10 @@
         },
         "method": {
           "shortName": "DeleteTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -2281,7 +2281,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_DeleteTopic_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Publisher_DeleteTopic_async_flattened_resourceNames",
       "title": "DeleteTopicResourceNamesAsync",
       "description": "Snippet for DeleteTopicAsync",
       "file": "PublisherServiceApiClient.DeleteTopicResourceNamesAsyncSnippet.g.cs",
@@ -2307,10 +2307,10 @@
         },
         "method": {
           "shortName": "DeleteTopic",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.DeleteTopic",
+          "fullName": "google.pubsub.v1.Publisher.DeleteTopic",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -2329,7 +2329,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_DetachSubscription_sync",
+      "regionTag": "pubsub_v1_generated_Publisher_DetachSubscription_sync",
       "title": "DetachSubscriptionRequestObject",
       "description": "Snippet for DetachSubscription",
       "file": "PublisherServiceApiClient.DetachSubscriptionRequestObjectSnippet.g.cs",
@@ -2354,10 +2354,10 @@
         },
         "method": {
           "shortName": "DetachSubscription",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.DetachSubscription",
+          "fullName": "google.pubsub.v1.Publisher.DetachSubscription",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -2377,7 +2377,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_PublisherServiceApi_DetachSubscription_async",
+      "regionTag": "pubsub_v1_generated_Publisher_DetachSubscription_async",
       "title": "DetachSubscriptionRequestObjectAsync",
       "description": "Snippet for DetachSubscriptionAsync",
       "file": "PublisherServiceApiClient.DetachSubscriptionRequestObjectAsyncSnippet.g.cs",
@@ -2403,10 +2403,10 @@
         },
         "method": {
           "shortName": "DetachSubscription",
-          "fullName": "google.pubsub.v1.PublisherServiceApi.DetachSubscription",
+          "fullName": "google.pubsub.v1.Publisher.DetachSubscription",
           "service": {
-            "shortName": "PublisherServiceApi",
-            "fullName": "google.pubsub.v1.PublisherServiceApi"
+            "shortName": "Publisher",
+            "fullName": "google.pubsub.v1.Publisher"
           }
         }
       },
@@ -5263,7 +5263,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_sync",
       "title": "CreateSubscriptionRequestObject",
       "description": "Snippet for CreateSubscription",
       "file": "SubscriberServiceApiClient.CreateSubscriptionRequestObjectSnippet.g.cs",
@@ -5288,10 +5288,10 @@
         },
         "method": {
           "shortName": "CreateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5311,7 +5311,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_async",
       "title": "CreateSubscriptionRequestObjectAsync",
       "description": "Snippet for CreateSubscriptionAsync",
       "file": "SubscriberServiceApiClient.CreateSubscriptionRequestObjectAsyncSnippet.g.cs",
@@ -5337,10 +5337,10 @@
         },
         "method": {
           "shortName": "CreateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5360,7 +5360,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_sync_flattened",
       "title": "CreateSubscription",
       "description": "Snippet for CreateSubscription",
       "file": "SubscriberServiceApiClient.CreateSubscriptionSnippet.g.cs",
@@ -5397,10 +5397,10 @@
         },
         "method": {
           "shortName": "CreateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5419,7 +5419,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_async_flattened",
       "title": "CreateSubscriptionAsync",
       "description": "Snippet for CreateSubscriptionAsync",
       "file": "SubscriberServiceApiClient.CreateSubscriptionAsyncSnippet.g.cs",
@@ -5457,10 +5457,10 @@
         },
         "method": {
           "shortName": "CreateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5479,7 +5479,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_sync_flattened_resourceNames",
       "title": "CreateSubscriptionResourceNames",
       "description": "Snippet for CreateSubscription",
       "file": "SubscriberServiceApiClient.CreateSubscriptionResourceNamesSnippet.g.cs",
@@ -5516,10 +5516,10 @@
         },
         "method": {
           "shortName": "CreateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5538,7 +5538,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSubscription_async_flattened_resourceNames",
       "title": "CreateSubscriptionResourceNamesAsync",
       "description": "Snippet for CreateSubscriptionAsync",
       "file": "SubscriberServiceApiClient.CreateSubscriptionResourceNamesAsyncSnippet.g.cs",
@@ -5576,10 +5576,10 @@
         },
         "method": {
           "shortName": "CreateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5598,7 +5598,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSubscription_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_sync",
       "title": "GetSubscriptionRequestObject",
       "description": "Snippet for GetSubscription",
       "file": "SubscriberServiceApiClient.GetSubscriptionRequestObjectSnippet.g.cs",
@@ -5623,10 +5623,10 @@
         },
         "method": {
           "shortName": "GetSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5646,7 +5646,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSubscription_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_async",
       "title": "GetSubscriptionRequestObjectAsync",
       "description": "Snippet for GetSubscriptionAsync",
       "file": "SubscriberServiceApiClient.GetSubscriptionRequestObjectAsyncSnippet.g.cs",
@@ -5672,10 +5672,10 @@
         },
         "method": {
           "shortName": "GetSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5695,7 +5695,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSubscription_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_sync_flattened",
       "title": "GetSubscription",
       "description": "Snippet for GetSubscription",
       "file": "SubscriberServiceApiClient.GetSubscriptionSnippet.g.cs",
@@ -5720,10 +5720,10 @@
         },
         "method": {
           "shortName": "GetSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5742,7 +5742,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSubscription_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_async_flattened",
       "title": "GetSubscriptionAsync",
       "description": "Snippet for GetSubscriptionAsync",
       "file": "SubscriberServiceApiClient.GetSubscriptionAsyncSnippet.g.cs",
@@ -5768,10 +5768,10 @@
         },
         "method": {
           "shortName": "GetSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5790,7 +5790,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSubscription_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_sync_flattened_resourceNames",
       "title": "GetSubscriptionResourceNames",
       "description": "Snippet for GetSubscription",
       "file": "SubscriberServiceApiClient.GetSubscriptionResourceNamesSnippet.g.cs",
@@ -5815,10 +5815,10 @@
         },
         "method": {
           "shortName": "GetSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5837,7 +5837,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSubscription_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSubscription_async_flattened_resourceNames",
       "title": "GetSubscriptionResourceNamesAsync",
       "description": "Snippet for GetSubscriptionAsync",
       "file": "SubscriberServiceApiClient.GetSubscriptionResourceNamesAsyncSnippet.g.cs",
@@ -5863,10 +5863,10 @@
         },
         "method": {
           "shortName": "GetSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.GetSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5885,7 +5885,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSubscription_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSubscription_sync",
       "title": "UpdateSubscriptionRequestObject",
       "description": "Snippet for UpdateSubscription",
       "file": "SubscriberServiceApiClient.UpdateSubscriptionRequestObjectSnippet.g.cs",
@@ -5910,10 +5910,10 @@
         },
         "method": {
           "shortName": "UpdateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5933,7 +5933,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSubscription_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSubscription_async",
       "title": "UpdateSubscriptionRequestObjectAsync",
       "description": "Snippet for UpdateSubscriptionAsync",
       "file": "SubscriberServiceApiClient.UpdateSubscriptionRequestObjectAsyncSnippet.g.cs",
@@ -5959,10 +5959,10 @@
         },
         "method": {
           "shortName": "UpdateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -5982,7 +5982,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSubscription_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSubscription_sync_flattened",
       "title": "UpdateSubscription",
       "description": "Snippet for UpdateSubscription",
       "file": "SubscriberServiceApiClient.UpdateSubscriptionSnippet.g.cs",
@@ -6011,10 +6011,10 @@
         },
         "method": {
           "shortName": "UpdateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6033,7 +6033,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSubscription_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSubscription_async_flattened",
       "title": "UpdateSubscriptionAsync",
       "description": "Snippet for UpdateSubscriptionAsync",
       "file": "SubscriberServiceApiClient.UpdateSubscriptionAsyncSnippet.g.cs",
@@ -6063,10 +6063,10 @@
         },
         "method": {
           "shortName": "UpdateSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6085,7 +6085,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSubscriptions_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_sync",
       "title": "ListSubscriptionsRequestObject",
       "description": "Snippet for ListSubscriptions",
       "file": "SubscriberServiceApiClient.ListSubscriptionsRequestObjectSnippet.g.cs",
@@ -6110,10 +6110,10 @@
         },
         "method": {
           "shortName": "ListSubscriptions",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6133,7 +6133,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSubscriptions_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_async",
       "title": "ListSubscriptionsRequestObjectAsync",
       "description": "Snippet for ListSubscriptionsAsync",
       "file": "SubscriberServiceApiClient.ListSubscriptionsRequestObjectAsyncSnippet.g.cs",
@@ -6159,10 +6159,10 @@
         },
         "method": {
           "shortName": "ListSubscriptions",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6182,7 +6182,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSubscriptions_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_sync_flattened",
       "title": "ListSubscriptions",
       "description": "Snippet for ListSubscriptions",
       "file": "SubscriberServiceApiClient.ListSubscriptionsSnippet.g.cs",
@@ -6215,10 +6215,10 @@
         },
         "method": {
           "shortName": "ListSubscriptions",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6237,7 +6237,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSubscriptions_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_async_flattened",
       "title": "ListSubscriptionsAsync",
       "description": "Snippet for ListSubscriptionsAsync",
       "file": "SubscriberServiceApiClient.ListSubscriptionsAsyncSnippet.g.cs",
@@ -6271,10 +6271,10 @@
         },
         "method": {
           "shortName": "ListSubscriptions",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6293,7 +6293,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSubscriptions_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_sync_flattened_resourceNames",
       "title": "ListSubscriptionsResourceNames",
       "description": "Snippet for ListSubscriptions",
       "file": "SubscriberServiceApiClient.ListSubscriptionsResourceNamesSnippet.g.cs",
@@ -6326,10 +6326,10 @@
         },
         "method": {
           "shortName": "ListSubscriptions",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6348,7 +6348,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSubscriptions_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSubscriptions_async_flattened_resourceNames",
       "title": "ListSubscriptionsResourceNamesAsync",
       "description": "Snippet for ListSubscriptionsAsync",
       "file": "SubscriberServiceApiClient.ListSubscriptionsResourceNamesAsyncSnippet.g.cs",
@@ -6382,10 +6382,10 @@
         },
         "method": {
           "shortName": "ListSubscriptions",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSubscriptions",
+          "fullName": "google.pubsub.v1.Subscriber.ListSubscriptions",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6404,7 +6404,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSubscription_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_sync",
       "title": "DeleteSubscriptionRequestObject",
       "description": "Snippet for DeleteSubscription",
       "file": "SubscriberServiceApiClient.DeleteSubscriptionRequestObjectSnippet.g.cs",
@@ -6428,10 +6428,10 @@
         },
         "method": {
           "shortName": "DeleteSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6451,7 +6451,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSubscription_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_async",
       "title": "DeleteSubscriptionRequestObjectAsync",
       "description": "Snippet for DeleteSubscriptionAsync",
       "file": "SubscriberServiceApiClient.DeleteSubscriptionRequestObjectAsyncSnippet.g.cs",
@@ -6477,10 +6477,10 @@
         },
         "method": {
           "shortName": "DeleteSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6500,7 +6500,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSubscription_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_sync_flattened",
       "title": "DeleteSubscription",
       "description": "Snippet for DeleteSubscription",
       "file": "SubscriberServiceApiClient.DeleteSubscriptionSnippet.g.cs",
@@ -6524,10 +6524,10 @@
         },
         "method": {
           "shortName": "DeleteSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6546,7 +6546,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSubscription_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_async_flattened",
       "title": "DeleteSubscriptionAsync",
       "description": "Snippet for DeleteSubscriptionAsync",
       "file": "SubscriberServiceApiClient.DeleteSubscriptionAsyncSnippet.g.cs",
@@ -6572,10 +6572,10 @@
         },
         "method": {
           "shortName": "DeleteSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6594,7 +6594,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSubscription_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_sync_flattened_resourceNames",
       "title": "DeleteSubscriptionResourceNames",
       "description": "Snippet for DeleteSubscription",
       "file": "SubscriberServiceApiClient.DeleteSubscriptionResourceNamesSnippet.g.cs",
@@ -6618,10 +6618,10 @@
         },
         "method": {
           "shortName": "DeleteSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6640,7 +6640,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSubscription_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSubscription_async_flattened_resourceNames",
       "title": "DeleteSubscriptionResourceNamesAsync",
       "description": "Snippet for DeleteSubscriptionAsync",
       "file": "SubscriberServiceApiClient.DeleteSubscriptionResourceNamesAsyncSnippet.g.cs",
@@ -6666,10 +6666,10 @@
         },
         "method": {
           "shortName": "DeleteSubscription",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSubscription",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSubscription",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6688,7 +6688,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyAckDeadline_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_sync",
       "title": "ModifyAckDeadlineRequestObject",
       "description": "Snippet for ModifyAckDeadline",
       "file": "SubscriberServiceApiClient.ModifyAckDeadlineRequestObjectSnippet.g.cs",
@@ -6712,10 +6712,10 @@
         },
         "method": {
           "shortName": "ModifyAckDeadline",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6735,7 +6735,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyAckDeadline_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_async",
       "title": "ModifyAckDeadlineRequestObjectAsync",
       "description": "Snippet for ModifyAckDeadlineAsync",
       "file": "SubscriberServiceApiClient.ModifyAckDeadlineRequestObjectAsyncSnippet.g.cs",
@@ -6761,10 +6761,10 @@
         },
         "method": {
           "shortName": "ModifyAckDeadline",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6784,7 +6784,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyAckDeadline_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_sync_flattened",
       "title": "ModifyAckDeadline",
       "description": "Snippet for ModifyAckDeadline",
       "file": "SubscriberServiceApiClient.ModifyAckDeadlineSnippet.g.cs",
@@ -6816,10 +6816,10 @@
         },
         "method": {
           "shortName": "ModifyAckDeadline",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6838,7 +6838,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyAckDeadline_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_async_flattened",
       "title": "ModifyAckDeadlineAsync",
       "description": "Snippet for ModifyAckDeadlineAsync",
       "file": "SubscriberServiceApiClient.ModifyAckDeadlineAsyncSnippet.g.cs",
@@ -6872,10 +6872,10 @@
         },
         "method": {
           "shortName": "ModifyAckDeadline",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6894,7 +6894,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyAckDeadline_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_sync_flattened_resourceNames",
       "title": "ModifyAckDeadlineResourceNames",
       "description": "Snippet for ModifyAckDeadline",
       "file": "SubscriberServiceApiClient.ModifyAckDeadlineResourceNamesSnippet.g.cs",
@@ -6926,10 +6926,10 @@
         },
         "method": {
           "shortName": "ModifyAckDeadline",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -6948,7 +6948,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyAckDeadline_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyAckDeadline_async_flattened_resourceNames",
       "title": "ModifyAckDeadlineResourceNamesAsync",
       "description": "Snippet for ModifyAckDeadlineAsync",
       "file": "SubscriberServiceApiClient.ModifyAckDeadlineResourceNamesAsyncSnippet.g.cs",
@@ -6982,10 +6982,10 @@
         },
         "method": {
           "shortName": "ModifyAckDeadline",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyAckDeadline",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyAckDeadline",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7004,7 +7004,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Acknowledge_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_sync",
       "title": "AcknowledgeRequestObject",
       "description": "Snippet for Acknowledge",
       "file": "SubscriberServiceApiClient.AcknowledgeRequestObjectSnippet.g.cs",
@@ -7028,10 +7028,10 @@
         },
         "method": {
           "shortName": "Acknowledge",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7051,7 +7051,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Acknowledge_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_async",
       "title": "AcknowledgeRequestObjectAsync",
       "description": "Snippet for AcknowledgeAsync",
       "file": "SubscriberServiceApiClient.AcknowledgeRequestObjectAsyncSnippet.g.cs",
@@ -7077,10 +7077,10 @@
         },
         "method": {
           "shortName": "Acknowledge",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7100,7 +7100,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Acknowledge_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_sync_flattened",
       "title": "Acknowledge",
       "description": "Snippet for Acknowledge",
       "file": "SubscriberServiceApiClient.AcknowledgeSnippet.g.cs",
@@ -7128,10 +7128,10 @@
         },
         "method": {
           "shortName": "Acknowledge",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7150,7 +7150,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Acknowledge_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_async_flattened",
       "title": "AcknowledgeAsync",
       "description": "Snippet for AcknowledgeAsync",
       "file": "SubscriberServiceApiClient.AcknowledgeAsyncSnippet.g.cs",
@@ -7180,10 +7180,10 @@
         },
         "method": {
           "shortName": "Acknowledge",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7202,7 +7202,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Acknowledge_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_sync_flattened_resourceNames",
       "title": "AcknowledgeResourceNames",
       "description": "Snippet for Acknowledge",
       "file": "SubscriberServiceApiClient.AcknowledgeResourceNamesSnippet.g.cs",
@@ -7230,10 +7230,10 @@
         },
         "method": {
           "shortName": "Acknowledge",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7252,7 +7252,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Acknowledge_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_Acknowledge_async_flattened_resourceNames",
       "title": "AcknowledgeResourceNamesAsync",
       "description": "Snippet for AcknowledgeAsync",
       "file": "SubscriberServiceApiClient.AcknowledgeResourceNamesAsyncSnippet.g.cs",
@@ -7282,10 +7282,10 @@
         },
         "method": {
           "shortName": "Acknowledge",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Acknowledge",
+          "fullName": "google.pubsub.v1.Subscriber.Acknowledge",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7304,7 +7304,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync",
       "title": "PullRequestObject",
       "description": "Snippet for Pull",
       "file": "SubscriberServiceApiClient.PullRequestObjectSnippet.g.cs",
@@ -7329,10 +7329,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7352,7 +7352,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async",
       "title": "PullRequestObjectAsync",
       "description": "Snippet for PullAsync",
       "file": "SubscriberServiceApiClient.PullRequestObjectAsyncSnippet.g.cs",
@@ -7378,10 +7378,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7401,7 +7401,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened1",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync_flattened1",
       "title": "Pull1",
       "description": "Snippet for Pull",
       "file": "SubscriberServiceApiClient.Pull1Snippet.g.cs",
@@ -7434,10 +7434,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7456,7 +7456,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened1",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async_flattened1",
       "title": "Pull1Async",
       "description": "Snippet for PullAsync",
       "file": "SubscriberServiceApiClient.Pull1AsyncSnippet.g.cs",
@@ -7490,10 +7490,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7512,7 +7512,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened1_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync_flattened1_resourceNames",
       "title": "Pull1ResourceNames",
       "description": "Snippet for Pull",
       "file": "SubscriberServiceApiClient.Pull1ResourceNamesSnippet.g.cs",
@@ -7545,10 +7545,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7567,7 +7567,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened1_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async_flattened1_resourceNames",
       "title": "Pull1ResourceNamesAsync",
       "description": "Snippet for PullAsync",
       "file": "SubscriberServiceApiClient.Pull1ResourceNamesAsyncSnippet.g.cs",
@@ -7601,10 +7601,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7623,7 +7623,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened2",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync_flattened2",
       "title": "Pull2",
       "description": "Snippet for Pull",
       "file": "SubscriberServiceApiClient.Pull2Snippet.g.cs",
@@ -7652,10 +7652,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7674,7 +7674,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened2",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async_flattened2",
       "title": "Pull2Async",
       "description": "Snippet for PullAsync",
       "file": "SubscriberServiceApiClient.Pull2AsyncSnippet.g.cs",
@@ -7704,10 +7704,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7726,7 +7726,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened2_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_sync_flattened2_resourceNames",
       "title": "Pull2ResourceNames",
       "description": "Snippet for Pull",
       "file": "SubscriberServiceApiClient.Pull2ResourceNamesSnippet.g.cs",
@@ -7755,10 +7755,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7777,7 +7777,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened2_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_Pull_async_flattened2_resourceNames",
       "title": "Pull2ResourceNamesAsync",
       "description": "Snippet for PullAsync",
       "file": "SubscriberServiceApiClient.Pull2ResourceNamesAsyncSnippet.g.cs",
@@ -7807,10 +7807,10 @@
         },
         "method": {
           "shortName": "Pull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Pull",
+          "fullName": "google.pubsub.v1.Subscriber.Pull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7829,7 +7829,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_StreamingPull_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_StreamingPull_sync",
       "title": "StreamingPull",
       "description": "Snippet for StreamingPull",
       "file": "SubscriberServiceApiClient.StreamingPullSnippet.g.cs",
@@ -7854,10 +7854,10 @@
         },
         "method": {
           "shortName": "StreamingPull",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.StreamingPull",
+          "fullName": "google.pubsub.v1.Subscriber.StreamingPull",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7877,7 +7877,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_sync",
       "title": "ModifyPushConfigRequestObject",
       "description": "Snippet for ModifyPushConfig",
       "file": "SubscriberServiceApiClient.ModifyPushConfigRequestObjectSnippet.g.cs",
@@ -7901,10 +7901,10 @@
         },
         "method": {
           "shortName": "ModifyPushConfig",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7924,7 +7924,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_async",
       "title": "ModifyPushConfigRequestObjectAsync",
       "description": "Snippet for ModifyPushConfigAsync",
       "file": "SubscriberServiceApiClient.ModifyPushConfigRequestObjectAsyncSnippet.g.cs",
@@ -7950,10 +7950,10 @@
         },
         "method": {
           "shortName": "ModifyPushConfig",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -7973,7 +7973,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_sync_flattened",
       "title": "ModifyPushConfig",
       "description": "Snippet for ModifyPushConfig",
       "file": "SubscriberServiceApiClient.ModifyPushConfigSnippet.g.cs",
@@ -8001,10 +8001,10 @@
         },
         "method": {
           "shortName": "ModifyPushConfig",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8023,7 +8023,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_async_flattened",
       "title": "ModifyPushConfigAsync",
       "description": "Snippet for ModifyPushConfigAsync",
       "file": "SubscriberServiceApiClient.ModifyPushConfigAsyncSnippet.g.cs",
@@ -8053,10 +8053,10 @@
         },
         "method": {
           "shortName": "ModifyPushConfig",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8075,7 +8075,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_sync_flattened_resourceNames",
       "title": "ModifyPushConfigResourceNames",
       "description": "Snippet for ModifyPushConfig",
       "file": "SubscriberServiceApiClient.ModifyPushConfigResourceNamesSnippet.g.cs",
@@ -8103,10 +8103,10 @@
         },
         "method": {
           "shortName": "ModifyPushConfig",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8125,7 +8125,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_ModifyPushConfig_async_flattened_resourceNames",
       "title": "ModifyPushConfigResourceNamesAsync",
       "description": "Snippet for ModifyPushConfigAsync",
       "file": "SubscriberServiceApiClient.ModifyPushConfigResourceNamesAsyncSnippet.g.cs",
@@ -8155,10 +8155,10 @@
         },
         "method": {
           "shortName": "ModifyPushConfig",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ModifyPushConfig",
+          "fullName": "google.pubsub.v1.Subscriber.ModifyPushConfig",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8177,7 +8177,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_sync",
       "title": "GetSnapshotRequestObject",
       "description": "Snippet for GetSnapshot",
       "file": "SubscriberServiceApiClient.GetSnapshotRequestObjectSnippet.g.cs",
@@ -8202,10 +8202,10 @@
         },
         "method": {
           "shortName": "GetSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8225,7 +8225,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_async",
       "title": "GetSnapshotRequestObjectAsync",
       "description": "Snippet for GetSnapshotAsync",
       "file": "SubscriberServiceApiClient.GetSnapshotRequestObjectAsyncSnippet.g.cs",
@@ -8251,10 +8251,10 @@
         },
         "method": {
           "shortName": "GetSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8274,7 +8274,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_sync_flattened",
       "title": "GetSnapshot",
       "description": "Snippet for GetSnapshot",
       "file": "SubscriberServiceApiClient.GetSnapshotSnippet.g.cs",
@@ -8299,10 +8299,10 @@
         },
         "method": {
           "shortName": "GetSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8321,7 +8321,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_async_flattened",
       "title": "GetSnapshotAsync",
       "description": "Snippet for GetSnapshotAsync",
       "file": "SubscriberServiceApiClient.GetSnapshotAsyncSnippet.g.cs",
@@ -8347,10 +8347,10 @@
         },
         "method": {
           "shortName": "GetSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8369,7 +8369,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_sync_flattened_resourceNames",
       "title": "GetSnapshotResourceNames",
       "description": "Snippet for GetSnapshot",
       "file": "SubscriberServiceApiClient.GetSnapshotResourceNamesSnippet.g.cs",
@@ -8394,10 +8394,10 @@
         },
         "method": {
           "shortName": "GetSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8416,7 +8416,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_GetSnapshot_async_flattened_resourceNames",
       "title": "GetSnapshotResourceNamesAsync",
       "description": "Snippet for GetSnapshotAsync",
       "file": "SubscriberServiceApiClient.GetSnapshotResourceNamesAsyncSnippet.g.cs",
@@ -8442,10 +8442,10 @@
         },
         "method": {
           "shortName": "GetSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.GetSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.GetSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8464,7 +8464,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSnapshots_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_sync",
       "title": "ListSnapshotsRequestObject",
       "description": "Snippet for ListSnapshots",
       "file": "SubscriberServiceApiClient.ListSnapshotsRequestObjectSnippet.g.cs",
@@ -8489,10 +8489,10 @@
         },
         "method": {
           "shortName": "ListSnapshots",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8512,7 +8512,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSnapshots_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_async",
       "title": "ListSnapshotsRequestObjectAsync",
       "description": "Snippet for ListSnapshotsAsync",
       "file": "SubscriberServiceApiClient.ListSnapshotsRequestObjectAsyncSnippet.g.cs",
@@ -8538,10 +8538,10 @@
         },
         "method": {
           "shortName": "ListSnapshots",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8561,7 +8561,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSnapshots_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_sync_flattened",
       "title": "ListSnapshots",
       "description": "Snippet for ListSnapshots",
       "file": "SubscriberServiceApiClient.ListSnapshotsSnippet.g.cs",
@@ -8594,10 +8594,10 @@
         },
         "method": {
           "shortName": "ListSnapshots",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8616,7 +8616,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSnapshots_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_async_flattened",
       "title": "ListSnapshotsAsync",
       "description": "Snippet for ListSnapshotsAsync",
       "file": "SubscriberServiceApiClient.ListSnapshotsAsyncSnippet.g.cs",
@@ -8650,10 +8650,10 @@
         },
         "method": {
           "shortName": "ListSnapshots",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8672,7 +8672,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSnapshots_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_sync_flattened_resourceNames",
       "title": "ListSnapshotsResourceNames",
       "description": "Snippet for ListSnapshots",
       "file": "SubscriberServiceApiClient.ListSnapshotsResourceNamesSnippet.g.cs",
@@ -8705,10 +8705,10 @@
         },
         "method": {
           "shortName": "ListSnapshots",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8727,7 +8727,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_ListSnapshots_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_ListSnapshots_async_flattened_resourceNames",
       "title": "ListSnapshotsResourceNamesAsync",
       "description": "Snippet for ListSnapshotsAsync",
       "file": "SubscriberServiceApiClient.ListSnapshotsResourceNamesAsyncSnippet.g.cs",
@@ -8761,10 +8761,10 @@
         },
         "method": {
           "shortName": "ListSnapshots",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.ListSnapshots",
+          "fullName": "google.pubsub.v1.Subscriber.ListSnapshots",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8783,7 +8783,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSnapshot_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_sync",
       "title": "CreateSnapshotRequestObject",
       "description": "Snippet for CreateSnapshot",
       "file": "SubscriberServiceApiClient.CreateSnapshotRequestObjectSnippet.g.cs",
@@ -8808,10 +8808,10 @@
         },
         "method": {
           "shortName": "CreateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8831,7 +8831,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSnapshot_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_async",
       "title": "CreateSnapshotRequestObjectAsync",
       "description": "Snippet for CreateSnapshotAsync",
       "file": "SubscriberServiceApiClient.CreateSnapshotRequestObjectAsyncSnippet.g.cs",
@@ -8857,10 +8857,10 @@
         },
         "method": {
           "shortName": "CreateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8880,7 +8880,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSnapshot_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_sync_flattened",
       "title": "CreateSnapshot",
       "description": "Snippet for CreateSnapshot",
       "file": "SubscriberServiceApiClient.CreateSnapshotSnippet.g.cs",
@@ -8909,10 +8909,10 @@
         },
         "method": {
           "shortName": "CreateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8931,7 +8931,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSnapshot_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_async_flattened",
       "title": "CreateSnapshotAsync",
       "description": "Snippet for CreateSnapshotAsync",
       "file": "SubscriberServiceApiClient.CreateSnapshotAsyncSnippet.g.cs",
@@ -8961,10 +8961,10 @@
         },
         "method": {
           "shortName": "CreateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -8983,7 +8983,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSnapshot_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_sync_flattened_resourceNames",
       "title": "CreateSnapshotResourceNames",
       "description": "Snippet for CreateSnapshot",
       "file": "SubscriberServiceApiClient.CreateSnapshotResourceNamesSnippet.g.cs",
@@ -9012,10 +9012,10 @@
         },
         "method": {
           "shortName": "CreateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9034,7 +9034,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_CreateSnapshot_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_CreateSnapshot_async_flattened_resourceNames",
       "title": "CreateSnapshotResourceNamesAsync",
       "description": "Snippet for CreateSnapshotAsync",
       "file": "SubscriberServiceApiClient.CreateSnapshotResourceNamesAsyncSnippet.g.cs",
@@ -9064,10 +9064,10 @@
         },
         "method": {
           "shortName": "CreateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.CreateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.CreateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9086,7 +9086,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSnapshot_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSnapshot_sync",
       "title": "UpdateSnapshotRequestObject",
       "description": "Snippet for UpdateSnapshot",
       "file": "SubscriberServiceApiClient.UpdateSnapshotRequestObjectSnippet.g.cs",
@@ -9111,10 +9111,10 @@
         },
         "method": {
           "shortName": "UpdateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9134,7 +9134,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSnapshot_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSnapshot_async",
       "title": "UpdateSnapshotRequestObjectAsync",
       "description": "Snippet for UpdateSnapshotAsync",
       "file": "SubscriberServiceApiClient.UpdateSnapshotRequestObjectAsyncSnippet.g.cs",
@@ -9160,10 +9160,10 @@
         },
         "method": {
           "shortName": "UpdateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9183,7 +9183,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSnapshot_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSnapshot_sync_flattened",
       "title": "UpdateSnapshot",
       "description": "Snippet for UpdateSnapshot",
       "file": "SubscriberServiceApiClient.UpdateSnapshotSnippet.g.cs",
@@ -9212,10 +9212,10 @@
         },
         "method": {
           "shortName": "UpdateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9234,7 +9234,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_UpdateSnapshot_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_UpdateSnapshot_async_flattened",
       "title": "UpdateSnapshotAsync",
       "description": "Snippet for UpdateSnapshotAsync",
       "file": "SubscriberServiceApiClient.UpdateSnapshotAsyncSnippet.g.cs",
@@ -9264,10 +9264,10 @@
         },
         "method": {
           "shortName": "UpdateSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.UpdateSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.UpdateSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9286,7 +9286,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSnapshot_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_sync",
       "title": "DeleteSnapshotRequestObject",
       "description": "Snippet for DeleteSnapshot",
       "file": "SubscriberServiceApiClient.DeleteSnapshotRequestObjectSnippet.g.cs",
@@ -9310,10 +9310,10 @@
         },
         "method": {
           "shortName": "DeleteSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9333,7 +9333,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSnapshot_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_async",
       "title": "DeleteSnapshotRequestObjectAsync",
       "description": "Snippet for DeleteSnapshotAsync",
       "file": "SubscriberServiceApiClient.DeleteSnapshotRequestObjectAsyncSnippet.g.cs",
@@ -9359,10 +9359,10 @@
         },
         "method": {
           "shortName": "DeleteSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9382,7 +9382,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSnapshot_sync_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_sync_flattened",
       "title": "DeleteSnapshot",
       "description": "Snippet for DeleteSnapshot",
       "file": "SubscriberServiceApiClient.DeleteSnapshotSnippet.g.cs",
@@ -9406,10 +9406,10 @@
         },
         "method": {
           "shortName": "DeleteSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9428,7 +9428,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSnapshot_async_flattened",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_async_flattened",
       "title": "DeleteSnapshotAsync",
       "description": "Snippet for DeleteSnapshotAsync",
       "file": "SubscriberServiceApiClient.DeleteSnapshotAsyncSnippet.g.cs",
@@ -9454,10 +9454,10 @@
         },
         "method": {
           "shortName": "DeleteSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9476,7 +9476,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSnapshot_sync_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_sync_flattened_resourceNames",
       "title": "DeleteSnapshotResourceNames",
       "description": "Snippet for DeleteSnapshot",
       "file": "SubscriberServiceApiClient.DeleteSnapshotResourceNamesSnippet.g.cs",
@@ -9500,10 +9500,10 @@
         },
         "method": {
           "shortName": "DeleteSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9522,7 +9522,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_DeleteSnapshot_async_flattened_resourceNames",
+      "regionTag": "pubsub_v1_generated_Subscriber_DeleteSnapshot_async_flattened_resourceNames",
       "title": "DeleteSnapshotResourceNamesAsync",
       "description": "Snippet for DeleteSnapshotAsync",
       "file": "SubscriberServiceApiClient.DeleteSnapshotResourceNamesAsyncSnippet.g.cs",
@@ -9548,10 +9548,10 @@
         },
         "method": {
           "shortName": "DeleteSnapshot",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.DeleteSnapshot",
+          "fullName": "google.pubsub.v1.Subscriber.DeleteSnapshot",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9570,7 +9570,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Seek_sync",
+      "regionTag": "pubsub_v1_generated_Subscriber_Seek_sync",
       "title": "SeekRequestObject",
       "description": "Snippet for Seek",
       "file": "SubscriberServiceApiClient.SeekRequestObjectSnippet.g.cs",
@@ -9595,10 +9595,10 @@
         },
         "method": {
           "shortName": "Seek",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Seek",
+          "fullName": "google.pubsub.v1.Subscriber.Seek",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
@@ -9618,7 +9618,7 @@
       ]
     },
     {
-      "regionTag": "pubsub_v1_generated_SubscriberServiceApi_Seek_async",
+      "regionTag": "pubsub_v1_generated_Subscriber_Seek_async",
       "title": "SeekRequestObjectAsync",
       "description": "Snippet for SeekAsync",
       "file": "SubscriberServiceApiClient.SeekRequestObjectAsyncSnippet.g.cs",
@@ -9644,10 +9644,10 @@
         },
         "method": {
           "shortName": "Seek",
-          "fullName": "google.pubsub.v1.SubscriberServiceApi.Seek",
+          "fullName": "google.pubsub.v1.Subscriber.Seek",
           "service": {
-            "shortName": "SubscriberServiceApi",
-            "fullName": "google.pubsub.v1.SubscriberServiceApi"
+            "shortName": "Subscriber",
+            "fullName": "google.pubsub.v1.Subscriber"
           }
         }
       },
