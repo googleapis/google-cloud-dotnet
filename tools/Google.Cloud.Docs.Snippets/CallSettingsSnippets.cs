@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -102,12 +102,12 @@ namespace Google.Cloud.Tools.Snippets
             // Sample: Overrides
             // Create a default PublisherServiceApiSettings, with customizations for CreateTopic RPCs:
             // * A custom "ClientVersion" header.
-            // * A custom 5-second timeout Timing.
+            // * A custom 15-second timeout.
             // * No cancellation token.
             PublisherServiceApiSettings publisherSettings = new PublisherServiceApiSettings();
             publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings
                 .WithCancellationToken(CancellationToken.None)
-                .WithTimeout(TimeSpan.FromSeconds(5))
+                .WithTimeout(TimeSpan.FromSeconds(15))
                 .WithHeader("ClientVersion", "1.0.0");
 
             // Override the above Timing and CancellationToken in the client-wide CallSettings;
