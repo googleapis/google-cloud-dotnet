@@ -809,8 +809,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Required. Parameters for creating job template.
         /// </param>
         /// <param name="jobTemplateId">
-        /// Required. The ID to use for the job template, which will become the final component
-        /// of the job template's resource name.
+        /// Required. The ID to use for the job template, which will become the final
+        /// component of the job template's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters must match the
         /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
@@ -836,8 +836,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Required. Parameters for creating job template.
         /// </param>
         /// <param name="jobTemplateId">
-        /// Required. The ID to use for the job template, which will become the final component
-        /// of the job template's resource name.
+        /// Required. The ID to use for the job template, which will become the final
+        /// component of the job template's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters must match the
         /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
@@ -863,8 +863,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Required. Parameters for creating job template.
         /// </param>
         /// <param name="jobTemplateId">
-        /// Required. The ID to use for the job template, which will become the final component
-        /// of the job template's resource name.
+        /// Required. The ID to use for the job template, which will become the final
+        /// component of the job template's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters must match the
         /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
@@ -885,8 +885,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Required. Parameters for creating job template.
         /// </param>
         /// <param name="jobTemplateId">
-        /// Required. The ID to use for the job template, which will become the final component
-        /// of the job template's resource name.
+        /// Required. The ID to use for the job template, which will become the final
+        /// component of the job template's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters must match the
         /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
@@ -912,8 +912,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Required. Parameters for creating job template.
         /// </param>
         /// <param name="jobTemplateId">
-        /// Required. The ID to use for the job template, which will become the final component
-        /// of the job template's resource name.
+        /// Required. The ID to use for the job template, which will become the final
+        /// component of the job template's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters must match the
         /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
@@ -939,8 +939,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Required. Parameters for creating job template.
         /// </param>
         /// <param name="jobTemplateId">
-        /// Required. The ID to use for the job template, which will become the final component
-        /// of the job template's resource name.
+        /// Required. The ID to use for the job template, which will become the final
+        /// component of the job template's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters must match the
         /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
@@ -972,8 +972,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Lists job templates in the specified region.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location from which to retrieve the collection of job templates.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The parent location from which to retrieve the collection of job
+        /// templates. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -997,8 +997,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Lists job templates in the specified region.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location from which to retrieve the collection of job templates.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The parent location from which to retrieve the collection of job
+        /// templates. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1022,8 +1022,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Lists job templates in the specified region.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location from which to retrieve the collection of job templates.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The parent location from which to retrieve the collection of job
+        /// templates. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1047,8 +1047,8 @@ namespace Google.Cloud.Video.Transcoder.V1
         /// Lists job templates in the specified region.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent location from which to retrieve the collection of job templates.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The parent location from which to retrieve the collection of job
+        /// templates. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

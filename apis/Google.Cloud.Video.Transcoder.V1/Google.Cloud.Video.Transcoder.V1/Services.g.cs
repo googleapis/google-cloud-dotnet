@@ -1492,8 +1492,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int JobTemplateIdFieldNumber = 3;
     private string jobTemplateId_ = "";
     /// <summary>
-    /// Required. The ID to use for the job template, which will become the final component
-    /// of the job template's resource name.
+    /// Required. The ID to use for the job template, which will become the final
+    /// component of the job template's resource name.
     ///
     /// This value should be 4-63 characters, and valid characters must match the
     /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
@@ -1752,8 +1752,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent location from which to retrieve the collection of job templates.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The parent location from which to retrieve the collection of job
+    /// templates. Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
