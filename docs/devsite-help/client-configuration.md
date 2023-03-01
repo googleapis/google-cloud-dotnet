@@ -52,6 +52,18 @@ represent "raw" credentials which are used exactly as they are provided, without
 applying any additional options such as scopes or a quota project. These are the most low-level
 properties, and are rarely as useful as the ones above.
 
+### API Keys
+
+Most Cloud APIs do not support API keys, instead requiring full credentials as described above. For this
+reason, the client libraries do not have *direct* support for API keys, but API keys can still be used
+for those APIs which support them. The API key should be specified in the `X-Goog-Api-Key` header on
+every request, and the gRPC channel should be built using `ChannelCredentials.SecureSsl`. For example,
+to create a client for the Language API using an API key, you could use the following code:
+
+[!code-cs[](../examples/help.Configuration.txt#ApiKey)]
+
+After building the client, it can be used like any other client.
+
 ## gRPC configuration
 
 ### GrpcAdapter

@@ -129,6 +129,8 @@ namespace Google.Cloud.Language.V1.Snippets
             // End sample
         }
 
+        // Note: If you change this sample, please also change the sample
+        // in Google.Cloud.Docs.Snippets.
         [SkippableFact]
         public void ApiKey()
         {
