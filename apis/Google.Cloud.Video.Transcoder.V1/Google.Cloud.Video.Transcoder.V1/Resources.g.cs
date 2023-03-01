@@ -192,17 +192,19 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             "Zl9sZXZlbBgHIAEoBRIZCg9nb3BfZnJhbWVfY291bnQYCCABKAVIABIxCgxn",
             "b3BfZHVyYXRpb24YCSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25I",
             "ABIPCgdwcm9maWxlGAogASgJQgoKCGdvcF9tb2RlQhAKDmNvZGVjX3NldHRp",
-            "bmdzIvECCgtBdWRpb1N0cmVhbRINCgVjb2RlYxgBIAEoCRIYCgtiaXRyYXRl",
+            "bmdzIp4DCgtBdWRpb1N0cmVhbRINCgVjb2RlYxgBIAEoCRIYCgtiaXRyYXRl",
             "X2JwcxgCIAEoBUID4EECEhUKDWNoYW5uZWxfY291bnQYAyABKAUSFgoOY2hh",
             "bm5lbF9sYXlvdXQYBCADKAkSSwoHbWFwcGluZxgFIAMoCzI6Lmdvb2dsZS5j",
             "bG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkF1ZGlvU3RyZWFtLkF1ZGlvTWFw",
-            "cGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgGIAEoBRqhAQoMQXVkaW9NYXBw",
+            "cGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgGIAEoBRIVCg1sYW5ndWFnZV9j",
+            "b2RlGAcgASgJEhQKDGRpc3BsYXlfbmFtZRgIIAEoCRqhAQoMQXVkaW9NYXBw",
             "aW5nEhUKCGF0b21fa2V5GAEgASgJQgPgQQISFgoJaW5wdXRfa2V5GAIgASgJ",
             "QgPgQQISGAoLaW5wdXRfdHJhY2sYAyABKAVCA+BBAhIaCg1pbnB1dF9jaGFu",
             "bmVsGAQgASgFQgPgQQISGwoOb3V0cHV0X2NoYW5uZWwYBSABKAVCA+BBAhIP",
-            "CgdnYWluX2RiGAYgASgBIr4BCgpUZXh0U3RyZWFtEg0KBWNvZGVjGAEgASgJ",
-            "EkkKB21hcHBpbmcYAyADKAsyOC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
-            "b2Rlci52MS5UZXh0U3RyZWFtLlRleHRNYXBwaW5nGlYKC1RleHRNYXBwaW5n",
+            "CgdnYWluX2RiGAYgASgBIusBCgpUZXh0U3RyZWFtEg0KBWNvZGVjGAEgASgJ",
+            "EhUKDWxhbmd1YWdlX2NvZGUYAiABKAkSSQoHbWFwcGluZxgDIAMoCzI4Lmdv",
+            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlRleHRTdHJlYW0uVGV4",
+            "dE1hcHBpbmcSFAoMZGlzcGxheV9uYW1lGAQgASgJGlYKC1RleHRNYXBwaW5n",
             "EhUKCGF0b21fa2V5GAEgASgJQgPgQQISFgoJaW5wdXRfa2V5GAIgASgJQgPg",
             "QQISGAoLaW5wdXRfdHJhY2sYAyABKAVCA+BBAiJoCg9TZWdtZW50U2V0dGlu",
             "Z3MSMwoQc2VnbWVudF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
@@ -242,8 +244,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Parser, new[]{ "H264", "H265", "Vp9" }, new[]{ "CodecSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "AllowOpenGop", "GopFrameCount", "GopDuration", "EnableTwoPass", "VbvSizeBits", "VbvFullnessBits", "EntropyCoder", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune", "Preset" }, new[]{ "GopMode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "AllowOpenGop", "GopFrameCount", "GopDuration", "EnableTwoPass", "VbvSizeBits", "VbvFullnessBits", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune", "Preset" }, new[]{ "GopMode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "GopFrameCount", "GopDuration", "Profile" }, new[]{ "GopMode" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AudioStream), global::Google.Cloud.Video.Transcoder.V1.AudioStream.Parser, new[]{ "Codec", "BitrateBps", "ChannelCount", "ChannelLayout", "Mapping", "SampleRateHertz" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping), global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping.Parser, new[]{ "AtomKey", "InputKey", "InputTrack", "InputChannel", "OutputChannel", "GainDb" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.TextStream), global::Google.Cloud.Video.Transcoder.V1.TextStream.Parser, new[]{ "Codec", "Mapping" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping), global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping.Parser, new[]{ "AtomKey", "InputKey", "InputTrack" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AudioStream), global::Google.Cloud.Video.Transcoder.V1.AudioStream.Parser, new[]{ "Codec", "BitrateBps", "ChannelCount", "ChannelLayout", "Mapping", "SampleRateHertz", "LanguageCode", "DisplayName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping), global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping.Parser, new[]{ "AtomKey", "InputKey", "InputTrack", "InputChannel", "OutputChannel", "GainDb" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.TextStream), global::Google.Cloud.Video.Transcoder.V1.TextStream.Parser, new[]{ "Codec", "LanguageCode", "Mapping", "DisplayName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping), global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping.Parser, new[]{ "AtomKey", "InputKey", "InputTrack" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.SegmentSettings), global::Google.Cloud.Video.Transcoder.V1.SegmentSettings.Parser, new[]{ "SegmentDuration", "IndividualSegments" }, null, null, null, null)
           }));
     }
@@ -336,11 +338,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int InputUriFieldNumber = 2;
     private string inputUri_ = "";
     /// <summary>
-    /// Input only. Specify the `input_uri` to populate empty `uri` fields in each element of
-    /// `Job.config.inputs` or `JobTemplate.config.inputs` when using template.
-    /// URI of the media. Input files must be at least 5 seconds in duration and
-    /// stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). See
-    /// [Supported input and output
+    /// Input only. Specify the `input_uri` to populate empty `uri` fields in each
+    /// element of `Job.config.inputs` or `JobTemplate.config.inputs` when using
+    /// template. URI of the media. Input files must be at least 5 seconds in
+    /// duration and stored in Cloud Storage (for example,
+    /// `gs://bucket/inputs/file.mp4`). See [Supported input and output
     /// formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -356,10 +358,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int OutputUriFieldNumber = 3;
     private string outputUri_ = "";
     /// <summary>
-    /// Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or
-    /// `JobTemplate.config.output.uri` when using template.
-    /// URI for the output file(s). For example, `gs://my-bucket/outputs/`. See
-    /// [Supported input and output
+    /// Input only. Specify the `output_uri` to populate an empty
+    /// `Job.config.output.uri` or `JobTemplate.config.output.uri` when using
+    /// template. URI for the output file(s). For example,
+    /// `gs://my-bucket/outputs/`. See [Supported input and output
     /// formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -374,8 +376,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// <summary>Field number for the "template_id" field.</summary>
     public const int TemplateIdFieldNumber = 4;
     /// <summary>
-    /// Input only. Specify the `template_id` to use for populating `Job.config`. The default
-    /// is `preset/web-hd`.
+    /// Input only. Specify the `template_id` to use for populating `Job.config`.
+    /// The default is `preset/web-hd`.
     ///
     /// Preset Transcoder templates:
     /// - `preset/{preset_id}`
@@ -3643,7 +3645,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> muxStreams_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. List of user given `MuxStream.key`s that should appear in this manifest.
+    /// Required. List of user given `MuxStream.key`s that should appear in this
+    /// manifest.
     ///
     /// When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key`
     /// and `.m3u8` extension is generated for each element of the
@@ -4153,10 +4156,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int SpriteWidthPixelsFieldNumber = 3;
     private int spriteWidthPixels_;
     /// <summary>
-    /// Required. The width of sprite in pixels. Must be an even integer. To preserve the
-    /// source aspect ratio, set the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels] field or
-    /// the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels] field, but not both (the API will
-    /// automatically calculate the missing field).
+    /// Required. The width of sprite in pixels. Must be an even integer. To
+    /// preserve the source aspect ratio, set the
+    /// [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels]
+    /// field or the
+    /// [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels]
+    /// field, but not both (the API will automatically calculate the missing
+    /// field).
     ///
     /// For portrait videos that contain horizontal ASR and rotation metadata,
     /// provide the width, in pixels, per the horizontal ASR. The API calculates
@@ -4176,10 +4182,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int SpriteHeightPixelsFieldNumber = 4;
     private int spriteHeightPixels_;
     /// <summary>
-    /// Required. The height of sprite in pixels. Must be an even integer. To preserve the
-    /// source aspect ratio, set the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels] field or
-    /// the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels] field, but not both (the API will
-    /// automatically calculate the missing field).
+    /// Required. The height of sprite in pixels. Must be an even integer. To
+    /// preserve the source aspect ratio, set the
+    /// [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels]
+    /// field or the
+    /// [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels]
+    /// field, but not both (the API will automatically calculate the missing
+    /// field).
     ///
     /// For portrait videos that contain horizontal ASR and rotation metadata,
     /// provide the height, in pixels, per the horizontal ASR. The API calculates
@@ -10269,10 +10278,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int FrameRateFieldNumber = 3;
         private double frameRate_;
         /// <summary>
-        /// Required. The target video frame rate in frames per second (FPS). Must be less than
-        /// or equal to 120. Will default to the input frame rate if larger than the
-        /// input frame rate. The API will generate an output FPS that is divisible
-        /// by the input FPS, and smaller or equal to the target FPS. See
+        /// Required. The target video frame rate in frames per second (FPS). Must be
+        /// less than or equal to 120. Will default to the input frame rate if larger
+        /// than the input frame rate. The API will generate an output FPS that is
+        /// divisible by the input FPS, and smaller or equal to the target FPS. See
         /// [Calculating frame
         /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
         /// more information.
@@ -10290,8 +10299,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int BitrateBpsFieldNumber = 4;
         private int bitrateBps_;
         /// <summary>
-        /// Required. The video bitrate in bits per second. The minimum value is 1,000.
-        /// The maximum value is 800,000,000.
+        /// Required. The video bitrate in bits per second. The minimum value is
+        /// 1,000. The maximum value is 800,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11348,10 +11357,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int FrameRateFieldNumber = 3;
         private double frameRate_;
         /// <summary>
-        /// Required. The target video frame rate in frames per second (FPS). Must be less than
-        /// or equal to 120. Will default to the input frame rate if larger than the
-        /// input frame rate. The API will generate an output FPS that is divisible
-        /// by the input FPS, and smaller or equal to the target FPS. See
+        /// Required. The target video frame rate in frames per second (FPS). Must be
+        /// less than or equal to 120. Will default to the input frame rate if larger
+        /// than the input frame rate. The API will generate an output FPS that is
+        /// divisible by the input FPS, and smaller or equal to the target FPS. See
         /// [Calculating frame
         /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
         /// more information.
@@ -11369,8 +11378,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int BitrateBpsFieldNumber = 4;
         private int bitrateBps_;
         /// <summary>
-        /// Required. The video bitrate in bits per second. The minimum value is 1,000.
-        /// The maximum value is 800,000,000.
+        /// Required. The video bitrate in bits per second. The minimum value is
+        /// 1,000. The maximum value is 800,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12389,10 +12398,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int FrameRateFieldNumber = 3;
         private double frameRate_;
         /// <summary>
-        /// Required. The target video frame rate in frames per second (FPS). Must be less than
-        /// or equal to 120. Will default to the input frame rate if larger than the
-        /// input frame rate. The API will generate an output FPS that is divisible
-        /// by the input FPS, and smaller or equal to the target FPS. See
+        /// Required. The target video frame rate in frames per second (FPS). Must be
+        /// less than or equal to 120. Will default to the input frame rate if larger
+        /// than the input frame rate. The API will generate an output FPS that is
+        /// divisible by the input FPS, and smaller or equal to the target FPS. See
         /// [Calculating frame
         /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
         /// more information.
@@ -12410,8 +12419,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int BitrateBpsFieldNumber = 4;
         private int bitrateBps_;
         /// <summary>
-        /// Required. The video bitrate in bits per second. The minimum value is 1,000.
-        /// The maximum value is 480,000,000.
+        /// Required. The video bitrate in bits per second. The minimum value is
+        /// 1,000. The maximum value is 480,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12984,6 +12993,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       channelLayout_ = other.channelLayout_.Clone();
       mapping_ = other.mapping_.Clone();
       sampleRateHertz_ = other.sampleRateHertz_;
+      languageCode_ = other.languageCode_;
+      displayName_ = other.displayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13021,7 +13032,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int BitrateBpsFieldNumber = 2;
     private int bitrateBps_;
     /// <summary>
-    /// Required. Audio bitrate in bits per second. Must be between 1 and 10,000,000.
+    /// Required. Audio bitrate in bits per second. Must be between 1 and
+    /// 10,000,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13101,6 +13113,39 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
     }
 
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 7;
+    private string languageCode_ = "";
+    /// <summary>
+    /// The BCP-47 language code, such as `en-US` or `sr-Latn`. For more
+    /// information, see
+    /// https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 8;
+    private string displayName_ = "";
+    /// <summary>
+    /// The name for this particular audio stream that
+    /// will be added to the HLS/DASH manifest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -13122,6 +13167,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if(!channelLayout_.Equals(other.channelLayout_)) return false;
       if(!mapping_.Equals(other.mapping_)) return false;
       if (SampleRateHertz != other.SampleRateHertz) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (DisplayName != other.DisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -13135,6 +13182,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       hash ^= channelLayout_.GetHashCode();
       hash ^= mapping_.GetHashCode();
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -13171,6 +13220,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(48);
         output.WriteInt32(SampleRateHertz);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(LanguageCode);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13199,6 +13256,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(48);
         output.WriteInt32(SampleRateHertz);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(LanguageCode);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -13222,6 +13287,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       size += mapping_.CalculateSize(_repeated_mapping_codec);
       if (SampleRateHertz != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHertz);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -13248,6 +13319,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       mapping_.Add(other.mapping_);
       if (other.SampleRateHertz != 0) {
         SampleRateHertz = other.SampleRateHertz;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -13288,6 +13365,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             SampleRateHertz = input.ReadInt32();
             break;
           }
+          case 58: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 66: {
+            DisplayName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -13325,6 +13410,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           }
           case 48: {
             SampleRateHertz = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 66: {
+            DisplayName = input.ReadString();
             break;
           }
         }
@@ -13393,8 +13486,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int AtomKeyFieldNumber = 1;
         private string atomKey_ = "";
         /// <summary>
-        /// Required. The `EditAtom.key` that references the atom with audio inputs in the
-        /// `Job.edit_list`.
+        /// Required. The `EditAtom.key` that references the atom with audio inputs
+        /// in the `Job.edit_list`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13777,7 +13870,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextStream(TextStream other) : this() {
       codec_ = other.codec_;
+      languageCode_ = other.languageCode_;
       mapping_ = other.mapping_.Clone();
+      displayName_ = other.displayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13810,6 +13905,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
     }
 
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 2;
+    private string languageCode_ = "";
+    /// <summary>
+    /// The BCP-47 language code, such as `en-US` or `sr-Latn`. For more
+    /// information, see
+    /// https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "mapping" field.</summary>
     public const int MappingFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping> _repeated_mapping_codec
@@ -13822,6 +13934,22 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping> Mapping {
       get { return mapping_; }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 4;
+    private string displayName_ = "";
+    /// <summary>
+    /// The name for this particular text stream that
+    /// will be added to the HLS/DASH manifest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13840,7 +13968,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         return true;
       }
       if (Codec != other.Codec) return false;
+      if (LanguageCode != other.LanguageCode) return false;
       if(!mapping_.Equals(other.mapping_)) return false;
+      if (DisplayName != other.DisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -13849,7 +13979,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Codec.Length != 0) hash ^= Codec.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       hash ^= mapping_.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -13872,7 +14004,15 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(10);
         output.WriteString(Codec);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
       mapping_.WriteTo(output, _repeated_mapping_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13887,7 +14027,15 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(10);
         output.WriteString(Codec);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
       mapping_.WriteTo(ref output, _repeated_mapping_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -13901,7 +14049,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (Codec.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Codec);
       }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
       size += mapping_.CalculateSize(_repeated_mapping_codec);
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -13917,7 +14071,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (other.Codec.Length != 0) {
         Codec = other.Codec;
       }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
       mapping_.Add(other.mapping_);
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -13937,8 +14097,16 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             Codec = input.ReadString();
             break;
           }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
           case 26: {
             mapping_.AddEntriesFrom(input, _repeated_mapping_codec);
+            break;
+          }
+          case 34: {
+            DisplayName = input.ReadString();
             break;
           }
         }
@@ -13960,8 +14128,16 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             Codec = input.ReadString();
             break;
           }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
           case 26: {
             mapping_.AddEntriesFrom(ref input, _repeated_mapping_codec);
+            break;
+          }
+          case 34: {
+            DisplayName = input.ReadString();
             break;
           }
         }
