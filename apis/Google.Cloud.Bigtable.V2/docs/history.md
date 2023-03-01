@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.4.0, released 2023-03-01
+
+### Bug fixes
+
+- Return all columns when multiple families have the same qualifier. ([commit 137e40f](https://github.com/googleapis/google-cloud-dotnet/commit/137e40f186af7e884ad6111987f2cdc05aa9e91d))
+
+### New features
+
+- Add new_partitions field for CloseStream for Cloud Bigtable ChangeStream ([commit 873b2fa](https://github.com/googleapis/google-cloud-dotnet/commit/873b2fadce5aab85b93d6e088cfb572c165284d9))
+- Publish the Cloud Bigtable Change Streams ([commit 5b4d425](https://github.com/googleapis/google-cloud-dotnet/commit/5b4d425005eb83d899332fa77190293ac663c7db))
+
 ## Version 3.3.0, released 2022-10-14
 
 This release removes some changes accidentally released in 3.2.0. We
