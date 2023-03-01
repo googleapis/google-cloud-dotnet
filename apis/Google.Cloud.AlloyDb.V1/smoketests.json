@@ -1,0 +1,23 @@
+[
+  {
+    "method": "ListBackups",
+    "client": "AlloyDBAdminClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListSupportedDatabaseFlags",
+    "client": "AlloyDBAdminClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListClusters",
+    "client": "AlloyDBAdminClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
