@@ -129,12 +129,35 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Cloud.AlloyDb.V1Alpha",
+      "id": "Google.Cloud.AlloyDb.V1",
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "AlloyDB",
       "productUrl": "https://cloud.google.com/alloydb/docs",
-      "description": "Recommended Google client library to access the AlloyDB API. AlloyDB for PostgreSQL is an open source-compatible database service that provides a powerful option for migrating, modernizing, or building commercial-grade applications.",
+      "description": "Recommended Google client library to access the AlloyDB API (v1). AlloyDB for PostgreSQL is an open source-compatible database service that provides a powerful option for migrating, modernizing, or building commercial-grade applications.",
+      "tags": [
+        "alloydb",
+        "postgres",
+        "database"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/alloydb/v1",
+      "shortName": "alloydb",
+      "serviceConfigFile": "alloydb_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
+      "id": "Google.Cloud.AlloyDb.V1Alpha",
+      "version": "1.0.0-alpha00",
+      "type": "grpc",
+      "productName": "AlloyDB",
+      "productUrl": "https://cloud.google.com/alloydb/docs",
+      "description": "Recommended Google client library to access the AlloyDB API (v1alpha). AlloyDB for PostgreSQL is an open source-compatible database service that provides a powerful option for migrating, modernizing, or building commercial-grade applications.",
       "tags": [
         "alloydb",
         "postgres",
@@ -149,6 +172,29 @@
       "protoPath": "google/cloud/alloydb/v1alpha",
       "shortName": "alloydb",
       "serviceConfigFile": "alloydb_v1alpha.yaml",
+      "restNumericEnums": true
+    },
+    {
+      "id": "Google.Cloud.AlloyDb.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "AlloyDB",
+      "productUrl": "https://cloud.google.com/alloydb/docs",
+      "description": "Recommended Google client library to access the AlloyDB API (v1beta). AlloyDB for PostgreSQL is an open source-compatible database service that provides a powerful option for migrating, modernizing, or building commercial-grade applications.",
+      "tags": [
+        "alloydb",
+        "postgres",
+        "database"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/alloydb/v1beta",
+      "shortName": "alloydb",
+      "serviceConfigFile": "alloydb_v1beta.yaml",
       "restNumericEnums": true
     },
     {
