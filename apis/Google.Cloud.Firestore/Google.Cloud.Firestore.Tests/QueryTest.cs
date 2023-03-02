@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
-using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
+using sqt = Google.Cloud.Firestore.V1.StructuredQuery.Types;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -40,8 +40,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().Select("a.b", "c");
             var expected = new StructuredQuery
             {
-                Select = new Projection { Fields = { Field("a.b"), Field("c") } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Select = new sqt.Projection { Fields = { Field("a.b"), Field("c") } },
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -54,8 +54,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereEqualTo("a.b", "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.Equal, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -66,8 +66,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereEqualTo(new FieldPath("a", "b"), "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.Equal, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -78,8 +78,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereNotEqualTo("a.b", "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.NotEqual, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.NotEqual, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -90,8 +90,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereNotEqualTo(new FieldPath("a", "b"), "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.NotEqual, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.NotEqual, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -102,8 +102,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereLessThan("a.b", "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThan, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.LessThan, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -114,8 +114,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereLessThan(new FieldPath("a", "b"), "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThan, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.LessThan, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -126,8 +126,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereLessThanOrEqualTo("a.b", "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThanOrEqual, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.LessThanOrEqual, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -138,8 +138,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereLessThanOrEqualTo(new FieldPath("a", "b"), "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.LessThanOrEqual, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.LessThanOrEqual, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -150,8 +150,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereArrayContains("a.b", "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.ArrayContains, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.ArrayContains, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -162,8 +162,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereArrayContains(new FieldPath("a", "b"), "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.ArrayContains, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.ArrayContains, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -174,8 +174,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereGreaterThan("a.b", "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.GreaterThan, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.GreaterThan, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -186,8 +186,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereGreaterThan(new FieldPath("a", "b"), "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.GreaterThan, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.GreaterThan, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -198,8 +198,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereGreaterThanOrEqualTo("a.b", "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -210,8 +210,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereGreaterThanOrEqualTo(new FieldPath("a", "b"), "x");
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -224,8 +224,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereEqualTo("a.b", value);
             var expected = new StructuredQuery
             {
-                Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNan }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.UnaryFilter { Field = Field("a.b"), Op = sqt.UnaryFilter.Types.Operator.IsNan }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -236,8 +236,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereEqualTo("a.b", null);
             var expected = new StructuredQuery
             {
-                Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNull }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.UnaryFilter { Field = Field("a.b"), Op = sqt.UnaryFilter.Types.Operator.IsNull }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -250,8 +250,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereNotEqualTo("a.b", value);
             var expected = new StructuredQuery
             {
-                Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNotNan }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.UnaryFilter { Field = Field("a.b"), Op = sqt.UnaryFilter.Types.Operator.IsNotNan }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -262,8 +262,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereNotEqualTo("a.b", null);
             var expected = new StructuredQuery
             {
-                Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNotNull }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.UnaryFilter { Field = Field("a.b"), Op = sqt.UnaryFilter.Types.Operator.IsNotNull }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -278,11 +278,11 @@ namespace Google.Cloud.Firestore.Tests
             var expected = new StructuredQuery
             {
                 Where = CompositeFilter(
-                    Filter(new FieldFilter { Field = Field("a"), Op = FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
-                    Filter(new FieldFilter { Field = Field("b"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("y") }),
-                    Filter(new FieldFilter { Field = Field("c"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("z") })
+                    Filter(new sqt.FieldFilter { Field = Field("a"), Op = sqt.FieldFilter.Types.Operator.GreaterThanOrEqual, Value = CreateValue("x") }),
+                    Filter(new sqt.FieldFilter { Field = Field("b"), Op = sqt.FieldFilter.Types.Operator.Equal, Value = CreateValue("y") }),
+                    Filter(new sqt.FieldFilter { Field = Field("c"), Op = sqt.FieldFilter.Types.Operator.Equal, Value = CreateValue("z") })
                 ),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -293,8 +293,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereIn("a.b", new[] { 10, 20 });
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -305,8 +305,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereIn(new FieldPath("a", "b"), new[] { 10, 20 });
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -317,8 +317,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereNotIn("a.b", new[] { 10, 20 });
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.NotIn, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.NotIn, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -329,8 +329,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereNotIn(new FieldPath("a", "b"), new[] { 10, 20 });
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.NotIn, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.NotIn, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -411,9 +411,9 @@ namespace Google.Cloud.Firestore.Tests
                 .StartAt(snapshot);
             var expected = new StructuredQuery
             {
-                From = { new CollectionSelector { CollectionId = "col" } },
-                Where = Filter(new FieldFilter { Field = Field("foo"), Op = FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue("value1"), CreateValue("value2")) }),
-                OrderBy = { new Order { Field = Field("__name__"), Direction = Direction.Ascending } },
+                From = { new sqt.CollectionSelector { CollectionId = "col" } },
+                Where = Filter(new sqt.FieldFilter { Field = Field("foo"), Op = sqt.FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue("value1"), CreateValue("value2")) }),
+                OrderBy = { new sqt.Order { Field = Field("__name__"),  Direction =  sqt.Direction.Ascending } },
                 StartAt = new Cursor { Values = { CreateValue(collection.Document("doc")) }, Before = true }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
@@ -425,8 +425,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereArrayContainsAny("a.b", new[] { 10, 20 });
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.ArrayContainsAny, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.ArrayContainsAny, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -437,8 +437,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().WhereArrayContainsAny(new FieldPath("a", "b"), new[] { 10, 20 });
             var expected = new StructuredQuery
             {
-                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.ArrayContainsAny, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
-                From = { new CollectionSelector { CollectionId = "col" } }
+                Where = Filter(new sqt.FieldFilter { Field = Field("a.b"), Op = sqt.FieldFilter.Types.Operator.ArrayContainsAny, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -484,13 +484,13 @@ namespace Google.Cloud.Firestore.Tests
                 .Limit(10);
             var expected = new StructuredQuery
             {
-                Select = new Projection { Fields = { Field("x") } },
-                OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Ascending } },
+                Select = new sqt.Projection { Fields = { Field("x") } },
+                OrderBy = { new sqt.Order { Field = Field("foo"),  Direction = sqt.Direction.Ascending } },
                 StartAt = new Cursor { Before = false, Values = { CreateValue("a") } },
                 EndAt = new Cursor { Before = true, Values = { CreateValue("b") } },
                 Offset = 5,
                 Limit = 10,
-                From = { new CollectionSelector { CollectionId = "col" } }
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -501,8 +501,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().OrderBy("foo");
             var expected = new StructuredQuery
             {
-                OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Ascending } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                OrderBy = { new sqt.Order { Field = Field("foo"),  Direction = sqt.Direction.Ascending } },
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -513,8 +513,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().OrderBy(new FieldPath("foo"));
             var expected = new StructuredQuery
             {
-                OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Ascending } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                OrderBy = { new sqt.Order { Field = Field("foo"),  Direction = sqt.Direction.Ascending } },
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -525,8 +525,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().OrderByDescending("foo");
             var expected = new StructuredQuery
             {
-                OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Descending } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                OrderBy = { new sqt.Order { Field = Field("foo"),  Direction = sqt.Direction.Descending } },
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -537,8 +537,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = GetEmptyQuery().OrderByDescending(new FieldPath("foo"));
             var expected = new StructuredQuery
             {
-                OrderBy = { new Order { Field = Field("foo"), Direction = Direction.Descending } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                OrderBy = { new sqt.Order { Field = Field("foo"),  Direction = sqt.Direction.Descending } },
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -561,12 +561,12 @@ namespace Google.Cloud.Firestore.Tests
             {
                 OrderBy =
                 {
-                    new Order { Field = Field("foo"), Direction = Direction.Ascending },
-                    new Order { Field = Field("bar"), Direction = Direction.Ascending },
-                    new Order { Field = Field("baz"), Direction = Direction.Ascending },
+                    new sqt.Order { Field = Field("foo"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order { Field = Field("bar"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order { Field = Field("baz"),  Direction =  sqt.Direction.Ascending },
                 },
                 StartAt = new Cursor { Before = true, Values = { CreateValue(1), CreateValue("x") } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -579,10 +579,10 @@ namespace Google.Cloud.Firestore.Tests
             {
                 OrderBy =
                 {
-                    new Order { Field = Field("foo"), Direction = Direction.Ascending }
+                    new sqt.Order { Field = Field("foo"), Direction =  sqt.Direction.Ascending }
                 },
                 StartAt = new Cursor { Before = true, Values = { CreateArray() } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -595,12 +595,12 @@ namespace Google.Cloud.Firestore.Tests
             {
                 OrderBy =
                 {
-                    new Order { Field = Field("foo"), Direction = Direction.Ascending },
-                    new Order { Field = Field("bar"), Direction = Direction.Ascending },
-                    new Order { Field = Field("baz"), Direction = Direction.Ascending },
+                    new sqt.Order{ Field = Field("foo"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order{ Field = Field("bar"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order{ Field = Field("baz"),  Direction =  sqt.Direction.Ascending },
                 },
                 StartAt = new Cursor { Before = false, Values = { CreateValue(1), CreateValue("x") } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -613,12 +613,12 @@ namespace Google.Cloud.Firestore.Tests
             {
                 OrderBy =
                 {
-                    new Order { Field = Field("foo"), Direction = Direction.Ascending },
-                    new Order { Field = Field("bar"), Direction = Direction.Ascending },
-                    new Order { Field = Field("baz"), Direction = Direction.Ascending },
+                    new sqt.Order{ Field = Field("foo"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order{ Field = Field("bar"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order{ Field = Field("baz"),  Direction =  sqt.Direction.Ascending },
                 },
                 EndAt = new Cursor { Before = false, Values = { CreateValue(1), CreateValue("x") } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -631,12 +631,12 @@ namespace Google.Cloud.Firestore.Tests
             {
                 OrderBy =
                 {
-                    new Order { Field = Field("foo"), Direction = Direction.Ascending },
-                    new Order { Field = Field("bar"), Direction = Direction.Ascending },
-                    new Order { Field = Field("baz"), Direction = Direction.Ascending },
+                    new sqt.Order{ Field = Field("foo"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order{ Field = Field("bar"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order{ Field = Field("baz"),  Direction =  sqt.Direction.Ascending },
                 },
                 EndAt = new Cursor { Before = true, Values = { CreateValue(1), CreateValue("x") } },
-                From = { new CollectionSelector { CollectionId = "col" } }
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -732,21 +732,21 @@ namespace Google.Cloud.Firestore.Tests
 
             var expected = new StructuredQuery
             {
-                Select = new Projection { Fields = { Field("a.b"), Field("c.d") } },
+                Select = new  sqt.Projection { Fields = { Field("a.b"), Field("c.d") } },
                 Where = CompositeFilter(
-                    Filter(new UnaryFilter { Field = Field("a"), Op = UnaryFilter.Types.Operator.IsNull }),
-                    Filter(new FieldFilter { Field = Field("b"), Op = FieldFilter.Types.Operator.GreaterThan, Value = CreateValue(10) })
+                    Filter(new sqt.UnaryFilter { Field = Field("a"), Op = sqt.UnaryFilter.Types.Operator.IsNull }),
+                    Filter(new sqt.FieldFilter { Field = Field("b"), Op = sqt.FieldFilter.Types.Operator.GreaterThan, Value = CreateValue(10) })
                 ),
                 OrderBy =
                 {
-                    new Order { Field = Field("foo"), Direction = Direction.Ascending },
-                    new Order { Field = Field("bar"), Direction = Direction.Descending }
+                    new sqt.Order{ Field = Field("foo"),  Direction =  sqt.Direction.Ascending },
+                    new sqt.Order{ Field = Field("bar"),  Direction =  sqt.Direction.Descending }
                 },
                 StartAt = new Cursor { Before = true, Values = { CreateValue("x"), CreateValue(10) } },
                 EndAt = new Cursor { Before = false, Values = { CreateValue("y") } },
                 Offset = 3,
                 Limit = 2,
-                From = { new CollectionSelector { CollectionId = "col" } }
+                From = { new sqt.CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -760,8 +760,8 @@ namespace Google.Cloud.Firestore.Tests
                 Parent = "projects/proj/databases/db/documents",
                 StructuredQuery = new StructuredQuery
                 {
-                    Select = new Projection { Fields = { Field("Name") } },
-                    From = { new CollectionSelector { CollectionId = "col" } }
+                    Select = new  sqt.Projection { Fields = { Field("Name") } },
+                    From = { new sqt.CollectionSelector { CollectionId = "col" } }
                 }
             };
             var responses = new[]
@@ -788,8 +788,8 @@ namespace Google.Cloud.Firestore.Tests
                 Parent = "projects/proj/databases/db/documents",
                 StructuredQuery = new StructuredQuery
                 {
-                    Select = new Projection { Fields = { Field("Name") } },
-                    From = { new CollectionSelector { CollectionId = "col" } },
+                    Select = new  sqt.Projection { Fields = { Field("Name") } },
+                    From = { new sqt.CollectionSelector { CollectionId = "col" } },
                     Offset = 3
                 }
             };
@@ -852,8 +852,8 @@ namespace Google.Cloud.Firestore.Tests
                 Parent = "projects/proj/databases/db/documents",
                 StructuredQuery = new StructuredQuery
                 {
-                    Select = new Projection { Fields = { Field("Name") } },
-                    From = { new CollectionSelector { CollectionId = "col" } }
+                    Select = new  sqt.Projection { Fields = { Field("Name") } },
+                    From = { new sqt.CollectionSelector { CollectionId = "col" } }
                 }
             };
             var responses = new RunQueryResponse[0];
@@ -874,8 +874,8 @@ namespace Google.Cloud.Firestore.Tests
                 Parent = "projects/proj/databases/db/documents",
                 StructuredQuery = new StructuredQuery
                 {
-                    Select = new Projection { Fields = { Field("Name") } },
-                    From = { new CollectionSelector { CollectionId = "col" } },
+                    Select = new  sqt.Projection { Fields = { Field("Name") } },
+                    From = { new sqt.CollectionSelector { CollectionId = "col" } },
                     Offset = 3
                 },
                 Transaction = ByteString.CopyFrom(1, 2, 3, 4)
@@ -938,8 +938,8 @@ namespace Google.Cloud.Firestore.Tests
                 Parent = "projects/proj/databases/db/documents",
                 StructuredQuery = new StructuredQuery
                 {
-                    Select = new Projection { Fields = { Field("Name") } },
-                    From = { new CollectionSelector { CollectionId = "col" } }
+                    Select = new  sqt.Projection { Fields = { Field("Name") } },
+                    From = { new sqt.CollectionSelector { CollectionId = "col" } }
                 }
             };
             var responses = new RunQueryResponse[0];
@@ -1147,7 +1147,7 @@ namespace Google.Cloud.Firestore.Tests
             // is effectively an equality filter, so we should end up with document ID ordering instead.
             var query = s_db.Collection("col").WhereArrayContains("field", 1).StartAt(snapshot);
             var structured = query.ToStructuredQuery();
-            var documentIdOrder = new Order { Direction = Direction.Ascending, Field = FieldPath.DocumentId.ToFieldReference() };
+            var documentIdOrder = new sqt.Order {  Direction =  sqt.Direction.Ascending, Field = FieldPath.DocumentId.ToFieldReference() };
             Assert.Equal(new[] { documentIdOrder }, structured.OrderBy);
         }
 
@@ -1187,8 +1187,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = db.CollectionGroup("col").WhereEqualTo("field", "value");
             var expected = new StructuredQuery
             {
-                From = { new CollectionSelector { AllDescendants = true, CollectionId = "col" } },
-                Where = Filter(new FieldFilter { Field = Field("field"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("value") }),
+                From = { new sqt.CollectionSelector { AllDescendants = true, CollectionId = "col" } },
+                Where = Filter(new sqt.FieldFilter { Field = Field("field"), Op = sqt.FieldFilter.Types.Operator.Equal, Value = CreateValue("value") }),
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
@@ -1200,8 +1200,8 @@ namespace Google.Cloud.Firestore.Tests
             var query = db.CollectionGroup("col").OrderBy(FieldPath.DocumentId).StartAfter("a/b");
             var expected = new StructuredQuery
             {
-                From = { new CollectionSelector { AllDescendants = true, CollectionId = "col" } },
-                OrderBy = { new Order { Field = Field("__name__"), Direction = Direction.Ascending } },
+                From = { new sqt.CollectionSelector { AllDescendants = true, CollectionId = "col" } },
+                OrderBy = { new sqt.Order { Field = Field("__name__"),  Direction =  sqt.Direction.Ascending } },
                 StartAt = new Cursor { Values = { CreateValue(db.Document("a/b")) } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
@@ -1236,10 +1236,10 @@ namespace Google.Cloud.Firestore.Tests
 
         // Result reversal and StreamAsync being rejected are handled in integration tests.
 
-        private static FieldReference Field(string path) => new FieldReference { FieldPath = path };
-        private static Filter Filter(UnaryFilter filter) => new Filter { UnaryFilter = filter };
-        private static Filter Filter(FieldFilter filter) => new Filter { FieldFilter = filter };
-        private static Filter CompositeFilter(params Filter[] filters) =>
-            new Filter { CompositeFilter = new CompositeFilter { Op = StructuredQuery.Types.CompositeFilter.Types.Operator.And, Filters = { filters } } };
+        private static sqt.FieldReference Field(string path) => new sqt.FieldReference { FieldPath = path };
+        private static sqt.Filter Filter(sqt.UnaryFilter filter) => new sqt.Filter { UnaryFilter = filter};
+        private static sqt.Filter Filter(sqt.FieldFilter filter) => new sqt.Filter { FieldFilter = filter };
+        private static sqt.Filter CompositeFilter(params sqt.Filter[] filters) =>
+            new sqt.Filter { CompositeFilter = new sqt.CompositeFilter { Op = sqt.CompositeFilter.Types.Operator.And, Filters = { filters } } };
     }
 }

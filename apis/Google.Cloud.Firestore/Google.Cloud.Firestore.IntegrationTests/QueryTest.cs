@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -475,6 +475,25 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 .GetSnapshotAsync();
             var docs = snapshot.Documents.Select(doc => doc.ConvertTo<ArrayDocument>()).ToList();
             Assert.Equal(expectedNames.OrderBy(x => x), docs.Select(doc => doc.Name).OrderBy(x => x));
+        }
+
+        [Fact]
+        public async Task ComplexQueriesAsync()
+        { 
+            CollectionReference collection = _fixture.HighScoreCollection;
+            var query = collection.Where(
+                                        Filter.And
+                                            (
+                                                Filter.Or
+                                                    (
+                                                            Filter.Equal("Score", 90),
+                                                            Filter.Equal("Score", 110)
+                                                     ),
+                                                Filter.LessThan("Level", 15)
+                                            )
+                                        );
+            var snapshot = await query.GetSnapshotAsync();
+            Assert.Equal(1, snapshot.Count);
         }
     }
 }

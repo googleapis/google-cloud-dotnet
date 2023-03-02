@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,16 +27,18 @@ using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregat
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
 using FieldOp = Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator;
 using UnaryOp = Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator;
+using ProtoFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter;
+using Google.Api;
 
 namespace Google.Cloud.Firestore
 {
-    /// <summary>
-    /// A query against a collection.
-    /// </summary>
-    /// <remarks>
-    /// <see cref="CollectionReference"/> derives from this class as a "return-all" query against the
-    /// collection it refers to.
-    /// </remarks>
+/// <summary>
+/// A query against a collection.
+/// </summary>
+/// <remarks>
+/// <see cref="CollectionReference"/> derives from this class as a "return-all" query against the
+/// collection it refers to.
+/// </remarks>
     public class Query : IEquatable<Query>
     {
         // These are all read-only, but may be mutable. They should never be mutated;
@@ -45,12 +47,11 @@ namespace Google.Cloud.Firestore
         private readonly int _offset;
         private readonly (int count, LimitType type)? _limit;
         private readonly IReadOnlyList<InternalOrdering> _orderings; // Never null
-        private readonly IReadOnlyList<InternalFilter> _filters; // May be null
         private readonly IReadOnlyList<FieldPath> _projections; // May be null
         private readonly Cursor _startAt;
         private readonly Cursor _endAt;
         private readonly QueryRoot _root;
-
+        private readonly Filter.CompositeFilter _filter;
         private bool IsLimitToLast => _limit?.type == LimitType.Last;
 
         /// <summary>
@@ -78,17 +79,17 @@ namespace Google.Cloud.Firestore
         private Query(
             QueryRoot root,
             int offset, (int count, LimitType type)? limit,
-            IReadOnlyList<InternalOrdering> orderings, IReadOnlyList<InternalFilter> filters, IReadOnlyList<FieldPath> projections,
-            Cursor startAt, Cursor endAt)
+            IReadOnlyList<InternalOrdering> orderings, IReadOnlyList<FieldPath> projections,
+            Cursor startAt, Cursor endAt, Filter.CompositeFilter filter)
         {
             _root = root;
             _offset = offset;
             _limit = limit;
             _orderings = orderings;
-            _filters = filters;
             _projections = projections;
             _startAt = startAt;
             _endAt = endAt;
+            _filter = filter;
         }
 
         internal static Query ForCollectionGroup(FirestoreDb database, string collectionId) =>
@@ -102,19 +103,20 @@ namespace Google.Cloud.Firestore
                 throw new InvalidOperationException($"Queries using {nameof(LimitToLast)} must specify at least one ordering.");
             }
 
-            return new StructuredQuery
+            var stQuery = new StructuredQuery
             {
                 From = { new CollectionSelector { AllDescendants = _root.AllDescendants, CollectionId = _root.CollectionId } },
                 Limit = _limit?.count,
                 Offset = _offset,
                 OrderBy = { _orderings.Select(o => o.ToProto(invertDirection: limitToLast)) },
-                EndAt = limitToLast ? InvertCursor(_startAt) :_endAt,
+                EndAt = limitToLast ? InvertCursor(_startAt) : _endAt,
                 Select = _projections == null ? null : new Projection { Fields = { _projections.Select(fp => fp.ToFieldReference()) } },
                 StartAt = limitToLast ? InvertCursor(_endAt) : _startAt,
-                Where = _filters == null ? null
-                    : _filters.Count == 1 ? _filters[0].ToProto()
-                    : new Filter { CompositeFilter = new CompositeFilter { Op = CompositeFilter.Types.Operator.And, Filters = { _filters.Select(f => f.ToProto()) } } }
+                Where = _filter == null ? null
+                    : _filter.Filters.Count() == 1 ? _filter.Filters.First().ToProto(Database.SerializationContext)
+                    : _filter.ToProto(Database.SerializationContext)
             };
+            return stQuery;
 
             Cursor InvertCursor(Cursor cursor) =>
                 cursor == null ? null : new Cursor { Before = !cursor.Before, Values = { cursor.Values } };
@@ -155,7 +157,7 @@ namespace Google.Cloud.Firestore
             {
                 fieldPaths = new[] { FieldPath.DocumentId };
             }
-            return new Query(_root, _offset, _limit, _orderings, _filters, new List<FieldPath>(fieldPaths), _startAt, _endAt);
+            return new Query(_root, _offset, _limit, _orderings, new List<FieldPath>(fieldPaths), _startAt, _endAt, _filter);
         }
 
         /// <summary>
@@ -169,7 +171,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereEqualTo(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.Equal, value);
+            Where(Filter.Equal(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be
@@ -221,7 +223,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereLessThan(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.LessThan, value);
+            Where(Filter.LessThan(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than
@@ -273,7 +275,8 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereGreaterThan(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.GreaterThan, value);
+            Where(Filter.GreaterThan(fieldPath, value));
+
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than
@@ -493,10 +496,9 @@ namespace Google.Cloud.Firestore
                 };
             }
 
-            InternalFilter filter = InternalFilter.Create(Database.SerializationContext, fieldPath, op, value);
-            var newFilters = _filters == null ? new List<InternalFilter>() : new List<InternalFilter>(_filters);
-            newFilters.Add(filter);
-            return new Query(_root, _offset, _limit, _orderings, newFilters, _projections, _startAt, _endAt);
+            var newFilter = (_filter == null) ? new Filter.CompositeFilter(new List<Filter>(), CompositeFilter.Types.Operator.And)
+                .WithAdditionalFilter(new Filter.UnaryFilter(fieldPath, op, value)) : _filter.WithAdditionalFilter(new Filter.UnaryFilter(fieldPath, op, value));
+            return new Query(_root, _offset, _limit, _orderings, _projections, _startAt, _endAt, newFilter);
 
             object ConvertValueToDocumentReferencesForInQuery()
             {
@@ -506,6 +508,38 @@ namespace Google.Cloud.Firestore
                     throw new ArgumentException($"Invalid Query. A non-empty array is required for '{op}' filters.", nameof(value));
                 }
                 return list.Select(item => ConvertReference(item, nameof(value))).ToList();
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        public Query Where(Filter filter)
+        {
+            ValidateFilterForSentinels(filter);
+            var newFilter = (_filter == null) ? new Filter.CompositeFilter(new List<Filter>(), CompositeFilter.Types.Operator.And)
+            .WithAdditionalFilter(filter) : _filter.WithAdditionalFilter(filter);
+            return new Query(_root, _offset, _limit, _orderings, _projections, _startAt, _endAt, newFilter);
+        }
+
+        private void ValidateFilterForSentinels(Filter filter)
+        {
+            if (filter.GetType() == typeof(Filter.UnaryFilter))
+            {
+                Filter.UnaryFilter uFilter = (Filter.UnaryFilter) filter;
+                var convertedValue = ValueSerializer.Serialize(Database.SerializationContext, uFilter.Value);
+                ValidateNoSentinelsRecursively(convertedValue, "Sentinel values cannot be specified in filters");
+            }
+            else
+            {
+                Filter.CompositeFilter compositeFilter = (Filter.CompositeFilter) filter;
+                foreach(Filter.UnaryFilter f in compositeFilter.Filters)
+                {
+                    var convertedValue = ValueSerializer.Serialize(Database.SerializationContext, f.Value);
+                    ValidateNoSentinelsRecursively(convertedValue, "Sentinel values cannot be specified in filters");
+                }
             }
         }
 
@@ -592,7 +626,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckState(_startAt == null && _endAt == null,
                 "All orderings must be specified before StartAt, StartAfter, EndBefore or EndAt are called.");
             var newOrderings = new List<InternalOrdering>(_orderings) { new InternalOrdering(fieldPath, direction) };
-            return new Query(_root, _offset, _limit, newOrderings, _filters, _projections, _startAt, _endAt);
+            return new Query(_root, _offset, _limit, newOrderings, _projections, _startAt, _endAt, _filter);
         }
 
         /// <summary>
@@ -606,7 +640,7 @@ namespace Google.Cloud.Firestore
         public Query Limit(int limit)
         {
             GaxPreconditions.CheckArgumentRange(limit, nameof(limit), 0, int.MaxValue);
-            return new Query(_root, _offset, (limit, LimitType.First), _orderings, _filters, _projections, _startAt, _endAt);
+            return new Query(_root, _offset, (limit, LimitType.First), _orderings, _projections, _startAt, _endAt, _filter);
         }
 
         /// <summary>
@@ -627,7 +661,7 @@ namespace Google.Cloud.Firestore
         public Query LimitToLast(int limit)
         {
             GaxPreconditions.CheckArgumentRange(limit, nameof(limit), 0, int.MaxValue);
-            return new Query(_root, _offset, (limit, LimitType.Last), _orderings, _filters, _projections, _startAt, _endAt);
+            return new Query(_root, _offset, (limit, LimitType.Last), _orderings, _projections, _startAt, _endAt, _filter);
         }
 
         /// <summary>
@@ -641,7 +675,7 @@ namespace Google.Cloud.Firestore
         public Query Offset(int offset)
         {
             GaxPreconditions.CheckArgumentRange(offset, nameof(offset), 0, int.MaxValue);
-            return new Query(_root, offset, _limit, _orderings, _filters, _projections, _startAt, _endAt);
+            return new Query(_root, offset, _limit, _orderings, _projections, _startAt, _endAt, _filter);
         }
 
         /// <summary>
@@ -811,10 +845,10 @@ namespace Google.Cloud.Firestore
         // Helper methods for cursor-related functionality
 
         internal Query StartAt(object[] fieldValues, bool before) =>
-            new Query(_root, _offset, _limit, _orderings, _filters, _projections, CreateCursor(fieldValues, before), _endAt);
+            new Query(_root, _offset, _limit, _orderings, _projections, CreateCursor(fieldValues, before), _endAt, _filter);
 
         internal Query EndAt(object[] fieldValues, bool before) =>
-            new Query(_root, _offset, _limit, _orderings, _filters, _projections, _startAt, CreateCursor(fieldValues, before));
+            new Query(_root, _offset, _limit, _orderings, _projections, _startAt, CreateCursor(fieldValues, before), _filter);
 
         private Cursor CreateCursor(object[] fieldValues, bool before)
         {
@@ -870,13 +904,13 @@ namespace Google.Cloud.Firestore
         private Query StartAtSnapshot(DocumentSnapshot snapshot, bool before)
         {
             var cursor = CreateCursorFromSnapshot(snapshot, before, out var newOrderings);
-            return new Query(_root, _offset, _limit, newOrderings, _filters, _projections, cursor, _endAt);
+            return new Query(_root, _offset, _limit, newOrderings, _projections, cursor, _endAt, _filter);
         }
 
         private Query EndAtSnapshot(DocumentSnapshot snapshot, bool before)
         {
             var cursor = CreateCursorFromSnapshot(snapshot, before, out var newOrderings);
-            return new Query(_root, _offset, _limit, newOrderings, _filters, _projections, _startAt, cursor);
+            return new Query(_root, _offset, _limit, newOrderings, _projections, _startAt, cursor, _filter);
         }
 
         private Cursor CreateCursorFromSnapshot(DocumentSnapshot snapshot, bool before, out IReadOnlyList<InternalOrdering> newOrderings)
@@ -900,18 +934,12 @@ namespace Google.Cloud.Firestore
             newOrderings = _orderings;
             // Only used when we need to add orderings; set newOrderings to this at the same time.
             List<InternalOrdering> modifiedOrderings = null;
-
-            if (_orderings.Count == 0 && _filters != null)
+            var orderingFilter = Filter.GetOrderingFilter(_filter);
+            if (_orderings.Count == 0 && orderingFilter != null)
             {
                 // If no explicit ordering is specified, use the first ordering filter to define an implicit order.
-                foreach (var filter in _filters)
-                {
-                    if (filter.IsOrderingFilter())
-                    {
-                        modifiedOrderings = new List<InternalOrdering>(newOrderings) { new InternalOrdering(filter.Field, Direction.Ascending) };
-                        newOrderings = modifiedOrderings;
-                    }
-                }
+                modifiedOrderings = new List<InternalOrdering>(newOrderings) { new InternalOrdering(orderingFilter.Field, Direction.Ascending) };
+                newOrderings = modifiedOrderings;
             }
             else
             {
@@ -977,7 +1005,7 @@ namespace Google.Cloud.Firestore
                 _offset == other._offset &&
                 _limit == other._limit &&
                 GaxEqualityHelpers.ListsEqual(_orderings, other._orderings) &&
-                GaxEqualityHelpers.ListsEqual(_filters, other._filters) &&
+                _filter == other._filter &&
                 GaxEqualityHelpers.ListsEqual(_projections, other._projections) &&
                 Equals(_startAt, other._startAt) &&
                 Equals(_endAt, other._endAt);
@@ -989,7 +1017,7 @@ namespace Google.Cloud.Firestore
             _offset,
             _limit?.GetHashCode() ?? -1,
             GaxEqualityHelpers.GetListHashCode(_orderings),
-            GaxEqualityHelpers.GetListHashCode(_filters),
+            _filter?.GetHashCode() ?? -1,
             GaxEqualityHelpers.GetListHashCode(_projections),
             _startAt?.GetHashCode() ?? -1,
             _endAt?.GetHashCode() ?? -1);
@@ -1025,7 +1053,7 @@ namespace Google.Cloud.Firestore
         /// Convenience method to validate that a serialized value doesn't contain any sentinels.
         /// Throws an ArgumentException with the given message if it does contain a sentinel.
         /// </summary>
-        private static void ValidateNoSentinelsRecursively(Value value, string message)
+        internal static void ValidateNoSentinelsRecursively(Value value, string message)
         {
             if (SentinelValue.GetKind(value) != SentinelKind.None)
             {
@@ -1077,84 +1105,6 @@ namespace Google.Cloud.Firestore
             public bool Equals(InternalOrdering other) => Field.Equals(other.Field) && Direction == other.Direction;
         }
 
-        private struct InternalFilter : IEquatable<InternalFilter>
-        {
-            internal FieldPath Field { get; }
-            // The integer value of either the UnaryOp or FieldOp, depending on whether _value is null.
-            private readonly int _op;
-            // The value for a field (binary) operator, or null for a unary operator
-            private readonly Value _value;
-
-            internal Filter ToProto() =>
-                _value == null
-                ? new Filter { UnaryFilter = new UnaryFilter { Field = Field.ToFieldReference(), Op = (UnaryOp) _op } }
-                : new Filter { FieldFilter = new FieldFilter { Field = Field.ToFieldReference(), Op = (FieldOp) _op, Value = _value } };
-
-            private InternalFilter(FieldPath field, int op, Value value)
-            {
-                Field = field;
-                _op = op;
-                _value = value;
-            }
-
-            /// <summary>
-            /// Checks whether this is a comparison operator.
-            /// </summary>
-            internal bool IsOrderingFilter() =>
-                _value is object &&
-                _op == (int) FieldOp.GreaterThan ||
-                _op == (int) FieldOp.GreaterThanOrEqual ||
-                _op == (int) FieldOp.LessThan ||
-                _op == (int) FieldOp.LessThanOrEqual;
-
-            internal static InternalFilter Create(SerializationContext context, FieldPath fieldPath, FieldOp op, object value)
-            {
-                GaxPreconditions.CheckNotNull(fieldPath, nameof(fieldPath));
-                var unaryOperator = GetUnaryOperator(value, op);
-                if (unaryOperator != UnaryOp.Unspecified)
-                {
-                    return new InternalFilter(fieldPath, (int) unaryOperator, null);
-                }
-                else
-                {
-                    var convertedValue = ValueSerializer.Serialize(context, value);
-                    ValidateNoSentinelsRecursively(convertedValue, "Sentinel values cannot be specified in filters");
-                    return new InternalFilter(fieldPath, (int) op, convertedValue);
-                }
-            }
-
-            private static UnaryOp GetUnaryOperator(object value, FieldOp op)
-            {
-                switch (value)
-                {
-                    case null:
-                        return op switch
-                        {
-                            FieldOp.Equal => UnaryOp.IsNull,
-                            FieldOp.NotEqual => UnaryOp.IsNotNull,
-                            _ => throw new ArgumentException("Null values can only be used with the Equal/NotEqual operators", nameof(value))
-                        };
-                    case double d when double.IsNaN(d):
-                    case float f when float.IsNaN(f):
-                        return op switch
-                        {
-                            FieldOp.Equal => UnaryOp.IsNan,
-                            FieldOp.NotEqual => UnaryOp.IsNotNan,
-                            _ => throw new ArgumentException("Not-a-number values can only be used with the Equal/NotEqual operators", nameof(value))
-                        };
-                    default:
-                        return UnaryOp.Unspecified;
-                }
-            }
-
-            public override bool Equals(object obj) => obj is InternalFilter other ? Equals(other) : false;
-
-            public bool Equals(InternalFilter other) =>
-                Field.Equals(other.Field) && _op == other._op && Equals(_value, other._value);
-
-            public override int GetHashCode() =>
-                GaxEqualityHelpers.CombineHashCodes(Field.GetHashCode(), _op, _value?.GetHashCode() ?? -1);
-        }
 
         private sealed class DocumentSnapshotComparer : IComparer<DocumentSnapshot>
         {
