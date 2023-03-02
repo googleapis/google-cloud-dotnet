@@ -30,77 +30,82 @@ namespace Google.Cloud.Batch.V1Alpha {
             "Gh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90",
             "b2J1Zi90aW1lc3RhbXAucHJvdG8iYgoPQ29tcHV0ZVJlc291cmNlEhEKCWNw",
             "dV9taWxsaRgBIAEoAxISCgptZW1vcnlfbWliGAIgASgDEhEKCWdwdV9jb3Vu",
-            "dBgDIAEoAxIVCg1ib290X2Rpc2tfbWliGAQgASgDIqMBCgtTdGF0dXNFdmVu",
+            "dBgDIAEoAxIVCg1ib290X2Rpc2tfbWliGAQgASgDIuUBCgtTdGF0dXNFdmVu",
             "dBIMCgR0eXBlGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAEgASgJEi4KCmV2ZW50",
             "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkEKDnRh",
             "c2tfZXhlY3V0aW9uGAQgASgLMikuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxw",
-            "aGEuVGFza0V4ZWN1dGlvbiIiCg1UYXNrRXhlY3V0aW9uEhEKCWV4aXRfY29k",
-            "ZRgBIAEoBSLsAQoKVGFza1N0YXR1cxI7CgVzdGF0ZRgBIAEoDjIsLmdvb2ds",
-            "ZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tTdGF0dXMuU3RhdGUSPgoNc3Rh",
-            "dHVzX2V2ZW50cxgCIAMoCzInLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhh",
-            "LlN0YXR1c0V2ZW50ImEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "CwoHUEVORElORxABEgwKCEFTU0lHTkVEEAISCwoHUlVOTklORxADEgoKBkZB",
-            "SUxFRBAEEg0KCVNVQ0NFRURFRBAFIvcFCghSdW5uYWJsZRJDCgljb250YWlu",
-            "ZXIYASABKAsyLi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5SdW5uYWJs",
-            "ZS5Db250YWluZXJIABI9CgZzY3JpcHQYAiABKAsyKy5nb29nbGUuY2xvdWQu",
-            "YmF0Y2gudjFhbHBoYS5SdW5uYWJsZS5TY3JpcHRIABI/CgdiYXJyaWVyGAYg",
-            "ASgLMiwuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuUnVubmFibGUuQmFy",
-            "cmllckgAEhoKEmlnbm9yZV9leGl0X3N0YXR1cxgDIAEoCBISCgpiYWNrZ3Jv",
-            "dW5kGAQgASgIEhIKCmFsd2F5c19ydW4YBSABKAgSPAoLZW52aXJvbm1lbnQY",
-            "ByABKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVu",
-            "dBIqCgd0aW1lb3V0GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "EkAKBmxhYmVscxgJIAMoCzIwLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhh",
-            "LlJ1bm5hYmxlLkxhYmVsc0VudHJ5GqoBCglDb250YWluZXISEQoJaW1hZ2Vf",
-            "dXJpGAEgASgJEhAKCGNvbW1hbmRzGAIgAygJEhIKCmVudHJ5cG9pbnQYAyAB",
-            "KAkSDwoHdm9sdW1lcxgHIAMoCRIPCgdvcHRpb25zGAggASgJEh4KFmJsb2Nr",
-            "X2V4dGVybmFsX25ldHdvcmsYCSABKAgSEAoIdXNlcm5hbWUYCiABKAkSEAoI",
-            "cGFzc3dvcmQYCyABKAkaMwoGU2NyaXB0Eg4KBHBhdGgYASABKAlIABIOCgR0",
-            "ZXh0GAIgASgJSABCCQoHY29tbWFuZBoXCgdCYXJyaWVyEgwKBG5hbWUYASAB",
-            "KAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4AUIMCgpleGVjdXRhYmxlIpsECghUYXNrU3BlYxI3CglydW5uYWJsZXMY",
-            "CCADKAsyJC5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5SdW5uYWJsZRJF",
-            "ChBjb21wdXRlX3Jlc291cmNlGAMgASgLMisuZ29vZ2xlLmNsb3VkLmJhdGNo",
-            "LnYxYWxwaGEuQ29tcHV0ZVJlc291cmNlEjMKEG1heF9ydW5fZHVyYXRpb24Y",
-            "BCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFwoPbWF4X3JldHJ5",
-            "X2NvdW50GAUgASgFEkcKEmxpZmVjeWNsZV9wb2xpY2llcxgJIAMoCzIrLmdv",
-            "b2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkxpZmVjeWNsZVBvbGljeRJQCgxl",
-            "bnZpcm9ubWVudHMYBiADKAsyNi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBo",
-            "YS5UYXNrU3BlYy5FbnZpcm9ubWVudHNFbnRyeUICGAESMwoHdm9sdW1lcxgH",
-            "IAMoCzIiLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlZvbHVtZRI8Cgtl",
-            "bnZpcm9ubWVudBgKIAEoCzInLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhh",
-            "LkVudmlyb25tZW50GjMKEUVudmlyb25tZW50c0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAEilAIKD0xpZmVjeWNsZVBvbGljeRJCCgZh",
-            "Y3Rpb24YASABKA4yMi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5MaWZl",
-            "Y3ljbGVQb2xpY3kuQWN0aW9uElUKEGFjdGlvbl9jb25kaXRpb24YAiABKAsy",
-            "Oy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5MaWZlY3ljbGVQb2xpY3ku",
-            "QWN0aW9uQ29uZGl0aW9uGiUKD0FjdGlvbkNvbmRpdGlvbhISCgpleGl0X2Nv",
-            "ZGVzGAEgAygFIj8KBkFjdGlvbhIWChJBQ1RJT05fVU5TUEVDSUZJRUQQABIO",
-            "CgpSRVRSWV9UQVNLEAESDQoJRkFJTF9UQVNLEAIixQEKBFRhc2sSDAoEbmFt",
-            "ZRgBIAEoCRI2CgZzdGF0dXMYAiABKAsyJi5nb29nbGUuY2xvdWQuYmF0Y2gu",
-            "djFhbHBoYS5UYXNrU3RhdHVzOnfqQXQKGWJhdGNoLmdvb2dsZWFwaXMuY29t",
-            "L1Rhc2sSV3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9qb2JzL3tqb2J9L3Rhc2tHcm91cHMve3Rhc2tfZ3JvdXB9L3Rhc2tzL3t0",
-            "YXNrfSKeAwoLRW52aXJvbm1lbnQSSQoJdmFyaWFibGVzGAEgAygLMjYuZ29v",
-            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuRW52aXJvbm1lbnQuVmFyaWFibGVz",
-            "RW50cnkSVgoQc2VjcmV0X3ZhcmlhYmxlcxgCIAMoCzI8Lmdvb2dsZS5jbG91",
-            "ZC5iYXRjaC52MWFscGhhLkVudmlyb25tZW50LlNlY3JldFZhcmlhYmxlc0Vu",
-            "dHJ5Ek4KE2VuY3J5cHRlZF92YXJpYWJsZXMYAyABKAsyMS5nb29nbGUuY2xv",
-            "dWQuYmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVudC5LTVNFbnZNYXAaMgoJS01T",
-            "RW52TWFwEhAKCGtleV9uYW1lGAEgASgJEhMKC2NpcGhlcl90ZXh0GAIgASgJ",
-            "GjAKDlZhcmlhYmxlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEaNgoUU2VjcmV0VmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4AULDAQoeY29tLmdvb2dsZS5jbG91ZC5iYXRjaC52",
-            "MWFscGhhQglUYXNrUHJvdG9QAVo0Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYXRj",
-            "aC9hcGl2MWFscGhhL2JhdGNocGI7YmF0Y2hwYqICA0dDQqoCGkdvb2dsZS5D",
-            "bG91ZC5CYXRjaC5WMUFscGhhygIaR29vZ2xlXENsb3VkXEJhdGNoXFYxYWxw",
-            "aGHqAh1Hb29nbGU6OkNsb3VkOjpCYXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
+            "aGEuVGFza0V4ZWN1dGlvbhJACgp0YXNrX3N0YXRlGAUgASgOMiwuZ29vZ2xl",
+            "LmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza1N0YXR1cy5TdGF0ZSIiCg1UYXNr",
+            "RXhlY3V0aW9uEhEKCWV4aXRfY29kZRgBIAEoBSKzAgoKVGFza1N0YXR1cxI7",
+            "CgVzdGF0ZRgBIAEoDjIsLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRh",
+            "c2tTdGF0dXMuU3RhdGUSPgoNc3RhdHVzX2V2ZW50cxgCIAMoCzInLmdvb2ds",
+            "ZS5jbG91ZC5iYXRjaC52MWFscGhhLlN0YXR1c0V2ZW50EkUKDnJlc291cmNl",
+            "X3VzYWdlGAMgASgLMi0uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFz",
+            "a1Jlc291cmNlVXNhZ2UiYQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABILCgdQRU5ESU5HEAESDAoIQVNTSUdORUQQAhILCgdSVU5OSU5HEAMSCgoG",
+            "RkFJTEVEEAQSDQoJU1VDQ0VFREVEEAUiJwoRVGFza1Jlc291cmNlVXNhZ2US",
+            "EgoKY29yZV9ob3VycxgBIAEoASL3BQoIUnVubmFibGUSQwoJY29udGFpbmVy",
+            "GAEgASgLMi4uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuUnVubmFibGUu",
+            "Q29udGFpbmVySAASPQoGc2NyaXB0GAIgASgLMisuZ29vZ2xlLmNsb3VkLmJh",
+            "dGNoLnYxYWxwaGEuUnVubmFibGUuU2NyaXB0SAASPwoHYmFycmllchgGIAEo",
+            "CzIsLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlJ1bm5hYmxlLkJhcnJp",
+            "ZXJIABIaChJpZ25vcmVfZXhpdF9zdGF0dXMYAyABKAgSEgoKYmFja2dyb3Vu",
+            "ZBgEIAEoCBISCgphbHdheXNfcnVuGAUgASgIEjwKC2Vudmlyb25tZW50GAcg",
+            "ASgLMicuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuRW52aXJvbm1lbnQS",
+            "KgoHdGltZW91dBgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJA",
+            "CgZsYWJlbHMYCSADKAsyMC5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5S",
+            "dW5uYWJsZS5MYWJlbHNFbnRyeRqqAQoJQ29udGFpbmVyEhEKCWltYWdlX3Vy",
+            "aRgBIAEoCRIQCghjb21tYW5kcxgCIAMoCRISCgplbnRyeXBvaW50GAMgASgJ",
+            "Eg8KB3ZvbHVtZXMYByADKAkSDwoHb3B0aW9ucxgIIAEoCRIeChZibG9ja19l",
+            "eHRlcm5hbF9uZXR3b3JrGAkgASgIEhAKCHVzZXJuYW1lGAogASgJEhAKCHBh",
+            "c3N3b3JkGAsgASgJGjMKBlNjcmlwdBIOCgRwYXRoGAEgASgJSAASDgoEdGV4",
+            "dBgCIAEoCUgAQgkKB2NvbW1hbmQaFwoHQmFycmllchIMCgRuYW1lGAEgASgJ",
+            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAFCDAoKZXhlY3V0YWJsZSKbBAoIVGFza1NwZWMSNwoJcnVubmFibGVzGAgg",
+            "AygLMiQuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuUnVubmFibGUSRQoQ",
+            "Y29tcHV0ZV9yZXNvdXJjZRgDIAEoCzIrLmdvb2dsZS5jbG91ZC5iYXRjaC52",
+            "MWFscGhhLkNvbXB1dGVSZXNvdXJjZRIzChBtYXhfcnVuX2R1cmF0aW9uGAQg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhcKD21heF9yZXRyeV9j",
+            "b3VudBgFIAEoBRJHChJsaWZlY3ljbGVfcG9saWNpZXMYCSADKAsyKy5nb29n",
+            "bGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5MaWZlY3ljbGVQb2xpY3kSUAoMZW52",
+            "aXJvbm1lbnRzGAYgAygLMjYuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEu",
+            "VGFza1NwZWMuRW52aXJvbm1lbnRzRW50cnlCAhgBEjMKB3ZvbHVtZXMYByAD",
+            "KAsyIi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5Wb2x1bWUSPAoLZW52",
+            "aXJvbm1lbnQYCiABKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5F",
+            "bnZpcm9ubWVudBozChFFbnZpcm9ubWVudHNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBIpQCCg9MaWZlY3ljbGVQb2xpY3kSQgoGYWN0",
+            "aW9uGAEgASgOMjIuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuTGlmZWN5",
+            "Y2xlUG9saWN5LkFjdGlvbhJVChBhY3Rpb25fY29uZGl0aW9uGAIgASgLMjsu",
+            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuTGlmZWN5Y2xlUG9saWN5LkFj",
+            "dGlvbkNvbmRpdGlvbholCg9BY3Rpb25Db25kaXRpb24SEgoKZXhpdF9jb2Rl",
+            "cxgBIAMoBSI/CgZBY3Rpb24SFgoSQUNUSU9OX1VOU1BFQ0lGSUVEEAASDgoK",
+            "UkVUUllfVEFTSxABEg0KCUZBSUxfVEFTSxACIsUBCgRUYXNrEgwKBG5hbWUY",
+            "ASABKAkSNgoGc3RhdHVzGAIgASgLMiYuZ29vZ2xlLmNsb3VkLmJhdGNoLnYx",
+            "YWxwaGEuVGFza1N0YXR1czp36kF0ChliYXRjaC5nb29nbGVhcGlzLmNvbS9U",
+            "YXNrEldwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "am9icy97am9ifS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfS90YXNrcy97dGFz",
+            "a30ingMKC0Vudmlyb25tZW50EkkKCXZhcmlhYmxlcxgBIAMoCzI2Lmdvb2ds",
+            "ZS5jbG91ZC5iYXRjaC52MWFscGhhLkVudmlyb25tZW50LlZhcmlhYmxlc0Vu",
+            "dHJ5ElYKEHNlY3JldF92YXJpYWJsZXMYAiADKAsyPC5nb29nbGUuY2xvdWQu",
+            "YmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVudC5TZWNyZXRWYXJpYWJsZXNFbnRy",
+            "eRJOChNlbmNyeXB0ZWRfdmFyaWFibGVzGAMgASgLMjEuZ29vZ2xlLmNsb3Vk",
+            "LmJhdGNoLnYxYWxwaGEuRW52aXJvbm1lbnQuS01TRW52TWFwGjIKCUtNU0Vu",
+            "dk1hcBIQCghrZXlfbmFtZRgBIAEoCRITCgtjaXBoZXJfdGV4dBgCIAEoCRow",
+            "Cg5WYXJpYWJsZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBGjYKFFNlY3JldFZhcmlhYmxlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAFCwwEKHmNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFh",
+            "bHBoYUIJVGFza1Byb3RvUAFaNGNsb3VkLmdvb2dsZS5jb20vZ28vYmF0Y2gv",
+            "YXBpdjFhbHBoYS9iYXRjaHBiO2JhdGNocGKiAgNHQ0KqAhpHb29nbGUuQ2xv",
+            "dWQuQmF0Y2guVjFBbHBoYcoCGkdvb2dsZVxDbG91ZFxCYXRjaFxWMWFscGhh",
+            "6gIdR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYxYWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ComputeResource), global::Google.Cloud.Batch.V1Alpha.ComputeResource.Parser, new[]{ "CpuMilli", "MemoryMib", "GpuCount", "BootDiskMib" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.StatusEvent), global::Google.Cloud.Batch.V1Alpha.StatusEvent.Parser, new[]{ "Type", "Description", "EventTime", "TaskExecution" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.StatusEvent), global::Google.Cloud.Batch.V1Alpha.StatusEvent.Parser, new[]{ "Type", "Description", "EventTime", "TaskExecution", "TaskState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskExecution), global::Google.Cloud.Batch.V1Alpha.TaskExecution.Parser, new[]{ "ExitCode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskStatus), global::Google.Cloud.Batch.V1Alpha.TaskStatus.Parser, new[]{ "State", "StatusEvents" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskStatus), global::Google.Cloud.Batch.V1Alpha.TaskStatus.Parser, new[]{ "State", "StatusEvents", "ResourceUsage" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage), global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage.Parser, new[]{ "CoreHours" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable), global::Google.Cloud.Batch.V1Alpha.Runnable.Parser, new[]{ "Container", "Script", "Barrier", "IgnoreExitStatus", "Background", "AlwaysRun", "Environment", "Timeout", "Labels" }, new[]{ "Executable" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Container), global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Container.Parser, new[]{ "ImageUri", "Commands", "Entrypoint", "Volumes", "Options", "BlockExternalNetwork", "Username", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Script), global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Script.Parser, new[]{ "Path", "Text" }, new[]{ "Command" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Barrier), global::Google.Cloud.Batch.V1Alpha.Runnable.Types.Barrier.Parser, new[]{ "Name" }, null, null, null, null),
@@ -474,6 +479,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       description_ = other.description_;
       eventTime_ = other.eventTime_ != null ? other.eventTime_.Clone() : null;
       taskExecution_ = other.taskExecution_ != null ? other.taskExecution_.Clone() : null;
+      taskState_ = other.taskState_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -543,6 +549,21 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "task_state" field.</summary>
+    public const int TaskStateFieldNumber = 5;
+    private global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State taskState_ = global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified;
+    /// <summary>
+    /// Task State
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State TaskState {
+      get { return taskState_; }
+      set {
+        taskState_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -562,6 +583,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (Description != other.Description) return false;
       if (!object.Equals(EventTime, other.EventTime)) return false;
       if (!object.Equals(TaskExecution, other.TaskExecution)) return false;
+      if (TaskState != other.TaskState) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -573,6 +595,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (eventTime_ != null) hash ^= EventTime.GetHashCode();
       if (taskExecution_ != null) hash ^= TaskExecution.GetHashCode();
+      if (TaskState != global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified) hash ^= TaskState.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -607,6 +630,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(34);
         output.WriteMessage(TaskExecution);
       }
+      if (TaskState != global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) TaskState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -633,6 +660,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(34);
         output.WriteMessage(TaskExecution);
       }
+      if (TaskState != global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) TaskState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -654,6 +685,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (taskExecution_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TaskExecution);
+      }
+      if (TaskState != global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaskState);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -684,6 +718,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           TaskExecution = new global::Google.Cloud.Batch.V1Alpha.TaskExecution();
         }
         TaskExecution.MergeFrom(other.TaskExecution);
+      }
+      if (other.TaskState != global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified) {
+        TaskState = other.TaskState;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -722,6 +759,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             input.ReadMessage(TaskExecution);
             break;
           }
+          case 40: {
+            TaskState = (global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -757,6 +798,10 @@ namespace Google.Cloud.Batch.V1Alpha {
               TaskExecution = new global::Google.Cloud.Batch.V1Alpha.TaskExecution();
             }
             input.ReadMessage(TaskExecution);
+            break;
+          }
+          case 40: {
+            TaskState = (global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State) input.ReadEnum();
             break;
           }
         }
@@ -1002,6 +1047,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public TaskStatus(TaskStatus other) : this() {
       state_ = other.state_;
       statusEvents_ = other.statusEvents_.Clone();
+      resourceUsage_ = other.resourceUsage_ != null ? other.resourceUsage_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1040,6 +1086,21 @@ namespace Google.Cloud.Batch.V1Alpha {
       get { return statusEvents_; }
     }
 
+    /// <summary>Field number for the "resource_usage" field.</summary>
+    public const int ResourceUsageFieldNumber = 3;
+    private global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage resourceUsage_;
+    /// <summary>
+    /// The resource usage of the task.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage ResourceUsage {
+      get { return resourceUsage_; }
+      set {
+        resourceUsage_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1057,6 +1118,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (State != other.State) return false;
       if(!statusEvents_.Equals(other.statusEvents_)) return false;
+      if (!object.Equals(ResourceUsage, other.ResourceUsage)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1066,6 +1128,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       int hash = 1;
       if (State != global::Google.Cloud.Batch.V1Alpha.TaskStatus.Types.State.Unspecified) hash ^= State.GetHashCode();
       hash ^= statusEvents_.GetHashCode();
+      if (resourceUsage_ != null) hash ^= ResourceUsage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1089,6 +1152,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteEnum((int) State);
       }
       statusEvents_.WriteTo(output, _repeated_statusEvents_codec);
+      if (resourceUsage_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ResourceUsage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1104,6 +1171,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteEnum((int) State);
       }
       statusEvents_.WriteTo(ref output, _repeated_statusEvents_codec);
+      if (resourceUsage_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ResourceUsage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1118,6 +1189,9 @@ namespace Google.Cloud.Batch.V1Alpha {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       size += statusEvents_.CalculateSize(_repeated_statusEvents_codec);
+      if (resourceUsage_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceUsage);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1134,6 +1208,12 @@ namespace Google.Cloud.Batch.V1Alpha {
         State = other.State;
       }
       statusEvents_.Add(other.statusEvents_);
+      if (other.resourceUsage_ != null) {
+        if (resourceUsage_ == null) {
+          ResourceUsage = new global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage();
+        }
+        ResourceUsage.MergeFrom(other.ResourceUsage);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1157,6 +1237,13 @@ namespace Google.Cloud.Batch.V1Alpha {
             statusEvents_.AddEntriesFrom(input, _repeated_statusEvents_codec);
             break;
           }
+          case 26: {
+            if (resourceUsage_ == null) {
+              ResourceUsage = new global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage();
+            }
+            input.ReadMessage(ResourceUsage);
+            break;
+          }
         }
       }
     #endif
@@ -1178,6 +1265,13 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           case 18: {
             statusEvents_.AddEntriesFrom(ref input, _repeated_statusEvents_codec);
+            break;
+          }
+          case 26: {
+            if (resourceUsage_ == null) {
+              ResourceUsage = new global::Google.Cloud.Batch.V1Alpha.TaskResourceUsage();
+            }
+            input.ReadMessage(ResourceUsage);
             break;
           }
         }
@@ -1226,6 +1320,202 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
 
   /// <summary>
+  /// TaskResourceUsage describes the resource usage of the task.
+  /// </summary>
+  public sealed partial class TaskResourceUsage : pb::IMessage<TaskResourceUsage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TaskResourceUsage> _parser = new pb::MessageParser<TaskResourceUsage>(() => new TaskResourceUsage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TaskResourceUsage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskResourceUsage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskResourceUsage(TaskResourceUsage other) : this() {
+      coreHours_ = other.coreHours_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskResourceUsage Clone() {
+      return new TaskResourceUsage(this);
+    }
+
+    /// <summary>Field number for the "core_hours" field.</summary>
+    public const int CoreHoursFieldNumber = 1;
+    private double coreHours_;
+    /// <summary>
+    /// The CPU core hours the task consumes based on task requirement and run
+    /// time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double CoreHours {
+      get { return coreHours_; }
+      set {
+        coreHours_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TaskResourceUsage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TaskResourceUsage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CoreHours, other.CoreHours)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CoreHours != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CoreHours);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CoreHours != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(CoreHours);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CoreHours != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(CoreHours);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CoreHours != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TaskResourceUsage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CoreHours != 0D) {
+        CoreHours = other.CoreHours;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            CoreHours = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            CoreHours = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Runnable describes instructions for executing a specific script or container
   /// as part of a Task.
   /// </summary>
@@ -1243,7 +1533,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2360,6 +2650,14 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int PathFieldNumber = 1;
         /// <summary>
         /// Script file path on the host VM.
+        ///
+        /// To specify an interpreter, please add a `#!&lt;interpreter>`(also known as
+        /// [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
+        /// first line of the file.(For example, to execute the script using bash,
+        /// `#!/bin/bash` should be the first line of the file. To execute the
+        /// script using`Python3`, `#!/usr/bin/env python3` should be the first
+        /// line of the file.) Otherwise, the file will by default be excuted by
+        /// `/bin/sh`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2375,6 +2673,12 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int TextFieldNumber = 2;
         /// <summary>
         /// Shell script text.
+        ///
+        /// To specify an interpreter, please add a `#!&lt;interpreter>\n` at the
+        /// beginning of the text.(For example, to execute the script using bash,
+        /// `#!/bin/bash\n` should be added. To execute the script using`Python3`,
+        /// `#!/usr/bin/env python3\n` should be added.) Otherwise, the script will
+        /// by default be excuted by `/bin/sh`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2787,7 +3091,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2902,13 +3206,12 @@ namespace Google.Cloud.Batch.V1Alpha {
     private readonly pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.LifecyclePolicy> lifecyclePolicies_ = new pbc::RepeatedField<global::Google.Cloud.Batch.V1Alpha.LifecyclePolicy>();
     /// <summary>
     /// Lifecycle management schema when any task in a task group is failed.
-    /// The valid size of lifecycle policies are [0, 10].
-    /// For each lifecycle policy, when the condition is met,
-    /// the action in that policy will execute.
-    /// If there are multiple policies that the task execution result matches,
-    /// we use the action from the first matched policy. If task execution result
-    /// does not meet with any of the defined lifecycle policy, we consider it as
-    /// the default policy. Default policy means if the exit code is 0, exit task.
+    /// Currently we only support one lifecycle policy.
+    /// When the lifecycle policy condition is met,
+    /// the action in the policy will execute.
+    /// If task execution result does not meet with the defined lifecycle
+    /// policy, we consider it as the default policy.
+    /// Default policy means if the exit code is 0, exit task.
     /// If task ends with non-zero exit code, retry the task with max_retry_count.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3267,7 +3570,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3303,6 +3606,10 @@ namespace Google.Cloud.Batch.V1Alpha {
     private global::Google.Cloud.Batch.V1Alpha.LifecyclePolicy.Types.Action action_ = global::Google.Cloud.Batch.V1Alpha.LifecyclePolicy.Types.Action.Unspecified;
     /// <summary>
     /// Action to execute when ActionCondition is true.
+    /// When RETRY_TASK is specified, we will retry failed tasks
+    /// if we notice any exit code match and fail tasks if no match is found.
+    /// Likewise, when FAIL_TASK is specified, we will fail tasks
+    /// if we notice any exit code match and retry tasks if no match is found.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3726,7 +4033,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3974,7 +4281,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
