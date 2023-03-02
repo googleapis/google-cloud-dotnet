@@ -45,6 +45,15 @@ public class RetryConformanceTestFixture : ICollectionFixture<RetryConformanceTe
         };
 
         Client = clientBuilder.Build();
+
+        // Workaround for gunicorn broken behavior: if we request keep-alive,
+        // it sends responses that claim the connection will be kept alive,
+        // but then closes the connection anyway. That leads to HttpClient
+        // making a second request on the connection (presumably having not
+        // detected the close) which then fails.
+        HttpClient.DefaultRequestHeaders.ConnectionClose = true;
+        Client.Service.HttpClient.DefaultRequestHeaders.ConnectionClose = true;
+
         ServiceAccountEmail = Client.GetStorageServiceAccountEmail(ProjectId);
     }
 
