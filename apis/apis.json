@@ -3670,6 +3670,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Cloud.Location": "2.0.0",
         "Grpc.Core": "2.46.5"
       },
       "shortName": "cloudscheduler",

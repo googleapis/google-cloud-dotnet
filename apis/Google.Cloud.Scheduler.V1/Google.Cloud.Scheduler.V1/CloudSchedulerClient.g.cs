@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -55,6 +56,7 @@ namespace Google.Cloud.Scheduler.V1
             PauseJobSettings = existing.PauseJobSettings;
             ResumeJobSettings = existing.ResumeJobSettings;
             RunJobSettings = existing.RunJobSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -182,6 +184,11 @@ namespace Google.Cloud.Scheduler.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RunJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudSchedulerSettings"/> object.</returns>
@@ -324,6 +331,9 @@ namespace Google.Cloud.Scheduler.V1
 
         /// <summary>The underlying gRPC CloudScheduler client</summary>
         public virtual CloudScheduler.CloudSchedulerClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists jobs.
@@ -590,7 +600,8 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="job">
         /// Required. The job to add. The user can optionally specify a name for the
-        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// job in [name][google.cloud.scheduler.v1.Job.name].
+        /// [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
         /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
@@ -613,7 +624,8 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="job">
         /// Required. The job to add. The user can optionally specify a name for the
-        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// job in [name][google.cloud.scheduler.v1.Job.name].
+        /// [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
         /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
@@ -636,7 +648,8 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="job">
         /// Required. The job to add. The user can optionally specify a name for the
-        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// job in [name][google.cloud.scheduler.v1.Job.name].
+        /// [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
         /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
@@ -655,7 +668,8 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="job">
         /// Required. The job to add. The user can optionally specify a name for the
-        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// job in [name][google.cloud.scheduler.v1.Job.name].
+        /// [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
         /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
@@ -678,7 +692,8 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="job">
         /// Required. The job to add. The user can optionally specify a name for the
-        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// job in [name][google.cloud.scheduler.v1.Job.name].
+        /// [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
         /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
@@ -701,7 +716,8 @@ namespace Google.Cloud.Scheduler.V1
         /// </param>
         /// <param name="job">
         /// Required. The job to add. The user can optionally specify a name for the
-        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// job in [name][google.cloud.scheduler.v1.Job.name].
+        /// [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
         /// existing job. If a name is not specified then the system will
         /// generate a random unique name that will be returned
         /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
@@ -714,13 +730,14 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Updates a job.
         /// 
-        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is returned. If the job does
-        /// not exist, `NOT_FOUND` is returned.
+        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is
+        /// returned. If the job does not exist, `NOT_FOUND` is returned.
         /// 
         /// If UpdateJob does not successfully return, it is possible for the
-        /// job to be in an [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED] state. A job in this state may
-        /// not be executed. If this happens, retry the UpdateJob request
-        /// until a successful response is received.
+        /// job to be in an
+        /// [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED]
+        /// state. A job in this state may not be executed. If this happens, retry the
+        /// UpdateJob request until a successful response is received.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -731,13 +748,14 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Updates a job.
         /// 
-        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is returned. If the job does
-        /// not exist, `NOT_FOUND` is returned.
+        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is
+        /// returned. If the job does not exist, `NOT_FOUND` is returned.
         /// 
         /// If UpdateJob does not successfully return, it is possible for the
-        /// job to be in an [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED] state. A job in this state may
-        /// not be executed. If this happens, retry the UpdateJob request
-        /// until a successful response is received.
+        /// job to be in an
+        /// [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED]
+        /// state. A job in this state may not be executed. If this happens, retry the
+        /// UpdateJob request until a successful response is received.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -748,13 +766,14 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Updates a job.
         /// 
-        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is returned. If the job does
-        /// not exist, `NOT_FOUND` is returned.
+        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is
+        /// returned. If the job does not exist, `NOT_FOUND` is returned.
         /// 
         /// If UpdateJob does not successfully return, it is possible for the
-        /// job to be in an [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED] state. A job in this state may
-        /// not be executed. If this happens, retry the UpdateJob request
-        /// until a successful response is received.
+        /// job to be in an
+        /// [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED]
+        /// state. A job in this state may not be executed. If this happens, retry the
+        /// UpdateJob request until a successful response is received.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -765,16 +784,18 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Updates a job.
         /// 
-        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is returned. If the job does
-        /// not exist, `NOT_FOUND` is returned.
+        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is
+        /// returned. If the job does not exist, `NOT_FOUND` is returned.
         /// 
         /// If UpdateJob does not successfully return, it is possible for the
-        /// job to be in an [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED] state. A job in this state may
-        /// not be executed. If this happens, retry the UpdateJob request
-        /// until a successful response is received.
+        /// job to be in an
+        /// [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED]
+        /// state. A job in this state may not be executed. If this happens, retry the
+        /// UpdateJob request until a successful response is received.
         /// </summary>
         /// <param name="job">
-        /// Required. The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
+        /// Required. The new job properties.
+        /// [name][google.cloud.scheduler.v1.Job.name] must be specified.
         /// 
         /// Output only fields cannot be modified using UpdateJob.
         /// Any value specified for an output only field will be ignored.
@@ -788,22 +809,24 @@ namespace Google.Cloud.Scheduler.V1
             UpdateJob(new UpdateJobRequest
             {
                 Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
         /// Updates a job.
         /// 
-        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is returned. If the job does
-        /// not exist, `NOT_FOUND` is returned.
+        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is
+        /// returned. If the job does not exist, `NOT_FOUND` is returned.
         /// 
         /// If UpdateJob does not successfully return, it is possible for the
-        /// job to be in an [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED] state. A job in this state may
-        /// not be executed. If this happens, retry the UpdateJob request
-        /// until a successful response is received.
+        /// job to be in an
+        /// [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED]
+        /// state. A job in this state may not be executed. If this happens, retry the
+        /// UpdateJob request until a successful response is received.
         /// </summary>
         /// <param name="job">
-        /// Required. The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
+        /// Required. The new job properties.
+        /// [name][google.cloud.scheduler.v1.Job.name] must be specified.
         /// 
         /// Output only fields cannot be modified using UpdateJob.
         /// Any value specified for an output only field will be ignored.
@@ -817,22 +840,24 @@ namespace Google.Cloud.Scheduler.V1
             UpdateJobAsync(new UpdateJobRequest
             {
                 Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
         /// Updates a job.
         /// 
-        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is returned. If the job does
-        /// not exist, `NOT_FOUND` is returned.
+        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is
+        /// returned. If the job does not exist, `NOT_FOUND` is returned.
         /// 
         /// If UpdateJob does not successfully return, it is possible for the
-        /// job to be in an [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED] state. A job in this state may
-        /// not be executed. If this happens, retry the UpdateJob request
-        /// until a successful response is received.
+        /// job to be in an
+        /// [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED]
+        /// state. A job in this state may not be executed. If this happens, retry the
+        /// UpdateJob request until a successful response is received.
         /// </summary>
         /// <param name="job">
-        /// Required. The new job properties. [name][google.cloud.scheduler.v1.Job.name] must be specified.
+        /// Required. The new job properties.
+        /// [name][google.cloud.scheduler.v1.Job.name] must be specified.
         /// 
         /// Output only fields cannot be modified using UpdateJob.
         /// Any value specified for an output only field will be ignored.
@@ -960,10 +985,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -975,10 +1003,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -990,10 +1021,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1005,10 +1039,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1026,10 +1063,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1047,10 +1087,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1065,10 +1108,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1086,10 +1132,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1107,10 +1156,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1124,10 +1176,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1138,10 +1193,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1152,10 +1210,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1166,10 +1227,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1186,10 +1250,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1206,10 +1273,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1223,10 +1293,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1243,10 +1316,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1263,10 +1339,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="name">
         /// Required. The job name. For example:
@@ -1450,6 +1529,7 @@ namespace Google.Cloud.Scheduler.V1
             GrpcClient = grpcClient;
             CloudSchedulerSettings effectiveSettings = settings ?? CloudSchedulerSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("ListJobs", grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
@@ -1499,6 +1579,9 @@ namespace Google.Cloud.Scheduler.V1
 
         /// <summary>The underlying gRPC CloudScheduler client</summary>
         public override CloudScheduler.CloudSchedulerClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListJobsRequest(ref ListJobsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1591,13 +1674,14 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Updates a job.
         /// 
-        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is returned. If the job does
-        /// not exist, `NOT_FOUND` is returned.
+        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is
+        /// returned. If the job does not exist, `NOT_FOUND` is returned.
         /// 
         /// If UpdateJob does not successfully return, it is possible for the
-        /// job to be in an [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED] state. A job in this state may
-        /// not be executed. If this happens, retry the UpdateJob request
-        /// until a successful response is received.
+        /// job to be in an
+        /// [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED]
+        /// state. A job in this state may not be executed. If this happens, retry the
+        /// UpdateJob request until a successful response is received.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1611,13 +1695,14 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Updates a job.
         /// 
-        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is returned. If the job does
-        /// not exist, `NOT_FOUND` is returned.
+        /// If successful, the updated [Job][google.cloud.scheduler.v1.Job] is
+        /// returned. If the job does not exist, `NOT_FOUND` is returned.
         /// 
         /// If UpdateJob does not successfully return, it is possible for the
-        /// job to be in an [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED] state. A job in this state may
-        /// not be executed. If this happens, retry the UpdateJob request
-        /// until a successful response is received.
+        /// job to be in an
+        /// [Job.State.UPDATE_FAILED][google.cloud.scheduler.v1.Job.State.UPDATE_FAILED]
+        /// state. A job in this state may not be executed. If this happens, retry the
+        /// UpdateJob request until a successful response is received.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1656,10 +1741,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1674,10 +1762,13 @@ namespace Google.Cloud.Scheduler.V1
         /// Pauses a job.
         /// 
         /// If a job is paused then the system will stop executing the job
-        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
-        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
-        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
-        /// to be paused.
+        /// until it is re-enabled via
+        /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The state
+        /// of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if
+        /// paused it will be set to
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must
+        /// be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED] to
+        /// be paused.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1691,10 +1782,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1708,10 +1802,13 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Resume a job.
         /// 
-        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
-        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
-        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
-        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// This method reenables a job after it has been
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The state
+        /// of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state];
+        /// after calling this method it will be set to
+        /// [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job
+        /// must be in [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]
+        /// to be resumed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1763,5 +1860,21 @@ namespace Google.Cloud.Scheduler.V1
         public scg::IEnumerator<Job> GetEnumerator() => Jobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class CloudScheduler
+    {
+        public partial class CloudSchedulerClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+        }
     }
 }
