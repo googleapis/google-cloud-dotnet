@@ -16,7 +16,6 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -42,21 +41,6 @@ namespace Google.Cloud.Batch.V1
                     "google.cloud.location.Locations.ListLocations",
                     // { "get": "/v1/{name=projects/*}/locations" }
                     proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
-                },
-                {
-                    "google.iam.v1.IAMPolicy.GetIamPolicy",
-                    // { "get": "/v1/{resource=projects/*/locations/*/jobs/*}:getIamPolicy" }
-                    proto::ByteString.FromBase64("EjkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpnZXRJYW1Qb2xpY3k=")
-                },
-                {
-                    "google.iam.v1.IAMPolicy.SetIamPolicy",
-                    // { "post": "/v1/{resource=projects/*/locations/*/jobs/*}:setIamPolicy", "body": "*" }
-                    proto::ByteString.FromBase64("IjkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpzZXRJYW1Qb2xpY3k6ASo=")
-                },
-                {
-                    "google.iam.v1.IAMPolicy.TestIamPermissions",
-                    // { "post": "/v1/{resource=projects/*/locations/*/jobs/*}:testIamPermissions", "body": "*" }
-                    proto::ByteString.FromBase64("Ij8vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASo=")
                 },
                 {
                     "google.longrunning.Operations.CancelOperation",
@@ -86,9 +70,6 @@ namespace Google.Cloud.Batch.V1
             yield return JobReflection.Descriptor;
             yield return TaskReflection.Descriptor;
             yield return VolumeReflection.Descriptor;
-            yield return gciv::IamPolicyReflection.Descriptor;
-            yield return gciv::OptionsReflection.Descriptor;
-            yield return gciv::PolicyReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
