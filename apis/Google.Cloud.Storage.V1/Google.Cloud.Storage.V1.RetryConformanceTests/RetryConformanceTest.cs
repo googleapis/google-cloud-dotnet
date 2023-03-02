@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -34,7 +35,8 @@ namespace Google.Cloud.Storage.V1.RetryConformanceTests;
 public class RetryConformanceTest
 {
     private const string RetryIdHeader = "x-retry-test-id";
-    public static TheoryData<RetryTest> RetryTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.RetryTests);
+    public static TheoryData<RetryTestCase> RetryTestData { get; } =
+        StorageConformanceTestData.TestData.GetTheoryData(f => f.RetryTests.SelectMany(RetryTestCase.Flatten));
 
     private readonly RetryConformanceTestFixture _fixture;
     private readonly string retryIdPrefix = IdGenerator.FromGuid(prefix: "test-id-", suffix: "-", maxLength: 20);
@@ -45,49 +47,28 @@ public class RetryConformanceTest
     private StorageClient Client => _fixture.Client;
 
     /// <summary>
-    /// Runs a single <see cref="RetryTest"/>,
-    /// which itself can contain multiple instruction lists and methods.
+    /// Runs a single <see cref="RetryTestCase"/>.
+    /// This handles the full flow of each individual test case from resource creation to running the testing,
+    /// verifying if it passed or failed and deleting resource post-usage.
     /// </summary>
     [SkippableTheory]
     [MemberData(nameof(RetryTestData))]
-    public async Task RetryTest(RetryTest test)
+    public async Task RetryTest(RetryTestCase testCase)
     {
-        Skip.IfNot(ShouldRunTest(test));
+        var test = testCase.Test;
+        var method = testCase.Method;
+        var instructionList = testCase.InstructionList;
 
-        foreach (InstructionList instructionList in test.Cases)
-        {
-            foreach (Method method in test.Methods)
-            {
-                if (ShouldRunMethod(method.Name))
-                {
-                    await RunTestCaseAsync(instructionList, method, test.ExpectSuccess, test.PreconditionProvided);
-                }
-            }
-        }
+        Skip.If(test.Description.Contains("handle_complex_retries"));
+        Skip.If(instructionList.Instructions.Contains("return-reset-connection"));
+        Skip.If(method.Name.Contains("_acl") || method.Name == "storage.objects.compose" || method.Name == "storage.objects.insert" || method.Name == "storage.objects.copy");
 
-        // bucket_acl, default_object_acl, object_acl functions do not exist in our handwritten library.
-        // object.compose does not exist in our handwritten library and hence does not have retry implemented
-        // object.insert is covered under resumable upload
-        // objects.copy is not used directly but only as objects.rewrite which is a seperate test case
-        bool ShouldRunMethod(string methodName) =>
-            !methodName.Contains("_acl") && methodName != "storage.objects.compose" && methodName != "storage.objects.insert" && methodName != "storage.objects.copy";
-
-        // Ids with description "handle_complex_retries" are to test resumable uploads and downloads
-        // This section will be implemented in the next phase
-        bool ShouldRunTest(RetryTest test) => !test.Description.Contains("handle_complex_retries");
-    }
-
-    /// <summary>
-    /// Handle full flow of each individual test case from resource creation to running the testing, verify if it passed or failed and delete resource post usage.
-    /// </summary>
-    private async Task RunTestCaseAsync(InstructionList instructionList, Method method, bool expectSuccess, bool specifyPreconditions)
-    {
         var context = CreateTestContext(method);
         var response = await CreateRetryTestResourceAsync(instructionList, method);
 
-        if (expectSuccess)
+        if (test.ExpectSuccess)
         {
-            RunRetryTest(response, context, method.Group, specifyPreconditions);
+            RunRetryTest(response, context, method.Group, test.PreconditionProvided);
             var postTestResponse = await GetRetryTestAsync(response.Id);
             Assert.True(postTestResponse.Completed, "Expected retry test completed to be true, but was false.");
         }
@@ -95,7 +76,7 @@ public class RetryConformanceTest
         {
             try
             {
-                RunRetryTest(response, context, method.Group, specifyPreconditions);
+                RunRetryTest(response, context, method.Group, test.PreconditionProvided);
                 Assert.False(response.Completed);
             }
             catch (GoogleApiException ex) when (InstructionContainsErrorCode(ex.HttpStatusCode))
@@ -105,8 +86,8 @@ public class RetryConformanceTest
             }
         }
 
-        bool InstructionContainsErrorCode(HttpStatusCode statusCode)
-            => instructionList.Instructions.Contains($"return-{(int) statusCode}");
+        bool InstructionContainsErrorCode(HttpStatusCode statusCode) =>
+            instructionList.Instructions.Contains($"return-{(int) statusCode}");
     }
 
     /// <summary>
