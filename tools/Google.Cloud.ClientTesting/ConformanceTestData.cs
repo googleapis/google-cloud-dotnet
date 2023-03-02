@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
 // limitations under the License.
 
 using Google.Protobuf;
-using Google.Protobuf.Collections;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xunit;
@@ -89,7 +89,7 @@ namespace Google.Cloud.ClientTesting
         /// <summary>
         /// Convenience method to create a TheoryData for a given test subset.
         /// </summary>
-        public TheoryData<TTest> GetTheoryData<TTest>(Func<T, RepeatedField<TTest>> testExtractor)
+        public TheoryData<TTest> GetTheoryData<TTest>(Func<T, IEnumerable<TTest>> testExtractor)
         {
             var ret = new TheoryData<TTest>();
             foreach (var test in testExtractor(MergedTests))
