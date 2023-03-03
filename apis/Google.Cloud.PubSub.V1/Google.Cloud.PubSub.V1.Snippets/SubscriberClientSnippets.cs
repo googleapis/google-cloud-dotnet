@@ -13,6 +13,11 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.PubSub.V1.Snippets
@@ -36,5 +41,91 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End sample
         }
 
+        [Fact]
+        public void AddSubscriberClient()
+        {
+            string projectId = "projectId";
+            string subscriptionId = "subscriptionId";
+            var services = new ServiceCollection();
+
+            // Sample: AddSubscriberClient
+            SubscriptionName subscriptionName = SubscriptionName.FromProjectSubscription(projectId, subscriptionId);
+            services.AddSubscriberClient(subscriptionName);
+            // End sample        
+        }
+
+        [Fact]
+        public void AddCustomizedSubscriberClient()
+        {
+            string projectId = "projectId";
+            string subscriptionId = "subscriptionId";
+            var services = new ServiceCollection();
+
+            // Sample: AddCustomizedSubscriberClient
+            SubscriptionName subscriptionName = SubscriptionName.FromProjectSubscription(projectId, subscriptionId);
+            services.AddSubscriberClient(builder =>
+            {
+                builder.SubscriptionName = subscriptionName;
+                builder.CredentialsPath = "path/to/credentials.json";
+                // Other settings to customize the client.
+            });
+            // End sample
+        }
+
+        [Fact]
+        public void AddHostedService()
+        {
+            var services = new ServiceCollection();
+
+            // Sample: AddHostedService
+            services.AddHostedService<SubscriberService>();
+            // End sample        
+        }
+
+        [Fact]
+        public async Task UseSubscriberServiceInConsoleApp()
+        {            
+            string projectId = "projectId";
+            string subscriptionId = "subscriptionId";
+
+            // Sample: UseSubscriberServiceInConsoleApp
+            // Add `using Microsoft.Extensions.Hosting;` in the using directives.
+            var host = Host.CreateDefaultBuilder()
+                .ConfigureServices((hostContext, services) =>
+                {
+                    SubscriptionName subscriptionName = SubscriptionName.FromProjectSubscription(projectId, subscriptionId);
+                    services.AddSubscriberClient(subscriptionName);
+                    services.AddHostedService<SubscriberService>();
+                })
+                .Build();
+
+            await host.RunAsync();
+            // End sample
+        }
     }
+
+    // Sample: UseSubscriberClient
+    public class SubscriberService : BackgroundService
+    {
+        private readonly SubscriberClient _subscriberClient;
+        private readonly ILogger<SubscriberService> _logger;
+
+        public SubscriberService(SubscriberClient subscriberClient, ILogger<SubscriberService> logger)
+        {
+            _subscriberClient = subscriberClient;
+            _logger = logger;
+        }
+
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken) =>
+            await _subscriberClient.StartAsync((msg, token) =>
+                {
+                    _logger.LogInformation($"Received message {msg.MessageId}: {msg.Data.ToStringUtf8()}");
+                    // Handle the message.
+                    return Task.FromResult(SubscriberClient.Reply.Ack);
+                });
+
+        public override async Task StopAsync(CancellationToken stoppingToken) =>
+            await _subscriberClient.StopAsync(stoppingToken);
+    }
+    // End sample    
 }
