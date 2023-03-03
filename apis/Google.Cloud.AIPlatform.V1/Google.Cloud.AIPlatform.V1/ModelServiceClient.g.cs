@@ -67,6 +67,7 @@ namespace Google.Cloud.AIPlatform.V1
             CopyModelOperationsSettings = existing.CopyModelOperationsSettings.Clone();
             ImportModelEvaluationSettings = existing.ImportModelEvaluationSettings;
             BatchImportModelEvaluationSlicesSettings = existing.BatchImportModelEvaluationSlicesSettings;
+            BatchImportEvaluatedAnnotationsSettings = existing.BatchImportEvaluatedAnnotationsSettings;
             GetModelEvaluationSettings = existing.GetModelEvaluationSettings;
             ListModelEvaluationsSettings = existing.ListModelEvaluationsSettings;
             GetModelEvaluationSliceSettings = existing.GetModelEvaluationSliceSettings;
@@ -312,6 +313,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BatchImportModelEvaluationSlicesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.BatchImportEvaluatedAnnotations</c> and
+        /// <c>ModelServiceClient.BatchImportEvaluatedAnnotationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchImportEvaluatedAnnotationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1418,8 +1432,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -1432,8 +1447,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -1446,8 +1462,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -1487,8 +1504,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -1509,8 +1527,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -1531,8 +1550,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -1550,8 +1570,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -1572,8 +1593,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -1594,8 +1616,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -2526,6 +2549,157 @@ namespace Google.Cloud.AIPlatform.V1
             BatchImportModelEvaluationSlicesAsync(parent, modelEvaluationSlices, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchImportEvaluatedAnnotationsResponse BatchImportEvaluatedAnnotations(BatchImportEvaluatedAnnotationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(BatchImportEvaluatedAnnotationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(BatchImportEvaluatedAnnotationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchImportEvaluatedAnnotationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluationSlice resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}`
+        /// </param>
+        /// <param name="evaluatedAnnotations">
+        /// Required. Evaluated annotations resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchImportEvaluatedAnnotationsResponse BatchImportEvaluatedAnnotations(string parent, scg::IEnumerable<EvaluatedAnnotation> evaluatedAnnotations, gaxgrpc::CallSettings callSettings = null) =>
+            BatchImportEvaluatedAnnotations(new BatchImportEvaluatedAnnotationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EvaluatedAnnotations =
+                {
+                    gax::GaxPreconditions.CheckNotNull(evaluatedAnnotations, nameof(evaluatedAnnotations)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluationSlice resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}`
+        /// </param>
+        /// <param name="evaluatedAnnotations">
+        /// Required. Evaluated annotations resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(string parent, scg::IEnumerable<EvaluatedAnnotation> evaluatedAnnotations, gaxgrpc::CallSettings callSettings = null) =>
+            BatchImportEvaluatedAnnotationsAsync(new BatchImportEvaluatedAnnotationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EvaluatedAnnotations =
+                {
+                    gax::GaxPreconditions.CheckNotNull(evaluatedAnnotations, nameof(evaluatedAnnotations)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluationSlice resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}`
+        /// </param>
+        /// <param name="evaluatedAnnotations">
+        /// Required. Evaluated annotations resource to be imported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(string parent, scg::IEnumerable<EvaluatedAnnotation> evaluatedAnnotations, st::CancellationToken cancellationToken) =>
+            BatchImportEvaluatedAnnotationsAsync(parent, evaluatedAnnotations, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluationSlice resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}`
+        /// </param>
+        /// <param name="evaluatedAnnotations">
+        /// Required. Evaluated annotations resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchImportEvaluatedAnnotationsResponse BatchImportEvaluatedAnnotations(ModelEvaluationSliceName parent, scg::IEnumerable<EvaluatedAnnotation> evaluatedAnnotations, gaxgrpc::CallSettings callSettings = null) =>
+            BatchImportEvaluatedAnnotations(new BatchImportEvaluatedAnnotationsRequest
+            {
+                ParentAsModelEvaluationSliceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EvaluatedAnnotations =
+                {
+                    gax::GaxPreconditions.CheckNotNull(evaluatedAnnotations, nameof(evaluatedAnnotations)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluationSlice resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}`
+        /// </param>
+        /// <param name="evaluatedAnnotations">
+        /// Required. Evaluated annotations resource to be imported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(ModelEvaluationSliceName parent, scg::IEnumerable<EvaluatedAnnotation> evaluatedAnnotations, gaxgrpc::CallSettings callSettings = null) =>
+            BatchImportEvaluatedAnnotationsAsync(new BatchImportEvaluatedAnnotationsRequest
+            {
+                ParentAsModelEvaluationSliceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EvaluatedAnnotations =
+                {
+                    gax::GaxPreconditions.CheckNotNull(evaluatedAnnotations, nameof(evaluatedAnnotations)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent ModelEvaluationSlice resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/models/{model}/evaluations/{evaluation}/slices/{slice}`
+        /// </param>
+        /// <param name="evaluatedAnnotations">
+        /// Required. Evaluated annotations resource to be imported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(ModelEvaluationSliceName parent, scg::IEnumerable<EvaluatedAnnotation> evaluatedAnnotations, st::CancellationToken cancellationToken) =>
+            BatchImportEvaluatedAnnotationsAsync(parent, evaluatedAnnotations, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a ModelEvaluation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3030,6 +3204,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<BatchImportModelEvaluationSlicesRequest, BatchImportModelEvaluationSlicesResponse> _callBatchImportModelEvaluationSlices;
 
+        private readonly gaxgrpc::ApiCall<BatchImportEvaluatedAnnotationsRequest, BatchImportEvaluatedAnnotationsResponse> _callBatchImportEvaluatedAnnotations;
+
         private readonly gaxgrpc::ApiCall<GetModelEvaluationRequest, ModelEvaluation> _callGetModelEvaluation;
 
         private readonly gaxgrpc::ApiCall<ListModelEvaluationsRequest, ListModelEvaluationsResponse> _callListModelEvaluations;
@@ -3092,6 +3268,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callBatchImportModelEvaluationSlices = clientHelper.BuildApiCall<BatchImportModelEvaluationSlicesRequest, BatchImportModelEvaluationSlicesResponse>("BatchImportModelEvaluationSlices", grpcClient.BatchImportModelEvaluationSlicesAsync, grpcClient.BatchImportModelEvaluationSlices, effectiveSettings.BatchImportModelEvaluationSlicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchImportModelEvaluationSlices);
             Modify_BatchImportModelEvaluationSlicesApiCall(ref _callBatchImportModelEvaluationSlices);
+            _callBatchImportEvaluatedAnnotations = clientHelper.BuildApiCall<BatchImportEvaluatedAnnotationsRequest, BatchImportEvaluatedAnnotationsResponse>("BatchImportEvaluatedAnnotations", grpcClient.BatchImportEvaluatedAnnotationsAsync, grpcClient.BatchImportEvaluatedAnnotations, effectiveSettings.BatchImportEvaluatedAnnotationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchImportEvaluatedAnnotations);
+            Modify_BatchImportEvaluatedAnnotationsApiCall(ref _callBatchImportEvaluatedAnnotations);
             _callGetModelEvaluation = clientHelper.BuildApiCall<GetModelEvaluationRequest, ModelEvaluation>("GetModelEvaluation", grpcClient.GetModelEvaluationAsync, grpcClient.GetModelEvaluation, effectiveSettings.GetModelEvaluationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetModelEvaluation);
             Modify_GetModelEvaluationApiCall(ref _callGetModelEvaluation);
@@ -3132,6 +3311,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ImportModelEvaluationApiCall(ref gaxgrpc::ApiCall<ImportModelEvaluationRequest, ModelEvaluation> call);
 
         partial void Modify_BatchImportModelEvaluationSlicesApiCall(ref gaxgrpc::ApiCall<BatchImportModelEvaluationSlicesRequest, BatchImportModelEvaluationSlicesResponse> call);
+
+        partial void Modify_BatchImportEvaluatedAnnotationsApiCall(ref gaxgrpc::ApiCall<BatchImportEvaluatedAnnotationsRequest, BatchImportEvaluatedAnnotationsResponse> call);
 
         partial void Modify_GetModelEvaluationApiCall(ref gaxgrpc::ApiCall<GetModelEvaluationRequest, ModelEvaluation> call);
 
@@ -3175,6 +3356,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ImportModelEvaluationRequest(ref ImportModelEvaluationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchImportModelEvaluationSlicesRequest(ref BatchImportModelEvaluationSlicesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchImportEvaluatedAnnotationsRequest(ref BatchImportEvaluatedAnnotationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetModelEvaluationRequest(ref GetModelEvaluationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3354,8 +3537,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -3371,8 +3555,9 @@ namespace Google.Cloud.AIPlatform.V1
         /// <summary>
         /// Deletes a Model version.
         /// 
-        /// Model version can only be deleted if there are no [DeployedModels][]
-        /// created from it. Deleting the only version in the Model is not allowed. Use
+        /// Model version can only be deleted if there are no
+        /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+        /// Deleting the only version in the Model is not allowed. Use
         /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
         /// deleting the Model instead.
         /// </summary>
@@ -3525,6 +3710,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_BatchImportModelEvaluationSlicesRequest(ref request, ref callSettings);
             return _callBatchImportModelEvaluationSlices.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchImportEvaluatedAnnotationsResponse BatchImportEvaluatedAnnotations(BatchImportEvaluatedAnnotationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchImportEvaluatedAnnotationsRequest(ref request, ref callSettings);
+            return _callBatchImportEvaluatedAnnotations.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports a list of externally generated EvaluatedAnnotations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(BatchImportEvaluatedAnnotationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchImportEvaluatedAnnotationsRequest(ref request, ref callSettings);
+            return _callBatchImportEvaluatedAnnotations.Async(request, callSettings);
         }
 
         /// <summary>

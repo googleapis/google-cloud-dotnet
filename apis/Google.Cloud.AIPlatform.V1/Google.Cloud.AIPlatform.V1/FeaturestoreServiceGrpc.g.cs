@@ -116,6 +116,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ExportFeatureValuesRequest> __Marshaller_google_cloud_aiplatform_v1_ExportFeatureValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ExportFeatureValuesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteFeatureValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SearchFeaturesRequest> __Marshaller_google_cloud_aiplatform_v1_SearchFeaturesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SearchFeaturesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SearchFeaturesResponse> __Marshaller_google_cloud_aiplatform_v1_SearchFeaturesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SearchFeaturesResponse.Parser));
@@ -270,6 +272,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         __ServiceName,
         "ExportFeatureValues",
         __Marshaller_google_cloud_aiplatform_v1_ExportFeatureValuesRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest, global::Google.LongRunning.Operation> __Method_DeleteFeatureValues = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFeatureValues",
+        __Marshaller_google_cloud_aiplatform_v1_DeleteFeatureValuesRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -540,6 +550,27 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportFeatureValues(global::Google.Cloud.AIPlatform.V1.ExportFeatureValuesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete Feature values from Featurestore.
+      ///
+      /// The progress of the deletion is tracked by the returned operation. The
+      /// deleted feature values are guaranteed to be invisible to subsequent read
+      /// operations after the operation is marked as successfully done.
+      ///
+      /// If a delete feature values operation fails, the feature values
+      /// returned from reads and exports may be inconsistent. If consistency is
+      /// required, the caller must retry the same delete request again and wait till
+      /// the new operation returned is marked as successfully done.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteFeatureValues(global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1602,6 +1633,90 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ExportFeatureValues, null, options, request);
       }
       /// <summary>
+      /// Delete Feature values from Featurestore.
+      ///
+      /// The progress of the deletion is tracked by the returned operation. The
+      /// deleted feature values are guaranteed to be invisible to subsequent read
+      /// operations after the operation is marked as successfully done.
+      ///
+      /// If a delete feature values operation fails, the feature values
+      /// returned from reads and exports may be inconsistent. If consistency is
+      /// required, the caller must retry the same delete request again and wait till
+      /// the new operation returned is marked as successfully done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFeatureValues(global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFeatureValues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete Feature values from Featurestore.
+      ///
+      /// The progress of the deletion is tracked by the returned operation. The
+      /// deleted feature values are guaranteed to be invisible to subsequent read
+      /// operations after the operation is marked as successfully done.
+      ///
+      /// If a delete feature values operation fails, the feature values
+      /// returned from reads and exports may be inconsistent. If consistency is
+      /// required, the caller must retry the same delete request again and wait till
+      /// the new operation returned is marked as successfully done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFeatureValues(global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFeatureValues, null, options, request);
+      }
+      /// <summary>
+      /// Delete Feature values from Featurestore.
+      ///
+      /// The progress of the deletion is tracked by the returned operation. The
+      /// deleted feature values are guaranteed to be invisible to subsequent read
+      /// operations after the operation is marked as successfully done.
+      ///
+      /// If a delete feature values operation fails, the feature values
+      /// returned from reads and exports may be inconsistent. If consistency is
+      /// required, the caller must retry the same delete request again and wait till
+      /// the new operation returned is marked as successfully done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFeatureValuesAsync(global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFeatureValuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete Feature values from Featurestore.
+      ///
+      /// The progress of the deletion is tracked by the returned operation. The
+      /// deleted feature values are guaranteed to be invisible to subsequent read
+      /// operations after the operation is marked as successfully done.
+      ///
+      /// If a delete feature values operation fails, the feature values
+      /// returned from reads and exports may be inconsistent. If consistency is
+      /// required, the caller must retry the same delete request again and wait till
+      /// the new operation returned is marked as successfully done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFeatureValuesAsync(global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFeatureValues, null, options, request);
+      }
+      /// <summary>
       /// Searches Features matching a query in a given project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1682,6 +1797,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_ImportFeatureValues, serviceImpl.ImportFeatureValues)
           .AddMethod(__Method_BatchReadFeatureValues, serviceImpl.BatchReadFeatureValues)
           .AddMethod(__Method_ExportFeatureValues, serviceImpl.ExportFeatureValues)
+          .AddMethod(__Method_DeleteFeatureValues, serviceImpl.DeleteFeatureValues)
           .AddMethod(__Method_SearchFeatures, serviceImpl.SearchFeatures).Build();
     }
 
@@ -1711,6 +1827,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ImportFeatureValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ImportFeatureValuesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportFeatureValues));
       serviceBinder.AddMethod(__Method_BatchReadFeatureValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchReadFeatureValues));
       serviceBinder.AddMethod(__Method_ExportFeatureValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ExportFeatureValuesRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportFeatureValues));
+      serviceBinder.AddMethod(__Method_DeleteFeatureValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteFeatureValues));
       serviceBinder.AddMethod(__Method_SearchFeatures, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.SearchFeaturesRequest, global::Google.Cloud.AIPlatform.V1.SearchFeaturesResponse>(serviceImpl.SearchFeatures));
     }
 

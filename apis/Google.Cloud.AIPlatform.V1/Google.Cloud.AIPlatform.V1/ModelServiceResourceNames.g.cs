@@ -188,6 +188,18 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class BatchImportEvaluatedAnnotationsRequest
+    {
+        /// <summary>
+        /// <see cref="ModelEvaluationSliceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ModelEvaluationSliceName ParentAsModelEvaluationSliceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ModelEvaluationSliceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetModelEvaluationRequest
     {
         /// <summary>

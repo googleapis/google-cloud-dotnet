@@ -1665,7 +1665,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Checks  whether a Trial should stop or not. Returns a
         /// long-running operation. When the operation is successful,
         /// it will contain a
-        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.ml.v1.CheckTrialEarlyStoppingStateResponse].
+        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.aiplatform.v1.CheckTrialEarlyStoppingStateResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1677,7 +1677,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Checks  whether a Trial should stop or not. Returns a
         /// long-running operation. When the operation is successful,
         /// it will contain a
-        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.ml.v1.CheckTrialEarlyStoppingStateResponse].
+        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.aiplatform.v1.CheckTrialEarlyStoppingStateResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1689,7 +1689,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Checks  whether a Trial should stop or not. Returns a
         /// long-running operation. When the operation is successful,
         /// it will contain a
-        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.ml.v1.CheckTrialEarlyStoppingStateResponse].
+        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.aiplatform.v1.CheckTrialEarlyStoppingStateResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2372,7 +2372,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Checks  whether a Trial should stop or not. Returns a
         /// long-running operation. When the operation is successful,
         /// it will contain a
-        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.ml.v1.CheckTrialEarlyStoppingStateResponse].
+        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.aiplatform.v1.CheckTrialEarlyStoppingStateResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2387,7 +2387,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Checks  whether a Trial should stop or not. Returns a
         /// long-running operation. When the operation is successful,
         /// it will contain a
-        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.ml.v1.CheckTrialEarlyStoppingStateResponse].
+        /// [CheckTrialEarlyStoppingStateResponse][google.cloud.aiplatform.v1.CheckTrialEarlyStoppingStateResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

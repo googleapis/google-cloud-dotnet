@@ -211,6 +211,12 @@
                 "DeleteFeatureAsync"
               ]
             },
+            "DeleteFeatureValues": {
+              "methods": [
+                "DeleteFeatureValues",
+                "DeleteFeatureValuesAsync"
+              ]
+            },
             "DeleteFeaturestore": {
               "methods": [
                 "DeleteFeaturestore",
@@ -847,6 +853,12 @@
         "grpc": {
           "libraryClient": "ModelServiceClient",
           "rpcs": {
+            "BatchImportEvaluatedAnnotations": {
+              "methods": [
+                "BatchImportEvaluatedAnnotations",
+                "BatchImportEvaluatedAnnotationsAsync"
+              ]
+            },
             "BatchImportModelEvaluationSlices": {
               "methods": [
                 "BatchImportModelEvaluationSlices",

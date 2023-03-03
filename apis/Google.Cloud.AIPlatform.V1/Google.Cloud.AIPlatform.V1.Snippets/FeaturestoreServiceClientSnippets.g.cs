@@ -3953,6 +3953,191 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteFeatureValues</summary>
+        public void DeleteFeatureValuesRequestObject()
+        {
+            // Snippet: DeleteFeatureValues(DeleteFeatureValuesRequest, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteFeatureValuesRequest request = new DeleteFeatureValuesRequest
+            {
+                EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                SelectEntity = new DeleteFeatureValuesRequest.Types.SelectEntity(),
+            };
+            // Make the request
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> response = featurestoreServiceClient.DeleteFeatureValues(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeleteFeatureValuesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceDeleteFeatureValues(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeleteFeatureValuesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureValuesAsync</summary>
+        public async Task DeleteFeatureValuesRequestObjectAsync()
+        {
+            // Snippet: DeleteFeatureValuesAsync(DeleteFeatureValuesRequest, CallSettings)
+            // Additional: DeleteFeatureValuesAsync(DeleteFeatureValuesRequest, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteFeatureValuesRequest request = new DeleteFeatureValuesRequest
+            {
+                EntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]"),
+                SelectEntity = new DeleteFeatureValuesRequest.Types.SelectEntity(),
+            };
+            // Make the request
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> response = await featurestoreServiceClient.DeleteFeatureValuesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeleteFeatureValuesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceDeleteFeatureValuesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeleteFeatureValuesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureValues</summary>
+        public void DeleteFeatureValues()
+        {
+            // Snippet: DeleteFeatureValues(string, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            string entityType = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            // Make the request
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> response = featurestoreServiceClient.DeleteFeatureValues(entityType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeleteFeatureValuesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceDeleteFeatureValues(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeleteFeatureValuesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureValuesAsync</summary>
+        public async Task DeleteFeatureValuesAsync()
+        {
+            // Snippet: DeleteFeatureValuesAsync(string, CallSettings)
+            // Additional: DeleteFeatureValuesAsync(string, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string entityType = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            // Make the request
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> response = await featurestoreServiceClient.DeleteFeatureValuesAsync(entityType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeleteFeatureValuesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceDeleteFeatureValuesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeleteFeatureValuesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureValues</summary>
+        public void DeleteFeatureValuesResourceNames()
+        {
+            // Snippet: DeleteFeatureValues(EntityTypeName, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            // Make the request
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> response = featurestoreServiceClient.DeleteFeatureValues(entityType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeleteFeatureValuesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceDeleteFeatureValues(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeleteFeatureValuesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureValuesAsync</summary>
+        public async Task DeleteFeatureValuesResourceNamesAsync()
+        {
+            // Snippet: DeleteFeatureValuesAsync(EntityTypeName, CallSettings)
+            // Additional: DeleteFeatureValuesAsync(EntityTypeName, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            // Make the request
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> response = await featurestoreServiceClient.DeleteFeatureValuesAsync(entityType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeleteFeatureValuesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceDeleteFeatureValuesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeleteFeatureValuesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SearchFeatures</summary>
         public void SearchFeaturesRequestObject()
         {

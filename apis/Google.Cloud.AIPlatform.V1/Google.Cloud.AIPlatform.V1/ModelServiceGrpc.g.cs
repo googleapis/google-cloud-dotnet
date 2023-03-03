@@ -100,6 +100,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse> __Marshaller_google_cloud_aiplatform_v1_BatchImportModelEvaluationSlicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest> __Marshaller_google_cloud_aiplatform_v1_BatchImportEvaluatedAnnotationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse> __Marshaller_google_cloud_aiplatform_v1_BatchImportEvaluatedAnnotationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetModelEvaluationRequest> __Marshaller_google_cloud_aiplatform_v1_GetModelEvaluationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetModelEvaluationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelEvaluationsRequest> __Marshaller_google_cloud_aiplatform_v1_ListModelEvaluationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelEvaluationsRequest.Parser));
@@ -209,6 +213,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "BatchImportModelEvaluationSlices",
         __Marshaller_google_cloud_aiplatform_v1_BatchImportModelEvaluationSlicesRequest,
         __Marshaller_google_cloud_aiplatform_v1_BatchImportModelEvaluationSlicesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest, global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse> __Method_BatchImportEvaluatedAnnotations = new grpc::Method<global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest, global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchImportEvaluatedAnnotations",
+        __Marshaller_google_cloud_aiplatform_v1_BatchImportEvaluatedAnnotationsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_BatchImportEvaluatedAnnotationsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.GetModelEvaluationRequest, global::Google.Cloud.AIPlatform.V1.ModelEvaluation> __Method_GetModelEvaluation = new grpc::Method<global::Google.Cloud.AIPlatform.V1.GetModelEvaluationRequest, global::Google.Cloud.AIPlatform.V1.ModelEvaluation>(
@@ -334,8 +346,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model version.
       ///
-      /// Model version can only be deleted if there are no [DeployedModels][]
-      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// Model version can only be deleted if there are no
+      /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+      /// Deleting the only version in the Model is not allowed. Use
       /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
       /// deleting the Model instead.
       /// </summary>
@@ -412,6 +425,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse> BatchImportModelEvaluationSlices(global::Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports a list of externally generated EvaluatedAnnotations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotations(global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -812,8 +837,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model version.
       ///
-      /// Model version can only be deleted if there are no [DeployedModels][]
-      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// Model version can only be deleted if there are no
+      /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+      /// Deleting the only version in the Model is not allowed. Use
       /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
       /// deleting the Model instead.
       /// </summary>
@@ -830,8 +856,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model version.
       ///
-      /// Model version can only be deleted if there are no [DeployedModels][]
-      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// Model version can only be deleted if there are no
+      /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+      /// Deleting the only version in the Model is not allowed. Use
       /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
       /// deleting the Model instead.
       /// </summary>
@@ -846,8 +873,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model version.
       ///
-      /// Model version can only be deleted if there are no [DeployedModels][]
-      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// Model version can only be deleted if there are no
+      /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+      /// Deleting the only version in the Model is not allowed. Use
       /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
       /// deleting the Model instead.
       /// </summary>
@@ -864,8 +892,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model version.
       ///
-      /// Model version can only be deleted if there are no [DeployedModels][]
-      /// created from it. Deleting the only version in the Model is not allowed. Use
+      /// Model version can only be deleted if there are no
+      /// [DeployedModels][google.cloud.aiplatform.v1.DeployedModel] created from it.
+      /// Deleting the only version in the Model is not allowed. Use
       /// [DeleteModel][google.cloud.aiplatform.v1.ModelService.DeleteModel] for
       /// deleting the Model instead.
       /// </summary>
@@ -1150,6 +1179,54 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchImportModelEvaluationSlices, null, options, request);
       }
       /// <summary>
+      /// Imports a list of externally generated EvaluatedAnnotations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse BatchImportEvaluatedAnnotations(global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchImportEvaluatedAnnotations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports a list of externally generated EvaluatedAnnotations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse BatchImportEvaluatedAnnotations(global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchImportEvaluatedAnnotations, null, options, request);
+      }
+      /// <summary>
+      /// Imports a list of externally generated EvaluatedAnnotations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchImportEvaluatedAnnotationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports a list of externally generated EvaluatedAnnotations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse> BatchImportEvaluatedAnnotationsAsync(global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchImportEvaluatedAnnotations, null, options, request);
+      }
+      /// <summary>
       /// Gets a ModelEvaluation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1367,6 +1444,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_CopyModel, serviceImpl.CopyModel)
           .AddMethod(__Method_ImportModelEvaluation, serviceImpl.ImportModelEvaluation)
           .AddMethod(__Method_BatchImportModelEvaluationSlices, serviceImpl.BatchImportModelEvaluationSlices)
+          .AddMethod(__Method_BatchImportEvaluatedAnnotations, serviceImpl.BatchImportEvaluatedAnnotations)
           .AddMethod(__Method_GetModelEvaluation, serviceImpl.GetModelEvaluation)
           .AddMethod(__Method_ListModelEvaluations, serviceImpl.ListModelEvaluations)
           .AddMethod(__Method_GetModelEvaluationSlice, serviceImpl.GetModelEvaluationSlice)
@@ -1392,6 +1470,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_CopyModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CopyModelRequest, global::Google.LongRunning.Operation>(serviceImpl.CopyModel));
       serviceBinder.AddMethod(__Method_ImportModelEvaluation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ImportModelEvaluationRequest, global::Google.Cloud.AIPlatform.V1.ModelEvaluation>(serviceImpl.ImportModelEvaluation));
       serviceBinder.AddMethod(__Method_BatchImportModelEvaluationSlices, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesRequest, global::Google.Cloud.AIPlatform.V1.BatchImportModelEvaluationSlicesResponse>(serviceImpl.BatchImportModelEvaluationSlices));
+      serviceBinder.AddMethod(__Method_BatchImportEvaluatedAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsRequest, global::Google.Cloud.AIPlatform.V1.BatchImportEvaluatedAnnotationsResponse>(serviceImpl.BatchImportEvaluatedAnnotations));
       serviceBinder.AddMethod(__Method_GetModelEvaluation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetModelEvaluationRequest, global::Google.Cloud.AIPlatform.V1.ModelEvaluation>(serviceImpl.GetModelEvaluation));
       serviceBinder.AddMethod(__Method_ListModelEvaluations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelEvaluationsRequest, global::Google.Cloud.AIPlatform.V1.ListModelEvaluationsResponse>(serviceImpl.ListModelEvaluations));
       serviceBinder.AddMethod(__Method_GetModelEvaluationSlice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetModelEvaluationSliceRequest, global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice>(serviceImpl.GetModelEvaluationSlice));

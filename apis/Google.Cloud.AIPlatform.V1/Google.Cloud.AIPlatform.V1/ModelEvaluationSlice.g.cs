@@ -27,27 +27,49 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Cjdnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tb2RlbF9ldmFsdWF0aW9u",
             "X3NsaWNlLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
-            "dXJjZS5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLGAwoUTW9kZWxFdmFsdWF0",
-            "aW9uU2xpY2USEQoEbmFtZRgBIAEoCUID4EEDEkoKBXNsaWNlGAIgASgLMjYu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxFdmFsdWF0aW9uU2xp",
-            "Y2UuU2xpY2VCA+BBAxIfChJtZXRyaWNzX3NjaGVtYV91cmkYAyABKAlCA+BB",
-            "AxIsCgdtZXRyaWNzGAQgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPg",
-            "QQMSNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMaMwoFU2xpY2USFgoJZGltZW5zaW9uGAEgASgJQgPgQQMS",
-            "EgoFdmFsdWUYAiABKAlCA+BBAzqUAepBkAEKLmFpcGxhdGZvcm0uZ29vZ2xl",
-            "YXBpcy5jb20vTW9kZWxFdmFsdWF0aW9uU2xpY2USXnByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfS9ldmFs",
-            "dWF0aW9ucy97ZXZhbHVhdGlvbn0vc2xpY2VzL3tzbGljZX1C1wEKHmNvbS5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIZTW9kZWxFdmFsdWF0aW9uU2xp",
-            "Y2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBp",
-            "djEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5B",
-            "SVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1H",
-            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "dXJjZS5wcm90bxosZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZXhwbGFu",
+            "YXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dv",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1",
+            "Zi93cmFwcGVycy5wcm90byK8CQoUTW9kZWxFdmFsdWF0aW9uU2xpY2USEQoE",
+            "bmFtZRgBIAEoCUID4EEDEkoKBXNsaWNlGAIgASgLMjYuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuTW9kZWxFdmFsdWF0aW9uU2xpY2UuU2xpY2VCA+BB",
+            "AxIfChJtZXRyaWNzX3NjaGVtYV91cmkYAyABKAlCA+BBAxIsCgdtZXRyaWNz",
+            "GAQgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQMSNAoLY3JlYXRl",
+            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "TAoRbW9kZWxfZXhwbGFuYXRpb24YBiABKAsyLC5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5Nb2RlbEV4cGxhbmF0aW9uQgPgQQMa2gUKBVNsaWNlEhYK",
+            "CWRpbWVuc2lvbhgBIAEoCUID4EEDEhIKBXZhbHVlGAIgASgJQgPgQQMSWQoK",
+            "c2xpY2Vfc3BlYxgDIAEoCzJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "Lk1vZGVsRXZhbHVhdGlvblNsaWNlLlNsaWNlLlNsaWNlU3BlY0ID4EEDGskE",
+            "CglTbGljZVNwZWMSXgoHY29uZmlncxgBIAMoCzJNLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVhdGlvblNsaWNlLlNsaWNlLlNsaWNl",
+            "U3BlYy5Db25maWdzRW50cnka+QEKC1NsaWNlQ29uZmlnElcKBXZhbHVlGAEg",
+            "ASgLMkYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxFdmFsdWF0",
+            "aW9uU2xpY2UuU2xpY2UuU2xpY2VTcGVjLlZhbHVlSAASVwoFcmFuZ2UYAiAB",
+            "KAsyRi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbEV2YWx1YXRp",
+            "b25TbGljZS5TbGljZS5TbGljZVNwZWMuUmFuZ2VIABIwCgphbGxfdmFsdWVz",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZUgAQgYKBGtpbmQa",
+            "IgoFUmFuZ2USCwoDbG93GAEgASgCEgwKBGhpZ2gYAiABKAIaPgoFVmFsdWUS",
+            "FgoMc3RyaW5nX3ZhbHVlGAEgASgJSAASFQoLZmxvYXRfdmFsdWUYAiABKAJI",
+            "AEIGCgRraW5kGnwKDENvbmZpZ3NFbnRyeRILCgNrZXkYASABKAkSWwoFdmFs",
+            "dWUYAiABKAsyTC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbEV2",
+            "YWx1YXRpb25TbGljZS5TbGljZS5TbGljZVNwZWMuU2xpY2VDb25maWc6AjgB",
+            "OpQB6kGQAQouYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbEV2YWx1",
+            "YXRpb25TbGljZRJecHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L21vZGVscy97bW9kZWx9L2V2YWx1YXRpb25zL3tldmFsdWF0aW9u",
+            "fS9zbGljZXMve3NsaWNlfULXAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxQhlNb2RlbEV2YWx1YXRpb25TbGljZVByb3RvUAFaPmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlw",
+            "bGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
+            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
+            "dGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice), global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Parser, new[]{ "Name", "Slice", "MetricsSchemaUri", "Metrics", "CreateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice), global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Parser, new[]{ "Dimension", "Value" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice), global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Parser, new[]{ "Name", "Slice", "MetricsSchemaUri", "Metrics", "CreateTime", "ModelExplanation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice), global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Parser, new[]{ "Dimension", "Value", "SliceSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec), global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Parser, new[]{ "Configs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig), global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig.Parser, new[]{ "Value", "Range", "AllValues" }, new[]{ "Kind" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range), global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range.Parser, new[]{ "Low", "High" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value), global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value.Parser, new[]{ "StringValue", "FloatValue" }, new[]{ "Kind" }, null, null, null),
+            null, })})})
           }));
     }
     #endregion
@@ -97,6 +119,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       metricsSchemaUri_ = other.metricsSchemaUri_;
       metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      modelExplanation_ = other.modelExplanation_ != null ? other.modelExplanation_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -187,6 +210,24 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "model_explanation" field.</summary>
+    public const int ModelExplanationFieldNumber = 6;
+    private global::Google.Cloud.AIPlatform.V1.ModelExplanation modelExplanation_;
+    /// <summary>
+    /// Output only. Aggregated explanation metrics for the Model's prediction
+    /// output over the data this ModelEvaluation uses. This field is populated
+    /// only if the Model is evaluated with explanations, and only for tabular
+    /// Models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.ModelExplanation ModelExplanation {
+      get { return modelExplanation_; }
+      set {
+        modelExplanation_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -207,6 +248,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MetricsSchemaUri != other.MetricsSchemaUri) return false;
       if (!object.Equals(Metrics, other.Metrics)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(ModelExplanation, other.ModelExplanation)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -219,6 +261,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MetricsSchemaUri.Length != 0) hash ^= MetricsSchemaUri.GetHashCode();
       if (metrics_ != null) hash ^= Metrics.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (modelExplanation_ != null) hash ^= ModelExplanation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -257,6 +300,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(CreateTime);
       }
+      if (modelExplanation_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ModelExplanation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -287,6 +334,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(CreateTime);
       }
+      if (modelExplanation_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ModelExplanation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -311,6 +362,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (modelExplanation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelExplanation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -347,6 +401,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.modelExplanation_ != null) {
+        if (modelExplanation_ == null) {
+          ModelExplanation = new global::Google.Cloud.AIPlatform.V1.ModelExplanation();
+        }
+        ModelExplanation.MergeFrom(other.ModelExplanation);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -392,6 +452,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(CreateTime);
             break;
           }
+          case 50: {
+            if (modelExplanation_ == null) {
+              ModelExplanation = new global::Google.Cloud.AIPlatform.V1.ModelExplanation();
+            }
+            input.ReadMessage(ModelExplanation);
+            break;
+          }
         }
       }
     #endif
@@ -434,6 +501,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
+            break;
+          }
+          case 50: {
+            if (modelExplanation_ == null) {
+              ModelExplanation = new global::Google.Cloud.AIPlatform.V1.ModelExplanation();
+            }
+            input.ReadMessage(ModelExplanation);
             break;
           }
         }
@@ -485,6 +559,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public Slice(Slice other) : this() {
           dimension_ = other.dimension_;
           value_ = other.value_;
+          sliceSpec_ = other.sliceSpec_ != null ? other.sliceSpec_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -505,6 +580,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         ///     [AnnotationSpec.display_name][google.cloud.aiplatform.v1.AnnotationSpec.display_name]
         ///     equals to
         ///     [value][google.cloud.aiplatform.v1.ModelEvaluationSlice.Slice.value].
+        ///   * `slice`: This slice is a user customized slice defined by its
+        ///     SliceSpec.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -530,6 +607,21 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "slice_spec" field.</summary>
+        public const int SliceSpecFieldNumber = 3;
+        private global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec sliceSpec_;
+        /// <summary>
+        /// Output only. Specification for how the data was sliced.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec SliceSpec {
+          get { return sliceSpec_; }
+          set {
+            sliceSpec_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -547,6 +639,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (Dimension != other.Dimension) return false;
           if (Value != other.Value) return false;
+          if (!object.Equals(SliceSpec, other.SliceSpec)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -556,6 +649,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           int hash = 1;
           if (Dimension.Length != 0) hash ^= Dimension.GetHashCode();
           if (Value.Length != 0) hash ^= Value.GetHashCode();
+          if (sliceSpec_ != null) hash ^= SliceSpec.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -582,6 +676,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteString(Value);
           }
+          if (sliceSpec_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SliceSpec);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -600,6 +698,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteString(Value);
           }
+          if (sliceSpec_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SliceSpec);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -615,6 +717,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (Value.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+          }
+          if (sliceSpec_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SliceSpec);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -633,6 +738,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (other.Value.Length != 0) {
             Value = other.Value;
+          }
+          if (other.sliceSpec_ != null) {
+            if (sliceSpec_ == null) {
+              SliceSpec = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec();
+            }
+            SliceSpec.MergeFrom(other.SliceSpec);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -655,6 +766,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               case 18: {
                 Value = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (sliceSpec_ == null) {
+                  SliceSpec = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec();
+                }
+                input.ReadMessage(SliceSpec);
                 break;
               }
             }
@@ -680,10 +798,1119 @@ namespace Google.Cloud.AIPlatform.V1 {
                 Value = input.ReadString();
                 break;
               }
+              case 26: {
+                if (sliceSpec_ == null) {
+                  SliceSpec = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec();
+                }
+                input.ReadMessage(SliceSpec);
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Slice message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Specification for how the data should be sliced.
+          /// </summary>
+          public sealed partial class SliceSpec : pb::IMessage<SliceSpec>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SliceSpec> _parser = new pb::MessageParser<SliceSpec>(() => new SliceSpec());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SliceSpec> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SliceSpec() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SliceSpec(SliceSpec other) : this() {
+              configs_ = other.configs_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SliceSpec Clone() {
+              return new SliceSpec(this);
+            }
+
+            /// <summary>Field number for the "configs" field.</summary>
+            public const int ConfigsFieldNumber = 1;
+            private static readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig>.Codec _map_configs_codec
+                = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig.Parser), 10);
+            private readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig> configs_ = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig>();
+            /// <summary>
+            /// Mapping configuration for this SliceSpec.
+            /// The key is the name of the feature.
+            /// By default, the key will be prefixed by "instance" as a dictionary
+            /// prefix for Vertex Batch Predictions output format.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.SliceConfig> Configs {
+              get { return configs_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SliceSpec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SliceSpec other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!Configs.Equals(other.Configs)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= Configs.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              configs_.WriteTo(output, _map_configs_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              configs_.WriteTo(ref output, _map_configs_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += configs_.CalculateSize(_map_configs_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SliceSpec other) {
+              if (other == null) {
+                return;
+              }
+              configs_.Add(other.configs_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    configs_.AddEntriesFrom(input, _map_configs_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    configs_.AddEntriesFrom(ref input, _map_configs_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the SliceSpec message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Specification message containing the config for this SliceSpec.
+              /// When `kind` is selected as `value` and/or `range`, only a single slice
+              /// will be computed.
+              /// When `all_values` is present, a separate slice will be computed for
+              /// each possible label/value for the corresponding key in `config`.
+              /// Examples, with feature zip_code with values 12345, 23334, 88888 and
+              /// feature country with values "US", "Canada", "Mexico" in the dataset:
+              ///
+              /// Example 1:
+              ///
+              ///     {
+              ///       "zip_code": { "value": { "float_value": 12345.0 } }
+              ///     }
+              ///
+              /// A single slice for any data with zip_code 12345 in the dataset.
+              ///
+              /// Example 2:
+              ///
+              ///     {
+              ///       "zip_code": { "range": { "low": 12345, "high": 20000 } }
+              ///     }
+              ///
+              /// A single slice containing data where the zip_codes between 12345 and
+              /// 20000 For this example, data with the zip_code of 12345 will be in this
+              /// slice.
+              ///
+              /// Example 3:
+              ///
+              ///     {
+              ///       "zip_code": { "range": { "low": 10000, "high": 20000 } },
+              ///       "country": { "value": { "string_value": "US" } }
+              ///     }
+              ///
+              /// A single slice containing data where the zip_codes between 10000 and
+              /// 20000 has the country "US". For this example, data with the zip_code of
+              /// 12345 and country "US" will be in this slice.
+              ///
+              /// Example 4:
+              ///
+              ///     { "country": {"all_values": { "value": true } } }
+              ///
+              /// Three slices are computed, one for each unique country in the dataset.
+              ///
+              /// Example 5:
+              ///
+              ///     {
+              ///       "country": { "all_values": { "value": true } },
+              ///       "zip_code": { "value": { "float_value": 12345.0 } }
+              ///     }
+              ///
+              /// Three slices are computed, one for each unique country in the dataset
+              /// where the zip_code is also 12345. For this example, data with zip_code
+              /// 12345 and country "US" will be in one slice, zip_code 12345 and country
+              /// "Canada" in another slice, and zip_code 12345 and country "Mexico" in
+              /// another slice, totaling 3 slices.
+              /// </summary>
+              public sealed partial class SliceConfig : pb::IMessage<SliceConfig>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<SliceConfig> _parser = new pb::MessageParser<SliceConfig>(() => new SliceConfig());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<SliceConfig> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SliceConfig() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SliceConfig(SliceConfig other) : this() {
+                  switch (other.KindCase) {
+                    case KindOneofCase.Value:
+                      Value = other.Value.Clone();
+                      break;
+                    case KindOneofCase.Range:
+                      Range = other.Range.Clone();
+                      break;
+                    case KindOneofCase.AllValues:
+                      AllValues = other.AllValues;
+                      break;
+                  }
+
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public SliceConfig Clone() {
+                  return new SliceConfig(this);
+                }
+
+                /// <summary>Field number for the "value" field.</summary>
+                public const int ValueFieldNumber = 1;
+                /// <summary>
+                /// A unique specific value for a given feature.
+                /// Example: `{ "value": { "string_value": "12345" } }`
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value Value {
+                  get { return kindCase_ == KindOneofCase.Value ? (global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value) kind_ : null; }
+                  set {
+                    kind_ = value;
+                    kindCase_ = value == null ? KindOneofCase.None : KindOneofCase.Value;
+                  }
+                }
+
+                /// <summary>Field number for the "range" field.</summary>
+                public const int RangeFieldNumber = 2;
+                /// <summary>
+                /// A range of values for a numerical feature.
+                /// Example: `{"range":{"low":10000.0,"high":50000.0}}`
+                /// will capture 12345 and 23334 in the slice.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range Range {
+                  get { return kindCase_ == KindOneofCase.Range ? (global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range) kind_ : null; }
+                  set {
+                    kind_ = value;
+                    kindCase_ = value == null ? KindOneofCase.None : KindOneofCase.Range;
+                  }
+                }
+
+                /// <summary>Field number for the "all_values" field.</summary>
+                public const int AllValuesFieldNumber = 3;
+                private static readonly pb::FieldCodec<bool?> _oneof_allValues_codec = pb::FieldCodec.ForStructWrapper<bool>(26);
+                /// <summary>
+                /// If all_values is set to true, then all possible labels of the keyed
+                /// feature will have another slice computed.
+                /// Example: `{"all_values":{"value":true}}`
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool? AllValues {
+                  get { return kindCase_ == KindOneofCase.AllValues ? (bool?) kind_ : (bool?) null; }
+                  set {
+                    kind_ = value;
+                    kindCase_ = value == null ? KindOneofCase.None : KindOneofCase.AllValues;
+                  }
+                }
+
+                private object kind_;
+                /// <summary>Enum of possible cases for the "kind" oneof.</summary>
+                public enum KindOneofCase {
+                  None = 0,
+                  Value = 1,
+                  Range = 2,
+                  AllValues = 3,
+                }
+                private KindOneofCase kindCase_ = KindOneofCase.None;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public KindOneofCase KindCase {
+                  get { return kindCase_; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearKind() {
+                  kindCase_ = KindOneofCase.None;
+                  kind_ = null;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as SliceConfig);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(SliceConfig other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (!object.Equals(Value, other.Value)) return false;
+                  if (!object.Equals(Range, other.Range)) return false;
+                  if (AllValues != other.AllValues) return false;
+                  if (KindCase != other.KindCase) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (kindCase_ == KindOneofCase.Value) hash ^= Value.GetHashCode();
+                  if (kindCase_ == KindOneofCase.Range) hash ^= Range.GetHashCode();
+                  if (kindCase_ == KindOneofCase.AllValues) hash ^= AllValues.GetHashCode();
+                  hash ^= (int) kindCase_;
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (kindCase_ == KindOneofCase.Value) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(Value);
+                  }
+                  if (kindCase_ == KindOneofCase.Range) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(Range);
+                  }
+                  if (kindCase_ == KindOneofCase.AllValues) {
+                    _oneof_allValues_codec.WriteTagAndValue(output, (bool?) kind_);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (kindCase_ == KindOneofCase.Value) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(Value);
+                  }
+                  if (kindCase_ == KindOneofCase.Range) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(Range);
+                  }
+                  if (kindCase_ == KindOneofCase.AllValues) {
+                    _oneof_allValues_codec.WriteTagAndValue(ref output, (bool?) kind_);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (kindCase_ == KindOneofCase.Value) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(Value);
+                  }
+                  if (kindCase_ == KindOneofCase.Range) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(Range);
+                  }
+                  if (kindCase_ == KindOneofCase.AllValues) {
+                    size += _oneof_allValues_codec.CalculateSizeWithTag(AllValues);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(SliceConfig other) {
+                  if (other == null) {
+                    return;
+                  }
+                  switch (other.KindCase) {
+                    case KindOneofCase.Value:
+                      if (Value == null) {
+                        Value = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value();
+                      }
+                      Value.MergeFrom(other.Value);
+                      break;
+                    case KindOneofCase.Range:
+                      if (Range == null) {
+                        Range = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range();
+                      }
+                      Range.MergeFrom(other.Range);
+                      break;
+                    case KindOneofCase.AllValues:
+                      AllValues = other.AllValues;
+                      break;
+                  }
+
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value subBuilder = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value();
+                        if (kindCase_ == KindOneofCase.Value) {
+                          subBuilder.MergeFrom(Value);
+                        }
+                        input.ReadMessage(subBuilder);
+                        Value = subBuilder;
+                        break;
+                      }
+                      case 18: {
+                        global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range subBuilder = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range();
+                        if (kindCase_ == KindOneofCase.Range) {
+                          subBuilder.MergeFrom(Range);
+                        }
+                        input.ReadMessage(subBuilder);
+                        Range = subBuilder;
+                        break;
+                      }
+                      case 26: {
+                        AllValues = _oneof_allValues_codec.Read(input);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value subBuilder = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Value();
+                        if (kindCase_ == KindOneofCase.Value) {
+                          subBuilder.MergeFrom(Value);
+                        }
+                        input.ReadMessage(subBuilder);
+                        Value = subBuilder;
+                        break;
+                      }
+                      case 18: {
+                        global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range subBuilder = new global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Types.Range();
+                        if (kindCase_ == KindOneofCase.Range) {
+                          subBuilder.MergeFrom(Range);
+                        }
+                        input.ReadMessage(subBuilder);
+                        Range = subBuilder;
+                        break;
+                      }
+                      case 26: {
+                        AllValues = _oneof_allValues_codec.Read(ref input);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// A range of values for slice(s).
+              /// `low` is inclusive, `high` is exclusive.
+              /// </summary>
+              public sealed partial class Range : pb::IMessage<Range>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Range> _parser = new pb::MessageParser<Range>(() => new Range());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Range> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Range() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Range(Range other) : this() {
+                  low_ = other.low_;
+                  high_ = other.high_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Range Clone() {
+                  return new Range(this);
+                }
+
+                /// <summary>Field number for the "low" field.</summary>
+                public const int LowFieldNumber = 1;
+                private float low_;
+                /// <summary>
+                /// Inclusive low value for the range.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public float Low {
+                  get { return low_; }
+                  set {
+                    low_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "high" field.</summary>
+                public const int HighFieldNumber = 2;
+                private float high_;
+                /// <summary>
+                /// Exclusive high value for the range.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public float High {
+                  get { return high_; }
+                  set {
+                    high_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Range);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Range other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Low, other.Low)) return false;
+                  if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(High, other.High)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Low != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Low);
+                  if (High != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(High);
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Low != 0F) {
+                    output.WriteRawTag(13);
+                    output.WriteFloat(Low);
+                  }
+                  if (High != 0F) {
+                    output.WriteRawTag(21);
+                    output.WriteFloat(High);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Low != 0F) {
+                    output.WriteRawTag(13);
+                    output.WriteFloat(Low);
+                  }
+                  if (High != 0F) {
+                    output.WriteRawTag(21);
+                    output.WriteFloat(High);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Low != 0F) {
+                    size += 1 + 4;
+                  }
+                  if (High != 0F) {
+                    size += 1 + 4;
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Range other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Low != 0F) {
+                    Low = other.Low;
+                  }
+                  if (other.High != 0F) {
+                    High = other.High;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 13: {
+                        Low = input.ReadFloat();
+                        break;
+                      }
+                      case 21: {
+                        High = input.ReadFloat();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 13: {
+                        Low = input.ReadFloat();
+                        break;
+                      }
+                      case 21: {
+                        High = input.ReadFloat();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Single value that supports strings and floats.
+              /// </summary>
+              public sealed partial class Value : pb::IMessage<Value>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Value> _parser = new pb::MessageParser<Value>(() => new Value());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Value> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.AIPlatform.V1.ModelEvaluationSlice.Types.Slice.Types.SliceSpec.Descriptor.NestedTypes[2]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Value() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Value(Value other) : this() {
+                  switch (other.KindCase) {
+                    case KindOneofCase.StringValue:
+                      StringValue = other.StringValue;
+                      break;
+                    case KindOneofCase.FloatValue:
+                      FloatValue = other.FloatValue;
+                      break;
+                  }
+
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Value Clone() {
+                  return new Value(this);
+                }
+
+                /// <summary>Field number for the "string_value" field.</summary>
+                public const int StringValueFieldNumber = 1;
+                /// <summary>
+                /// String type.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string StringValue {
+                  get { return kindCase_ == KindOneofCase.StringValue ? (string) kind_ : ""; }
+                  set {
+                    kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                    kindCase_ = KindOneofCase.StringValue;
+                  }
+                }
+
+                /// <summary>Field number for the "float_value" field.</summary>
+                public const int FloatValueFieldNumber = 2;
+                /// <summary>
+                /// Float type.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public float FloatValue {
+                  get { return kindCase_ == KindOneofCase.FloatValue ? (float) kind_ : 0F; }
+                  set {
+                    kind_ = value;
+                    kindCase_ = KindOneofCase.FloatValue;
+                  }
+                }
+
+                private object kind_;
+                /// <summary>Enum of possible cases for the "kind" oneof.</summary>
+                public enum KindOneofCase {
+                  None = 0,
+                  StringValue = 1,
+                  FloatValue = 2,
+                }
+                private KindOneofCase kindCase_ = KindOneofCase.None;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public KindOneofCase KindCase {
+                  get { return kindCase_; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearKind() {
+                  kindCase_ = KindOneofCase.None;
+                  kind_ = null;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Value);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Value other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (StringValue != other.StringValue) return false;
+                  if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FloatValue, other.FloatValue)) return false;
+                  if (KindCase != other.KindCase) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (kindCase_ == KindOneofCase.StringValue) hash ^= StringValue.GetHashCode();
+                  if (kindCase_ == KindOneofCase.FloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
+                  hash ^= (int) kindCase_;
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (kindCase_ == KindOneofCase.StringValue) {
+                    output.WriteRawTag(10);
+                    output.WriteString(StringValue);
+                  }
+                  if (kindCase_ == KindOneofCase.FloatValue) {
+                    output.WriteRawTag(21);
+                    output.WriteFloat(FloatValue);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (kindCase_ == KindOneofCase.StringValue) {
+                    output.WriteRawTag(10);
+                    output.WriteString(StringValue);
+                  }
+                  if (kindCase_ == KindOneofCase.FloatValue) {
+                    output.WriteRawTag(21);
+                    output.WriteFloat(FloatValue);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (kindCase_ == KindOneofCase.StringValue) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
+                  }
+                  if (kindCase_ == KindOneofCase.FloatValue) {
+                    size += 1 + 4;
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Value other) {
+                  if (other == null) {
+                    return;
+                  }
+                  switch (other.KindCase) {
+                    case KindOneofCase.StringValue:
+                      StringValue = other.StringValue;
+                      break;
+                    case KindOneofCase.FloatValue:
+                      FloatValue = other.FloatValue;
+                      break;
+                  }
+
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        StringValue = input.ReadString();
+                        break;
+                      }
+                      case 21: {
+                        FloatValue = input.ReadFloat();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        StringValue = input.ReadString();
+                        break;
+                      }
+                      case 21: {
+                        FloatValue = input.ReadFloat();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
+        }
+        #endregion
 
       }
 

@@ -512,12 +512,6 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// <summary>
         /// Configuration of the snapshot analysis based monitoring pipeline
         /// running interval. The value indicates number of days.
-        /// If both
-        /// [FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days][google.cloud.aiplatform.v1.FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days]
-        /// and [FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval][]
-        /// are set when creating/updating EntityTypes/Features,
-        /// [FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days][google.cloud.aiplatform.v1.FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days]
-        /// will be used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -729,7 +723,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Configuration of the Featurestore's ImportFeature Analysis Based
       /// Monitoring. This type of analysis generates statistics for values of each
-      /// Feature imported by every [ImportFeatureValues][] operation.
+      /// Feature imported by every
+      /// [ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues]
+      /// operation.
       /// </summary>
       public sealed partial class ImportFeaturesAnalysis : pb::IMessage<ImportFeaturesAnalysis>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1001,7 +997,9 @@ namespace Google.Cloud.AIPlatform.V1 {
 
           /// <summary>
           /// Defines the baseline to do anomaly detection for feature values imported
-          /// by each [ImportFeatureValues][] operation.
+          /// by each
+          /// [ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues]
+          /// operation.
           /// </summary>
           public enum Baseline {
             /// <summary>

@@ -983,7 +983,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Endpoint.
     ///
     /// The resource name may contain version id or version alias to specify the
-    /// version, if no version is specified, the default version will be deployed.
+    /// version.
+    ///  Example: `projects/{project}/locations/{location}/models/{model}@2`
+    ///              or
+    ///            `projects/{project}/locations/{location}/models/{model}@golden`
+    /// if no version is specified, the default version will be deployed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -1983,6 +1983,117 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchImportEvaluatedAnnotations</summary>
+        public void BatchImportEvaluatedAnnotationsRequestObject()
+        {
+            // Snippet: BatchImportEvaluatedAnnotations(BatchImportEvaluatedAnnotationsRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            BatchImportEvaluatedAnnotationsRequest request = new BatchImportEvaluatedAnnotationsRequest
+            {
+                ParentAsModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
+                EvaluatedAnnotations =
+                {
+                    new EvaluatedAnnotation(),
+                },
+            };
+            // Make the request
+            BatchImportEvaluatedAnnotationsResponse response = modelServiceClient.BatchImportEvaluatedAnnotations(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportEvaluatedAnnotationsAsync</summary>
+        public async Task BatchImportEvaluatedAnnotationsRequestObjectAsync()
+        {
+            // Snippet: BatchImportEvaluatedAnnotationsAsync(BatchImportEvaluatedAnnotationsRequest, CallSettings)
+            // Additional: BatchImportEvaluatedAnnotationsAsync(BatchImportEvaluatedAnnotationsRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchImportEvaluatedAnnotationsRequest request = new BatchImportEvaluatedAnnotationsRequest
+            {
+                ParentAsModelEvaluationSliceName = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]"),
+                EvaluatedAnnotations =
+                {
+                    new EvaluatedAnnotation(),
+                },
+            };
+            // Make the request
+            BatchImportEvaluatedAnnotationsResponse response = await modelServiceClient.BatchImportEvaluatedAnnotationsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportEvaluatedAnnotations</summary>
+        public void BatchImportEvaluatedAnnotations()
+        {
+            // Snippet: BatchImportEvaluatedAnnotations(string, IEnumerable<EvaluatedAnnotation>, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]/evaluations/[EVALUATION]/slices/[SLICE]";
+            IEnumerable<EvaluatedAnnotation> evaluatedAnnotations = new EvaluatedAnnotation[]
+            {
+                new EvaluatedAnnotation(),
+            };
+            // Make the request
+            BatchImportEvaluatedAnnotationsResponse response = modelServiceClient.BatchImportEvaluatedAnnotations(parent, evaluatedAnnotations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportEvaluatedAnnotationsAsync</summary>
+        public async Task BatchImportEvaluatedAnnotationsAsync()
+        {
+            // Snippet: BatchImportEvaluatedAnnotationsAsync(string, IEnumerable<EvaluatedAnnotation>, CallSettings)
+            // Additional: BatchImportEvaluatedAnnotationsAsync(string, IEnumerable<EvaluatedAnnotation>, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]/evaluations/[EVALUATION]/slices/[SLICE]";
+            IEnumerable<EvaluatedAnnotation> evaluatedAnnotations = new EvaluatedAnnotation[]
+            {
+                new EvaluatedAnnotation(),
+            };
+            // Make the request
+            BatchImportEvaluatedAnnotationsResponse response = await modelServiceClient.BatchImportEvaluatedAnnotationsAsync(parent, evaluatedAnnotations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportEvaluatedAnnotations</summary>
+        public void BatchImportEvaluatedAnnotationsResourceNames()
+        {
+            // Snippet: BatchImportEvaluatedAnnotations(ModelEvaluationSliceName, IEnumerable<EvaluatedAnnotation>, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelEvaluationSliceName parent = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]");
+            IEnumerable<EvaluatedAnnotation> evaluatedAnnotations = new EvaluatedAnnotation[]
+            {
+                new EvaluatedAnnotation(),
+            };
+            // Make the request
+            BatchImportEvaluatedAnnotationsResponse response = modelServiceClient.BatchImportEvaluatedAnnotations(parent, evaluatedAnnotations);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchImportEvaluatedAnnotationsAsync</summary>
+        public async Task BatchImportEvaluatedAnnotationsResourceNamesAsync()
+        {
+            // Snippet: BatchImportEvaluatedAnnotationsAsync(ModelEvaluationSliceName, IEnumerable<EvaluatedAnnotation>, CallSettings)
+            // Additional: BatchImportEvaluatedAnnotationsAsync(ModelEvaluationSliceName, IEnumerable<EvaluatedAnnotation>, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelEvaluationSliceName parent = ModelEvaluationSliceName.FromProjectLocationModelEvaluationSlice("[PROJECT]", "[LOCATION]", "[MODEL]", "[EVALUATION]", "[SLICE]");
+            IEnumerable<EvaluatedAnnotation> evaluatedAnnotations = new EvaluatedAnnotation[]
+            {
+                new EvaluatedAnnotation(),
+            };
+            // Make the request
+            BatchImportEvaluatedAnnotationsResponse response = await modelServiceClient.BatchImportEvaluatedAnnotationsAsync(parent, evaluatedAnnotations);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetModelEvaluation</summary>
         public void GetModelEvaluationRequestObject()
         {
