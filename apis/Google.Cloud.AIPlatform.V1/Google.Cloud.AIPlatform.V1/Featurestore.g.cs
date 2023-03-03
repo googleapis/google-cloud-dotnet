@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
             "GjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbmNyeXB0aW9uX3NwZWMu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8igAcKDEZl",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipQcKDEZl",
             "YXR1cmVzdG9yZRIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUY",
             "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
             "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
@@ -39,25 +39,26 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aW5nQ29uZmlnQgPgQQESQgoFc3RhdGUYCCABKA4yLi5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MS5GZWF0dXJlc3RvcmUuU3RhdGVCA+BBAxJICg9lbmNy",
             "eXB0aW9uX3NwZWMYCiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5FbmNyeXB0aW9uU3BlY0ID4EEBGsYBChNPbmxpbmVTZXJ2aW5nQ29uZmln",
+            "MS5FbmNyeXB0aW9uU3BlY0ID4EEBGusBChNPbmxpbmVTZXJ2aW5nQ29uZmln",
             "EhgKEGZpeGVkX25vZGVfY291bnQYAiABKAUSVQoHc2NhbGluZxgEIAEoCzJE",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVzdG9yZS5Pbmxp",
-            "bmVTZXJ2aW5nQ29uZmlnLlNjYWxpbmcaPgoHU2NhbGluZxIbCg5taW5fbm9k",
-            "ZV9jb3VudBgBIAEoBUID4EECEhYKDm1heF9ub2RlX2NvdW50GAIgASgFGi0K",
-            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
-            "OAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZTVEFCTEUQARIM",
-            "CghVUERBVElORxACOnHqQW4KJmFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
-            "RmVhdHVyZXN0b3JlEkRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vZmVhdHVyZXN0b3Jlcy97ZmVhdHVyZXN0b3JlfULPAQoeY29t",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhFGZWF0dXJlc3RvcmVQcm90",
-            "b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlw",
-            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRm",
-            "b3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6",
-            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "bmVTZXJ2aW5nQ29uZmlnLlNjYWxpbmcaYwoHU2NhbGluZxIbCg5taW5fbm9k",
+            "ZV9jb3VudBgBIAEoBUID4EECEhYKDm1heF9ub2RlX2NvdW50GAIgASgFEiMK",
+            "FmNwdV91dGlsaXphdGlvbl90YXJnZXQYAyABKAVCA+BBARotCgtMYWJlbHNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIjgKBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGU1RBQkxFEAESDAoIVVBEQVRJ",
+            "TkcQAjpx6kFuCiZhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1cmVz",
+            "dG9yZRJEcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2ZlYXR1cmVzdG9yZXMve2ZlYXR1cmVzdG9yZX1CzwEKHmNvbS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIRRmVhdHVyZXN0b3JlUHJvdG9QAVo+Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1w",
+            "YjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
+            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
+            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore), global::Google.Cloud.AIPlatform.V1.Featurestore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "OnlineServingConfig", "State", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Parser, new[]{ "FixedNodeCount", "Scaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore), global::Google.Cloud.AIPlatform.V1.Featurestore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "OnlineServingConfig", "State", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Parser, new[]{ "FixedNodeCount", "Scaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -910,6 +911,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             public Scaling(Scaling other) : this() {
               minNodeCount_ = other.minNodeCount_;
               maxNodeCount_ = other.maxNodeCount_;
+              cpuUtilizationTarget_ = other.cpuUtilizationTarget_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -951,6 +953,27 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
             }
 
+            /// <summary>Field number for the "cpu_utilization_target" field.</summary>
+            public const int CpuUtilizationTargetFieldNumber = 3;
+            private int cpuUtilizationTarget_;
+            /// <summary>
+            /// Optional. The cpu utilization that the Autoscaler should be trying to
+            /// achieve. This number is on a scale from 0 (no utilization) to 100
+            /// (total utilization), and is limited between 10 and 80. When a cluster's
+            /// CPU utilization exceeds the target that you have set, Bigtable
+            /// immediately adds nodes to the cluster. When CPU utilization is
+            /// substantially lower than the target, Bigtable removes nodes. If not set
+            /// or set to 0, default to 50.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CpuUtilizationTarget {
+              get { return cpuUtilizationTarget_; }
+              set {
+                cpuUtilizationTarget_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -968,6 +991,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (MinNodeCount != other.MinNodeCount) return false;
               if (MaxNodeCount != other.MaxNodeCount) return false;
+              if (CpuUtilizationTarget != other.CpuUtilizationTarget) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -977,6 +1001,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               int hash = 1;
               if (MinNodeCount != 0) hash ^= MinNodeCount.GetHashCode();
               if (MaxNodeCount != 0) hash ^= MaxNodeCount.GetHashCode();
+              if (CpuUtilizationTarget != 0) hash ^= CpuUtilizationTarget.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -1003,6 +1028,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 output.WriteRawTag(16);
                 output.WriteInt32(MaxNodeCount);
               }
+              if (CpuUtilizationTarget != 0) {
+                output.WriteRawTag(24);
+                output.WriteInt32(CpuUtilizationTarget);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -1021,6 +1050,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 output.WriteRawTag(16);
                 output.WriteInt32(MaxNodeCount);
               }
+              if (CpuUtilizationTarget != 0) {
+                output.WriteRawTag(24);
+                output.WriteInt32(CpuUtilizationTarget);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -1036,6 +1069,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (MaxNodeCount != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxNodeCount);
+              }
+              if (CpuUtilizationTarget != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(CpuUtilizationTarget);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -1054,6 +1090,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (other.MaxNodeCount != 0) {
                 MaxNodeCount = other.MaxNodeCount;
+              }
+              if (other.CpuUtilizationTarget != 0) {
+                CpuUtilizationTarget = other.CpuUtilizationTarget;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -1078,6 +1117,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                     MaxNodeCount = input.ReadInt32();
                     break;
                   }
+                  case 24: {
+                    CpuUtilizationTarget = input.ReadInt32();
+                    break;
+                  }
                 }
               }
             #endif
@@ -1099,6 +1142,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                   }
                   case 16: {
                     MaxNodeCount = input.ReadInt32();
+                    break;
+                  }
+                  case 24: {
+                    CpuUtilizationTarget = input.ReadInt32();
                     break;
                   }
                 }

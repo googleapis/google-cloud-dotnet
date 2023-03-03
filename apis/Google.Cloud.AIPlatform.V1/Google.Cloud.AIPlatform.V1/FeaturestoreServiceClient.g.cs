@@ -80,6 +80,8 @@ namespace Google.Cloud.AIPlatform.V1
             BatchReadFeatureValuesOperationsSettings = existing.BatchReadFeatureValuesOperationsSettings.Clone();
             ExportFeatureValuesSettings = existing.ExportFeatureValuesSettings;
             ExportFeatureValuesOperationsSettings = existing.ExportFeatureValuesOperationsSettings.Clone();
+            DeleteFeatureValuesSettings = existing.DeleteFeatureValuesSettings;
+            DeleteFeatureValuesOperationsSettings = existing.DeleteFeatureValuesOperationsSettings.Clone();
             SearchFeaturesSettings = existing.SearchFeaturesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
@@ -521,6 +523,37 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ExportFeatureValuesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeaturestoreServiceClient.DeleteFeatureValues</c> and
+        /// <c>FeaturestoreServiceClient.DeleteFeatureValuesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFeatureValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FeaturestoreServiceClient.DeleteFeatureValues</c> and
+        /// <c>FeaturestoreServiceClient.DeleteFeatureValuesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteFeatureValuesOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -4372,6 +4405,231 @@ namespace Google.Cloud.AIPlatform.V1
             ExportFeatureValuesAsync(entityType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> DeleteFeatureValues(DeleteFeatureValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>> DeleteFeatureValuesAsync(DeleteFeatureValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>> DeleteFeatureValuesAsync(DeleteFeatureValuesRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFeatureValuesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteFeatureValues</c>.</summary>
+        public virtual lro::OperationsClient DeleteFeatureValuesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteFeatureValues</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> PollOnceDeleteFeatureValues(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFeatureValuesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteFeatureValues</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>> PollOnceDeleteFeatureValuesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFeatureValuesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being deleted from. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> DeleteFeatureValues(string entityType, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureValues(new DeleteFeatureValuesRequest
+            {
+                EntityType = gax::GaxPreconditions.CheckNotNullOrEmpty(entityType, nameof(entityType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being deleted from. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>> DeleteFeatureValuesAsync(string entityType, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureValuesAsync(new DeleteFeatureValuesRequest
+            {
+                EntityType = gax::GaxPreconditions.CheckNotNullOrEmpty(entityType, nameof(entityType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being deleted from. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>> DeleteFeatureValuesAsync(string entityType, st::CancellationToken cancellationToken) =>
+            DeleteFeatureValuesAsync(entityType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being deleted from. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> DeleteFeatureValues(EntityTypeName entityType, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureValues(new DeleteFeatureValuesRequest
+            {
+                EntityTypeAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(entityType, nameof(entityType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being deleted from. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>> DeleteFeatureValuesAsync(EntityTypeName entityType, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureValuesAsync(new DeleteFeatureValuesRequest
+            {
+                EntityTypeAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(entityType, nameof(entityType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="entityType">
+        /// Required. The resource name of the EntityType grouping the Features for
+        /// which values are being deleted from. Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entityType}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>> DeleteFeatureValuesAsync(EntityTypeName entityType, st::CancellationToken cancellationToken) =>
+            DeleteFeatureValuesAsync(entityType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Searches Features matching a query in a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4890,6 +5148,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ExportFeatureValuesRequest, lro::Operation> _callExportFeatureValues;
 
+        private readonly gaxgrpc::ApiCall<DeleteFeatureValuesRequest, lro::Operation> _callDeleteFeatureValues;
+
         private readonly gaxgrpc::ApiCall<SearchFeaturesRequest, SearchFeaturesResponse> _callSearchFeatures;
 
         /// <summary>
@@ -4915,6 +5175,7 @@ namespace Google.Cloud.AIPlatform.V1
             ImportFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportFeatureValuesOperationsSettings, logger);
             BatchReadFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchReadFeatureValuesOperationsSettings, logger);
             ExportFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportFeatureValuesOperationsSettings, logger);
+            DeleteFeatureValuesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureValuesOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateFeaturestore = clientHelper.BuildApiCall<CreateFeaturestoreRequest, lro::Operation>("CreateFeaturestore", grpcClient.CreateFeaturestoreAsync, grpcClient.CreateFeaturestore, effectiveSettings.CreateFeaturestoreSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -4974,6 +5235,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callExportFeatureValues = clientHelper.BuildApiCall<ExportFeatureValuesRequest, lro::Operation>("ExportFeatureValues", grpcClient.ExportFeatureValuesAsync, grpcClient.ExportFeatureValues, effectiveSettings.ExportFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
             Modify_ApiCall(ref _callExportFeatureValues);
             Modify_ExportFeatureValuesApiCall(ref _callExportFeatureValues);
+            _callDeleteFeatureValues = clientHelper.BuildApiCall<DeleteFeatureValuesRequest, lro::Operation>("DeleteFeatureValues", grpcClient.DeleteFeatureValuesAsync, grpcClient.DeleteFeatureValues, effectiveSettings.DeleteFeatureValuesSettings).WithGoogleRequestParam("entity_type", request => request.EntityType);
+            Modify_ApiCall(ref _callDeleteFeatureValues);
+            Modify_DeleteFeatureValuesApiCall(ref _callDeleteFeatureValues);
             _callSearchFeatures = clientHelper.BuildApiCall<SearchFeaturesRequest, SearchFeaturesResponse>("SearchFeatures", grpcClient.SearchFeaturesAsync, grpcClient.SearchFeatures, effectiveSettings.SearchFeaturesSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callSearchFeatures);
             Modify_SearchFeaturesApiCall(ref _callSearchFeatures);
@@ -5019,6 +5283,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_BatchReadFeatureValuesApiCall(ref gaxgrpc::ApiCall<BatchReadFeatureValuesRequest, lro::Operation> call);
 
         partial void Modify_ExportFeatureValuesApiCall(ref gaxgrpc::ApiCall<ExportFeatureValuesRequest, lro::Operation> call);
+
+        partial void Modify_DeleteFeatureValuesApiCall(ref gaxgrpc::ApiCall<DeleteFeatureValuesRequest, lro::Operation> call);
 
         partial void Modify_SearchFeaturesApiCall(ref gaxgrpc::ApiCall<SearchFeaturesRequest, SearchFeaturesResponse> call);
 
@@ -5070,6 +5336,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_BatchReadFeatureValuesRequest(ref BatchReadFeatureValuesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportFeatureValuesRequest(ref ExportFeatureValuesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFeatureValuesRequest(ref DeleteFeatureValuesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SearchFeaturesRequest(ref SearchFeaturesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5612,6 +5880,51 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_ExportFeatureValuesRequest(ref request, ref callSettings);
             return new lro::Operation<ExportFeatureValuesResponse, ExportFeatureValuesOperationMetadata>(await _callExportFeatureValues.Async(request, callSettings).ConfigureAwait(false), ExportFeatureValuesOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteFeatureValues</c>.</summary>
+        public override lro::OperationsClient DeleteFeatureValuesOperationsClient { get; }
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata> DeleteFeatureValues(DeleteFeatureValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFeatureValuesRequest(ref request, ref callSettings);
+            return new lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>(_callDeleteFeatureValues.Sync(request, callSettings), DeleteFeatureValuesOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete Feature values from Featurestore.
+        /// 
+        /// The progress of the deletion is tracked by the returned operation. The
+        /// deleted feature values are guaranteed to be invisible to subsequent read
+        /// operations after the operation is marked as successfully done.
+        /// 
+        /// If a delete feature values operation fails, the feature values
+        /// returned from reads and exports may be inconsistent. If consistency is
+        /// required, the caller must retry the same delete request again and wait till
+        /// the new operation returned is marked as successfully done.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>> DeleteFeatureValuesAsync(DeleteFeatureValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFeatureValuesRequest(ref request, ref callSettings);
+            return new lro::Operation<DeleteFeatureValuesResponse, DeleteFeatureValuesOperationMetadata>(await _callDeleteFeatureValues.Async(request, callSettings).ConfigureAwait(false), DeleteFeatureValuesOperationsClient);
         }
 
         /// <summary>
