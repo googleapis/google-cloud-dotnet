@@ -82,6 +82,99 @@ restart listening for messages with `StartAsync(...)` again. Due to the expense 
 instance, it is recommended that a singleton client per topic is used for the lifetime of the
 application.
 
+## Dependency Injection
+
+Both `PublisherClient` and `SubscriberClient` can be easily integrated with the [dependency injection](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection)
+container provided by the [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/) package.
+The `Google.Cloud.PubSub.V1` package provides extension methods to register the clients with the dependency
+injection container in the `Microsoft.Extensions.DependencyInjection` namespace.
+
+### PublisherClient
+
+To register a singleton `PublisherClient` instance with default settings in the `IServiceCollection`, use the
+`AddPublisherClient` extension method as shown below:
+
+{{sample:PublisherClient.AddPublisherClient}}
+
+There is an overload of the `AddPublisherClient` method that takes `Action<PublisherClientBuilder>` as a parameter
+and can be used to add the customized `PublisherClient` singleton instance as shown below:
+
+{{sample:PublisherClient.AddCustomizedPublisherClient}}
+
+The registered `PublisherClient` can then be used like any other service registered with the dependency injection container. For instance, in a `MyService` class that is itself registered with the dependency injection container,
+the `PublisherClient` can be passed as a constructor parameter.
+See [dependency injection](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection) for more information.
+
+Below code shows the registration of `MyService` class with the dependency injection container:
+
+{{sample:PublisherClient.AddPublisherClientAndService}}
+
+The `PublisherClient` can then be used in the `MyService` class as shown below:
+
+{{sample:PublisherClient.UsePublisherClient}}
+
+When the application exits, the `DisposeAsync` method of the `PublisherClient` will be invoked by the dependency injection container to gracefully shut down the client. See
+[Disposing of the publisher and subscriber clients](#disposing-of-the-publisher-and-subscriber-clients) for more information about what happens when disposing the `PublisherClient`.
+
+### SubscriberClient
+
+To register a singleton `SubscriberClient` instance with default settings in the `IServiceCollection`, use the
+`AddSubscriberClient` extension method as shown below:
+
+{{sample:SubscriberClient.AddSubscriberClient}}
+
+There is an overload of the `AddSubscriberClient` method that takes `Action<SubscriberClientBuilder>` as a parameter
+and can be used to add the customized `SubscriberClient` singleton instance as shown below:
+
+{{sample:SubscriberClient.AddCustomizedSubscriberClient}}
+
+Registering the `SubscriberClient` doesn't automatically start the client. It needs to be started explicitly by calling the `StartAsync` method.
+The `SubscriberClient` is a long-running client and so it may be useful to use
+it in a background service. The background service can use the `SubscriberClient`
+registered with the dependency injection container and handle the messages in the background.
+
+The background services can be registered with the dependency injection container
+using the [`AddHostedService`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectionhostedserviceextensions.addhostedservice?view=dotnet-plat-ext-6.0) extension method as shown below:
+
+{{sample:SubscriberClient.AddHostedService}}
+
+Here `SubscriberService` is the class that implements `BackgroundService` and uses the `SubscriberClient`
+registered with the dependency injection container to handle the messages. Once the background service is registered,
+it will be automatically started when the application starts and stopped when the application exits.
+A sample implementation of `SubscriberService` is shown below:
+
+{{sample:SubscriberClient.UseSubscriberClient}}
+
+During application shutdown, the `StopAsync` method of the `SubscriberService` is invoked by the dependency injection container, which in turn calls
+the `StopAsync` method of the `SubscriberClient` to gracefully shut down the client.
+
+Below is an example implementation of a console application that utilizes the dependency injection container and the `SubscriberService` to handle messages:
+
+{{sample:SubscriberClient.UseSubscriberServiceInConsoleApp}}
+
+## Disposing of the publisher and subscriber clients
+
+Both `PublisherClient` and `SubscriberClient` implement the `IAsyncDisposable` interface,
+allowing for asynchronous resource cleanup.
+
+For the `PublisherClient`, when the `DisposeAsync` method is called, it asynchronously waits for the time interval
+specified in the `PublisherClient.Settings.DisposeTimeout` property for the `PublisherClient` to send any pending messages before aborting
+the clean shutdown process, that may leave some locally queued messages unsent. The time interval can be customized
+by setting the `PublisherClient.Settings.DisposeTimeout` property. If no value is specified, the default value of 5 seconds is used.
+
+For the `SubscriberClient`, when the `DisposeAsync` method is called, it asynchronously waits for the time interval
+specified in the `SubscriberClient.Settings.DisposeTimeout` property for the `SubscriberClient` to acknowledge the handled messages before aborting the
+the clean stop process, that may leave some handled messages un-acknowledged. The time interval can be customized
+by setting the `SubscriberClient.Settings.DisposeTimeout` property. If no value is specified, the default value of 5 seconds is used.
+
+Please note that when working with the dependency injection container, if the timeout interval specified in the properties above is greater than the default value,
+the dependency injection container must be configured to have a timeout greater than or equal to this time. Failure to do so may result in the abrupt termination of the client shutdown process.
+
+See [HostOptions.ShutdownTimeout](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-6.0#shutdowntimeout) for configuring the shutdown timeout in ASP.NET Core applications.
+
+See [Host shutdown](https://learn.microsoft.com/en-us/dotnet/core/extensions/generic-host#host-shutdown) for configuring the shutdown timeout period for console or desktop applications
+leveraging the [.NET Generic Host](https://learn.microsoft.com/en-us/dotnet/core/extensions/generic-host).
+
 ## Using the emulator
 
 To connect to a [Pub/Sub
