@@ -1345,6 +1345,127 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             SetSuggestionFeatureConfigAsync(conversationProfile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2beta1.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2beta1.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
+        /// </param>
+        /// <param name="participantRole">
+        /// Required. The participant role to add or update the suggestion feature
+        /// config. Only HUMAN_AGENT or END_USER can be used.
+        /// </param>
+        /// <param name="suggestionFeatureConfig">
+        /// Required. The suggestion feature config to add or update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> SetSuggestionFeatureConfig(string conversationProfile, Participant.Types.Role participantRole, HumanAgentAssistantConfig.Types.SuggestionFeatureConfig suggestionFeatureConfig, gaxgrpc::CallSettings callSettings = null) =>
+            SetSuggestionFeatureConfig(new SetSuggestionFeatureConfigRequest
+            {
+                ConversationProfile = gax::GaxPreconditions.CheckNotNullOrEmpty(conversationProfile, nameof(conversationProfile)),
+                ParticipantRole = participantRole,
+                SuggestionFeatureConfig = gax::GaxPreconditions.CheckNotNull(suggestionFeatureConfig, nameof(suggestionFeatureConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2beta1.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2beta1.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
+        /// </param>
+        /// <param name="participantRole">
+        /// Required. The participant role to add or update the suggestion feature
+        /// config. Only HUMAN_AGENT or END_USER can be used.
+        /// </param>
+        /// <param name="suggestionFeatureConfig">
+        /// Required. The suggestion feature config to add or update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>> SetSuggestionFeatureConfigAsync(string conversationProfile, Participant.Types.Role participantRole, HumanAgentAssistantConfig.Types.SuggestionFeatureConfig suggestionFeatureConfig, gaxgrpc::CallSettings callSettings = null) =>
+            SetSuggestionFeatureConfigAsync(new SetSuggestionFeatureConfigRequest
+            {
+                ConversationProfile = gax::GaxPreconditions.CheckNotNullOrEmpty(conversationProfile, nameof(conversationProfile)),
+                ParticipantRole = participantRole,
+                SuggestionFeatureConfig = gax::GaxPreconditions.CheckNotNull(suggestionFeatureConfig, nameof(suggestionFeatureConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds or updates a suggestion feature in a conversation profile.
+        /// If the conversation profile contains the type of suggestion feature for
+        /// the participant role, it will update it. Otherwise it will insert the
+        /// suggestion feature.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [SetSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2beta1.SetSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2beta1.ConversationProfile]
+        /// 
+        /// If a long running operation to add or update suggestion feature
+        /// config for the same conversation profile, participant role and suggestion
+        /// feature type exists, please cancel the existing long running operation
+        /// before sending such request, otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
+        /// </param>
+        /// <param name="participantRole">
+        /// Required. The participant role to add or update the suggestion feature
+        /// config. Only HUMAN_AGENT or END_USER can be used.
+        /// </param>
+        /// <param name="suggestionFeatureConfig">
+        /// Required. The suggestion feature config to add or update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata>> SetSuggestionFeatureConfigAsync(string conversationProfile, Participant.Types.Role participantRole, HumanAgentAssistantConfig.Types.SuggestionFeatureConfig suggestionFeatureConfig, st::CancellationToken cancellationToken) =>
+            SetSuggestionFeatureConfigAsync(conversationProfile, participantRole, suggestionFeatureConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Clears a suggestion feature from a conversation profile for the given
         /// participant role.
         /// 
@@ -1502,6 +1623,106 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> ClearSuggestionFeatureConfigAsync(string conversationProfile, st::CancellationToken cancellationToken) =>
             ClearSuggestionFeatureConfigAsync(conversationProfile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2beta1.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2beta1.ConversationProfile]
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
+        /// </param>
+        /// <param name="participantRole">
+        /// Required. The participant role to remove the suggestion feature
+        /// config. Only HUMAN_AGENT or END_USER can be used.
+        /// </param>
+        /// <param name="suggestionFeatureType">
+        /// Required. The type of the suggestion feature to remove.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> ClearSuggestionFeatureConfig(string conversationProfile, Participant.Types.Role participantRole, SuggestionFeature.Types.Type suggestionFeatureType, gaxgrpc::CallSettings callSettings = null) =>
+            ClearSuggestionFeatureConfig(new ClearSuggestionFeatureConfigRequest
+            {
+                ConversationProfile = gax::GaxPreconditions.CheckNotNullOrEmpty(conversationProfile, nameof(conversationProfile)),
+                ParticipantRole = participantRole,
+                SuggestionFeatureType = suggestionFeatureType,
+            }, callSettings);
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2beta1.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2beta1.ConversationProfile]
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
+        /// </param>
+        /// <param name="participantRole">
+        /// Required. The participant role to remove the suggestion feature
+        /// config. Only HUMAN_AGENT or END_USER can be used.
+        /// </param>
+        /// <param name="suggestionFeatureType">
+        /// Required. The type of the suggestion feature to remove.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> ClearSuggestionFeatureConfigAsync(string conversationProfile, Participant.Types.Role participantRole, SuggestionFeature.Types.Type suggestionFeatureType, gaxgrpc::CallSettings callSettings = null) =>
+            ClearSuggestionFeatureConfigAsync(new ClearSuggestionFeatureConfigRequest
+            {
+                ConversationProfile = gax::GaxPreconditions.CheckNotNullOrEmpty(conversationProfile, nameof(conversationProfile)),
+                ParticipantRole = participantRole,
+                SuggestionFeatureType = suggestionFeatureType,
+            }, callSettings);
+
+        /// <summary>
+        /// Clears a suggestion feature from a conversation profile for the given
+        /// participant role.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`:
+        /// [ClearSuggestionFeatureConfigOperationMetadata][google.cloud.dialogflow.v2beta1.ClearSuggestionFeatureConfigOperationMetadata]
+        /// - `response`:
+        /// [ConversationProfile][google.cloud.dialogflow.v2beta1.ConversationProfile]
+        /// </summary>
+        /// <param name="conversationProfile">
+        /// Required. The Conversation Profile to add or update the suggestion feature
+        /// config. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationProfiles/&lt;Conversation Profile ID&gt;`.
+        /// </param>
+        /// <param name="participantRole">
+        /// Required. The participant role to remove the suggestion feature
+        /// config. Only HUMAN_AGENT or END_USER can be used.
+        /// </param>
+        /// <param name="suggestionFeatureType">
+        /// Required. The type of the suggestion feature to remove.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata>> ClearSuggestionFeatureConfigAsync(string conversationProfile, Participant.Types.Role participantRole, SuggestionFeature.Types.Type suggestionFeatureType, st::CancellationToken cancellationToken) =>
+            ClearSuggestionFeatureConfigAsync(conversationProfile, participantRole, suggestionFeatureType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ConversationProfiles client wrapper implementation, for convenient use.</summary>

@@ -16,13 +16,14 @@
 
 namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
 {
-    // [START dialogflow_v2beta1_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened]
+    // [START dialogflow_v2beta1_generated_ConversationProfiles_ClearSuggestionFeatureConfig_async_flattened1]
     using Google.Cloud.Dialogflow.V2Beta1;
     using Google.LongRunning;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedConversationProfilesClientSnippets
     {
-        /// <summary>Snippet for ClearSuggestionFeatureConfig</summary>
+        /// <summary>Snippet for ClearSuggestionFeatureConfigAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,24 +31,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ClearSuggestionFeatureConfig()
+        public async Task ClearSuggestionFeatureConfig1Async()
         {
             // Create client
-            ConversationProfilesClient conversationProfilesClient = ConversationProfilesClient.Create();
+            ConversationProfilesClient conversationProfilesClient = await ConversationProfilesClient.CreateAsync();
             // Initialize request argument(s)
             string conversationProfile = "";
             // Make the request
-            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> response = conversationProfilesClient.ClearSuggestionFeatureConfig(conversationProfile);
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> response = await conversationProfilesClient.ClearSuggestionFeatureConfigAsync(conversationProfile);
 
             // Poll until the returned long-running operation is complete
-            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             ConversationProfile result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> retrievedResponse = conversationProfilesClient.PollOnceClearSuggestionFeatureConfig(operationName);
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> retrievedResponse = await conversationProfilesClient.PollOnceClearSuggestionFeatureConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -56,5 +57,5 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             }
         }
     }
-    // [END dialogflow_v2beta1_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened]
+    // [END dialogflow_v2beta1_generated_ConversationProfiles_ClearSuggestionFeatureConfig_async_flattened1]
 }
