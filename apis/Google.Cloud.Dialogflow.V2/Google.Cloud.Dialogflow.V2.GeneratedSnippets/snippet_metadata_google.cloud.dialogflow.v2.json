@@ -9338,10 +9338,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_sync_flattened",
-      "title": "SetSuggestionFeatureConfig",
+      "regionTag": "dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_sync_flattened1",
+      "title": "SetSuggestionFeatureConfig1",
       "description": "Snippet for SetSuggestionFeatureConfig",
-      "file": "ConversationProfilesClient.SetSuggestionFeatureConfigSnippet.g.cs",
+      "file": "ConversationProfilesClient.SetSuggestionFeatureConfig1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "SetSuggestionFeatureConfig",
@@ -9385,10 +9385,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened",
-      "title": "SetSuggestionFeatureConfigAsync",
+      "regionTag": "dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened1",
+      "title": "SetSuggestionFeatureConfig1Async",
       "description": "Snippet for SetSuggestionFeatureConfigAsync",
-      "file": "ConversationProfilesClient.SetSuggestionFeatureConfigAsyncSnippet.g.cs",
+      "file": "ConversationProfilesClient.SetSuggestionFeatureConfig1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "SetSuggestionFeatureConfigAsync",
@@ -9428,6 +9428,117 @@
         {
           "start": 36,
           "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_sync_flattened2",
+      "title": "SetSuggestionFeatureConfig2",
+      "description": "Snippet for SetSuggestionFeatureConfig",
+      "file": "ConversationProfilesClient.SetSuggestionFeatureConfig2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetSuggestionFeatureConfig",
+        "fullName": "Google.Cloud.Dialogflow.V2.ConversationProfilesClient.SetSuggestionFeatureConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "conversationProfile"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.Participant+Types+Role",
+            "name": "participantRole"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig+Types+SuggestionFeatureConfig",
+            "name": "suggestionFeatureConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2.ConversationProfile, Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigOperationMetadata>",
+        "client": {
+          "shortName": "ConversationProfilesClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.ConversationProfilesClient"
+        },
+        "method": {
+          "shortName": "SetSuggestionFeatureConfig",
+          "fullName": "google.cloud.dialogflow.v2.ConversationProfiles.SetSuggestionFeatureConfig",
+          "service": {
+            "shortName": "ConversationProfiles",
+            "fullName": "google.cloud.dialogflow.v2.ConversationProfiles"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened2",
+      "title": "SetSuggestionFeatureConfig2Async",
+      "description": "Snippet for SetSuggestionFeatureConfigAsync",
+      "file": "ConversationProfilesClient.SetSuggestionFeatureConfig2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetSuggestionFeatureConfigAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.ConversationProfilesClient.SetSuggestionFeatureConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "conversationProfile"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.Participant+Types+Role",
+            "name": "participantRole"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig+Types+SuggestionFeatureConfig",
+            "name": "suggestionFeatureConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2.ConversationProfile, Google.Cloud.Dialogflow.V2.SetSuggestionFeatureConfigOperationMetadata>>",
+        "client": {
+          "shortName": "ConversationProfilesClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.ConversationProfilesClient"
+        },
+        "method": {
+          "shortName": "SetSuggestionFeatureConfig",
+          "fullName": "google.cloud.dialogflow.v2.ConversationProfiles.SetSuggestionFeatureConfig",
+          "service": {
+            "shortName": "ConversationProfiles",
+            "fullName": "google.cloud.dialogflow.v2.ConversationProfiles"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -9530,10 +9641,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened",
-      "title": "ClearSuggestionFeatureConfig",
+      "regionTag": "dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened1",
+      "title": "ClearSuggestionFeatureConfig1",
       "description": "Snippet for ClearSuggestionFeatureConfig",
-      "file": "ConversationProfilesClient.ClearSuggestionFeatureConfigSnippet.g.cs",
+      "file": "ConversationProfilesClient.ClearSuggestionFeatureConfig1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ClearSuggestionFeatureConfig",
@@ -9577,10 +9688,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_async_flattened",
-      "title": "ClearSuggestionFeatureConfigAsync",
+      "regionTag": "dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_async_flattened1",
+      "title": "ClearSuggestionFeatureConfig1Async",
       "description": "Snippet for ClearSuggestionFeatureConfigAsync",
-      "file": "ConversationProfilesClient.ClearSuggestionFeatureConfigAsyncSnippet.g.cs",
+      "file": "ConversationProfilesClient.ClearSuggestionFeatureConfig1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ClearSuggestionFeatureConfigAsync",
@@ -9620,6 +9731,117 @@
         {
           "start": 36,
           "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened2",
+      "title": "ClearSuggestionFeatureConfig2",
+      "description": "Snippet for ClearSuggestionFeatureConfig",
+      "file": "ConversationProfilesClient.ClearSuggestionFeatureConfig2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClearSuggestionFeatureConfig",
+        "fullName": "Google.Cloud.Dialogflow.V2.ConversationProfilesClient.ClearSuggestionFeatureConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "conversationProfile"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.Participant+Types+Role",
+            "name": "participantRole"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.SuggestionFeature+Types+Type",
+            "name": "suggestionFeatureType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2.ConversationProfile, Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigOperationMetadata>",
+        "client": {
+          "shortName": "ConversationProfilesClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.ConversationProfilesClient"
+        },
+        "method": {
+          "shortName": "ClearSuggestionFeatureConfig",
+          "fullName": "google.cloud.dialogflow.v2.ConversationProfiles.ClearSuggestionFeatureConfig",
+          "service": {
+            "shortName": "ConversationProfiles",
+            "fullName": "google.cloud.dialogflow.v2.ConversationProfiles"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_async_flattened2",
+      "title": "ClearSuggestionFeatureConfig2Async",
+      "description": "Snippet for ClearSuggestionFeatureConfigAsync",
+      "file": "ConversationProfilesClient.ClearSuggestionFeatureConfig2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClearSuggestionFeatureConfigAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.ConversationProfilesClient.ClearSuggestionFeatureConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "conversationProfile"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.Participant+Types+Role",
+            "name": "participantRole"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.SuggestionFeature+Types+Type",
+            "name": "suggestionFeatureType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2.ConversationProfile, Google.Cloud.Dialogflow.V2.ClearSuggestionFeatureConfigOperationMetadata>>",
+        "client": {
+          "shortName": "ConversationProfilesClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.ConversationProfilesClient"
+        },
+        "method": {
+          "shortName": "ClearSuggestionFeatureConfig",
+          "fullName": "google.cloud.dialogflow.v2.ConversationProfiles.ClearSuggestionFeatureConfig",
+          "service": {
+            "shortName": "ConversationProfiles",
+            "fullName": "google.cloud.dialogflow.v2.ConversationProfiles"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
           "type": "SHORT"
         }
       ]

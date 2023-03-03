@@ -16,14 +16,13 @@
 
 namespace Google.Cloud.Dialogflow.V2.Snippets
 {
-    // [START dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened]
+    // [START dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_sync_flattened1]
     using Google.Cloud.Dialogflow.V2;
     using Google.LongRunning;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedConversationProfilesClientSnippets
     {
-        /// <summary>Snippet for SetSuggestionFeatureConfigAsync</summary>
+        /// <summary>Snippet for SetSuggestionFeatureConfig</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,24 +30,24 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task SetSuggestionFeatureConfigAsync()
+        public void SetSuggestionFeatureConfig1()
         {
             // Create client
-            ConversationProfilesClient conversationProfilesClient = await ConversationProfilesClient.CreateAsync();
+            ConversationProfilesClient conversationProfilesClient = ConversationProfilesClient.Create();
             // Initialize request argument(s)
             string conversationProfile = "";
             // Make the request
-            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> response = await conversationProfilesClient.SetSuggestionFeatureConfigAsync(conversationProfile);
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> response = conversationProfilesClient.SetSuggestionFeatureConfig(conversationProfile);
 
             // Poll until the returned long-running operation is complete
-            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             ConversationProfile result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> retrievedResponse = await conversationProfilesClient.PollOnceSetSuggestionFeatureConfigAsync(operationName);
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> retrievedResponse = conversationProfilesClient.PollOnceSetSuggestionFeatureConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -57,5 +56,5 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             }
         }
     }
-    // [END dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened]
+    // [END dialogflow_v2_generated_ConversationProfiles_SetSuggestionFeatureConfig_sync_flattened1]
 }
