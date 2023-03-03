@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
 {
-    // [START dialogflow_v2beta1_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened]
+    // [START dialogflow_v2beta1_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened1]
     using Google.Cloud.Dialogflow.V2Beta1;
     using Google.LongRunning;
     using System.Threading.Tasks;
@@ -31,7 +31,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task SetSuggestionFeatureConfigAsync()
+        public async Task SetSuggestionFeatureConfig1Async()
         {
             // Create client
             ConversationProfilesClient conversationProfilesClient = await ConversationProfilesClient.CreateAsync();
@@ -57,5 +57,5 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             }
         }
     }
-    // [END dialogflow_v2beta1_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened]
+    // [END dialogflow_v2beta1_generated_ConversationProfiles_SetSuggestionFeatureConfig_async_flattened1]
 }

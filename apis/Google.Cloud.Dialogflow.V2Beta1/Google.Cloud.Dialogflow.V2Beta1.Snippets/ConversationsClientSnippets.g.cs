@@ -1076,6 +1076,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
                 ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
                 LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
                 ContextSize = 0,
+                AssistQueryParams = new AssistQueryParameters(),
             };
             // Make the request
             SuggestConversationSummaryResponse response = conversationsClient.SuggestConversationSummary(request);
@@ -1095,6 +1096,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
                 ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
                 LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
                 ContextSize = 0,
+                AssistQueryParams = new AssistQueryParameters(),
             };
             // Make the request
             SuggestConversationSummaryResponse response = await conversationsClient.SuggestConversationSummaryAsync(request);
