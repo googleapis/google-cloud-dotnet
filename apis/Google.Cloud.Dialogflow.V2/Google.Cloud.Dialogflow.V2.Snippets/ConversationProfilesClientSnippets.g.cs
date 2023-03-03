@@ -823,7 +823,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SetSuggestionFeatureConfig</summary>
-        public void SetSuggestionFeatureConfig()
+        public void SetSuggestionFeatureConfig1()
         {
             // Snippet: SetSuggestionFeatureConfig(string, CallSettings)
             // Create client
@@ -852,7 +852,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for SetSuggestionFeatureConfigAsync</summary>
-        public async Task SetSuggestionFeatureConfigAsync()
+        public async Task SetSuggestionFeatureConfig1Async()
         {
             // Snippet: SetSuggestionFeatureConfigAsync(string, CallSettings)
             // Additional: SetSuggestionFeatureConfigAsync(string, CancellationToken)
@@ -862,6 +862,69 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             string conversationProfile = "";
             // Make the request
             Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> response = await conversationProfilesClient.SetSuggestionFeatureConfigAsync(conversationProfile);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversationProfile result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> retrievedResponse = await conversationProfilesClient.PollOnceSetSuggestionFeatureConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversationProfile retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSuggestionFeatureConfig</summary>
+        public void SetSuggestionFeatureConfig2()
+        {
+            // Snippet: SetSuggestionFeatureConfig(string, Participant.Types.Role, HumanAgentAssistantConfig.Types.SuggestionFeatureConfig, CallSettings)
+            // Create client
+            ConversationProfilesClient conversationProfilesClient = ConversationProfilesClient.Create();
+            // Initialize request argument(s)
+            string conversationProfile = "";
+            Participant.Types.Role participantRole = Participant.Types.Role.Unspecified;
+            HumanAgentAssistantConfig.Types.SuggestionFeatureConfig suggestionFeatureConfig = new HumanAgentAssistantConfig.Types.SuggestionFeatureConfig();
+            // Make the request
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> response = conversationProfilesClient.SetSuggestionFeatureConfig(conversationProfile, participantRole, suggestionFeatureConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversationProfile result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> retrievedResponse = conversationProfilesClient.PollOnceSetSuggestionFeatureConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversationProfile retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSuggestionFeatureConfigAsync</summary>
+        public async Task SetSuggestionFeatureConfig2Async()
+        {
+            // Snippet: SetSuggestionFeatureConfigAsync(string, Participant.Types.Role, HumanAgentAssistantConfig.Types.SuggestionFeatureConfig, CallSettings)
+            // Additional: SetSuggestionFeatureConfigAsync(string, Participant.Types.Role, HumanAgentAssistantConfig.Types.SuggestionFeatureConfig, CancellationToken)
+            // Create client
+            ConversationProfilesClient conversationProfilesClient = await ConversationProfilesClient.CreateAsync();
+            // Initialize request argument(s)
+            string conversationProfile = "";
+            Participant.Types.Role participantRole = Participant.Types.Role.Unspecified;
+            HumanAgentAssistantConfig.Types.SuggestionFeatureConfig suggestionFeatureConfig = new HumanAgentAssistantConfig.Types.SuggestionFeatureConfig();
+            // Make the request
+            Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> response = await conversationProfilesClient.SetSuggestionFeatureConfigAsync(conversationProfile, participantRole, suggestionFeatureConfig);
 
             // Poll until the returned long-running operation is complete
             Operation<ConversationProfile, SetSuggestionFeatureConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -951,7 +1014,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ClearSuggestionFeatureConfig</summary>
-        public void ClearSuggestionFeatureConfig()
+        public void ClearSuggestionFeatureConfig1()
         {
             // Snippet: ClearSuggestionFeatureConfig(string, CallSettings)
             // Create client
@@ -980,7 +1043,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         }
 
         /// <summary>Snippet for ClearSuggestionFeatureConfigAsync</summary>
-        public async Task ClearSuggestionFeatureConfigAsync()
+        public async Task ClearSuggestionFeatureConfig1Async()
         {
             // Snippet: ClearSuggestionFeatureConfigAsync(string, CallSettings)
             // Additional: ClearSuggestionFeatureConfigAsync(string, CancellationToken)
@@ -990,6 +1053,69 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             string conversationProfile = "";
             // Make the request
             Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> response = await conversationProfilesClient.ClearSuggestionFeatureConfigAsync(conversationProfile);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversationProfile result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> retrievedResponse = await conversationProfilesClient.PollOnceClearSuggestionFeatureConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversationProfile retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ClearSuggestionFeatureConfig</summary>
+        public void ClearSuggestionFeatureConfig2()
+        {
+            // Snippet: ClearSuggestionFeatureConfig(string, Participant.Types.Role, SuggestionFeature.Types.Type, CallSettings)
+            // Create client
+            ConversationProfilesClient conversationProfilesClient = ConversationProfilesClient.Create();
+            // Initialize request argument(s)
+            string conversationProfile = "";
+            Participant.Types.Role participantRole = Participant.Types.Role.Unspecified;
+            SuggestionFeature.Types.Type suggestionFeatureType = SuggestionFeature.Types.Type.Unspecified;
+            // Make the request
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> response = conversationProfilesClient.ClearSuggestionFeatureConfig(conversationProfile, participantRole, suggestionFeatureType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversationProfile result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> retrievedResponse = conversationProfilesClient.PollOnceClearSuggestionFeatureConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversationProfile retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ClearSuggestionFeatureConfigAsync</summary>
+        public async Task ClearSuggestionFeatureConfig2Async()
+        {
+            // Snippet: ClearSuggestionFeatureConfigAsync(string, Participant.Types.Role, SuggestionFeature.Types.Type, CallSettings)
+            // Additional: ClearSuggestionFeatureConfigAsync(string, Participant.Types.Role, SuggestionFeature.Types.Type, CancellationToken)
+            // Create client
+            ConversationProfilesClient conversationProfilesClient = await ConversationProfilesClient.CreateAsync();
+            // Initialize request argument(s)
+            string conversationProfile = "";
+            Participant.Types.Role participantRole = Participant.Types.Role.Unspecified;
+            SuggestionFeature.Types.Type suggestionFeatureType = SuggestionFeature.Types.Type.Unspecified;
+            // Make the request
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> response = await conversationProfilesClient.ClearSuggestionFeatureConfigAsync(conversationProfile, participantRole, suggestionFeatureType);
 
             // Poll until the returned long-running operation is complete
             Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();

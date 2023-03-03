@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Dialogflow.V2.Snippets
 {
-    // [START dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened]
+    // [START dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened2]
     using Google.Cloud.Dialogflow.V2;
     using Google.LongRunning;
 
@@ -30,14 +30,16 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ClearSuggestionFeatureConfig()
+        public void ClearSuggestionFeatureConfig2()
         {
             // Create client
             ConversationProfilesClient conversationProfilesClient = ConversationProfilesClient.Create();
             // Initialize request argument(s)
             string conversationProfile = "";
+            Participant.Types.Role participantRole = Participant.Types.Role.Unspecified;
+            SuggestionFeature.Types.Type suggestionFeatureType = SuggestionFeature.Types.Type.Unspecified;
             // Make the request
-            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> response = conversationProfilesClient.ClearSuggestionFeatureConfig(conversationProfile);
+            Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> response = conversationProfilesClient.ClearSuggestionFeatureConfig(conversationProfile, participantRole, suggestionFeatureType);
 
             // Poll until the returned long-running operation is complete
             Operation<ConversationProfile, ClearSuggestionFeatureConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -56,5 +58,5 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             }
         }
     }
-    // [END dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened]
+    // [END dialogflow_v2_generated_ConversationProfiles_ClearSuggestionFeatureConfig_sync_flattened2]
 }
