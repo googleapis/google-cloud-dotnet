@@ -1152,7 +1152,7 @@ namespace Google.Cloud.Container.V1 {
     /// </summary>
     [pbr::OriginalName("PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE")] ToGoogle = 2,
     /// <summary>
-    /// Enables priate IPv6 access to and from Google Services
+    /// Enables private IPv6 access to and from Google Services
     /// </summary>
     [pbr::OriginalName("PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL")] Bidirectional = 3,
   }
