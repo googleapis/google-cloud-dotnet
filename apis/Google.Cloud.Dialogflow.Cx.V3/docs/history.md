@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2023-03-06
+
+### New features
+
+- Added persist_parameter_changes field from `query_params` to MatchIntentRequest ([commit 3798668](https://github.com/googleapis/google-cloud-dotnet/commit/3798668f292c995ca023d2c03d236c6e7d60b00c))
+
 ## Version 2.5.0, released 2023-02-22
 
 ### New features
