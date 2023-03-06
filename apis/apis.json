@@ -4522,7 +4522,7 @@
     },
     {
       "id": "Google.Cloud.Video.Transcoder.V1",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "type": "grpc",
       "productName": "Transcoder",
       "productUrl": "https://cloud.google.com/transcoder/docs",
@@ -4533,7 +4533,7 @@
         "transcoding"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Grpc.Core": "2.46.5"
       },
       "generator": "micro",
