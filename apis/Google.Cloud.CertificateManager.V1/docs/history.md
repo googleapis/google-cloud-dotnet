@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.3.0, released 2023-03-06
+
+### Bug fixes
+
+- Workaround crashes in gRPC for C++ ([commit edf4bda](https://github.com/googleapis/google-cloud-dotnet/commit/edf4bda298867ba6bfce2927e14732f90260e65e))
+
+### Documentation improvements
+
+- Corrected information about the limit of certificates that can be attached to a Certificate Map Entry ([commit 7219d64](https://github.com/googleapis/google-cloud-dotnet/commit/7219d645951e1c29a9f73376de8c1a3e39cf1737))
+
 ## Version 2.2.0, released 2023-01-18
 
 ### New features
