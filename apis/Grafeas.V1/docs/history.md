@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2023-03-06
+
+### New features
+
+- Import of Grafeas from Github ([commit 6328e98](https://github.com/googleapis/google-cloud-dotnet/commit/6328e98c5a5d1e03527ee6ee0ae6afbab64a5a78))
+
 ## Version 3.1.0, released 2023-02-08
 
 ### New features
