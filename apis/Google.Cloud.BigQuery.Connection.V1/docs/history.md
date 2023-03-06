@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.4.0, released 2023-03-06
+
+### New features
+
+- Add cloud spanner connection properties - serverless analytics ([commit 3b22371](https://github.com/googleapis/google-cloud-dotnet/commit/3b2237128775b97a17af15651000139bedc94375))
+- Add cloud spanner connection properties - database role ([commit 3b22371](https://github.com/googleapis/google-cloud-dotnet/commit/3b2237128775b97a17af15651000139bedc94375))
+
 ## Version 2.3.0, released 2023-01-19
 
 ### New features
