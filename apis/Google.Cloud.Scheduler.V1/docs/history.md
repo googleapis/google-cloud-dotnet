@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.2.0, released 2023-03-06
+
+### New features
+
+- Location API methods ([commit 6db57ed](https://github.com/googleapis/google-cloud-dotnet/commit/6db57ed0dc20f8f739a4044e67a72b1c067f45e4))
+
+### Documentation improvements
+
+- Updated comments ([commit 6db57ed](https://github.com/googleapis/google-cloud-dotnet/commit/6db57ed0dc20f8f739a4044e67a72b1c067f45e4))
+
 ## Version 3.1.0, released 2023-01-11
 
 This is primarily a promotion of the previous beta, which includes
