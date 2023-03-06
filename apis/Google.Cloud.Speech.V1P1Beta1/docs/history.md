@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.0.0-beta05, released 2023-03-06
+
+### New features
+
+- Voice Activity Detection: adding speech event time and speech event type ([commit 848a5f9](https://github.com/googleapis/google-cloud-dotnet/commit/848a5f9a6e4754e9eaf1c9ec99767a5ccc7715c0))
+
+### Documentation improvements
+
+- Clarified boost usage ([commit 60b081b](https://github.com/googleapis/google-cloud-dotnet/commit/60b081b2a4bb218dff04d104f6362ce821114f48))
+- Clarify boost usage in Reference ([commit 01f388a](https://github.com/googleapis/google-cloud-dotnet/commit/01f388ae2c15423390d6bdb5127e35390b12c03b))
+
 ## Version 3.0.0-beta04, released 2023-01-19
 
 ### New features
