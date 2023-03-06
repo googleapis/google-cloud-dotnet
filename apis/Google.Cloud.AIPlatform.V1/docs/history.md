@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.11.0, released 2023-03-06
+
+### New features
+
+- Add disable_container_logging to BatchPredictionJob in aiplatform v1,v1beta1 batch_prediction_job.proto ([commit 368e543](https://github.com/googleapis/google-cloud-dotnet/commit/368e543246160ac767770be0ea4ec89feb6e62d1))
+- Add TPU_V4_POD to AcceleratorType in aiplatform v1 accelerator_type.proto ([commit 995de9c](https://github.com/googleapis/google-cloud-dotnet/commit/995de9c238a1fea5d682b534f8cace63127296fd))
+- Add split to ExportDataConfig in aiplatform v1 dataset.proto ([commit 995de9c](https://github.com/googleapis/google-cloud-dotnet/commit/995de9c238a1fea5d682b534f8cace63127296fd))
+- Add offline_storage_ttl_days to EntityType in aiplatform v1 entity_type.proto ([commit 995de9c](https://github.com/googleapis/google-cloud-dotnet/commit/995de9c238a1fea5d682b534f8cace63127296fd))
+- Add evaluated_annotation.proto to aiplatform v1 ([commit 995de9c](https://github.com/googleapis/google-cloud-dotnet/commit/995de9c238a1fea5d682b534f8cace63127296fd))
+- Add cpu_utilization_target to Featurestore.OnlineServingConfig.Scaling in aiplatform v1 featurestore.proto ([commit 995de9c](https://github.com/googleapis/google-cloud-dotnet/commit/995de9c238a1fea5d682b534f8cace63127296fd))
+- Add online_storage_ttl_days to Featurestore in aiplatform v1 featurestore.proto ([commit 995de9c](https://github.com/googleapis/google-cloud-dotnet/commit/995de9c238a1fea5d682b534f8cace63127296fd))
+- Add slice_spec to ModelEvaluationSlice in aiplatform v1 model_evaluation_slice.proto ([commit 995de9c](https://github.com/googleapis/google-cloud-dotnet/commit/995de9c238a1fea5d682b534f8cace63127296fd))
+- Add BatchImportEvaluatedAnnotations rpc to aiplatform v1 model_service.proto ([commit 995de9c](https://github.com/googleapis/google-cloud-dotnet/commit/995de9c238a1fea5d682b534f8cace63127296fd))
+
 ## Version 2.10.0, released 2023-02-08
 
 ### New features
