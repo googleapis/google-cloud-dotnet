@@ -555,5 +555,156 @@ namespace Google.Cloud.Kms.V1.Snippets
             EkmConnection response = await ekmServiceClient.UpdateEkmConnectionAsync(ekmConnection, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for GetEkmConfig</summary>
+        public void GetEkmConfigRequestObject()
+        {
+            // Snippet: GetEkmConfig(GetEkmConfigRequest, CallSettings)
+            // Create client
+            EkmServiceClient ekmServiceClient = EkmServiceClient.Create();
+            // Initialize request argument(s)
+            GetEkmConfigRequest request = new GetEkmConfigRequest
+            {
+                EkmConfigName = EkmConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            EkmConfig response = ekmServiceClient.GetEkmConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEkmConfigAsync</summary>
+        public async Task GetEkmConfigRequestObjectAsync()
+        {
+            // Snippet: GetEkmConfigAsync(GetEkmConfigRequest, CallSettings)
+            // Additional: GetEkmConfigAsync(GetEkmConfigRequest, CancellationToken)
+            // Create client
+            EkmServiceClient ekmServiceClient = await EkmServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEkmConfigRequest request = new GetEkmConfigRequest
+            {
+                EkmConfigName = EkmConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            EkmConfig response = await ekmServiceClient.GetEkmConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEkmConfig</summary>
+        public void GetEkmConfig()
+        {
+            // Snippet: GetEkmConfig(string, CallSettings)
+            // Create client
+            EkmServiceClient ekmServiceClient = EkmServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/ekmConfig";
+            // Make the request
+            EkmConfig response = ekmServiceClient.GetEkmConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEkmConfigAsync</summary>
+        public async Task GetEkmConfigAsync()
+        {
+            // Snippet: GetEkmConfigAsync(string, CallSettings)
+            // Additional: GetEkmConfigAsync(string, CancellationToken)
+            // Create client
+            EkmServiceClient ekmServiceClient = await EkmServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/ekmConfig";
+            // Make the request
+            EkmConfig response = await ekmServiceClient.GetEkmConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEkmConfig</summary>
+        public void GetEkmConfigResourceNames()
+        {
+            // Snippet: GetEkmConfig(EkmConfigName, CallSettings)
+            // Create client
+            EkmServiceClient ekmServiceClient = EkmServiceClient.Create();
+            // Initialize request argument(s)
+            EkmConfigName name = EkmConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            EkmConfig response = ekmServiceClient.GetEkmConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEkmConfigAsync</summary>
+        public async Task GetEkmConfigResourceNamesAsync()
+        {
+            // Snippet: GetEkmConfigAsync(EkmConfigName, CallSettings)
+            // Additional: GetEkmConfigAsync(EkmConfigName, CancellationToken)
+            // Create client
+            EkmServiceClient ekmServiceClient = await EkmServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EkmConfigName name = EkmConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            EkmConfig response = await ekmServiceClient.GetEkmConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEkmConfig</summary>
+        public void UpdateEkmConfigRequestObject()
+        {
+            // Snippet: UpdateEkmConfig(UpdateEkmConfigRequest, CallSettings)
+            // Create client
+            EkmServiceClient ekmServiceClient = EkmServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateEkmConfigRequest request = new UpdateEkmConfigRequest
+            {
+                EkmConfig = new EkmConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            EkmConfig response = ekmServiceClient.UpdateEkmConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEkmConfigAsync</summary>
+        public async Task UpdateEkmConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateEkmConfigAsync(UpdateEkmConfigRequest, CallSettings)
+            // Additional: UpdateEkmConfigAsync(UpdateEkmConfigRequest, CancellationToken)
+            // Create client
+            EkmServiceClient ekmServiceClient = await EkmServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateEkmConfigRequest request = new UpdateEkmConfigRequest
+            {
+                EkmConfig = new EkmConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            EkmConfig response = await ekmServiceClient.UpdateEkmConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEkmConfig</summary>
+        public void UpdateEkmConfig()
+        {
+            // Snippet: UpdateEkmConfig(EkmConfig, FieldMask, CallSettings)
+            // Create client
+            EkmServiceClient ekmServiceClient = EkmServiceClient.Create();
+            // Initialize request argument(s)
+            EkmConfig ekmConfig = new EkmConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            EkmConfig response = ekmServiceClient.UpdateEkmConfig(ekmConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEkmConfigAsync</summary>
+        public async Task UpdateEkmConfigAsync()
+        {
+            // Snippet: UpdateEkmConfigAsync(EkmConfig, FieldMask, CallSettings)
+            // Additional: UpdateEkmConfigAsync(EkmConfig, FieldMask, CancellationToken)
+            // Create client
+            EkmServiceClient ekmServiceClient = await EkmServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EkmConfig ekmConfig = new EkmConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            EkmConfig response = await ekmServiceClient.UpdateEkmConfigAsync(ekmConfig, updateMask);
+            // End snippet
+        }
     }
 }

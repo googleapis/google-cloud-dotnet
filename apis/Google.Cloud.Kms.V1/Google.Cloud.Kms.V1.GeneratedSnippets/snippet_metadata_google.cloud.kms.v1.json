@@ -1136,6 +1136,493 @@
       ]
     },
     {
+      "regionTag": "cloudkms_v1_generated_EkmService_GetEkmConfig_sync",
+      "title": "GetEkmConfigRequestObject",
+      "description": "Snippet for GetEkmConfig",
+      "file": "EkmServiceClient.GetEkmConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEkmConfig",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetEkmConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.EkmConfig",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "GetEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.GetEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_GetEkmConfig_async",
+      "title": "GetEkmConfigRequestObjectAsync",
+      "description": "Snippet for GetEkmConfigAsync",
+      "file": "EkmServiceClient.GetEkmConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEkmConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.GetEkmConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConfig>",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "GetEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.GetEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_GetEkmConfig_sync_flattened",
+      "title": "GetEkmConfig",
+      "description": "Snippet for GetEkmConfig",
+      "file": "EkmServiceClient.GetEkmConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEkmConfig",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.EkmConfig",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "GetEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.GetEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_GetEkmConfig_async_flattened",
+      "title": "GetEkmConfigAsync",
+      "description": "Snippet for GetEkmConfigAsync",
+      "file": "EkmServiceClient.GetEkmConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEkmConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConfig>",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "GetEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.GetEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_GetEkmConfig_sync_flattened_resourceNames",
+      "title": "GetEkmConfigResourceNames",
+      "description": "Snippet for GetEkmConfig",
+      "file": "EkmServiceClient.GetEkmConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEkmConfig",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.EkmConfig",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "GetEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.GetEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_GetEkmConfig_async_flattened_resourceNames",
+      "title": "GetEkmConfigResourceNamesAsync",
+      "description": "Snippet for GetEkmConfigAsync",
+      "file": "EkmServiceClient.GetEkmConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEkmConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.GetEkmConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConfig>",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "GetEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.GetEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_UpdateEkmConfig_sync",
+      "title": "UpdateEkmConfigRequestObject",
+      "description": "Snippet for UpdateEkmConfig",
+      "file": "EkmServiceClient.UpdateEkmConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEkmConfig",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.UpdateEkmConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateEkmConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.EkmConfig",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.UpdateEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_UpdateEkmConfig_async",
+      "title": "UpdateEkmConfigRequestObjectAsync",
+      "description": "Snippet for UpdateEkmConfigAsync",
+      "file": "EkmServiceClient.UpdateEkmConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEkmConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.UpdateEkmConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.UpdateEkmConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConfig>",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.UpdateEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_UpdateEkmConfig_sync_flattened",
+      "title": "UpdateEkmConfig",
+      "description": "Snippet for UpdateEkmConfig",
+      "file": "EkmServiceClient.UpdateEkmConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEkmConfig",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.UpdateEkmConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConfig",
+            "name": "ekmConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.EkmConfig",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.UpdateEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_UpdateEkmConfig_async_flattened",
+      "title": "UpdateEkmConfigAsync",
+      "description": "Snippet for UpdateEkmConfigAsync",
+      "file": "EkmServiceClient.UpdateEkmConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEkmConfigAsync",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.UpdateEkmConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConfig",
+            "name": "ekmConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.EkmConfig>",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEkmConfig",
+          "fullName": "google.cloud.kms.v1.EkmService.UpdateEkmConfig",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudkms_v1_generated_KeyManagementService_ListKeyRings_sync",
       "title": "ListKeyRingsRequestObject",
       "description": "Snippet for ListKeyRings",
