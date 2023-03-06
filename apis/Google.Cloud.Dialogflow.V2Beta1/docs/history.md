@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2023-03-06
+
+### New features
+
+- Added support for custom content types ([commit 88cc1eb](https://github.com/googleapis/google-cloud-dotnet/commit/88cc1eb787ff1e355ae57feb38ad641c45a90035))
+
+### Documentation improvements
+
+- Clarified wording around quota usage ([commit 88cc1eb](https://github.com/googleapis/google-cloud-dotnet/commit/88cc1eb787ff1e355ae57feb38ad641c45a90035))
+
 ## Version 1.0.0-beta05, released 2023-02-22
 
 ### New features
