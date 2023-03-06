@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2023-03-06
+
+### New features
+
+- Add a way to specify the conversation automatic analysis percentage for the UploadConversation API when creating Analyses in Insights ([commit 02f447e](https://github.com/googleapis/google-cloud-dotnet/commit/02f447e727147530aadf0f76e4d12d8c809f5525))
+
 ## Version 2.4.0, released 2023-02-08
 
 ### New features
