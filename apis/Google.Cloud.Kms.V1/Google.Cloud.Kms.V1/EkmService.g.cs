@@ -45,53 +45,75 @@ namespace Google.Cloud.Kms.V1 {
             "Lmttcy52MS5Fa21Db25uZWN0aW9uQgPgQQIikwEKGlVwZGF0ZUVrbUNvbm5l",
             "Y3Rpb25SZXF1ZXN0Ej8KDmVrbV9jb25uZWN0aW9uGAEgASgLMiIuZ29vZ2xl",
             "LmNsb3VkLmttcy52MS5Fa21Db25uZWN0aW9uQgPgQQISNAoLdXBkYXRlX21h",
-            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIivwIK",
-            "C0NlcnRpZmljYXRlEhQKB3Jhd19kZXIYASABKAxCA+BBAhITCgZwYXJzZWQY",
-            "AiABKAhCA+BBAxITCgZpc3N1ZXIYAyABKAlCA+BBAxIUCgdzdWJqZWN0GAQg",
-            "ASgJQgPgQQMSKgodc3ViamVjdF9hbHRlcm5hdGl2ZV9kbnNfbmFtZXMYBSAD",
-            "KAlCA+BBAxI4Cg9ub3RfYmVmb3JlX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNwoObm90X2FmdGVyX3RpbWUYByABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGgoNc2VyaWFsX251",
-            "bWJlchgIIAEoCUID4EEDEh8KEnNoYTI1Nl9maW5nZXJwcmludBgJIAEoCUID",
-            "4EEDIpAECg1Fa21Db25uZWN0aW9uEhEKBG5hbWUYASABKAlCA+BBAxI0Cgtj",
-            "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxJNChFzZXJ2aWNlX3Jlc29sdmVycxgDIAMoCzIyLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuRWttQ29ubmVjdGlvbi5TZXJ2aWNlUmVzb2x2ZXISEQoEZXRh",
-            "ZxgFIAEoCUID4EEBGt4BCg9TZXJ2aWNlUmVzb2x2ZXISUgoZc2VydmljZV9k",
-            "aXJlY3Rvcnlfc2VydmljZRgBIAEoCUIv4EEC+kEpCidzZXJ2aWNlZGlyZWN0",
-            "b3J5Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USHAoPZW5kcG9pbnRfZmlsdGVy",
-            "GAIgASgJQgPgQQESFQoIaG9zdG5hbWUYAyABKAlCA+BBAhJCChNzZXJ2ZXJf",
-            "Y2VydGlmaWNhdGVzGAQgAygLMiAuZ29vZ2xlLmNsb3VkLmttcy52MS5DZXJ0",
-            "aWZpY2F0ZUID4EECOnPqQXAKJWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Vr",
-            "bUNvbm5lY3Rpb24SR3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9la21Db25uZWN0aW9ucy97ZWttX2Nvbm5lY3Rpb259MrEHCgpF",
-            "a21TZXJ2aWNlEroBChJMaXN0RWttQ29ubmVjdGlvbnMSLi5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkxpc3RFa21Db25uZWN0aW9uc1JlcXVlc3QaLy5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLkxpc3RFa21Db25uZWN0aW9uc1Jlc3BvbnNlIkOC0+ST",
-            "AjQSMi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2VrbUNv",
-            "bm5lY3Rpb25z2kEGcGFyZW50EqcBChBHZXRFa21Db25uZWN0aW9uEiwuZ29v",
-            "Z2xlLmNsb3VkLmttcy52MS5HZXRFa21Db25uZWN0aW9uUmVxdWVzdBoiLmdv",
-            "b2dsZS5jbG91ZC5rbXMudjEuRWttQ29ubmVjdGlvbiJBgtPkkwI0EjIvdjEv",
-            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9la21Db25uZWN0aW9ucy8q",
-            "fdpBBG5hbWUS4AEKE0NyZWF0ZUVrbUNvbm5lY3Rpb24SLy5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkNyZWF0ZUVrbUNvbm5lY3Rpb25SZXF1ZXN0GiIuZ29vZ2xl",
-            "LmNsb3VkLmttcy52MS5Fa21Db25uZWN0aW9uInSC0+STAkQiMi92MS97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2VrbUNvbm5lY3Rpb25zOg5l",
-            "a21fY29ubmVjdGlvbtpBJ3BhcmVudCxla21fY29ubmVjdGlvbl9pZCxla21f",
-            "Y29ubmVjdGlvbhLiAQoTVXBkYXRlRWttQ29ubmVjdGlvbhIvLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuVXBkYXRlRWttQ29ubmVjdGlvblJlcXVlc3QaIi5nb29n",
-            "bGUuY2xvdWQua21zLnYxLkVrbUNvbm5lY3Rpb24idoLT5JMCUzJBL3YxL3tl",
-            "a21fY29ubmVjdGlvbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZWtt",
-            "Q29ubmVjdGlvbnMvKn06DmVrbV9jb25uZWN0aW9u2kEaZWttX2Nvbm5lY3Rp",
-            "b24sdXBkYXRlX21hc2sadMpBF2Nsb3Vka21zLmdvb2dsZWFwaXMuY29t0kFX",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vka21zQoUC",
-            "Chdjb20uZ29vZ2xlLmNsb3VkLmttcy52MUIPRWttU2VydmljZVByb3RvUAFa",
-            "KWNsb3VkLmdvb2dsZS5jb20vZ28va21zL2FwaXYxL2ttc3BiO2ttc3Bi+AEB",
-            "qgITR29vZ2xlLkNsb3VkLkttcy5WMcoCE0dvb2dsZVxDbG91ZFxLbXNcVjHq",
-            "QXwKJ3NlcnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vU2VydmljZRJR",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L25hbWVz",
-            "cGFjZXMve25hbWVzcGFjZX0vc2VydmljZXMve3NlcnZpY2V9YgZwcm90bzM="));
+            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiTgoT",
+            "R2V0RWttQ29uZmlnUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWNs",
+            "b3Vka21zLmdvb2dsZWFwaXMuY29tL0VrbUNvbmZpZyKHAQoWVXBkYXRlRWtt",
+            "Q29uZmlnUmVxdWVzdBI3Cgpla21fY29uZmlnGAEgASgLMh4uZ29vZ2xlLmNs",
+            "b3VkLmttcy52MS5Fa21Db25maWdCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiK/AgoLQ2VydGlm",
+            "aWNhdGUSFAoHcmF3X2RlchgBIAEoDEID4EECEhMKBnBhcnNlZBgCIAEoCEID",
+            "4EEDEhMKBmlzc3VlchgDIAEoCUID4EEDEhQKB3N1YmplY3QYBCABKAlCA+BB",
+            "AxIqCh1zdWJqZWN0X2FsdGVybmF0aXZlX2Ruc19uYW1lcxgFIAMoCUID4EED",
+            "EjgKD25vdF9iZWZvcmVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxI3Cg5ub3RfYWZ0ZXJfdGltZRgHIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIaCg1zZXJpYWxfbnVtYmVyGAgg",
+            "ASgJQgPgQQMSHwoSc2hhMjU2X2ZpbmdlcnByaW50GAkgASgJQgPgQQMi3QUK",
+            "DUVrbUNvbm5lY3Rpb24SEQoEbmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90",
+            "aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEk0K",
+            "EXNlcnZpY2VfcmVzb2x2ZXJzGAMgAygLMjIuZ29vZ2xlLmNsb3VkLmttcy52",
+            "MS5Fa21Db25uZWN0aW9uLlNlcnZpY2VSZXNvbHZlchIRCgRldGFnGAUgASgJ",
+            "QgPgQQESVgoTa2V5X21hbmFnZW1lbnRfbW9kZRgGIAEoDjI0Lmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuRWttQ29ubmVjdGlvbi5LZXlNYW5hZ2VtZW50TW9kZUID",
+            "4EEBEh4KEWNyeXB0b19zcGFjZV9wYXRoGAcgASgJQgPgQQEa3gEKD1NlcnZp",
+            "Y2VSZXNvbHZlchJSChlzZXJ2aWNlX2RpcmVjdG9yeV9zZXJ2aWNlGAEgASgJ",
+            "Qi/gQQL6QSkKJ3NlcnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vU2Vy",
+            "dmljZRIcCg9lbmRwb2ludF9maWx0ZXIYAiABKAlCA+BBARIVCghob3N0bmFt",
+            "ZRgDIAEoCUID4EECEkIKE3NlcnZlcl9jZXJ0aWZpY2F0ZXMYBCADKAsyIC5n",
+            "b29nbGUuY2xvdWQua21zLnYxLkNlcnRpZmljYXRlQgPgQQIiUwoRS2V5TWFu",
+            "YWdlbWVudE1vZGUSIwofS0VZX01BTkFHRU1FTlRfTU9ERV9VTlNQRUNJRklF",
+            "RBAAEgoKBk1BTlVBTBABEg0KCUNMT1VEX0tNUxACOnPqQXAKJWNsb3Vka21z",
+            "Lmdvb2dsZWFwaXMuY29tL0VrbUNvbm5lY3Rpb24SR3Byb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9la21Db25uZWN0aW9ucy97ZWtt",
+            "X2Nvbm5lY3Rpb259IsgBCglFa21Db25maWcSEQoEbmFtZRgBIAEoCUID4EED",
+            "Ek0KFmRlZmF1bHRfZWttX2Nvbm5lY3Rpb24YAiABKAlCLeBBAfpBJwolY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vRWttQ29ubmVjdGlvbjpZ6kFWCiFjbG91",
+            "ZGttcy5nb29nbGVhcGlzLmNvbS9Fa21Db25maWcSMXByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9la21Db25maWcyjgoKCkVrbVNl",
+            "cnZpY2USugEKEkxpc3RFa21Db25uZWN0aW9ucxIuLmdvb2dsZS5jbG91ZC5r",
+            "bXMudjEuTGlzdEVrbUNvbm5lY3Rpb25zUmVxdWVzdBovLmdvb2dsZS5jbG91",
+            "ZC5rbXMudjEuTGlzdEVrbUNvbm5lY3Rpb25zUmVzcG9uc2UiQ4LT5JMCNBIy",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZWttQ29ubmVj",
+            "dGlvbnPaQQZwYXJlbnQSpwEKEEdldEVrbUNvbm5lY3Rpb24SLC5nb29nbGUu",
+            "Y2xvdWQua21zLnYxLkdldEVrbUNvbm5lY3Rpb25SZXF1ZXN0GiIuZ29vZ2xl",
+            "LmNsb3VkLmttcy52MS5Fa21Db25uZWN0aW9uIkGC0+STAjQSMi92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VrbUNvbm5lY3Rpb25zLyp92kEE",
+            "bmFtZRLgAQoTQ3JlYXRlRWttQ29ubmVjdGlvbhIvLmdvb2dsZS5jbG91ZC5r",
+            "bXMudjEuQ3JlYXRlRWttQ29ubmVjdGlvblJlcXVlc3QaIi5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkVrbUNvbm5lY3Rpb24idILT5JMCRCIyL3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZWttQ29ubmVjdGlvbnM6DmVrbV9j",
+            "b25uZWN0aW9u2kEncGFyZW50LGVrbV9jb25uZWN0aW9uX2lkLGVrbV9jb25u",
+            "ZWN0aW9uEuIBChNVcGRhdGVFa21Db25uZWN0aW9uEi8uZ29vZ2xlLmNsb3Vk",
+            "Lmttcy52MS5VcGRhdGVFa21Db25uZWN0aW9uUmVxdWVzdBoiLmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuRWttQ29ubmVjdGlvbiJ2gtPkkwJTMkEvdjEve2VrbV9j",
+            "b25uZWN0aW9uLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9la21Db25u",
+            "ZWN0aW9ucy8qfToOZWttX2Nvbm5lY3Rpb27aQRpla21fY29ubmVjdGlvbix1",
+            "cGRhdGVfbWFzaxKUAQoMR2V0RWttQ29uZmlnEiguZ29vZ2xlLmNsb3VkLmtt",
+            "cy52MS5HZXRFa21Db25maWdSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmttcy52",
+            "MS5Fa21Db25maWciOoLT5JMCLRIrL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovZWttQ29uZmlnfdpBBG5hbWUSwwEKD1VwZGF0ZUVrbUNvbmZp",
+            "ZxIrLmdvb2dsZS5jbG91ZC5rbXMudjEuVXBkYXRlRWttQ29uZmlnUmVxdWVz",
+            "dBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuRWttQ29uZmlnImOC0+STAkQyNi92",
+            "MS97ZWttX2NvbmZpZy5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZWtt",
+            "Q29uZmlnfToKZWttX2NvbmZpZ9pBFmVrbV9jb25maWcsdXBkYXRlX21hc2sa",
+            "dMpBF2Nsb3Vka21zLmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vka21zQoUCChdjb20uZ29vZ2xlLmNs",
+            "b3VkLmttcy52MUIPRWttU2VydmljZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28va21zL2FwaXYxL2ttc3BiO2ttc3Bi+AEBqgITR29vZ2xlLkNsb3Vk",
+            "Lkttcy5WMcoCE0dvb2dsZVxDbG91ZFxLbXNcVjHqQXwKJ3NlcnZpY2VkaXJl",
+            "Y3RvcnkuZ29vZ2xlYXBpcy5jb20vU2VydmljZRJRcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L25hbWVzcGFjZXMve25hbWVzcGFj",
+            "ZX0vc2VydmljZXMve3NlcnZpY2V9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -100,8 +122,11 @@ namespace Google.Cloud.Kms.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetEkmConnectionRequest), global::Google.Cloud.Kms.V1.GetEkmConnectionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateEkmConnectionRequest), global::Google.Cloud.Kms.V1.CreateEkmConnectionRequest.Parser, new[]{ "Parent", "EkmConnectionId", "EkmConnection" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateEkmConnectionRequest), global::Google.Cloud.Kms.V1.UpdateEkmConnectionRequest.Parser, new[]{ "EkmConnection", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetEkmConfigRequest), global::Google.Cloud.Kms.V1.GetEkmConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest), global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest.Parser, new[]{ "EkmConfig", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.Certificate), global::Google.Cloud.Kms.V1.Certificate.Parser, new[]{ "RawDer", "Parsed", "Issuer", "Subject", "SubjectAlternativeDnsNames", "NotBeforeTime", "NotAfterTime", "SerialNumber", "Sha256Fingerprint" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConnection), global::Google.Cloud.Kms.V1.EkmConnection.Parser, new[]{ "Name", "CreateTime", "ServiceResolvers", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConnection.Types.ServiceResolver), global::Google.Cloud.Kms.V1.EkmConnection.Types.ServiceResolver.Parser, new[]{ "ServiceDirectoryService", "EndpointFilter", "Hostname", "ServerCertificates" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConnection), global::Google.Cloud.Kms.V1.EkmConnection.Parser, new[]{ "Name", "CreateTime", "ServiceResolvers", "Etag", "KeyManagementMode", "CryptoSpacePath" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConnection.Types.ServiceResolver), global::Google.Cloud.Kms.V1.EkmConnection.Types.ServiceResolver.Parser, new[]{ "ServiceDirectoryService", "EndpointFilter", "Hostname", "ServerCertificates" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConfig), global::Google.Cloud.Kms.V1.EkmConfig.Parser, new[]{ "Name", "DefaultEkmConnection" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1489,6 +1514,457 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
+  /// Request message for
+  /// [EkmService.GetEkmConfig][google.cloud.kms.v1.EkmService.GetEkmConfig].
+  /// </summary>
+  public sealed partial class GetEkmConfigRequest : pb::IMessage<GetEkmConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetEkmConfigRequest> _parser = new pb::MessageParser<GetEkmConfigRequest>(() => new GetEkmConfigRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetEkmConfigRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetEkmConfigRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetEkmConfigRequest(GetEkmConfigRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetEkmConfigRequest Clone() {
+      return new GetEkmConfigRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The [name][google.cloud.kms.v1.EkmConfig.name] of the
+    /// [EkmConfig][google.cloud.kms.v1.EkmConfig] to get.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetEkmConfigRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetEkmConfigRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetEkmConfigRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [EkmService.UpdateEkmConfig][google.cloud.kms.v1.EkmService.UpdateEkmConfig].
+  /// </summary>
+  public sealed partial class UpdateEkmConfigRequest : pb::IMessage<UpdateEkmConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateEkmConfigRequest> _parser = new pb::MessageParser<UpdateEkmConfigRequest>(() => new UpdateEkmConfigRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateEkmConfigRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateEkmConfigRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateEkmConfigRequest(UpdateEkmConfigRequest other) : this() {
+      ekmConfig_ = other.ekmConfig_ != null ? other.ekmConfig_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateEkmConfigRequest Clone() {
+      return new UpdateEkmConfigRequest(this);
+    }
+
+    /// <summary>Field number for the "ekm_config" field.</summary>
+    public const int EkmConfigFieldNumber = 1;
+    private global::Google.Cloud.Kms.V1.EkmConfig ekmConfig_;
+    /// <summary>
+    /// Required. [EkmConfig][google.cloud.kms.v1.EkmConfig] with updated values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Kms.V1.EkmConfig EkmConfig {
+      get { return ekmConfig_; }
+      set {
+        ekmConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Required. List of fields to be updated in this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateEkmConfigRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateEkmConfigRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(EkmConfig, other.EkmConfig)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ekmConfig_ != null) hash ^= EkmConfig.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ekmConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(EkmConfig);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ekmConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(EkmConfig);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ekmConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EkmConfig);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateEkmConfigRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ekmConfig_ != null) {
+        if (ekmConfig_ == null) {
+          EkmConfig = new global::Google.Cloud.Kms.V1.EkmConfig();
+        }
+        EkmConfig.MergeFrom(other.EkmConfig);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (ekmConfig_ == null) {
+              EkmConfig = new global::Google.Cloud.Kms.V1.EkmConfig();
+            }
+            input.ReadMessage(EkmConfig);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (ekmConfig_ == null) {
+              EkmConfig = new global::Google.Cloud.Kms.V1.EkmConfig();
+            }
+            input.ReadMessage(EkmConfig);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A [Certificate][google.cloud.kms.v1.Certificate] represents an X.509
   /// certificate used to authenticate HTTPS connections to EKM replicas.
   /// </summary>
@@ -1506,7 +1982,7 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2042,7 +2518,7 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2066,6 +2542,8 @@ namespace Google.Cloud.Kms.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       serviceResolvers_ = other.serviceResolvers_.Clone();
       etag_ = other.etag_;
+      keyManagementMode_ = other.keyManagementMode_;
+      cryptoSpacePath_ = other.cryptoSpacePath_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2143,6 +2621,42 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "key_management_mode" field.</summary>
+    public const int KeyManagementModeFieldNumber = 6;
+    private global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode keyManagementMode_ = global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode.Unspecified;
+    /// <summary>
+    /// Optional. Describes who can perform control plane operations on the EKM. If
+    /// unset, this defaults to
+    /// [MANUAL][google.cloud.kms.v1.EkmConnection.KeyManagementMode.MANUAL].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode KeyManagementMode {
+      get { return keyManagementMode_; }
+      set {
+        keyManagementMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "crypto_space_path" field.</summary>
+    public const int CryptoSpacePathFieldNumber = 7;
+    private string cryptoSpacePath_ = "";
+    /// <summary>
+    /// Optional. Identifies the EKM Crypto Space that this
+    /// [EkmConnection][google.cloud.kms.v1.EkmConnection] maps to. Note: This
+    /// field is required if
+    /// [KeyManagementMode][google.cloud.kms.v1.EkmConnection.KeyManagementMode] is
+    /// [CLOUD_KMS][google.cloud.kms.v1.EkmConnection.KeyManagementMode.CLOUD_KMS].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CryptoSpacePath {
+      get { return cryptoSpacePath_; }
+      set {
+        cryptoSpacePath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2162,6 +2676,8 @@ namespace Google.Cloud.Kms.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if(!serviceResolvers_.Equals(other.serviceResolvers_)) return false;
       if (Etag != other.Etag) return false;
+      if (KeyManagementMode != other.KeyManagementMode) return false;
+      if (CryptoSpacePath != other.CryptoSpacePath) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2173,6 +2689,8 @@ namespace Google.Cloud.Kms.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       hash ^= serviceResolvers_.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (KeyManagementMode != global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode.Unspecified) hash ^= KeyManagementMode.GetHashCode();
+      if (CryptoSpacePath.Length != 0) hash ^= CryptoSpacePath.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2204,6 +2722,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(42);
         output.WriteString(Etag);
       }
+      if (KeyManagementMode != global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) KeyManagementMode);
+      }
+      if (CryptoSpacePath.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(CryptoSpacePath);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2227,6 +2753,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(42);
         output.WriteString(Etag);
       }
+      if (KeyManagementMode != global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) KeyManagementMode);
+      }
+      if (CryptoSpacePath.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(CryptoSpacePath);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2246,6 +2780,12 @@ namespace Google.Cloud.Kms.V1 {
       size += serviceResolvers_.CalculateSize(_repeated_serviceResolvers_codec);
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (KeyManagementMode != global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KeyManagementMode);
+      }
+      if (CryptoSpacePath.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CryptoSpacePath);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2271,6 +2811,12 @@ namespace Google.Cloud.Kms.V1 {
       serviceResolvers_.Add(other.serviceResolvers_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.KeyManagementMode != global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode.Unspecified) {
+        KeyManagementMode = other.KeyManagementMode;
+      }
+      if (other.CryptoSpacePath.Length != 0) {
+        CryptoSpacePath = other.CryptoSpacePath;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2304,6 +2850,14 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 42: {
             Etag = input.ReadString();
+            break;
+          }
+          case 48: {
+            KeyManagementMode = (global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            CryptoSpacePath = input.ReadString();
             break;
           }
         }
@@ -2340,6 +2894,14 @@ namespace Google.Cloud.Kms.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 48: {
+            KeyManagementMode = (global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            CryptoSpacePath = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2350,6 +2912,50 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// [KeyManagementMode][google.cloud.kms.v1.EkmConnection.KeyManagementMode]
+      /// describes who can perform control plane cryptographic operations using this
+      /// [EkmConnection][google.cloud.kms.v1.EkmConnection].
+      /// </summary>
+      public enum KeyManagementMode {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("KEY_MANAGEMENT_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// EKM-side key management operations on
+        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] created with this
+        /// [EkmConnection][google.cloud.kms.v1.EkmConnection] must be initiated from
+        /// the EKM directly and cannot be performed from Cloud KMS. This means that:
+        /// * When creating a
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] associated with
+        /// this
+        ///   [EkmConnection][google.cloud.kms.v1.EkmConnection], the caller must
+        ///   supply the key path of pre-existing external key material that will be
+        ///   linked to the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+        /// * Destruction of external key material cannot be requested via the
+        ///   Cloud KMS API and must be performed directly in the EKM.
+        /// * Automatic rotation of key material is not supported.
+        /// </summary>
+        [pbr::OriginalName("MANUAL")] Manual = 1,
+        /// <summary>
+        /// All [CryptoKeys][google.cloud.kms.v1.CryptoKey] created with this
+        /// [EkmConnection][google.cloud.kms.v1.EkmConnection] use EKM-side key
+        /// management operations initiated from Cloud KMS. This means that:
+        /// * When a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+        /// associated with this [EkmConnection][google.cloud.kms.v1.EkmConnection]
+        /// is
+        ///   created, the EKM automatically generates new key material and a new
+        ///   key path. The caller cannot supply the key path of pre-existing
+        ///   external key material.
+        /// * Destruction of external key material associated with this
+        ///   [EkmConnection][google.cloud.kms.v1.EkmConnection] can be requested by
+        ///   calling [DestroyCryptoKeyVersion][EkmService.DestroyCryptoKeyVersion].
+        /// * Automatic rotation of key material is supported.
+        /// </summary>
+        [pbr::OriginalName("CLOUD_KMS")] CloudKms = 2,
+      }
+
       /// <summary>
       /// A [ServiceResolver][google.cloud.kms.v1.EkmConnection.ServiceResolver]
       /// represents an EKM replica that can be reached within an
@@ -2667,6 +3273,251 @@ namespace Google.Cloud.Kms.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// An [EkmConfig][google.cloud.kms.v1.EkmConfig] is a singleton resource that
+  /// represents configuration parameters that apply to all
+  /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] and
+  /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] with a
+  /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of
+  /// [EXTERNAL_VPC][CryptoKeyVersion.ProtectionLevel.EXTERNAL_VPC] in a given
+  /// project and location.
+  /// </summary>
+  public sealed partial class EkmConfig : pb::IMessage<EkmConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EkmConfig> _parser = new pb::MessageParser<EkmConfig>(() => new EkmConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EkmConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EkmConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EkmConfig(EkmConfig other) : this() {
+      name_ = other.name_;
+      defaultEkmConnection_ = other.defaultEkmConnection_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EkmConfig Clone() {
+      return new EkmConfig(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name for the
+    /// [EkmConfig][google.cloud.kms.v1.EkmConfig] in the format
+    /// `projects/*/locations/*/ekmConfig`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "default_ekm_connection" field.</summary>
+    public const int DefaultEkmConnectionFieldNumber = 2;
+    private string defaultEkmConnection_ = "";
+    /// <summary>
+    /// Optional. Resource name of the default
+    /// [EkmConnection][google.cloud.kms.v1.EkmConnection]. Setting this field to
+    /// the empty string removes the default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DefaultEkmConnection {
+      get { return defaultEkmConnection_; }
+      set {
+        defaultEkmConnection_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EkmConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EkmConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DefaultEkmConnection != other.DefaultEkmConnection) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DefaultEkmConnection.Length != 0) hash ^= DefaultEkmConnection.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DefaultEkmConnection.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DefaultEkmConnection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DefaultEkmConnection.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DefaultEkmConnection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DefaultEkmConnection.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultEkmConnection);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EkmConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DefaultEkmConnection.Length != 0) {
+        DefaultEkmConnection = other.DefaultEkmConnection;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DefaultEkmConnection = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DefaultEkmConnection = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

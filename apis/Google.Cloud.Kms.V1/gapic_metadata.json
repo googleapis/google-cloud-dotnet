@@ -16,6 +16,12 @@
                 "CreateEkmConnectionAsync"
               ]
             },
+            "GetEkmConfig": {
+              "methods": [
+                "GetEkmConfig",
+                "GetEkmConfigAsync"
+              ]
+            },
             "GetEkmConnection": {
               "methods": [
                 "GetEkmConnection",
@@ -26,6 +32,12 @@
               "methods": [
                 "ListEkmConnections",
                 "ListEkmConnectionsAsync"
+              ]
+            },
+            "UpdateEkmConfig": {
+              "methods": [
+                "UpdateEkmConfig",
+                "UpdateEkmConfigAsync"
               ]
             },
             "UpdateEkmConnection": {

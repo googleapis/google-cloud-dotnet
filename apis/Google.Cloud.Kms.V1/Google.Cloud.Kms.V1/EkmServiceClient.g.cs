@@ -53,6 +53,8 @@ namespace Google.Cloud.Kms.V1
             GetEkmConnectionSettings = existing.GetEkmConnectionSettings;
             CreateEkmConnectionSettings = existing.CreateEkmConnectionSettings;
             UpdateEkmConnectionSettings = existing.UpdateEkmConnectionSettings;
+            GetEkmConfigSettings = existing.GetEkmConfigSettings;
+            UpdateEkmConfigSettings = existing.UpdateEkmConfigSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -143,6 +145,30 @@ namespace Google.Cloud.Kms.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateEkmConnectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EkmServiceClient.GetEkmConfig</c> and <c>EkmServiceClient.GetEkmConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEkmConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EkmServiceClient.UpdateEkmConfig</c> and <c>EkmServiceClient.UpdateEkmConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEkmConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -809,6 +835,209 @@ namespace Google.Cloud.Kms.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<EkmConnection> UpdateEkmConnectionAsync(EkmConnection ekmConnection, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateEkmConnectionAsync(ekmConnection, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EkmConfig GetEkmConfig(GetEkmConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> GetEkmConfigAsync(GetEkmConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> GetEkmConfigAsync(GetEkmConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetEkmConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConfig.name] of the
+        /// [EkmConfig][google.cloud.kms.v1.EkmConfig] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EkmConfig GetEkmConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEkmConfig(new GetEkmConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConfig.name] of the
+        /// [EkmConfig][google.cloud.kms.v1.EkmConfig] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> GetEkmConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEkmConfigAsync(new GetEkmConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConfig.name] of the
+        /// [EkmConfig][google.cloud.kms.v1.EkmConfig] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> GetEkmConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEkmConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConfig.name] of the
+        /// [EkmConfig][google.cloud.kms.v1.EkmConfig] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EkmConfig GetEkmConfig(EkmConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEkmConfig(new GetEkmConfigRequest
+            {
+                EkmConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConfig.name] of the
+        /// [EkmConfig][google.cloud.kms.v1.EkmConfig] to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> GetEkmConfigAsync(EkmConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEkmConfigAsync(new GetEkmConfigRequest
+            {
+                EkmConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [name][google.cloud.kms.v1.EkmConfig.name] of the
+        /// [EkmConfig][google.cloud.kms.v1.EkmConfig] to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> GetEkmConfigAsync(EkmConfigName name, st::CancellationToken cancellationToken) =>
+            GetEkmConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EkmConfig UpdateEkmConfig(UpdateEkmConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> UpdateEkmConfigAsync(UpdateEkmConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> UpdateEkmConfigAsync(UpdateEkmConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEkmConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="ekmConfig">
+        /// Required. [EkmConfig][google.cloud.kms.v1.EkmConfig] with updated values.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated in this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EkmConfig UpdateEkmConfig(EkmConfig ekmConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEkmConfig(new UpdateEkmConfigRequest
+            {
+                EkmConfig = gax::GaxPreconditions.CheckNotNull(ekmConfig, nameof(ekmConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="ekmConfig">
+        /// Required. [EkmConfig][google.cloud.kms.v1.EkmConfig] with updated values.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated in this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> UpdateEkmConfigAsync(EkmConfig ekmConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEkmConfigAsync(new UpdateEkmConfigRequest
+            {
+                EkmConfig = gax::GaxPreconditions.CheckNotNull(ekmConfig, nameof(ekmConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="ekmConfig">
+        /// Required. [EkmConfig][google.cloud.kms.v1.EkmConfig] with updated values.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated in this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EkmConfig> UpdateEkmConfigAsync(EkmConfig ekmConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateEkmConfigAsync(ekmConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EkmService client wrapper implementation, for convenient use.</summary>
@@ -828,6 +1057,10 @@ namespace Google.Cloud.Kms.V1
         private readonly gaxgrpc::ApiCall<CreateEkmConnectionRequest, EkmConnection> _callCreateEkmConnection;
 
         private readonly gaxgrpc::ApiCall<UpdateEkmConnectionRequest, EkmConnection> _callUpdateEkmConnection;
+
+        private readonly gaxgrpc::ApiCall<GetEkmConfigRequest, EkmConfig> _callGetEkmConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateEkmConfigRequest, EkmConfig> _callUpdateEkmConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the EkmService service, with the specified gRPC client and settings.
@@ -854,6 +1087,12 @@ namespace Google.Cloud.Kms.V1
             _callUpdateEkmConnection = clientHelper.BuildApiCall<UpdateEkmConnectionRequest, EkmConnection>("UpdateEkmConnection", grpcClient.UpdateEkmConnectionAsync, grpcClient.UpdateEkmConnection, effectiveSettings.UpdateEkmConnectionSettings).WithGoogleRequestParam("ekm_connection.name", request => request.EkmConnection?.Name);
             Modify_ApiCall(ref _callUpdateEkmConnection);
             Modify_UpdateEkmConnectionApiCall(ref _callUpdateEkmConnection);
+            _callGetEkmConfig = clientHelper.BuildApiCall<GetEkmConfigRequest, EkmConfig>("GetEkmConfig", grpcClient.GetEkmConfigAsync, grpcClient.GetEkmConfig, effectiveSettings.GetEkmConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEkmConfig);
+            Modify_GetEkmConfigApiCall(ref _callGetEkmConfig);
+            _callUpdateEkmConfig = clientHelper.BuildApiCall<UpdateEkmConfigRequest, EkmConfig>("UpdateEkmConfig", grpcClient.UpdateEkmConfigAsync, grpcClient.UpdateEkmConfig, effectiveSettings.UpdateEkmConfigSettings).WithGoogleRequestParam("ekm_config.name", request => request.EkmConfig?.Name);
+            Modify_ApiCall(ref _callUpdateEkmConfig);
+            Modify_UpdateEkmConfigApiCall(ref _callUpdateEkmConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -866,6 +1105,10 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_CreateEkmConnectionApiCall(ref gaxgrpc::ApiCall<CreateEkmConnectionRequest, EkmConnection> call);
 
         partial void Modify_UpdateEkmConnectionApiCall(ref gaxgrpc::ApiCall<UpdateEkmConnectionRequest, EkmConnection> call);
+
+        partial void Modify_GetEkmConfigApiCall(ref gaxgrpc::ApiCall<GetEkmConfigRequest, EkmConfig> call);
+
+        partial void Modify_UpdateEkmConfigApiCall(ref gaxgrpc::ApiCall<UpdateEkmConfigRequest, EkmConfig> call);
 
         partial void OnConstruction(EkmService.EkmServiceClient grpcClient, EkmServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -885,6 +1128,10 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_CreateEkmConnectionRequest(ref CreateEkmConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateEkmConnectionRequest(ref UpdateEkmConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEkmConfigRequest(ref GetEkmConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateEkmConfigRequest(ref UpdateEkmConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [EkmConnections][google.cloud.kms.v1.EkmConnection].
@@ -984,6 +1231,58 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_UpdateEkmConnectionRequest(ref request, ref callSettings);
             return _callUpdateEkmConnection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EkmConfig GetEkmConfig(GetEkmConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEkmConfigRequest(ref request, ref callSettings);
+            return _callGetEkmConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EkmConfig> GetEkmConfigAsync(GetEkmConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEkmConfigRequest(ref request, ref callSettings);
+            return _callGetEkmConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EkmConfig UpdateEkmConfig(UpdateEkmConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEkmConfigRequest(ref request, ref callSettings);
+            return _callUpdateEkmConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+        /// for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EkmConfig> UpdateEkmConfigAsync(UpdateEkmConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEkmConfigRequest(ref request, ref callSettings);
+            return _callUpdateEkmConfig.Async(request, callSettings);
         }
     }
 

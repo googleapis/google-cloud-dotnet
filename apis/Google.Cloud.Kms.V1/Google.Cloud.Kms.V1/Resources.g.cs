@@ -67,7 +67,7 @@ namespace Google.Cloud.Kms.V1 {
             "Z29vZ2xlX3BhcnRpdGlvbl9jZXJ0cxgDIAMoCSJrChFBdHRlc3RhdGlvbkZv",
             "cm1hdBIiCh5BVFRFU1RBVElPTl9GT1JNQVRfVU5TUEVDSUZJRUQQABIYChRD",
             "QVZJVU1fVjFfQ09NUFJFU1NFRBADEhgKFENBVklVTV9WMl9DT01QUkVTU0VE",
-            "EAQi0hAKEENyeXB0b0tleVZlcnNpb24SEQoEbmFtZRgBIAEoCUID4EEDEkoK",
+            "EAQihhIKEENyeXB0b0tleVZlcnNpb24SEQoEbmFtZRgBIAEoCUID4EEDEkoK",
             "BXN0YXRlGAMgASgOMjsuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlW",
             "ZXJzaW9uLkNyeXB0b0tleVZlcnNpb25TdGF0ZRJDChBwcm90ZWN0aW9uX2xl",
             "dmVsGAcgASgOMiQuZ29vZ2xlLmNsb3VkLmttcy52MS5Qcm90ZWN0aW9uTGV2",
@@ -82,7 +82,9 @@ namespace Google.Cloud.Kms.V1 {
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIXCgppbXBvcnRf",
             "am9iGA4gASgJQgPgQQMSNAoLaW1wb3J0X3RpbWUYDyABKAsyGi5nb29nbGUu",
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSIgoVaW1wb3J0X2ZhaWx1cmVfcmVh",
-            "c29uGBAgASgJQgPgQQMSXgohZXh0ZXJuYWxfcHJvdGVjdGlvbl9sZXZlbF9v",
+            "c29uGBAgASgJQgPgQQMSJgoZZ2VuZXJhdGlvbl9mYWlsdXJlX3JlYXNvbhgT",
+            "IAEoCUID4EEDEjAKI2V4dGVybmFsX2Rlc3RydWN0aW9uX2ZhaWx1cmVfcmVh",
+            "c29uGBQgASgJQgPgQQMSXgohZXh0ZXJuYWxfcHJvdGVjdGlvbl9sZXZlbF9v",
             "cHRpb25zGBEgASgLMjMuZ29vZ2xlLmNsb3VkLmttcy52MS5FeHRlcm5hbFBy",
             "b3RlY3Rpb25MZXZlbE9wdGlvbnMSHgoRcmVpbXBvcnRfZWxpZ2libGUYEiAB",
             "KAhCA+BBAyLnBgoZQ3J5cHRvS2V5VmVyc2lvbkFsZ29yaXRobRIsCihDUllQ",
@@ -104,11 +106,13 @@ namespace Google.Cloud.Kms.V1 {
             "UDM4NF9TSEEzODQQDRIcChhFQ19TSUdOX1NFQ1AyNTZLMV9TSEEyNTYQHxIP",
             "CgtITUFDX1NIQTI1NhAgEg0KCUhNQUNfU0hBMRAhEg8KC0hNQUNfU0hBMzg0",
             "ECISDwoLSE1BQ19TSEE1MTIQIxIPCgtITUFDX1NIQTIyNBAkEiEKHUVYVEVS",
-            "TkFMX1NZTU1FVFJJQ19FTkNSWVBUSU9OEBIiwQEKFUNyeXB0b0tleVZlcnNp",
+            "TkFMX1NZTU1FVFJJQ19FTkNSWVBUSU9OEBIimwIKFUNyeXB0b0tleVZlcnNp",
             "b25TdGF0ZRIoCiRDUllQVE9fS0VZX1ZFUlNJT05fU1RBVEVfVU5TUEVDSUZJ",
             "RUQQABIWChJQRU5ESU5HX0dFTkVSQVRJT04QBRILCgdFTkFCTEVEEAESDAoI",
             "RElTQUJMRUQQAhINCglERVNUUk9ZRUQQAxIVChFERVNUUk9ZX1NDSEVEVUxF",
-            "RBAEEhIKDlBFTkRJTkdfSU1QT1JUEAYSEQoNSU1QT1JUX0ZBSUxFRBAHIkkK",
+            "RBAEEhIKDlBFTkRJTkdfSU1QT1JUEAYSEQoNSU1QT1JUX0ZBSUxFRBAHEhUK",
+            "EUdFTkVSQVRJT05fRkFJTEVEEAgSIAocUEVORElOR19FWFRFUk5BTF9ERVNU",
+            "UlVDVElPThAJEh8KG0VYVEVSTkFMX0RFU1RSVUNUSU9OX0ZBSUxFRBAKIkkK",
             "FENyeXB0b0tleVZlcnNpb25WaWV3EicKI0NSWVBUT19LRVlfVkVSU0lPTl9W",
             "SUVXX1VOU1BFQ0lGSUVEEAASCAoERlVMTBABOqoB6kGmAQooY2xvdWRrbXMu",
             "Z29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lvbhJ6cHJvamVjdHMve3By",
@@ -164,7 +168,7 @@ namespace Google.Cloud.Kms.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKey), global::Google.Cloud.Kms.V1.CryptoKey.Parser, new[]{ "Name", "Primary", "Purpose", "CreateTime", "NextRotationTime", "RotationPeriod", "VersionTemplate", "Labels", "ImportOnly", "DestroyScheduledDuration", "CryptoKeyBackend" }, new[]{ "RotationSchedule" }, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate), global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate.Parser, new[]{ "ProtectionLevel", "Algorithm" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation), global::Google.Cloud.Kms.V1.KeyOperationAttestation.Parser, new[]{ "Format", "Content", "CertChains" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.CertificateChains), global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.CertificateChains.Parser, new[]{ "CaviumCerts", "GoogleCardCerts", "GooglePartitionCerts" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser, new[]{ "Name", "State", "ProtectionLevel", "Algorithm", "Attestation", "CreateTime", "GenerateTime", "DestroyTime", "DestroyEventTime", "ImportJob", "ImportTime", "ImportFailureReason", "ExternalProtectionLevelOptions", "ReimportEligible" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser, new[]{ "Name", "State", "ProtectionLevel", "Algorithm", "Attestation", "CreateTime", "GenerateTime", "DestroyTime", "DestroyEventTime", "ImportJob", "ImportTime", "ImportFailureReason", "GenerationFailureReason", "ExternalDestructionFailureReason", "ExternalProtectionLevelOptions", "ReimportEligible" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.PublicKey), global::Google.Cloud.Kms.V1.PublicKey.Parser, new[]{ "Pem", "Algorithm", "PemCrc32C", "Name", "ProtectionLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportJob), global::Google.Cloud.Kms.V1.ImportJob.Parser, new[]{ "Name", "ImportMethod", "ProtectionLevel", "CreateTime", "GenerateTime", "ExpireTime", "ExpireEventTime", "State", "PublicKey", "Attestation" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.ImportMethod), typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.ImportJobState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey), global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey.Parser, new[]{ "Pem" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions), global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions.Parser, new[]{ "ExternalKeyUri", "EkmConnectionKeyPath" }, null, null, null, null)
@@ -2113,6 +2117,8 @@ namespace Google.Cloud.Kms.V1 {
       importJob_ = other.importJob_;
       importTime_ = other.importTime_ != null ? other.importTime_.Clone() : null;
       importFailureReason_ = other.importFailureReason_;
+      generationFailureReason_ = other.generationFailureReason_;
+      externalDestructionFailureReason_ = other.externalDestructionFailureReason_;
       externalProtectionLevelOptions_ = other.externalProtectionLevelOptions_ != null ? other.externalProtectionLevelOptions_.Clone() : null;
       reimportEligible_ = other.reimportEligible_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2333,6 +2339,41 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "generation_failure_reason" field.</summary>
+    public const int GenerationFailureReasonFieldNumber = 19;
+    private string generationFailureReason_ = "";
+    /// <summary>
+    /// Output only. The root cause of the most recent generation failure. Only
+    /// present if [state][google.cloud.kms.v1.CryptoKeyVersion.state] is
+    /// [GENERATION_FAILED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.GENERATION_FAILED].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GenerationFailureReason {
+      get { return generationFailureReason_; }
+      set {
+        generationFailureReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "external_destruction_failure_reason" field.</summary>
+    public const int ExternalDestructionFailureReasonFieldNumber = 20;
+    private string externalDestructionFailureReason_ = "";
+    /// <summary>
+    /// Output only. The root cause of the most recent external destruction
+    /// failure. Only present if
+    /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is
+    /// [EXTERNAL_DESTRUCTION_FAILED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.EXTERNAL_DESTRUCTION_FAILED].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ExternalDestructionFailureReason {
+      get { return externalDestructionFailureReason_; }
+      set {
+        externalDestructionFailureReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "external_protection_level_options" field.</summary>
     public const int ExternalProtectionLevelOptionsFieldNumber = 17;
     private global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions externalProtectionLevelOptions_;
@@ -2397,6 +2438,8 @@ namespace Google.Cloud.Kms.V1 {
       if (ImportJob != other.ImportJob) return false;
       if (!object.Equals(ImportTime, other.ImportTime)) return false;
       if (ImportFailureReason != other.ImportFailureReason) return false;
+      if (GenerationFailureReason != other.GenerationFailureReason) return false;
+      if (ExternalDestructionFailureReason != other.ExternalDestructionFailureReason) return false;
       if (!object.Equals(ExternalProtectionLevelOptions, other.ExternalProtectionLevelOptions)) return false;
       if (ReimportEligible != other.ReimportEligible) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2418,6 +2461,8 @@ namespace Google.Cloud.Kms.V1 {
       if (ImportJob.Length != 0) hash ^= ImportJob.GetHashCode();
       if (importTime_ != null) hash ^= ImportTime.GetHashCode();
       if (ImportFailureReason.Length != 0) hash ^= ImportFailureReason.GetHashCode();
+      if (GenerationFailureReason.Length != 0) hash ^= GenerationFailureReason.GetHashCode();
+      if (ExternalDestructionFailureReason.Length != 0) hash ^= ExternalDestructionFailureReason.GetHashCode();
       if (externalProtectionLevelOptions_ != null) hash ^= ExternalProtectionLevelOptions.GetHashCode();
       if (ReimportEligible != false) hash ^= ReimportEligible.GetHashCode();
       if (_unknownFields != null) {
@@ -2494,6 +2539,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(144, 1);
         output.WriteBool(ReimportEligible);
       }
+      if (GenerationFailureReason.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(GenerationFailureReason);
+      }
+      if (ExternalDestructionFailureReason.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(ExternalDestructionFailureReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2560,6 +2613,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(144, 1);
         output.WriteBool(ReimportEligible);
       }
+      if (GenerationFailureReason.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(GenerationFailureReason);
+      }
+      if (ExternalDestructionFailureReason.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(ExternalDestructionFailureReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2605,6 +2666,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (ImportFailureReason.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ImportFailureReason);
+      }
+      if (GenerationFailureReason.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(GenerationFailureReason);
+      }
+      if (ExternalDestructionFailureReason.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ExternalDestructionFailureReason);
       }
       if (externalProtectionLevelOptions_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExternalProtectionLevelOptions);
@@ -2677,6 +2744,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.ImportFailureReason.Length != 0) {
         ImportFailureReason = other.ImportFailureReason;
+      }
+      if (other.GenerationFailureReason.Length != 0) {
+        GenerationFailureReason = other.GenerationFailureReason;
+      }
+      if (other.ExternalDestructionFailureReason.Length != 0) {
+        ExternalDestructionFailureReason = other.ExternalDestructionFailureReason;
       }
       if (other.externalProtectionLevelOptions_ != null) {
         if (externalProtectionLevelOptions_ == null) {
@@ -2779,6 +2852,14 @@ namespace Google.Cloud.Kms.V1 {
             ReimportEligible = input.ReadBool();
             break;
           }
+          case 154: {
+            GenerationFailureReason = input.ReadString();
+            break;
+          }
+          case 162: {
+            ExternalDestructionFailureReason = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2869,6 +2950,14 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 144: {
             ReimportEligible = input.ReadBool();
+            break;
+          }
+          case 154: {
+            GenerationFailureReason = input.ReadString();
+            break;
+          }
+          case 162: {
+            ExternalDestructionFailureReason = input.ReadString();
             break;
           }
         }
@@ -3110,6 +3199,26 @@ namespace Google.Cloud.Kms.V1 {
         /// [CryptoKeyVersion.import_failure_reason][google.cloud.kms.v1.CryptoKeyVersion.import_failure_reason].
         /// </summary>
         [pbr::OriginalName("IMPORT_FAILED")] ImportFailed = 7,
+        /// <summary>
+        /// This version was not generated successfully. It may not be used, enabled,
+        /// disabled, or destroyed. Additional details can be found in
+        /// [CryptoKeyVersion.generation_failure_reason][google.cloud.kms.v1.CryptoKeyVersion.generation_failure_reason].
+        /// </summary>
+        [pbr::OriginalName("GENERATION_FAILED")] GenerationFailed = 8,
+        /// <summary>
+        /// This version was destroyed, and it may not be used or enabled again.
+        /// Cloud KMS is waiting for the corresponding key material residing in an
+        /// external key manager to be destroyed.
+        /// </summary>
+        [pbr::OriginalName("PENDING_EXTERNAL_DESTRUCTION")] PendingExternalDestruction = 9,
+        /// <summary>
+        /// This version was destroyed, and it may not be used or enabled again.
+        /// However, Cloud KMS could not confirm that the corresponding key material
+        /// residing in an external key manager was destroyed. Additional details can
+        /// be found in
+        /// [CryptoKeyVersion.external_destruction_failure_reason][google.cloud.kms.v1.CryptoKeyVersion.external_destruction_failure_reason].
+        /// </summary>
+        [pbr::OriginalName("EXTERNAL_DESTRUCTION_FAILED")] ExternalDestructionFailed = 10,
       }
 
       /// <summary>

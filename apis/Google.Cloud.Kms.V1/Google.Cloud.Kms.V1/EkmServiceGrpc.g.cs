@@ -79,6 +79,12 @@ namespace Google.Cloud.Kms.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateEkmConnectionRequest> __Marshaller_google_cloud_kms_v1_CreateEkmConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateEkmConnectionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateEkmConnectionRequest> __Marshaller_google_cloud_kms_v1_UpdateEkmConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.UpdateEkmConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetEkmConfigRequest> __Marshaller_google_cloud_kms_v1_GetEkmConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GetEkmConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EkmConfig> __Marshaller_google_cloud_kms_v1_EkmConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.EkmConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest> __Marshaller_google_cloud_kms_v1_UpdateEkmConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListEkmConnectionsRequest, global::Google.Cloud.Kms.V1.ListEkmConnectionsResponse> __Method_ListEkmConnections = new grpc::Method<global::Google.Cloud.Kms.V1.ListEkmConnectionsRequest, global::Google.Cloud.Kms.V1.ListEkmConnectionsResponse>(
@@ -111,6 +117,22 @@ namespace Google.Cloud.Kms.V1 {
         "UpdateEkmConnection",
         __Marshaller_google_cloud_kms_v1_UpdateEkmConnectionRequest,
         __Marshaller_google_cloud_kms_v1_EkmConnection);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetEkmConfigRequest, global::Google.Cloud.Kms.V1.EkmConfig> __Method_GetEkmConfig = new grpc::Method<global::Google.Cloud.Kms.V1.GetEkmConfigRequest, global::Google.Cloud.Kms.V1.EkmConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEkmConfig",
+        __Marshaller_google_cloud_kms_v1_GetEkmConfigRequest,
+        __Marshaller_google_cloud_kms_v1_EkmConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest, global::Google.Cloud.Kms.V1.EkmConfig> __Method_UpdateEkmConfig = new grpc::Method<global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest, global::Google.Cloud.Kms.V1.EkmConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateEkmConfig",
+        __Marshaller_google_cloud_kms_v1_UpdateEkmConfigRequest,
+        __Marshaller_google_cloud_kms_v1_EkmConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -168,6 +190,32 @@ namespace Google.Cloud.Kms.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.EkmConnection> UpdateEkmConnection(global::Google.Cloud.Kms.V1.UpdateEkmConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.EkmConfig> GetEkmConfig(global::Google.Cloud.Kms.V1.GetEkmConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.EkmConfig> UpdateEkmConfig(global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -401,6 +449,110 @@ namespace Google.Cloud.Kms.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEkmConnection, null, options, request);
       }
+      /// <summary>
+      /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.EkmConfig GetEkmConfig(global::Google.Cloud.Kms.V1.GetEkmConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEkmConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.EkmConfig GetEkmConfig(global::Google.Cloud.Kms.V1.GetEkmConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEkmConfig, null, options, request);
+      }
+      /// <summary>
+      /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.EkmConfig> GetEkmConfigAsync(global::Google.Cloud.Kms.V1.GetEkmConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEkmConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.EkmConfig> GetEkmConfigAsync(global::Google.Cloud.Kms.V1.GetEkmConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEkmConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.EkmConfig UpdateEkmConfig(global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEkmConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.EkmConfig UpdateEkmConfig(global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateEkmConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.EkmConfig> UpdateEkmConfigAsync(global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEkmConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the [EkmConfig][google.cloud.kms.v1.EkmConfig] singleton resource
+      /// for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.EkmConfig> UpdateEkmConfigAsync(global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateEkmConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EkmServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -418,7 +570,9 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_ListEkmConnections, serviceImpl.ListEkmConnections)
           .AddMethod(__Method_GetEkmConnection, serviceImpl.GetEkmConnection)
           .AddMethod(__Method_CreateEkmConnection, serviceImpl.CreateEkmConnection)
-          .AddMethod(__Method_UpdateEkmConnection, serviceImpl.UpdateEkmConnection).Build();
+          .AddMethod(__Method_UpdateEkmConnection, serviceImpl.UpdateEkmConnection)
+          .AddMethod(__Method_GetEkmConfig, serviceImpl.GetEkmConfig)
+          .AddMethod(__Method_UpdateEkmConfig, serviceImpl.UpdateEkmConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -432,6 +586,8 @@ namespace Google.Cloud.Kms.V1 {
       serviceBinder.AddMethod(__Method_GetEkmConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetEkmConnectionRequest, global::Google.Cloud.Kms.V1.EkmConnection>(serviceImpl.GetEkmConnection));
       serviceBinder.AddMethod(__Method_CreateEkmConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateEkmConnectionRequest, global::Google.Cloud.Kms.V1.EkmConnection>(serviceImpl.CreateEkmConnection));
       serviceBinder.AddMethod(__Method_UpdateEkmConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateEkmConnectionRequest, global::Google.Cloud.Kms.V1.EkmConnection>(serviceImpl.UpdateEkmConnection));
+      serviceBinder.AddMethod(__Method_GetEkmConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetEkmConfigRequest, global::Google.Cloud.Kms.V1.EkmConfig>(serviceImpl.GetEkmConfig));
+      serviceBinder.AddMethod(__Method_UpdateEkmConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest, global::Google.Cloud.Kms.V1.EkmConfig>(serviceImpl.UpdateEkmConfig));
     }
 
   }
