@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2023-03-06
+
+### New features
+
+- Specifying language code and display name for text and audio streams is now supported ([commit 5802f24](https://github.com/googleapis/google-cloud-dotnet/commit/5802f24a38927568ffbe807f85013f420a28cb96))
+
 ## Version 2.3.0, released 2023-01-19
 
 ### New features
