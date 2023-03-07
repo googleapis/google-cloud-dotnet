@@ -5036,14 +5036,6 @@
       ]
     },
     {
-      "id": "Google.Cloud.GSuite",
-      "displayName": "GSuite Add-Ons",
-      "packageIds": [
-        "Google.Apps.Script.Type",
-        "Google.Cloud.GSuiteAddOns.V1"
-      ]
-    },
-    {
       "id": "Google.Cloud.OsLogin",
       "displayName": "OS Login",
       "packageIds": [
