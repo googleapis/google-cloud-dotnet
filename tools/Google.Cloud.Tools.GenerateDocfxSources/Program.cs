@@ -117,11 +117,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     },
                     ["template"] = new JArray { "default", "../../../third_party/docfx/templates/custom" },
                     ["overwrite"] = new JArray { "obj/snippets/*.md" },
-                    ["dest"] = "site",
-                    // As of 2.61.0, the default Markdown engine is markdig,
-                    // which fails to parse our overwrite files.
-                    // See https://github.com/dotnet/docfx/issues/8441
-                    ["markdownEngineName"] = "dfm"
+                    ["dest"] = "site"
                 }
             };
             File.WriteAllText(Path.Combine(outputDirectory, "docfx.json"), json.ToString());
