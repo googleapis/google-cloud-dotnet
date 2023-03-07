@@ -26,22 +26,32 @@ public sealed class RetryTimings
     /// <summary>
     /// 
     /// </summary>
-    public static RetryTimings Default { get; }
+    public static TimeSpan DefaultInitialBackoff { get; } = TimeSpan.FromSeconds(1);
 
     /// <summary>
     /// 
     /// </summary>
-    public TimeSpan InitialBackoff { get; }
+    public static TimeSpan DefaultMaxBackoff { get; } = TimeSpan.FromSeconds(32);
 
     /// <summary>
     /// 
     /// </summary>
-    public TimeSpan MaxBackoff { get; }
+    public static RetryTimings Default { get; } = new RetryTimings().WithInitialBackoff(RetryTimings.DefaultInitialBackoff).WithMaxBackoff(RetryTimings.DefaultMaxBackoff);
 
     /// <summary>
     /// 
     /// </summary>
-    public double BackoffMultiplier { get; }
+    public TimeSpan InitialBackoff { get; private set; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public TimeSpan MaxBackoff { get; private set; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public double BackoffMultiplier { get; private set; }
 
     /// <summary>
     /// 
@@ -50,7 +60,7 @@ public sealed class RetryTimings
     /// <returns></returns>
     public RetryTimings WithInitialBackoff(TimeSpan initialBackoff)
     {
-        return null;
+        return new RetryTimings { InitialBackoff = initialBackoff };
     }
 
     /// <summary>
@@ -60,7 +70,7 @@ public sealed class RetryTimings
     /// <returns></returns>
     public RetryTimings WithMaxBackoff(TimeSpan maxBackoff)
     {
-        return null;
+        return new RetryTimings { MaxBackoff = maxBackoff };
     }
 
     /// <summary>
@@ -70,8 +80,14 @@ public sealed class RetryTimings
     /// <returns></returns>
     public RetryTimings WithBackoffMultiplier(double backoffMultiplier)
     {
-        return null;
+        return new RetryTimings { BackoffMultiplier = backoffMultiplier };
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public RetryTimings()
+    { }
 
     /// <summary>
     /// 
@@ -81,7 +97,9 @@ public sealed class RetryTimings
     /// <param name="backoffMultiplier"></param>
     public RetryTimings(TimeSpan initialBackoff, TimeSpan maxBackoff, double backoffMultiplier)
     {
-
+        InitialBackoff = initialBackoff;
+        MaxBackoff = maxBackoff;
+        BackoffMultiplier = backoffMultiplier;
     }
 }
 

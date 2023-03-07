@@ -37,22 +37,16 @@ namespace Google.Cloud.Storage.V1
         internal const string InvocationIdHeaderPart = "gccl-invocation-id";
         internal const string AttemptCountHeaderPart = "gccl-attempt-count";
 
-        private static readonly int[] s_retriableErrorCodes =
-        {
-                408, // Request timeout
-                429, // Too many requests
-                500, // Internal server error
-                502, // Bad gateway
-                503, // Service unavailable
-                504 // Gateway timeout
-        };
         private static readonly RetryHandler s_instance = new RetryHandler();
-        private static double backoffMultiplier;
-        private static TimeSpan initialBackoff = TimeSpan.FromSeconds(0);
-        private static TimeSpan maxBackoff;
+        
+        private static double s_backoffMultiplier;
+        private static TimeSpan s_initialBackoff;
+        private static TimeSpan s_maxBackoff;
+        private static RetryPredicate s_retryPredicate;
 
         private RetryHandler() { }
 
+        //This method to be completely replaced by the following overloaded method once the implementation across the library is complete
         internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request)
         {
             // Note: we can't use ModifyRequest, as the x-goog-api-client header is added later by ConfigurableMessageHandler.
@@ -63,15 +57,17 @@ namespace Google.Cloud.Storage.V1
 
         internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request, RetryOptions options)
         {
+            s_retryPredicate = options.RetryPredicate;           
+            s_backoffMultiplier = options.RetryTimings.BackoffMultiplier;
+            s_initialBackoff = options.RetryTimings.InitialBackoff;
+            s_maxBackoff = options.RetryTimings.MaxBackoff;
+
             request.AddUnsuccessfulResponseHandler(s_instance);
-            backoffMultiplier = options.RetryTimings.BackoffMultiplier;
-            initialBackoff = options.RetryTimings.InitialBackoff;
-            maxBackoff = options.RetryTimings.MaxBackoff;
         }
 
         // This function is designed to support asynchrony in case we need to examine the response content, but for now we only need the status code
         internal static Task<bool> IsRetriableResponse(HttpResponseMessage response) =>
-            Task.FromResult(s_retriableErrorCodes.Contains(((int) response.StatusCode)));
+                 Task.FromResult(s_retryPredicate.ShouldRetry((int) response.StatusCode));
 
         public async Task<bool> HandleResponseAsync(HandleUnsuccessfulResponseArgs args)
         {
@@ -83,24 +79,19 @@ namespace Google.Cloud.Storage.V1
 
             if (args.CurrentFailedTry == 1)
             {
-                await Task.Delay(initialBackoff, args.CancellationToken).ConfigureAwait(false);
+                await Task.Delay(s_initialBackoff, args.CancellationToken).ConfigureAwait(false);
             }
             else if (args.CurrentFailedTry > 1)
             {
-                double del = initialBackoff.TotalSeconds + (args.CurrentFailedTry * backoffMultiplier);
-                TimeSpan fin = TimeSpan.FromSeconds(del);
-                TimeSpan temp = (fin < initialBackoff) ? initialBackoff : (fin > maxBackoff) ? maxBackoff : fin;
-                await Task.Delay(temp, args.CancellationToken).ConfigureAwait(false);
+                if (s_backoffMultiplier == 0)
+                {
+                    s_backoffMultiplier = Math.Pow(2.0, args.CurrentFailedTry - 1);
+                }
+                double delayFactor = s_initialBackoff.TotalSeconds + (args.CurrentFailedTry * s_backoffMultiplier);
+                TimeSpan backoff = TimeSpan.FromSeconds(delayFactor);
+                TimeSpan delay = (backoff < s_initialBackoff) ? s_initialBackoff : (backoff > s_maxBackoff) ? s_maxBackoff : backoff;
+                await Task.Delay(delay, args.CancellationToken).ConfigureAwait(false);
             }
-
-            int power = Math.Min(args.CurrentFailedTry - 1, 5);
-            // The first failure will have args.CurrentFailedTry set to 1,
-            // whereas we want the first delay to be 1 second. We use Math.Min on the power
-            // rather than on the result to obtain a max retry of 32 seconds without risking
-            // calling Math.Pow with a huge number.
-            double seconds = Math.Pow(2.0, power);
-            var delay = TimeSpan.FromSeconds(seconds);
-            await Task.Delay(delay, args.CancellationToken).ConfigureAwait(false);
             return true;
         }
 

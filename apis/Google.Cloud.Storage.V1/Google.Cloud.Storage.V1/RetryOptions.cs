@@ -25,11 +25,11 @@ public sealed class RetryOptions
     /// <summary>
     /// 
     /// </summary>
-    public static RetryOptions IdempotentRetryOptions { get; }
+    public static RetryOptions IdempotentRetryOptions { get; } = new RetryOptions(RetryTimings.Default, RetryPredicate.DefaultErrorCodes);
     /// <summary>
     /// 
     /// </summary>
-    public static RetryOptions Never { get; }
+    public static RetryOptions Never { get; } = new RetryOptions(RetryTimings.Default, RetryPredicate.FromErrorCodes());
 
     internal RetryPredicate RetryPredicate { get; }
     internal RetryTimings RetryTimings { get; }

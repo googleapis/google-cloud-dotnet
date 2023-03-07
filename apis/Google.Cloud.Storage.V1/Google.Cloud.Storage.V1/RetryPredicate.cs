@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Storage.V1;
 
@@ -25,7 +26,14 @@ public sealed class RetryPredicate
     /// <summary>
     /// 
     /// </summary>
-    public static RetryPredicate DefaultErrorCodes { get; } = RetryPredicate.FromErrorCodes(408, 429, 500, 502, 503, 504);
+    public static RetryPredicate DefaultErrorCodes { get; } = RetryPredicate.FromErrorCodes(
+                408, // Request timeout
+                429, // Too many requests
+                500, // Internal server error
+                502, // Bad gateway
+                503, // Service unavailable
+                504 // Gateway timeout
+        );
 
     private Func<int, bool> Predicate { get; set; }
 
@@ -36,7 +44,8 @@ public sealed class RetryPredicate
     /// <returns></returns>
     public static RetryPredicate FromErrorCodes(params int[] errorCodes)
     {
-        return null;
+        Func<int, bool> func = x => errorCodes.Contains(x);
+        return new RetryPredicate() { Predicate = func };
     }
 
     /// <summary>
@@ -46,12 +55,12 @@ public sealed class RetryPredicate
     /// <returns></returns>
     public static RetryPredicate FromErrorCodePredicate(Func<int, bool> predicate)
     {
-        return null;
+        return new RetryPredicate() { Predicate = predicate };
     }
 
     internal bool ShouldRetry(int statusCode)
     {
-        return false;
+        return Predicate.Invoke(statusCode);
     }
 }
 
