@@ -2244,7 +2244,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.3.1",
-        "Google.Apps.Script.Type": "project",
+        "Google.Apps.Script.Type": "2.1.0",
         "Grpc.Core": "2.46.5"
       },
       "generator": "micro",

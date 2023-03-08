@@ -7,9 +7,6 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.GSuiteAddOns.V1</ModuleMask>
       </FilterEntry>
-      <FilterEntry>
-        <ModuleMask>Google.Apps.Script.Type</ModuleMask>
-      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>
