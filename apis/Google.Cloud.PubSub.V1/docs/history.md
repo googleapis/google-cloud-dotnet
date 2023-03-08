@@ -1,5 +1,31 @@
 # Version history
 
+## Version 3.4.0, released 2023-03-08
+
+### Bug fixes
+
+- Ack/ModAck failures in non exactly once delivery flow should not be retried. ([commit a0da1f5](https://github.com/googleapis/google-cloud-dotnet/commit/a0da1f50b682c0c6f2670c85ca6d0356187988be))
+
+### New features
+
+- Make INTERNAL a retryable error for Pull ([commit ad9963e](https://github.com/googleapis/google-cloud-dotnet/commit/ad9963ed3b4620fe205d58a8fbab90b4a3ab443f))
+- Add temporary_failed_ack_ids to ModifyAckDeadlineConfirmation ([commit 55fef61](https://github.com/googleapis/google-cloud-dotnet/commit/55fef61f57d98bb450d8f6a85a6d42a5e7d9ac56))
+- Add google.api.method.signature to update methods ([commit cf2f61a](https://github.com/googleapis/google-cloud-dotnet/commit/cf2f61aed8aa14479e85edda1e50d23d178e55b9))
+- Implemented IAsyncDisposable in PublisherClient and SubscriberClient ([commit 2ae9ab7](https://github.com/googleapis/google-cloud-dotnet/commit/2ae9ab78d14bede0542274f03dd439c95564db55))
+- Added IServiceCollection extension methods for PublisherClient and SubscriberClient ([commit fe942e0](https://github.com/googleapis/google-cloud-dotnet/commit/fe942e04efbec32afa3d45e48bf6d9bf2cbf186d))
+
+### Documentation improvements
+
+- Add x-ref for ordering messages ([commit 16a4ddc](https://github.com/googleapis/google-cloud-dotnet/commit/16a4ddc83ed06eda2956b3c5e7e865183289efe3))
+- Clarify subscription expiration policy ([commit 16a4ddc](https://github.com/googleapis/google-cloud-dotnet/commit/16a4ddc83ed06eda2956b3c5e7e865183289efe3))
+- Clarify BigQueryConfig PERMISSION_DENIED state ([commit 78feab7](https://github.com/googleapis/google-cloud-dotnet/commit/78feab77bc9b3f29a5d2409556c65dffc626b4ca))
+- Clarify subscription description ([commit 5d43a47](https://github.com/googleapis/google-cloud-dotnet/commit/5d43a47d1e985fd500518af652a33046f88b7d32))
+- Replacing HTML code with Markdown ([commit f9467b0](https://github.com/googleapis/google-cloud-dotnet/commit/f9467b0ef8da529c323f2edab5592083f9b8278f))
+- Fix PullResponse description ([commit f9467b0](https://github.com/googleapis/google-cloud-dotnet/commit/f9467b0ef8da529c323f2edab5592083f9b8278f))
+- Fix Pull description ([commit f9467b0](https://github.com/googleapis/google-cloud-dotnet/commit/f9467b0ef8da529c323f2edab5592083f9b8278f))
+- Update Pub/Sub topic retention limit from 7 days to 31 days ([commit 7281474](https://github.com/googleapis/google-cloud-dotnet/commit/7281474046db813b4f93d2c7449b803eb6ee287d))
+- Mark revision_id in CommitSchemaRevisionRequest deprecated ([commit 2a9ddbb](https://github.com/googleapis/google-cloud-dotnet/commit/2a9ddbb360a92a6b9736c6d87f732bf91d4be2b7))
+
 ## Version 3.3.0, released 2023-01-19
 
 ### New features
