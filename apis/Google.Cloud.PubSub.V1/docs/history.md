@@ -4,7 +4,7 @@
 
 ### Bug fixes
 
-- Ack/ModAck failures in non exactly once delivery flow should not be retried. ([commit a0da1f5](https://github.com/googleapis/google-cloud-dotnet/commit/a0da1f50b682c0c6f2670c85ca6d0356187988be))
+- Ack/ModAck failures in non exactly once delivery flow should not be retried ([commit a0da1f5](https://github.com/googleapis/google-cloud-dotnet/commit/a0da1f50b682c0c6f2670c85ca6d0356187988be))
 
 ### New features
 
