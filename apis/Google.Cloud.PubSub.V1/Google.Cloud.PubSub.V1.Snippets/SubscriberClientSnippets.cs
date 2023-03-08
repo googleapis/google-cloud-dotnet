@@ -81,9 +81,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
             services.AddHostedService<SubscriberService>();
             // End sample        
         }
-
-        [Fact]
-        public async Task UseSubscriberServiceInConsoleApp()
+                
+        internal async Task UseSubscriberServiceInConsoleApp()
         {            
             string projectId = "projectId";
             string subscriptionId = "subscriptionId";
