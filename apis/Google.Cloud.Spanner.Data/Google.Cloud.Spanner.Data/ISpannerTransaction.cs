@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,6 +27,9 @@ namespace Google.Cloud.Spanner.Data
         // Note: this returns Task<long> to reflect the results from Spanner faithfully. The caller can then decide what to
         // do if they need to return an int result type.
         Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds);
+
+        // Note: this returns Task<ReliableStreamReader> to allow affected rows to be returned.
+        Task<ReliableStreamReader> ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds);
 
         // Note: this returns Task<IEnumerable<long>> to reflect the results from Spanner faithfully. The caller can then decide what to
         // do if they need to return an int result type.

@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -165,10 +165,16 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
-        // Note: internal infrastructure will optimize this to return a singleton completed task when
-        // we're already initialized.
-        private async Task EnsureInitializedAsync(CancellationToken cancellationToken)
+        /// <summary>
+        /// Ensures the stream reader is initialized, i.e. that the request has been executed and we've received
+        /// appropriate metadata.
+        /// </summary>
+        /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
+        /// <returns>A task indicating the result of initialization.</returns>
+        public async Task EnsureInitializedAsync(CancellationToken cancellationToken)
         {
+            // Note: internal infrastructure will optimize this to return a singleton completed task when
+            // we're already initialized.
             if (_initialized)
             {
                 return;
