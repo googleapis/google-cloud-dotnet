@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.4.0, released 2023-03-09
+
+### New features
+
+- ExecuteQuery can now execute DML, returning data from affected rows ([issue 10013](https://github.com/googleapis/google-cloud-dotnet/issues/10013)) ([commit 4787593](https://github.com/googleapis/google-cloud-dotnet/commit/478759345e388cc6ce4710605736570839be224d))
+
 ## Version 4.3.0, released 2023-02-08
 
 ### New features
