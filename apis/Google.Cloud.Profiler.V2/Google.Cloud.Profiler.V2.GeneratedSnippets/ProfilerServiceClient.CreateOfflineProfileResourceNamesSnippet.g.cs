@@ -16,14 +16,13 @@
 
 namespace Google.Cloud.Profiler.V2.Snippets
 {
-    // [START cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async]
+    // [START cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Profiler.V2;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedProfilerServiceClientSnippets
     {
-        /// <summary>Snippet for CreateOfflineProfileAsync</summary>
+        /// <summary>Snippet for CreateOfflineProfile</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,19 +30,16 @@ namespace Google.Cloud.Profiler.V2.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateOfflineProfileRequestObjectAsync()
+        public void CreateOfflineProfileResourceNames()
         {
             // Create client
-            ProfilerServiceClient profilerServiceClient = await ProfilerServiceClient.CreateAsync();
+            ProfilerServiceClient profilerServiceClient = ProfilerServiceClient.Create();
             // Initialize request argument(s)
-            CreateOfflineProfileRequest request = new CreateOfflineProfileRequest
-            {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                Profile = new Profile(),
-            };
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            Profile profile = new Profile();
             // Make the request
-            Profile response = await profilerServiceClient.CreateOfflineProfileAsync(request);
+            Profile response = profilerServiceClient.CreateOfflineProfile(parent, profile);
         }
     }
-    // [END cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async]
+    // [END cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_sync_flattened_resourceNames]
 }
