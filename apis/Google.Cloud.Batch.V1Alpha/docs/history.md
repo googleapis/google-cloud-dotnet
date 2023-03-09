@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-alpha09, released 2023-03-09
+
+### BREAKING CHANGE
+
+`BatchServiceClient` no longer exposes an `IAMPolicyClient`. This
+was only exposed unintentionally, and has never worked. However, this
+is still a breaking change as application code may have referred to
+it.
+
+### New features
+
+- Resource usage ([commit 80fe952](https://github.com/googleapis/google-cloud-dotnet/commit/80fe952729cd338837f752fefe7f94a0573b5368))
+
+### Documentation improvements
+
+- Update comments ([commit 80fe952](https://github.com/googleapis/google-cloud-dotnet/commit/80fe952729cd338837f752fefe7f94a0573b5368))
+
 ## Version 1.0.0-alpha08, released 2023-02-08
 
 ### New features
