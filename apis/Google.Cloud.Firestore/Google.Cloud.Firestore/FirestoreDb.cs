@@ -43,10 +43,11 @@ namespace Google.Cloud.Firestore
         /// </summary>
         public string ProjectId { get; }
 
+        // TODO: Make this public again when the server supports it. Unskip the tests in FirestoreMultipleDbTest.
         /// <summary>
         /// The database ID associated with this database.The value will be "(default)" for the project-default database.
         /// </summary>
-        public string DatabaseId { get; }
+        internal string DatabaseId { get; }
 
         /// <summary>
         /// The resource name of the database, in the form "projects/{project_id}/databases/{database_id}".

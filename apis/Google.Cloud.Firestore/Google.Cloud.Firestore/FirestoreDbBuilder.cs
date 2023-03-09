@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -50,10 +50,11 @@ namespace Google.Cloud.Firestore
         /// </summary>
         public string ProjectId { get; set; }
 
+        // TODO: Make this public again when the server supports it. Unskip the tests in FirestoreMultipleDbTest.
         /// <summary>
         /// The ID of the database within the project. May be null, in which case the default database will be used.
         /// </summary>
-        public string DatabaseId { get; set; }
+        internal string DatabaseId { get; set; }
 
         /// <summary>
         /// Action to receive warning messages. May be null, in which case warnings will be ignored.
