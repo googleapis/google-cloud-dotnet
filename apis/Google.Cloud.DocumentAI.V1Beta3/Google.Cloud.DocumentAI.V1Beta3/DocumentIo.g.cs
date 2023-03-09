@@ -44,14 +44,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRPdXRwdXRDb25maWcuR2Nz",
             "T3V0cHV0Q29uZmlnLlNoYXJkaW5nQ29uZmlnGkAKDlNoYXJkaW5nQ29uZmln",
             "EhcKD3BhZ2VzX3Blcl9zaGFyZBgBIAEoBRIVCg1wYWdlc19vdmVybGFwGAIg",
-            "ASgFQg0KC2Rlc3RpbmF0aW9uIkwKCU9jckNvbmZpZxIhChllbmFibGVfbmF0",
-            "aXZlX3BkZl9wYXJzaW5nGAMgASgIEhwKFGFkdmFuY2VkX29jcl9vcHRpb25z",
-            "GAUgAygJQuYBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "M0IPRG9jdW1lbnRJb1Byb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZG9j",
-            "dW1lbnRhaS9hcGl2MWJldGEzL2RvY3VtZW50YWlwYjtkb2N1bWVudGFpcGKq",
-            "Ah9Hb29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5WMUJldGEzygIfR29vZ2xlXENs",
-            "b3VkXERvY3VtZW50QUlcVjFiZXRhM+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3Vt",
-            "ZW50QUk6OlYxYmV0YTNiBnByb3RvMw=="));
+            "ASgFQg0KC2Rlc3RpbmF0aW9uIuoBCglPY3JDb25maWcSPwoFaGludHMYAiAB",
+            "KAsyMC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLk9jckNvbmZp",
+            "Zy5IaW50cxIhChllbmFibGVfbmF0aXZlX3BkZl9wYXJzaW5nGAMgASgIEiMK",
+            "G2VuYWJsZV9pbWFnZV9xdWFsaXR5X3Njb3JlcxgEIAEoCBIcChRhZHZhbmNl",
+            "ZF9vY3Jfb3B0aW9ucxgFIAMoCRIVCg1lbmFibGVfc3ltYm9sGAYgASgIGh8K",
+            "BUhpbnRzEhYKDmxhbmd1YWdlX2hpbnRzGAEgAygJQuYBCiNjb20uZ29vZ2xl",
+            "LmNsb3VkLmRvY3VtZW50YWkudjFiZXRhM0IPRG9jdW1lbnRJb1Byb3RvUAFa",
+            "Q2Nsb3VkLmdvb2dsZS5jb20vZ28vZG9jdW1lbnRhaS9hcGl2MWJldGEzL2Rv",
+            "Y3VtZW50YWlwYjtkb2N1bWVudGFpcGKqAh9Hb29nbGUuQ2xvdWQuRG9jdW1l",
+            "bnRBSS5WMUJldGEzygIfR29vZ2xlXENsb3VkXERvY3VtZW50QUlcVjFiZXRh",
+            "M+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYmV0YTNiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,7 +65,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix), global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix.Parser, new[]{ "GcsUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig), global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig.Parser, new[]{ "GcsPrefix", "GcsDocuments" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Parser, new[]{ "GcsOutputConfig" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Parser, new[]{ "GcsUri", "FieldMask", "ShardingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig.Parser, new[]{ "PagesPerShard", "PagesOverlap" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Parser, new[]{ "EnableNativePdfParsing", "AdvancedOcrOptions" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Parser, new[]{ "Hints", "EnableNativePdfParsing", "EnableImageQualityScores", "AdvancedOcrOptions", "EnableSymbol" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints.Parser, new[]{ "LanguageHints" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -2034,8 +2038,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OcrConfig(OcrConfig other) : this() {
+      hints_ = other.hints_ != null ? other.hints_.Clone() : null;
       enableNativePdfParsing_ = other.enableNativePdfParsing_;
+      enableImageQualityScores_ = other.enableImageQualityScores_;
       advancedOcrOptions_ = other.advancedOcrOptions_.Clone();
+      enableSymbol_ = other.enableSymbol_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2043,6 +2050,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OcrConfig Clone() {
       return new OcrConfig(this);
+    }
+
+    /// <summary>Field number for the "hints" field.</summary>
+    public const int HintsFieldNumber = 2;
+    private global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints hints_;
+    /// <summary>
+    /// Hints for the OCR model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints Hints {
+      get { return hints_; }
+      set {
+        hints_ = value;
+      }
     }
 
     /// <summary>Field number for the "enable_native_pdf_parsing" field.</summary>
@@ -2061,6 +2083,23 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "enable_image_quality_scores" field.</summary>
+    public const int EnableImageQualityScoresFieldNumber = 4;
+    private bool enableImageQualityScores_;
+    /// <summary>
+    /// Enables intelligent document quality scores after OCR. Can help with
+    /// diagnosing why OCR responses are of poor quality for a given input.
+    /// Adds additional latency comparable to regular OCR to the process call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableImageQualityScores {
+      get { return enableImageQualityScores_; }
+      set {
+        enableImageQualityScores_ = value;
+      }
+    }
+
     /// <summary>Field number for the "advanced_ocr_options" field.</summary>
     public const int AdvancedOcrOptionsFieldNumber = 5;
     private static readonly pb::FieldCodec<string> _repeated_advancedOcrOptions_codec
@@ -2073,6 +2112,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> AdvancedOcrOptions {
       get { return advancedOcrOptions_; }
+    }
+
+    /// <summary>Field number for the "enable_symbol" field.</summary>
+    public const int EnableSymbolFieldNumber = 6;
+    private bool enableSymbol_;
+    /// <summary>
+    /// Includes symbol level OCR information if set to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableSymbol {
+      get { return enableSymbol_; }
+      set {
+        enableSymbol_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2090,8 +2144,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Hints, other.Hints)) return false;
       if (EnableNativePdfParsing != other.EnableNativePdfParsing) return false;
+      if (EnableImageQualityScores != other.EnableImageQualityScores) return false;
       if(!advancedOcrOptions_.Equals(other.advancedOcrOptions_)) return false;
+      if (EnableSymbol != other.EnableSymbol) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2099,8 +2156,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (hints_ != null) hash ^= Hints.GetHashCode();
       if (EnableNativePdfParsing != false) hash ^= EnableNativePdfParsing.GetHashCode();
+      if (EnableImageQualityScores != false) hash ^= EnableImageQualityScores.GetHashCode();
       hash ^= advancedOcrOptions_.GetHashCode();
+      if (EnableSymbol != false) hash ^= EnableSymbol.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2119,11 +2179,23 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (hints_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Hints);
+      }
       if (EnableNativePdfParsing != false) {
         output.WriteRawTag(24);
         output.WriteBool(EnableNativePdfParsing);
       }
+      if (EnableImageQualityScores != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(EnableImageQualityScores);
+      }
       advancedOcrOptions_.WriteTo(output, _repeated_advancedOcrOptions_codec);
+      if (EnableSymbol != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(EnableSymbol);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2134,11 +2206,23 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (hints_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Hints);
+      }
       if (EnableNativePdfParsing != false) {
         output.WriteRawTag(24);
         output.WriteBool(EnableNativePdfParsing);
       }
+      if (EnableImageQualityScores != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(EnableImageQualityScores);
+      }
       advancedOcrOptions_.WriteTo(ref output, _repeated_advancedOcrOptions_codec);
+      if (EnableSymbol != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(EnableSymbol);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2149,10 +2233,19 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (hints_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Hints);
+      }
       if (EnableNativePdfParsing != false) {
         size += 1 + 1;
       }
+      if (EnableImageQualityScores != false) {
+        size += 1 + 1;
+      }
       size += advancedOcrOptions_.CalculateSize(_repeated_advancedOcrOptions_codec);
+      if (EnableSymbol != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2165,10 +2258,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (other == null) {
         return;
       }
+      if (other.hints_ != null) {
+        if (hints_ == null) {
+          Hints = new global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints();
+        }
+        Hints.MergeFrom(other.Hints);
+      }
       if (other.EnableNativePdfParsing != false) {
         EnableNativePdfParsing = other.EnableNativePdfParsing;
       }
+      if (other.EnableImageQualityScores != false) {
+        EnableImageQualityScores = other.EnableImageQualityScores;
+      }
       advancedOcrOptions_.Add(other.advancedOcrOptions_);
+      if (other.EnableSymbol != false) {
+        EnableSymbol = other.EnableSymbol;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2184,12 +2289,27 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 18: {
+            if (hints_ == null) {
+              Hints = new global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints();
+            }
+            input.ReadMessage(Hints);
+            break;
+          }
           case 24: {
             EnableNativePdfParsing = input.ReadBool();
             break;
           }
+          case 32: {
+            EnableImageQualityScores = input.ReadBool();
+            break;
+          }
           case 42: {
             advancedOcrOptions_.AddEntriesFrom(input, _repeated_advancedOcrOptions_codec);
+            break;
+          }
+          case 48: {
+            EnableSymbol = input.ReadBool();
             break;
           }
         }
@@ -2207,18 +2327,230 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 18: {
+            if (hints_ == null) {
+              Hints = new global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints();
+            }
+            input.ReadMessage(Hints);
+            break;
+          }
           case 24: {
             EnableNativePdfParsing = input.ReadBool();
+            break;
+          }
+          case 32: {
+            EnableImageQualityScores = input.ReadBool();
             break;
           }
           case 42: {
             advancedOcrOptions_.AddEntriesFrom(ref input, _repeated_advancedOcrOptions_codec);
             break;
           }
+          case 48: {
+            EnableSymbol = input.ReadBool();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the OcrConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Hints for OCR Engine
+      /// </summary>
+      public sealed partial class Hints : pb::IMessage<Hints>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Hints> _parser = new pb::MessageParser<Hints>(() => new Hints());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Hints> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Hints() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Hints(Hints other) : this() {
+          languageHints_ = other.languageHints_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Hints Clone() {
+          return new Hints(this);
+        }
+
+        /// <summary>Field number for the "language_hints" field.</summary>
+        public const int LanguageHintsFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_languageHints_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> languageHints_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// List of BCP-47 language codes to use for OCR. In most cases, not
+        /// specifying it yields the best results since it enables automatic language
+        /// detection. For languages based on the Latin alphabet, setting hints is
+        /// not needed. In rare cases, when the language of the text in the
+        /// image is known, setting a hint will help get better results (although it
+        /// will be a significant hindrance if the hint is wrong).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> LanguageHints {
+          get { return languageHints_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Hints);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Hints other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!languageHints_.Equals(other.languageHints_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= languageHints_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          languageHints_.WriteTo(output, _repeated_languageHints_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          languageHints_.WriteTo(ref output, _repeated_languageHints_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += languageHints_.CalculateSize(_repeated_languageHints_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Hints other) {
+          if (other == null) {
+            return;
+          }
+          languageHints_.Add(other.languageHints_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                languageHints_.AddEntriesFrom(input, _repeated_languageHints_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                languageHints_.AddEntriesFrom(ref input, _repeated_languageHints_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
