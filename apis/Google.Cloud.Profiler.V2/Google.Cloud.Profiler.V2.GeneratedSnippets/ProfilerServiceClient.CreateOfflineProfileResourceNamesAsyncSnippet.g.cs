@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Profiler.V2.Snippets
 {
-    // [START cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async]
+    // [START cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Profiler.V2;
     using System.Threading.Tasks;
@@ -31,19 +31,16 @@ namespace Google.Cloud.Profiler.V2.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateOfflineProfileRequestObjectAsync()
+        public async Task CreateOfflineProfileResourceNamesAsync()
         {
             // Create client
             ProfilerServiceClient profilerServiceClient = await ProfilerServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateOfflineProfileRequest request = new CreateOfflineProfileRequest
-            {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                Profile = new Profile(),
-            };
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            Profile profile = new Profile();
             // Make the request
-            Profile response = await profilerServiceClient.CreateOfflineProfileAsync(request);
+            Profile response = await profilerServiceClient.CreateOfflineProfileAsync(parent, profile);
         }
     }
-    // [END cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async]
+    // [END cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async_flattened_resourceNames]
 }

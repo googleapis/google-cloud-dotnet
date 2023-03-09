@@ -17,6 +17,7 @@
 namespace Google.Cloud.Profiler.V2.Snippets
 {
     // [START cloudprofiler_v2_generated_ProfilerService_CreateProfile_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Profiler.V2;
 
     public sealed partial class GeneratedProfilerServiceClientSnippets
@@ -41,7 +42,7 @@ namespace Google.Cloud.Profiler.V2.Snippets
                 {
                     ProfileType.Unspecified,
                 },
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             Profile response = profilerServiceClient.CreateProfile(request);

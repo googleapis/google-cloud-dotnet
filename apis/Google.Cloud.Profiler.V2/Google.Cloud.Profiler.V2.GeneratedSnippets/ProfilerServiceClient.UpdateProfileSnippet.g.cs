@@ -16,14 +16,13 @@
 
 namespace Google.Cloud.Profiler.V2.Snippets
 {
-    // [START cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async]
-    using Google.Api.Gax.ResourceNames;
+    // [START cloudprofiler_v2_generated_ProfilerService_UpdateProfile_sync_flattened]
     using Google.Cloud.Profiler.V2;
-    using System.Threading.Tasks;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedProfilerServiceClientSnippets
     {
-        /// <summary>Snippet for CreateOfflineProfileAsync</summary>
+        /// <summary>Snippet for UpdateProfile</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,19 +30,16 @@ namespace Google.Cloud.Profiler.V2.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateOfflineProfileRequestObjectAsync()
+        public void UpdateProfile()
         {
             // Create client
-            ProfilerServiceClient profilerServiceClient = await ProfilerServiceClient.CreateAsync();
+            ProfilerServiceClient profilerServiceClient = ProfilerServiceClient.Create();
             // Initialize request argument(s)
-            CreateOfflineProfileRequest request = new CreateOfflineProfileRequest
-            {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                Profile = new Profile(),
-            };
+            Profile profile = new Profile();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            Profile response = await profilerServiceClient.CreateOfflineProfileAsync(request);
+            Profile response = profilerServiceClient.UpdateProfile(profile, updateMask);
         }
     }
-    // [END cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async]
+    // [END cloudprofiler_v2_generated_ProfilerService_UpdateProfile_sync_flattened]
 }

@@ -17,7 +17,9 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
@@ -59,10 +61,10 @@ namespace Google.Cloud.Profiler.V2
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// <item><description>Timeout: 3610 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateProfileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)));
+        public gaxgrpc::CallSettings CreateProfileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3610000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -336,6 +338,118 @@ namespace Google.Cloud.Profiler.V2
             CreateOfflineProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// CreateOfflineProfile creates a new profile resource in the offline mode.
+        /// The client provides the profile to create along with the profile bytes, the
+        /// server records it.
+        /// </summary>
+        /// <param name="parent">
+        /// Parent project to create the profile in.
+        /// </param>
+        /// <param name="profile">
+        /// Contents of the profile to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Profile CreateOfflineProfile(string parent, Profile profile, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOfflineProfile(new CreateOfflineProfileRequest
+            {
+                Parent = parent ?? "",
+                Profile = profile,
+            }, callSettings);
+
+        /// <summary>
+        /// CreateOfflineProfile creates a new profile resource in the offline mode.
+        /// The client provides the profile to create along with the profile bytes, the
+        /// server records it.
+        /// </summary>
+        /// <param name="parent">
+        /// Parent project to create the profile in.
+        /// </param>
+        /// <param name="profile">
+        /// Contents of the profile to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Profile> CreateOfflineProfileAsync(string parent, Profile profile, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOfflineProfileAsync(new CreateOfflineProfileRequest
+            {
+                Parent = parent ?? "",
+                Profile = profile,
+            }, callSettings);
+
+        /// <summary>
+        /// CreateOfflineProfile creates a new profile resource in the offline mode.
+        /// The client provides the profile to create along with the profile bytes, the
+        /// server records it.
+        /// </summary>
+        /// <param name="parent">
+        /// Parent project to create the profile in.
+        /// </param>
+        /// <param name="profile">
+        /// Contents of the profile to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Profile> CreateOfflineProfileAsync(string parent, Profile profile, st::CancellationToken cancellationToken) =>
+            CreateOfflineProfileAsync(parent, profile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// CreateOfflineProfile creates a new profile resource in the offline mode.
+        /// The client provides the profile to create along with the profile bytes, the
+        /// server records it.
+        /// </summary>
+        /// <param name="parent">
+        /// Parent project to create the profile in.
+        /// </param>
+        /// <param name="profile">
+        /// Contents of the profile to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Profile CreateOfflineProfile(gagr::ProjectName parent, Profile profile, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOfflineProfile(new CreateOfflineProfileRequest
+            {
+                ParentAsProjectName = parent,
+                Profile = profile,
+            }, callSettings);
+
+        /// <summary>
+        /// CreateOfflineProfile creates a new profile resource in the offline mode.
+        /// The client provides the profile to create along with the profile bytes, the
+        /// server records it.
+        /// </summary>
+        /// <param name="parent">
+        /// Parent project to create the profile in.
+        /// </param>
+        /// <param name="profile">
+        /// Contents of the profile to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Profile> CreateOfflineProfileAsync(gagr::ProjectName parent, Profile profile, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOfflineProfileAsync(new CreateOfflineProfileRequest
+            {
+                ParentAsProjectName = parent,
+                Profile = profile,
+            }, callSettings);
+
+        /// <summary>
+        /// CreateOfflineProfile creates a new profile resource in the offline mode.
+        /// The client provides the profile to create along with the profile bytes, the
+        /// server records it.
+        /// </summary>
+        /// <param name="parent">
+        /// Parent project to create the profile in.
+        /// </param>
+        /// <param name="profile">
+        /// Contents of the profile to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Profile> CreateOfflineProfileAsync(gagr::ProjectName parent, Profile profile, st::CancellationToken cancellationToken) =>
+            CreateOfflineProfileAsync(parent, profile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// UpdateProfile updates the profile bytes and labels on the profile resource
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
@@ -370,6 +484,74 @@ namespace Google.Cloud.Profiler.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Profile> UpdateProfileAsync(UpdateProfileRequest request, st::CancellationToken cancellationToken) =>
             UpdateProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// UpdateProfile updates the profile bytes and labels on the profile resource
+        /// created in the online mode. Updating the bytes for profiles created in the
+        /// offline mode is currently not supported: the profile content must be
+        /// provided at the time of the profile creation.
+        /// </summary>
+        /// <param name="profile">
+        /// Profile to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask used to specify the fields to be overwritten. Currently only
+        /// profile_bytes and labels fields are supported by UpdateProfile, so only
+        /// those fields can be specified in the mask. When no mask is provided, all
+        /// fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Profile UpdateProfile(Profile profile, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateProfile(new UpdateProfileRequest
+            {
+                Profile = profile,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// UpdateProfile updates the profile bytes and labels on the profile resource
+        /// created in the online mode. Updating the bytes for profiles created in the
+        /// offline mode is currently not supported: the profile content must be
+        /// provided at the time of the profile creation.
+        /// </summary>
+        /// <param name="profile">
+        /// Profile to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask used to specify the fields to be overwritten. Currently only
+        /// profile_bytes and labels fields are supported by UpdateProfile, so only
+        /// those fields can be specified in the mask. When no mask is provided, all
+        /// fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Profile> UpdateProfileAsync(Profile profile, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateProfileAsync(new UpdateProfileRequest
+            {
+                Profile = profile,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// UpdateProfile updates the profile bytes and labels on the profile resource
+        /// created in the online mode. Updating the bytes for profiles created in the
+        /// offline mode is currently not supported: the profile content must be
+        /// provided at the time of the profile creation.
+        /// </summary>
+        /// <param name="profile">
+        /// Profile to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask used to specify the fields to be overwritten. Currently only
+        /// profile_bytes and labels fields are supported by UpdateProfile, so only
+        /// those fields can be specified in the mask. When no mask is provided, all
+        /// fields are overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Profile> UpdateProfileAsync(Profile profile, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateProfileAsync(profile, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ProfilerService client wrapper implementation, for convenient use.</summary>

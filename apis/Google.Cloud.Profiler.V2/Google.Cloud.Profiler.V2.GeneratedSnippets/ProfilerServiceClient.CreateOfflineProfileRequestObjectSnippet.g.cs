@@ -17,6 +17,7 @@
 namespace Google.Cloud.Profiler.V2.Snippets
 {
     // [START cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Profiler.V2;
 
     public sealed partial class GeneratedProfilerServiceClientSnippets
@@ -36,7 +37,7 @@ namespace Google.Cloud.Profiler.V2.Snippets
             // Initialize request argument(s)
             CreateOfflineProfileRequest request = new CreateOfflineProfileRequest
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Profile = new Profile(),
             };
             // Make the request

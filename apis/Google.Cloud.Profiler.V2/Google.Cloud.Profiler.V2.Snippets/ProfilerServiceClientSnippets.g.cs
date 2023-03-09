@@ -16,6 +16,7 @@
 
 namespace Google.Cloud.Profiler.V2.Snippets
 {
+    using Google.Api.Gax.ResourceNames;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
@@ -36,7 +37,7 @@ namespace Google.Cloud.Profiler.V2.Snippets
                 {
                     ProfileType.Unspecified,
                 },
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             Profile response = profilerServiceClient.CreateProfile(request);
@@ -58,7 +59,7 @@ namespace Google.Cloud.Profiler.V2.Snippets
                 {
                     ProfileType.Unspecified,
                 },
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             Profile response = await profilerServiceClient.CreateProfileAsync(request);
@@ -74,7 +75,7 @@ namespace Google.Cloud.Profiler.V2.Snippets
             // Initialize request argument(s)
             CreateOfflineProfileRequest request = new CreateOfflineProfileRequest
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Profile = new Profile(),
             };
             // Make the request
@@ -92,11 +93,69 @@ namespace Google.Cloud.Profiler.V2.Snippets
             // Initialize request argument(s)
             CreateOfflineProfileRequest request = new CreateOfflineProfileRequest
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Profile = new Profile(),
             };
             // Make the request
             Profile response = await profilerServiceClient.CreateOfflineProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOfflineProfile</summary>
+        public void CreateOfflineProfile()
+        {
+            // Snippet: CreateOfflineProfile(string, Profile, CallSettings)
+            // Create client
+            ProfilerServiceClient profilerServiceClient = ProfilerServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            Profile profile = new Profile();
+            // Make the request
+            Profile response = profilerServiceClient.CreateOfflineProfile(parent, profile);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOfflineProfileAsync</summary>
+        public async Task CreateOfflineProfileAsync()
+        {
+            // Snippet: CreateOfflineProfileAsync(string, Profile, CallSettings)
+            // Additional: CreateOfflineProfileAsync(string, Profile, CancellationToken)
+            // Create client
+            ProfilerServiceClient profilerServiceClient = await ProfilerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            Profile profile = new Profile();
+            // Make the request
+            Profile response = await profilerServiceClient.CreateOfflineProfileAsync(parent, profile);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOfflineProfile</summary>
+        public void CreateOfflineProfileResourceNames()
+        {
+            // Snippet: CreateOfflineProfile(ProjectName, Profile, CallSettings)
+            // Create client
+            ProfilerServiceClient profilerServiceClient = ProfilerServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            Profile profile = new Profile();
+            // Make the request
+            Profile response = profilerServiceClient.CreateOfflineProfile(parent, profile);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateOfflineProfileAsync</summary>
+        public async Task CreateOfflineProfileResourceNamesAsync()
+        {
+            // Snippet: CreateOfflineProfileAsync(ProjectName, Profile, CallSettings)
+            // Additional: CreateOfflineProfileAsync(ProjectName, Profile, CancellationToken)
+            // Create client
+            ProfilerServiceClient profilerServiceClient = await ProfilerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            Profile profile = new Profile();
+            // Make the request
+            Profile response = await profilerServiceClient.CreateOfflineProfileAsync(parent, profile);
             // End snippet
         }
 
@@ -132,6 +191,35 @@ namespace Google.Cloud.Profiler.V2.Snippets
             };
             // Make the request
             Profile response = await profilerServiceClient.UpdateProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProfile</summary>
+        public void UpdateProfile()
+        {
+            // Snippet: UpdateProfile(Profile, FieldMask, CallSettings)
+            // Create client
+            ProfilerServiceClient profilerServiceClient = ProfilerServiceClient.Create();
+            // Initialize request argument(s)
+            Profile profile = new Profile();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Profile response = profilerServiceClient.UpdateProfile(profile, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProfileAsync</summary>
+        public async Task UpdateProfileAsync()
+        {
+            // Snippet: UpdateProfileAsync(Profile, FieldMask, CallSettings)
+            // Additional: UpdateProfileAsync(Profile, FieldMask, CancellationToken)
+            // Create client
+            ProfilerServiceClient profilerServiceClient = await ProfilerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Profile profile = new Profile();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Profile response = await profilerServiceClient.UpdateProfileAsync(profile, updateMask);
             // End snippet
         }
     }
