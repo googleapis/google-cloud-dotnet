@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.0.0, released 2023-03-09
+
+### BREAKING CHANGE
+
+BatchServiceClient no longer exposes an IAMPolicyClient. This was
+only exposed unintentionally, and has never worked. However, this is
+still a breaking change as application code may have referred to it.
+
+### New features
+
+- Added StatusEvent.task_state ([commit 25463ba](https://github.com/googleapis/google-cloud-dotnet/commit/25463baadfe8e1c958371757fe800df85d9b8542))
+
+### Documentation improvements
+
+- Updated comments ([commit 25463ba](https://github.com/googleapis/google-cloud-dotnet/commit/25463baadfe8e1c958371757fe800df85d9b8542))
+
 ## Version 1.3.0, released 2023-02-08
 
 ### New features
