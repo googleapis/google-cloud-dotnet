@@ -26,19 +26,19 @@ namespace Google.Maps.Routing.V2 {
           string.Concat(
             "CiVnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3dheXBvaW50LnByb3RvEhZnb29n",
             "bGUubWFwcy5yb3V0aW5nLnYyGiVnb29nbGUvbWFwcy9yb3V0aW5nL3YyL2xv",
-            "Y2F0aW9uLnByb3RvIqIBCghXYXlwb2ludBI0Cghsb2NhdGlvbhgBIAEoCzIg",
+            "Y2F0aW9uLnByb3RvIrUBCghXYXlwb2ludBI0Cghsb2NhdGlvbhgBIAEoCzIg",
             "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuTG9jYXRpb25IABISCghwbGFjZV9p",
-            "ZBgCIAEoCUgAEgsKA3ZpYRgDIAEoCBIYChB2ZWhpY2xlX3N0b3BvdmVyGAQg",
-            "ASgIEhQKDHNpZGVfb2Zfcm9hZBgFIAEoCEIPCg1sb2NhdGlvbl90eXBlQsUB",
-            "Chpjb20uZ29vZ2xlLm1hcHMucm91dGluZy52MkINV2F5cG9pbnRQcm90b1AB",
-            "Wj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21hcHMv",
-            "cm91dGluZy92Mjtyb3V0aW5n+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5S",
-            "b3V0aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6",
-            "TWFwczo6Um91dGluZzo6VjJiBnByb3RvMw=="));
+            "ZBgCIAEoCUgAEhEKB2FkZHJlc3MYByABKAlIABILCgN2aWEYAyABKAgSGAoQ",
+            "dmVoaWNsZV9zdG9wb3ZlchgEIAEoCBIUCgxzaWRlX29mX3JvYWQYBSABKAhC",
+            "DwoNbG9jYXRpb25fdHlwZULFAQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcu",
+            "djJCDVdheXBvaW50UHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9tYXBzL3JvdXRpbmcvdjI7cm91dGluZ/gBAaICBUdN",
+            "UlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJv",
+            "dXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Maps.Routing.V2.LocationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Waypoint), global::Google.Maps.Routing.V2.Waypoint.Parser, new[]{ "Location", "PlaceId", "Via", "VehicleStopover", "SideOfRoad" }, new[]{ "LocationType" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.Waypoint), global::Google.Maps.Routing.V2.Waypoint.Parser, new[]{ "Location", "PlaceId", "Address", "Via", "VehicleStopover", "SideOfRoad" }, new[]{ "LocationType" }, null, null, null)
           }));
     }
     #endregion
@@ -93,6 +93,9 @@ namespace Google.Maps.Routing.V2 {
         case LocationTypeOneofCase.PlaceId:
           PlaceId = other.PlaceId;
           break;
+        case LocationTypeOneofCase.Address:
+          Address = other.Address;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -132,6 +135,22 @@ namespace Google.Maps.Routing.V2 {
       set {
         locationType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         locationTypeCase_ = LocationTypeOneofCase.PlaceId;
+      }
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 7;
+    /// <summary>
+    /// Human readable address or a plus code.
+    /// See https://plus.codes for details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Address {
+      get { return locationTypeCase_ == LocationTypeOneofCase.Address ? (string) locationType_ : ""; }
+      set {
+        locationType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        locationTypeCase_ = LocationTypeOneofCase.Address;
       }
     }
 
@@ -205,6 +224,7 @@ namespace Google.Maps.Routing.V2 {
       None = 0,
       Location = 1,
       PlaceId = 2,
+      Address = 7,
     }
     private LocationTypeOneofCase locationTypeCase_ = LocationTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -237,6 +257,7 @@ namespace Google.Maps.Routing.V2 {
       }
       if (!object.Equals(Location, other.Location)) return false;
       if (PlaceId != other.PlaceId) return false;
+      if (Address != other.Address) return false;
       if (Via != other.Via) return false;
       if (VehicleStopover != other.VehicleStopover) return false;
       if (SideOfRoad != other.SideOfRoad) return false;
@@ -250,6 +271,7 @@ namespace Google.Maps.Routing.V2 {
       int hash = 1;
       if (locationTypeCase_ == LocationTypeOneofCase.Location) hash ^= Location.GetHashCode();
       if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) hash ^= PlaceId.GetHashCode();
+      if (locationTypeCase_ == LocationTypeOneofCase.Address) hash ^= Address.GetHashCode();
       if (Via != false) hash ^= Via.GetHashCode();
       if (VehicleStopover != false) hash ^= VehicleStopover.GetHashCode();
       if (SideOfRoad != false) hash ^= SideOfRoad.GetHashCode();
@@ -292,6 +314,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(40);
         output.WriteBool(SideOfRoad);
       }
+      if (locationTypeCase_ == LocationTypeOneofCase.Address) {
+        output.WriteRawTag(58);
+        output.WriteString(Address);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -322,6 +348,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(40);
         output.WriteBool(SideOfRoad);
       }
+      if (locationTypeCase_ == LocationTypeOneofCase.Address) {
+        output.WriteRawTag(58);
+        output.WriteString(Address);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -337,6 +367,9 @@ namespace Google.Maps.Routing.V2 {
       }
       if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
+      }
+      if (locationTypeCase_ == LocationTypeOneofCase.Address) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
       }
       if (Via != false) {
         size += 1 + 1;
@@ -377,6 +410,9 @@ namespace Google.Maps.Routing.V2 {
           break;
         case LocationTypeOneofCase.PlaceId:
           PlaceId = other.PlaceId;
+          break;
+        case LocationTypeOneofCase.Address:
+          Address = other.Address;
           break;
       }
 
@@ -420,6 +456,10 @@ namespace Google.Maps.Routing.V2 {
             SideOfRoad = input.ReadBool();
             break;
           }
+          case 58: {
+            Address = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -458,6 +498,10 @@ namespace Google.Maps.Routing.V2 {
           }
           case 40: {
             SideOfRoad = input.ReadBool();
+            break;
+          }
+          case 58: {
+            Address = input.ReadString();
             break;
           }
         }
