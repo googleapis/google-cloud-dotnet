@@ -49,7 +49,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new RequestOptions(),
-                DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
             SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);

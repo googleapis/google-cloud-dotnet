@@ -59,7 +59,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Seqno = 0L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
                 RequestOptions = new RequestOptions(),
-                DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
             SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);

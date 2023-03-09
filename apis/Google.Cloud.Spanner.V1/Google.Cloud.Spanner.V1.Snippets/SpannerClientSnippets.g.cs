@@ -694,7 +694,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Seqno = 0L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
                 RequestOptions = new RequestOptions(),
-                DataBoostEnabled = false,
             };
             // Make the request
             ResultSet response = spannerClient.ExecuteSql(request);
@@ -728,7 +727,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Seqno = 0L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
                 RequestOptions = new RequestOptions(),
-                DataBoostEnabled = false,
             };
             // Make the request
             ResultSet response = await spannerClient.ExecuteSqlAsync(request);
@@ -761,7 +759,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Seqno = 0L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
                 RequestOptions = new RequestOptions(),
-                DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
             SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
@@ -844,7 +841,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new RequestOptions(),
-                DataBoostEnabled = false,
             };
             // Make the request
             ResultSet response = spannerClient.Read(request);
@@ -871,7 +867,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new RequestOptions(),
-                DataBoostEnabled = false,
             };
             // Make the request
             ResultSet response = await spannerClient.ReadAsync(request);
@@ -897,7 +892,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new RequestOptions(),
-                DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
             SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
