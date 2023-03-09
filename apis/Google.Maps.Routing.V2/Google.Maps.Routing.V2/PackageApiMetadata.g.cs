@@ -31,6 +31,7 @@ namespace Google.Maps.Routing.V2
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return FallbackInfoReflection.Descriptor;
+            yield return GeocodingResultsReflection.Descriptor;
             yield return LocationReflection.Descriptor;
             yield return ManeuverReflection.Descriptor;
             yield return NavigationInstructionReflection.Descriptor;
