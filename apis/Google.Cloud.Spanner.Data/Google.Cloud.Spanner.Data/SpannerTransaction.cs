@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -315,13 +315,9 @@ namespace Google.Cloud.Spanner.Data
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
                 using (var reader = _session.ExecuteSqlStreamReader(request, callSettings))
                 {
-                    Value value = await reader.NextAsync(cancellationToken).ConfigureAwait(false);
-                    if (value != null)
-                    {
-                        throw new SpannerException(ErrorCode.Internal, "DML returned results unexpectedly.");
-                    }
-
+                    await reader.NextAsync(cancellationToken).ConfigureAwait(false);
                     var stats = reader.Stats;
+
                     if (stats == null)
                     {
                         throw new SpannerException(ErrorCode.Internal, "DML completed without statistics.");
@@ -337,6 +333,21 @@ namespace Google.Cloud.Spanner.Data
                     }
                 }
             }, "SpannerTransaction.ExecuteDml", SpannerConnection.Logger);
+        }
+
+        Task<ReliableStreamReader> ISpannerTransaction.ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            CheckCompatibleMode(TransactionMode.ReadWrite);
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            _hasExecutedStatements = true;
+            request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
+            {
+                var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
+                using var reader = _session.ExecuteSqlStreamReader(request, callSettings);
+                await reader.EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
+                return reader;
+            }, "SpannerTransaction.ExecuteDmlReader", SpannerConnection.Logger);
         }
 
         Task<IEnumerable<long>> ISpannerTransaction.ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
@@ -464,7 +475,9 @@ namespace Google.Cloud.Spanner.Data
                     }
                     _session.ReleaseToPool(forceDelete: false);
                     break;
-                // Default for detach or unknown DisposeBehavior is to do nothing.
+                default:
+                    // Default for detached or unknown DisposeBehavior is to do nothing.
+                    break;
             }
         }
 

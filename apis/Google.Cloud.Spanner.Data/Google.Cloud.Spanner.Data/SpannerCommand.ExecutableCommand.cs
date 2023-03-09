@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -104,11 +104,22 @@ namespace Google.Cloud.Spanner.Data
             internal async Task<SpannerDataReader> ExecuteReaderAsync(CommandBehavior behavior, TimestampBound singleUseReadSettings, CancellationToken cancellationToken)
             {
                 ValidateConnectionAndCommandTextBuilder();
+
+                if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Dml)
+                {
+                    if (singleUseReadSettings != null)
+                    {
+                        throw new NotSupportedException("singleUseReadSettings cannot be used with DML command.");
+                    }
+
+                    return await ExecuteDmlReaderAsync(behavior, cancellationToken).ConfigureAwait(false);
+                }
+
                 ValidateCommandBehavior(behavior);
 
                 if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select && CommandTextBuilder.SpannerCommandType != SpannerCommandType.Read)
                 {
-                    throw new InvalidOperationException("ExecuteReader functionality is only available for queries and reads.");
+                    throw new InvalidOperationException("ExecuteReader functionality is only available for queries, reads and DML commands.");
                 }
 
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
@@ -220,7 +231,22 @@ namespace Google.Cloud.Spanner.Data
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
                 long count = await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // This cannot currently exceed int.MaxValue due to Spanner commit limitations anyway.
-                return checked((int)count);
+                return checked((int) count);
+            }
+
+            private async Task<SpannerDataReader> ExecuteDmlReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+            {
+                ValidateCommandBehavior(behavior);
+                await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority);
+                ExecuteSqlRequest request = GetExecuteSqlRequest();
+                var resultSet = await transaction.ExecuteDmlReaderAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
+
+                var enableGetSchemaTable = Connection.Builder.EnableGetSchemaTable;
+                // When the data reader is closed, we may need to dispose of the connection.
+                IDisposable resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : null;
+
+                return new SpannerDataReader(Connection.Logger, resultSet, Transaction?.ReadTimestamp, resourceToClose, ConversionOptions, enableGetSchemaTable, CommandTimeout);
             }
 
             private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)
@@ -389,7 +415,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             private RequestOptions BuildRequestOptions() =>
-                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) , RequestTag = Tag ?? "", TransactionTag = Transaction?.Tag ?? "" };
+                new RequestOptions { Priority = PriorityConverter.ToProto(Priority), RequestTag = Tag ?? "", TransactionTag = Transaction?.Tag ?? "" };
 
             private ExecuteSqlRequest GetExecuteSqlRequest()
             {
