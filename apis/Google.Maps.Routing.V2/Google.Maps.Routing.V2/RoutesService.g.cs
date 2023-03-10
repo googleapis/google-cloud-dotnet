@@ -341,7 +341,8 @@ namespace Google.Maps.Routing.V2 {
     private bool computeAlternativeRoutes_;
     /// <summary>
     /// Optional. Specifies whether to calculate alternate routes in addition to
-    /// the route.
+    /// the route. No alternative routes are returned for requests that have
+    /// intermediate waypoints.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
