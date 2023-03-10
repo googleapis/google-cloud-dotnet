@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,6 +33,53 @@ namespace Google.Cloud.Datastore.V1.Tests
                 {
                     Op = CompositeFilter.Types.Operator.And,
                     Filters = { filter1, filter2, filter3 }
+                }
+            };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Or()
+        {
+            var filter1 = Filter.Equal("x", 1);
+            var filter2 = Filter.GreaterThan("y", 2);
+            var filter3 = Filter.LessThan("z", 3);
+            var actual = Filter.Or(filter1, filter2, filter3);
+
+            var expected = new Filter
+            {
+                CompositeFilter = new CompositeFilter
+                {
+                    Op = CompositeFilter.Types.Operator.Or,
+                    Filters = { filter1, filter2, filter3 }
+                }
+            };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void ComplexFilter()
+        {
+            var filter1 = Filter.Equal("x", 1);
+            var filter2 = Filter.GreaterThan("y", 2);
+            var filter3 = Filter.LessThan("z", 3);
+            var actual = Filter.And(filter1, Filter.Or(filter2, filter3));
+
+            var tempOrFilter = new Filter
+            {
+                CompositeFilter = new CompositeFilter
+                {
+                    Op = CompositeFilter.Types.Operator.Or,
+                    Filters = { filter2, filter3 }
+                }
+            };
+                
+            var expected = new Filter
+            {
+                CompositeFilter = new CompositeFilter
+                {
+                    Op = CompositeFilter.Types.Operator.And,
+                    Filters = { filter1, tempOrFilter }
                 }
             };
             Assert.Equal(expected, actual);
