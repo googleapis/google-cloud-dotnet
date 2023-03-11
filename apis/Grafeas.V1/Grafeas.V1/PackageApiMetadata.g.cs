@@ -48,6 +48,7 @@ namespace Grafeas.V1
             yield return SlsaProvenanceReflection.Descriptor;
             yield return SlsaProvenanceZeroTwoReflection.Descriptor;
             yield return UpgradeReflection.Descriptor;
+            yield return VexReflection.Descriptor;
             yield return VulnerabilityReflection.Descriptor;
         }
     }
