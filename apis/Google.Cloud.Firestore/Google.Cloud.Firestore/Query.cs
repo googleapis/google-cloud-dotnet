@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,11 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types;
-using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
-using FieldOp = Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator;
-using UnaryOp = Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator;
 
 namespace Google.Cloud.Firestore
 {
@@ -45,12 +41,15 @@ namespace Google.Cloud.Firestore
         private readonly int _offset;
         private readonly (int count, LimitType type)? _limit;
         private readonly IReadOnlyList<InternalOrdering> _orderings; // Never null
-        private readonly IReadOnlyList<InternalFilter> _filters; // May be null
+        private readonly Filter.CompositeFilter _filters; // May be null
         private readonly IReadOnlyList<FieldPath> _projections; // May be null
         private readonly Cursor _startAt;
         private readonly Cursor _endAt;
-        private readonly QueryRoot _root;
 
+        // We should never allow a new query to be created for a different root,
+        // as that might have different serialization rules.
+        private readonly QueryRoot _root;
+        
         private bool IsLimitToLast => _limit?.type == LimitType.Last;
 
         /// <summary>
@@ -78,17 +77,17 @@ namespace Google.Cloud.Firestore
         private Query(
             QueryRoot root,
             int offset, (int count, LimitType type)? limit,
-            IReadOnlyList<InternalOrdering> orderings, IReadOnlyList<InternalFilter> filters, IReadOnlyList<FieldPath> projections,
+            IReadOnlyList<InternalOrdering> orderings, Filter.CompositeFilter filter, IReadOnlyList<FieldPath> projections,
             Cursor startAt, Cursor endAt)
         {
             _root = root;
             _offset = offset;
             _limit = limit;
             _orderings = orderings;
-            _filters = filters;
             _projections = projections;
             _startAt = startAt;
             _endAt = endAt;
+            _filters = filter;
         }
 
         internal static Query ForCollectionGroup(FirestoreDb database, string collectionId) =>
@@ -108,12 +107,12 @@ namespace Google.Cloud.Firestore
                 Limit = _limit?.count,
                 Offset = _offset,
                 OrderBy = { _orderings.Select(o => o.ToProto(invertDirection: limitToLast)) },
-                EndAt = limitToLast ? InvertCursor(_startAt) :_endAt,
+                EndAt = limitToLast ? InvertCursor(_startAt) : _endAt,
                 Select = _projections == null ? null : new Projection { Fields = { _projections.Select(fp => fp.ToFieldReference()) } },
                 StartAt = limitToLast ? InvertCursor(_endAt) : _startAt,
                 Where = _filters == null ? null
-                    : _filters.Count == 1 ? _filters[0].ToProto()
-                    : new Filter { CompositeFilter = new CompositeFilter { Op = CompositeFilter.Types.Operator.And, Filters = { _filters.Select(f => f.ToProto()) } } }
+                    : _filters.Filters.Count() == 1 ? _filters.Filters.First().ToProto(_root)
+                    : _filters.ToProto(_root)
             };
 
             Cursor InvertCursor(Cursor cursor) =>
@@ -169,7 +168,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereEqualTo(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.Equal, value);
+            Where(Filter.EqualTo(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be
@@ -182,7 +181,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereEqualTo(FieldPath fieldPath, object value) =>
-            Where(fieldPath, FieldOp.Equal, value);
+            Where(Filter.EqualTo(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must not be
@@ -195,7 +194,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereNotEqualTo(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.NotEqual, value);
+            Where(Filter.NotEqualTo(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must not be
@@ -208,7 +207,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereNotEqualTo(FieldPath fieldPath, object value) =>
-            Where(fieldPath, FieldOp.NotEqual, value);
+            Where(Filter.NotEqualTo(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than
@@ -221,7 +220,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereLessThan(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.LessThan, value);
+            Where(Filter.LessThan(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than
@@ -234,7 +233,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereLessThan(FieldPath fieldPath, object value) =>
-            Where(fieldPath, FieldOp.LessThan, value);
+            Where(Filter.LessThan(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than or
@@ -247,7 +246,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereLessThanOrEqualTo(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.LessThanOrEqual, value);
+            Where(Filter.LessThanOrEqualTo(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than or
@@ -260,7 +259,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereLessThanOrEqualTo(FieldPath fieldPath, object value) =>
-            Where(fieldPath, FieldOp.LessThanOrEqual, value);
+            Where(Filter.LessThanOrEqualTo(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than
@@ -273,7 +272,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereGreaterThan(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.GreaterThan, value);
+            Where(Filter.GreaterThan(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than
@@ -286,7 +285,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereGreaterThan(FieldPath fieldPath, object value) =>
-            Where(fieldPath, FieldOp.GreaterThan, value);
+            Where(Filter.GreaterThan(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than or
@@ -299,7 +298,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereGreaterThanOrEqualTo(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.GreaterThanOrEqual, value);
+            Where(Filter.GreaterThanOrEqualTo(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be greater than or
@@ -312,7 +311,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to compare in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereGreaterThanOrEqualTo(FieldPath fieldPath, object value) =>
-            Where(fieldPath, FieldOp.GreaterThanOrEqual, value);
+            Where(Filter.GreaterThanOrEqualTo(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be an array containing
@@ -325,7 +324,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to check in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereArrayContains(string fieldPath, object value) =>
-            Where(fieldPath, FieldOp.ArrayContains, value);
+            Where(Filter.ArrayContains(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be an array containing
@@ -338,8 +337,7 @@ namespace Google.Cloud.Firestore
         /// <param name="value">The value to check in the filter.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereArrayContains(FieldPath fieldPath, object value) =>
-            Where(fieldPath, FieldOp.ArrayContains, value);
-
+            Where(Filter.ArrayContains(fieldPath, value));
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
@@ -352,7 +350,7 @@ namespace Google.Cloud.Firestore
         /// <param name="values">The values to compare in the filter. Must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereArrayContainsAny(string fieldPath, IEnumerable values) =>
-            Where(fieldPath, FieldOp.ArrayContainsAny, values);
+            Where(Filter.ArrayContainsAny(fieldPath, values));
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
@@ -365,7 +363,7 @@ namespace Google.Cloud.Firestore
         /// <param name="values">The values to compare in the filter. Must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereArrayContainsAny(FieldPath fieldPath, IEnumerable values) =>
-            Where(fieldPath, FieldOp.ArrayContainsAny, values);
+            Where(Filter.ArrayContainsAny(fieldPath, values));
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
@@ -378,7 +376,7 @@ namespace Google.Cloud.Firestore
         /// <param name="values">The values to compare in the filter. Must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereIn(string fieldPath, IEnumerable values) =>
-            Where(fieldPath, FieldOp.In, ValidateWhereInValues(values));
+            Where(Filter.InArray(fieldPath, values));
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
@@ -391,7 +389,7 @@ namespace Google.Cloud.Firestore
         /// <param name="values">The values to compare in the filter. Must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereIn(FieldPath fieldPath, IEnumerable values) =>
-            Where(fieldPath, FieldOp.In, ValidateWhereInValues(values));
+            Where(Filter.InArray(fieldPath, values));
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
@@ -404,7 +402,7 @@ namespace Google.Cloud.Firestore
         /// <param name="values">The values to compare in the filter. Must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereNotIn(string fieldPath, IEnumerable values) =>
-            Where(fieldPath, FieldOp.NotIn, ValidateWhereInValues(values));
+            Where(Filter.NotInArray(fieldPath, values));
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
@@ -417,7 +415,7 @@ namespace Google.Cloud.Firestore
         /// <param name="values">The values to compare in the filter. Must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereNotIn(FieldPath fieldPath, IEnumerable values) =>
-            Where(fieldPath, FieldOp.NotIn, ValidateWhereInValues(values));
+            Where(Filter.NotInArray(fieldPath, values));
 
         /// <summary>
         /// Returns an <see cref="AggregateQuery"/> with count(*) aggregation applied on this query.
@@ -427,86 +425,22 @@ namespace Google.Cloud.Firestore
             new AggregateQuery(this).WithAggregation(Aggregates.CreateCountAggregate());
 
         /// <summary>
-        /// Validates that a value is suitable for a WhereIn or WhereNotIn query. It can't be null or a string.
-        /// The reason for highlighting string is that it's an IEnumerable{char}, but users
-        /// don't tend to think of it that way: anyone passing a single string to WhereIn is doing so
-        /// expecting it to be treated as an array containing just that string, I'm sure. So let's call that out.
-        /// </summary>
-        /// <param name="values">The value to validate.</param>
-        /// <returns>The original value, if it's valid.</returns>
-        private IEnumerable ValidateWhereInValues(IEnumerable values)
-        {
-            if (values is null)
-            {
-                throw new ArgumentNullException(nameof(values), "The list of values for a WhereIn or WhereNotIn query must not be null.");
-            }
-            if (values is string)
-            {
-                // This is a really long error message, but it's good at saying exactly what's wrong.
-                throw new ArgumentException("The list of values for a WhereIn or WhereNotIn query must not be a single string. The code compiles because string implements IEnumerable<char>, but you almost certainly meant to pass a collection of strings, e.g. a string[] or a List<string>",
-                    nameof(values));
-            }
-            return values;
-        }
-
-        // Note: the two general Where methods were originally public, accepting a public QueryOperator enum.
-        // If we ever want to make them public again, we should reinstate the QueryOperator enum to avoid an API
-        // dependency on the proto enum.
-
-        /// <summary>
-        /// Add a filter for the given field path.
+        /// Add the given filter to this query.
         /// </summary>
         /// <remarks>
         /// This call adds additional filters to any previously-specified ones.
         /// </remarks>
-        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
-        /// <param name="op">The filter operator. Must not be null.</param>
-        /// <param name="value">The value to compare in the filter.</param>
+        /// <param name="filter">filter to be applied on query, must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
-        private Query Where(string fieldPath, FieldOp op, object value)
+        public Query Where(Filter filter)
         {
-            GaxPreconditions.CheckNotNullOrEmpty(fieldPath, nameof(fieldPath));
-            return Where(FieldPath.FromDotSeparatedString(fieldPath), op, value);
-        }
-
-        /// <summary>
-        /// Add a filter for the given field path.
-        /// </summary>
-        /// <remarks>
-        /// This call adds additional filters to any previously-specified ones.
-        /// </remarks>
-        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
-        /// <param name="op">The filter operator.</param>
-        /// <param name="value">The value to compare in the filter. Must not be a sentinel value.</param>
-        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
-        private Query Where(FieldPath fieldPath, FieldOp op, object value)
-        {
-            if (fieldPath.Equals(FieldPath.DocumentId))
-            {
-                value = op switch
-                {
-                    FieldOp.ArrayContains => throw new ArgumentException($"Invalid query. Document IDs cannot be used with the {op} operator.", nameof(op)),
-                    FieldOp.ArrayContainsAny => throw new ArgumentException($"Invalid query. Document IDs cannot be used with the {op} operator.", nameof(op)),
-                    FieldOp.In => ConvertValueToDocumentReferencesForInQuery(),
-                    FieldOp.NotIn => ConvertValueToDocumentReferencesForInQuery(),
-                    _ => ConvertReference(value, nameof(value))
-                };
-            }
-
-            InternalFilter filter = InternalFilter.Create(Database.SerializationContext, fieldPath, op, value);
-            var newFilters = _filters == null ? new List<InternalFilter>() : new List<InternalFilter>(_filters);
-            newFilters.Add(filter);
-            return new Query(_root, _offset, _limit, _orderings, newFilters, _projections, _startAt, _endAt);
-
-            object ConvertValueToDocumentReferencesForInQuery()
-            {
-                var list = (value as IEnumerable)?.Cast<object>().ToList();
-                if (list is null || list.Count == 0)
-                {
-                    throw new ArgumentException($"Invalid Query. A non-empty array is required for '{op}' filters.", nameof(value));
-                }
-                return list.Select(item => ConvertReference(item, nameof(value))).ToList();
-            }
+            GaxPreconditions.CheckNotNull(filter, nameof(filter));
+            filter.ValidateForSentinels(Database.SerializationContext);
+            // Check that serialization doesn't throw an exception.
+            filter.ToProto(_root);
+            var newFilter = (_filters == null) ? new Filter.CompositeFilter(new List<Filter>(), CompositeFilter.Types.Operator.And)
+            .WithAdditionalFilter(filter) : _filters.WithAdditionalFilter(filter);
+            return new Query(_root, _offset, _limit, _orderings, newFilter,_projections, _startAt, _endAt);
         }
 
         /// <summary>
@@ -834,37 +768,14 @@ namespace Google.Cloud.Firestore
                 // a DocumentReference (absolute path that must be a descendant of this collection).
                 if (Equals(_orderings[i].Field, FieldPath.DocumentId))
                 {
-                    value = ConvertReference(fieldValues[i], nameof(fieldValues));
+                    value = _root.ConvertReference(fieldValues[i], nameof(fieldValues));
                 }
                 var convertedValue = ValueSerializer.Serialize(Database.SerializationContext, value);
-                ValidateNoSentinelsRecursively(convertedValue, "Snapshot ordering contained a sentinel value");
+                Filter.ValidateNoSentinelsRecursively(convertedValue, "Snapshot ordering contained a sentinel value");
                 cursor.Values.Add(convertedValue);
             }
 
             return cursor;
-        }
-
-        private DocumentReference ConvertReference(object fieldValue, string parameterName)
-        {
-            string basePath = _root.AllDescendants ? ParentPath : $"{ParentPath}/{_root.CollectionId}";
-            var reference = fieldValue switch
-            {
-                string relativePath => Database.GetDocumentReferenceFromResourceName($"{basePath}/{relativePath}"),
-                DocumentReference absoluteRef => absoluteRef,
-                _ => throw new ArgumentException($"The corresponding value for a document ID must be a string (relative path) or a DocumentReference", parameterName),
-            };
-            GaxPreconditions.CheckArgument(
-                reference.Path.StartsWith(basePath + "/"),
-                parameterName,
-                "'{0}' is not part of the query result set and cannot be used as a query boundary",
-                reference.Path);
-
-            GaxPreconditions.CheckArgument(
-                _root.AllDescendants || reference.Parent.Path == basePath,
-                parameterName,
-                "Only a direct child can be used as a query boundary. Found: '{0}'",
-                reference.Path);
-            return reference;
         }
 
         private Query StartAtSnapshot(DocumentSnapshot snapshot, bool before)
@@ -900,18 +811,12 @@ namespace Google.Cloud.Firestore
             newOrderings = _orderings;
             // Only used when we need to add orderings; set newOrderings to this at the same time.
             List<InternalOrdering> modifiedOrderings = null;
-
-            if (_orderings.Count == 0 && _filters != null)
+            var orderingFilter = Filter.GetOrderingFilter(_filters);
+            if (_orderings.Count == 0 && orderingFilter != null)
             {
                 // If no explicit ordering is specified, use the first ordering filter to define an implicit order.
-                foreach (var filter in _filters)
-                {
-                    if (filter.IsOrderingFilter())
-                    {
-                        modifiedOrderings = new List<InternalOrdering>(newOrderings) { new InternalOrdering(filter.Field, Direction.Ascending) };
-                        newOrderings = modifiedOrderings;
-                    }
-                }
+                modifiedOrderings = new List<InternalOrdering>(newOrderings) { new InternalOrdering(orderingFilter.Field, Direction.Ascending) };
+                newOrderings = modifiedOrderings;
             }
             else
             {
@@ -977,10 +882,26 @@ namespace Google.Cloud.Firestore
                 _offset == other._offset &&
                 _limit == other._limit &&
                 GaxEqualityHelpers.ListsEqual(_orderings, other._orderings) &&
-                GaxEqualityHelpers.ListsEqual(_filters, other._filters) &&
+                FiltersEqual() &&
                 GaxEqualityHelpers.ListsEqual(_projections, other._projections) &&
                 Equals(_startAt, other._startAt) &&
                 Equals(_endAt, other._endAt);
+
+            bool FiltersEqual()
+            {
+                if (ReferenceEquals(_filters, other._filters))
+                {
+                    return true;
+                }
+                if (_filters is null || other._filters is null)
+                {
+                    return false;
+                }
+
+                // Note: we don't use _filters.Equals as we want to normalize
+                // to the serialized form for compatibility.
+                return _filters.ToProto(_root).Equals(other._filters.ToProto(other._root));
+            }
         }
 
         /// <inheritdoc />
@@ -989,7 +910,9 @@ namespace Google.Cloud.Firestore
             _offset,
             _limit?.GetHashCode() ?? -1,
             GaxEqualityHelpers.GetListHashCode(_orderings),
-            GaxEqualityHelpers.GetListHashCode(_filters),
+            // Note: we don't use _filters.GetHashCode as we want to normalize
+            // to the serialized form for compatibility.
+            _filters?.ToProto(_root).GetHashCode() ?? -1,
             GaxEqualityHelpers.GetListHashCode(_projections),
             _startAt?.GetHashCode() ?? -1,
             _endAt?.GetHashCode() ?? -1);
@@ -1019,32 +942,6 @@ namespace Google.Cloud.Firestore
         {
             GaxPreconditions.CheckNotNull(callback, nameof(callback));
             return Listen((snapshot, _) => { callback(snapshot); return Task.FromResult(0); }, cancellationToken);
-        }
-
-        /// <summary>
-        /// Convenience method to validate that a serialized value doesn't contain any sentinels.
-        /// Throws an ArgumentException with the given message if it does contain a sentinel.
-        /// </summary>
-        private static void ValidateNoSentinelsRecursively(Value value, string message)
-        {
-            if (SentinelValue.GetKind(value) != SentinelKind.None)
-            {
-                throw new ArgumentException(message);
-            }
-            if (value.MapValue != null)
-            {
-                foreach (var mapValue in value.MapValue.Fields.Values)
-                {
-                    ValidateNoSentinelsRecursively(mapValue, message);
-                }
-            }
-            else if (value.ArrayValue != null)
-            {
-                foreach (var arrayValue in value.ArrayValue.Values)
-                {
-                    ValidateNoSentinelsRecursively(arrayValue, message);
-                }
-            }
         }
 
         // Structs representing orderings and filters but using FieldPath instead of FieldReference.
@@ -1077,84 +974,6 @@ namespace Google.Cloud.Firestore
             public bool Equals(InternalOrdering other) => Field.Equals(other.Field) && Direction == other.Direction;
         }
 
-        private struct InternalFilter : IEquatable<InternalFilter>
-        {
-            internal FieldPath Field { get; }
-            // The integer value of either the UnaryOp or FieldOp, depending on whether _value is null.
-            private readonly int _op;
-            // The value for a field (binary) operator, or null for a unary operator
-            private readonly Value _value;
-
-            internal Filter ToProto() =>
-                _value == null
-                ? new Filter { UnaryFilter = new UnaryFilter { Field = Field.ToFieldReference(), Op = (UnaryOp) _op } }
-                : new Filter { FieldFilter = new FieldFilter { Field = Field.ToFieldReference(), Op = (FieldOp) _op, Value = _value } };
-
-            private InternalFilter(FieldPath field, int op, Value value)
-            {
-                Field = field;
-                _op = op;
-                _value = value;
-            }
-
-            /// <summary>
-            /// Checks whether this is a comparison operator.
-            /// </summary>
-            internal bool IsOrderingFilter() =>
-                _value is object &&
-                _op == (int) FieldOp.GreaterThan ||
-                _op == (int) FieldOp.GreaterThanOrEqual ||
-                _op == (int) FieldOp.LessThan ||
-                _op == (int) FieldOp.LessThanOrEqual;
-
-            internal static InternalFilter Create(SerializationContext context, FieldPath fieldPath, FieldOp op, object value)
-            {
-                GaxPreconditions.CheckNotNull(fieldPath, nameof(fieldPath));
-                var unaryOperator = GetUnaryOperator(value, op);
-                if (unaryOperator != UnaryOp.Unspecified)
-                {
-                    return new InternalFilter(fieldPath, (int) unaryOperator, null);
-                }
-                else
-                {
-                    var convertedValue = ValueSerializer.Serialize(context, value);
-                    ValidateNoSentinelsRecursively(convertedValue, "Sentinel values cannot be specified in filters");
-                    return new InternalFilter(fieldPath, (int) op, convertedValue);
-                }
-            }
-
-            private static UnaryOp GetUnaryOperator(object value, FieldOp op)
-            {
-                switch (value)
-                {
-                    case null:
-                        return op switch
-                        {
-                            FieldOp.Equal => UnaryOp.IsNull,
-                            FieldOp.NotEqual => UnaryOp.IsNotNull,
-                            _ => throw new ArgumentException("Null values can only be used with the Equal/NotEqual operators", nameof(value))
-                        };
-                    case double d when double.IsNaN(d):
-                    case float f when float.IsNaN(f):
-                        return op switch
-                        {
-                            FieldOp.Equal => UnaryOp.IsNan,
-                            FieldOp.NotEqual => UnaryOp.IsNotNan,
-                            _ => throw new ArgumentException("Not-a-number values can only be used with the Equal/NotEqual operators", nameof(value))
-                        };
-                    default:
-                        return UnaryOp.Unspecified;
-                }
-            }
-
-            public override bool Equals(object obj) => obj is InternalFilter other ? Equals(other) : false;
-
-            public bool Equals(InternalFilter other) =>
-                Field.Equals(other.Field) && _op == other._op && Equals(_value, other._value);
-
-            public override int GetHashCode() =>
-                GaxEqualityHelpers.CombineHashCodes(Field.GetHashCode(), _op, _value?.GetHashCode() ?? -1);
-        }
 
         private sealed class DocumentSnapshotComparer : IComparer<DocumentSnapshot>
         {
@@ -1204,7 +1023,7 @@ namespace Google.Cloud.Firestore
             }
         }
 
-        private sealed class QueryRoot : IEquatable<QueryRoot>
+        internal sealed class QueryRoot : IEquatable<QueryRoot>
         {
             internal FirestoreDb Database { get; }
             internal string ParentPath { get; }
@@ -1224,6 +1043,29 @@ namespace Google.Cloud.Firestore
 
             internal static QueryRoot ForCollectionGroup(FirestoreDb database, string collectionId) =>
                 new QueryRoot(database, database?.DocumentsPath, collectionId, true);
+
+            internal DocumentReference ConvertReference(object fieldValue, string parameterName)
+            {
+                string basePath = AllDescendants ? ParentPath : $"{ParentPath}/{CollectionId}";
+                var reference = fieldValue switch
+                {
+                    string relativePath => Database.GetDocumentReferenceFromResourceName($"{basePath}/{relativePath}"),
+                    DocumentReference absoluteRef => absoluteRef,
+                    _ => throw new ArgumentException($"The corresponding value for a document ID must be a string (relative path) or a DocumentReference", parameterName),
+                };
+                GaxPreconditions.CheckArgument(
+                    reference.Path.StartsWith(basePath + "/"),
+                    parameterName,
+                    "'{0}' is not part of the query result set and cannot be used as a query boundary",
+                    reference.Path);
+
+                GaxPreconditions.CheckArgument(
+                    AllDescendants || reference.Parent.Path == basePath,
+                    parameterName,
+                    "Only a direct child can be used as a query boundary. Found: '{0}'",
+                    reference.Path);
+                return reference;
+            }
 
             public override bool Equals(object obj) => Equals(obj as QueryRoot);
 
