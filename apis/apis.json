@@ -1526,7 +1526,7 @@
       "protoPath": "google/datastore/v1",
       "productName": "Google Cloud Datastore",
       "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
-      "version": "4.4.0",
+      "version": "4.5.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
@@ -1534,13 +1534,13 @@
         "Datastore"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5",
         "System.Linq.Async": "6.0.1"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "4.3.0"
+        "Google.Api.Gax.Grpc.Testing": "4.3.1"
       },
       "shortName": "datastore",
       "serviceConfigFile": "datastore_v1.yaml",
