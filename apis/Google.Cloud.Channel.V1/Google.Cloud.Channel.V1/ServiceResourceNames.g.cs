@@ -260,4 +260,16 @@ namespace Google.Cloud.Channel.V1
             set => Customer = value?.ToString() ?? "";
         }
     }
+
+    public partial class ListEntitlementChangesRequest
+    {
+        /// <summary>
+        /// <see cref="EntitlementName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EntitlementName ParentAsEntitlementName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EntitlementName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

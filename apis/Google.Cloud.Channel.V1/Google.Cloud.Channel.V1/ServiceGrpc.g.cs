@@ -220,6 +220,10 @@ namespace Google.Cloud.Channel.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSubscribersRequest> __Marshaller_google_cloud_channel_v1_ListSubscribersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSubscribersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSubscribersResponse> __Marshaller_google_cloud_channel_v1_ListSubscribersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSubscribersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest> __Marshaller_google_cloud_channel_v1_ListEntitlementChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse> __Marshaller_google_cloud_channel_v1_ListEntitlementChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListCustomersRequest, global::Google.Cloud.Channel.V1.ListCustomersResponse> __Method_ListCustomers = new grpc::Method<global::Google.Cloud.Channel.V1.ListCustomersRequest, global::Google.Cloud.Channel.V1.ListCustomersResponse>(
@@ -580,6 +584,14 @@ namespace Google.Cloud.Channel.V1 {
         "ListSubscribers",
         __Marshaller_google_cloud_channel_v1_ListSubscribersRequest,
         __Marshaller_google_cloud_channel_v1_ListSubscribersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest, global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse> __Method_ListEntitlementChanges = new grpc::Method<global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest, global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListEntitlementChanges",
+        __Marshaller_google_cloud_channel_v1_ListEntitlementChangesRequest,
+        __Marshaller_google_cloud_channel_v1_ListEntitlementChangesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1952,6 +1964,33 @@ namespace Google.Cloud.Channel.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListSubscribersResponse> ListSubscribers(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List entitlement history.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+      /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact CloudChannel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      ///
+      /// Return value:
+      /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse> ListEntitlementChanges(global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -7445,6 +7484,114 @@ namespace Google.Cloud.Channel.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSubscribers, null, options, request);
       }
+      /// <summary>
+      /// List entitlement history.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+      /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact CloudChannel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      ///
+      /// Return value:
+      /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse ListEntitlementChanges(global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEntitlementChanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List entitlement history.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+      /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact CloudChannel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      ///
+      /// Return value:
+      /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse ListEntitlementChanges(global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListEntitlementChanges, null, options, request);
+      }
+      /// <summary>
+      /// List entitlement history.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+      /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact CloudChannel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      ///
+      /// Return value:
+      /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse> ListEntitlementChangesAsync(global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEntitlementChangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List entitlement history.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+      /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact CloudChannel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      ///
+      /// Return value:
+      /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse> ListEntitlementChangesAsync(global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListEntitlementChanges, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudChannelServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -7503,7 +7650,8 @@ namespace Google.Cloud.Channel.V1 {
           .AddMethod(__Method_ListPurchasableOffers, serviceImpl.ListPurchasableOffers)
           .AddMethod(__Method_RegisterSubscriber, serviceImpl.RegisterSubscriber)
           .AddMethod(__Method_UnregisterSubscriber, serviceImpl.UnregisterSubscriber)
-          .AddMethod(__Method_ListSubscribers, serviceImpl.ListSubscribers).Build();
+          .AddMethod(__Method_ListSubscribers, serviceImpl.ListSubscribers)
+          .AddMethod(__Method_ListEntitlementChanges, serviceImpl.ListEntitlementChanges).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -7558,6 +7706,7 @@ namespace Google.Cloud.Channel.V1 {
       serviceBinder.AddMethod(__Method_RegisterSubscriber, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse>(serviceImpl.RegisterSubscriber));
       serviceBinder.AddMethod(__Method_UnregisterSubscriber, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest, global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse>(serviceImpl.UnregisterSubscriber));
       serviceBinder.AddMethod(__Method_ListSubscribers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSubscribersRequest, global::Google.Cloud.Channel.V1.ListSubscribersResponse>(serviceImpl.ListSubscribers));
+      serviceBinder.AddMethod(__Method_ListEntitlementChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListEntitlementChangesRequest, global::Google.Cloud.Channel.V1.ListEntitlementChangesResponse>(serviceImpl.ListEntitlementChanges));
     }
 
   }

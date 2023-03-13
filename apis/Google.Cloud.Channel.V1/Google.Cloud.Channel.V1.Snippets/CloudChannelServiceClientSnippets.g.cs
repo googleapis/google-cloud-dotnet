@@ -3198,6 +3198,7 @@ namespace Google.Cloud.Channel.V1.Snippets
                 Parent = "",
                 Filter = "",
                 LanguageCode = "",
+                ShowFutureOffers = false,
             };
             // Make the request
             PagedEnumerable<ListOffersResponse, Offer> response = cloudChannelServiceClient.ListOffers(request);
@@ -3248,6 +3249,7 @@ namespace Google.Cloud.Channel.V1.Snippets
                 Parent = "",
                 Filter = "",
                 LanguageCode = "",
+                ShowFutureOffers = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListOffersResponse, Offer> response = cloudChannelServiceClient.ListOffersAsync(request);
@@ -3637,6 +3639,284 @@ namespace Google.Cloud.Channel.V1.Snippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntitlementChanges</summary>
+        public void ListEntitlementChangesRequestObject()
+        {
+            // Snippet: ListEntitlementChanges(ListEntitlementChangesRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ListEntitlementChangesRequest request = new ListEntitlementChangesRequest
+            {
+                ParentAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> response = cloudChannelServiceClient.ListEntitlementChanges(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EntitlementChange item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEntitlementChangesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntitlementChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntitlementChange> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntitlementChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntitlementChangesAsync</summary>
+        public async Task ListEntitlementChangesRequestObjectAsync()
+        {
+            // Snippet: ListEntitlementChangesAsync(ListEntitlementChangesRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListEntitlementChangesRequest request = new ListEntitlementChangesRequest
+            {
+                ParentAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> response = cloudChannelServiceClient.ListEntitlementChangesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EntitlementChange item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEntitlementChangesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntitlementChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntitlementChange> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntitlementChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntitlementChanges</summary>
+        public void ListEntitlementChanges()
+        {
+            // Snippet: ListEntitlementChanges(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/customers/[CUSTOMER]/entitlements/[ENTITLEMENT]";
+            // Make the request
+            PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> response = cloudChannelServiceClient.ListEntitlementChanges(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EntitlementChange item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEntitlementChangesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntitlementChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntitlementChange> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntitlementChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntitlementChangesAsync</summary>
+        public async Task ListEntitlementChangesAsync()
+        {
+            // Snippet: ListEntitlementChangesAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/customers/[CUSTOMER]/entitlements/[ENTITLEMENT]";
+            // Make the request
+            PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> response = cloudChannelServiceClient.ListEntitlementChangesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EntitlementChange item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEntitlementChangesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntitlementChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntitlementChange> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntitlementChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntitlementChanges</summary>
+        public void ListEntitlementChangesResourceNames()
+        {
+            // Snippet: ListEntitlementChanges(EntitlementName, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            EntitlementName parent = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]");
+            // Make the request
+            PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> response = cloudChannelServiceClient.ListEntitlementChanges(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EntitlementChange item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEntitlementChangesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntitlementChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntitlementChange> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntitlementChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEntitlementChangesAsync</summary>
+        public async Task ListEntitlementChangesResourceNamesAsync()
+        {
+            // Snippet: ListEntitlementChangesAsync(EntitlementName, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EntitlementName parent = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]");
+            // Make the request
+            PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> response = cloudChannelServiceClient.ListEntitlementChangesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EntitlementChange item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEntitlementChangesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EntitlementChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EntitlementChange> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EntitlementChange item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

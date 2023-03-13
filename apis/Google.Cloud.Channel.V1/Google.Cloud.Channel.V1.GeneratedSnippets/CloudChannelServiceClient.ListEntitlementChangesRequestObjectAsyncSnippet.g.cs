@@ -16,14 +16,16 @@
 
 namespace Google.Cloud.Channel.V1.Snippets
 {
-    // [START cloudchannel_v1_generated_CloudChannelService_ListOffers_sync]
+    // [START cloudchannel_v1_generated_CloudChannelService_ListEntitlementChanges_async]
     using Google.Api.Gax;
     using Google.Cloud.Channel.V1;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudChannelServiceClientSnippets
     {
-        /// <summary>Snippet for ListOffers</summary>
+        /// <summary>Snippet for ListEntitlementChangesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,46 +33,44 @@ namespace Google.Cloud.Channel.V1.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListOffersRequestObject()
+        public async Task ListEntitlementChangesRequestObjectAsync()
         {
             // Create client
-            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListOffersRequest request = new ListOffersRequest
+            ListEntitlementChangesRequest request = new ListEntitlementChangesRequest
             {
-                Parent = "",
+                ParentAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
                 Filter = "",
-                LanguageCode = "",
-                ShowFutureOffers = false,
             };
             // Make the request
-            PagedEnumerable<ListOffersResponse, Offer> response = cloudChannelServiceClient.ListOffers(request);
+            PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> response = cloudChannelServiceClient.ListEntitlementChangesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Offer item in response)
+            await response.ForEachAsync((EntitlementChange item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListOffersResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListEntitlementChangesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Offer item in page)
+                foreach (EntitlementChange item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Offer> singlePage = response.ReadPage(pageSize);
+            Page<EntitlementChange> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Offer item in singlePage)
+            foreach (EntitlementChange item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -79,5 +79,5 @@ namespace Google.Cloud.Channel.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END cloudchannel_v1_generated_CloudChannelService_ListOffers_sync]
+    // [END cloudchannel_v1_generated_CloudChannelService_ListEntitlementChanges_async]
 }

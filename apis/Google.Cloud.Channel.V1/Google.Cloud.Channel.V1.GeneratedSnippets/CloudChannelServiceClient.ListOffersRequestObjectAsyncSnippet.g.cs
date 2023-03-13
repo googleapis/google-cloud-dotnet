@@ -43,6 +43,7 @@ namespace Google.Cloud.Channel.V1.Snippets
                 Parent = "",
                 Filter = "",
                 LanguageCode = "",
+                ShowFutureOffers = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListOffersResponse, Offer> response = cloudChannelServiceClient.ListOffersAsync(request);

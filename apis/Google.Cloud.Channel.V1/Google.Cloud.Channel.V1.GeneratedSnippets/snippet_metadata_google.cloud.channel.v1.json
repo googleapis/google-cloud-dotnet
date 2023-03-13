@@ -6632,12 +6632,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 78,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -6681,12 +6681,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 80,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -7162,6 +7162,325 @@
         }
       },
       "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListEntitlementChanges_sync",
+      "title": "ListEntitlementChangesRequestObject",
+      "description": "Snippet for ListEntitlementChanges",
+      "file": "CloudChannelServiceClient.ListEntitlementChangesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementChanges",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListEntitlementChanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListEntitlementChangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListEntitlementChangesResponse, Google.Cloud.Channel.V1.EntitlementChange>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntitlementChanges",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListEntitlementChanges",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListEntitlementChanges_async",
+      "title": "ListEntitlementChangesRequestObjectAsync",
+      "description": "Snippet for ListEntitlementChangesAsync",
+      "file": "CloudChannelServiceClient.ListEntitlementChangesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementChangesAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListEntitlementChangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListEntitlementChangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListEntitlementChangesResponse, Google.Cloud.Channel.V1.EntitlementChange>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntitlementChanges",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListEntitlementChanges",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListEntitlementChanges_sync_flattened",
+      "title": "ListEntitlementChanges",
+      "description": "Snippet for ListEntitlementChanges",
+      "file": "CloudChannelServiceClient.ListEntitlementChangesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementChanges",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListEntitlementChanges",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListEntitlementChangesResponse, Google.Cloud.Channel.V1.EntitlementChange>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntitlementChanges",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListEntitlementChanges",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListEntitlementChanges_async_flattened",
+      "title": "ListEntitlementChangesAsync",
+      "description": "Snippet for ListEntitlementChangesAsync",
+      "file": "CloudChannelServiceClient.ListEntitlementChangesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementChangesAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListEntitlementChangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListEntitlementChangesResponse, Google.Cloud.Channel.V1.EntitlementChange>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntitlementChanges",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListEntitlementChanges",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListEntitlementChanges_sync_flattened_resourceNames",
+      "title": "ListEntitlementChangesResourceNames",
+      "description": "Snippet for ListEntitlementChanges",
+      "file": "CloudChannelServiceClient.ListEntitlementChangesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementChanges",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListEntitlementChanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.EntitlementName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListEntitlementChangesResponse, Google.Cloud.Channel.V1.EntitlementChange>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntitlementChanges",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListEntitlementChanges",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListEntitlementChanges_async_flattened_resourceNames",
+      "title": "ListEntitlementChangesResourceNamesAsync",
+      "description": "Snippet for ListEntitlementChangesAsync",
+      "file": "CloudChannelServiceClient.ListEntitlementChangesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntitlementChangesAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListEntitlementChangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.EntitlementName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListEntitlementChangesResponse, Google.Cloud.Channel.V1.EntitlementChange>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListEntitlementChanges",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListEntitlementChanges",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
       "origin": "API_DEFINITION",
       "segments": [
         {

@@ -181,6 +181,12 @@
                 "ListCustomersAsync"
               ]
             },
+            "ListEntitlementChanges": {
+              "methods": [
+                "ListEntitlementChanges",
+                "ListEntitlementChangesAsync"
+              ]
+            },
             "ListEntitlements": {
               "methods": [
                 "ListEntitlements",

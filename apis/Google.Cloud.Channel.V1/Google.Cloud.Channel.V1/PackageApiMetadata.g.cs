@@ -58,6 +58,7 @@ namespace Google.Cloud.Channel.V1
             yield return ChannelPartnerLinksReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return CustomersReflection.Descriptor;
+            yield return EntitlementChangesReflection.Descriptor;
             yield return EntitlementsReflection.Descriptor;
             yield return OffersReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
