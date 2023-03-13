@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,6 +25,8 @@ using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
+using ProtoFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter;
+using ProtoCompositeFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -998,9 +1000,9 @@ namespace Google.Cloud.Firestore.Tests
                     col.WhereEqualTo("otherfield", 10), // Different field
                     col.WhereLessThan("field",  10), // Different operator
                     col.WhereEqualTo("field", 20), // Different value
+                    col.Select("a") // Query without any filter (query._filters is null).
                 }
             );
-
             query = col.WhereEqualTo("first", "foo").WhereEqualTo("second", "bar");
             EqualityTester.AssertEqual(query,
                 equal: new[] {
@@ -1237,9 +1239,9 @@ namespace Google.Cloud.Firestore.Tests
         // Result reversal and StreamAsync being rejected are handled in integration tests.
 
         private static FieldReference Field(string path) => new FieldReference { FieldPath = path };
-        private static Filter Filter(UnaryFilter filter) => new Filter { UnaryFilter = filter };
-        private static Filter Filter(FieldFilter filter) => new Filter { FieldFilter = filter };
-        private static Filter CompositeFilter(params Filter[] filters) =>
-            new Filter { CompositeFilter = new CompositeFilter { Op = StructuredQuery.Types.CompositeFilter.Types.Operator.And, Filters = { filters } } };
+        private static ProtoFilter Filter(UnaryFilter filter) => new ProtoFilter { UnaryFilter = filter};
+        private static ProtoFilter Filter(FieldFilter filter) => new ProtoFilter { FieldFilter = filter };
+        private static ProtoFilter CompositeFilter(params ProtoFilter[] filters) =>
+            new ProtoFilter { CompositeFilter = new ProtoCompositeFilter { Op = ProtoCompositeFilter.Types.Operator.And, Filters = { filters } } };
     }
 }
