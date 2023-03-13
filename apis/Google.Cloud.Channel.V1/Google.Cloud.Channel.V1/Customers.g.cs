@@ -29,7 +29,7 @@ namespace Google.Cloud.Channel.V1 {
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29nbGUv",
             "Y2xvdWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
             "Zi90aW1lc3RhbXAucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNz",
-            "LnByb3RvItEECghDdXN0b21lchIRCgRuYW1lGAEgASgJQgPgQQMSHQoQb3Jn",
+            "LnByb3RvIu4ECghDdXN0b21lchIRCgRuYW1lGAEgASgJQgPgQQMSHQoQb3Jn",
             "X2Rpc3BsYXlfbmFtZRgCIAEoCUID4EECEjsKEm9yZ19wb3N0YWxfYWRkcmVz",
             "cxgDIAEoCzIaLmdvb2dsZS50eXBlLlBvc3RhbEFkZHJlc3NCA+BBAhJCChRw",
             "cmltYXJ5X2NvbnRhY3RfaW5mbxgEIAEoCzIkLmdvb2dsZS5jbG91ZC5jaGFu",
@@ -40,18 +40,19 @@ namespace Google.Cloud.Channel.V1 {
             "ZF9pZGVudGl0eV9pZBgJIAEoCUID4EEDEhoKDWxhbmd1YWdlX2NvZGUYCiAB",
             "KAlCA+BBARJMChNjbG91ZF9pZGVudGl0eV9pbmZvGAwgASgLMiouZ29vZ2xl",
             "LmNsb3VkLmNoYW5uZWwudjEuQ2xvdWRJZGVudGl0eUluZm9CA+BBAxIaChJj",
-            "aGFubmVsX3BhcnRuZXJfaWQYDSABKAk6UupBTwokY2xvdWRjaGFubmVsLmdv",
-            "b2dsZWFwaXMuY29tL0N1c3RvbWVyEidhY2NvdW50cy97YWNjb3VudH0vY3Vz",
-            "dG9tZXJzL3tjdXN0b21lcn0igQEKC0NvbnRhY3RJbmZvEhIKCmZpcnN0X25h",
-            "bWUYASABKAkSEQoJbGFzdF9uYW1lGAIgASgJEhkKDGRpc3BsYXlfbmFtZRgE",
-            "IAEoCUID4EEDEg0KBWVtYWlsGAUgASgJEhIKBXRpdGxlGAYgASgJQgPgQQES",
-            "DQoFcGhvbmUYByABKAlCZgobY29tLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
-            "Qg5DdXN0b21lcnNQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL2NoYW5u",
-            "ZWwvYXBpdjEvY2hhbm5lbHBiO2NoYW5uZWxwYmIGcHJvdG8z"));
+            "aGFubmVsX3BhcnRuZXJfaWQYDSABKAkSGwoOY29ycmVsYXRpb25faWQYDiAB",
+            "KAlCA+BBATpS6kFPCiRjbG91ZGNoYW5uZWwuZ29vZ2xlYXBpcy5jb20vQ3Vz",
+            "dG9tZXISJ2FjY291bnRzL3thY2NvdW50fS9jdXN0b21lcnMve2N1c3RvbWVy",
+            "fSKBAQoLQ29udGFjdEluZm8SEgoKZmlyc3RfbmFtZRgBIAEoCRIRCglsYXN0",
+            "X25hbWUYAiABKAkSGQoMZGlzcGxheV9uYW1lGAQgASgJQgPgQQMSDQoFZW1h",
+            "aWwYBSABKAkSEgoFdGl0bGUYBiABKAlCA+BBARINCgVwaG9uZRgHIAEoCUJm",
+            "Chtjb20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjFCDkN1c3RvbWVyc1Byb3Rv",
+            "UAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vY2hhbm5lbC9hcGl2MS9jaGFubmVs",
+            "cGI7Y2hhbm5lbHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Customer), global::Google.Cloud.Channel.V1.Customer.Parser, new[]{ "Name", "OrgDisplayName", "OrgPostalAddress", "PrimaryContactInfo", "AlternateEmail", "Domain", "CreateTime", "UpdateTime", "CloudIdentityId", "LanguageCode", "CloudIdentityInfo", "ChannelPartnerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Customer), global::Google.Cloud.Channel.V1.Customer.Parser, new[]{ "Name", "OrgDisplayName", "OrgPostalAddress", "PrimaryContactInfo", "AlternateEmail", "Domain", "CreateTime", "UpdateTime", "CloudIdentityId", "LanguageCode", "CloudIdentityInfo", "ChannelPartnerId", "CorrelationId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ContactInfo), global::Google.Cloud.Channel.V1.ContactInfo.Parser, new[]{ "FirstName", "LastName", "DisplayName", "Email", "Title", "Phone" }, null, null, null, null)
           }));
     }
@@ -108,6 +109,7 @@ namespace Google.Cloud.Channel.V1 {
       languageCode_ = other.languageCode_;
       cloudIdentityInfo_ = other.cloudIdentityInfo_ != null ? other.cloudIdentityInfo_.Clone() : null;
       channelPartnerId_ = other.channelPartnerId_;
+      correlationId_ = other.correlationId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -311,6 +313,22 @@ namespace Google.Cloud.Channel.V1 {
       }
     }
 
+    /// <summary>Field number for the "correlation_id" field.</summary>
+    public const int CorrelationIdFieldNumber = 14;
+    private string correlationId_ = "";
+    /// <summary>
+    /// Optional. External CRM ID for the customer.
+    /// Populated only if a CRM ID exists for this customer.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CorrelationId {
+      get { return correlationId_; }
+      set {
+        correlationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -338,6 +356,7 @@ namespace Google.Cloud.Channel.V1 {
       if (LanguageCode != other.LanguageCode) return false;
       if (!object.Equals(CloudIdentityInfo, other.CloudIdentityInfo)) return false;
       if (ChannelPartnerId != other.ChannelPartnerId) return false;
+      if (CorrelationId != other.CorrelationId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -357,6 +376,7 @@ namespace Google.Cloud.Channel.V1 {
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (cloudIdentityInfo_ != null) hash ^= CloudIdentityInfo.GetHashCode();
       if (ChannelPartnerId.Length != 0) hash ^= ChannelPartnerId.GetHashCode();
+      if (CorrelationId.Length != 0) hash ^= CorrelationId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -423,6 +443,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(106);
         output.WriteString(ChannelPartnerId);
       }
+      if (CorrelationId.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(CorrelationId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -481,6 +505,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(106);
         output.WriteString(ChannelPartnerId);
       }
+      if (CorrelationId.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(CorrelationId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -526,6 +554,9 @@ namespace Google.Cloud.Channel.V1 {
       }
       if (ChannelPartnerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ChannelPartnerId);
+      }
+      if (CorrelationId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CorrelationId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -589,6 +620,9 @@ namespace Google.Cloud.Channel.V1 {
       }
       if (other.ChannelPartnerId.Length != 0) {
         ChannelPartnerId = other.ChannelPartnerId;
+      }
+      if (other.CorrelationId.Length != 0) {
+        CorrelationId = other.CorrelationId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -668,6 +702,10 @@ namespace Google.Cloud.Channel.V1 {
             ChannelPartnerId = input.ReadString();
             break;
           }
+          case 114: {
+            CorrelationId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -744,6 +782,10 @@ namespace Google.Cloud.Channel.V1 {
           }
           case 106: {
             ChannelPartnerId = input.ReadString();
+            break;
+          }
+          case 114: {
+            CorrelationId = input.ReadString();
             break;
           }
         }

@@ -103,6 +103,7 @@ namespace Google.Cloud.Channel.V1
             RegisterSubscriberSettings = existing.RegisterSubscriberSettings;
             UnregisterSubscriberSettings = existing.UnregisterSubscriberSettings;
             ListSubscribersSettings = existing.ListSubscribersSettings;
+            ListEntitlementChangesSettings = existing.ListEntitlementChangesSettings;
             OnCopy(existing);
         }
 
@@ -1081,6 +1082,25 @@ namespace Google.Cloud.Channel.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSubscribersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.ListEntitlementChanges</c> and
+        /// <c>CloudChannelServiceClient.ListEntitlementChangesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEntitlementChangesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudChannelServiceSettings"/> object.</returns>
@@ -7364,6 +7384,230 @@ namespace Google.Cloud.Channel.V1
         /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListSubscribersResponse, string> ListSubscribersAsync(ListSubscribersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List entitlement history.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request and the
+        /// provided reseller account are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+        /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+        /// invalid name parameter.
+        /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact CloudChannel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact Cloud Channel support.
+        /// 
+        /// Return value:
+        /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntitlementChange"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChanges(ListEntitlementChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List entitlement history.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request and the
+        /// provided reseller account are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+        /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+        /// invalid name parameter.
+        /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact CloudChannel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact Cloud Channel support.
+        /// 
+        /// Return value:
+        /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntitlementChange"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChangesAsync(ListEntitlementChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List entitlement history.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request and the
+        /// provided reseller account are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+        /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+        /// invalid name parameter.
+        /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact CloudChannel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact Cloud Channel support.
+        /// 
+        /// Return value:
+        /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the entitlement for which to list
+        /// entitlement changes. The `-` wildcard may be used to match entitlements
+        /// across a customer. Formats:
+        /// 
+        /// * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+        /// * accounts/{account_id}/customers/{customer_id}/entitlements/-
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntitlementChange"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChanges(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEntitlementChanges(new ListEntitlementChangesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List entitlement history.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request and the
+        /// provided reseller account are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+        /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+        /// invalid name parameter.
+        /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact CloudChannel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact Cloud Channel support.
+        /// 
+        /// Return value:
+        /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the entitlement for which to list
+        /// entitlement changes. The `-` wildcard may be used to match entitlements
+        /// across a customer. Formats:
+        /// 
+        /// * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+        /// * accounts/{account_id}/customers/{customer_id}/entitlements/-
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntitlementChange"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChangesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEntitlementChangesAsync(new ListEntitlementChangesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List entitlement history.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request and the
+        /// provided reseller account are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+        /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+        /// invalid name parameter.
+        /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact CloudChannel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact Cloud Channel support.
+        /// 
+        /// Return value:
+        /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the entitlement for which to list
+        /// entitlement changes. The `-` wildcard may be used to match entitlements
+        /// across a customer. Formats:
+        /// 
+        /// * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+        /// * accounts/{account_id}/customers/{customer_id}/entitlements/-
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntitlementChange"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChanges(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEntitlementChanges(new ListEntitlementChangesRequest
+            {
+                ParentAsEntitlementName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List entitlement history.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request and the
+        /// provided reseller account are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+        /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+        /// invalid name parameter.
+        /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact CloudChannel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact Cloud Channel support.
+        /// 
+        /// Return value:
+        /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the entitlement for which to list
+        /// entitlement changes. The `-` wildcard may be used to match entitlements
+        /// across a customer. Formats:
+        /// 
+        /// * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+        /// * accounts/{account_id}/customers/{customer_id}/entitlements/-
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntitlementChange"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChangesAsync(EntitlementName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEntitlementChangesAsync(new ListEntitlementChangesRequest
+            {
+                ParentAsEntitlementName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>CloudChannelService client wrapper implementation, for convenient use.</summary>
@@ -7480,6 +7724,8 @@ namespace Google.Cloud.Channel.V1
         private readonly gaxgrpc::ApiCall<UnregisterSubscriberRequest, UnregisterSubscriberResponse> _callUnregisterSubscriber;
 
         private readonly gaxgrpc::ApiCall<ListSubscribersRequest, ListSubscribersResponse> _callListSubscribers;
+
+        private readonly gaxgrpc::ApiCall<ListEntitlementChangesRequest, ListEntitlementChangesResponse> _callListEntitlementChanges;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudChannelService service, with the specified gRPC client and
@@ -7639,6 +7885,9 @@ namespace Google.Cloud.Channel.V1
             _callListSubscribers = clientHelper.BuildApiCall<ListSubscribersRequest, ListSubscribersResponse>("ListSubscribers", grpcClient.ListSubscribersAsync, grpcClient.ListSubscribers, effectiveSettings.ListSubscribersSettings).WithGoogleRequestParam("account", request => request.Account);
             Modify_ApiCall(ref _callListSubscribers);
             Modify_ListSubscribersApiCall(ref _callListSubscribers);
+            _callListEntitlementChanges = clientHelper.BuildApiCall<ListEntitlementChangesRequest, ListEntitlementChangesResponse>("ListEntitlementChanges", grpcClient.ListEntitlementChangesAsync, grpcClient.ListEntitlementChanges, effectiveSettings.ListEntitlementChangesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEntitlementChanges);
+            Modify_ListEntitlementChangesApiCall(ref _callListEntitlementChanges);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -7734,6 +7983,8 @@ namespace Google.Cloud.Channel.V1
 
         partial void Modify_ListSubscribersApiCall(ref gaxgrpc::ApiCall<ListSubscribersRequest, ListSubscribersResponse> call);
 
+        partial void Modify_ListEntitlementChangesApiCall(ref gaxgrpc::ApiCall<ListEntitlementChangesRequest, ListEntitlementChangesResponse> call);
+
         partial void OnConstruction(CloudChannelService.CloudChannelServiceClient grpcClient, CloudChannelServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudChannelService client</summary>
@@ -7828,6 +8079,8 @@ namespace Google.Cloud.Channel.V1
         partial void Modify_UnregisterSubscriberRequest(ref UnregisterSubscriberRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSubscribersRequest(ref ListSubscribersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListEntitlementChangesRequest(ref ListEntitlementChangesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// List [Customer][google.cloud.channel.v1.Customer]s.
@@ -10593,6 +10846,60 @@ namespace Google.Cloud.Channel.V1
             Modify_ListSubscribersRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubscribersRequest, ListSubscribersResponse, string>(_callListSubscribers, request, callSettings);
         }
+
+        /// <summary>
+        /// List entitlement history.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request and the
+        /// provided reseller account are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+        /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+        /// invalid name parameter.
+        /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact CloudChannel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact Cloud Channel support.
+        /// 
+        /// Return value:
+        /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EntitlementChange"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChanges(ListEntitlementChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEntitlementChangesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEntitlementChangesRequest, ListEntitlementChangesResponse, EntitlementChange>(_callListEntitlementChanges, request, callSettings);
+        }
+
+        /// <summary>
+        /// List entitlement history.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request and the
+        /// provided reseller account are different.
+        /// * INVALID_ARGUMENT: Missing or invalid required fields in the request.
+        /// * NOT_FOUND: The parent resource doesn't exist. Usually the result of an
+        /// invalid name parameter.
+        /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact CloudChannel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+        /// In this case, contact Cloud Channel support.
+        /// 
+        /// Return value:
+        /// List of [EntitlementChange][google.cloud.channel.v1.EntitlementChange]s.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EntitlementChange"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListEntitlementChangesResponse, EntitlementChange> ListEntitlementChangesAsync(ListEntitlementChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEntitlementChangesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEntitlementChangesRequest, ListEntitlementChangesResponse, EntitlementChange>(_callListEntitlementChanges, request, callSettings);
+        }
     }
 
     public partial class ListCustomersRequest : gaxgrpc::IPageRequest
@@ -10644,6 +10951,10 @@ namespace Google.Cloud.Channel.V1
     }
 
     public partial class ListSubscribersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEntitlementChangesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -10748,6 +11059,14 @@ namespace Google.Cloud.Channel.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<string> GetEnumerator() => ServiceAccounts.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEntitlementChangesResponse : gaxgrpc::IPageResponse<EntitlementChange>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EntitlementChange> GetEnumerator() => EntitlementChanges.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
