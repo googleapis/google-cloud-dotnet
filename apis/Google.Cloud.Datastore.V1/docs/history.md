@@ -1,5 +1,17 @@
 # Version history
 
+## Version 4.5.0, released 2023-03-13
+
+### New features
+
+- Add Filter.Or static convenience methods ([issue 9946](https://github.com/googleapis/google-cloud-dotnet/issues/9946)) ([commit 00967cb](https://github.com/googleapis/google-cloud-dotnet/commit/00967cbe9cedd631dc6bbc3bd297db4a87e5d86b))
+- Add `OR` query support (underlying proto API) ([commit 603dee4](https://github.com/googleapis/google-cloud-dotnet/commit/603dee4be049456477c82c6cbd7a3f8e1c334dd6))
+- Add support for count(*) aggregation ([commit 8ee696d](https://github.com/googleapis/google-cloud-dotnet/commit/8ee696dfa57e0f5c80e8024d54ae536f2cd0ec00))
+
+### Documentation improvements
+
+- Minor documentation formatting and cleanup ([commit 603dee4](https://github.com/googleapis/google-cloud-dotnet/commit/603dee4be049456477c82c6cbd7a3f8e1c334dd6))
+
 ## Version 4.4.0, released 2023-01-16
 
 ### New features
