@@ -68,26 +68,19 @@ public class RetryConformanceTest
 
         if (test.ExpectSuccess)
         {
-            Console.WriteLine("**************** STARTED TEST " + method.Name + " ********************");
             RunRetryTest(response, context, method.Group, test.PreconditionProvided);
             var postTestResponse = await GetRetryTestAsync(response.Id);
             Assert.True(postTestResponse.Completed, "Expected retry test completed to be true, but was false.");
-            if (postTestResponse.Completed)
-            {
-                Console.WriteLine("####################  " + method.Name + "  TEST COMPLETED SUCCESSFULLY   ##################");
-            }
         }
         else
         {
             try
             {
-                Console.WriteLine("**************** STARTED TEST " + method.Name + " ********************");
                 RunRetryTest(response, context, method.Group, test.PreconditionProvided);
                 Assert.False(response.Completed);
             }
             catch (GoogleApiException ex) when (InstructionContainsErrorCode(ex.HttpStatusCode))
             {
-                Console.WriteLine("####################  " + method.Name + "  TEST COMPLETED SUCCESSFULLY   ##################");
                 // The instructions specified that the given status code would be returned.
                 // We just need to check that we weren't expecting this specific call to succeed.
             }
@@ -103,7 +96,6 @@ public class RetryConformanceTest
     private async Task<TestResponse> CreateRetryTestResourceAsync(InstructionList instructionList, Method method)
     {
         var stringContent = GetBodyContent(method.Name, instructionList);
-        Console.WriteLine("Creating the resource for method: " + method.Name + " for instructions: " + instructionList.Instructions.ToString());
         HttpResponseMessage response = await _fixture.HttpClient.PostAsync("retry_test", stringContent);
         response.EnsureSuccessStatusCode();
         var responseMessage = await response.Content.ReadAsStringAsync();
@@ -257,7 +249,7 @@ public class RetryConformanceTest
         string CreateBucket(string bucketName)
         {
             Client.CreateBucket(_fixture.ProjectId, new Bucket { Name = bucketName });
-            _fixture.SleepAfterBucketCreateDelete();
+            _fixture.SleepAfterBucketCreate();
             return bucketName;
         }
 
