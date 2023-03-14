@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -101,7 +101,10 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
         /// </summary>
         public List<string> GenerateCode()
         {
-            List<string> code = new List<string>();
+            List<string> code = new List<string>
+            {
+                $"#region {RegionLabel}"
+            };
             var targetParameters = TargetParametersByType[TargetType];
             foreach (var aditionalParametersGroup in AdditionalParametersGroups)
             {
@@ -117,12 +120,15 @@ namespace Google.Cloud.BigQuery.V2.GenerateOverloads
                 code.Add("");
                 GenerateImplementationMethod(code, aditionalParametersGroup, true);
             }
+            code.Add("#endregion");
 
             // Indent everything...
             for (int i = 0; i < code.Count; i++)
             {
-                code[i] = "        " + code[i];
+                code[i] = "    " + code[i];
             }
+            // Add a trailing blank line (removed for the last method later)
+            code.Add("");
             return code;
         }
 
