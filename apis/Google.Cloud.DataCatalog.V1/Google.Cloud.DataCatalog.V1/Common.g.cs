@@ -28,17 +28,20 @@ namespace Google.Cloud.DataCatalog.V1 {
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9wcm90b2J1Zi90",
             "aW1lc3RhbXAucHJvdG8iUQoPUGVyc29uYWxEZXRhaWxzEg8KB3N0YXJyZWQY",
             "ASABKAgSLQoJc3Rhcl90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcCp7ChBJbnRlZ3JhdGVkU3lzdGVtEiEKHUlOVEVHUkFURURfU1lT",
-            "VEVNX1VOU1BFQ0lGSUVEEAASDAoIQklHUVVFUlkQARIQCgxDTE9VRF9QVUJT",
-            "VUIQAhIWChJEQVRBUFJPQ19NRVRBU1RPUkUQAxIMCghEQVRBUExFWBAEQsYB",
-            "Ch9jb20uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaQWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vZGF0YWNhdGFsb2cvYXBpdjEvZGF0YWNhdGFsb2dwYjtk",
-            "YXRhY2F0YWxvZ3Bi+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYx",
-            "ygIbR29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91",
-            "ZDo6RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
+            "bWVzdGFtcCqWAQoQSW50ZWdyYXRlZFN5c3RlbRIhCh1JTlRFR1JBVEVEX1NZ",
+            "U1RFTV9VTlNQRUNJRklFRBAAEgwKCEJJR1FVRVJZEAESEAoMQ0xPVURfUFVC",
+            "U1VCEAISFgoSREFUQVBST0NfTUVUQVNUT1JFEAMSDAoIREFUQVBMRVgQBBIN",
+            "CglDTE9VRF9TUUwQCBIKCgZMT09LRVIQCSpqCg5NYW5hZ2luZ1N5c3RlbRIf",
+            "ChtNQU5BR0lOR19TWVNURU1fVU5TUEVDSUZJRUQQABIcChhNQU5BR0lOR19T",
+            "WVNURU1fREFUQVBMRVgQARIZChVNQU5BR0lOR19TWVNURU1fT1RIRVIQAkLG",
+            "AQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVABWkFjbG91ZC5n",
+            "b29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYxL2RhdGFjYXRhbG9ncGI7",
+            "ZGF0YWNhdGFsb2dwYvgBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5W",
+            "McoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xv",
+            "dWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.IntegratedSystem), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.IntegratedSystem), typeof(global::Google.Cloud.DataCatalog.V1.ManagingSystem), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.PersonalDetails), global::Google.Cloud.DataCatalog.V1.PersonalDetails.Parser, new[]{ "Starred", "StarTime" }, null, null, null, null)
           }));
     }
@@ -70,6 +73,33 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Dataplex.
     /// </summary>
     [pbr::OriginalName("DATAPLEX")] Dataplex = 4,
+    /// <summary>
+    /// Cloud Sql
+    /// </summary>
+    [pbr::OriginalName("CLOUD_SQL")] CloudSql = 8,
+    /// <summary>
+    /// Looker
+    /// </summary>
+    [pbr::OriginalName("LOOKER")] Looker = 9,
+  }
+
+  /// <summary>
+  /// This enum describes all the systems that manage
+  /// Taxonomy and PolicyTag resources in DataCatalog.
+  /// </summary>
+  public enum ManagingSystem {
+    /// <summary>
+    /// Default value
+    /// </summary>
+    [pbr::OriginalName("MANAGING_SYSTEM_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Dataplex.
+    /// </summary>
+    [pbr::OriginalName("MANAGING_SYSTEM_DATAPLEX")] Dataplex = 1,
+    /// <summary>
+    /// Other
+    /// </summary>
+    [pbr::OriginalName("MANAGING_SYSTEM_OTHER")] Other = 2,
   }
 
   #endregion

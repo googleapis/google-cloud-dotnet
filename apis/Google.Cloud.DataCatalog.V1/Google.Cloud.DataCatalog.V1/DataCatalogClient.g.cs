@@ -19,6 +19,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -75,11 +76,15 @@ namespace Google.Cloud.DataCatalog.V1
             UpdateTagSettings = existing.UpdateTagSettings;
             DeleteTagSettings = existing.DeleteTagSettings;
             ListTagsSettings = existing.ListTagsSettings;
+            ReconcileTagsSettings = existing.ReconcileTagsSettings;
+            ReconcileTagsOperationsSettings = existing.ReconcileTagsOperationsSettings.Clone();
             StarEntrySettings = existing.StarEntrySettings;
             UnstarEntrySettings = existing.UnstarEntrySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            ImportEntriesSettings = existing.ImportEntriesSettings;
+            ImportEntriesOperationsSettings = existing.ImportEntriesOperationsSettings.Clone();
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
@@ -454,6 +459,36 @@ namespace Google.Cloud.DataCatalog.V1
         public gaxgrpc::CallSettings ListTagsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataCatalogClient.ReconcileTags</c> and <c>DataCatalogClient.ReconcileTagsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReconcileTagsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataCatalogClient.ReconcileTags</c> and
+        /// <c>DataCatalogClient.ReconcileTagsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ReconcileTagsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataCatalogClient.StarEntry</c>
         ///  and <c>DataCatalogClient.StarEntryAsync</c>.
         /// </summary>
@@ -518,6 +553,42 @@ namespace Google.Cloud.DataCatalog.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataCatalogClient.ImportEntries</c> and <c>DataCatalogClient.ImportEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataCatalogClient.ImportEntries</c> and
+        /// <c>DataCatalogClient.ImportEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportEntriesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
@@ -739,9 +810,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// the request returns an error.
         /// </param>
         /// <param name="query">
-        /// Optional. The query string with a minimum of 3 characters and specific syntax.
-        /// For more information, see
-        /// [Data Catalog search
+        /// Optional. The query string with a minimum of 3 characters and specific
+        /// syntax. For more information, see [Data Catalog search
         /// syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference).
         /// 
         /// An empty query string returns all data assets (in the specified scope)
@@ -797,9 +867,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// the request returns an error.
         /// </param>
         /// <param name="query">
-        /// Optional. The query string with a minimum of 3 characters and specific syntax.
-        /// For more information, see
-        /// [Data Catalog search
+        /// Optional. The query string with a minimum of 3 characters and specific
+        /// syntax. For more information, see [Data Catalog search
         /// syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference).
         /// 
         /// An empty query string returns all data assets (in the specified scope)
@@ -965,7 +1034,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// project](https://cloud.google.com/data-catalog/docs/concepts/resource-project).
         /// </summary>
         /// <param name="parent">
-        /// Required. The names of the project and location that the new entry group belongs to.
+        /// Required. The names of the project and location that the new entry group
+        /// belongs to.
         /// 
         /// Note: The entry group itself and its child resources might not be
         /// stored in the location specified in its name.
@@ -1020,7 +1090,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// project](https://cloud.google.com/data-catalog/docs/concepts/resource-project).
         /// </summary>
         /// <param name="parent">
-        /// Required. The names of the project and location that the new entry group belongs to.
+        /// Required. The names of the project and location that the new entry group
+        /// belongs to.
         /// 
         /// Note: The entry group itself and its child resources might not be
         /// stored in the location specified in its name.
@@ -1075,7 +1146,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// project](https://cloud.google.com/data-catalog/docs/concepts/resource-project).
         /// </summary>
         /// <param name="parent">
-        /// Required. The names of the project and location that the new entry group belongs to.
+        /// Required. The names of the project and location that the new entry group
+        /// belongs to.
         /// 
         /// Note: The entry group itself and its child resources might not be
         /// stored in the location specified in its name.
@@ -1125,7 +1197,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// project](https://cloud.google.com/data-catalog/docs/concepts/resource-project).
         /// </summary>
         /// <param name="parent">
-        /// Required. The names of the project and location that the new entry group belongs to.
+        /// Required. The names of the project and location that the new entry group
+        /// belongs to.
         /// 
         /// Note: The entry group itself and its child resources might not be
         /// stored in the location specified in its name.
@@ -1180,7 +1253,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// project](https://cloud.google.com/data-catalog/docs/concepts/resource-project).
         /// </summary>
         /// <param name="parent">
-        /// Required. The names of the project and location that the new entry group belongs to.
+        /// Required. The names of the project and location that the new entry group
+        /// belongs to.
         /// 
         /// Note: The entry group itself and its child resources might not be
         /// stored in the location specified in its name.
@@ -1235,7 +1309,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// project](https://cloud.google.com/data-catalog/docs/concepts/resource-project).
         /// </summary>
         /// <param name="parent">
-        /// Required. The names of the project and location that the new entry group belongs to.
+        /// Required. The names of the project and location that the new entry group
+        /// belongs to.
         /// 
         /// Note: The entry group itself and its child resources might not be
         /// stored in the location specified in its name.
@@ -4135,8 +4210,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
-        /// template. The following fields are modifiable:
+        /// Optional. Names of fields whose values to overwrite on an individual field
+        /// of a tag template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
@@ -4179,8 +4254,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
-        /// template. The following fields are modifiable:
+        /// Optional. Names of fields whose values to overwrite on an individual field
+        /// of a tag template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
@@ -4223,8 +4298,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
-        /// template. The following fields are modifiable:
+        /// Optional. Names of fields whose values to overwrite on an individual field
+        /// of a tag template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
@@ -4262,8 +4337,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
-        /// template. The following fields are modifiable:
+        /// Optional. Names of fields whose values to overwrite on an individual field
+        /// of a tag template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
@@ -4306,8 +4381,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
-        /// template. The following fields are modifiable:
+        /// Optional. Names of fields whose values to overwrite on an individual field
+        /// of a tag template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
@@ -4350,8 +4425,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
-        /// template. The following fields are modifiable:
+        /// Optional. Names of fields whose values to overwrite on an individual field
+        /// of a tag template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
@@ -4422,7 +4497,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the tag template field.
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4444,7 +4520,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the tag template field.
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4466,7 +4543,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the tag template field.
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4484,7 +4562,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the tag template field.
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4506,7 +4585,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the tag template field.
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4528,7 +4608,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the tag template field.
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4577,7 +4658,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the enum field value.
         /// </param>
         /// <param name="newEnumValueDisplayName">
-        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// Required. The new display name of the enum value. For example,
+        /// `my_new_enum_value`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4597,7 +4679,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the enum field value.
         /// </param>
         /// <param name="newEnumValueDisplayName">
-        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// Required. The new display name of the enum value. For example,
+        /// `my_new_enum_value`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4617,7 +4700,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the enum field value.
         /// </param>
         /// <param name="newEnumValueDisplayName">
-        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// Required. The new display name of the enum value. For example,
+        /// `my_new_enum_value`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4633,7 +4717,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the enum field value.
         /// </param>
         /// <param name="newEnumValueDisplayName">
-        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// Required. The new display name of the enum value. For example,
+        /// `my_new_enum_value`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4653,7 +4738,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the enum field value.
         /// </param>
         /// <param name="newEnumValueDisplayName">
-        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// Required. The new display name of the enum value. For example,
+        /// `my_new_enum_value`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4673,7 +4759,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The name of the enum field value.
         /// </param>
         /// <param name="newEnumValueDisplayName">
-        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// Required. The new display name of the enum value. For example,
+        /// `my_new_enum_value`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5503,6 +5590,95 @@ namespace Google.Cloud.DataCatalog.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// `ReconcileTags` creates or updates a list of tags on the entry.
+        /// If the
+        /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+        /// parameter is set, the operation deletes tags not included in the input tag
+        /// list.
+        /// 
+        /// `ReconcileTags` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return [ReconcileTagsMetadata]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+        /// a [ReconcileTagsResponse]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata> ReconcileTags(ReconcileTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ReconcileTags` creates or updates a list of tags on the entry.
+        /// If the
+        /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+        /// parameter is set, the operation deletes tags not included in the input tag
+        /// list.
+        /// 
+        /// `ReconcileTags` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return [ReconcileTagsMetadata]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+        /// a [ReconcileTagsResponse]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>> ReconcileTagsAsync(ReconcileTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// `ReconcileTags` creates or updates a list of tags on the entry.
+        /// If the
+        /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+        /// parameter is set, the operation deletes tags not included in the input tag
+        /// list.
+        /// 
+        /// `ReconcileTags` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return [ReconcileTagsMetadata]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+        /// a [ReconcileTagsResponse]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>> ReconcileTagsAsync(ReconcileTagsRequest request, st::CancellationToken cancellationToken) =>
+            ReconcileTagsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ReconcileTags</c>.</summary>
+        public virtual lro::OperationsClient ReconcileTagsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ReconcileTags</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata> PollOnceReconcileTags(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReconcileTagsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ReconcileTags</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>> PollOnceReconcileTagsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReconcileTagsOperationsClient, callSettings);
 
         /// <summary>
         /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
@@ -6383,6 +6559,110 @@ namespace Google.Cloud.DataCatalog.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports entries from a source, such as data previously dumped into a
+        /// Cloud Storage bucket, into Data Catalog. Import of entries
+        /// is a sync operation that reconciles the state of the third-party system
+        /// with the Data Catalog.
+        /// 
+        /// `ImportEntries` accepts source data snapshots of a third-party system.
+        /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+        /// containing a sequence of Protocol Buffer messages of
+        /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+        /// 
+        /// `ImportEntries` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return
+        /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+        /// and an
+        /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+        /// message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportEntriesResponse, ImportEntriesMetadata> ImportEntries(ImportEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports entries from a source, such as data previously dumped into a
+        /// Cloud Storage bucket, into Data Catalog. Import of entries
+        /// is a sync operation that reconciles the state of the third-party system
+        /// with the Data Catalog.
+        /// 
+        /// `ImportEntries` accepts source data snapshots of a third-party system.
+        /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+        /// containing a sequence of Protocol Buffer messages of
+        /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+        /// 
+        /// `ImportEntries` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return
+        /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+        /// and an
+        /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+        /// message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>> ImportEntriesAsync(ImportEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports entries from a source, such as data previously dumped into a
+        /// Cloud Storage bucket, into Data Catalog. Import of entries
+        /// is a sync operation that reconciles the state of the third-party system
+        /// with the Data Catalog.
+        /// 
+        /// `ImportEntries` accepts source data snapshots of a third-party system.
+        /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+        /// containing a sequence of Protocol Buffer messages of
+        /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+        /// 
+        /// `ImportEntries` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return
+        /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+        /// and an
+        /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+        /// message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>> ImportEntriesAsync(ImportEntriesRequest request, st::CancellationToken cancellationToken) =>
+            ImportEntriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportEntries</c>.</summary>
+        public virtual lro::OperationsClient ImportEntriesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportEntries</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportEntriesResponse, ImportEntriesMetadata> PollOnceImportEntries(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportEntriesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportEntries</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>> PollOnceImportEntriesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportEntriesOperationsClient, callSettings);
     }
 
     /// <summary>DataCatalog client wrapper implementation, for convenient use.</summary>
@@ -6446,6 +6726,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         private readonly gaxgrpc::ApiCall<ListTagsRequest, ListTagsResponse> _callListTags;
 
+        private readonly gaxgrpc::ApiCall<ReconcileTagsRequest, lro::Operation> _callReconcileTags;
+
         private readonly gaxgrpc::ApiCall<StarEntryRequest, StarEntryResponse> _callStarEntry;
 
         private readonly gaxgrpc::ApiCall<UnstarEntryRequest, UnstarEntryResponse> _callUnstarEntry;
@@ -6455,6 +6737,8 @@ namespace Google.Cloud.DataCatalog.V1
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
+        private readonly gaxgrpc::ApiCall<ImportEntriesRequest, lro::Operation> _callImportEntries;
 
         /// <summary>
         /// Constructs a client wrapper for the DataCatalog service, with the specified gRPC client and settings.
@@ -6467,6 +6751,8 @@ namespace Google.Cloud.DataCatalog.V1
             GrpcClient = grpcClient;
             DataCatalogSettings effectiveSettings = settings ?? DataCatalogSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ReconcileTagsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReconcileTagsOperationsSettings, logger);
+            ImportEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportEntriesOperationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callSearchCatalog = clientHelper.BuildApiCall<SearchCatalogRequest, SearchCatalogResponse>("SearchCatalog", grpcClient.SearchCatalogAsync, grpcClient.SearchCatalog, effectiveSettings.SearchCatalogSettings);
             Modify_ApiCall(ref _callSearchCatalog);
@@ -6549,6 +6835,9 @@ namespace Google.Cloud.DataCatalog.V1
             _callListTags = clientHelper.BuildApiCall<ListTagsRequest, ListTagsResponse>("ListTags", grpcClient.ListTagsAsync, grpcClient.ListTags, effectiveSettings.ListTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTags);
             Modify_ListTagsApiCall(ref _callListTags);
+            _callReconcileTags = clientHelper.BuildApiCall<ReconcileTagsRequest, lro::Operation>("ReconcileTags", grpcClient.ReconcileTagsAsync, grpcClient.ReconcileTags, effectiveSettings.ReconcileTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callReconcileTags);
+            Modify_ReconcileTagsApiCall(ref _callReconcileTags);
             _callStarEntry = clientHelper.BuildApiCall<StarEntryRequest, StarEntryResponse>("StarEntry", grpcClient.StarEntryAsync, grpcClient.StarEntry, effectiveSettings.StarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStarEntry);
             Modify_StarEntryApiCall(ref _callStarEntry);
@@ -6564,6 +6853,9 @@ namespace Google.Cloud.DataCatalog.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callImportEntries = clientHelper.BuildApiCall<ImportEntriesRequest, lro::Operation>("ImportEntries", grpcClient.ImportEntriesAsync, grpcClient.ImportEntries, effectiveSettings.ImportEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportEntries);
+            Modify_ImportEntriesApiCall(ref _callImportEntries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6623,6 +6915,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         partial void Modify_ListTagsApiCall(ref gaxgrpc::ApiCall<ListTagsRequest, ListTagsResponse> call);
 
+        partial void Modify_ReconcileTagsApiCall(ref gaxgrpc::ApiCall<ReconcileTagsRequest, lro::Operation> call);
+
         partial void Modify_StarEntryApiCall(ref gaxgrpc::ApiCall<StarEntryRequest, StarEntryResponse> call);
 
         partial void Modify_UnstarEntryApiCall(ref gaxgrpc::ApiCall<UnstarEntryRequest, UnstarEntryResponse> call);
@@ -6632,6 +6926,8 @@ namespace Google.Cloud.DataCatalog.V1
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
+        partial void Modify_ImportEntriesApiCall(ref gaxgrpc::ApiCall<ImportEntriesRequest, lro::Operation> call);
 
         partial void OnConstruction(DataCatalog.DataCatalogClient grpcClient, DataCatalogSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -6695,6 +6991,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         partial void Modify_ListTagsRequest(ref ListTagsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ReconcileTagsRequest(ref ReconcileTagsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_StarEntryRequest(ref StarEntryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UnstarEntryRequest(ref UnstarEntryRequest request, ref gaxgrpc::CallSettings settings);
@@ -6704,6 +7002,8 @@ namespace Google.Cloud.DataCatalog.V1
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportEntriesRequest(ref ImportEntriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Searches Data Catalog for multiple resources like entries and tags that
@@ -7633,6 +7933,57 @@ namespace Google.Cloud.DataCatalog.V1
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTagsRequest, ListTagsResponse, Tag>(_callListTags, request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>ReconcileTags</c>.</summary>
+        public override lro::OperationsClient ReconcileTagsOperationsClient { get; }
+
+        /// <summary>
+        /// `ReconcileTags` creates or updates a list of tags on the entry.
+        /// If the
+        /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+        /// parameter is set, the operation deletes tags not included in the input tag
+        /// list.
+        /// 
+        /// `ReconcileTags` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return [ReconcileTagsMetadata]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+        /// a [ReconcileTagsResponse]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata> ReconcileTags(ReconcileTagsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReconcileTagsRequest(ref request, ref callSettings);
+            return new lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>(_callReconcileTags.Sync(request, callSettings), ReconcileTagsOperationsClient);
+        }
+
+        /// <summary>
+        /// `ReconcileTags` creates or updates a list of tags on the entry.
+        /// If the
+        /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+        /// parameter is set, the operation deletes tags not included in the input tag
+        /// list.
+        /// 
+        /// `ReconcileTags` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return [ReconcileTagsMetadata]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+        /// a [ReconcileTagsResponse]
+        /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>> ReconcileTagsAsync(ReconcileTagsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReconcileTagsRequest(ref request, ref callSettings);
+            return new lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>(await _callReconcileTags.Async(request, callSettings).ConfigureAwait(false), ReconcileTagsOperationsClient);
+        }
+
         /// <summary>
         /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
         /// the current user. Starring information is private to each user.
@@ -7854,6 +8205,67 @@ namespace Google.Cloud.DataCatalog.V1
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>ImportEntries</c>.</summary>
+        public override lro::OperationsClient ImportEntriesOperationsClient { get; }
+
+        /// <summary>
+        /// Imports entries from a source, such as data previously dumped into a
+        /// Cloud Storage bucket, into Data Catalog. Import of entries
+        /// is a sync operation that reconciles the state of the third-party system
+        /// with the Data Catalog.
+        /// 
+        /// `ImportEntries` accepts source data snapshots of a third-party system.
+        /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+        /// containing a sequence of Protocol Buffer messages of
+        /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+        /// 
+        /// `ImportEntries` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return
+        /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+        /// and an
+        /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+        /// message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportEntriesResponse, ImportEntriesMetadata> ImportEntries(ImportEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportEntriesRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>(_callImportEntries.Sync(request, callSettings), ImportEntriesOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports entries from a source, such as data previously dumped into a
+        /// Cloud Storage bucket, into Data Catalog. Import of entries
+        /// is a sync operation that reconciles the state of the third-party system
+        /// with the Data Catalog.
+        /// 
+        /// `ImportEntries` accepts source data snapshots of a third-party system.
+        /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+        /// containing a sequence of Protocol Buffer messages of
+        /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+        /// 
+        /// `ImportEntries` returns a [long-running operation]
+        /// [google.longrunning.Operation] resource that can be queried with
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+        /// to return
+        /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+        /// and an
+        /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+        /// message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>> ImportEntriesAsync(ImportEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportEntriesRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>(await _callImportEntries.Async(request, callSettings).ConfigureAwait(false), ImportEntriesOperationsClient);
+        }
     }
 
     public partial class SearchCatalogRequest : gaxgrpc::IPageRequest
@@ -7902,6 +8314,20 @@ namespace Google.Cloud.DataCatalog.V1
         public scg::IEnumerator<Tag> GetEnumerator() => Tags.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class DataCatalog
+    {
+        public partial class DataCatalogClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class DataCatalog

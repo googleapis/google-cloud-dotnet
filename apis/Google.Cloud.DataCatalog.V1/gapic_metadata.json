@@ -94,6 +94,12 @@
                 "GetTagTemplateAsync"
               ]
             },
+            "ImportEntries": {
+              "methods": [
+                "ImportEntries",
+                "ImportEntriesAsync"
+              ]
+            },
             "ListEntries": {
               "methods": [
                 "ListEntries",
@@ -128,6 +134,12 @@
               "methods": [
                 "ModifyEntryOverview",
                 "ModifyEntryOverviewAsync"
+              ]
+            },
+            "ReconcileTags": {
+              "methods": [
+                "ReconcileTags",
+                "ReconcileTagsAsync"
               ]
             },
             "RenameTagTemplateField": {

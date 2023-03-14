@@ -360,7 +360,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int GcsTimestampsFieldNumber = 2;
     private global::Google.Cloud.DataCatalog.V1.SystemTimestamps gcsTimestamps_;
     /// <summary>
-    /// Output only. Creation, modification, and expiration timestamps of a Cloud Storage file.
+    /// Output only. Creation, modification, and expiration timestamps of a Cloud
+    /// Storage file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
