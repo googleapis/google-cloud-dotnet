@@ -7884,6 +7884,103 @@
       ]
     },
     {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_ReconcileTags_sync",
+      "title": "ReconcileTagsRequestObject",
+      "description": "Snippet for ReconcileTags",
+      "file": "DataCatalogClient.ReconcileTagsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReconcileTags",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ReconcileTags",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ReconcileTagsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DataCatalog.V1.ReconcileTagsResponse, Google.Cloud.DataCatalog.V1.ReconcileTagsMetadata>",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "ReconcileTags",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.ReconcileTags",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_ReconcileTags_async",
+      "title": "ReconcileTagsRequestObjectAsync",
+      "description": "Snippet for ReconcileTagsAsync",
+      "file": "DataCatalogClient.ReconcileTagsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReconcileTagsAsync",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ReconcileTagsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ReconcileTagsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataCatalog.V1.ReconcileTagsResponse, Google.Cloud.DataCatalog.V1.ReconcileTagsMetadata>>",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "ReconcileTags",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.ReconcileTags",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "datacatalog_v1_generated_DataCatalog_StarEntry_sync",
       "title": "StarEntryRequestObject",
       "description": "Snippet for StarEntry",
@@ -9145,6 +9242,103 @@
       ]
     },
     {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_ImportEntries_sync",
+      "title": "ImportEntriesRequestObject",
+      "description": "Snippet for ImportEntries",
+      "file": "DataCatalogClient.ImportEntriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntries",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ImportEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ImportEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DataCatalog.V1.ImportEntriesResponse, Google.Cloud.DataCatalog.V1.ImportEntriesMetadata>",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "ImportEntries",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.ImportEntries",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datacatalog_v1_generated_DataCatalog_ImportEntries_async",
+      "title": "ImportEntriesRequestObjectAsync",
+      "description": "Snippet for ImportEntriesAsync",
+      "file": "DataCatalogClient.ImportEntriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntriesAsync",
+        "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient.ImportEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DataCatalog.V1.ImportEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DataCatalog.V1.ImportEntriesResponse, Google.Cloud.DataCatalog.V1.ImportEntriesMetadata>>",
+        "client": {
+          "shortName": "DataCatalogClient",
+          "fullName": "Google.Cloud.DataCatalog.V1.DataCatalogClient"
+        },
+        "method": {
+          "shortName": "ImportEntries",
+          "fullName": "google.cloud.datacatalog.v1.DataCatalog.ImportEntries",
+          "service": {
+            "shortName": "DataCatalog",
+            "fullName": "google.cloud.datacatalog.v1.DataCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "datacatalog_v1_generated_PolicyTagManager_CreateTaxonomy_sync",
       "title": "CreateTaxonomyRequestObject",
       "description": "Snippet for CreateTaxonomy",
@@ -9961,12 +10155,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -10010,12 +10204,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]

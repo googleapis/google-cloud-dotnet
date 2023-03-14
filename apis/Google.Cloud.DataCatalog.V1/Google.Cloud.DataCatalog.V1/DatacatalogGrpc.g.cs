@@ -143,6 +143,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListTagsResponse> __Marshaller_google_cloud_datacatalog_v1_ListTagsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ListTagsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest> __Marshaller_google_cloud_datacatalog_v1_ReconcileTagsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.StarEntryRequest> __Marshaller_google_cloud_datacatalog_v1_StarEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.StarEntryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.StarEntryResponse> __Marshaller_google_cloud_datacatalog_v1_StarEntryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.StarEntryResponse.Parser));
@@ -160,6 +164,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest> __Marshaller_google_cloud_datacatalog_v1_ImportEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest, global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse> __Method_SearchCatalog = new grpc::Method<global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest, global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse>(
@@ -378,6 +384,14 @@ namespace Google.Cloud.DataCatalog.V1 {
         __Marshaller_google_cloud_datacatalog_v1_ListTagsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest, global::Google.LongRunning.Operation> __Method_ReconcileTags = new grpc::Method<global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReconcileTags",
+        __Marshaller_google_cloud_datacatalog_v1_ReconcileTagsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.StarEntryRequest, global::Google.Cloud.DataCatalog.V1.StarEntryResponse> __Method_StarEntry = new grpc::Method<global::Google.Cloud.DataCatalog.V1.StarEntryRequest, global::Google.Cloud.DataCatalog.V1.StarEntryResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -416,6 +430,14 @@ namespace Google.Cloud.DataCatalog.V1 {
         "TestIamPermissions",
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest, global::Google.LongRunning.Operation> __Method_ImportEntries = new grpc::Method<global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportEntries",
+        __Marshaller_google_cloud_datacatalog_v1_ImportEntriesRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -892,6 +914,30 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
+      /// `ReconcileTags` creates or updates a list of tags on the entry.
+      /// If the
+      /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+      /// parameter is set, the operation deletes tags not included in the input tag
+      /// list.
+      ///
+      /// `ReconcileTags` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return [ReconcileTagsMetadata]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+      /// a [ReconcileTagsResponse]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReconcileTags(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
       /// the current user. Starring information is private to each user.
       /// </summary>
@@ -998,6 +1044,35 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports entries from a source, such as data previously dumped into a
+      /// Cloud Storage bucket, into Data Catalog. Import of entries
+      /// is a sync operation that reconciles the state of the third-party system
+      /// with the Data Catalog.
+      ///
+      /// `ImportEntries` accepts source data snapshots of a third-party system.
+      /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+      /// containing a sequence of Protocol Buffer messages of
+      /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+      ///
+      /// `ImportEntries` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return
+      /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+      /// and an
+      /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+      /// message.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportEntries(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2888,6 +2963,102 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTags, null, options, request);
       }
       /// <summary>
+      /// `ReconcileTags` creates or updates a list of tags on the entry.
+      /// If the
+      /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+      /// parameter is set, the operation deletes tags not included in the input tag
+      /// list.
+      ///
+      /// `ReconcileTags` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return [ReconcileTagsMetadata]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+      /// a [ReconcileTagsResponse]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ReconcileTags(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReconcileTags(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ReconcileTags` creates or updates a list of tags on the entry.
+      /// If the
+      /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+      /// parameter is set, the operation deletes tags not included in the input tag
+      /// list.
+      ///
+      /// `ReconcileTags` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return [ReconcileTagsMetadata]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+      /// a [ReconcileTagsResponse]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ReconcileTags(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReconcileTags, null, options, request);
+      }
+      /// <summary>
+      /// `ReconcileTags` creates or updates a list of tags on the entry.
+      /// If the
+      /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+      /// parameter is set, the operation deletes tags not included in the input tag
+      /// list.
+      ///
+      /// `ReconcileTags` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return [ReconcileTagsMetadata]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+      /// a [ReconcileTagsResponse]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReconcileTagsAsync(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReconcileTagsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// `ReconcileTags` creates or updates a list of tags on the entry.
+      /// If the
+      /// [ReconcileTagsRequest.force_delete_missing][google.cloud.datacatalog.v1.ReconcileTagsRequest.force_delete_missing]
+      /// parameter is set, the operation deletes tags not included in the input tag
+      /// list.
+      ///
+      /// `ReconcileTags` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return [ReconcileTagsMetadata]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsMetadata] and
+      /// a [ReconcileTagsResponse]
+      /// [google.cloud.datacatalog.v1.ReconcileTagsResponse] message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReconcileTagsAsync(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReconcileTags, null, options, request);
+      }
+      /// <summary>
       /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
       /// the current user. Starring information is private to each user.
       /// </summary>
@@ -3331,6 +3502,122 @@ namespace Google.Cloud.DataCatalog.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
+      /// <summary>
+      /// Imports entries from a source, such as data previously dumped into a
+      /// Cloud Storage bucket, into Data Catalog. Import of entries
+      /// is a sync operation that reconciles the state of the third-party system
+      /// with the Data Catalog.
+      ///
+      /// `ImportEntries` accepts source data snapshots of a third-party system.
+      /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+      /// containing a sequence of Protocol Buffer messages of
+      /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+      ///
+      /// `ImportEntries` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return
+      /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+      /// and an
+      /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+      /// message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportEntries(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports entries from a source, such as data previously dumped into a
+      /// Cloud Storage bucket, into Data Catalog. Import of entries
+      /// is a sync operation that reconciles the state of the third-party system
+      /// with the Data Catalog.
+      ///
+      /// `ImportEntries` accepts source data snapshots of a third-party system.
+      /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+      /// containing a sequence of Protocol Buffer messages of
+      /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+      ///
+      /// `ImportEntries` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return
+      /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+      /// and an
+      /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+      /// message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportEntries(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportEntries, null, options, request);
+      }
+      /// <summary>
+      /// Imports entries from a source, such as data previously dumped into a
+      /// Cloud Storage bucket, into Data Catalog. Import of entries
+      /// is a sync operation that reconciles the state of the third-party system
+      /// with the Data Catalog.
+      ///
+      /// `ImportEntries` accepts source data snapshots of a third-party system.
+      /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+      /// containing a sequence of Protocol Buffer messages of
+      /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+      ///
+      /// `ImportEntries` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return
+      /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+      /// and an
+      /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+      /// message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportEntriesAsync(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports entries from a source, such as data previously dumped into a
+      /// Cloud Storage bucket, into Data Catalog. Import of entries
+      /// is a sync operation that reconciles the state of the third-party system
+      /// with the Data Catalog.
+      ///
+      /// `ImportEntries` accepts source data snapshots of a third-party system.
+      /// Snapshot should be delivered as a .wire or base65-encoded .txt file
+      /// containing a sequence of Protocol Buffer messages of
+      /// [DumpItem][google.cloud.datacatalog.v1.DumpItem] type.
+      ///
+      /// `ImportEntries` returns a [long-running operation]
+      /// [google.longrunning.Operation] resource that can be queried with
+      /// [Operations.GetOperation][google.longrunning.Operations.GetOperation]
+      /// to return
+      /// [ImportEntriesMetadata][google.cloud.datacatalog.v1.ImportEntriesMetadata]
+      /// and an
+      /// [ImportEntriesResponse][google.cloud.datacatalog.v1.ImportEntriesResponse]
+      /// message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportEntriesAsync(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportEntries, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataCatalogClient NewInstance(ClientBaseConfiguration configuration)
@@ -3372,11 +3659,13 @@ namespace Google.Cloud.DataCatalog.V1 {
           .AddMethod(__Method_UpdateTag, serviceImpl.UpdateTag)
           .AddMethod(__Method_DeleteTag, serviceImpl.DeleteTag)
           .AddMethod(__Method_ListTags, serviceImpl.ListTags)
+          .AddMethod(__Method_ReconcileTags, serviceImpl.ReconcileTags)
           .AddMethod(__Method_StarEntry, serviceImpl.StarEntry)
           .AddMethod(__Method_UnstarEntry, serviceImpl.UnstarEntry)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
-          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_ImportEntries, serviceImpl.ImportEntries).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3413,11 +3702,13 @@ namespace Google.Cloud.DataCatalog.V1 {
       serviceBinder.AddMethod(__Method_UpdateTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.UpdateTagRequest, global::Google.Cloud.DataCatalog.V1.Tag>(serviceImpl.UpdateTag));
       serviceBinder.AddMethod(__Method_DeleteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTag));
       serviceBinder.AddMethod(__Method_ListTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ListTagsRequest, global::Google.Cloud.DataCatalog.V1.ListTagsResponse>(serviceImpl.ListTags));
+      serviceBinder.AddMethod(__Method_ReconcileTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest, global::Google.LongRunning.Operation>(serviceImpl.ReconcileTags));
       serviceBinder.AddMethod(__Method_StarEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.StarEntryRequest, global::Google.Cloud.DataCatalog.V1.StarEntryResponse>(serviceImpl.StarEntry));
       serviceBinder.AddMethod(__Method_UnstarEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest, global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse>(serviceImpl.UnstarEntry));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_ImportEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportEntries));
     }
 
   }

@@ -243,8 +243,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "integrated_system" field.</summary>
     public const int IntegratedSystemFieldNumber = 8;
     /// <summary>
-    /// Output only. The source system that Data Catalog automatically integrates  with, such
-    /// as BigQuery, Cloud Pub/Sub, or Dataproc Metastore.
+    /// Output only. The source system that Data Catalog automatically integrates
+    /// with, such as BigQuery, Cloud Pub/Sub, or Dataproc Metastore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

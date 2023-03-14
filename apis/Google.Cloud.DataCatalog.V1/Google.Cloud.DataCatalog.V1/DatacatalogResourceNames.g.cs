@@ -1070,6 +1070,25 @@ namespace Google.Cloud.DataCatalog.V1
         }
     }
 
+    public partial class ReconcileTagsRequest
+    {
+        /// <summary><see cref="EntryName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public EntryName ParentAsEntryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EntryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="TagTemplateName"/>-typed view over the <see cref="TagTemplate"/> resource name property.
+        /// </summary>
+        public TagTemplateName TagTemplateAsTagTemplateName
+        {
+            get => string.IsNullOrEmpty(TagTemplate) ? null : TagTemplateName.Parse(TagTemplate, allowUnparsed: true);
+            set => TagTemplate = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListEntriesRequest
     {
         /// <summary>
@@ -1103,6 +1122,18 @@ namespace Google.Cloud.DataCatalog.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportEntriesRequest
+    {
+        /// <summary>
+        /// <see cref="EntryGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EntryGroupName ParentAsEntryGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EntryGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 

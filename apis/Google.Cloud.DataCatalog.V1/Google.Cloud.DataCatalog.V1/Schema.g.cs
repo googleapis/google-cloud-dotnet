@@ -27,21 +27,36 @@ namespace Google.Cloud.DataCatalog.V1 {
             "Cihnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvc2NoZW1hLnByb3RvEhtn",
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8iRAoGU2NoZW1hEjoKB2NvbHVtbnMYAiADKAsyKS5n",
-            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQ29sdW1uU2NoZW1hIqcBCgxD",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQ29sdW1uU2NoZW1hItEGCgxD",
             "b2x1bW5TY2hlbWESEwoGY29sdW1uGAYgASgJQgPgQQISEQoEdHlwZRgBIAEo",
             "CUID4EECEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQESEQoEbW9kZRgDIAEo",
-            "CUID4EEBEkIKCnN1YmNvbHVtbnMYByADKAsyKS5nb29nbGUuY2xvdWQuZGF0",
-            "YWNhdGFsb2cudjEuQ29sdW1uU2NoZW1hQgPgQQFCxgEKH2NvbS5nb29nbGUu",
-            "Y2xvdWQuZGF0YWNhdGFsb2cudjFQAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
-            "YXRhY2F0YWxvZy9hcGl2MS9kYXRhY2F0YWxvZ3BiO2RhdGFjYXRhbG9ncGL4",
-            "AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xv",
-            "dWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxv",
-            "Zzo6VjFiBnByb3RvMw=="));
+            "CUID4EEBEhoKDWRlZmF1bHRfdmFsdWUYCCABKAlCA+BBARIdChBvcmRpbmFs",
+            "X3Bvc2l0aW9uGAkgASgFQgPgQQESWgoVaGlnaGVzdF9pbmRleGluZ190eXBl",
+            "GAogASgOMjYuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkNvbHVtblNj",
+            "aGVtYS5JbmRleGluZ1R5cGVCA+BBARJCCgpzdWJjb2x1bW5zGAcgAygLMiku",
+            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkNvbHVtblNjaGVtYUID4EEB",
+            "ElgKEmxvb2tlcl9jb2x1bW5fc3BlYxgSIAEoCzI6Lmdvb2dsZS5jbG91ZC5k",
+            "YXRhY2F0YWxvZy52MS5Db2x1bW5TY2hlbWEuTG9va2VyQ29sdW1uU3BlY0gA",
+            "EhQKB2djX3J1bGUYCyABKAlCA+BBARryAQoQTG9va2VyQ29sdW1uU3BlYxJZ",
+            "CgR0eXBlGAEgASgOMksuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkNv",
+            "bHVtblNjaGVtYS5Mb29rZXJDb2x1bW5TcGVjLkxvb2tlckNvbHVtblR5cGUi",
+            "ggEKEExvb2tlckNvbHVtblR5cGUSIgoeTE9PS0VSX0NPTFVNTl9UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASDQoJRElNRU5TSU9OEAESEwoPRElNRU5TSU9OX0dST1VQ",
+            "EAISCgoGRklMVEVSEAMSCwoHTUVBU1VSRRAEEg0KCVBBUkFNRVRFUhAFIpwB",
+            "CgxJbmRleGluZ1R5cGUSHQoZSU5ERVhJTkdfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EhYKEklOREVYSU5HX1RZUEVfTk9ORRABEhwKGElOREVYSU5HX1RZUEVfTk9O",
+            "X1VOSVFVRRACEhgKFElOREVYSU5HX1RZUEVfVU5JUVVFEAMSHQoZSU5ERVhJ",
+            "TkdfVFlQRV9QUklNQVJZX0tFWRAEQg0KC3N5c3RlbV9zcGVjQsYBCh9jb20u",
+            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaQWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vZGF0YWNhdGFsb2cvYXBpdjEvZGF0YWNhdGFsb2dwYjtkYXRhY2F0",
+            "YWxvZ3Bi+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIbR29v",
+            "Z2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6RGF0",
+            "YUNhdGFsb2c6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Schema), global::Google.Cloud.DataCatalog.V1.Schema.Parser, new[]{ "Columns" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.ColumnSchema), global::Google.Cloud.DataCatalog.V1.ColumnSchema.Parser, new[]{ "Column", "Type", "Description", "Mode", "Subcolumns" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.ColumnSchema), global::Google.Cloud.DataCatalog.V1.ColumnSchema.Parser, new[]{ "Column", "Type", "Description", "Mode", "DefaultValue", "OrdinalPosition", "HighestIndexingType", "Subcolumns", "LookerColumnSpec", "GcRule" }, new[]{ "SystemSpec" }, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec), global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType) }, null, null)})
           }));
     }
     #endregion
@@ -277,7 +292,17 @@ namespace Google.Cloud.DataCatalog.V1 {
       type_ = other.type_;
       description_ = other.description_;
       mode_ = other.mode_;
+      defaultValue_ = other.defaultValue_;
+      ordinalPosition_ = other.ordinalPosition_;
+      highestIndexingType_ = other.highestIndexingType_;
       subcolumns_ = other.subcolumns_.Clone();
+      gcRule_ = other.gcRule_;
+      switch (other.SystemSpecCase) {
+        case SystemSpecOneofCase.LookerColumnSpec:
+          LookerColumnSpec = other.LookerColumnSpec.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -344,8 +369,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ModeFieldNumber = 3;
     private string mode_ = "";
     /// <summary>
-    /// Optional. A column's mode indicates whether values in this column are required,
-    /// nullable, or repeated.
+    /// Optional. A column's mode indicates whether values in this column are
+    /// required, nullable, or repeated.
     ///
     /// Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported.
     /// Default mode is `NULLABLE`.
@@ -359,18 +384,115 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
     }
 
+    /// <summary>Field number for the "default_value" field.</summary>
+    public const int DefaultValueFieldNumber = 8;
+    private string defaultValue_ = "";
+    /// <summary>
+    /// Optional. Default value for the column.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DefaultValue {
+      get { return defaultValue_; }
+      set {
+        defaultValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ordinal_position" field.</summary>
+    public const int OrdinalPositionFieldNumber = 9;
+    private int ordinalPosition_;
+    /// <summary>
+    /// Optional. Ordinal position
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int OrdinalPosition {
+      get { return ordinalPosition_; }
+      set {
+        ordinalPosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "highest_indexing_type" field.</summary>
+    public const int HighestIndexingTypeFieldNumber = 10;
+    private global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType highestIndexingType_ = global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType.Unspecified;
+    /// <summary>
+    /// Optional. Most important inclusion of this column.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType HighestIndexingType {
+      get { return highestIndexingType_; }
+      set {
+        highestIndexingType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "subcolumns" field.</summary>
     public const int SubcolumnsFieldNumber = 7;
     private static readonly pb::FieldCodec<global::Google.Cloud.DataCatalog.V1.ColumnSchema> _repeated_subcolumns_codec
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.DataCatalog.V1.ColumnSchema.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.ColumnSchema> subcolumns_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.ColumnSchema>();
     /// <summary>
-    /// Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+    /// Optional. Schema of sub-columns. A column can have zero or more
+    /// sub-columns.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.ColumnSchema> Subcolumns {
       get { return subcolumns_; }
+    }
+
+    /// <summary>Field number for the "looker_column_spec" field.</summary>
+    public const int LookerColumnSpecFieldNumber = 18;
+    /// <summary>
+    /// Looker specific column info of this column.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec LookerColumnSpec {
+      get { return systemSpecCase_ == SystemSpecOneofCase.LookerColumnSpec ? (global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec) systemSpec_ : null; }
+      set {
+        systemSpec_ = value;
+        systemSpecCase_ = value == null ? SystemSpecOneofCase.None : SystemSpecOneofCase.LookerColumnSpec;
+      }
+    }
+
+    /// <summary>Field number for the "gc_rule" field.</summary>
+    public const int GcRuleFieldNumber = 11;
+    private string gcRule_ = "";
+    /// <summary>
+    /// Optional. Garbage collection policy for the column or column family.
+    /// Applies to systems like Cloud Bigtable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GcRule {
+      get { return gcRule_; }
+      set {
+        gcRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object systemSpec_;
+    /// <summary>Enum of possible cases for the "system_spec" oneof.</summary>
+    public enum SystemSpecOneofCase {
+      None = 0,
+      LookerColumnSpec = 18,
+    }
+    private SystemSpecOneofCase systemSpecCase_ = SystemSpecOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SystemSpecOneofCase SystemSpecCase {
+      get { return systemSpecCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSystemSpec() {
+      systemSpecCase_ = SystemSpecOneofCase.None;
+      systemSpec_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -392,7 +514,13 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Type != other.Type) return false;
       if (Description != other.Description) return false;
       if (Mode != other.Mode) return false;
+      if (DefaultValue != other.DefaultValue) return false;
+      if (OrdinalPosition != other.OrdinalPosition) return false;
+      if (HighestIndexingType != other.HighestIndexingType) return false;
       if(!subcolumns_.Equals(other.subcolumns_)) return false;
+      if (!object.Equals(LookerColumnSpec, other.LookerColumnSpec)) return false;
+      if (GcRule != other.GcRule) return false;
+      if (SystemSpecCase != other.SystemSpecCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -404,7 +532,13 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Mode.Length != 0) hash ^= Mode.GetHashCode();
+      if (DefaultValue.Length != 0) hash ^= DefaultValue.GetHashCode();
+      if (OrdinalPosition != 0) hash ^= OrdinalPosition.GetHashCode();
+      if (HighestIndexingType != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType.Unspecified) hash ^= HighestIndexingType.GetHashCode();
       hash ^= subcolumns_.GetHashCode();
+      if (systemSpecCase_ == SystemSpecOneofCase.LookerColumnSpec) hash ^= LookerColumnSpec.GetHashCode();
+      if (GcRule.Length != 0) hash ^= GcRule.GetHashCode();
+      hash ^= (int) systemSpecCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -440,6 +574,26 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Column);
       }
       subcolumns_.WriteTo(output, _repeated_subcolumns_codec);
+      if (DefaultValue.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DefaultValue);
+      }
+      if (OrdinalPosition != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(OrdinalPosition);
+      }
+      if (HighestIndexingType != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) HighestIndexingType);
+      }
+      if (GcRule.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(GcRule);
+      }
+      if (systemSpecCase_ == SystemSpecOneofCase.LookerColumnSpec) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(LookerColumnSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -467,6 +621,26 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Column);
       }
       subcolumns_.WriteTo(ref output, _repeated_subcolumns_codec);
+      if (DefaultValue.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DefaultValue);
+      }
+      if (OrdinalPosition != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(OrdinalPosition);
+      }
+      if (HighestIndexingType != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) HighestIndexingType);
+      }
+      if (GcRule.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(GcRule);
+      }
+      if (systemSpecCase_ == SystemSpecOneofCase.LookerColumnSpec) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(LookerColumnSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -489,7 +663,22 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Mode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Mode);
       }
+      if (DefaultValue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultValue);
+      }
+      if (OrdinalPosition != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OrdinalPosition);
+      }
+      if (HighestIndexingType != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HighestIndexingType);
+      }
       size += subcolumns_.CalculateSize(_repeated_subcolumns_codec);
+      if (systemSpecCase_ == SystemSpecOneofCase.LookerColumnSpec) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(LookerColumnSpec);
+      }
+      if (GcRule.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GcRule);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -514,7 +703,28 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (other.Mode.Length != 0) {
         Mode = other.Mode;
       }
+      if (other.DefaultValue.Length != 0) {
+        DefaultValue = other.DefaultValue;
+      }
+      if (other.OrdinalPosition != 0) {
+        OrdinalPosition = other.OrdinalPosition;
+      }
+      if (other.HighestIndexingType != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType.Unspecified) {
+        HighestIndexingType = other.HighestIndexingType;
+      }
       subcolumns_.Add(other.subcolumns_);
+      if (other.GcRule.Length != 0) {
+        GcRule = other.GcRule;
+      }
+      switch (other.SystemSpecCase) {
+        case SystemSpecOneofCase.LookerColumnSpec:
+          if (LookerColumnSpec == null) {
+            LookerColumnSpec = new global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec();
+          }
+          LookerColumnSpec.MergeFrom(other.LookerColumnSpec);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -548,6 +758,31 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 58: {
             subcolumns_.AddEntriesFrom(input, _repeated_subcolumns_codec);
+            break;
+          }
+          case 66: {
+            DefaultValue = input.ReadString();
+            break;
+          }
+          case 72: {
+            OrdinalPosition = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            HighestIndexingType = (global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            GcRule = input.ReadString();
+            break;
+          }
+          case 146: {
+            global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec();
+            if (systemSpecCase_ == SystemSpecOneofCase.LookerColumnSpec) {
+              subBuilder.MergeFrom(LookerColumnSpec);
+            }
+            input.ReadMessage(subBuilder);
+            LookerColumnSpec = subBuilder;
             break;
           }
         }
@@ -585,10 +820,302 @@ namespace Google.Cloud.DataCatalog.V1 {
             subcolumns_.AddEntriesFrom(ref input, _repeated_subcolumns_codec);
             break;
           }
+          case 66: {
+            DefaultValue = input.ReadString();
+            break;
+          }
+          case 72: {
+            OrdinalPosition = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            HighestIndexingType = (global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.IndexingType) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            GcRule = input.ReadString();
+            break;
+          }
+          case 146: {
+            global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec();
+            if (systemSpecCase_ == SystemSpecOneofCase.LookerColumnSpec) {
+              subBuilder.MergeFrom(LookerColumnSpec);
+            }
+            input.ReadMessage(subBuilder);
+            LookerColumnSpec = subBuilder;
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ColumnSchema message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specifies inclusion of the column in an index
+      /// </summary>
+      public enum IndexingType {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("INDEXING_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Column not a part of an index.
+        /// </summary>
+        [pbr::OriginalName("INDEXING_TYPE_NONE")] None = 1,
+        /// <summary>
+        /// Column Part of non unique index.
+        /// </summary>
+        [pbr::OriginalName("INDEXING_TYPE_NON_UNIQUE")] NonUnique = 2,
+        /// <summary>
+        /// Column part of unique index.
+        /// </summary>
+        [pbr::OriginalName("INDEXING_TYPE_UNIQUE")] Unique = 3,
+        /// <summary>
+        /// Column part of the primary key.
+        /// </summary>
+        [pbr::OriginalName("INDEXING_TYPE_PRIMARY_KEY")] PrimaryKey = 4,
+      }
+
+      /// <summary>
+      /// Column info specific to Looker System.
+      /// </summary>
+      public sealed partial class LookerColumnSpec : pb::IMessage<LookerColumnSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<LookerColumnSpec> _parser = new pb::MessageParser<LookerColumnSpec>(() => new LookerColumnSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<LookerColumnSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DataCatalog.V1.ColumnSchema.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LookerColumnSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LookerColumnSpec(LookerColumnSpec other) : this() {
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LookerColumnSpec Clone() {
+          return new LookerColumnSpec(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType type_ = global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType.Unspecified;
+        /// <summary>
+        /// Looker specific column type of this column.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as LookerColumnSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(LookerColumnSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(LookerColumnSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.DataCatalog.V1.ColumnSchema.Types.LookerColumnSpec.Types.LookerColumnType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the LookerColumnSpec message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Column type in Looker.
+          /// </summary>
+          public enum LookerColumnType {
+            /// <summary>
+            /// Unspecified.
+            /// </summary>
+            [pbr::OriginalName("LOOKER_COLUMN_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Dimension.
+            /// </summary>
+            [pbr::OriginalName("DIMENSION")] Dimension = 1,
+            /// <summary>
+            /// Dimension group - parent for Dimension.
+            /// </summary>
+            [pbr::OriginalName("DIMENSION_GROUP")] DimensionGroup = 2,
+            /// <summary>
+            /// Filter.
+            /// </summary>
+            [pbr::OriginalName("FILTER")] Filter = 3,
+            /// <summary>
+            /// Measure.
+            /// </summary>
+            [pbr::OriginalName("MEASURE")] Measure = 4,
+            /// <summary>
+            /// Parameter.
+            /// </summary>
+            [pbr::OriginalName("PARAMETER")] Parameter = 5,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 

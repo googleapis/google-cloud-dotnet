@@ -19,6 +19,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -3112,6 +3113,77 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReconcileTags</summary>
+        public void ReconcileTagsRequestObject()
+        {
+            // Snippet: ReconcileTags(ReconcileTagsRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            ReconcileTagsRequest request = new ReconcileTagsRequest
+            {
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                TagTemplateAsTagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
+                ForceDeleteMissing = false,
+                Tags = { new Tag(), },
+            };
+            // Make the request
+            Operation<ReconcileTagsResponse, ReconcileTagsMetadata> response = dataCatalogClient.ReconcileTags(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ReconcileTagsResponse, ReconcileTagsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ReconcileTagsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ReconcileTagsResponse, ReconcileTagsMetadata> retrievedResponse = dataCatalogClient.PollOnceReconcileTags(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ReconcileTagsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReconcileTagsAsync</summary>
+        public async Task ReconcileTagsRequestObjectAsync()
+        {
+            // Snippet: ReconcileTagsAsync(ReconcileTagsRequest, CallSettings)
+            // Additional: ReconcileTagsAsync(ReconcileTagsRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            ReconcileTagsRequest request = new ReconcileTagsRequest
+            {
+                ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                TagTemplateAsTagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
+                ForceDeleteMissing = false,
+                Tags = { new Tag(), },
+            };
+            // Make the request
+            Operation<ReconcileTagsResponse, ReconcileTagsMetadata> response = await dataCatalogClient.ReconcileTagsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ReconcileTagsResponse, ReconcileTagsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ReconcileTagsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ReconcileTagsResponse, ReconcileTagsMetadata> retrievedResponse = await dataCatalogClient.PollOnceReconcileTagsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ReconcileTagsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for StarEntry</summary>
         public void StarEntryRequestObject()
         {
@@ -3502,6 +3574,73 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             };
             // Make the request
             TestIamPermissionsResponse response = await dataCatalogClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportEntries</summary>
+        public void ImportEntriesRequestObject()
+        {
+            // Snippet: ImportEntries(ImportEntriesRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            ImportEntriesRequest request = new ImportEntriesRequest
+            {
+                ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
+                GcsBucketPath = "",
+            };
+            // Make the request
+            Operation<ImportEntriesResponse, ImportEntriesMetadata> response = dataCatalogClient.ImportEntries(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportEntriesResponse, ImportEntriesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportEntriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportEntriesResponse, ImportEntriesMetadata> retrievedResponse = dataCatalogClient.PollOnceImportEntries(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportEntriesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportEntriesAsync</summary>
+        public async Task ImportEntriesRequestObjectAsync()
+        {
+            // Snippet: ImportEntriesAsync(ImportEntriesRequest, CallSettings)
+            // Additional: ImportEntriesAsync(ImportEntriesRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportEntriesRequest request = new ImportEntriesRequest
+            {
+                ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
+                GcsBucketPath = "",
+            };
+            // Make the request
+            Operation<ImportEntriesResponse, ImportEntriesMetadata> response = await dataCatalogClient.ImportEntriesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportEntriesResponse, ImportEntriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportEntriesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportEntriesResponse, ImportEntriesMetadata> retrievedResponse = await dataCatalogClient.PollOnceImportEntriesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportEntriesResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

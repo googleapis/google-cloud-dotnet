@@ -226,8 +226,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         = new pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagField>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.DataCatalog.V1.TagField.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagField> fields_ = new pbc::MapField<string, global::Google.Cloud.DataCatalog.V1.TagField>();
     /// <summary>
-    /// Required. Maps the ID of a tag field to its value and additional information
-    /// about that field.
+    /// Required. Maps the ID of a tag field to its value and additional
+    /// information about that field.
     ///
     /// Tag template defines valid field IDs. A tag
     /// must have at least 1 field and at most 500 fields.
@@ -669,8 +669,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int OrderFieldNumber = 7;
     private int order_;
     /// <summary>
-    /// Output only. The order of this field with respect to other fields in this tag. Can be
-    /// set by [Tag][google.cloud.datacatalog.v1.TagTemplateField.order].
+    /// Output only. The order of this field with respect to other fields in this
+    /// tag. Can be set by
+    /// [Tag][google.cloud.datacatalog.v1.TagTemplateField.order].
     ///
     /// For example, a higher value can indicate a more important field.
     /// The value can be negative. Multiple fields can have the same order, and
@@ -1248,8 +1249,8 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// A tag template defines a tag that can have one or more typed fields.
   ///
-  /// The template is used to create tags that are attached to GCP resources.
-  /// [Tag template roles]
+  /// The template is used to create tags that are attached to Google Cloud
+  ///  resources. [Tag template roles]
   /// (https://cloud.google.com/iam/docs/understanding-roles#data-catalog-roles)
   /// provide permissions to create, edit, and use the template. For example,
   /// see the [TagTemplate User]
@@ -1635,7 +1636,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 6;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the tag template field in URL format. Example:
+    /// Output only. The resource name of the tag template field in URL format.
+    /// Example:
     ///
     /// `projects/{PROJECT_ID}/locations/{LOCATION}/tagTemplates/{TAG_TEMPLATE}/fields/{FIELD}`
     ///
@@ -2551,7 +2553,8 @@ namespace Google.Cloud.DataCatalog.V1 {
             public const int DisplayNameFieldNumber = 1;
             private string displayName_ = "";
             /// <summary>
-            /// Required. The display name of the enum value. Must not be an empty string.
+            /// Required. The display name of the enum value. Must not be an empty
+            /// string.
             ///
             /// The name must contain only Unicode letters, numbers (0-9), underscores
             /// (_), dashes (-), spaces ( ), and can't start or end with spaces. The

@@ -155,7 +155,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Required. Display name of the taxonomy. At most 200 bytes when encoded in UTF-8.
+    /// Required. Display name of the taxonomy. At most 200 bytes when encoded in
+    /// UTF-8.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1013,7 +1014,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of project that the imported taxonomies will belong to.
+    /// Required. Resource name of project that the imported taxonomies will belong
+    /// to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1911,7 +1913,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the project that the exported taxonomies belong to.
+    /// Required. Resource name of the project that the exported taxonomies belong
+    /// to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
