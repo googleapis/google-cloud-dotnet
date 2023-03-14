@@ -26,10 +26,10 @@ namespace Google.Cloud.Iam.V1 {
           string.Concat(
             "Chtnb29nbGUvaWFtL3YxL29wdGlvbnMucHJvdG8SDWdvb2dsZS5pYW0udjEi",
             "NAoQR2V0UG9saWN5T3B0aW9ucxIgChhyZXF1ZXN0ZWRfcG9saWN5X3ZlcnNp",
-            "b24YASABKAVChAEKEWNvbS5nb29nbGUuaWFtLnYxQgxPcHRpb25zUHJvdG9Q",
-            "AVowZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9pYW0v",
-            "djE7aWFt+AEBqgITR29vZ2xlLkNsb3VkLklhbS5WMcoCE0dvb2dsZVxDbG91",
-            "ZFxJYW1cVjFiBnByb3RvMw=="));
+            "b24YASABKAVCfQoRY29tLmdvb2dsZS5pYW0udjFCDE9wdGlvbnNQcm90b1AB",
+            "WiljbG91ZC5nb29nbGUuY29tL2dvL2lhbS9hcGl2MS9pYW1wYjtpYW1wYvgB",
+            "AaoCE0dvb2dsZS5DbG91ZC5JYW0uVjHKAhNHb29nbGVcQ2xvdWRcSWFtXFYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

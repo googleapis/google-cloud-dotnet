@@ -47,10 +47,10 @@ namespace Google.Cloud.Iam.V1 {
             "dGESNgoGYWN0aW9uGAEgASgOMiYuZ29vZ2xlLmlhbS52MS5BdWRpdENvbmZp",
             "Z0RlbHRhLkFjdGlvbhIPCgdzZXJ2aWNlGAIgASgJEhcKD2V4ZW1wdGVkX21l",
             "bWJlchgDIAEoCRIQCghsb2dfdHlwZRgEIAEoCSI1CgZBY3Rpb24SFgoSQUNU",
-            "SU9OX1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAJCgwEKEWNv",
-            "bS5nb29nbGUuaWFtLnYxQgtQb2xpY3lQcm90b1ABWjBnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lhbS92MTtpYW34AQGqAhNHb29n",
-            "bGUuQ2xvdWQuSWFtLlYxygITR29vZ2xlXENsb3VkXElhbVxWMWIGcHJvdG8z"));
+            "SU9OX1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAJCfAoRY29t",
+            "Lmdvb2dsZS5pYW0udjFCC1BvbGljeVByb3RvUAFaKWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vaWFtL2FwaXYxL2lhbXBiO2lhbXBi+AEBqgITR29vZ2xlLkNsb3Vk",
+            "LklhbS5WMcoCE0dvb2dsZVxDbG91ZFxJYW1cVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,7 +82,8 @@ namespace Google.Cloud.Iam.V1 {
   /// only if the expression evaluates to `true`. A condition can add constraints
   /// based on attributes of the request, the resource, or both. To learn which
   /// resources support conditions in their IAM policies, see the
-  /// [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+  /// [IAM
+  /// documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
   ///
   /// **JSON example:**
   ///
@@ -105,7 +106,8 @@ namespace Google.Cloud.Iam.V1 {
   ///           "condition": {
   ///             "title": "expirable access",
   ///             "description": "Does not grant access after Sep 2020",
-  ///             "expression": "request.time &lt; timestamp('2020-10-01T00:00:00.000Z')",
+  ///             "expression": "request.time &lt;
+  ///             timestamp('2020-10-01T00:00:00.000Z')",
   ///           }
   ///         }
   ///       ],
@@ -209,7 +211,8 @@ namespace Google.Cloud.Iam.V1 {
     /// specify any valid version or leave the field unset.
     ///
     /// To learn which resources support conditions in their IAM policies, see the
-    /// [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+    /// [IAM
+    /// documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1157,7 +1160,8 @@ namespace Google.Cloud.Iam.V1 {
     /// <summary>
     /// Specifies the identities that do not cause logging for this type of
     /// permission.
-    /// Follows the same format of [Binding.members][google.iam.v1.Binding.members].
+    /// Follows the same format of
+    /// [Binding.members][google.iam.v1.Binding.members].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
