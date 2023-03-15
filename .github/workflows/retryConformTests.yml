@@ -2,8 +2,12 @@ name: Run Storage Retry conformance tests against service emulator
 
 on:
   push:
-    branches: [ main ] 
+    branches: [ main ]
+    paths:
+    - 'apis/Google.Cloud.Storage.V1/**'
   pull_request:
+    paths:
+    - 'apis/Google.Cloud.Storage.V1/**'
 
 jobs:
   test:
