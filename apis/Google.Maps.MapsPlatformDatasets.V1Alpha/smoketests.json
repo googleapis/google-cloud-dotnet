@@ -1,0 +1,10 @@
+[
+  {
+    "skip": "Requires project ID support",
+    "method": "ListDatasets",
+    "client": "MapsPlatformDatasetsV1AlphaClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
