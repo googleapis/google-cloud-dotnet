@@ -628,7 +628,7 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, sslPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+        /// Returns the specified SSL policy resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -637,7 +637,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+        /// Returns the specified SSL policy resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -646,7 +646,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+        /// Returns the specified SSL policy resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -681,7 +681,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+        /// Returns the specified SSL policy resource.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -699,7 +699,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+        /// Returns the specified SSL policy resource.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -717,7 +717,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+        /// Returns the specified SSL policy resource.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1157,7 +1157,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+        /// Returns the specified SSL policy resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1172,7 +1172,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+        /// Returns the specified SSL policy resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

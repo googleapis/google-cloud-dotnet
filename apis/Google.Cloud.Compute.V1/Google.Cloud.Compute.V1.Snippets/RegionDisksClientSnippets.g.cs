@@ -1464,5 +1464,147 @@ namespace Google.Cloud.Compute.V1.Snippets
             TestPermissionsResponse response = await regionDisksClient.TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource);
             // End snippet
         }
+
+        /// <summary>Snippet for Update</summary>
+        public void UpdateRequestObject()
+        {
+            // Snippet: Update(UpdateRegionDiskRequest, CallSettings)
+            // Create client
+            RegionDisksClient regionDisksClient = RegionDisksClient.Create();
+            // Initialize request argument(s)
+            UpdateRegionDiskRequest request = new UpdateRegionDiskRequest
+            {
+                Disk = "",
+                DiskResource = new Disk(),
+                RequestId = "",
+                Paths = "",
+                Region = "",
+                Project = "",
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionDisksClient.Update(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionDisksClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAsync</summary>
+        public async Task UpdateRequestObjectAsync()
+        {
+            // Snippet: UpdateAsync(UpdateRegionDiskRequest, CallSettings)
+            // Additional: UpdateAsync(UpdateRegionDiskRequest, CancellationToken)
+            // Create client
+            RegionDisksClient regionDisksClient = await RegionDisksClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRegionDiskRequest request = new UpdateRegionDiskRequest
+            {
+                Disk = "",
+                DiskResource = new Disk(),
+                RequestId = "",
+                Paths = "",
+                Region = "",
+                Project = "",
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionDisksClient.UpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionDisksClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Update</summary>
+        public void Update()
+        {
+            // Snippet: Update(string, string, string, Disk, CallSettings)
+            // Create client
+            RegionDisksClient regionDisksClient = RegionDisksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string disk = "";
+            Disk diskResource = new Disk();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionDisksClient.Update(project, region, disk, diskResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionDisksClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAsync</summary>
+        public async Task UpdateAsync()
+        {
+            // Snippet: UpdateAsync(string, string, string, Disk, CallSettings)
+            // Additional: UpdateAsync(string, string, string, Disk, CancellationToken)
+            // Create client
+            RegionDisksClient regionDisksClient = await RegionDisksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string disk = "";
+            Disk diskResource = new Disk();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionDisksClient.UpdateAsync(project, region, disk, diskResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionDisksClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

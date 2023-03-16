@@ -3728,6 +3728,144 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetName</summary>
+        public void SetNameRequestObject()
+        {
+            // Snippet: SetName(SetNameInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            SetNameInstanceRequest request = new SetNameInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                InstancesSetNameRequestResource = new InstancesSetNameRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.SetName(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceSetName(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetNameAsync</summary>
+        public async Task SetNameRequestObjectAsync()
+        {
+            // Snippet: SetNameAsync(SetNameInstanceRequest, CallSettings)
+            // Additional: SetNameAsync(SetNameInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetNameInstanceRequest request = new SetNameInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                InstancesSetNameRequestResource = new InstancesSetNameRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.SetNameAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceSetNameAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetName</summary>
+        public void SetName()
+        {
+            // Snippet: SetName(string, string, string, InstancesSetNameRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            InstancesSetNameRequest instancesSetNameRequestResource = new InstancesSetNameRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.SetName(project, zone, instance, instancesSetNameRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceSetName(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetNameAsync</summary>
+        public async Task SetNameAsync()
+        {
+            // Snippet: SetNameAsync(string, string, string, InstancesSetNameRequest, CallSettings)
+            // Additional: SetNameAsync(string, string, string, InstancesSetNameRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            InstancesSetNameRequest instancesSetNameRequestResource = new InstancesSetNameRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.SetNameAsync(project, zone, instance, instancesSetNameRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceSetNameAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SetScheduling</summary>
         public void SetSchedulingRequestObject()
         {

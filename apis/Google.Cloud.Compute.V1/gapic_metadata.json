@@ -393,6 +393,12 @@
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
               ]
+            },
+            "Update": {
+              "methods": [
+                "Update",
+                "UpdateAsync"
+              ]
             }
           }
         }
@@ -1246,6 +1252,12 @@
         "grpc": {
           "libraryClient": "InstanceTemplatesClient",
           "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
             "Delete": {
               "methods": [
                 "Delete",
@@ -1475,6 +1487,12 @@
               "methods": [
                 "SetMinCpuPlatform",
                 "SetMinCpuPlatformAsync"
+              ]
+            },
+            "SetName": {
+              "methods": [
+                "SetName",
+                "SetNameAsync"
               ]
             },
             "SetScheduling": {
@@ -2820,6 +2838,12 @@
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
               ]
+            },
+            "Update": {
+              "methods": [
+                "Update",
+                "UpdateAsync"
+              ]
             }
           }
         }
@@ -3059,6 +3083,39 @@
               "methods": [
                 "SetNamedPorts",
                 "SetNamedPortsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RegionInstanceTemplates": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionInstanceTemplatesClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
               ]
             }
           }

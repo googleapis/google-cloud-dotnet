@@ -1598,7 +1598,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the firewall policy to update.
         /// </param>
         /// <param name="parentId">
-        /// The new parent of the firewall policy.
+        /// The new parent of the firewall policy. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1616,7 +1616,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the firewall policy to update.
         /// </param>
         /// <param name="parentId">
-        /// The new parent of the firewall policy.
+        /// The new parent of the firewall policy. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1634,7 +1634,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the firewall policy to update.
         /// </param>
         /// <param name="parentId">
-        /// The new parent of the firewall policy.
+        /// The new parent of the firewall policy. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

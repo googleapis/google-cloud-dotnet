@@ -221,6 +221,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class UpdateDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteExternalVpnGatewayRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
@@ -824,6 +833,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class SetMinCpuPlatformInstanceRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SetNameInstanceRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
         {
@@ -1534,6 +1552,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class UpdateRegionDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteRegionHealthCheckServiceRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -1724,6 +1751,24 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class SetNamedPortsRegionInstanceGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class DeleteRegionInstanceTemplateRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertRegionInstanceTemplateRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {

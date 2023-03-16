@@ -46,6 +46,7 @@ namespace Google.Cloud.Compute.V1
         private InstanceTemplatesSettings(InstanceTemplatesSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            AggregatedListSettings = existing.AggregatedListSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
@@ -59,6 +60,27 @@ namespace Google.Cloud.Compute.V1
         }
 
         partial void OnCopy(InstanceTemplatesSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceTemplatesClient.AggregatedList</c> and <c>InstanceTemplatesClient.AggregatedListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregatedListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -352,6 +374,76 @@ namespace Google.Cloud.Compute.V1
         public virtual InstanceTemplates.InstanceTemplatesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Retrieves the list of all InstanceTemplates resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceTemplateAggregatedList, scg::KeyValuePair<string, InstanceTemplatesScopedList>> AggregatedList(AggregatedListInstanceTemplatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all InstanceTemplates resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceTemplateAggregatedList, scg::KeyValuePair<string, InstanceTemplatesScopedList>> AggregatedListAsync(AggregatedListInstanceTemplatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all InstanceTemplates resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<InstanceTemplateAggregatedList, scg::KeyValuePair<string, InstanceTemplatesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            AggregatedList(new AggregatedListInstanceTemplatesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the list of all InstanceTemplates resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<InstanceTemplateAggregatedList, scg::KeyValuePair<string, InstanceTemplatesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            AggregatedListAsync(new AggregatedListInstanceTemplatesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone. It is not possible to delete templates that are already in use by a managed instance group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -455,7 +547,7 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, instanceTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+        /// Returns the specified instance template.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -464,7 +556,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+        /// Returns the specified instance template.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -473,7 +565,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+        /// Returns the specified instance template.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -482,7 +574,7 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+        /// Returns the specified instance template.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -500,7 +592,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+        /// Returns the specified instance template.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -518,7 +610,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+        /// Returns the specified instance template.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -960,6 +1052,8 @@ namespace Google.Cloud.Compute.V1
     /// </remarks>
     public sealed partial class InstanceTemplatesClientImpl : InstanceTemplatesClient
     {
+        private readonly gaxgrpc::ApiCall<AggregatedListInstanceTemplatesRequest, InstanceTemplateAggregatedList> _callAggregatedList;
+
         private readonly gaxgrpc::ApiCall<DeleteInstanceTemplateRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<GetInstanceTemplateRequest, InstanceTemplate> _callGet;
@@ -987,6 +1081,9 @@ namespace Google.Cloud.Compute.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListInstanceTemplatesRequest, InstanceTemplateAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callAggregatedList);
+            Modify_AggregatedListApiCall(ref _callAggregatedList);
             _callDelete = clientHelper.BuildApiCall<DeleteInstanceTemplateRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("instance_template", request => request.InstanceTemplate);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1013,6 +1110,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListInstanceTemplatesRequest, InstanceTemplateAggregatedList> call);
+
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteInstanceTemplateRequest, Operation> call);
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetInstanceTemplateRequest, InstanceTemplate> call);
@@ -1032,6 +1131,8 @@ namespace Google.Cloud.Compute.V1
         /// <summary>The underlying gRPC InstanceTemplates client</summary>
         public override InstanceTemplates.InstanceTemplatesClient GrpcClient { get; }
 
+        partial void Modify_AggregatedListInstanceTemplatesRequest(ref AggregatedListInstanceTemplatesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteInstanceTemplateRequest(ref DeleteInstanceTemplateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInstanceTemplateRequest(ref GetInstanceTemplateRequest request, ref gaxgrpc::CallSettings settings);
@@ -1045,6 +1146,32 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetIamPolicyInstanceTemplateRequest(ref SetIamPolicyInstanceTemplateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsInstanceTemplateRequest(ref TestIamPermissionsInstanceTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Retrieves the list of all InstanceTemplates resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<InstanceTemplateAggregatedList, scg::KeyValuePair<string, InstanceTemplatesScopedList>> AggregatedList(AggregatedListInstanceTemplatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListInstanceTemplatesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListInstanceTemplatesRequest, InstanceTemplateAggregatedList, scg::KeyValuePair<string, InstanceTemplatesScopedList>>(_callAggregatedList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all InstanceTemplates resources, regional and global, available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<InstanceTemplateAggregatedList, scg::KeyValuePair<string, InstanceTemplatesScopedList>> AggregatedListAsync(AggregatedListInstanceTemplatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListInstanceTemplatesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListInstanceTemplatesRequest, InstanceTemplateAggregatedList, scg::KeyValuePair<string, InstanceTemplatesScopedList>>(_callAggregatedList, request, callSettings);
+        }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
         public override lro::OperationsClient DeleteOperationsClient { get; }
@@ -1080,7 +1207,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+        /// Returns the specified instance template.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1092,7 +1219,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+        /// Returns the specified instance template.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1233,6 +1360,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AggregatedListInstanceTemplatesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class ListInstanceTemplatesRequest : gaxgrpc::IPageRequest
     {
         /// <inheritdoc/>
@@ -1241,6 +1378,15 @@ namespace Google.Cloud.Compute.V1
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
         }
+    }
+
+    public partial class InstanceTemplateAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, InstanceTemplatesScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, InstanceTemplatesScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class InstanceTemplateList : gaxgrpc::IPageResponse<InstanceTemplate>

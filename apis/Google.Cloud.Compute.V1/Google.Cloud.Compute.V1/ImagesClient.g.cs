@@ -681,7 +681,7 @@ namespace Google.Cloud.Compute.V1
             DeprecateAsync(project, image, deprecationStatusResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified image. Gets a list of available images by making a list() request.
+        /// Returns the specified image.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -690,7 +690,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified image. Gets a list of available images by making a list() request.
+        /// Returns the specified image.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -699,7 +699,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified image. Gets a list of available images by making a list() request.
+        /// Returns the specified image.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -708,7 +708,7 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified image. Gets a list of available images by making a list() request.
+        /// Returns the specified image.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -726,7 +726,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified image. Gets a list of available images by making a list() request.
+        /// Returns the specified image.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -744,7 +744,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified image. Gets a list of available images by making a list() request.
+        /// Returns the specified image.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -758,7 +758,7 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, image, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated.
+        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -767,7 +767,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated.
+        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -776,7 +776,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated.
+        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -785,10 +785,10 @@ namespace Google.Cloud.Compute.V1
             GetFromFamilyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated.
+        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
         /// </summary>
         /// <param name="project">
-        /// Project ID for this request.
+        /// The image project that the image belongs to. For example, to get a CentOS image, specify centos-cloud as the image project.
         /// </param>
         /// <param name="family">
         /// Name of the image family to search for.
@@ -803,10 +803,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated.
+        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
         /// </summary>
         /// <param name="project">
-        /// Project ID for this request.
+        /// The image project that the image belongs to. For example, to get a CentOS image, specify centos-cloud as the image project.
         /// </param>
         /// <param name="family">
         /// Name of the image family to search for.
@@ -821,10 +821,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated.
+        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
         /// </summary>
         /// <param name="project">
-        /// Project ID for this request.
+        /// The image project that the image belongs to. For example, to get a CentOS image, specify centos-cloud as the image project.
         /// </param>
         /// <param name="family">
         /// Name of the image family to search for.
@@ -1683,7 +1683,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified image. Gets a list of available images by making a list() request.
+        /// Returns the specified image.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1695,7 +1695,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified image. Gets a list of available images by making a list() request.
+        /// Returns the specified image.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1707,7 +1707,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated.
+        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1719,7 +1719,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated.
+        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
