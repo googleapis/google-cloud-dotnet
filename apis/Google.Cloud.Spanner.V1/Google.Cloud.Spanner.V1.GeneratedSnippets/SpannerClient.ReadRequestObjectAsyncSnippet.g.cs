@@ -48,6 +48,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new RequestOptions(),
+                DataBoostEnabled = false,
             };
             // Make the request
             ResultSet response = await spannerClient.ReadAsync(request);
