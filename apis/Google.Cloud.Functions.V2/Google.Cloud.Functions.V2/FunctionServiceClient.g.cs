@@ -507,12 +507,12 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of functions that belong to the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the function should be listed,
-        /// specified in the format `projects/*/locations/*`
-        /// If you want to list functions in all locations, use "-" in place of a
-        /// location. When listing functions in all locations, if one or more
-        /// location(s) are unreachable, the response will contain functions from all
-        /// reachable locations along with the names of any unreachable locations.
+        /// Required. The project and location from which the function should be
+        /// listed, specified in the format `projects/*/locations/*` If you want to
+        /// list functions in all locations, use "-" in place of a location. When
+        /// listing functions in all locations, if one or more location(s) are
+        /// unreachable, the response will contain functions from all reachable
+        /// locations along with the names of any unreachable locations.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -536,12 +536,12 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of functions that belong to the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the function should be listed,
-        /// specified in the format `projects/*/locations/*`
-        /// If you want to list functions in all locations, use "-" in place of a
-        /// location. When listing functions in all locations, if one or more
-        /// location(s) are unreachable, the response will contain functions from all
-        /// reachable locations along with the names of any unreachable locations.
+        /// Required. The project and location from which the function should be
+        /// listed, specified in the format `projects/*/locations/*` If you want to
+        /// list functions in all locations, use "-" in place of a location. When
+        /// listing functions in all locations, if one or more location(s) are
+        /// unreachable, the response will contain functions from all reachable
+        /// locations along with the names of any unreachable locations.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -565,12 +565,12 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of functions that belong to the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the function should be listed,
-        /// specified in the format `projects/*/locations/*`
-        /// If you want to list functions in all locations, use "-" in place of a
-        /// location. When listing functions in all locations, if one or more
-        /// location(s) are unreachable, the response will contain functions from all
-        /// reachable locations along with the names of any unreachable locations.
+        /// Required. The project and location from which the function should be
+        /// listed, specified in the format `projects/*/locations/*` If you want to
+        /// list functions in all locations, use "-" in place of a location. When
+        /// listing functions in all locations, if one or more location(s) are
+        /// unreachable, the response will contain functions from all reachable
+        /// locations along with the names of any unreachable locations.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -594,12 +594,12 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of functions that belong to the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the function should be listed,
-        /// specified in the format `projects/*/locations/*`
-        /// If you want to list functions in all locations, use "-" in place of a
-        /// location. When listing functions in all locations, if one or more
-        /// location(s) are unreachable, the response will contain functions from all
-        /// reachable locations along with the names of any unreachable locations.
+        /// Required. The project and location from which the function should be
+        /// listed, specified in the format `projects/*/locations/*` If you want to
+        /// list functions in all locations, use "-" in place of a location. When
+        /// listing functions in all locations, if one or more location(s) are
+        /// unreachable, the response will contain functions from all reachable
+        /// locations along with the names of any unreachable locations.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -684,8 +684,8 @@ namespace Google.Cloud.Functions.V2
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the function should be created, specified
-        /// in the format `projects/*/locations/*`
+        /// Required. The project and location in which the function should be created,
+        /// specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="function">
         /// Required. Function to be created.
@@ -713,8 +713,8 @@ namespace Google.Cloud.Functions.V2
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the function should be created, specified
-        /// in the format `projects/*/locations/*`
+        /// Required. The project and location in which the function should be created,
+        /// specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="function">
         /// Required. Function to be created.
@@ -742,8 +742,8 @@ namespace Google.Cloud.Functions.V2
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the function should be created, specified
-        /// in the format `projects/*/locations/*`
+        /// Required. The project and location in which the function should be created,
+        /// specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="function">
         /// Required. Function to be created.
@@ -766,8 +766,8 @@ namespace Google.Cloud.Functions.V2
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the function should be created, specified
-        /// in the format `projects/*/locations/*`
+        /// Required. The project and location in which the function should be created,
+        /// specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="function">
         /// Required. Function to be created.
@@ -795,8 +795,8 @@ namespace Google.Cloud.Functions.V2
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the function should be created, specified
-        /// in the format `projects/*/locations/*`
+        /// Required. The project and location in which the function should be created,
+        /// specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="function">
         /// Required. Function to be created.
@@ -824,8 +824,8 @@ namespace Google.Cloud.Functions.V2
         /// `ALREADY_EXISTS` error.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the function should be created, specified
-        /// in the format `projects/*/locations/*`
+        /// Required. The project and location in which the function should be created,
+        /// specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="function">
         /// Required. Function to be created.
@@ -1263,8 +1263,8 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of runtimes that are supported for the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the runtimes should be listed,
-        /// specified in the format `projects/*/locations/*`
+        /// Required. The project and location from which the runtimes should be
+        /// listed, specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1278,8 +1278,8 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of runtimes that are supported for the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the runtimes should be listed,
-        /// specified in the format `projects/*/locations/*`
+        /// Required. The project and location from which the runtimes should be
+        /// listed, specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1293,8 +1293,8 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of runtimes that are supported for the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the runtimes should be listed,
-        /// specified in the format `projects/*/locations/*`
+        /// Required. The project and location from which the runtimes should be
+        /// listed, specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1305,8 +1305,8 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of runtimes that are supported for the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the runtimes should be listed,
-        /// specified in the format `projects/*/locations/*`
+        /// Required. The project and location from which the runtimes should be
+        /// listed, specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1320,8 +1320,8 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of runtimes that are supported for the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the runtimes should be listed,
-        /// specified in the format `projects/*/locations/*`
+        /// Required. The project and location from which the runtimes should be
+        /// listed, specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1335,8 +1335,8 @@ namespace Google.Cloud.Functions.V2
         /// Returns a list of runtimes that are supported for the requested project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location from which the runtimes should be listed,
-        /// specified in the format `projects/*/locations/*`
+        /// Required. The project and location from which the runtimes should be
+        /// listed, specified in the format `projects/*/locations/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
