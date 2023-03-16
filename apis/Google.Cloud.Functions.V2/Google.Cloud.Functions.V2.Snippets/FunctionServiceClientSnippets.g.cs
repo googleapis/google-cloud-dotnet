@@ -910,6 +910,7 @@ namespace Google.Cloud.Functions.V2.Snippets
             GenerateUploadUrlRequest request = new GenerateUploadUrlRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             // Make the request
             GenerateUploadUrlResponse response = functionServiceClient.GenerateUploadUrl(request);
@@ -927,6 +928,7 @@ namespace Google.Cloud.Functions.V2.Snippets
             GenerateUploadUrlRequest request = new GenerateUploadUrlRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             // Make the request
             GenerateUploadUrlResponse response = await functionServiceClient.GenerateUploadUrlAsync(request);
