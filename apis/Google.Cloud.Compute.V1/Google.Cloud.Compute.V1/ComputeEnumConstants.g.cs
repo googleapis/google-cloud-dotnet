@@ -610,6 +610,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.LocalityLbPolicy.RoundRobin"/>.</summary>
                 public const string RoundRobin = "ROUND_ROBIN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.LocalityLbPolicy.WeightedMaglev"/>.</summary>
+                public const string WeightedMaglev = "WEIGHTED_MAGLEV";
             }
 
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.BackendService.Types.Protocol"/> enum.</summary>
@@ -763,6 +766,29 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendServiceLocalityLoadBalancingPolicyConfigPolicy.Types.Name.RoundRobin"/>.</summary>
                 public const string RoundRobin = "ROUND_ROBIN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendServiceLocalityLoadBalancingPolicyConfigPolicy.Types.Name.WeightedMaglev"/>.</summary>
+                public const string WeightedMaglev = "WEIGHTED_MAGLEV";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BackendServiceLogConfig"/> message.</summary>
+        public static class BackendServiceLogConfig
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.BackendServiceLogConfig.Types.OptionalMode"/> enum.</summary>
+            public static class OptionalMode
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendServiceLogConfig.Types.OptionalMode.UndefinedOptionalMode"/>.</summary>
+                public const string UndefinedOptionalMode = "UNDEFINED_OPTIONAL_MODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendServiceLogConfig.Types.OptionalMode.Custom"/>.</summary>
+                public const string Custom = "CUSTOM";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendServiceLogConfig.Types.OptionalMode.ExcludeAllOptional"/>.</summary>
+                public const string ExcludeAllOptional = "EXCLUDE_ALL_OPTIONAL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.BackendServiceLogConfig.Types.OptionalMode.IncludeAllOptional"/>.</summary>
+                public const string IncludeAllOptional = "INCLUDE_ALL_OPTIONAL";
             }
         }
 
@@ -979,6 +1005,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.ComputeOptimizedC2D"/>.</summary>
                 public const string ComputeOptimizedC2D = "COMPUTE_OPTIMIZED_C2D";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.ComputeOptimizedC3"/>.</summary>
+                public const string ComputeOptimizedC3 = "COMPUTE_OPTIMIZED_C3";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurpose"/>.</summary>
                 public const string GeneralPurpose = "GENERAL_PURPOSE";
@@ -3772,6 +3801,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.Networks"/>.</summary>
                 public const string Networks = "NETWORKS";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NetworkAttachments"/>.</summary>
+                public const string NetworkAttachments = "NETWORK_ATTACHMENTS";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NetworkEndpointGroups"/>.</summary>
                 public const string NetworkEndpointGroups = "NETWORK_ENDPOINT_GROUPS";
 
@@ -4876,6 +4908,32 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleMatcher.Types.VersionedExpr.SrcIpsV1"/>.</summary>
                 public const string SrcIpsV1 = "SRC_IPS_V1";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams"/> message.</summary>
+        public static class SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams.Types.Op"/> enum.</summary>
+            public static class Op
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams.Types.Op.UndefinedOp"/>.</summary>
+                public const string UndefinedOp = "UNDEFINED_OP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams.Types.Op.Contains"/>.</summary>
+                public const string Contains = "CONTAINS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams.Types.Op.EndsWith"/>.</summary>
+                public const string EndsWith = "ENDS_WITH";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams.Types.Op.Equals"/>.</summary>
+                public const string Equals_ = "EQUALS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams.Types.Op.EqualsAny"/>.</summary>
+                public const string EqualsAny = "EQUALS_ANY";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams.Types.Op.StartsWith"/>.</summary>
+                public const string StartsWith = "STARTS_WITH";
             }
         }
 
