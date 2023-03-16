@@ -400,9 +400,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -422,9 +422,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -444,9 +444,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -462,9 +462,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -484,9 +484,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -506,9 +506,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// "projects/{project_number}/assessments/{assessment_id}".
         /// </param>
         /// <param name="annotation">
-        /// Optional. The annotation that will be assigned to the Event. This field can be left
-        /// empty to provide reasons that apply to an event without concluding whether
-        /// the event is legitimate or fraudulent.
+        /// Optional. The annotation that will be assigned to the Event. This field can
+        /// be left empty to provide reasons that apply to an event without concluding
+        /// whether the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

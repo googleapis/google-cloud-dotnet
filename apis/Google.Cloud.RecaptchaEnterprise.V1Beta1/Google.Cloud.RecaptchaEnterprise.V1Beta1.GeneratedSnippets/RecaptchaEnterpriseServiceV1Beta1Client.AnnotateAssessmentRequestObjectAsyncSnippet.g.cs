@@ -45,6 +45,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
                     AnnotateAssessmentRequest.Types.Reason.Unspecified,
                 },
                 HashedAccountId = ByteString.Empty,
+                TransactionEvent = new TransactionEvent(),
             };
             // Make the request
             AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceV1Beta1Client.AnnotateAssessmentAsync(request);
