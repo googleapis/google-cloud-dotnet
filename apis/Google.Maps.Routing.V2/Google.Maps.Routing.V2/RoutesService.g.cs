@@ -38,7 +38,7 @@ namespace Google.Maps.Routing.V2 {
             "dHMucHJvdG8aJWdvb2dsZS9tYXBzL3JvdXRpbmcvdjIvd2F5cG9pbnQucHJv",
             "dG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3By",
             "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJv",
-            "dG8i3QgKFENvbXB1dGVSb3V0ZXNSZXF1ZXN0EjUKBm9yaWdpbhgBIAEoCzIg",
+            "dG8i9wgKFENvbXB1dGVSb3V0ZXNSZXF1ZXN0EjUKBm9yaWdpbhgBIAEoCzIg",
             "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAhI6CgtkZXN0",
             "aW5hdGlvbhgCIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9p",
             "bnRCA+BBAhI8Cg1pbnRlcm1lZGlhdGVzGAMgAygLMiAuZ29vZ2xlLm1hcHMu",
@@ -53,70 +53,72 @@ namespace Google.Maps.Routing.V2 {
             "c3RhbXBCA+BBARInChpjb21wdXRlX2FsdGVybmF0aXZlX3JvdXRlcxgIIAEo",
             "CEID4EEBEkQKD3JvdXRlX21vZGlmaWVycxgJIAEoCzImLmdvb2dsZS5tYXBz",
             "LnJvdXRpbmcudjIuUm91dGVNb2RpZmllcnNCA+BBARIaCg1sYW5ndWFnZV9j",
-            "b2RlGAogASgJQgPgQQESMQoFdW5pdHMYCyABKA4yHS5nb29nbGUubWFwcy5y",
-            "b3V0aW5nLnYyLlVuaXRzQgPgQQESZAoacmVxdWVzdGVkX3JlZmVyZW5jZV9y",
-            "b3V0ZXMYDiADKA4yOy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVS",
-            "b3V0ZXNSZXF1ZXN0LlJlZmVyZW5jZVJvdXRlQgPgQQESXgoSZXh0cmFfY29t",
-            "cHV0YXRpb25zGA8gAygOMj0uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21w",
-            "dXRlUm91dGVzUmVxdWVzdC5FeHRyYUNvbXB1dGF0aW9uQgPgQQEiRQoOUmVm",
-            "ZXJlbmNlUm91dGUSHwobUkVGRVJFTkNFX1JPVVRFX1VOU1BFQ0lGSUVEEAAS",
-            "EgoORlVFTF9FRkZJQ0lFTlQQASJvChBFeHRyYUNvbXB1dGF0aW9uEiEKHUVY",
-            "VFJBX0NPTVBVVEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9MTFMQARIUChBG",
-            "VUVMX0NPTlNVTVBUSU9OEAISFwoTVFJBRkZJQ19PTl9QT0xZTElORRADIsgB",
-            "ChVDb21wdXRlUm91dGVzUmVzcG9uc2USLQoGcm91dGVzGAEgAygLMh0uZ29v",
-            "Z2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZRI7Cg1mYWxsYmFja19pbmZvGAIg",
-            "ASgLMiQuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5GYWxsYmFja0luZm8SQwoR",
-            "Z2VvY29kaW5nX3Jlc3VsdHMYAyABKAsyKC5nb29nbGUubWFwcy5yb3V0aW5n",
-            "LnYyLkdlb2NvZGluZ1Jlc3VsdHMilgQKGUNvbXB1dGVSb3V0ZU1hdHJpeFJl",
-            "cXVlc3QSPwoHb3JpZ2lucxgBIAMoCzIpLmdvb2dsZS5tYXBzLnJvdXRpbmcu",
-            "djIuUm91dGVNYXRyaXhPcmlnaW5CA+BBAhJJCgxkZXN0aW5hdGlvbnMYAiAD",
-            "KAsyLi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4RGVzdGlu",
-            "YXRpb25CA+BBAhJBCgt0cmF2ZWxfbW9kZRgDIAEoDjInLmdvb2dsZS5tYXBz",
-            "LnJvdXRpbmcudjIuUm91dGVUcmF2ZWxNb2RlQgPgQQESSgoScm91dGluZ19w",
-            "cmVmZXJlbmNlGAQgASgOMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0",
-            "aW5nUHJlZmVyZW5jZUID4EEBEjcKDmRlcGFydHVyZV90aW1lGAUgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEmMKEmV4dHJhX2NvbXB1",
-            "dGF0aW9ucxgIIAMoDjJCLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuQ29tcHV0",
-            "ZVJvdXRlTWF0cml4UmVxdWVzdC5FeHRyYUNvbXB1dGF0aW9uQgPgQQEiQAoQ",
-            "RXh0cmFDb21wdXRhdGlvbhIhCh1FWFRSQV9DT01QVVRBVElPTl9VTlNQRUNJ",
-            "RklFRBAAEgkKBVRPTExTEAEikgEKEVJvdXRlTWF0cml4T3JpZ2luEjcKCHdh",
-            "eXBvaW50GAEgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5XYXlwb2lu",
-            "dEID4EECEkQKD3JvdXRlX21vZGlmaWVycxgCIAEoCzImLmdvb2dsZS5tYXBz",
-            "LnJvdXRpbmcudjIuUm91dGVNb2RpZmllcnNCA+BBASJRChZSb3V0ZU1hdHJp",
-            "eERlc3RpbmF0aW9uEjcKCHdheXBvaW50GAEgASgLMiAuZ29vZ2xlLm1hcHMu",
-            "cm91dGluZy52Mi5XYXlwb2ludEID4EECIt8DChJSb3V0ZU1hdHJpeEVsZW1l",
-            "bnQSGQoMb3JpZ2luX2luZGV4GAEgASgFSACIAQESHgoRZGVzdGluYXRpb25f",
-            "aW5kZXgYAiABKAVIAYgBARIiCgZzdGF0dXMYAyABKAsyEi5nb29nbGUucnBj",
-            "LlN0YXR1cxJGCgljb25kaXRpb24YCSABKA4yMy5nb29nbGUubWFwcy5yb3V0",
-            "aW5nLnYyLlJvdXRlTWF0cml4RWxlbWVudENvbmRpdGlvbhIXCg9kaXN0YW5j",
-            "ZV9tZXRlcnMYBCABKAUSKwoIZHVyYXRpb24YBSABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb24SMgoPc3RhdGljX2R1cmF0aW9uGAYgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEkQKD3RyYXZlbF9hZHZpc29yeRgHIAEo",
-            "CzIrLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2ZWxBZHZpc29y",
-            "eRI7Cg1mYWxsYmFja19pbmZvGAggASgLMiQuZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52Mi5GYWxsYmFja0luZm9CDwoNX29yaWdpbl9pbmRleEIUChJfZGVzdGlu",
-            "YXRpb25faW5kZXgqdAobUm91dGVNYXRyaXhFbGVtZW50Q29uZGl0aW9uEi4K",
-            "KlJPVVRFX01BVFJJWF9FTEVNRU5UX0NPTkRJVElPTl9VTlNQRUNJRklFRBAA",
-            "EhAKDFJPVVRFX0VYSVNUUxABEhMKD1JPVVRFX05PVF9GT1VORBACMuQCCgZS",
-            "b3V0ZXMSlQEKDUNvbXB1dGVSb3V0ZXMSLC5nb29nbGUubWFwcy5yb3V0aW5n",
-            "LnYyLkNvbXB1dGVSb3V0ZXNSZXF1ZXN0Gi0uZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52Mi5Db21wdXRlUm91dGVzUmVzcG9uc2UiJ4LT5JMCISIcL2RpcmVjdGlv",
-            "bnMvdjI6Y29tcHV0ZVJvdXRlczoBKhKnAQoSQ29tcHV0ZVJvdXRlTWF0cml4",
-            "EjEuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVNYXRyaXhS",
-            "ZXF1ZXN0GiouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeEVs",
-            "ZW1lbnQiMILT5JMCKiIlL2Rpc3RhbmNlTWF0cml4L3YyOmNvbXB1dGVSb3V0",
-            "ZU1hdHJpeDoBKjABGhjKQRVyb3V0ZXMuZ29vZ2xlYXBpcy5jb21CygEKGmNv",
-            "bS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQhJSb3V0ZXNTZXJ2aWNlUHJvdG9Q",
-            "AVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tYXBz",
-            "L3JvdXRpbmcvdjI7cm91dGluZ/gBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMu",
-            "Um91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6",
-            "Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
+            "b2RlGAogASgJQgPgQQESGAoLcmVnaW9uX2NvZGUYECABKAlCA+BBARIxCgV1",
+            "bml0cxgLIAEoDjIdLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVW5pdHNCA+BB",
+            "ARJkChpyZXF1ZXN0ZWRfcmVmZXJlbmNlX3JvdXRlcxgOIAMoDjI7Lmdvb2ds",
+            "ZS5tYXBzLnJvdXRpbmcudjIuQ29tcHV0ZVJvdXRlc1JlcXVlc3QuUmVmZXJl",
+            "bmNlUm91dGVCA+BBARJeChJleHRyYV9jb21wdXRhdGlvbnMYDyADKA4yPS5n",
+            "b29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZXNSZXF1ZXN0LkV4",
+            "dHJhQ29tcHV0YXRpb25CA+BBASJFCg5SZWZlcmVuY2VSb3V0ZRIfChtSRUZF",
+            "UkVOQ0VfUk9VVEVfVU5TUEVDSUZJRUQQABISCg5GVUVMX0VGRklDSUVOVBAB",
+            "Im8KEEV4dHJhQ29tcHV0YXRpb24SIQodRVhUUkFfQ09NUFVUQVRJT05fVU5T",
+            "UEVDSUZJRUQQABIJCgVUT0xMUxABEhQKEEZVRUxfQ09OU1VNUFRJT04QAhIX",
+            "ChNUUkFGRklDX09OX1BPTFlMSU5FEAMiyAEKFUNvbXB1dGVSb3V0ZXNSZXNw",
+            "b25zZRItCgZyb3V0ZXMYASADKAsyHS5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
+            "LlJvdXRlEjsKDWZhbGxiYWNrX2luZm8YAiABKAsyJC5nb29nbGUubWFwcy5y",
+            "b3V0aW5nLnYyLkZhbGxiYWNrSW5mbxJDChFnZW9jb2RpbmdfcmVzdWx0cxgD",
+            "IAEoCzIoLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuR2VvY29kaW5nUmVzdWx0",
+            "cyLMBAoZQ29tcHV0ZVJvdXRlTWF0cml4UmVxdWVzdBI/CgdvcmlnaW5zGAEg",
+            "AygLMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeE9yaWdp",
+            "bkID4EECEkkKDGRlc3RpbmF0aW9ucxgCIAMoCzIuLmdvb2dsZS5tYXBzLnJv",
+            "dXRpbmcudjIuUm91dGVNYXRyaXhEZXN0aW5hdGlvbkID4EECEkEKC3RyYXZl",
+            "bF9tb2RlGAMgASgOMicuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZVRy",
+            "YXZlbE1vZGVCA+BBARJKChJyb3V0aW5nX3ByZWZlcmVuY2UYBCABKA4yKS5n",
+            "b29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRpbmdQcmVmZXJlbmNlQgPgQQES",
+            "NwoOZGVwYXJ0dXJlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQESGgoNbGFuZ3VhZ2VfY29kZRgGIAEoCUID4EEBEhgKC3Jl",
+            "Z2lvbl9jb2RlGAkgASgJQgPgQQESYwoSZXh0cmFfY29tcHV0YXRpb25zGAgg",
+            "AygOMkIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVNYXRy",
+            "aXhSZXF1ZXN0LkV4dHJhQ29tcHV0YXRpb25CA+BBASJAChBFeHRyYUNvbXB1",
+            "dGF0aW9uEiEKHUVYVFJBX0NPTVBVVEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoF",
+            "VE9MTFMQASKSAQoRUm91dGVNYXRyaXhPcmlnaW4SNwoId2F5cG9pbnQYASAB",
+            "KAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQISRAoP",
+            "cm91dGVfbW9kaWZpZXJzGAIgASgLMiYuZ29vZ2xlLm1hcHMucm91dGluZy52",
+            "Mi5Sb3V0ZU1vZGlmaWVyc0ID4EEBIlEKFlJvdXRlTWF0cml4RGVzdGluYXRp",
+            "b24SNwoId2F5cG9pbnQYASABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
+            "LldheXBvaW50QgPgQQIi3wMKElJvdXRlTWF0cml4RWxlbWVudBIZCgxvcmln",
+            "aW5faW5kZXgYASABKAVIAIgBARIeChFkZXN0aW5hdGlvbl9pbmRleBgCIAEo",
+            "BUgBiAEBEiIKBnN0YXR1cxgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEkYK",
+            "CWNvbmRpdGlvbhgJIAEoDjIzLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91",
+            "dGVNYXRyaXhFbGVtZW50Q29uZGl0aW9uEhcKD2Rpc3RhbmNlX21ldGVycxgE",
+            "IAEoBRIrCghkdXJhdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhIyCg9zdGF0aWNfZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24SRAoPdHJhdmVsX2Fkdmlzb3J5GAcgASgLMisuZ29vZ2xl",
+            "Lm1hcHMucm91dGluZy52Mi5Sb3V0ZVRyYXZlbEFkdmlzb3J5EjsKDWZhbGxi",
+            "YWNrX2luZm8YCCABKAsyJC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkZhbGxi",
+            "YWNrSW5mb0IPCg1fb3JpZ2luX2luZGV4QhQKEl9kZXN0aW5hdGlvbl9pbmRl",
+            "eCp0ChtSb3V0ZU1hdHJpeEVsZW1lbnRDb25kaXRpb24SLgoqUk9VVEVfTUFU",
+            "UklYX0VMRU1FTlRfQ09ORElUSU9OX1VOU1BFQ0lGSUVEEAASEAoMUk9VVEVf",
+            "RVhJU1RTEAESEwoPUk9VVEVfTk9UX0ZPVU5EEAIy5AIKBlJvdXRlcxKVAQoN",
+            "Q29tcHV0ZVJvdXRlcxIsLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuQ29tcHV0",
+            "ZVJvdXRlc1JlcXVlc3QaLS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1",
+            "dGVSb3V0ZXNSZXNwb25zZSIngtPkkwIhIhwvZGlyZWN0aW9ucy92Mjpjb21w",
+            "dXRlUm91dGVzOgEqEqcBChJDb21wdXRlUm91dGVNYXRyaXgSMS5nb29nbGUu",
+            "bWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QaKi5n",
+            "b29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4RWxlbWVudCIwgtPk",
+            "kwIqIiUvZGlzdGFuY2VNYXRyaXgvdjI6Y29tcHV0ZVJvdXRlTWF0cml4OgEq",
+            "MAEaGMpBFXJvdXRlcy5nb29nbGVhcGlzLmNvbULKAQoaY29tLmdvb2dsZS5t",
+            "YXBzLnJvdXRpbmcudjJCElJvdXRlc1NlcnZpY2VQcm90b1ABWj1nb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21hcHMvcm91dGluZy92",
+            "Mjtyb3V0aW5n+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYy",
+            "ygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91",
+            "dGluZzo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.Routing.V2.FallbackInfoReflection.Descriptor, global::Google.Maps.Routing.V2.GeocodingResultsReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteReflection.Descriptor, global::Google.Maps.Routing.V2.RouteModifiersReflection.Descriptor, global::Google.Maps.Routing.V2.RouteTravelModeReflection.Descriptor, global::Google.Maps.Routing.V2.RoutingPreferenceReflection.Descriptor, global::Google.Maps.Routing.V2.UnitsReflection.Descriptor, global::Google.Maps.Routing.V2.WaypointReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteMatrixElementCondition), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest), global::Google.Maps.Routing.V2.ComputeRoutesRequest.Parser, new[]{ "Origin", "Destination", "Intermediates", "TravelMode", "RoutingPreference", "PolylineQuality", "PolylineEncoding", "DepartureTime", "ComputeAlternativeRoutes", "RouteModifiers", "LanguageCode", "Units", "RequestedReferenceRoutes", "ExtraComputations" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ReferenceRoute), typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ExtraComputation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest), global::Google.Maps.Routing.V2.ComputeRoutesRequest.Parser, new[]{ "Origin", "Destination", "Intermediates", "TravelMode", "RoutingPreference", "PolylineQuality", "PolylineEncoding", "DepartureTime", "ComputeAlternativeRoutes", "RouteModifiers", "LanguageCode", "RegionCode", "Units", "RequestedReferenceRoutes", "ExtraComputations" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ReferenceRoute), typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ExtraComputation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRoutesResponse), global::Google.Maps.Routing.V2.ComputeRoutesResponse.Parser, new[]{ "Routes", "FallbackInfo", "GeocodingResults" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest), global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Parser, new[]{ "Origins", "Destinations", "TravelMode", "RoutingPreference", "DepartureTime", "ExtraComputations" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Types.ExtraComputation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest), global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Parser, new[]{ "Origins", "Destinations", "TravelMode", "RoutingPreference", "DepartureTime", "LanguageCode", "RegionCode", "ExtraComputations" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Types.ExtraComputation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixOrigin), global::Google.Maps.Routing.V2.RouteMatrixOrigin.Parser, new[]{ "Waypoint", "RouteModifiers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixDestination), global::Google.Maps.Routing.V2.RouteMatrixDestination.Parser, new[]{ "Waypoint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixElement), global::Google.Maps.Routing.V2.RouteMatrixElement.Parser, new[]{ "OriginIndex", "DestinationIndex", "Status", "Condition", "DistanceMeters", "Duration", "StaticDuration", "TravelAdvisory", "FallbackInfo" }, new[]{ "OriginIndex", "DestinationIndex" }, null, null, null)
@@ -197,6 +199,7 @@ namespace Google.Maps.Routing.V2 {
       computeAlternativeRoutes_ = other.computeAlternativeRoutes_;
       routeModifiers_ = other.routeModifiers_ != null ? other.routeModifiers_.Clone() : null;
       languageCode_ = other.languageCode_;
+      regionCode_ = other.regionCode_;
       units_ = other.units_;
       requestedReferenceRoutes_ = other.requestedReferenceRoutes_.Clone();
       extraComputations_ = other.extraComputations_.Clone();
@@ -389,6 +392,23 @@ namespace Google.Maps.Routing.V2 {
       }
     }
 
+    /// <summary>Field number for the "region_code" field.</summary>
+    public const int RegionCodeFieldNumber = 16;
+    private string regionCode_ = "";
+    /// <summary>
+    /// Optional. The region code, specified as a ccTLD ("top-level domain")
+    /// two-character value. For more information see
+    /// https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RegionCode {
+      get { return regionCode_; }
+      set {
+        regionCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "units" field.</summary>
     public const int UnitsFieldNumber = 11;
     private global::Google.Maps.Routing.V2.Units units_ = global::Google.Maps.Routing.V2.Units.Unspecified;
@@ -469,6 +489,7 @@ namespace Google.Maps.Routing.V2 {
       if (ComputeAlternativeRoutes != other.ComputeAlternativeRoutes) return false;
       if (!object.Equals(RouteModifiers, other.RouteModifiers)) return false;
       if (LanguageCode != other.LanguageCode) return false;
+      if (RegionCode != other.RegionCode) return false;
       if (Units != other.Units) return false;
       if(!requestedReferenceRoutes_.Equals(other.requestedReferenceRoutes_)) return false;
       if(!extraComputations_.Equals(other.extraComputations_)) return false;
@@ -490,6 +511,7 @@ namespace Google.Maps.Routing.V2 {
       if (ComputeAlternativeRoutes != false) hash ^= ComputeAlternativeRoutes.GetHashCode();
       if (routeModifiers_ != null) hash ^= RouteModifiers.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       if (Units != global::Google.Maps.Routing.V2.Units.Unspecified) hash ^= Units.GetHashCode();
       hash ^= requestedReferenceRoutes_.GetHashCode();
       hash ^= extraComputations_.GetHashCode();
@@ -558,6 +580,10 @@ namespace Google.Maps.Routing.V2 {
       }
       requestedReferenceRoutes_.WriteTo(output, _repeated_requestedReferenceRoutes_codec);
       extraComputations_.WriteTo(output, _repeated_extraComputations_codec);
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(RegionCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -615,6 +641,10 @@ namespace Google.Maps.Routing.V2 {
       }
       requestedReferenceRoutes_.WriteTo(ref output, _repeated_requestedReferenceRoutes_codec);
       extraComputations_.WriteTo(ref output, _repeated_extraComputations_codec);
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(RegionCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -655,6 +685,9 @@ namespace Google.Maps.Routing.V2 {
       }
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (RegionCode.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
       }
       if (Units != global::Google.Maps.Routing.V2.Units.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Units);
@@ -715,6 +748,9 @@ namespace Google.Maps.Routing.V2 {
       }
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
+      }
+      if (other.RegionCode.Length != 0) {
+        RegionCode = other.RegionCode;
       }
       if (other.Units != global::Google.Maps.Routing.V2.Units.Unspecified) {
         Units = other.Units;
@@ -806,6 +842,10 @@ namespace Google.Maps.Routing.V2 {
             extraComputations_.AddEntriesFrom(input, _repeated_extraComputations_codec);
             break;
           }
+          case 130: {
+            RegionCode = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -889,6 +929,10 @@ namespace Google.Maps.Routing.V2 {
           case 122:
           case 120: {
             extraComputations_.AddEntriesFrom(ref input, _repeated_extraComputations_codec);
+            break;
+          }
+          case 130: {
+            RegionCode = input.ReadString();
             break;
           }
         }
@@ -1274,6 +1318,8 @@ namespace Google.Maps.Routing.V2 {
       travelMode_ = other.travelMode_;
       routingPreference_ = other.routingPreference_;
       departureTime_ = other.departureTime_ != null ? other.departureTime_.Clone() : null;
+      languageCode_ = other.languageCode_;
+      regionCode_ = other.regionCode_;
       extraComputations_ = other.extraComputations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1373,6 +1419,43 @@ namespace Google.Maps.Routing.V2 {
       }
     }
 
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 6;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+    /// information, see
+    /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. See
+    /// [Language Support](https://developers.google.com/maps/faq#languagesupport)
+    /// for the list of supported languages. When you don't provide this value, the
+    /// display language is inferred from the location of the first origin.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "region_code" field.</summary>
+    public const int RegionCodeFieldNumber = 9;
+    private string regionCode_ = "";
+    /// <summary>
+    /// Optional. The region code, specified as a ccTLD ("top-level domain")
+    /// two-character value. For more information see
+    /// https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RegionCode {
+      get { return regionCode_; }
+      set {
+        regionCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "extra_computations" field.</summary>
     public const int ExtraComputationsFieldNumber = 8;
     private static readonly pb::FieldCodec<global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Types.ExtraComputation> _repeated_extraComputations_codec
@@ -1410,6 +1493,8 @@ namespace Google.Maps.Routing.V2 {
       if (TravelMode != other.TravelMode) return false;
       if (RoutingPreference != other.RoutingPreference) return false;
       if (!object.Equals(DepartureTime, other.DepartureTime)) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (RegionCode != other.RegionCode) return false;
       if(!extraComputations_.Equals(other.extraComputations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1423,6 +1508,8 @@ namespace Google.Maps.Routing.V2 {
       if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) hash ^= TravelMode.GetHashCode();
       if (RoutingPreference != global::Google.Maps.Routing.V2.RoutingPreference.Unspecified) hash ^= RoutingPreference.GetHashCode();
       if (departureTime_ != null) hash ^= DepartureTime.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       hash ^= extraComputations_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1456,7 +1543,15 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(DepartureTime);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
       extraComputations_.WriteTo(output, _repeated_extraComputations_codec);
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(RegionCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1481,7 +1576,15 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(42);
         output.WriteMessage(DepartureTime);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
       extraComputations_.WriteTo(ref output, _repeated_extraComputations_codec);
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(RegionCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1502,6 +1605,12 @@ namespace Google.Maps.Routing.V2 {
       }
       if (departureTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DepartureTime);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (RegionCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
       }
       size += extraComputations_.CalculateSize(_repeated_extraComputations_codec);
       if (_unknownFields != null) {
@@ -1529,6 +1638,12 @@ namespace Google.Maps.Routing.V2 {
           DepartureTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DepartureTime.MergeFrom(other.DepartureTime);
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.RegionCode.Length != 0) {
+        RegionCode = other.RegionCode;
       }
       extraComputations_.Add(other.extraComputations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1569,9 +1684,17 @@ namespace Google.Maps.Routing.V2 {
             input.ReadMessage(DepartureTime);
             break;
           }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
           case 66:
           case 64: {
             extraComputations_.AddEntriesFrom(input, _repeated_extraComputations_codec);
+            break;
+          }
+          case 74: {
+            RegionCode = input.ReadString();
             break;
           }
         }
@@ -1612,9 +1735,17 @@ namespace Google.Maps.Routing.V2 {
             input.ReadMessage(DepartureTime);
             break;
           }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
           case 66:
           case 64: {
             extraComputations_.AddEntriesFrom(ref input, _repeated_extraComputations_codec);
+            break;
+          }
+          case 74: {
+            RegionCode = input.ReadString();
             break;
           }
         }
