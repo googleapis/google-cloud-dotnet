@@ -50,10 +50,12 @@ namespace Google.Maps.Routing.V2.Snippets
                 TravelMode = RouteTravelMode.TravelModeUnspecified,
                 RoutingPreference = RoutingPreference.Unspecified,
                 DepartureTime = new Timestamp(),
+                LanguageCode = "",
                 ExtraComputations =
                 {
                     ComputeRouteMatrixRequest.Types.ExtraComputation.Unspecified,
                 },
+                RegionCode = "",
             };
             // Make the request, returning a streaming response
             RoutesClient.ComputeRouteMatrixStream response = routesClient.ComputeRouteMatrix(request);
