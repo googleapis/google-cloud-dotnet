@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,11 +15,11 @@
 using BenchmarkDotNet.Running;
 using System.Reflection;
 
-namespace Google.Cloud.Firestore.Benchmarks
+namespace Google.Cloud.Firestore.Benchmark
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args) =>
+        private static void Main(string[] args) =>
             new BenchmarkSwitcher(typeof(Program).GetTypeInfo().Assembly).Run(args);
     }
 }

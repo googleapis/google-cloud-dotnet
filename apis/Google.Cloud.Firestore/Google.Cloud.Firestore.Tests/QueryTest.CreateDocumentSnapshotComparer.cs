@@ -13,15 +13,14 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.V1;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Xunit;
+using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Tests
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Xunit;
-    using static ProtoHelpers;
-
     /// <summary>
     /// Tests for Query.CreateDocumentSnapshotComparer
     /// </summary>

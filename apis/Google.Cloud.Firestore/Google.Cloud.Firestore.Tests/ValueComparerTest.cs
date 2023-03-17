@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,13 +14,12 @@
 
 using Google.Cloud.Firestore.V1;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
+using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Tests
 {
-    using System.Linq;
-    using static ProtoHelpers;
-
     public class ValueComparerTest
     {
         // Taken from OrderTest.java, with a few extra tests.

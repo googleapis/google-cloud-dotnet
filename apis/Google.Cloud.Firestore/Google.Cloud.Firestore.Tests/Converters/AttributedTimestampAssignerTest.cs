@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -99,7 +99,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             /// A timestamp that isn't part of a snapshot. This is used to ensure we're actually setting properties
             /// rather than just leaving them.
             /// </summary>
-            private static Timestamp s_sampleOtherTimestamp = new Timestamp(-1, 123);
+            private static readonly Timestamp s_sampleOtherTimestamp = new Timestamp(-1, 123);
 
             [FirestoreDocumentCreateTimestamp] public DateTime CreateDateTime { get; set; } = s_sampleOtherTimestamp.ToDateTime();
             [FirestoreDocumentCreateTimestamp] public DateTimeOffset CreateDateTimeOffset { get; set; } = s_sampleOtherTimestamp.ToDateTimeOffset();

@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -283,11 +283,11 @@ namespace Google.Cloud.Firestore.Tests
             /// </summary>
             private readonly TaskCompletionSource<int> _completionTaskSource = new TaskCompletionSource<int>();
             private readonly FakeScheduler _scheduler;
+            private readonly FakeWatchState _watchState;
 
+            private int _responseIndex;
             private FakeWatchStream _currentStream;
             private List<Func<ListenResponse>> _currentResponseList;
-            private FakeWatchState _watchState;
-            private int _responseIndex;
 
             internal WatchStream WatchStream { get; }
 
@@ -399,11 +399,12 @@ namespace Google.Cloud.Firestore.Tests
 
         private class FakeWatchState : IWatchState
         {
-            private List<(int index, ByteString token)> _resumeTokens = new List<(int, ByteString)> { (-1, null) };
-            private int _lastSeenIndex = -1;
+            private readonly List<(int index, ByteString token)> _resumeTokens = new List<(int, ByteString)> { (-1, null) };
             // Very primitive mocking; we can't use Moq due to the types being internal.
-            private Queue<Delegate> _expectedCalls = new Queue<Delegate>();
+            private readonly Queue<Delegate> _expectedCalls = new Queue<Delegate>();
             private readonly Action _hangingCallback;
+
+            private int _lastSeenIndex = -1;
 
             public ByteString ResumeToken => _resumeTokens.Last(tuple => tuple.index <= _lastSeenIndex).token;
 
@@ -536,10 +537,11 @@ namespace Google.Cloud.Firestore.Tests
         {
             private readonly FakeResponseList _responses;
             private readonly ListenRequest _expectedRequest;
+            private readonly AsyncDuplexStreamingCall<ListenRequest, ListenResponse> _grpcCall;
+
             internal bool Completed { get; private set; }
             internal bool Disposed { get; private set; }
             private bool _requestWritten = false;
-            private AsyncDuplexStreamingCall<ListenRequest, ListenResponse> _grpcCall;
 
             internal FakeWatchStream(ListenRequest expectedRequest, FakeResponseList responses)
             {

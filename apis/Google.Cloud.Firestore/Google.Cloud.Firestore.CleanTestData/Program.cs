@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Firestore.CleanTestData
 {
-    class Program
+    internal class Program
     {
-        static async Task Main(string[] args)
+        private static async Task Main(string[] args)
         {
             string project = Environment.GetEnvironmentVariable("FIRESTORE_TEST_PROJECT");
             var db = FirestoreDb.Create(project);
