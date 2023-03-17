@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
     // are in ValueSerializerTest/ValueDeserializerTest via SerializationTestData.TupleModel
     public class ValueTupleConverterTest
     {
-        private static FirestoreDb s_db = new FirestoreDbBuilder
+        private static readonly FirestoreDb s_db = new FirestoreDbBuilder
         {
             CallInvoker = new ThrowingInvoker(),
             ConverterRegistry = new ConverterRegistry
@@ -40,7 +40,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
         private static SerializationContext SerializationContext => s_db.SerializationContext;
         private static DeserializationContext DeserializationContext => new DeserializationContext(GetSampleSnapshot(s_db, "doc1"));
 
-        private static object[] s_sampleValuesByArity =
+        private static readonly object[] s_sampleValuesByArity =
         {
             null,
             null,

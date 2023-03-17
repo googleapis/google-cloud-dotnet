@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ namespace Google.Cloud.Firestore
         {
         }
 
-        static IEnumerable<FieldPath> ConvertPaths(string[] paths)
+        private static IEnumerable<FieldPath> ConvertPaths(string[] paths)
         {
             GaxPreconditions.CheckNotNull(paths, nameof(paths));
             return paths.Select(path =>
@@ -61,7 +61,7 @@ namespace Google.Cloud.Firestore
         {
         }
 
-        static IEnumerable<FieldPath> CheckPaths(FieldPath[] paths)
+        private static IEnumerable<FieldPath> CheckPaths(FieldPath[] paths)
         {
             GaxPreconditions.CheckNotNull(paths, nameof(paths));
             GaxPreconditions.CheckArgument(!paths.Contains(null), nameof(paths), "Path array must not contain any null elements");

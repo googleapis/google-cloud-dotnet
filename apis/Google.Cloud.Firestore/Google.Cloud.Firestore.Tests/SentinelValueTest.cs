@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,15 +13,11 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.V1;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
+using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Tests
 {
-    using static ProtoHelpers;
-
     public class SentinelValueTest
     {
         [Fact]
