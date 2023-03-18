@@ -3,7 +3,7 @@
 //     source: google/cloud/filestore/v1/cloud_filestore_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,23 +24,23 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Filestore.V1 {
   /// <summary>
-  /// Configures and manages Cloud Filestore resources.
+  /// Configures and manages Filestore resources.
   ///
-  /// Cloud Filestore Manager v1.
+  /// Filestore Manager v1.
   ///
-  /// The `file.googleapis.com` service implements the Cloud Filestore API and
+  /// The `file.googleapis.com` service implements the Filestore API and
   /// defines the following resource model for managing instances:
   /// * The service works with a collection of cloud projects, named: `/projects/*`
   /// * Each project has a collection of available locations, named: `/locations/*`
   /// * Each location has a collection of instances and backups, named:
   /// `/instances/*` and `/backups/*` respectively.
-  /// * As such, Cloud Filestore instances are resources of the form:
+  /// * As such, Filestore instances are resources of the form:
   ///   `/projects/{project_number}/locations/{location_id}/instances/{instance_id}`
   ///   and backups are resources of the form:
   ///   `/projects/{project_number}/locations/{location_id}/backup/{backup_id}`
   ///
-  /// Note that location_id must be a GCP `zone` for instances and but to a GCP
-  /// `region` for backups; for example:
+  /// Note that location_id must be a Google Cloud `zone` for instances, but
+  /// a Google Cloud `region` for backups; for example:
   /// * `projects/12345/locations/us-central1-c/instances/my-filestore`
   /// * `projects/12345/locations/us-central1/backups/my-backup`
   /// </summary>
@@ -99,6 +99,20 @@ namespace Google.Cloud.Filestore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.RestoreInstanceRequest> __Marshaller_google_cloud_filestore_v1_RestoreInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.RestoreInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.DeleteInstanceRequest> __Marshaller_google_cloud_filestore_v1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.DeleteInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.ListSnapshotsRequest> __Marshaller_google_cloud_filestore_v1_ListSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.ListSnapshotsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.ListSnapshotsResponse> __Marshaller_google_cloud_filestore_v1_ListSnapshotsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.ListSnapshotsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.GetSnapshotRequest> __Marshaller_google_cloud_filestore_v1_GetSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.GetSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.Snapshot> __Marshaller_google_cloud_filestore_v1_Snapshot = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.Snapshot.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.CreateSnapshotRequest> __Marshaller_google_cloud_filestore_v1_CreateSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.CreateSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest> __Marshaller_google_cloud_filestore_v1_DeleteSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest> __Marshaller_google_cloud_filestore_v1_UpdateSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.ListBackupsRequest> __Marshaller_google_cloud_filestore_v1_ListBackupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.ListBackupsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -160,6 +174,46 @@ namespace Google.Cloud.Filestore.V1 {
         __ServiceName,
         "DeleteInstance",
         __Marshaller_google_cloud_filestore_v1_DeleteInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Filestore.V1.ListSnapshotsRequest, global::Google.Cloud.Filestore.V1.ListSnapshotsResponse> __Method_ListSnapshots = new grpc::Method<global::Google.Cloud.Filestore.V1.ListSnapshotsRequest, global::Google.Cloud.Filestore.V1.ListSnapshotsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSnapshots",
+        __Marshaller_google_cloud_filestore_v1_ListSnapshotsRequest,
+        __Marshaller_google_cloud_filestore_v1_ListSnapshotsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Filestore.V1.GetSnapshotRequest, global::Google.Cloud.Filestore.V1.Snapshot> __Method_GetSnapshot = new grpc::Method<global::Google.Cloud.Filestore.V1.GetSnapshotRequest, global::Google.Cloud.Filestore.V1.Snapshot>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSnapshot",
+        __Marshaller_google_cloud_filestore_v1_GetSnapshotRequest,
+        __Marshaller_google_cloud_filestore_v1_Snapshot);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Filestore.V1.CreateSnapshotRequest, global::Google.LongRunning.Operation> __Method_CreateSnapshot = new grpc::Method<global::Google.Cloud.Filestore.V1.CreateSnapshotRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSnapshot",
+        __Marshaller_google_cloud_filestore_v1_CreateSnapshotRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest, global::Google.LongRunning.Operation> __Method_DeleteSnapshot = new grpc::Method<global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSnapshot",
+        __Marshaller_google_cloud_filestore_v1_DeleteSnapshotRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest, global::Google.LongRunning.Operation> __Method_UpdateSnapshot = new grpc::Method<global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSnapshot",
+        __Marshaller_google_cloud_filestore_v1_UpdateSnapshotRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -288,6 +342,67 @@ namespace Google.Cloud.Filestore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteInstance(global::Google.Cloud.Filestore.V1.DeleteInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all snapshots in a project for either a specified location
+      /// or for all locations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Filestore.V1.ListSnapshotsResponse> ListSnapshots(global::Google.Cloud.Filestore.V1.ListSnapshotsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the details of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Filestore.V1.Snapshot> GetSnapshot(global::Google.Cloud.Filestore.V1.GetSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a snapshot.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateSnapshot(global::Google.Cloud.Filestore.V1.CreateSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a snapshot.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSnapshot(global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the settings of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateSnapshot(global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -703,6 +818,250 @@ namespace Google.Cloud.Filestore.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
       }
       /// <summary>
+      /// Lists all snapshots in a project for either a specified location
+      /// or for all locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Filestore.V1.ListSnapshotsResponse ListSnapshots(global::Google.Cloud.Filestore.V1.ListSnapshotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all snapshots in a project for either a specified location
+      /// or for all locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Filestore.V1.ListSnapshotsResponse ListSnapshots(global::Google.Cloud.Filestore.V1.ListSnapshotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSnapshots, null, options, request);
+      }
+      /// <summary>
+      /// Lists all snapshots in a project for either a specified location
+      /// or for all locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Filestore.V1.ListSnapshotsResponse> ListSnapshotsAsync(global::Google.Cloud.Filestore.V1.ListSnapshotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all snapshots in a project for either a specified location
+      /// or for all locations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Filestore.V1.ListSnapshotsResponse> ListSnapshotsAsync(global::Google.Cloud.Filestore.V1.ListSnapshotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSnapshots, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Filestore.V1.Snapshot GetSnapshot(global::Google.Cloud.Filestore.V1.GetSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Filestore.V1.Snapshot GetSnapshot(global::Google.Cloud.Filestore.V1.GetSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Filestore.V1.Snapshot> GetSnapshotAsync(global::Google.Cloud.Filestore.V1.GetSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Filestore.V1.Snapshot> GetSnapshotAsync(global::Google.Cloud.Filestore.V1.GetSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Creates a snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSnapshot(global::Google.Cloud.Filestore.V1.CreateSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSnapshot(global::Google.Cloud.Filestore.V1.CreateSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Creates a snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSnapshotAsync(global::Google.Cloud.Filestore.V1.CreateSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSnapshotAsync(global::Google.Cloud.Filestore.V1.CreateSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSnapshot(global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSnapshot(global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSnapshotAsync(global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSnapshotAsync(global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Updates the settings of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSnapshot(global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the settings of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSnapshot(global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Updates the settings of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSnapshotAsync(global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the settings of a specific snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSnapshotAsync(global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSnapshot, null, options, request);
+      }
+      /// <summary>
       /// Lists all backups in a project for either a specified location or for all
       /// locations.
       /// </summary>
@@ -966,6 +1325,11 @@ namespace Google.Cloud.Filestore.V1 {
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
           .AddMethod(__Method_RestoreInstance, serviceImpl.RestoreInstance)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
+          .AddMethod(__Method_ListSnapshots, serviceImpl.ListSnapshots)
+          .AddMethod(__Method_GetSnapshot, serviceImpl.GetSnapshot)
+          .AddMethod(__Method_CreateSnapshot, serviceImpl.CreateSnapshot)
+          .AddMethod(__Method_DeleteSnapshot, serviceImpl.DeleteSnapshot)
+          .AddMethod(__Method_UpdateSnapshot, serviceImpl.UpdateSnapshot)
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
           .AddMethod(__Method_CreateBackup, serviceImpl.CreateBackup)
@@ -986,6 +1350,11 @@ namespace Google.Cloud.Filestore.V1 {
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
       serviceBinder.AddMethod(__Method_RestoreInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.RestoreInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreInstance));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
+      serviceBinder.AddMethod(__Method_ListSnapshots, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.ListSnapshotsRequest, global::Google.Cloud.Filestore.V1.ListSnapshotsResponse>(serviceImpl.ListSnapshots));
+      serviceBinder.AddMethod(__Method_GetSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.GetSnapshotRequest, global::Google.Cloud.Filestore.V1.Snapshot>(serviceImpl.GetSnapshot));
+      serviceBinder.AddMethod(__Method_CreateSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.CreateSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSnapshot));
+      serviceBinder.AddMethod(__Method_DeleteSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.DeleteSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSnapshot));
+      serviceBinder.AddMethod(__Method_UpdateSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.UpdateSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSnapshot));
       serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.ListBackupsRequest, global::Google.Cloud.Filestore.V1.ListBackupsResponse>(serviceImpl.ListBackups));
       serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.GetBackupRequest, global::Google.Cloud.Filestore.V1.Backup>(serviceImpl.GetBackup));
       serviceBinder.AddMethod(__Method_CreateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackup));

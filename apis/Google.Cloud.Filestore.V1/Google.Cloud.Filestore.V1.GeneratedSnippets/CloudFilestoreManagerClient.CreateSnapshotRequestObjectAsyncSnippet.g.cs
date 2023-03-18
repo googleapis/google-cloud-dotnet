@@ -16,16 +16,15 @@
 
 namespace Google.Cloud.Filestore.V1.Snippets
 {
-    // [START file_v1_generated_CloudFilestoreManager_DeleteInstance_async]
+    // [START file_v1_generated_CloudFilestoreManager_CreateSnapshot_async]
     using Google.Cloud.Common;
     using Google.Cloud.Filestore.V1;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudFilestoreManagerClientSnippets
     {
-        /// <summary>Snippet for DeleteInstanceAsync</summary>
+        /// <summary>Snippet for CreateSnapshotAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -33,35 +32,36 @@ namespace Google.Cloud.Filestore.V1.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task DeleteInstanceRequestObjectAsync()
+        public async Task CreateSnapshotRequestObjectAsync()
         {
             // Create client
             CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest
+            CreateSnapshotRequest request = new CreateSnapshotRequest
             {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                Force = false,
+                ParentAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SnapshotId = "",
+                Snapshot = new Snapshot(),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await cloudFilestoreManagerClient.DeleteInstanceAsync(request);
+            Operation<Snapshot, OperationMetadata> response = await cloudFilestoreManagerClient.CreateSnapshotAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Snapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            Snapshot result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Snapshot, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceCreateSnapshotAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                Snapshot retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END file_v1_generated_CloudFilestoreManager_DeleteInstance_async]
+    // [END file_v1_generated_CloudFilestoreManager_CreateSnapshot_async]
 }

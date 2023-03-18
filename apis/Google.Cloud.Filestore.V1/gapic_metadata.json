@@ -22,6 +22,12 @@
                 "CreateInstanceAsync"
               ]
             },
+            "CreateSnapshot": {
+              "methods": [
+                "CreateSnapshot",
+                "CreateSnapshotAsync"
+              ]
+            },
             "DeleteBackup": {
               "methods": [
                 "DeleteBackup",
@@ -32,6 +38,12 @@
               "methods": [
                 "DeleteInstance",
                 "DeleteInstanceAsync"
+              ]
+            },
+            "DeleteSnapshot": {
+              "methods": [
+                "DeleteSnapshot",
+                "DeleteSnapshotAsync"
               ]
             },
             "GetBackup": {
@@ -46,6 +58,12 @@
                 "GetInstanceAsync"
               ]
             },
+            "GetSnapshot": {
+              "methods": [
+                "GetSnapshot",
+                "GetSnapshotAsync"
+              ]
+            },
             "ListBackups": {
               "methods": [
                 "ListBackups",
@@ -56,6 +74,12 @@
               "methods": [
                 "ListInstances",
                 "ListInstancesAsync"
+              ]
+            },
+            "ListSnapshots": {
+              "methods": [
+                "ListSnapshots",
+                "ListSnapshotsAsync"
               ]
             },
             "RestoreInstance": {
@@ -74,6 +98,12 @@
               "methods": [
                 "UpdateInstance",
                 "UpdateInstanceAsync"
+              ]
+            },
+            "UpdateSnapshot": {
+              "methods": [
+                "UpdateSnapshot",
+                "UpdateSnapshotAsync"
               ]
             }
           }
