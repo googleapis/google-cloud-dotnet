@@ -1270,12 +1270,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]
@@ -1319,12 +1319,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -1515,6 +1515,1418 @@
         {
           "start": 38,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_ListSnapshots_sync",
+      "title": "ListSnapshotsRequestObject",
+      "description": "Snippet for ListSnapshots",
+      "file": "CloudFilestoreManagerClient.ListSnapshotsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshots",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.ListSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Filestore.V1.ListSnapshotsResponse, Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.ListSnapshots",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_ListSnapshots_async",
+      "title": "ListSnapshotsRequestObjectAsync",
+      "description": "Snippet for ListSnapshotsAsync",
+      "file": "CloudFilestoreManagerClient.ListSnapshotsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshotsAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.ListSnapshotsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.ListSnapshotsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Filestore.V1.ListSnapshotsResponse, Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.ListSnapshots",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_ListSnapshots_sync_flattened",
+      "title": "ListSnapshots",
+      "description": "Snippet for ListSnapshots",
+      "file": "CloudFilestoreManagerClient.ListSnapshotsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshots",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Filestore.V1.ListSnapshotsResponse, Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.ListSnapshots",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_ListSnapshots_async_flattened",
+      "title": "ListSnapshotsAsync",
+      "description": "Snippet for ListSnapshotsAsync",
+      "file": "CloudFilestoreManagerClient.ListSnapshotsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshotsAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.ListSnapshotsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Filestore.V1.ListSnapshotsResponse, Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.ListSnapshots",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_ListSnapshots_sync_flattened_resourceNames",
+      "title": "ListSnapshotsResourceNames",
+      "description": "Snippet for ListSnapshots",
+      "file": "CloudFilestoreManagerClient.ListSnapshotsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshots",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.ListSnapshots",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Filestore.V1.ListSnapshotsResponse, Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.ListSnapshots",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_ListSnapshots_async_flattened_resourceNames",
+      "title": "ListSnapshotsResourceNamesAsync",
+      "description": "Snippet for ListSnapshotsAsync",
+      "file": "CloudFilestoreManagerClient.ListSnapshotsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSnapshotsAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.ListSnapshotsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Filestore.V1.ListSnapshotsResponse, Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "ListSnapshots",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.ListSnapshots",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_GetSnapshot_sync",
+      "title": "GetSnapshotRequestObject",
+      "description": "Snippet for GetSnapshot",
+      "file": "CloudFilestoreManagerClient.GetSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.GetSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Filestore.V1.Snapshot",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.GetSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_GetSnapshot_async",
+      "title": "GetSnapshotRequestObjectAsync",
+      "description": "Snippet for GetSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.GetSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.GetSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.GetSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.GetSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_GetSnapshot_sync_flattened",
+      "title": "GetSnapshot",
+      "description": "Snippet for GetSnapshot",
+      "file": "CloudFilestoreManagerClient.GetSnapshotSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Filestore.V1.Snapshot",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.GetSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_GetSnapshot_async_flattened",
+      "title": "GetSnapshotAsync",
+      "description": "Snippet for GetSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.GetSnapshotAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.GetSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.GetSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_GetSnapshot_sync_flattened_resourceNames",
+      "title": "GetSnapshotResourceNames",
+      "description": "Snippet for GetSnapshot",
+      "file": "CloudFilestoreManagerClient.GetSnapshotResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.GetSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Filestore.V1.Snapshot",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.GetSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_GetSnapshot_async_flattened_resourceNames",
+      "title": "GetSnapshotResourceNamesAsync",
+      "description": "Snippet for GetSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.GetSnapshotResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.GetSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Filestore.V1.Snapshot>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "GetSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.GetSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_CreateSnapshot_sync",
+      "title": "CreateSnapshotRequestObject",
+      "description": "Snippet for CreateSnapshot",
+      "file": "CloudFilestoreManagerClient.CreateSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.CreateSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.CreateSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.CreateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_CreateSnapshot_async",
+      "title": "CreateSnapshotRequestObjectAsync",
+      "description": "Snippet for CreateSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.CreateSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.CreateSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.CreateSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.CreateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_CreateSnapshot_sync_flattened",
+      "title": "CreateSnapshot",
+      "description": "Snippet for CreateSnapshot",
+      "file": "CloudFilestoreManagerClient.CreateSnapshotSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.CreateSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Filestore.V1.Snapshot",
+            "name": "snapshot"
+          },
+          {
+            "type": "System.String",
+            "name": "snapshotId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.CreateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_CreateSnapshot_async_flattened",
+      "title": "CreateSnapshotAsync",
+      "description": "Snippet for CreateSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.CreateSnapshotAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.CreateSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Filestore.V1.Snapshot",
+            "name": "snapshot"
+          },
+          {
+            "type": "System.String",
+            "name": "snapshotId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.CreateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_CreateSnapshot_sync_flattened_resourceNames",
+      "title": "CreateSnapshotResourceNames",
+      "description": "Snippet for CreateSnapshot",
+      "file": "CloudFilestoreManagerClient.CreateSnapshotResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.CreateSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Filestore.V1.Snapshot",
+            "name": "snapshot"
+          },
+          {
+            "type": "System.String",
+            "name": "snapshotId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.CreateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_CreateSnapshot_async_flattened_resourceNames",
+      "title": "CreateSnapshotResourceNamesAsync",
+      "description": "Snippet for CreateSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.CreateSnapshotResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.CreateSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Filestore.V1.Snapshot",
+            "name": "snapshot"
+          },
+          {
+            "type": "System.String",
+            "name": "snapshotId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "CreateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.CreateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_DeleteSnapshot_sync",
+      "title": "DeleteSnapshotRequestObject",
+      "description": "Snippet for DeleteSnapshot",
+      "file": "CloudFilestoreManagerClient.DeleteSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.DeleteSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.DeleteSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_DeleteSnapshot_async",
+      "title": "DeleteSnapshotRequestObjectAsync",
+      "description": "Snippet for DeleteSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.DeleteSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.DeleteSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.DeleteSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.DeleteSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_DeleteSnapshot_sync_flattened",
+      "title": "DeleteSnapshot",
+      "description": "Snippet for DeleteSnapshot",
+      "file": "CloudFilestoreManagerClient.DeleteSnapshotSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.DeleteSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_DeleteSnapshot_async_flattened",
+      "title": "DeleteSnapshotAsync",
+      "description": "Snippet for DeleteSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.DeleteSnapshotAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.DeleteSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.DeleteSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_DeleteSnapshot_sync_flattened_resourceNames",
+      "title": "DeleteSnapshotResourceNames",
+      "description": "Snippet for DeleteSnapshot",
+      "file": "CloudFilestoreManagerClient.DeleteSnapshotResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.DeleteSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.DeleteSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_DeleteSnapshot_async_flattened_resourceNames",
+      "title": "DeleteSnapshotResourceNamesAsync",
+      "description": "Snippet for DeleteSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.DeleteSnapshotResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.DeleteSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.SnapshotName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.DeleteSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_UpdateSnapshot_sync",
+      "title": "UpdateSnapshotRequestObject",
+      "description": "Snippet for UpdateSnapshot",
+      "file": "CloudFilestoreManagerClient.UpdateSnapshotRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.UpdateSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.UpdateSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.UpdateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_UpdateSnapshot_async",
+      "title": "UpdateSnapshotRequestObjectAsync",
+      "description": "Snippet for UpdateSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.UpdateSnapshotRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.UpdateSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.UpdateSnapshotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.UpdateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_UpdateSnapshot_sync_flattened",
+      "title": "UpdateSnapshot",
+      "description": "Snippet for UpdateSnapshot",
+      "file": "CloudFilestoreManagerClient.UpdateSnapshotSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnapshot",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.UpdateSnapshot",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.Snapshot",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.UpdateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_UpdateSnapshot_async_flattened",
+      "title": "UpdateSnapshotAsync",
+      "description": "Snippet for UpdateSnapshotAsync",
+      "file": "CloudFilestoreManagerClient.UpdateSnapshotAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSnapshotAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.UpdateSnapshotAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.Snapshot",
+            "name": "snapshot"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Snapshot, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateSnapshot",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.UpdateSnapshot",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 60,
           "type": "SHORT"
         }
       ]

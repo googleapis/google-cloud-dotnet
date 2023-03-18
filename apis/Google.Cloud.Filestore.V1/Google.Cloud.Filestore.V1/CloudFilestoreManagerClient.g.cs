@@ -61,6 +61,14 @@ namespace Google.Cloud.Filestore.V1
             RestoreInstanceOperationsSettings = existing.RestoreInstanceOperationsSettings.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
+            ListSnapshotsSettings = existing.ListSnapshotsSettings;
+            GetSnapshotSettings = existing.GetSnapshotSettings;
+            CreateSnapshotSettings = existing.CreateSnapshotSettings;
+            CreateSnapshotOperationsSettings = existing.CreateSnapshotOperationsSettings.Clone();
+            DeleteSnapshotSettings = existing.DeleteSnapshotSettings;
+            DeleteSnapshotOperationsSettings = existing.DeleteSnapshotOperationsSettings.Clone();
+            UpdateSnapshotSettings = existing.UpdateSnapshotSettings;
+            UpdateSnapshotOperationsSettings = existing.UpdateSnapshotOperationsSettings.Clone();
             ListBackupsSettings = existing.ListBackupsSettings;
             GetBackupSettings = existing.GetBackupSettings;
             CreateBackupSettings = existing.CreateBackupSettings;
@@ -230,6 +238,123 @@ namespace Google.Cloud.Filestore.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudFilestoreManagerClient.ListSnapshots</c> and <c>CloudFilestoreManagerClient.ListSnapshotsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSnapshotsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudFilestoreManagerClient.GetSnapshot</c> and <c>CloudFilestoreManagerClient.GetSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudFilestoreManagerClient.CreateSnapshot</c> and <c>CloudFilestoreManagerClient.CreateSnapshotAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudFilestoreManagerClient.CreateSnapshot</c> and
+        /// <c>CloudFilestoreManagerClient.CreateSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateSnapshotOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudFilestoreManagerClient.DeleteSnapshot</c> and <c>CloudFilestoreManagerClient.DeleteSnapshotAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudFilestoreManagerClient.DeleteSnapshot</c> and
+        /// <c>CloudFilestoreManagerClient.DeleteSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteSnapshotOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudFilestoreManagerClient.UpdateSnapshot</c> and <c>CloudFilestoreManagerClient.UpdateSnapshotAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudFilestoreManagerClient.UpdateSnapshot</c> and
+        /// <c>CloudFilestoreManagerClient.UpdateSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateSnapshotOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -419,23 +544,23 @@ namespace Google.Cloud.Filestore.V1
 
     /// <summary>CloudFilestoreManager client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Configures and manages Cloud Filestore resources.
+    /// Configures and manages Filestore resources.
     /// 
-    /// Cloud Filestore Manager v1.
+    /// Filestore Manager v1.
     /// 
-    /// The `file.googleapis.com` service implements the Cloud Filestore API and
+    /// The `file.googleapis.com` service implements the Filestore API and
     /// defines the following resource model for managing instances:
     /// * The service works with a collection of cloud projects, named: `/projects/*`
     /// * Each project has a collection of available locations, named: `/locations/*`
     /// * Each location has a collection of instances and backups, named:
     /// `/instances/*` and `/backups/*` respectively.
-    /// * As such, Cloud Filestore instances are resources of the form:
+    /// * As such, Filestore instances are resources of the form:
     /// `/projects/{project_number}/locations/{location_id}/instances/{instance_id}`
     /// and backups are resources of the form:
     /// `/projects/{project_number}/locations/{location_id}/backup/{backup_id}`
     /// 
-    /// Note that location_id must be a GCP `zone` for instances and but to a GCP
-    /// `region` for backups; for example:
+    /// Note that location_id must be a Google Cloud `zone` for instances, but
+    /// a Google Cloud `region` for backups; for example:
     /// * `projects/12345/locations/us-central1-c/instances/my-filestore`
     /// * `projects/12345/locations/us-central1/backups/my-backup`
     /// </remarks>
@@ -549,8 +674,9 @@ namespace Google.Cloud.Filestore.V1
         /// <param name="parent">
         /// Required. The project and location for which to retrieve instance
         /// information, in the format `projects/{project_id}/locations/{location}`. In
-        /// Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To
-        /// retrieve instance information for all locations, use "-" for the
+        /// Cloud Filestore, locations map to Google Cloud zones, for example
+        /// **us-west1-b**. To retrieve instance information for all locations, use "-"
+        /// for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -578,8 +704,9 @@ namespace Google.Cloud.Filestore.V1
         /// <param name="parent">
         /// Required. The project and location for which to retrieve instance
         /// information, in the format `projects/{project_id}/locations/{location}`. In
-        /// Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To
-        /// retrieve instance information for all locations, use "-" for the
+        /// Cloud Filestore, locations map to Google Cloud zones, for example
+        /// **us-west1-b**. To retrieve instance information for all locations, use "-"
+        /// for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -607,8 +734,9 @@ namespace Google.Cloud.Filestore.V1
         /// <param name="parent">
         /// Required. The project and location for which to retrieve instance
         /// information, in the format `projects/{project_id}/locations/{location}`. In
-        /// Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To
-        /// retrieve instance information for all locations, use "-" for the
+        /// Cloud Filestore, locations map to Google Cloud zones, for example
+        /// **us-west1-b**. To retrieve instance information for all locations, use "-"
+        /// for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -636,8 +764,9 @@ namespace Google.Cloud.Filestore.V1
         /// <param name="parent">
         /// Required. The project and location for which to retrieve instance
         /// information, in the format `projects/{project_id}/locations/{location}`. In
-        /// Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To
-        /// retrieve instance information for all locations, use "-" for the
+        /// Cloud Filestore, locations map to Google Cloud zones, for example
+        /// **us-west1-b**. To retrieve instance information for all locations, use "-"
+        /// for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -839,8 +968,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
-        /// `projects/{project_id}/locations/{location}`. In Cloud Filestore,
-        /// locations map to GCP zones, for example **us-west1-b**.
+        /// `projects/{project_id}/locations/{location}`. In Filestore,
+        /// locations map to Google Cloud zones, for example **us-west1-b**.
         /// </param>
         /// <param name="instance">
         /// Required. An [instance resource][google.cloud.filestore.v1.Instance]
@@ -867,8 +996,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
-        /// `projects/{project_id}/locations/{location}`. In Cloud Filestore,
-        /// locations map to GCP zones, for example **us-west1-b**.
+        /// `projects/{project_id}/locations/{location}`. In Filestore,
+        /// locations map to Google Cloud zones, for example **us-west1-b**.
         /// </param>
         /// <param name="instance">
         /// Required. An [instance resource][google.cloud.filestore.v1.Instance]
@@ -895,8 +1024,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
-        /// `projects/{project_id}/locations/{location}`. In Cloud Filestore,
-        /// locations map to GCP zones, for example **us-west1-b**.
+        /// `projects/{project_id}/locations/{location}`. In Filestore,
+        /// locations map to Google Cloud zones, for example **us-west1-b**.
         /// </param>
         /// <param name="instance">
         /// Required. An [instance resource][google.cloud.filestore.v1.Instance]
@@ -918,8 +1047,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
-        /// `projects/{project_id}/locations/{location}`. In Cloud Filestore,
-        /// locations map to GCP zones, for example **us-west1-b**.
+        /// `projects/{project_id}/locations/{location}`. In Filestore,
+        /// locations map to Google Cloud zones, for example **us-west1-b**.
         /// </param>
         /// <param name="instance">
         /// Required. An [instance resource][google.cloud.filestore.v1.Instance]
@@ -946,8 +1075,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
-        /// `projects/{project_id}/locations/{location}`. In Cloud Filestore,
-        /// locations map to GCP zones, for example **us-west1-b**.
+        /// `projects/{project_id}/locations/{location}`. In Filestore,
+        /// locations map to Google Cloud zones, for example **us-west1-b**.
         /// </param>
         /// <param name="instance">
         /// Required. An [instance resource][google.cloud.filestore.v1.Instance]
@@ -974,8 +1103,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance's project and location, in the format
-        /// `projects/{project_id}/locations/{location}`. In Cloud Filestore,
-        /// locations map to GCP zones, for example **us-west1-b**.
+        /// `projects/{project_id}/locations/{location}`. In Filestore,
+        /// locations map to Google Cloud zones, for example **us-west1-b**.
         /// </param>
         /// <param name="instance">
         /// Required. An [instance resource][google.cloud.filestore.v1.Instance]
@@ -1313,6 +1442,693 @@ namespace Google.Cloud.Filestore.V1
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists all snapshots in a project for either a specified location
+        /// or for all locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(ListSnapshotsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all snapshots in a project for either a specified location
+        /// or for all locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(ListSnapshotsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all snapshots in a project for either a specified location
+        /// or for all locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance for which to retrieve snapshot information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSnapshots(new ListSnapshotsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all snapshots in a project for either a specified location
+        /// or for all locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance for which to retrieve snapshot information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSnapshotsAsync(new ListSnapshotsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all snapshots in a project for either a specified location
+        /// or for all locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance for which to retrieve snapshot information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSnapshots(new ListSnapshotsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all snapshots in a project for either a specified location
+        /// or for all locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance for which to retrieve snapshot information,
+        /// in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSnapshotsAsync(new ListSnapshotsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Snapshot GetSnapshot(GetSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(GetSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(GetSnapshotRequest request, st::CancellationToken cancellationToken) =>
+            GetSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Snapshot GetSnapshot(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSnapshot(new GetSnapshotRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSnapshotAsync(new GetSnapshotRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSnapshotAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Snapshot GetSnapshot(SnapshotName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSnapshot(new GetSnapshotRequest
+            {
+                SnapshotName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(SnapshotName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSnapshotAsync(new GetSnapshotRequest
+            {
+                SnapshotName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Snapshot> GetSnapshotAsync(SnapshotName name, st::CancellationToken cancellationToken) =>
+            GetSnapshotAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Snapshot, gcc::OperationMetadata> CreateSnapshot(CreateSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> CreateSnapshotAsync(CreateSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> CreateSnapshotAsync(CreateSnapshotRequest request, st::CancellationToken cancellationToken) =>
+            CreateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateSnapshot</c>.</summary>
+        public virtual lro::OperationsClient CreateSnapshotOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Snapshot, gcc::OperationMetadata> PollOnceCreateSnapshot(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Snapshot, gcc::OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> PollOnceCreateSnapshotAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Snapshot, gcc::OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The Filestore Instance to create the snapshots of, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="snapshotId">
+        /// Required. The ID to use for the snapshot.
+        /// The ID must be unique within the specified instance.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Snapshot, gcc::OperationMetadata> CreateSnapshot(string parent, Snapshot snapshot, string snapshotId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSnapshot(new CreateSnapshotRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SnapshotId = gax::GaxPreconditions.CheckNotNullOrEmpty(snapshotId, nameof(snapshotId)),
+                Snapshot = gax::GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The Filestore Instance to create the snapshots of, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="snapshotId">
+        /// Required. The ID to use for the snapshot.
+        /// The ID must be unique within the specified instance.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> CreateSnapshotAsync(string parent, Snapshot snapshot, string snapshotId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSnapshotAsync(new CreateSnapshotRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SnapshotId = gax::GaxPreconditions.CheckNotNullOrEmpty(snapshotId, nameof(snapshotId)),
+                Snapshot = gax::GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The Filestore Instance to create the snapshots of, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="snapshotId">
+        /// Required. The ID to use for the snapshot.
+        /// The ID must be unique within the specified instance.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> CreateSnapshotAsync(string parent, Snapshot snapshot, string snapshotId, st::CancellationToken cancellationToken) =>
+            CreateSnapshotAsync(parent, snapshot, snapshotId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The Filestore Instance to create the snapshots of, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="snapshotId">
+        /// Required. The ID to use for the snapshot.
+        /// The ID must be unique within the specified instance.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Snapshot, gcc::OperationMetadata> CreateSnapshot(InstanceName parent, Snapshot snapshot, string snapshotId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSnapshot(new CreateSnapshotRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SnapshotId = gax::GaxPreconditions.CheckNotNullOrEmpty(snapshotId, nameof(snapshotId)),
+                Snapshot = gax::GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The Filestore Instance to create the snapshots of, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="snapshotId">
+        /// Required. The ID to use for the snapshot.
+        /// The ID must be unique within the specified instance.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> CreateSnapshotAsync(InstanceName parent, Snapshot snapshot, string snapshotId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSnapshotAsync(new CreateSnapshotRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SnapshotId = gax::GaxPreconditions.CheckNotNullOrEmpty(snapshotId, nameof(snapshotId)),
+                Snapshot = gax::GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The Filestore Instance to create the snapshots of, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
+        /// </param>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="snapshotId">
+        /// Required. The ID to use for the snapshot.
+        /// The ID must be unique within the specified instance.
+        /// 
+        /// This value must start with a lowercase letter followed by up to 62
+        /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> CreateSnapshotAsync(InstanceName parent, Snapshot snapshot, string snapshotId, st::CancellationToken cancellationToken) =>
+            CreateSnapshotAsync(parent, snapshot, snapshotId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, gcc::OperationMetadata> DeleteSnapshot(DeleteSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, gcc::OperationMetadata>> DeleteSnapshotAsync(DeleteSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, gcc::OperationMetadata>> DeleteSnapshotAsync(DeleteSnapshotRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteSnapshot</c>.</summary>
+        public virtual lro::OperationsClient DeleteSnapshotOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, gcc::OperationMetadata> PollOnceDeleteSnapshot(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, gcc::OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, gcc::OperationMetadata>> PollOnceDeleteSnapshotAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, gcc::OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, gcc::OperationMetadata> DeleteSnapshot(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSnapshot(new DeleteSnapshotRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, gcc::OperationMetadata>> DeleteSnapshotAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSnapshotAsync(new DeleteSnapshotRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, gcc::OperationMetadata>> DeleteSnapshotAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSnapshotAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, gcc::OperationMetadata> DeleteSnapshot(SnapshotName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSnapshot(new DeleteSnapshotRequest
+            {
+                SnapshotName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, gcc::OperationMetadata>> DeleteSnapshotAsync(SnapshotName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSnapshotAsync(new DeleteSnapshotRequest
+            {
+                SnapshotName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The snapshot resource name, in the format
+        /// `projects/{project_id}/locations/{location}/instances/{instance_id}/snapshots/{snapshot_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, gcc::OperationMetadata>> DeleteSnapshotAsync(SnapshotName name, st::CancellationToken cancellationToken) =>
+            DeleteSnapshotAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the settings of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Snapshot, gcc::OperationMetadata> UpdateSnapshot(UpdateSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the settings of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> UpdateSnapshotAsync(UpdateSnapshotRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the settings of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> UpdateSnapshotAsync(UpdateSnapshotRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateSnapshot</c>.</summary>
+        public virtual lro::OperationsClient UpdateSnapshotOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Snapshot, gcc::OperationMetadata> PollOnceUpdateSnapshot(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Snapshot, gcc::OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> PollOnceUpdateSnapshotAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Snapshot, gcc::OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a specific snapshot.
+        /// </summary>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update. At least one path must be supplied in
+        /// this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Snapshot, gcc::OperationMetadata> UpdateSnapshot(Snapshot snapshot, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSnapshot(new UpdateSnapshotRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Snapshot = gax::GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a specific snapshot.
+        /// </summary>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update. At least one path must be supplied in
+        /// this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> UpdateSnapshotAsync(Snapshot snapshot, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSnapshotAsync(new UpdateSnapshotRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Snapshot = gax::GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the settings of a specific snapshot.
+        /// </summary>
+        /// <param name="snapshot">
+        /// Required. A snapshot resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update. At least one path must be supplied in
+        /// this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> UpdateSnapshotAsync(Snapshot snapshot, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSnapshotAsync(snapshot, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists all backups in a project for either a specified location or for all
         /// locations.
         /// </summary>
@@ -1339,9 +2155,9 @@ namespace Google.Cloud.Filestore.V1
         /// <param name="parent">
         /// Required. The project and location for which to retrieve backup
         /// information, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**. To retrieve
-        /// backup information for all locations, use "-" for the
+        /// `projects/{project_number}/locations/{location}`. In Filestore, backup
+        /// locations map to Google Cloud regions, for example **us-west1**. To
+        /// retrieve backup information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -1369,9 +2185,9 @@ namespace Google.Cloud.Filestore.V1
         /// <param name="parent">
         /// Required. The project and location for which to retrieve backup
         /// information, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**. To retrieve
-        /// backup information for all locations, use "-" for the
+        /// `projects/{project_number}/locations/{location}`. In Filestore, backup
+        /// locations map to Google Cloud regions, for example **us-west1**. To
+        /// retrieve backup information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -1399,9 +2215,9 @@ namespace Google.Cloud.Filestore.V1
         /// <param name="parent">
         /// Required. The project and location for which to retrieve backup
         /// information, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**. To retrieve
-        /// backup information for all locations, use "-" for the
+        /// `projects/{project_number}/locations/{location}`. In Filestore, backup
+        /// locations map to Google Cloud regions, for example **us-west1**. To
+        /// retrieve backup information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -1429,9 +2245,9 @@ namespace Google.Cloud.Filestore.V1
         /// <param name="parent">
         /// Required. The project and location for which to retrieve backup
         /// information, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**. To retrieve
-        /// backup information for all locations, use "-" for the
+        /// `projects/{project_number}/locations/{location}`. In Filestore, backup
+        /// locations map to Google Cloud regions, for example **us-west1**. To
+        /// retrieve backup information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -1621,8 +2437,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The backup's project and location, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**.
+        /// `projects/{project_number}/locations/{location}`. In Filestore,
+        /// backup locations map to Google Cloud regions, for example **us-west1**.
         /// </param>
         /// <param name="backup">
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
@@ -1651,8 +2467,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The backup's project and location, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**.
+        /// `projects/{project_number}/locations/{location}`. In Filestore,
+        /// backup locations map to Google Cloud regions, for example **us-west1**.
         /// </param>
         /// <param name="backup">
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
@@ -1681,8 +2497,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The backup's project and location, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**.
+        /// `projects/{project_number}/locations/{location}`. In Filestore,
+        /// backup locations map to Google Cloud regions, for example **us-west1**.
         /// </param>
         /// <param name="backup">
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
@@ -1706,8 +2522,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The backup's project and location, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**.
+        /// `projects/{project_number}/locations/{location}`. In Filestore,
+        /// backup locations map to Google Cloud regions, for example **us-west1**.
         /// </param>
         /// <param name="backup">
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
@@ -1736,8 +2552,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The backup's project and location, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**.
+        /// `projects/{project_number}/locations/{location}`. In Filestore,
+        /// backup locations map to Google Cloud regions, for example **us-west1**.
         /// </param>
         /// <param name="backup">
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
@@ -1766,8 +2582,8 @@ namespace Google.Cloud.Filestore.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The backup's project and location, in the format
-        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
-        /// backup locations map to GCP regions, for example **us-west1**.
+        /// `projects/{project_number}/locations/{location}`. In Filestore,
+        /// backup locations map to Google Cloud regions, for example **us-west1**.
         /// </param>
         /// <param name="backup">
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
@@ -2032,23 +2848,23 @@ namespace Google.Cloud.Filestore.V1
 
     /// <summary>CloudFilestoreManager client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Configures and manages Cloud Filestore resources.
+    /// Configures and manages Filestore resources.
     /// 
-    /// Cloud Filestore Manager v1.
+    /// Filestore Manager v1.
     /// 
-    /// The `file.googleapis.com` service implements the Cloud Filestore API and
+    /// The `file.googleapis.com` service implements the Filestore API and
     /// defines the following resource model for managing instances:
     /// * The service works with a collection of cloud projects, named: `/projects/*`
     /// * Each project has a collection of available locations, named: `/locations/*`
     /// * Each location has a collection of instances and backups, named:
     /// `/instances/*` and `/backups/*` respectively.
-    /// * As such, Cloud Filestore instances are resources of the form:
+    /// * As such, Filestore instances are resources of the form:
     /// `/projects/{project_number}/locations/{location_id}/instances/{instance_id}`
     /// and backups are resources of the form:
     /// `/projects/{project_number}/locations/{location_id}/backup/{backup_id}`
     /// 
-    /// Note that location_id must be a GCP `zone` for instances and but to a GCP
-    /// `region` for backups; for example:
+    /// Note that location_id must be a Google Cloud `zone` for instances, but
+    /// a Google Cloud `region` for backups; for example:
     /// * `projects/12345/locations/us-central1-c/instances/my-filestore`
     /// * `projects/12345/locations/us-central1/backups/my-backup`
     /// </remarks>
@@ -2065,6 +2881,16 @@ namespace Google.Cloud.Filestore.V1
         private readonly gaxgrpc::ApiCall<RestoreInstanceRequest, lro::Operation> _callRestoreInstance;
 
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
+
+        private readonly gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
+
+        private readonly gaxgrpc::ApiCall<GetSnapshotRequest, Snapshot> _callGetSnapshot;
+
+        private readonly gaxgrpc::ApiCall<CreateSnapshotRequest, lro::Operation> _callCreateSnapshot;
+
+        private readonly gaxgrpc::ApiCall<DeleteSnapshotRequest, lro::Operation> _callDeleteSnapshot;
+
+        private readonly gaxgrpc::ApiCall<UpdateSnapshotRequest, lro::Operation> _callUpdateSnapshot;
 
         private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
 
@@ -2092,6 +2918,9 @@ namespace Google.Cloud.Filestore.V1
             UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings, logger);
             RestoreInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreInstanceOperationsSettings, logger);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
+            CreateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSnapshotOperationsSettings, logger);
+            DeleteSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSnapshotOperationsSettings, logger);
+            UpdateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSnapshotOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
             UpdateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupOperationsSettings, logger);
@@ -2113,6 +2942,21 @@ namespace Google.Cloud.Filestore.V1
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>("DeleteInstance", grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
+            _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>("ListSnapshots", grpcClient.ListSnapshotsAsync, grpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSnapshots);
+            Modify_ListSnapshotsApiCall(ref _callListSnapshots);
+            _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>("GetSnapshot", grpcClient.GetSnapshotAsync, grpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSnapshot);
+            Modify_GetSnapshotApiCall(ref _callGetSnapshot);
+            _callCreateSnapshot = clientHelper.BuildApiCall<CreateSnapshotRequest, lro::Operation>("CreateSnapshot", grpcClient.CreateSnapshotAsync, grpcClient.CreateSnapshot, effectiveSettings.CreateSnapshotSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSnapshot);
+            Modify_CreateSnapshotApiCall(ref _callCreateSnapshot);
+            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, lro::Operation>("DeleteSnapshot", grpcClient.DeleteSnapshotAsync, grpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSnapshot);
+            Modify_DeleteSnapshotApiCall(ref _callDeleteSnapshot);
+            _callUpdateSnapshot = clientHelper.BuildApiCall<UpdateSnapshotRequest, lro::Operation>("UpdateSnapshot", grpcClient.UpdateSnapshotAsync, grpcClient.UpdateSnapshot, effectiveSettings.UpdateSnapshotSettings).WithGoogleRequestParam("snapshot.name", request => request.Snapshot?.Name);
+            Modify_ApiCall(ref _callUpdateSnapshot);
+            Modify_UpdateSnapshotApiCall(ref _callUpdateSnapshot);
             _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackups);
             Modify_ListBackupsApiCall(ref _callListBackups);
@@ -2145,6 +2989,16 @@ namespace Google.Cloud.Filestore.V1
 
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
+        partial void Modify_ListSnapshotsApiCall(ref gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
+
+        partial void Modify_GetSnapshotApiCall(ref gaxgrpc::ApiCall<GetSnapshotRequest, Snapshot> call);
+
+        partial void Modify_CreateSnapshotApiCall(ref gaxgrpc::ApiCall<CreateSnapshotRequest, lro::Operation> call);
+
+        partial void Modify_DeleteSnapshotApiCall(ref gaxgrpc::ApiCall<DeleteSnapshotRequest, lro::Operation> call);
+
+        partial void Modify_UpdateSnapshotApiCall(ref gaxgrpc::ApiCall<UpdateSnapshotRequest, lro::Operation> call);
+
         partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
 
         partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
@@ -2171,6 +3025,16 @@ namespace Google.Cloud.Filestore.V1
         partial void Modify_RestoreInstanceRequest(ref RestoreInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSnapshotsRequest(ref ListSnapshotsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSnapshotRequest(ref GetSnapshotRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateSnapshotRequest(ref CreateSnapshotRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSnapshotRequest(ref DeleteSnapshotRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSnapshotRequest(ref UpdateSnapshotRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2355,6 +3219,137 @@ namespace Google.Cloud.Filestore.V1
         }
 
         /// <summary>
+        /// Lists all snapshots in a project for either a specified location
+        /// or for all locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(ListSnapshotsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSnapshotsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSnapshotsRequest, ListSnapshotsResponse, Snapshot>(_callListSnapshots, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all snapshots in a project for either a specified location
+        /// or for all locations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(ListSnapshotsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSnapshotsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSnapshotsRequest, ListSnapshotsResponse, Snapshot>(_callListSnapshots, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Snapshot GetSnapshot(GetSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSnapshotRequest(ref request, ref callSettings);
+            return _callGetSnapshot.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Snapshot> GetSnapshotAsync(GetSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSnapshotRequest(ref request, ref callSettings);
+            return _callGetSnapshot.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateSnapshot</c>.</summary>
+        public override lro::OperationsClient CreateSnapshotOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Snapshot, gcc::OperationMetadata> CreateSnapshot(CreateSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<Snapshot, gcc::OperationMetadata>(_callCreateSnapshot.Sync(request, callSettings), CreateSnapshotOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> CreateSnapshotAsync(CreateSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<Snapshot, gcc::OperationMetadata>(await _callCreateSnapshot.Async(request, callSettings).ConfigureAwait(false), CreateSnapshotOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteSnapshot</c>.</summary>
+        public override lro::OperationsClient DeleteSnapshotOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, gcc::OperationMetadata> DeleteSnapshot(DeleteSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, gcc::OperationMetadata>(_callDeleteSnapshot.Sync(request, callSettings), DeleteSnapshotOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, gcc::OperationMetadata>> DeleteSnapshotAsync(DeleteSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, gcc::OperationMetadata>(await _callDeleteSnapshot.Async(request, callSettings).ConfigureAwait(false), DeleteSnapshotOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateSnapshot</c>.</summary>
+        public override lro::OperationsClient UpdateSnapshotOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the settings of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Snapshot, gcc::OperationMetadata> UpdateSnapshot(UpdateSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<Snapshot, gcc::OperationMetadata>(_callUpdateSnapshot.Sync(request, callSettings), UpdateSnapshotOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the settings of a specific snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Snapshot, gcc::OperationMetadata>> UpdateSnapshotAsync(UpdateSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSnapshotRequest(ref request, ref callSettings);
+            return new lro::Operation<Snapshot, gcc::OperationMetadata>(await _callUpdateSnapshot.Async(request, callSettings).ConfigureAwait(false), UpdateSnapshotOperationsClient);
+        }
+
+        /// <summary>
         /// Lists all backups in a project for either a specified location or for all
         /// locations.
         /// </summary>
@@ -2490,6 +3485,10 @@ namespace Google.Cloud.Filestore.V1
     {
     }
 
+    public partial class ListSnapshotsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListBackupsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2498,6 +3497,14 @@ namespace Google.Cloud.Filestore.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Instance> GetEnumerator() => Instances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSnapshotsResponse : gaxgrpc::IPageResponse<Snapshot>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Snapshot> GetEnumerator() => Snapshots.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
