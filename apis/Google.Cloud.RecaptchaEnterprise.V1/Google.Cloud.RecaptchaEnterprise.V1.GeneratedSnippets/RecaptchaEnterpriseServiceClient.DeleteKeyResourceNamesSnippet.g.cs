@@ -16,14 +16,12 @@
 
 namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
 {
-    // [START recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_AnnotateAssessment_async]
+    // [START recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_DeleteKey_sync_flattened_resourceNames]
     using Google.Cloud.RecaptchaEnterprise.V1;
-    using Google.Protobuf;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedRecaptchaEnterpriseServiceClientSnippets
     {
-        /// <summary>Snippet for AnnotateAssessmentAsync</summary>
+        /// <summary>Snippet for DeleteKey</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,25 +29,15 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task AnnotateAssessmentRequestObjectAsync()
+        public void DeleteKeyResourceNames()
         {
             // Create client
-            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
             // Initialize request argument(s)
-            AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
-            {
-                AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
-                Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
-                Reasons =
-                {
-                    AnnotateAssessmentRequest.Types.Reason.Unspecified,
-                },
-                HashedAccountId = ByteString.Empty,
-                TransactionEvent = new TransactionEvent(),
-            };
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
             // Make the request
-            AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceClient.AnnotateAssessmentAsync(request);
+            recaptchaEnterpriseServiceClient.DeleteKey(name);
         }
     }
-    // [END recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_AnnotateAssessment_async]
+    // [END recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_DeleteKey_sync_flattened_resourceNames]
 }

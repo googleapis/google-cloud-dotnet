@@ -693,6 +693,112 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             CreateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new reCAPTCHA Enterprise key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the key will be created, in the
+        /// format "projects/{project}".
+        /// </param>
+        /// <param name="key">
+        /// Required. Information to create a reCAPTCHA Enterprise key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Key CreateKey(string parent, Key key, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKey(new CreateKeyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Key = gax::GaxPreconditions.CheckNotNull(key, nameof(key)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new reCAPTCHA Enterprise key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the key will be created, in the
+        /// format "projects/{project}".
+        /// </param>
+        /// <param name="key">
+        /// Required. Information to create a reCAPTCHA Enterprise key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> CreateKeyAsync(string parent, Key key, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyAsync(new CreateKeyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Key = gax::GaxPreconditions.CheckNotNull(key, nameof(key)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new reCAPTCHA Enterprise key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the key will be created, in the
+        /// format "projects/{project}".
+        /// </param>
+        /// <param name="key">
+        /// Required. Information to create a reCAPTCHA Enterprise key.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> CreateKeyAsync(string parent, Key key, st::CancellationToken cancellationToken) =>
+            CreateKeyAsync(parent, key, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new reCAPTCHA Enterprise key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the key will be created, in the
+        /// format "projects/{project}".
+        /// </param>
+        /// <param name="key">
+        /// Required. Information to create a reCAPTCHA Enterprise key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Key CreateKey(gagr::ProjectName parent, Key key, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKey(new CreateKeyRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Key = gax::GaxPreconditions.CheckNotNull(key, nameof(key)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new reCAPTCHA Enterprise key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the key will be created, in the
+        /// format "projects/{project}".
+        /// </param>
+        /// <param name="key">
+        /// Required. Information to create a reCAPTCHA Enterprise key.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> CreateKeyAsync(gagr::ProjectName parent, Key key, gaxgrpc::CallSettings callSettings = null) =>
+            CreateKeyAsync(new CreateKeyRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Key = gax::GaxPreconditions.CheckNotNull(key, nameof(key)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new reCAPTCHA Enterprise key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the key will be created, in the
+        /// format "projects/{project}".
+        /// </param>
+        /// <param name="key">
+        /// Required. Information to create a reCAPTCHA Enterprise key.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> CreateKeyAsync(gagr::ProjectName parent, Key key, st::CancellationToken cancellationToken) =>
+            CreateKeyAsync(parent, key, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns the list of all keys that belong to a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -709,6 +815,106 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>A pageable asynchronous sequence of <see cref="Key"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(ListKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the list of all keys that belong to a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that contains the keys that will be
+        /// listed, in the format "projects/{project}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Key"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeysResponse, Key> ListKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListKeys(new ListKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all keys that belong to a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that contains the keys that will be
+        /// listed, in the format "projects/{project}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Key"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListKeysAsync(new ListKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all keys that belong to a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that contains the keys that will be
+        /// listed, in the format "projects/{project}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Key"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListKeysResponse, Key> ListKeys(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListKeys(new ListKeysRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the list of all keys that belong to a project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that contains the keys that will be
+        /// listed, in the format "projects/{project}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Key"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListKeysResponse, Key> ListKeysAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListKeysAsync(new ListKeysRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Returns the secret key related to the specified public key.
@@ -867,6 +1073,90 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             GetKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested key, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Key GetKey(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKey(new GetKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested key, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> GetKeyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyAsync(new GetKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested key, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> GetKeyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested key, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Key GetKey(KeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKey(new GetKeyRequest
+            {
+                KeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested key, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> GetKeyAsync(KeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetKeyAsync(new GetKeyRequest
+            {
+                KeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested key, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> GetKeyAsync(KeyName name, st::CancellationToken cancellationToken) =>
+            GetKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates the specified key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -894,6 +1184,59 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             UpdateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the specified key.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The key to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the key get updated. If the
+        /// mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Key UpdateKey(Key key, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateKey(new UpdateKeyRequest
+            {
+                Key = gax::GaxPreconditions.CheckNotNull(key, nameof(key)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified key.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The key to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the key get updated. If the
+        /// mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> UpdateKeyAsync(Key key, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateKeyAsync(new UpdateKeyRequest
+            {
+                Key = gax::GaxPreconditions.CheckNotNull(key, nameof(key)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified key.
+        /// </summary>
+        /// <param name="key">
+        /// Required. The key to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the key get updated. If the
+        /// mask is not present, all fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> UpdateKeyAsync(Key key, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateKeyAsync(key, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes the specified key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -919,6 +1262,90 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteKeyAsync(DeleteKeyRequest request, st::CancellationToken cancellationToken) =>
             DeleteKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to be deleted, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteKey(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKey(new DeleteKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to be deleted, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyAsync(new DeleteKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to be deleted, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to be deleted, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteKey(KeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKey(new DeleteKeyRequest
+            {
+                KeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to be deleted, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyAsync(KeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteKeyAsync(new DeleteKeyRequest
+            {
+                KeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the key to be deleted, in the format
+        /// "projects/{project}/keys/{key}".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteKeyAsync(KeyName name, st::CancellationToken cancellationToken) =>
+            DeleteKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
