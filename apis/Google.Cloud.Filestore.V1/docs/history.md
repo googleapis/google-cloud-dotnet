@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2023-03-20
+
+### New features
+
+- Updating the client to match the latest v1 API ([commit 6db60e7](https://github.com/googleapis/google-cloud-dotnet/commit/6db60e7abeaee758b2783effe51c0e1ac81ad05a))
+
 ## Version 2.1.0, released 2023-01-17
 
 ### New features
