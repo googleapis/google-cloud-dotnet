@@ -3,7 +3,7 @@
 //     source: google/cloud/speech/v2/cloud_speech.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -351,7 +351,7 @@ namespace Google.Cloud.Speech.V2 {
       /// <summary>
       /// Returns the requested
       /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
       /// exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -738,7 +738,7 @@ namespace Google.Cloud.Speech.V2 {
       /// <summary>
       /// Returns the requested
       /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
       /// exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -754,7 +754,7 @@ namespace Google.Cloud.Speech.V2 {
       /// <summary>
       /// Returns the requested
       /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
       /// exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -768,7 +768,7 @@ namespace Google.Cloud.Speech.V2 {
       /// <summary>
       /// Returns the requested
       /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
       /// exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -784,7 +784,7 @@ namespace Google.Cloud.Speech.V2 {
       /// <summary>
       /// Returns the requested
       /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
       /// exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
