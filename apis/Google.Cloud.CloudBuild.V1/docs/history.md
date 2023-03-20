@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2023-03-20
+
+### New features
+
+- Add DefaultLogsBucketBehavior to BuildOptions ([commit bff0128](https://github.com/googleapis/google-cloud-dotnet/commit/bff012833bd33f2c4b60f92aea08632e25419234))
+
 ## Version 2.2.0, released 2023-01-19
 
 ### New features
