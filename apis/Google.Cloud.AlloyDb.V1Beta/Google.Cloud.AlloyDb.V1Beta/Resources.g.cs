@@ -238,7 +238,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             "c1Byb3RvUAFaOWNsb3VkLmdvb2dsZS5jb20vZ28vYWxsb3lkYi9hcGl2MWJl",
             "dGEvYWxsb3lkYnBiO2FsbG95ZGJwYqoCG0dvb2dsZS5DbG91ZC5BbGxveURi",
             "LlYxQmV0YcoCG0dvb2dsZVxDbG91ZFxBbGxveURiXFYxYmV0YeoCHkdvb2ds",
-            "ZTo6Q2xvdWQ6OkFsbG95RGI6OlYxYmV0YepBpgEKKGNsb3Vka21zLmdvb2ds",
+            "ZTo6Q2xvdWQ6OkFsbG95REI6OlYxYmV0YepBpgEKKGNsb3Vka21zLmdvb2ds",
             "ZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SenByb2plY3RzL3twcm9qZWN0",
             "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2Ny",
             "eXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlw",
