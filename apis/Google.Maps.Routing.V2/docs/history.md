@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2023-03-20
+
+### New features
+
+- Adds support for specifying region_code in the ComputeRoutesRequest ([commit 2866cf6](https://github.com/googleapis/google-cloud-dotnet/commit/2866cf6abf8448febc94497de0f63bdc670bb3de))
+- Adds support for specifying region_code and language_code in the ComputeRouteMatrixRequest ([commit 2866cf6](https://github.com/googleapis/google-cloud-dotnet/commit/2866cf6abf8448febc94497de0f63bdc670bb3de))
+- Added support for specifying waypoints as addresses ([commit e18325e](https://github.com/googleapis/google-cloud-dotnet/commit/e18325e60d65b1435cbc3a7c8cd132ed4c82774a))
+
+### Documentation improvements
+
+- Clarify usage of compute_alternative_routes in proto comment ([commit 76c84a0](https://github.com/googleapis/google-cloud-dotnet/commit/76c84a0df10661ed5eea54e0bb3fd7642f5503cb))
+- Clarified usage of RouteLegStepTravelAdvisory in comment ([commit e18325e](https://github.com/googleapis/google-cloud-dotnet/commit/e18325e60d65b1435cbc3a7c8cd132ed4c82774a))
+
 ## Version 1.0.0-beta07, released 2023-01-19
 
 ### New features
