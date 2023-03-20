@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2023-03-20
+
+### New features
+
+- Add spark connection properties type ([commit e7eddf1](https://github.com/googleapis/google-cloud-dotnet/commit/e7eddf1aa7098fe62750671adef269cccb91265f))
+
 ## Version 2.4.0, released 2023-03-06
 
 ### New features
