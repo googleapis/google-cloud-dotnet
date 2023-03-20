@@ -16,7 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Filter.*.cs">
-        <DependentUpon>Filter.cs</DependentUpon>
+      <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
