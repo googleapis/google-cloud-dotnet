@@ -68,7 +68,7 @@ public sealed class SpannerTestDatabasePostgreSql : SpannerTestDatabaseBase
     {
     }
 
-    protected override void CreateDatabase()
+    protected override bool TryCreateDatabase()
     {
         const DatabaseDialect dialect = DatabaseDialect.Postgresql;
         DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
@@ -90,10 +90,11 @@ public sealed class SpannerTestDatabasePostgreSql : SpannerTestDatabaseBase
             }
 
             Logger.DefaultLogger.Debug($"The database {SpannerDatabase} with dialect {dialect} created successfully.");
+            return true;
         }
         catch (RpcException e) when (e.StatusCode == StatusCode.AlreadyExists)
         {
-            // Ignore.
+            return false;
         }
     }
 }
