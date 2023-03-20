@@ -242,7 +242,7 @@ namespace Google.Cloud.AlloyDb.V1 {
             "Y29tLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxQgxTZXJ2aWNlUHJvdG9QAVo1",
             "Y2xvdWQuZ29vZ2xlLmNvbS9nby9hbGxveWRiL2FwaXYxL2FsbG95ZGJwYjth",
             "bGxveWRicGKqAhdHb29nbGUuQ2xvdWQuQWxsb3lEYi5WMcoCF0dvb2dsZVxD",
-            "bG91ZFxBbGxveURiXFYx6gIaR29vZ2xlOjpDbG91ZDo6QWxsb3lEYjo6VjFi",
+            "bG91ZFxBbGxveURiXFYx6gIaR29vZ2xlOjpDbG91ZDo6QWxsb3lEQjo6VjFi",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
