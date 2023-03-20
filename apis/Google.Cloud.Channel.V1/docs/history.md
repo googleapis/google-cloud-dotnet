@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.5.0, released 2023-03-20
+
+### New features
+
+- Add show_future_offers to ListOffers ([commit cb5ba9f](https://github.com/googleapis/google-cloud-dotnet/commit/cb5ba9fcb6aee129ec105af90932a139534e3b76))
+- Add ListEntitlementChanges ([commit cb5ba9f](https://github.com/googleapis/google-cloud-dotnet/commit/cb5ba9fcb6aee129ec105af90932a139534e3b76))
+
 ## Version 2.4.0, released 2023-01-19
 
 ### New features
