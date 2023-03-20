@@ -2186,7 +2186,7 @@
     },
     {
       "id": "Google.Cloud.Functions.V2",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Cloud Functions",
       "productUrl": "https://cloud.google.com/functions",
@@ -2195,7 +2195,7 @@
         "functions"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
