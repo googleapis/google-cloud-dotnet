@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2023-03-20
+
+### New features
+
+- Add VULNERABILITY_ASSESSMENT Note type to grafeas v1 API, adds Vex_Assessment derived from the Note to resources' occurrences, VEX notes now be written to add CVE assessments ([commit 3375552](https://github.com/googleapis/google-cloud-dotnet/commit/33755527a7fcb5c553cc48344ca6459a1063ee44))
+
 ## Version 3.2.0, released 2023-03-06
 
 ### New features
