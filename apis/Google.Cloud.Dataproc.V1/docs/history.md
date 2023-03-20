@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.5.0, released 2023-03-20
+
+### New features
+
+- Add support for new Dataproc features ([commit 07761d3](https://github.com/googleapis/google-cloud-dotnet/commit/07761d32cd00a39cde860d3b4727c554c71946df))
+
 ## Version 5.4.0, released 2023-01-19
 
 ### New features
