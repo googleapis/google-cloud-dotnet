@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.3.0, released 2023-03-20
+
+### New features
+
+- Add support for new ImportEntries() API, including format of the dump ([commit 2628c55](https://github.com/googleapis/google-cloud-dotnet/commit/2628c5527cfedb6b775e3858a1ce38aad7920d72))
+- Add support for entries associated with Looker and CloudSQL ([commit 2628c55](https://github.com/googleapis/google-cloud-dotnet/commit/2628c5527cfedb6b775e3858a1ce38aad7920d72))
+- Add support for a ReconcileTags() API method ([commit 2628c55](https://github.com/googleapis/google-cloud-dotnet/commit/2628c5527cfedb6b775e3858a1ce38aad7920d72))
+
 ## Version 2.2.0, released 2023-01-16
 
 ### New features
