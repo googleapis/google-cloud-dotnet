@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.0.0-beta09, released 2023-03-20
+
+### New features
+
+- Added hints.language_hints field in OcrConfig ([commit ec3812e](https://github.com/googleapis/google-cloud-dotnet/commit/ec3812e5fb9db0812ce570dbfbfa81f64879d055))
+- Added enable_image_quality_scores field in OcrConfig ([commit ec3812e](https://github.com/googleapis/google-cloud-dotnet/commit/ec3812e5fb9db0812ce570dbfbfa81f64879d055))
+- Added enable_symbol field in OcrConfig ([commit ec3812e](https://github.com/googleapis/google-cloud-dotnet/commit/ec3812e5fb9db0812ce570dbfbfa81f64879d055))
+
 ## Version 2.0.0-beta08, released 2023-02-08
 
 ### New features
