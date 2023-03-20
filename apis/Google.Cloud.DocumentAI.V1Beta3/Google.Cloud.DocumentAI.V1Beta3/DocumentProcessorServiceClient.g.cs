@@ -84,6 +84,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             EvaluateProcessorVersionOperationsSettings = existing.EvaluateProcessorVersionOperationsSettings.Clone();
             GetEvaluationSettings = existing.GetEvaluationSettings;
             ListEvaluationsSettings = existing.ListEvaluationsSettings;
+            ImportProcessorVersionSettings = existing.ImportProcessorVersionSettings;
+            ImportProcessorVersionOperationsSettings = existing.ImportProcessorVersionOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -600,6 +602,37 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListEvaluationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentProcessorServiceClient.ImportProcessorVersion</c> and
+        /// <c>DocumentProcessorServiceClient.ImportProcessorVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportProcessorVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DocumentProcessorServiceClient.ImportProcessorVersion</c>
+        /// and <c>DocumentProcessorServiceClient.ImportProcessorVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportProcessorVersionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3491,6 +3524,150 @@ namespace Google.Cloud.DocumentAI.V1Beta3
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> ImportProcessorVersion(ImportProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>> ImportProcessorVersionAsync(ImportProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>> ImportProcessorVersionAsync(ImportProcessorVersionRequest request, st::CancellationToken cancellationToken) =>
+            ImportProcessorVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportProcessorVersion</c>.</summary>
+        public virtual lro::OperationsClient ImportProcessorVersionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportProcessorVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> PollOnceImportProcessorVersion(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportProcessorVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportProcessorVersion</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>> PollOnceImportProcessorVersionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportProcessorVersionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The destination processor name to create the processor version
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> ImportProcessorVersion(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportProcessorVersion(new ImportProcessorVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The destination processor name to create the processor version
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>> ImportProcessorVersionAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportProcessorVersionAsync(new ImportProcessorVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The destination processor name to create the processor version
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>> ImportProcessorVersionAsync(string parent, st::CancellationToken cancellationToken) =>
+            ImportProcessorVersionAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The destination processor name to create the processor version
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> ImportProcessorVersion(ProcessorName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportProcessorVersion(new ImportProcessorVersionRequest
+            {
+                ParentAsProcessorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The destination processor name to create the processor version
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>> ImportProcessorVersionAsync(ProcessorName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportProcessorVersionAsync(new ImportProcessorVersionRequest
+            {
+                ParentAsProcessorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The destination processor name to create the processor version
+        /// in. Format:
+        /// `projects/{project}/locations/{location}/processors/{processor}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>> ImportProcessorVersionAsync(ProcessorName parent, st::CancellationToken cancellationToken) =>
+            ImportProcessorVersionAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DocumentProcessorService client wrapper implementation, for convenient use.</summary>
@@ -3546,6 +3723,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3
 
         private readonly gaxgrpc::ApiCall<ListEvaluationsRequest, ListEvaluationsResponse> _callListEvaluations;
 
+        private readonly gaxgrpc::ApiCall<ImportProcessorVersionRequest, lro::Operation> _callImportProcessorVersion;
+
         /// <summary>
         /// Constructs a client wrapper for the DocumentProcessorService service, with the specified gRPC client and
         /// settings.
@@ -3571,6 +3750,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             SetDefaultProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetDefaultProcessorVersionOperationsSettings, logger);
             ReviewDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReviewDocumentOperationsSettings, logger);
             EvaluateProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EvaluateProcessorVersionOperationsSettings, logger);
+            ImportProcessorVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProcessorVersionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callProcessDocument = clientHelper.BuildApiCall<ProcessRequest, ProcessResponse>("ProcessDocument", grpcClient.ProcessDocumentAsync, grpcClient.ProcessDocument, effectiveSettings.ProcessDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callProcessDocument);
@@ -3638,6 +3818,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             _callListEvaluations = clientHelper.BuildApiCall<ListEvaluationsRequest, ListEvaluationsResponse>("ListEvaluations", grpcClient.ListEvaluationsAsync, grpcClient.ListEvaluations, effectiveSettings.ListEvaluationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEvaluations);
             Modify_ListEvaluationsApiCall(ref _callListEvaluations);
+            _callImportProcessorVersion = clientHelper.BuildApiCall<ImportProcessorVersionRequest, lro::Operation>("ImportProcessorVersion", grpcClient.ImportProcessorVersionAsync, grpcClient.ImportProcessorVersion, effectiveSettings.ImportProcessorVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportProcessorVersion);
+            Modify_ImportProcessorVersionApiCall(ref _callImportProcessorVersion);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3686,6 +3869,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         partial void Modify_GetEvaluationApiCall(ref gaxgrpc::ApiCall<GetEvaluationRequest, Evaluation> call);
 
         partial void Modify_ListEvaluationsApiCall(ref gaxgrpc::ApiCall<ListEvaluationsRequest, ListEvaluationsResponse> call);
+
+        partial void Modify_ImportProcessorVersionApiCall(ref gaxgrpc::ApiCall<ImportProcessorVersionRequest, lro::Operation> call);
 
         partial void OnConstruction(DocumentProcessorService.DocumentProcessorServiceClient grpcClient, DocumentProcessorServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3738,6 +3923,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         partial void Modify_GetEvaluationRequest(ref GetEvaluationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListEvaluationsRequest(ref ListEvaluationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportProcessorVersionRequest(ref ImportProcessorVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Processes a single document.
@@ -4324,6 +4511,33 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         {
             Modify_ListEvaluationsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEvaluationsRequest, ListEvaluationsResponse, Evaluation>(_callListEvaluations, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportProcessorVersion</c>.</summary>
+        public override lro::OperationsClient ImportProcessorVersionOperationsClient { get; }
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> ImportProcessorVersion(ImportProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportProcessorVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>(_callImportProcessorVersion.Sync(request, callSettings), ImportProcessorVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports a processor version from source processor version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>> ImportProcessorVersionAsync(ImportProcessorVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportProcessorVersionRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata>(await _callImportProcessorVersion.Async(request, callSettings).ConfigureAwait(false), ImportProcessorVersionOperationsClient);
         }
     }
 
