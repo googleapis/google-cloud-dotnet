@@ -5913,6 +5913,293 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_ImportProcessorVersion_sync",
+      "title": "ImportProcessorVersionRequestObject",
+      "description": "Snippet for ImportProcessorVersion",
+      "file": "DocumentProcessorServiceClient.ImportProcessorVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportProcessorVersion",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ImportProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionMetadata>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "ImportProcessorVersion",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_ImportProcessorVersion_async",
+      "title": "ImportProcessorVersionRequestObjectAsync",
+      "description": "Snippet for ImportProcessorVersionAsync",
+      "file": "DocumentProcessorServiceClient.ImportProcessorVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportProcessorVersionAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ImportProcessorVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionMetadata>>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "ImportProcessorVersion",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_ImportProcessorVersion_sync_flattened",
+      "title": "ImportProcessorVersion",
+      "description": "Snippet for ImportProcessorVersion",
+      "file": "DocumentProcessorServiceClient.ImportProcessorVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportProcessorVersion",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ImportProcessorVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionMetadata>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "ImportProcessorVersion",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_ImportProcessorVersion_async_flattened",
+      "title": "ImportProcessorVersionAsync",
+      "description": "Snippet for ImportProcessorVersionAsync",
+      "file": "DocumentProcessorServiceClient.ImportProcessorVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportProcessorVersionAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ImportProcessorVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionMetadata>>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "ImportProcessorVersion",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_ImportProcessorVersion_sync_flattened_resourceNames",
+      "title": "ImportProcessorVersionResourceNames",
+      "description": "Snippet for ImportProcessorVersion",
+      "file": "DocumentProcessorServiceClient.ImportProcessorVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportProcessorVersion",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ImportProcessorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionMetadata>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "ImportProcessorVersion",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "documentai_v1beta3_generated_DocumentProcessorService_ImportProcessorVersion_async_flattened_resourceNames",
+      "title": "ImportProcessorVersionResourceNamesAsync",
+      "description": "Snippet for ImportProcessorVersionAsync",
+      "file": "DocumentProcessorServiceClient.ImportProcessorVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportProcessorVersionAsync",
+        "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient.ImportProcessorVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DocumentAI.V1Beta3.ProcessorName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionResponse, Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionMetadata>>",
+        "client": {
+          "shortName": "DocumentProcessorServiceClient",
+          "fullName": "Google.Cloud.DocumentAI.V1Beta3.DocumentProcessorServiceClient"
+        },
+        "method": {
+          "shortName": "ImportProcessorVersion",
+          "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion",
+          "service": {
+            "shortName": "DocumentProcessorService",
+            "fullName": "google.cloud.documentai.v1beta3.DocumentProcessorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

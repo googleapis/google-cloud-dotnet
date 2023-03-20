@@ -88,6 +88,12 @@
                 "GetProcessorVersionAsync"
               ]
             },
+            "ImportProcessorVersion": {
+              "methods": [
+                "ImportProcessorVersion",
+                "ImportProcessorVersionAsync"
+              ]
+            },
             "ListEvaluations": {
               "methods": [
                 "ListEvaluations",
