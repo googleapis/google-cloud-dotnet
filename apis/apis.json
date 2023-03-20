@@ -4156,6 +4156,7 @@
         "speech"
       ],
       "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",

@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -86,6 +87,7 @@ namespace Google.Cloud.Speech.V2
             DeletePhraseSetOperationsSettings = existing.DeletePhraseSetOperationsSettings.Clone();
             UndeletePhraseSetSettings = existing.UndeletePhraseSetSettings;
             UndeletePhraseSetOperationsSettings = existing.UndeletePhraseSetOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -801,6 +803,11 @@ namespace Google.Cloud.Speech.V2
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SpeechSettings"/> object.</returns>
         public SpeechSettings Clone() => new SpeechSettings(this);
@@ -939,6 +946,9 @@ namespace Google.Cloud.Speech.V2
 
         /// <summary>The underlying gRPC Speech client</summary>
         public virtual Speech.SpeechClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a [Recognizer][google.cloud.speech.v2.Recognizer].
@@ -1266,7 +1276,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1278,7 +1288,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1290,7 +1300,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1302,7 +1312,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="name">
@@ -1320,7 +1330,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="name">
@@ -1338,7 +1348,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="name">
@@ -1353,7 +1363,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="name">
@@ -1371,7 +1381,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="name">
@@ -1389,7 +1399,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="name">
@@ -2519,6 +2529,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
+        /// The maximum number of files allowed to be specified is 5.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2567,6 +2578,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
+        /// The maximum number of files allowed to be specified is 5.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2615,6 +2627,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
+        /// The maximum number of files allowed to be specified is 5.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2654,6 +2667,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
+        /// The maximum number of files allowed to be specified is 5.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2702,6 +2716,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
+        /// The maximum number of files allowed to be specified is 5.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2750,6 +2765,7 @@ namespace Google.Cloud.Speech.V2
         /// </param>
         /// <param name="files">
         /// Audio files with file metadata for ASR.
+        /// The maximum number of files allowed to be specified is 5.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4720,6 +4736,7 @@ namespace Google.Cloud.Speech.V2
             UpdatePhraseSetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePhraseSetOperationsSettings, logger);
             DeletePhraseSetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePhraseSetOperationsSettings, logger);
             UndeletePhraseSetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeletePhraseSetOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateRecognizer = clientHelper.BuildApiCall<CreateRecognizerRequest, lro::Operation>("CreateRecognizer", grpcClient.CreateRecognizerAsync, grpcClient.CreateRecognizer, effectiveSettings.CreateRecognizerSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRecognizer);
             Modify_CreateRecognizerApiCall(ref _callCreateRecognizer);
@@ -4847,6 +4864,9 @@ namespace Google.Cloud.Speech.V2
         /// <summary>The underlying gRPC Speech client</summary>
         public override Speech.SpeechClient GrpcClient { get; }
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
         partial void Modify_CreateRecognizerRequest(ref CreateRecognizerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRecognizersRequest(ref ListRecognizersRequest request, ref gaxgrpc::CallSettings settings);
@@ -4949,7 +4969,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4964,7 +4984,7 @@ namespace Google.Cloud.Speech.V2
         /// <summary>
         /// Returns the requested
         /// [Recognizer][google.cloud.speech.v2.Recognizer]. Fails with
-        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested recognizer doesn't
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] if the requested Recognizer doesn't
         /// exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5587,6 +5607,22 @@ namespace Google.Cloud.Speech.V2
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Speech
+    {
+        public partial class SpeechClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
