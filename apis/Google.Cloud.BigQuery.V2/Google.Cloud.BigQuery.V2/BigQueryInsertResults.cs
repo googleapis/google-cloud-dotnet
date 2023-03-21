@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ namespace Google.Cloud.BigQuery.V2
     {
         private readonly BigQueryClient _client;
         private readonly InsertOptions _options;
-        private IReadOnlyList<BigQueryInsertRowErrors> _errors;
+        private readonly IReadOnlyList<BigQueryInsertRowErrors> _errors;
 
         /// <summary>
         /// Status of the insert request.
