@@ -1652,6 +1652,144 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SimulateMaintenanceEvent</summary>
+        public void SimulateMaintenanceEventRequestObject()
+        {
+            // Snippet: SimulateMaintenanceEvent(SimulateMaintenanceEventNodeGroupRequest, CallSettings)
+            // Create client
+            NodeGroupsClient nodeGroupsClient = NodeGroupsClient.Create();
+            // Initialize request argument(s)
+            SimulateMaintenanceEventNodeGroupRequest request = new SimulateMaintenanceEventNodeGroupRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                NodeGroupsSimulateMaintenanceEventRequestResource = new NodeGroupsSimulateMaintenanceEventRequest(),
+                NodeGroup = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = nodeGroupsClient.SimulateMaintenanceEvent(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = nodeGroupsClient.PollOnceSimulateMaintenanceEvent(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SimulateMaintenanceEventAsync</summary>
+        public async Task SimulateMaintenanceEventRequestObjectAsync()
+        {
+            // Snippet: SimulateMaintenanceEventAsync(SimulateMaintenanceEventNodeGroupRequest, CallSettings)
+            // Additional: SimulateMaintenanceEventAsync(SimulateMaintenanceEventNodeGroupRequest, CancellationToken)
+            // Create client
+            NodeGroupsClient nodeGroupsClient = await NodeGroupsClient.CreateAsync();
+            // Initialize request argument(s)
+            SimulateMaintenanceEventNodeGroupRequest request = new SimulateMaintenanceEventNodeGroupRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                NodeGroupsSimulateMaintenanceEventRequestResource = new NodeGroupsSimulateMaintenanceEventRequest(),
+                NodeGroup = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await nodeGroupsClient.SimulateMaintenanceEventAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await nodeGroupsClient.PollOnceSimulateMaintenanceEventAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SimulateMaintenanceEvent</summary>
+        public void SimulateMaintenanceEvent()
+        {
+            // Snippet: SimulateMaintenanceEvent(string, string, string, NodeGroupsSimulateMaintenanceEventRequest, CallSettings)
+            // Create client
+            NodeGroupsClient nodeGroupsClient = NodeGroupsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string nodeGroup = "";
+            NodeGroupsSimulateMaintenanceEventRequest nodeGroupsSimulateMaintenanceEventRequestResource = new NodeGroupsSimulateMaintenanceEventRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = nodeGroupsClient.SimulateMaintenanceEvent(project, zone, nodeGroup, nodeGroupsSimulateMaintenanceEventRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = nodeGroupsClient.PollOnceSimulateMaintenanceEvent(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SimulateMaintenanceEventAsync</summary>
+        public async Task SimulateMaintenanceEventAsync()
+        {
+            // Snippet: SimulateMaintenanceEventAsync(string, string, string, NodeGroupsSimulateMaintenanceEventRequest, CallSettings)
+            // Additional: SimulateMaintenanceEventAsync(string, string, string, NodeGroupsSimulateMaintenanceEventRequest, CancellationToken)
+            // Create client
+            NodeGroupsClient nodeGroupsClient = await NodeGroupsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string nodeGroup = "";
+            NodeGroupsSimulateMaintenanceEventRequest nodeGroupsSimulateMaintenanceEventRequestResource = new NodeGroupsSimulateMaintenanceEventRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await nodeGroupsClient.SimulateMaintenanceEventAsync(project, zone, nodeGroup, nodeGroupsSimulateMaintenanceEventRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await nodeGroupsClient.PollOnceSimulateMaintenanceEventAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for TestIamPermissions</summary>
         public void TestIamPermissionsRequestObject()
         {
