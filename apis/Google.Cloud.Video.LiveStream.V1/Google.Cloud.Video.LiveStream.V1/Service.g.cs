@@ -165,13 +165,15 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             "Z2xlLnByb3RvYnVmLkVtcHR5IkSC0+STAjcqNS92MS97bmFtZT1wcm9qZWN0",
             "cy8qL2xvY2F0aW9ucy8qL2NoYW5uZWxzLyovZXZlbnRzLyp92kEEbmFtZRpN",
             "ykEZbGl2ZXN0cmVhbS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C6QEKJGNvbS5nb29n",
+            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C0AIKJGNvbS5nb29n",
             "bGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MUIMU2VydmljZVByb3RvUAFa",
             "RGNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vbGl2ZXN0cmVhbS9hcGl2MS9s",
             "aXZlc3RyZWFtcGI7bGl2ZXN0cmVhbXBiqgIgR29vZ2xlLkNsb3VkLlZpZGVv",
             "LkxpdmVTdHJlYW0uVjHKAiBHb29nbGVcQ2xvdWRcVmlkZW9cTGl2ZVN0cmVh",
-            "bVxWMeoCJEdvb2dsZTo6Q2xvdWQ6OlZpZGVvOjpMaXZlU3RyZWFtOjpWMWIG",
-            "cHJvdG8z"));
+            "bVxWMeoCJEdvb2dsZTo6Q2xvdWQ6OlZpZGVvOjpMaXZlU3RyZWFtOjpWMepB",
+            "ZAoqc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9u",
+            "EjZwcm9qZWN0cy97cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9u",
+            "cy97dmVyc2lvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -615,8 +617,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     /// The maximum number of items to return. If unspecified, server
     /// will pick an appropriate default. Server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.video.livestream.v1.ListChannelsResponse.next_page_token] to
-    /// determine if there are more items left to be queried.
+    /// [next_page_token][google.cloud.video.livestream.v1.ListChannelsResponse.next_page_token]
+    /// to determine if there are more items left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1700,14 +1702,22 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     /// resource by the update. You can only update the following fields:
     ///
     /// * [`inputAttachments`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#inputattachment)
+    /// * [`inputConfig`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#inputconfig)
     /// * [`output`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#output)
-    /// * [`elementaryStreams`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#ElementaryStream)
+    /// * [`elementaryStreams`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#elementarystream)
     /// * [`muxStreams`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#muxstream)
-    /// * [`manifests`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#Manifest)
-    /// * [`spritesheets`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#spritesheet)
+    /// * [`manifests`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#manifest)
+    /// * [`spriteSheets`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#spritesheet)
+    /// * [`logConfig`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#logconfig)
+    /// * [`timecodeConfig`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#timecodeconfig)
+    /// * [`encryptions`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.channels#encryption)
     ///
     /// The fields specified in the update_mask are relative to the resource, not
     /// the full request. A field will be overwritten if it is in the mask.
+    ///
+    /// If the mask is not present, then each field from the list above is updated
+    /// if the field appears in the request payload. To unset a field, add the
+    /// field to the update mask and remove it from the request payload.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2868,8 +2878,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     /// The maximum number of items to return. If unspecified, server
     /// will pick an appropriate default. Server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.video.livestream.v1.ListInputsResponse.next_page_token] to
-    /// determine if there are more items left to be queried.
+    /// [next_page_token][google.cloud.video.livestream.v1.ListInputsResponse.next_page_token]
+    /// to determine if there are more items left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3914,6 +3924,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     ///
     /// The fields specified in the update_mask are relative to the resource, not
     /// the full request. A field will be overwritten if it is in the mask.
+    ///
+    /// If the mask is not present, then each field from the list above is updated
+    /// if the field appears in the request payload. To unset a field, add the
+    /// field to the update mask and remove it from the request payload.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4578,8 +4592,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     /// The maximum number of items to return. If unspecified, server
     /// will pick an appropriate default. Server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.video.livestream.v1.ListEventsResponse.next_page_token] to
-    /// determine if there are more items left to be queried.
+    /// [next_page_token][google.cloud.video.livestream.v1.ListEventsResponse.next_page_token]
+    /// to determine if there are more items left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

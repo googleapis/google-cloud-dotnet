@@ -27,75 +27,89 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             "Ci5nb29nbGUvY2xvdWQvdmlkZW8vbGl2ZXN0cmVhbS92MS9vdXRwdXRzLnBy",
             "b3RvEiBnb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MRofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1",
-            "cmF0aW9uLnByb3RvIocCChBFbGVtZW50YXJ5U3RyZWFtEgsKA2tleRgEIAEo",
-            "CRJFCgx2aWRlb19zdHJlYW0YASABKAsyLS5nb29nbGUuY2xvdWQudmlkZW8u",
-            "bGl2ZXN0cmVhbS52MS5WaWRlb1N0cmVhbUgAEkUKDGF1ZGlvX3N0cmVhbRgC",
-            "IAEoCzItLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkF1ZGlv",
-            "U3RyZWFtSAASQwoLdGV4dF9zdHJlYW0YAyABKAsyLC5nb29nbGUuY2xvdWQu",
-            "dmlkZW8ubGl2ZXN0cmVhbS52MS5UZXh0U3RyZWFtSABCEwoRZWxlbWVudGFy",
-            "eV9zdHJlYW0ilAEKCU11eFN0cmVhbRILCgNrZXkYASABKAkSEQoJY29udGFp",
-            "bmVyGAMgASgJEhoKEmVsZW1lbnRhcnlfc3RyZWFtcxgEIAMoCRJLChBzZWdt",
-            "ZW50X3NldHRpbmdzGAUgASgLMjEuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
-            "dHJlYW0udjEuU2VnbWVudFNldHRpbmdzIpoCCghNYW5pZmVzdBIRCglmaWxl",
-            "X25hbWUYASABKAkSSgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC52aWRl",
-            "by5saXZlc3RyZWFtLnYxLk1hbmlmZXN0Lk1hbmlmZXN0VHlwZUID4EECEhgK",
-            "C211eF9zdHJlYW1zGAMgAygJQgPgQQISGQoRbWF4X3NlZ21lbnRfY291bnQY",
-            "BCABKAUSOAoVc2VnbWVudF9rZWVwX2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uIkAKDE1hbmlmZXN0VHlwZRIdChlNQU5JRkVT",
-            "VF9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDSExTEAESCAoEREFTSBACIuMBCgtT",
-            "cHJpdGVTaGVldBIOCgZmb3JtYXQYASABKAkSGAoLZmlsZV9wcmVmaXgYAiAB",
-            "KAlCA+BBAhIgChNzcHJpdGVfd2lkdGhfcGl4ZWxzGAMgASgFQgPgQQISIQoU",
-            "c3ByaXRlX2hlaWdodF9waXhlbHMYBCABKAVCA+BBAhIUCgxjb2x1bW5fY291",
-            "bnQYBSABKAUSEQoJcm93X2NvdW50GAYgASgFEisKCGludGVydmFsGAcgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEg8KB3F1YWxpdHkYCCABKAUi",
-            "4gIKE1ByZXByb2Nlc3NpbmdDb25maWcSSAoEY3JvcBgCIAEoCzI6Lmdvb2ds",
-            "ZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLlByZXByb2Nlc3NpbmdDb25m",
-            "aWcuQ3JvcBJGCgNwYWQYAyABKAsyOS5nb29nbGUuY2xvdWQudmlkZW8ubGl2",
-            "ZXN0cmVhbS52MS5QcmVwcm9jZXNzaW5nQ29uZmlnLlBhZBpcCgRDcm9wEhIK",
-            "CnRvcF9waXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgCIAEoBRITCgts",
-            "ZWZ0X3BpeGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCABKAUaWwoDUGFk",
-            "EhIKCnRvcF9waXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgCIAEoBRIT",
-            "CgtsZWZ0X3BpeGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCABKAUi/wMK",
-            "C1ZpZGVvU3RyZWFtEk8KBGgyNjQYFCABKAsyPy5nb29nbGUuY2xvdWQudmlk",
-            "ZW8ubGl2ZXN0cmVhbS52MS5WaWRlb1N0cmVhbS5IMjY0Q29kZWNTZXR0aW5n",
-            "c0gAGowDChFIMjY0Q29kZWNTZXR0aW5ncxIUCgx3aWR0aF9waXhlbHMYASAB",
-            "KAUSFQoNaGVpZ2h0X3BpeGVscxgCIAEoBRIXCgpmcmFtZV9yYXRlGAMgASgB",
-            "QgPgQQISGAoLYml0cmF0ZV9icHMYBCABKAVCA+BBAhIWCg5hbGxvd19vcGVu",
-            "X2dvcBgGIAEoCBIZCg9nb3BfZnJhbWVfY291bnQYByABKAVIABIxCgxnb3Bf",
-            "ZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IABIV",
-            "Cg12YnZfc2l6ZV9iaXRzGAkgASgFEhkKEXZidl9mdWxsbmVzc19iaXRzGAog",
-            "ASgFEhUKDWVudHJvcHlfY29kZXIYCyABKAkSEQoJYl9weXJhbWlkGAwgASgI",
-            "EhUKDWJfZnJhbWVfY291bnQYDSABKAUSEwoLYXFfc3RyZW5ndGgYDiABKAES",
-            "DwoHcHJvZmlsZRgPIAEoCRIMCgR0dW5lGBAgASgJQgoKCGdvcF9tb2RlQhAK",
-            "DmNvZGVjX3NldHRpbmdzItoCCgtBdWRpb1N0cmVhbRIQCgh0cmFuc211eBgI",
-            "IAEoCBINCgVjb2RlYxgBIAEoCRIYCgtiaXRyYXRlX2JwcxgCIAEoBUID4EEC",
-            "EhUKDWNoYW5uZWxfY291bnQYAyABKAUSFgoOY2hhbm5lbF9sYXlvdXQYBCAD",
-            "KAkSSwoHbWFwcGluZxgFIAMoCzI6Lmdvb2dsZS5jbG91ZC52aWRlby5saXZl",
-            "c3RyZWFtLnYxLkF1ZGlvU3RyZWFtLkF1ZGlvTWFwcGluZxIZChFzYW1wbGVf",
-            "cmF0ZV9oZXJ0ehgGIAEoBRp5CgxBdWRpb01hcHBpbmcSFgoJaW5wdXRfa2V5",
-            "GAYgASgJQgPgQQISGAoLaW5wdXRfdHJhY2sYAiABKAVCA+BBAhIaCg1pbnB1",
-            "dF9jaGFubmVsGAMgASgFQgPgQQISGwoOb3V0cHV0X2NoYW5uZWwYBCABKAVC",
-            "A+BBAiIgCgpUZXh0U3RyZWFtEhIKBWNvZGVjGAEgASgJQgPgQQIiRgoPU2Vn",
-            "bWVudFNldHRpbmdzEjMKEHNlZ21lbnRfZHVyYXRpb24YASABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb25C6QEKJGNvbS5nb29nbGUuY2xvdWQudmlk",
-            "ZW8ubGl2ZXN0cmVhbS52MUIMT3V0cHV0c1Byb3RvUAFaRGNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vdmlkZW8vbGl2ZXN0cmVhbS9hcGl2MS9saXZlc3RyZWFtcGI7",
-            "bGl2ZXN0cmVhbXBiqgIgR29vZ2xlLkNsb3VkLlZpZGVvLkxpdmVTdHJlYW0u",
-            "VjHKAiBHb29nbGVcQ2xvdWRcVmlkZW9cTGl2ZVN0cmVhbVxWMeoCJEdvb2ds",
-            "ZTo6Q2xvdWQ6OlZpZGVvOjpMaXZlU3RyZWFtOjpWMWIGcHJvdG8z"));
+            "cmF0aW9uLnByb3RvGhpnb29nbGUvdHlwZS9kYXRldGltZS5wcm90byKHAgoQ",
+            "RWxlbWVudGFyeVN0cmVhbRILCgNrZXkYBCABKAkSRQoMdmlkZW9fc3RyZWFt",
+            "GAEgASgLMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuVmlk",
+            "ZW9TdHJlYW1IABJFCgxhdWRpb19zdHJlYW0YAiABKAsyLS5nb29nbGUuY2xv",
+            "dWQudmlkZW8ubGl2ZXN0cmVhbS52MS5BdWRpb1N0cmVhbUgAEkMKC3RleHRf",
+            "c3RyZWFtGAMgASgLMiwuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0u",
+            "djEuVGV4dFN0cmVhbUgAQhMKEWVsZW1lbnRhcnlfc3RyZWFtIqsBCglNdXhT",
+            "dHJlYW0SCwoDa2V5GAEgASgJEhEKCWNvbnRhaW5lchgDIAEoCRIaChJlbGVt",
+            "ZW50YXJ5X3N0cmVhbXMYBCADKAkSSwoQc2VnbWVudF9zZXR0aW5ncxgFIAEo",
+            "CzIxLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLlNlZ21lbnRT",
+            "ZXR0aW5ncxIVCg1lbmNyeXB0aW9uX2lkGAYgASgJIrwCCghNYW5pZmVzdBIR",
+            "CglmaWxlX25hbWUYASABKAkSSgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91",
+            "ZC52aWRlby5saXZlc3RyZWFtLnYxLk1hbmlmZXN0Lk1hbmlmZXN0VHlwZUID",
+            "4EECEhgKC211eF9zdHJlYW1zGAMgAygJQgPgQQISGQoRbWF4X3NlZ21lbnRf",
+            "Y291bnQYBCABKAUSOAoVc2VnbWVudF9rZWVwX2R1cmF0aW9uGAUgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiAKGHVzZV90aW1lY29kZV9hc190",
+            "aW1lbGluZRgGIAEoCCJACgxNYW5pZmVzdFR5cGUSHQoZTUFOSUZFU1RfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgcKA0hMUxABEggKBERBU0gQAiLjAQoLU3ByaXRl",
+            "U2hlZXQSDgoGZm9ybWF0GAEgASgJEhgKC2ZpbGVfcHJlZml4GAIgASgJQgPg",
+            "QQISIAoTc3ByaXRlX3dpZHRoX3BpeGVscxgDIAEoBUID4EECEiEKFHNwcml0",
+            "ZV9oZWlnaHRfcGl4ZWxzGAQgASgFQgPgQQISFAoMY29sdW1uX2NvdW50GAUg",
+            "ASgFEhEKCXJvd19jb3VudBgGIAEoBRIrCghpbnRlcnZhbBgHIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIPCgdxdWFsaXR5GAggASgFIsUDChNQ",
+            "cmVwcm9jZXNzaW5nQ29uZmlnEkoKBWF1ZGlvGAEgASgLMjsuZ29vZ2xlLmNs",
+            "b3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5B",
+            "dWRpbxJICgRjcm9wGAIgASgLMjouZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
+            "dHJlYW0udjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5Dcm9wEkYKA3BhZBgDIAEo",
+            "CzI5Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLlByZXByb2Nl",
+            "c3NpbmdDb25maWcuUGFkGhUKBUF1ZGlvEgwKBGx1ZnMYASABKAEaXAoEQ3Jv",
+            "cBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiABKAUS",
+            "EwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgFGlsK",
+            "A1BhZBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiAB",
+            "KAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgF",
+            "Iv8DCgtWaWRlb1N0cmVhbRJPCgRoMjY0GBQgASgLMj8uZ29vZ2xlLmNsb3Vk",
+            "LnZpZGVvLmxpdmVzdHJlYW0udjEuVmlkZW9TdHJlYW0uSDI2NENvZGVjU2V0",
+            "dGluZ3NIABqMAwoRSDI2NENvZGVjU2V0dGluZ3MSFAoMd2lkdGhfcGl4ZWxz",
+            "GAEgASgFEhUKDWhlaWdodF9waXhlbHMYAiABKAUSFwoKZnJhbWVfcmF0ZRgD",
+            "IAEoAUID4EECEhgKC2JpdHJhdGVfYnBzGAQgASgFQgPgQQISFgoOYWxsb3df",
+            "b3Blbl9nb3AYBiABKAgSGQoPZ29wX2ZyYW1lX2NvdW50GAcgASgFSAASMQoM",
+            "Z29wX2R1cmF0aW9uGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "SAASFQoNdmJ2X3NpemVfYml0cxgJIAEoBRIZChF2YnZfZnVsbG5lc3NfYml0",
+            "cxgKIAEoBRIVCg1lbnRyb3B5X2NvZGVyGAsgASgJEhEKCWJfcHlyYW1pZBgM",
+            "IAEoCBIVCg1iX2ZyYW1lX2NvdW50GA0gASgFEhMKC2FxX3N0cmVuZ3RoGA4g",
+            "ASgBEg8KB3Byb2ZpbGUYDyABKAkSDAoEdHVuZRgQIAEoCUIKCghnb3BfbW9k",
+            "ZUIQCg5jb2RlY19zZXR0aW5ncyLsAgoLQXVkaW9TdHJlYW0SEAoIdHJhbnNt",
+            "dXgYCCABKAgSDQoFY29kZWMYASABKAkSGAoLYml0cmF0ZV9icHMYAiABKAVC",
+            "A+BBAhIVCg1jaGFubmVsX2NvdW50GAMgASgFEhYKDmNoYW5uZWxfbGF5b3V0",
+            "GAQgAygJEksKB21hcHBpbmcYBSADKAsyOi5nb29nbGUuY2xvdWQudmlkZW8u",
+            "bGl2ZXN0cmVhbS52MS5BdWRpb1N0cmVhbS5BdWRpb01hcHBpbmcSGQoRc2Ft",
+            "cGxlX3JhdGVfaGVydHoYBiABKAUaigEKDEF1ZGlvTWFwcGluZxIWCglpbnB1",
+            "dF9rZXkYBiABKAlCA+BBAhIYCgtpbnB1dF90cmFjaxgCIAEoBUID4EECEhoK",
+            "DWlucHV0X2NoYW5uZWwYAyABKAVCA+BBAhIbCg5vdXRwdXRfY2hhbm5lbBgE",
+            "IAEoBUID4EECEg8KB2dhaW5fZGIYBSABKAEiIAoKVGV4dFN0cmVhbRISCgVj",
+            "b2RlYxgBIAEoCUID4EECIkYKD1NlZ21lbnRTZXR0aW5ncxIzChBzZWdtZW50",
+            "X2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIqwC",
+            "Cg5UaW1lY29kZUNvbmZpZxJPCgZzb3VyY2UYASABKA4yPy5nb29nbGUuY2xv",
+            "dWQudmlkZW8ubGl2ZXN0cmVhbS52MS5UaW1lY29kZUNvbmZpZy5UaW1lY29k",
+            "ZVNvdXJjZRIvCgp1dGNfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uSAASKgoJdGltZV96b25lGAMgASgLMhUuZ29vZ2xlLnR5cGUu",
+            "VGltZVpvbmVIACJdCg5UaW1lY29kZVNvdXJjZRIfChtUSU1FQ09ERV9TT1VS",
+            "Q0VfVU5TUEVDSUZJRUQQABITCg9NRURJQV9USU1FU1RBTVAQARIVChFFTUJF",
+            "RERFRF9USU1FQ09ERRACQg0KC3RpbWVfb2Zmc2V0QukBCiRjb20uZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjFCDE91dHB1dHNQcm90b1ABWkRj",
+            "bG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL2xpdmVzdHJlYW0vYXBpdjEvbGl2",
+            "ZXN0cmVhbXBiO2xpdmVzdHJlYW1wYqoCIEdvb2dsZS5DbG91ZC5WaWRlby5M",
+            "aXZlU3RyZWFtLlYxygIgR29vZ2xlXENsb3VkXFZpZGVvXExpdmVTdHJlYW1c",
+            "VjHqAiRHb29nbGU6OkNsb3VkOjpWaWRlbzo6TGl2ZVN0cmVhbTo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.ElementaryStream), global::Google.Cloud.Video.LiveStream.V1.ElementaryStream.Parser, new[]{ "Key", "VideoStream", "AudioStream", "TextStream" }, new[]{ "ElementaryStream" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.MuxStream), global::Google.Cloud.Video.LiveStream.V1.MuxStream.Parser, new[]{ "Key", "Container", "ElementaryStreams", "SegmentSettings" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest), global::Google.Cloud.Video.LiveStream.V1.Manifest.Parser, new[]{ "FileName", "Type", "MuxStreams", "MaxSegmentCount", "SegmentKeepDuration" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest.Types.ManifestType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.MuxStream), global::Google.Cloud.Video.LiveStream.V1.MuxStream.Parser, new[]{ "Key", "Container", "ElementaryStreams", "SegmentSettings", "EncryptionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest), global::Google.Cloud.Video.LiveStream.V1.Manifest.Parser, new[]{ "FileName", "Type", "MuxStreams", "MaxSegmentCount", "SegmentKeepDuration", "UseTimecodeAsTimeline" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest.Types.ManifestType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.SpriteSheet), global::Google.Cloud.Video.LiveStream.V1.SpriteSheet.Parser, new[]{ "Format", "FilePrefix", "SpriteWidthPixels", "SpriteHeightPixels", "ColumnCount", "RowCount", "Interval", "Quality" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Parser, new[]{ "Crop", "Pad" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Parser, new[]{ "Audio", "Crop", "Pad" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio.Parser, new[]{ "Lufs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Pad), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Pad.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.VideoStream), global::Google.Cloud.Video.LiveStream.V1.VideoStream.Parser, new[]{ "H264" }, new[]{ "CodecSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H264CodecSettings), global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H264CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "AllowOpenGop", "GopFrameCount", "GopDuration", "VbvSizeBits", "VbvFullnessBits", "EntropyCoder", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune" }, new[]{ "GopMode" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AudioStream), global::Google.Cloud.Video.LiveStream.V1.AudioStream.Parser, new[]{ "Transmux", "Codec", "BitrateBps", "ChannelCount", "ChannelLayout", "Mapping", "SampleRateHertz" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AudioStream.Types.AudioMapping), global::Google.Cloud.Video.LiveStream.V1.AudioStream.Types.AudioMapping.Parser, new[]{ "InputKey", "InputTrack", "InputChannel", "OutputChannel" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AudioStream), global::Google.Cloud.Video.LiveStream.V1.AudioStream.Parser, new[]{ "Transmux", "Codec", "BitrateBps", "ChannelCount", "ChannelLayout", "Mapping", "SampleRateHertz" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AudioStream.Types.AudioMapping), global::Google.Cloud.Video.LiveStream.V1.AudioStream.Types.AudioMapping.Parser, new[]{ "InputKey", "InputTrack", "InputChannel", "OutputChannel", "GainDb" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.TextStream), global::Google.Cloud.Video.LiveStream.V1.TextStream.Parser, new[]{ "Codec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.SegmentSettings), global::Google.Cloud.Video.LiveStream.V1.SegmentSettings.Parser, new[]{ "SegmentDuration" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.SegmentSettings), global::Google.Cloud.Video.LiveStream.V1.SegmentSettings.Parser, new[]{ "SegmentDuration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig), global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Parser, new[]{ "Source", "UtcOffset", "TimeZone" }, new[]{ "TimeOffset" }, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource) }, null, null)
           }));
     }
     #endregion
@@ -535,6 +549,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       container_ = other.container_;
       elementaryStreams_ = other.elementaryStreams_.Clone();
       segmentSettings_ = other.segmentSettings_ != null ? other.segmentSettings_.Clone() : null;
+      encryptionId_ = other.encryptionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -585,8 +600,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> elementaryStreams_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of `ElementaryStream` [key][google.cloud.video.livestream.v1.ElementaryStream.key]s multiplexed in this
-    /// stream.
+    /// List of `ElementaryStream`
+    /// [key][google.cloud.video.livestream.v1.ElementaryStream.key]s multiplexed
+    /// in this stream.
     ///
     /// - For `fmp4` container, must contain either one video or one audio stream.
     /// - For `ts` container, must contain exactly one audio stream and up to one
@@ -613,6 +629,22 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
     }
 
+    /// <summary>Field number for the "encryption_id" field.</summary>
+    public const int EncryptionIdFieldNumber = 6;
+    private string encryptionId_ = "";
+    /// <summary>
+    /// Identifier of the encryption configuration to use. If omitted, output
+    /// will be unencrypted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EncryptionId {
+      get { return encryptionId_; }
+      set {
+        encryptionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -632,6 +664,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (Container != other.Container) return false;
       if(!elementaryStreams_.Equals(other.elementaryStreams_)) return false;
       if (!object.Equals(SegmentSettings, other.SegmentSettings)) return false;
+      if (EncryptionId != other.EncryptionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -643,6 +676,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (Container.Length != 0) hash ^= Container.GetHashCode();
       hash ^= elementaryStreams_.GetHashCode();
       if (segmentSettings_ != null) hash ^= SegmentSettings.GetHashCode();
+      if (EncryptionId.Length != 0) hash ^= EncryptionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -674,6 +708,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SegmentSettings);
       }
+      if (EncryptionId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(EncryptionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -697,6 +735,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SegmentSettings);
       }
+      if (EncryptionId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(EncryptionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -716,6 +758,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       size += elementaryStreams_.CalculateSize(_repeated_elementaryStreams_codec);
       if (segmentSettings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SegmentSettings);
+      }
+      if (EncryptionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EncryptionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -741,6 +786,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           SegmentSettings = new global::Google.Cloud.Video.LiveStream.V1.SegmentSettings();
         }
         SegmentSettings.MergeFrom(other.SegmentSettings);
+      }
+      if (other.EncryptionId.Length != 0) {
+        EncryptionId = other.EncryptionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -776,6 +824,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             input.ReadMessage(SegmentSettings);
             break;
           }
+          case 50: {
+            EncryptionId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -808,6 +860,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
               SegmentSettings = new global::Google.Cloud.Video.LiveStream.V1.SegmentSettings();
             }
             input.ReadMessage(SegmentSettings);
+            break;
+          }
+          case 50: {
+            EncryptionId = input.ReadString();
             break;
           }
         }
@@ -859,6 +915,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       muxStreams_ = other.muxStreams_.Clone();
       maxSegmentCount_ = other.maxSegmentCount_;
       segmentKeepDuration_ = other.segmentKeepDuration_ != null ? other.segmentKeepDuration_.Clone() : null;
+      useTimecodeAsTimeline_ = other.useTimecodeAsTimeline_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -873,7 +930,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     private string fileName_ = "";
     /// <summary>
     /// The name of the generated file. The default is `manifest` with the
-    /// extension suffix corresponding to the `Manifest` [type][google.cloud.video.livestream.v1.Manifest.type]. If multiple
+    /// extension suffix corresponding to the `Manifest`
+    /// [type][google.cloud.video.livestream.v1.Manifest.type]. If multiple
     /// manifests are added to the channel, each must have a unique file name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -906,8 +964,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> muxStreams_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. List of `MuxStream` [key][google.cloud.video.livestream.v1.MuxStream.key]s that should appear in this
-    /// manifest.
+    /// Required. List of `MuxStream`
+    /// [key][google.cloud.video.livestream.v1.MuxStream.key]s that should appear
+    /// in this manifest.
     ///
     /// - For HLS, either `fmp4` or `ts` mux streams can be specified but not
     /// mixed.
@@ -957,6 +1016,27 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
     }
 
+    /// <summary>Field number for the "use_timecode_as_timeline" field.</summary>
+    public const int UseTimecodeAsTimelineFieldNumber = 6;
+    private bool useTimecodeAsTimeline_;
+    /// <summary>
+    /// Whether to use the timecode, as specified in timecode config, when setting:
+    ///
+    /// - `availabilityStartTime` attribute in DASH manifests.
+    /// - `#EXT-X-PROGRAM-DATE-TIME` tag in HLS manifests.
+    ///
+    /// If false, ignore the input timecode and use the time from system clock
+    /// when the manifest is first generated. This is the default behavior.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseTimecodeAsTimeline {
+      get { return useTimecodeAsTimeline_; }
+      set {
+        useTimecodeAsTimeline_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -977,6 +1057,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if(!muxStreams_.Equals(other.muxStreams_)) return false;
       if (MaxSegmentCount != other.MaxSegmentCount) return false;
       if (!object.Equals(SegmentKeepDuration, other.SegmentKeepDuration)) return false;
+      if (UseTimecodeAsTimeline != other.UseTimecodeAsTimeline) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -989,6 +1070,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       hash ^= muxStreams_.GetHashCode();
       if (MaxSegmentCount != 0) hash ^= MaxSegmentCount.GetHashCode();
       if (segmentKeepDuration_ != null) hash ^= SegmentKeepDuration.GetHashCode();
+      if (UseTimecodeAsTimeline != false) hash ^= UseTimecodeAsTimeline.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1024,6 +1106,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SegmentKeepDuration);
       }
+      if (UseTimecodeAsTimeline != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(UseTimecodeAsTimeline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1051,6 +1137,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SegmentKeepDuration);
       }
+      if (UseTimecodeAsTimeline != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(UseTimecodeAsTimeline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1073,6 +1163,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
       if (segmentKeepDuration_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SegmentKeepDuration);
+      }
+      if (UseTimecodeAsTimeline != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1101,6 +1194,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           SegmentKeepDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         SegmentKeepDuration.MergeFrom(other.SegmentKeepDuration);
+      }
+      if (other.UseTimecodeAsTimeline != false) {
+        UseTimecodeAsTimeline = other.UseTimecodeAsTimeline;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1140,6 +1236,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             input.ReadMessage(SegmentKeepDuration);
             break;
           }
+          case 48: {
+            UseTimecodeAsTimeline = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1176,6 +1276,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
               SegmentKeepDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(SegmentKeepDuration);
+            break;
+          }
+          case 48: {
+            UseTimecodeAsTimeline = input.ReadBool();
             break;
           }
         }
@@ -1747,6 +1851,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreprocessingConfig(PreprocessingConfig other) : this() {
+      audio_ = other.audio_ != null ? other.audio_.Clone() : null;
       crop_ = other.crop_ != null ? other.crop_.Clone() : null;
       pad_ = other.pad_ != null ? other.pad_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1756,6 +1861,21 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreprocessingConfig Clone() {
       return new PreprocessingConfig(this);
+    }
+
+    /// <summary>Field number for the "audio" field.</summary>
+    public const int AudioFieldNumber = 1;
+    private global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio audio_;
+    /// <summary>
+    /// Audio preprocessing configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio Audio {
+      get { return audio_; }
+      set {
+        audio_ = value;
+      }
     }
 
     /// <summary>Field number for the "crop" field.</summary>
@@ -1803,6 +1923,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Audio, other.Audio)) return false;
       if (!object.Equals(Crop, other.Crop)) return false;
       if (!object.Equals(Pad, other.Pad)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1812,6 +1933,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (audio_ != null) hash ^= Audio.GetHashCode();
       if (crop_ != null) hash ^= Crop.GetHashCode();
       if (pad_ != null) hash ^= Pad.GetHashCode();
       if (_unknownFields != null) {
@@ -1832,6 +1954,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (audio_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Audio);
+      }
       if (crop_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(Crop);
@@ -1850,6 +1976,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (audio_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Audio);
+      }
       if (crop_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(Crop);
@@ -1868,6 +1998,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (audio_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Audio);
+      }
       if (crop_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Crop);
       }
@@ -1885,6 +2018,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     public void MergeFrom(PreprocessingConfig other) {
       if (other == null) {
         return;
+      }
+      if (other.audio_ != null) {
+        if (audio_ == null) {
+          Audio = new global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio();
+        }
+        Audio.MergeFrom(other.Audio);
       }
       if (other.crop_ != null) {
         if (crop_ == null) {
@@ -1913,6 +2052,13 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            if (audio_ == null) {
+              Audio = new global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio();
+            }
+            input.ReadMessage(Audio);
+            break;
+          }
           case 18: {
             if (crop_ == null) {
               Crop = new global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop();
@@ -1942,6 +2088,13 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            if (audio_ == null) {
+              Audio = new global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio();
+            }
+            input.ReadMessage(Audio);
+            break;
+          }
           case 18: {
             if (crop_ == null) {
               Crop = new global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop();
@@ -1967,6 +2120,211 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
+      /// Audio preprocessing configuration.
+      /// </summary>
+      public sealed partial class Audio : pb::IMessage<Audio>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Audio> _parser = new pb::MessageParser<Audio>(() => new Audio());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Audio> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Audio() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Audio(Audio other) : this() {
+          lufs_ = other.lufs_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Audio Clone() {
+          return new Audio(this);
+        }
+
+        /// <summary>Field number for the "lufs" field.</summary>
+        public const int LufsFieldNumber = 1;
+        private double lufs_;
+        /// <summary>
+        /// Specify audio loudness normalization in loudness units relative to full
+        /// scale (LUFS). Enter a value between -24 and 0 according to the following:
+        ///
+        /// - -24 is the Advanced Television Systems Committee (ATSC A/85)
+        /// - -23 is the EU R128 broadcast standard
+        /// - -19 is the prior standard for online mono audio
+        /// - -18 is the ReplayGain standard
+        /// - -16 is the prior standard for stereo audio
+        /// - -14 is the new online audio standard recommended by Spotify, as well as
+        /// Amazon Echo
+        /// - 0 disables normalization. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Lufs {
+          get { return lufs_; }
+          set {
+            lufs_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Audio);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Audio other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Lufs, other.Lufs)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Lufs != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Lufs);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Lufs != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Lufs);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Lufs != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Lufs);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Lufs != 0D) {
+            size += 1 + 8;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Audio other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Lufs != 0D) {
+            Lufs = other.Lufs;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                Lufs = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                Lufs = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Video cropping configuration for the input video. The cropped input video
       /// is scaled to match the output resolution.
       /// </summary>
@@ -1984,7 +2342,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2300,7 +2658,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2948,8 +3306,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         public const int FrameRateFieldNumber = 3;
         private double frameRate_;
         /// <summary>
-        /// Required. The target video frame rate in frames per second (FPS). Must be less
-        /// than or equal to 60. Will default to the input frame rate if larger
+        /// Required. The target video frame rate in frames per second (FPS). Must be
+        /// less than or equal to 60. Will default to the input frame rate if larger
         /// than the input frame rate. The API will generate an output FPS that is
         /// divisible by the input FPS, and smaller or equal to the target FPS. See
         /// [Calculating frame
@@ -3023,9 +3381,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         /// <summary>
         /// Select the GOP size based on the specified duration. The default is
         /// `2s`. Note that `gopDuration` must be less than or equal to
-        /// [segment_duration][google.cloud.video.livestream.v1.SegmentSettings.segment_duration], and
-        /// [segment_duration][google.cloud.video.livestream.v1.SegmentSettings.segment_duration] must be divisible
-        /// by `gopDuration`. Valid range is [2s, 20s].
+        /// [segment_duration][google.cloud.video.livestream.v1.SegmentSettings.segment_duration],
+        /// and
+        /// [segment_duration][google.cloud.video.livestream.v1.SegmentSettings.segment_duration]
+        /// must be divisible by `gopDuration`. Valid range is [2s, 20s].
         ///
         /// All video streams in the same channel must have the same GOP size.
         /// </summary>
@@ -3044,7 +3403,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         private int vbvSizeBits_;
         /// <summary>
         /// Size of the Video Buffering Verifier (VBV) buffer in bits. Must be
-        /// greater than zero. The default is equal to [bitrate_bps][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings.bitrate_bps].
+        /// greater than zero. The default is equal to
+        /// [bitrate_bps][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings.bitrate_bps].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3113,8 +3473,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         private int bFrameCount_;
         /// <summary>
         /// The number of consecutive B-frames. Must be greater than or equal to
-        /// zero. Must be less than [gop_frame_count][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings.gop_frame_count] if set. The default
-        /// is 0.
+        /// zero. Must be less than
+        /// [gop_frame_count][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings.gop_frame_count]
+        /// if set. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3156,7 +3517,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         /// The available options are [FFmpeg-compatible Profile
         /// Options](https://trac.ffmpeg.org/wiki/Encode/H.264#Profile).
         /// Note that certain values for this field may cause the
-        /// transcoder to override other fields you set in the [H264CodecSettings][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings]
+        /// transcoder to override other fields you set in the
+        /// [H264CodecSettings][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings]
         /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3176,7 +3538,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         /// [FFmpeg-compatible Encode
         /// Options](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune)
         /// Note that certain values for this field may cause the transcoder to
-        /// override other fields you set in the [H264CodecSettings][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings] message.
+        /// override other fields you set in the
+        /// [H264CodecSettings][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings]
+        /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3793,7 +4157,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     public const int BitrateBpsFieldNumber = 2;
     private int bitrateBps_;
     /// <summary>
-    /// Required. Audio bitrate in bits per second. Must be between 1 and 10,000,000.
+    /// Required. Audio bitrate in bits per second. Must be between 1 and
+    /// 10,000,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4174,6 +4539,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           inputTrack_ = other.inputTrack_;
           inputChannel_ = other.inputChannel_;
           outputChannel_ = other.outputChannel_;
+          gainDb_ = other.gainDb_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4187,9 +4553,11 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         public const int InputKeyFieldNumber = 6;
         private string inputKey_ = "";
         /// <summary>
-        /// Required. The `Channel` [InputAttachment.key][google.cloud.video.livestream.v1.InputAttachment.key] that identifies the input that this
-        /// audio mapping applies to. If an active input doesn't have an audio
-        /// mapping, the primary audio track in the input stream will be selected.
+        /// Required. The `Channel`
+        /// [InputAttachment.key][google.cloud.video.livestream.v1.InputAttachment.key]
+        /// that identifies the input that this audio mapping applies to. If an
+        /// active input doesn't have an audio mapping, the primary audio track in
+        /// the input stream will be selected.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4205,8 +4573,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         private int inputTrack_;
         /// <summary>
         /// Required. The zero-based index of the track in the input stream.
-        /// All [mapping][google.cloud.video.livestream.v1.AudioStream.mapping]s in the same [AudioStream][google.cloud.video.livestream.v1.AudioStream]
-        /// must have the same input track.
+        /// All [mapping][google.cloud.video.livestream.v1.AudioStream.mapping]s in
+        /// the same [AudioStream][google.cloud.video.livestream.v1.AudioStream] must
+        /// have the same input track.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4237,7 +4606,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         private int outputChannel_;
         /// <summary>
         /// Required. The zero-based index of the channel in the output audio stream.
-        /// Must be consistent with the [input_channel][google.cloud.video.livestream.v1.AudioStream.AudioMapping.input_channel].
+        /// Must be consistent with the
+        /// [input_channel][google.cloud.video.livestream.v1.AudioStream.AudioMapping.input_channel].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4245,6 +4615,22 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           get { return outputChannel_; }
           set {
             outputChannel_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "gain_db" field.</summary>
+        public const int GainDbFieldNumber = 5;
+        private double gainDb_;
+        /// <summary>
+        /// Audio volume control in dB. Negative values decrease volume,
+        /// positive values increase. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double GainDb {
+          get { return gainDb_; }
+          set {
+            gainDb_ = value;
           }
         }
 
@@ -4267,6 +4653,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           if (InputTrack != other.InputTrack) return false;
           if (InputChannel != other.InputChannel) return false;
           if (OutputChannel != other.OutputChannel) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(GainDb, other.GainDb)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4278,6 +4665,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           if (InputTrack != 0) hash ^= InputTrack.GetHashCode();
           if (InputChannel != 0) hash ^= InputChannel.GetHashCode();
           if (OutputChannel != 0) hash ^= OutputChannel.GetHashCode();
+          if (GainDb != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(GainDb);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4308,6 +4696,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             output.WriteRawTag(32);
             output.WriteInt32(OutputChannel);
           }
+          if (GainDb != 0D) {
+            output.WriteRawTag(41);
+            output.WriteDouble(GainDb);
+          }
           if (InputKey.Length != 0) {
             output.WriteRawTag(50);
             output.WriteString(InputKey);
@@ -4333,6 +4725,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           if (OutputChannel != 0) {
             output.WriteRawTag(32);
             output.WriteInt32(OutputChannel);
+          }
+          if (GainDb != 0D) {
+            output.WriteRawTag(41);
+            output.WriteDouble(GainDb);
           }
           if (InputKey.Length != 0) {
             output.WriteRawTag(50);
@@ -4360,6 +4756,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           if (OutputChannel != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(OutputChannel);
           }
+          if (GainDb != 0D) {
+            size += 1 + 8;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4383,6 +4782,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           }
           if (other.OutputChannel != 0) {
             OutputChannel = other.OutputChannel;
+          }
+          if (other.GainDb != 0D) {
+            GainDb = other.GainDb;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -4409,6 +4811,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
               }
               case 32: {
                 OutputChannel = input.ReadInt32();
+                break;
+              }
+              case 41: {
+                GainDb = input.ReadDouble();
                 break;
               }
               case 50: {
@@ -4440,6 +4846,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
               }
               case 32: {
                 OutputChannel = input.ReadInt32();
+                break;
+              }
+              case 41: {
+                GainDb = input.ReadDouble();
                 break;
               }
               case 50: {
@@ -4711,13 +5121,13 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     /// <summary>
     /// Duration of the segments in seconds. The default is `6s`. Note that
     /// `segmentDuration` must be greater than or equal to
-    /// [gop_duration][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings.gop_duration], and
-    /// `segmentDuration` must be divisible by
+    /// [gop_duration][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings.gop_duration],
+    /// and `segmentDuration` must be divisible by
     /// [gop_duration][google.cloud.video.livestream.v1.VideoStream.H264CodecSettings.gop_duration].
     /// Valid range is [2s, 20s].
     ///
-    /// All [mux_streams][google.cloud.video.livestream.v1.Manifest.mux_streams] in the same manifest must have the
-    /// same segment duration.
+    /// All [mux_streams][google.cloud.video.livestream.v1.Manifest.mux_streams] in
+    /// the same manifest must have the same segment duration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4867,6 +5277,368 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Timecode configuration.
+  /// </summary>
+  public sealed partial class TimecodeConfig : pb::IMessage<TimecodeConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TimecodeConfig> _parser = new pb::MessageParser<TimecodeConfig>(() => new TimecodeConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TimecodeConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimecodeConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimecodeConfig(TimecodeConfig other) : this() {
+      source_ = other.source_;
+      switch (other.TimeOffsetCase) {
+        case TimeOffsetOneofCase.UtcOffset:
+          UtcOffset = other.UtcOffset.Clone();
+          break;
+        case TimeOffsetOneofCase.TimeZone:
+          TimeZone = other.TimeZone.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimecodeConfig Clone() {
+      return new TimecodeConfig(this);
+    }
+
+    /// <summary>Field number for the "source" field.</summary>
+    public const int SourceFieldNumber = 1;
+    private global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource source_ = global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource.Unspecified;
+    /// <summary>
+    /// The source of the timecode that will later be used in outputs/manifests.
+    /// It determines the initial timecode/timestamp (first frame) of output
+    /// streams.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource Source {
+      get { return source_; }
+      set {
+        source_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "utc_offset" field.</summary>
+    public const int UtcOffsetFieldNumber = 2;
+    /// <summary>
+    /// UTC offset. Must be whole seconds, between -18 hours and +18 hours.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration UtcOffset {
+      get { return timeOffsetCase_ == TimeOffsetOneofCase.UtcOffset ? (global::Google.Protobuf.WellKnownTypes.Duration) timeOffset_ : null; }
+      set {
+        timeOffset_ = value;
+        timeOffsetCase_ = value == null ? TimeOffsetOneofCase.None : TimeOffsetOneofCase.UtcOffset;
+      }
+    }
+
+    /// <summary>Field number for the "time_zone" field.</summary>
+    public const int TimeZoneFieldNumber = 3;
+    /// <summary>
+    /// Time zone e.g. "America/Los_Angeles".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.TimeZone TimeZone {
+      get { return timeOffsetCase_ == TimeOffsetOneofCase.TimeZone ? (global::Google.Type.TimeZone) timeOffset_ : null; }
+      set {
+        timeOffset_ = value;
+        timeOffsetCase_ = value == null ? TimeOffsetOneofCase.None : TimeOffsetOneofCase.TimeZone;
+      }
+    }
+
+    private object timeOffset_;
+    /// <summary>Enum of possible cases for the "time_offset" oneof.</summary>
+    public enum TimeOffsetOneofCase {
+      None = 0,
+      UtcOffset = 2,
+      TimeZone = 3,
+    }
+    private TimeOffsetOneofCase timeOffsetCase_ = TimeOffsetOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TimeOffsetOneofCase TimeOffsetCase {
+      get { return timeOffsetCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTimeOffset() {
+      timeOffsetCase_ = TimeOffsetOneofCase.None;
+      timeOffset_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TimecodeConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TimecodeConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Source != other.Source) return false;
+      if (!object.Equals(UtcOffset, other.UtcOffset)) return false;
+      if (!object.Equals(TimeZone, other.TimeZone)) return false;
+      if (TimeOffsetCase != other.TimeOffsetCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Source != global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource.Unspecified) hash ^= Source.GetHashCode();
+      if (timeOffsetCase_ == TimeOffsetOneofCase.UtcOffset) hash ^= UtcOffset.GetHashCode();
+      if (timeOffsetCase_ == TimeOffsetOneofCase.TimeZone) hash ^= TimeZone.GetHashCode();
+      hash ^= (int) timeOffsetCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Source != global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Source);
+      }
+      if (timeOffsetCase_ == TimeOffsetOneofCase.UtcOffset) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UtcOffset);
+      }
+      if (timeOffsetCase_ == TimeOffsetOneofCase.TimeZone) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TimeZone);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Source != global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Source);
+      }
+      if (timeOffsetCase_ == TimeOffsetOneofCase.UtcOffset) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UtcOffset);
+      }
+      if (timeOffsetCase_ == TimeOffsetOneofCase.TimeZone) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TimeZone);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Source != global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
+      }
+      if (timeOffsetCase_ == TimeOffsetOneofCase.UtcOffset) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UtcOffset);
+      }
+      if (timeOffsetCase_ == TimeOffsetOneofCase.TimeZone) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeZone);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TimecodeConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Source != global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource.Unspecified) {
+        Source = other.Source;
+      }
+      switch (other.TimeOffsetCase) {
+        case TimeOffsetOneofCase.UtcOffset:
+          if (UtcOffset == null) {
+            UtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+          }
+          UtcOffset.MergeFrom(other.UtcOffset);
+          break;
+        case TimeOffsetOneofCase.TimeZone:
+          if (TimeZone == null) {
+            TimeZone = new global::Google.Type.TimeZone();
+          }
+          TimeZone.MergeFrom(other.TimeZone);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Source = (global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (timeOffsetCase_ == TimeOffsetOneofCase.UtcOffset) {
+              subBuilder.MergeFrom(UtcOffset);
+            }
+            input.ReadMessage(subBuilder);
+            UtcOffset = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Type.TimeZone subBuilder = new global::Google.Type.TimeZone();
+            if (timeOffsetCase_ == TimeOffsetOneofCase.TimeZone) {
+              subBuilder.MergeFrom(TimeZone);
+            }
+            input.ReadMessage(subBuilder);
+            TimeZone = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Source = (global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (timeOffsetCase_ == TimeOffsetOneofCase.UtcOffset) {
+              subBuilder.MergeFrom(UtcOffset);
+            }
+            input.ReadMessage(subBuilder);
+            UtcOffset = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Type.TimeZone subBuilder = new global::Google.Type.TimeZone();
+            if (timeOffsetCase_ == TimeOffsetOneofCase.TimeZone) {
+              subBuilder.MergeFrom(TimeZone);
+            }
+            input.ReadMessage(subBuilder);
+            TimeZone = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TimecodeConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The source of timecode.
+      /// </summary>
+      public enum TimecodeSource {
+        /// <summary>
+        /// The timecode source is not specified.
+        /// </summary>
+        [pbr::OriginalName("TIMECODE_SOURCE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Use input media timestamp.
+        /// </summary>
+        [pbr::OriginalName("MEDIA_TIMESTAMP")] MediaTimestamp = 1,
+        /// <summary>
+        /// Use input embedded timecode e.g. picture timing SEI message.
+        /// </summary>
+        [pbr::OriginalName("EMBEDDED_TIMECODE")] EmbeddedTimecode = 2,
+      }
+
+    }
+    #endregion
 
   }
 
