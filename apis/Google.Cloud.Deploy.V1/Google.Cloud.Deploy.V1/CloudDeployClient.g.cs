@@ -72,13 +72,17 @@ namespace Google.Cloud.Deploy.V1
             CreateReleaseOperationsSettings = existing.CreateReleaseOperationsSettings.Clone();
             AbandonReleaseSettings = existing.AbandonReleaseSettings;
             ApproveRolloutSettings = existing.ApproveRolloutSettings;
+            AdvanceRolloutSettings = existing.AdvanceRolloutSettings;
+            CancelRolloutSettings = existing.CancelRolloutSettings;
             ListRolloutsSettings = existing.ListRolloutsSettings;
             GetRolloutSettings = existing.GetRolloutSettings;
             CreateRolloutSettings = existing.CreateRolloutSettings;
             CreateRolloutOperationsSettings = existing.CreateRolloutOperationsSettings.Clone();
+            IgnoreJobSettings = existing.IgnoreJobSettings;
             RetryJobSettings = existing.RetryJobSettings;
             ListJobRunsSettings = existing.ListJobRunsSettings;
             GetJobRunSettings = existing.GetJobRunSettings;
+            TerminateJobRunSettings = existing.TerminateJobRunSettings;
             GetConfigSettings = existing.GetConfigSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
@@ -431,6 +435,30 @@ namespace Google.Cloud.Deploy.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.AdvanceRollout</c> and <c>CloudDeployClient.AdvanceRolloutAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AdvanceRolloutSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.CancelRollout</c> and <c>CloudDeployClient.CancelRolloutAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelRolloutSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CloudDeployClient.ListRollouts</c> and <c>CloudDeployClient.ListRolloutsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -496,6 +524,18 @@ namespace Google.Cloud.Deploy.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudDeployClient.IgnoreJob</c>
+        ///  and <c>CloudDeployClient.IgnoreJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings IgnoreJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudDeployClient.RetryJob</c>
         ///  and <c>CloudDeployClient.RetryJobAsync</c>.
         /// </summary>
@@ -542,6 +582,18 @@ namespace Google.Cloud.Deploy.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetJobRunSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudDeployClient.TerminateJobRun</c> and <c>CloudDeployClient.TerminateJobRunAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TerminateJobRunSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudDeployClient.GetConfig</c>
@@ -740,8 +792,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists DeliveryPipelines in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of pipelines. Format must be
-        /// projects/{project_id}/locations/{location_name}.
+        /// Required. The parent, which owns this collection of pipelines. Format must
+        /// be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -765,8 +817,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists DeliveryPipelines in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of pipelines. Format must be
-        /// projects/{project_id}/locations/{location_name}.
+        /// Required. The parent, which owns this collection of pipelines. Format must
+        /// be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -790,8 +842,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists DeliveryPipelines in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of pipelines. Format must be
-        /// projects/{project_id}/locations/{location_name}.
+        /// Required. The parent, which owns this collection of pipelines. Format must
+        /// be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -815,8 +867,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists DeliveryPipelines in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of pipelines. Format must be
-        /// projects/{project_id}/locations/{location_name}.
+        /// Required. The parent, which owns this collection of pipelines. Format must
+        /// be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1005,8 +1057,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// Required. The parent collection in which the `DeliveryPipeline` should be
+        /// created. Format should be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1028,8 +1080,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// Required. The parent collection in which the `DeliveryPipeline` should be
+        /// created. Format should be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1051,8 +1103,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// Required. The parent collection in which the `DeliveryPipeline` should be
+        /// created. Format should be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1069,8 +1121,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// Required. The parent collection in which the `DeliveryPipeline` should be
+        /// created. Format should be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1092,8 +1144,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// Required. The parent collection in which the `DeliveryPipeline` should be
+        /// created. Format should be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -1115,8 +1167,8 @@ namespace Google.Cloud.Deploy.V1
         /// Creates a new DeliveryPipeline in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection in which the `DeliveryPipeline` should be created.
-        /// Format should be projects/{project_id}/locations/{location_name}.
+        /// Required. The parent collection in which the `DeliveryPipeline` should be
+        /// created. Format should be projects/{project_id}/locations/{location_name}.
         /// </param>
         /// <param name="deliveryPipeline">
         /// Required. The `DeliveryPipeline` to create.
@@ -2073,7 +2125,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists Releases in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The `DeliveryPipeline` which owns this collection of `Release` objects.
+        /// Required. The `DeliveryPipeline` which owns this collection of `Release`
+        /// objects.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2097,7 +2150,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists Releases in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The `DeliveryPipeline` which owns this collection of `Release` objects.
+        /// Required. The `DeliveryPipeline` which owns this collection of `Release`
+        /// objects.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2121,7 +2175,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists Releases in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The `DeliveryPipeline` which owns this collection of `Release` objects.
+        /// Required. The `DeliveryPipeline` which owns this collection of `Release`
+        /// objects.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2145,7 +2200,8 @@ namespace Google.Cloud.Deploy.V1
         /// Lists Releases in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The `DeliveryPipeline` which owns this collection of `Release` objects.
+        /// Required. The `DeliveryPipeline` which owns this collection of `Release`
+        /// objects.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2698,6 +2754,262 @@ namespace Google.Cloud.Deploy.V1
             ApproveRolloutAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdvanceRolloutResponse AdvanceRollout(AdvanceRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdvanceRolloutResponse> AdvanceRolloutAsync(AdvanceRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdvanceRolloutResponse> AdvanceRolloutAsync(AdvanceRolloutRequest request, st::CancellationToken cancellationToken) =>
+            AdvanceRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID to advance the `Rollout` to.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdvanceRolloutResponse AdvanceRollout(string name, string phaseId, gaxgrpc::CallSettings callSettings = null) =>
+            AdvanceRollout(new AdvanceRolloutRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID to advance the `Rollout` to.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdvanceRolloutResponse> AdvanceRolloutAsync(string name, string phaseId, gaxgrpc::CallSettings callSettings = null) =>
+            AdvanceRolloutAsync(new AdvanceRolloutRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID to advance the `Rollout` to.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdvanceRolloutResponse> AdvanceRolloutAsync(string name, string phaseId, st::CancellationToken cancellationToken) =>
+            AdvanceRolloutAsync(name, phaseId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID to advance the `Rollout` to.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdvanceRolloutResponse AdvanceRollout(RolloutName name, string phaseId, gaxgrpc::CallSettings callSettings = null) =>
+            AdvanceRollout(new AdvanceRolloutRequest
+            {
+                RolloutName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID to advance the `Rollout` to.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdvanceRolloutResponse> AdvanceRolloutAsync(RolloutName name, string phaseId, gaxgrpc::CallSettings callSettings = null) =>
+            AdvanceRolloutAsync(new AdvanceRolloutRequest
+            {
+                RolloutName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID to advance the `Rollout` to.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdvanceRolloutResponse> AdvanceRolloutAsync(RolloutName name, string phaseId, st::CancellationToken cancellationToken) =>
+            AdvanceRolloutAsync(name, phaseId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelRolloutResponse CancelRollout(CancelRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelRolloutResponse> CancelRolloutAsync(CancelRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelRolloutResponse> CancelRolloutAsync(CancelRolloutRequest request, st::CancellationToken cancellationToken) =>
+            CancelRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelRolloutResponse CancelRollout(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelRollout(new CancelRolloutRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelRolloutResponse> CancelRolloutAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelRolloutAsync(new CancelRolloutRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelRolloutResponse> CancelRolloutAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelRolloutAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelRolloutResponse CancelRollout(RolloutName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelRollout(new CancelRolloutRequest
+            {
+                RolloutName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelRolloutResponse> CancelRolloutAsync(RolloutName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelRolloutAsync(new CancelRolloutRequest
+            {
+                RolloutName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelRolloutResponse> CancelRolloutAsync(RolloutName name, st::CancellationToken cancellationToken) =>
+            CancelRolloutAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists Rollouts in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3110,6 +3422,167 @@ namespace Google.Cloud.Deploy.V1
             CreateRolloutAsync(parent, rollout, rolloutId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IgnoreJobResponse IgnoreJob(IgnoreJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IgnoreJobResponse> IgnoreJobAsync(IgnoreJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IgnoreJobResponse> IgnoreJobAsync(IgnoreJobRequest request, st::CancellationToken cancellationToken) =>
+            IgnoreJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to ignore belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to ignore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IgnoreJobResponse IgnoreJob(string rollout, string phaseId, string jobId, gaxgrpc::CallSettings callSettings = null) =>
+            IgnoreJob(new IgnoreJobRequest
+            {
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+                JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to ignore belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to ignore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IgnoreJobResponse> IgnoreJobAsync(string rollout, string phaseId, string jobId, gaxgrpc::CallSettings callSettings = null) =>
+            IgnoreJobAsync(new IgnoreJobRequest
+            {
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+                JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to ignore belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to ignore.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IgnoreJobResponse> IgnoreJobAsync(string rollout, string phaseId, string jobId, st::CancellationToken cancellationToken) =>
+            IgnoreJobAsync(rollout, phaseId, jobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to ignore belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to ignore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IgnoreJobResponse IgnoreJob(RolloutName rollout, string phaseId, string jobId, gaxgrpc::CallSettings callSettings = null) =>
+            IgnoreJob(new IgnoreJobRequest
+            {
+                RolloutAsRolloutName = gax::GaxPreconditions.CheckNotNull(rollout, nameof(rollout)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+                JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to ignore belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to ignore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IgnoreJobResponse> IgnoreJobAsync(RolloutName rollout, string phaseId, string jobId, gaxgrpc::CallSettings callSettings = null) =>
+            IgnoreJobAsync(new IgnoreJobRequest
+            {
+                RolloutAsRolloutName = gax::GaxPreconditions.CheckNotNull(rollout, nameof(rollout)),
+                PhaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(phaseId, nameof(phaseId)),
+                JobId = gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout. Format is
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}.
+        /// </param>
+        /// <param name="phaseId">
+        /// Required. The phase ID the Job to ignore belongs to.
+        /// </param>
+        /// <param name="jobId">
+        /// Required. The job ID for the Job to ignore.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IgnoreJobResponse> IgnoreJobAsync(RolloutName rollout, string phaseId, string jobId, st::CancellationToken cancellationToken) =>
+            IgnoreJobAsync(rollout, phaseId, jobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Retries the specified Job in a Rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3496,6 +3969,123 @@ namespace Google.Cloud.Deploy.V1
             GetJobRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TerminateJobRunResponse TerminateJobRun(TerminateJobRunRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerminateJobRunResponse> TerminateJobRunAsync(TerminateJobRunRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerminateJobRunResponse> TerminateJobRunAsync(TerminateJobRunRequest request, st::CancellationToken cancellationToken) =>
+            TerminateJobRunAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TerminateJobRunResponse TerminateJobRun(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TerminateJobRun(new TerminateJobRunRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerminateJobRunResponse> TerminateJobRunAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TerminateJobRunAsync(new TerminateJobRunRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerminateJobRunResponse> TerminateJobRunAsync(string name, st::CancellationToken cancellationToken) =>
+            TerminateJobRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TerminateJobRunResponse TerminateJobRun(JobRunName name, gaxgrpc::CallSettings callSettings = null) =>
+            TerminateJobRun(new TerminateJobRunRequest
+            {
+                JobRunName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerminateJobRunResponse> TerminateJobRunAsync(JobRunName name, gaxgrpc::CallSettings callSettings = null) =>
+            TerminateJobRunAsync(new TerminateJobRunRequest
+            {
+                JobRunName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the `JobRun`. Format must be
+        /// projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+        /// releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerminateJobRunResponse> TerminateJobRunAsync(JobRunName name, st::CancellationToken cancellationToken) =>
+            TerminateJobRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets the configuration for a location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3638,17 +4228,25 @@ namespace Google.Cloud.Deploy.V1
 
         private readonly gaxgrpc::ApiCall<ApproveRolloutRequest, ApproveRolloutResponse> _callApproveRollout;
 
+        private readonly gaxgrpc::ApiCall<AdvanceRolloutRequest, AdvanceRolloutResponse> _callAdvanceRollout;
+
+        private readonly gaxgrpc::ApiCall<CancelRolloutRequest, CancelRolloutResponse> _callCancelRollout;
+
         private readonly gaxgrpc::ApiCall<ListRolloutsRequest, ListRolloutsResponse> _callListRollouts;
 
         private readonly gaxgrpc::ApiCall<GetRolloutRequest, Rollout> _callGetRollout;
 
         private readonly gaxgrpc::ApiCall<CreateRolloutRequest, lro::Operation> _callCreateRollout;
 
+        private readonly gaxgrpc::ApiCall<IgnoreJobRequest, IgnoreJobResponse> _callIgnoreJob;
+
         private readonly gaxgrpc::ApiCall<RetryJobRequest, RetryJobResponse> _callRetryJob;
 
         private readonly gaxgrpc::ApiCall<ListJobRunsRequest, ListJobRunsResponse> _callListJobRuns;
 
         private readonly gaxgrpc::ApiCall<GetJobRunRequest, JobRun> _callGetJobRun;
+
+        private readonly gaxgrpc::ApiCall<TerminateJobRunRequest, TerminateJobRunResponse> _callTerminateJobRun;
 
         private readonly gaxgrpc::ApiCall<GetConfigRequest, Config> _callGetConfig;
 
@@ -3718,6 +4316,12 @@ namespace Google.Cloud.Deploy.V1
             _callApproveRollout = clientHelper.BuildApiCall<ApproveRolloutRequest, ApproveRolloutResponse>("ApproveRollout", grpcClient.ApproveRolloutAsync, grpcClient.ApproveRollout, effectiveSettings.ApproveRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callApproveRollout);
             Modify_ApproveRolloutApiCall(ref _callApproveRollout);
+            _callAdvanceRollout = clientHelper.BuildApiCall<AdvanceRolloutRequest, AdvanceRolloutResponse>("AdvanceRollout", grpcClient.AdvanceRolloutAsync, grpcClient.AdvanceRollout, effectiveSettings.AdvanceRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callAdvanceRollout);
+            Modify_AdvanceRolloutApiCall(ref _callAdvanceRollout);
+            _callCancelRollout = clientHelper.BuildApiCall<CancelRolloutRequest, CancelRolloutResponse>("CancelRollout", grpcClient.CancelRolloutAsync, grpcClient.CancelRollout, effectiveSettings.CancelRolloutSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelRollout);
+            Modify_CancelRolloutApiCall(ref _callCancelRollout);
             _callListRollouts = clientHelper.BuildApiCall<ListRolloutsRequest, ListRolloutsResponse>("ListRollouts", grpcClient.ListRolloutsAsync, grpcClient.ListRollouts, effectiveSettings.ListRolloutsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRollouts);
             Modify_ListRolloutsApiCall(ref _callListRollouts);
@@ -3727,6 +4331,9 @@ namespace Google.Cloud.Deploy.V1
             _callCreateRollout = clientHelper.BuildApiCall<CreateRolloutRequest, lro::Operation>("CreateRollout", grpcClient.CreateRolloutAsync, grpcClient.CreateRollout, effectiveSettings.CreateRolloutSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateRollout);
             Modify_CreateRolloutApiCall(ref _callCreateRollout);
+            _callIgnoreJob = clientHelper.BuildApiCall<IgnoreJobRequest, IgnoreJobResponse>("IgnoreJob", grpcClient.IgnoreJobAsync, grpcClient.IgnoreJob, effectiveSettings.IgnoreJobSettings).WithGoogleRequestParam("rollout", request => request.Rollout);
+            Modify_ApiCall(ref _callIgnoreJob);
+            Modify_IgnoreJobApiCall(ref _callIgnoreJob);
             _callRetryJob = clientHelper.BuildApiCall<RetryJobRequest, RetryJobResponse>("RetryJob", grpcClient.RetryJobAsync, grpcClient.RetryJob, effectiveSettings.RetryJobSettings).WithGoogleRequestParam("rollout", request => request.Rollout);
             Modify_ApiCall(ref _callRetryJob);
             Modify_RetryJobApiCall(ref _callRetryJob);
@@ -3736,6 +4343,9 @@ namespace Google.Cloud.Deploy.V1
             _callGetJobRun = clientHelper.BuildApiCall<GetJobRunRequest, JobRun>("GetJobRun", grpcClient.GetJobRunAsync, grpcClient.GetJobRun, effectiveSettings.GetJobRunSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetJobRun);
             Modify_GetJobRunApiCall(ref _callGetJobRun);
+            _callTerminateJobRun = clientHelper.BuildApiCall<TerminateJobRunRequest, TerminateJobRunResponse>("TerminateJobRun", grpcClient.TerminateJobRunAsync, grpcClient.TerminateJobRun, effectiveSettings.TerminateJobRunSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callTerminateJobRun);
+            Modify_TerminateJobRunApiCall(ref _callTerminateJobRun);
             _callGetConfig = clientHelper.BuildApiCall<GetConfigRequest, Config>("GetConfig", grpcClient.GetConfigAsync, grpcClient.GetConfig, effectiveSettings.GetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConfig);
             Modify_GetConfigApiCall(ref _callGetConfig);
@@ -3774,17 +4384,25 @@ namespace Google.Cloud.Deploy.V1
 
         partial void Modify_ApproveRolloutApiCall(ref gaxgrpc::ApiCall<ApproveRolloutRequest, ApproveRolloutResponse> call);
 
+        partial void Modify_AdvanceRolloutApiCall(ref gaxgrpc::ApiCall<AdvanceRolloutRequest, AdvanceRolloutResponse> call);
+
+        partial void Modify_CancelRolloutApiCall(ref gaxgrpc::ApiCall<CancelRolloutRequest, CancelRolloutResponse> call);
+
         partial void Modify_ListRolloutsApiCall(ref gaxgrpc::ApiCall<ListRolloutsRequest, ListRolloutsResponse> call);
 
         partial void Modify_GetRolloutApiCall(ref gaxgrpc::ApiCall<GetRolloutRequest, Rollout> call);
 
         partial void Modify_CreateRolloutApiCall(ref gaxgrpc::ApiCall<CreateRolloutRequest, lro::Operation> call);
 
+        partial void Modify_IgnoreJobApiCall(ref gaxgrpc::ApiCall<IgnoreJobRequest, IgnoreJobResponse> call);
+
         partial void Modify_RetryJobApiCall(ref gaxgrpc::ApiCall<RetryJobRequest, RetryJobResponse> call);
 
         partial void Modify_ListJobRunsApiCall(ref gaxgrpc::ApiCall<ListJobRunsRequest, ListJobRunsResponse> call);
 
         partial void Modify_GetJobRunApiCall(ref gaxgrpc::ApiCall<GetJobRunRequest, JobRun> call);
+
+        partial void Modify_TerminateJobRunApiCall(ref gaxgrpc::ApiCall<TerminateJobRunRequest, TerminateJobRunResponse> call);
 
         partial void Modify_GetConfigApiCall(ref gaxgrpc::ApiCall<GetConfigRequest, Config> call);
 
@@ -3829,17 +4447,25 @@ namespace Google.Cloud.Deploy.V1
 
         partial void Modify_ApproveRolloutRequest(ref ApproveRolloutRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_AdvanceRolloutRequest(ref AdvanceRolloutRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelRolloutRequest(ref CancelRolloutRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListRolloutsRequest(ref ListRolloutsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRolloutRequest(ref GetRolloutRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateRolloutRequest(ref CreateRolloutRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_IgnoreJobRequest(ref IgnoreJobRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_RetryJobRequest(ref RetryJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListJobRunsRequest(ref ListJobRunsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetJobRunRequest(ref GetJobRunRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TerminateJobRunRequest(ref TerminateJobRunRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetConfigRequest(ref GetConfigRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4225,6 +4851,54 @@ namespace Google.Cloud.Deploy.V1
         }
 
         /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdvanceRolloutResponse AdvanceRollout(AdvanceRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AdvanceRolloutRequest(ref request, ref callSettings);
+            return _callAdvanceRollout.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Advances a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdvanceRolloutResponse> AdvanceRolloutAsync(AdvanceRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AdvanceRolloutRequest(ref request, ref callSettings);
+            return _callAdvanceRollout.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CancelRolloutResponse CancelRollout(CancelRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelRolloutRequest(ref request, ref callSettings);
+            return _callCancelRollout.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a Rollout in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CancelRolloutResponse> CancelRolloutAsync(CancelRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelRolloutRequest(ref request, ref callSettings);
+            return _callCancelRollout.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Lists Rollouts in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4300,6 +4974,30 @@ namespace Google.Cloud.Deploy.V1
         }
 
         /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IgnoreJobResponse IgnoreJob(IgnoreJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IgnoreJobRequest(ref request, ref callSettings);
+            return _callIgnoreJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Ignores the specified Job in a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IgnoreJobResponse> IgnoreJobAsync(IgnoreJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IgnoreJobRequest(ref request, ref callSettings);
+            return _callIgnoreJob.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Retries the specified Job in a Rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4369,6 +5067,30 @@ namespace Google.Cloud.Deploy.V1
         {
             Modify_GetJobRunRequest(ref request, ref callSettings);
             return _callGetJobRun.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TerminateJobRunResponse TerminateJobRun(TerminateJobRunRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TerminateJobRunRequest(ref request, ref callSettings);
+            return _callTerminateJobRun.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Terminates a Job Run in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TerminateJobRunResponse> TerminateJobRunAsync(TerminateJobRunRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TerminateJobRunRequest(ref request, ref callSettings);
+            return _callTerminateJobRun.Async(request, callSettings);
         }
 
         /// <summary>

@@ -3,7 +3,7 @@
 //     source: google/cloud/deploy/v1/cloud_deploy.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -113,6 +113,14 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ApproveRolloutResponse> __Marshaller_google_cloud_deploy_v1_ApproveRolloutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ApproveRolloutResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest> __Marshaller_google_cloud_deploy_v1_AdvanceRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse> __Marshaller_google_cloud_deploy_v1_AdvanceRolloutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.CancelRolloutRequest> __Marshaller_google_cloud_deploy_v1_CancelRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.CancelRolloutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.CancelRolloutResponse> __Marshaller_google_cloud_deploy_v1_CancelRolloutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.CancelRolloutResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListRolloutsRequest> __Marshaller_google_cloud_deploy_v1_ListRolloutsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListRolloutsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.ListRolloutsResponse> __Marshaller_google_cloud_deploy_v1_ListRolloutsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.ListRolloutsResponse.Parser));
@@ -122,6 +130,10 @@ namespace Google.Cloud.Deploy.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.Rollout> __Marshaller_google_cloud_deploy_v1_Rollout = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.Rollout.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.CreateRolloutRequest> __Marshaller_google_cloud_deploy_v1_CreateRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.CreateRolloutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.IgnoreJobRequest> __Marshaller_google_cloud_deploy_v1_IgnoreJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.IgnoreJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.IgnoreJobResponse> __Marshaller_google_cloud_deploy_v1_IgnoreJobResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.IgnoreJobResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.RetryJobRequest> __Marshaller_google_cloud_deploy_v1_RetryJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.RetryJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -134,6 +146,10 @@ namespace Google.Cloud.Deploy.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.GetJobRunRequest> __Marshaller_google_cloud_deploy_v1_GetJobRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.GetJobRunRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.JobRun> __Marshaller_google_cloud_deploy_v1_JobRun = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.JobRun.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.TerminateJobRunRequest> __Marshaller_google_cloud_deploy_v1_TerminateJobRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.TerminateJobRunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.TerminateJobRunResponse> __Marshaller_google_cloud_deploy_v1_TerminateJobRunResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.TerminateJobRunResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Deploy.V1.GetConfigRequest> __Marshaller_google_cloud_deploy_v1_GetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Deploy.V1.GetConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -260,6 +276,22 @@ namespace Google.Cloud.Deploy.V1 {
         __Marshaller_google_cloud_deploy_v1_ApproveRolloutResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest, global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse> __Method_AdvanceRollout = new grpc::Method<global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest, global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AdvanceRollout",
+        __Marshaller_google_cloud_deploy_v1_AdvanceRolloutRequest,
+        __Marshaller_google_cloud_deploy_v1_AdvanceRolloutResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.CancelRolloutRequest, global::Google.Cloud.Deploy.V1.CancelRolloutResponse> __Method_CancelRollout = new grpc::Method<global::Google.Cloud.Deploy.V1.CancelRolloutRequest, global::Google.Cloud.Deploy.V1.CancelRolloutResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelRollout",
+        __Marshaller_google_cloud_deploy_v1_CancelRolloutRequest,
+        __Marshaller_google_cloud_deploy_v1_CancelRolloutResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Deploy.V1.ListRolloutsRequest, global::Google.Cloud.Deploy.V1.ListRolloutsResponse> __Method_ListRollouts = new grpc::Method<global::Google.Cloud.Deploy.V1.ListRolloutsRequest, global::Google.Cloud.Deploy.V1.ListRolloutsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -284,6 +316,14 @@ namespace Google.Cloud.Deploy.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.IgnoreJobRequest, global::Google.Cloud.Deploy.V1.IgnoreJobResponse> __Method_IgnoreJob = new grpc::Method<global::Google.Cloud.Deploy.V1.IgnoreJobRequest, global::Google.Cloud.Deploy.V1.IgnoreJobResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IgnoreJob",
+        __Marshaller_google_cloud_deploy_v1_IgnoreJobRequest,
+        __Marshaller_google_cloud_deploy_v1_IgnoreJobResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Deploy.V1.RetryJobRequest, global::Google.Cloud.Deploy.V1.RetryJobResponse> __Method_RetryJob = new grpc::Method<global::Google.Cloud.Deploy.V1.RetryJobRequest, global::Google.Cloud.Deploy.V1.RetryJobResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -306,6 +346,14 @@ namespace Google.Cloud.Deploy.V1 {
         "GetJobRun",
         __Marshaller_google_cloud_deploy_v1_GetJobRunRequest,
         __Marshaller_google_cloud_deploy_v1_JobRun);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Deploy.V1.TerminateJobRunRequest, global::Google.Cloud.Deploy.V1.TerminateJobRunResponse> __Method_TerminateJobRun = new grpc::Method<global::Google.Cloud.Deploy.V1.TerminateJobRunRequest, global::Google.Cloud.Deploy.V1.TerminateJobRunResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TerminateJobRun",
+        __Marshaller_google_cloud_deploy_v1_TerminateJobRunRequest,
+        __Marshaller_google_cloud_deploy_v1_TerminateJobRunResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Deploy.V1.GetConfigRequest, global::Google.Cloud.Deploy.V1.Config> __Method_GetConfig = new grpc::Method<global::Google.Cloud.Deploy.V1.GetConfigRequest, global::Google.Cloud.Deploy.V1.Config>(
@@ -506,6 +554,30 @@ namespace Google.Cloud.Deploy.V1 {
       }
 
       /// <summary>
+      /// Advances a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse> AdvanceRollout(global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.CancelRolloutResponse> CancelRollout(global::Google.Cloud.Deploy.V1.CancelRolloutRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists Rollouts in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -542,6 +614,18 @@ namespace Google.Cloud.Deploy.V1 {
       }
 
       /// <summary>
+      /// Ignores the specified Job in a Rollout.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.IgnoreJobResponse> IgnoreJob(global::Google.Cloud.Deploy.V1.IgnoreJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Retries the specified Job in a Rollout.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -573,6 +657,18 @@ namespace Google.Cloud.Deploy.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.JobRun> GetJobRun(global::Google.Cloud.Deploy.V1.GetJobRunRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Terminates a Job Run in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Deploy.V1.TerminateJobRunResponse> TerminateJobRun(global::Google.Cloud.Deploy.V1.TerminateJobRunRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1339,6 +1435,102 @@ namespace Google.Cloud.Deploy.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ApproveRollout, null, options, request);
       }
       /// <summary>
+      /// Advances a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse AdvanceRollout(global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AdvanceRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Advances a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse AdvanceRollout(global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AdvanceRollout, null, options, request);
+      }
+      /// <summary>
+      /// Advances a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse> AdvanceRolloutAsync(global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AdvanceRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Advances a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse> AdvanceRolloutAsync(global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AdvanceRollout, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.CancelRolloutResponse CancelRollout(global::Google.Cloud.Deploy.V1.CancelRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.CancelRolloutResponse CancelRollout(global::Google.Cloud.Deploy.V1.CancelRolloutRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelRollout, null, options, request);
+      }
+      /// <summary>
+      /// Cancels a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.CancelRolloutResponse> CancelRolloutAsync(global::Google.Cloud.Deploy.V1.CancelRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels a Rollout in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.CancelRolloutResponse> CancelRolloutAsync(global::Google.Cloud.Deploy.V1.CancelRolloutRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelRollout, null, options, request);
+      }
+      /// <summary>
       /// Lists Rollouts in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1481,6 +1673,54 @@ namespace Google.Cloud.Deploy.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRolloutAsync(global::Google.Cloud.Deploy.V1.CreateRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRollout, null, options, request);
+      }
+      /// <summary>
+      /// Ignores the specified Job in a Rollout.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.IgnoreJobResponse IgnoreJob(global::Google.Cloud.Deploy.V1.IgnoreJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IgnoreJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Ignores the specified Job in a Rollout.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.IgnoreJobResponse IgnoreJob(global::Google.Cloud.Deploy.V1.IgnoreJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IgnoreJob, null, options, request);
+      }
+      /// <summary>
+      /// Ignores the specified Job in a Rollout.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.IgnoreJobResponse> IgnoreJobAsync(global::Google.Cloud.Deploy.V1.IgnoreJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IgnoreJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Ignores the specified Job in a Rollout.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.IgnoreJobResponse> IgnoreJobAsync(global::Google.Cloud.Deploy.V1.IgnoreJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IgnoreJob, null, options, request);
       }
       /// <summary>
       /// Retries the specified Job in a Rollout.
@@ -1627,6 +1867,54 @@ namespace Google.Cloud.Deploy.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetJobRun, null, options, request);
       }
       /// <summary>
+      /// Terminates a Job Run in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.TerminateJobRunResponse TerminateJobRun(global::Google.Cloud.Deploy.V1.TerminateJobRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TerminateJobRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Terminates a Job Run in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Deploy.V1.TerminateJobRunResponse TerminateJobRun(global::Google.Cloud.Deploy.V1.TerminateJobRunRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TerminateJobRun, null, options, request);
+      }
+      /// <summary>
+      /// Terminates a Job Run in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.TerminateJobRunResponse> TerminateJobRunAsync(global::Google.Cloud.Deploy.V1.TerminateJobRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TerminateJobRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Terminates a Job Run in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Deploy.V1.TerminateJobRunResponse> TerminateJobRunAsync(global::Google.Cloud.Deploy.V1.TerminateJobRunRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TerminateJobRun, null, options, request);
+      }
+      /// <summary>
       /// Gets the configuration for a location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1703,12 +1991,16 @@ namespace Google.Cloud.Deploy.V1 {
           .AddMethod(__Method_CreateRelease, serviceImpl.CreateRelease)
           .AddMethod(__Method_AbandonRelease, serviceImpl.AbandonRelease)
           .AddMethod(__Method_ApproveRollout, serviceImpl.ApproveRollout)
+          .AddMethod(__Method_AdvanceRollout, serviceImpl.AdvanceRollout)
+          .AddMethod(__Method_CancelRollout, serviceImpl.CancelRollout)
           .AddMethod(__Method_ListRollouts, serviceImpl.ListRollouts)
           .AddMethod(__Method_GetRollout, serviceImpl.GetRollout)
           .AddMethod(__Method_CreateRollout, serviceImpl.CreateRollout)
+          .AddMethod(__Method_IgnoreJob, serviceImpl.IgnoreJob)
           .AddMethod(__Method_RetryJob, serviceImpl.RetryJob)
           .AddMethod(__Method_ListJobRuns, serviceImpl.ListJobRuns)
           .AddMethod(__Method_GetJobRun, serviceImpl.GetJobRun)
+          .AddMethod(__Method_TerminateJobRun, serviceImpl.TerminateJobRun)
           .AddMethod(__Method_GetConfig, serviceImpl.GetConfig).Build();
     }
 
@@ -1734,12 +2026,16 @@ namespace Google.Cloud.Deploy.V1 {
       serviceBinder.AddMethod(__Method_CreateRelease, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CreateReleaseRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRelease));
       serviceBinder.AddMethod(__Method_AbandonRelease, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.AbandonReleaseRequest, global::Google.Cloud.Deploy.V1.AbandonReleaseResponse>(serviceImpl.AbandonRelease));
       serviceBinder.AddMethod(__Method_ApproveRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.ApproveRolloutRequest, global::Google.Cloud.Deploy.V1.ApproveRolloutResponse>(serviceImpl.ApproveRollout));
+      serviceBinder.AddMethod(__Method_AdvanceRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.AdvanceRolloutRequest, global::Google.Cloud.Deploy.V1.AdvanceRolloutResponse>(serviceImpl.AdvanceRollout));
+      serviceBinder.AddMethod(__Method_CancelRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CancelRolloutRequest, global::Google.Cloud.Deploy.V1.CancelRolloutResponse>(serviceImpl.CancelRollout));
       serviceBinder.AddMethod(__Method_ListRollouts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.ListRolloutsRequest, global::Google.Cloud.Deploy.V1.ListRolloutsResponse>(serviceImpl.ListRollouts));
       serviceBinder.AddMethod(__Method_GetRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetRolloutRequest, global::Google.Cloud.Deploy.V1.Rollout>(serviceImpl.GetRollout));
       serviceBinder.AddMethod(__Method_CreateRollout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.CreateRolloutRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRollout));
+      serviceBinder.AddMethod(__Method_IgnoreJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.IgnoreJobRequest, global::Google.Cloud.Deploy.V1.IgnoreJobResponse>(serviceImpl.IgnoreJob));
       serviceBinder.AddMethod(__Method_RetryJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.RetryJobRequest, global::Google.Cloud.Deploy.V1.RetryJobResponse>(serviceImpl.RetryJob));
       serviceBinder.AddMethod(__Method_ListJobRuns, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.ListJobRunsRequest, global::Google.Cloud.Deploy.V1.ListJobRunsResponse>(serviceImpl.ListJobRuns));
       serviceBinder.AddMethod(__Method_GetJobRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetJobRunRequest, global::Google.Cloud.Deploy.V1.JobRun>(serviceImpl.GetJobRun));
+      serviceBinder.AddMethod(__Method_TerminateJobRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.TerminateJobRunRequest, global::Google.Cloud.Deploy.V1.TerminateJobRunResponse>(serviceImpl.TerminateJobRun));
       serviceBinder.AddMethod(__Method_GetConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Deploy.V1.GetConfigRequest, global::Google.Cloud.Deploy.V1.Config>(serviceImpl.GetConfig));
     }
 

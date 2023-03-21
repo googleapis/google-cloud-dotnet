@@ -2553,6 +2553,186 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AdvanceRollout</summary>
+        public void AdvanceRolloutRequestObject()
+        {
+            // Snippet: AdvanceRollout(AdvanceRolloutRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            AdvanceRolloutRequest request = new AdvanceRolloutRequest
+            {
+                RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "",
+            };
+            // Make the request
+            AdvanceRolloutResponse response = cloudDeployClient.AdvanceRollout(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdvanceRolloutAsync</summary>
+        public async Task AdvanceRolloutRequestObjectAsync()
+        {
+            // Snippet: AdvanceRolloutAsync(AdvanceRolloutRequest, CallSettings)
+            // Additional: AdvanceRolloutAsync(AdvanceRolloutRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            AdvanceRolloutRequest request = new AdvanceRolloutRequest
+            {
+                RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "",
+            };
+            // Make the request
+            AdvanceRolloutResponse response = await cloudDeployClient.AdvanceRolloutAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdvanceRollout</summary>
+        public void AdvanceRollout()
+        {
+            // Snippet: AdvanceRollout(string, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            string phaseId = "";
+            // Make the request
+            AdvanceRolloutResponse response = cloudDeployClient.AdvanceRollout(name, phaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdvanceRolloutAsync</summary>
+        public async Task AdvanceRolloutAsync()
+        {
+            // Snippet: AdvanceRolloutAsync(string, string, CallSettings)
+            // Additional: AdvanceRolloutAsync(string, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            string phaseId = "";
+            // Make the request
+            AdvanceRolloutResponse response = await cloudDeployClient.AdvanceRolloutAsync(name, phaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdvanceRollout</summary>
+        public void AdvanceRolloutResourceNames()
+        {
+            // Snippet: AdvanceRollout(RolloutName, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            RolloutName name = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            string phaseId = "";
+            // Make the request
+            AdvanceRolloutResponse response = cloudDeployClient.AdvanceRollout(name, phaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdvanceRolloutAsync</summary>
+        public async Task AdvanceRolloutResourceNamesAsync()
+        {
+            // Snippet: AdvanceRolloutAsync(RolloutName, string, CallSettings)
+            // Additional: AdvanceRolloutAsync(RolloutName, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            RolloutName name = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            string phaseId = "";
+            // Make the request
+            AdvanceRolloutResponse response = await cloudDeployClient.AdvanceRolloutAsync(name, phaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelRollout</summary>
+        public void CancelRolloutRequestObject()
+        {
+            // Snippet: CancelRollout(CancelRolloutRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CancelRolloutRequest request = new CancelRolloutRequest
+            {
+                RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+            };
+            // Make the request
+            CancelRolloutResponse response = cloudDeployClient.CancelRollout(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelRolloutAsync</summary>
+        public async Task CancelRolloutRequestObjectAsync()
+        {
+            // Snippet: CancelRolloutAsync(CancelRolloutRequest, CallSettings)
+            // Additional: CancelRolloutAsync(CancelRolloutRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelRolloutRequest request = new CancelRolloutRequest
+            {
+                RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+            };
+            // Make the request
+            CancelRolloutResponse response = await cloudDeployClient.CancelRolloutAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelRollout</summary>
+        public void CancelRollout()
+        {
+            // Snippet: CancelRollout(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            // Make the request
+            CancelRolloutResponse response = cloudDeployClient.CancelRollout(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelRolloutAsync</summary>
+        public async Task CancelRolloutAsync()
+        {
+            // Snippet: CancelRolloutAsync(string, CallSettings)
+            // Additional: CancelRolloutAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            // Make the request
+            CancelRolloutResponse response = await cloudDeployClient.CancelRolloutAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelRollout</summary>
+        public void CancelRolloutResourceNames()
+        {
+            // Snippet: CancelRollout(RolloutName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            RolloutName name = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            // Make the request
+            CancelRolloutResponse response = cloudDeployClient.CancelRollout(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelRolloutAsync</summary>
+        public async Task CancelRolloutResourceNamesAsync()
+        {
+            // Snippet: CancelRolloutAsync(RolloutName, CallSettings)
+            // Additional: CancelRolloutAsync(RolloutName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            RolloutName name = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            // Make the request
+            CancelRolloutResponse response = await cloudDeployClient.CancelRolloutAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListRollouts</summary>
         public void ListRolloutsRequestObject()
         {
@@ -2934,6 +3114,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 Rollout = new Rollout(),
                 RequestId = "",
                 ValidateOnly = false,
+                StartingPhaseId = "",
             };
             // Make the request
             Operation<Rollout, OperationMetadata> response = cloudDeployClient.CreateRollout(request);
@@ -2971,6 +3152,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 Rollout = new Rollout(),
                 RequestId = "",
                 ValidateOnly = false,
+                StartingPhaseId = "",
             };
             // Make the request
             Operation<Rollout, OperationMetadata> response = await cloudDeployClient.CreateRolloutAsync(request);
@@ -3116,6 +3298,105 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 // If it has completed, then access the result
                 Rollout retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for IgnoreJob</summary>
+        public void IgnoreJobRequestObject()
+        {
+            // Snippet: IgnoreJob(IgnoreJobRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            IgnoreJobRequest request = new IgnoreJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "",
+                JobId = "",
+            };
+            // Make the request
+            IgnoreJobResponse response = cloudDeployClient.IgnoreJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IgnoreJobAsync</summary>
+        public async Task IgnoreJobRequestObjectAsync()
+        {
+            // Snippet: IgnoreJobAsync(IgnoreJobRequest, CallSettings)
+            // Additional: IgnoreJobAsync(IgnoreJobRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            IgnoreJobRequest request = new IgnoreJobRequest
+            {
+                RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                PhaseId = "",
+                JobId = "",
+            };
+            // Make the request
+            IgnoreJobResponse response = await cloudDeployClient.IgnoreJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IgnoreJob</summary>
+        public void IgnoreJob()
+        {
+            // Snippet: IgnoreJob(string, string, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string rollout = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            string phaseId = "";
+            string jobId = "";
+            // Make the request
+            IgnoreJobResponse response = cloudDeployClient.IgnoreJob(rollout, phaseId, jobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IgnoreJobAsync</summary>
+        public async Task IgnoreJobAsync()
+        {
+            // Snippet: IgnoreJobAsync(string, string, string, CallSettings)
+            // Additional: IgnoreJobAsync(string, string, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string rollout = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]";
+            string phaseId = "";
+            string jobId = "";
+            // Make the request
+            IgnoreJobResponse response = await cloudDeployClient.IgnoreJobAsync(rollout, phaseId, jobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IgnoreJob</summary>
+        public void IgnoreJobResourceNames()
+        {
+            // Snippet: IgnoreJob(RolloutName, string, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            RolloutName rollout = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            string phaseId = "";
+            string jobId = "";
+            // Make the request
+            IgnoreJobResponse response = cloudDeployClient.IgnoreJob(rollout, phaseId, jobId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IgnoreJobAsync</summary>
+        public async Task IgnoreJobResourceNamesAsync()
+        {
+            // Snippet: IgnoreJobAsync(RolloutName, string, string, CallSettings)
+            // Additional: IgnoreJobAsync(RolloutName, string, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            RolloutName rollout = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]");
+            string phaseId = "";
+            string jobId = "";
+            // Make the request
+            IgnoreJobResponse response = await cloudDeployClient.IgnoreJobAsync(rollout, phaseId, jobId);
             // End snippet
         }
 
@@ -3582,6 +3863,93 @@ namespace Google.Cloud.Deploy.V1.Snippets
             JobRunName name = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]");
             // Make the request
             JobRun response = await cloudDeployClient.GetJobRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TerminateJobRun</summary>
+        public void TerminateJobRunRequestObject()
+        {
+            // Snippet: TerminateJobRun(TerminateJobRunRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            TerminateJobRunRequest request = new TerminateJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            // Make the request
+            TerminateJobRunResponse response = cloudDeployClient.TerminateJobRun(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TerminateJobRunAsync</summary>
+        public async Task TerminateJobRunRequestObjectAsync()
+        {
+            // Snippet: TerminateJobRunAsync(TerminateJobRunRequest, CallSettings)
+            // Additional: TerminateJobRunAsync(TerminateJobRunRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            TerminateJobRunRequest request = new TerminateJobRunRequest
+            {
+                JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+            };
+            // Make the request
+            TerminateJobRunResponse response = await cloudDeployClient.TerminateJobRunAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TerminateJobRun</summary>
+        public void TerminateJobRun()
+        {
+            // Snippet: TerminateJobRun(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]/jobRuns/[JOB_RUN]";
+            // Make the request
+            TerminateJobRunResponse response = cloudDeployClient.TerminateJobRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TerminateJobRunAsync</summary>
+        public async Task TerminateJobRunAsync()
+        {
+            // Snippet: TerminateJobRunAsync(string, CallSettings)
+            // Additional: TerminateJobRunAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/releases/[RELEASE]/rollouts/[ROLLOUT]/jobRuns/[JOB_RUN]";
+            // Make the request
+            TerminateJobRunResponse response = await cloudDeployClient.TerminateJobRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TerminateJobRun</summary>
+        public void TerminateJobRunResourceNames()
+        {
+            // Snippet: TerminateJobRun(JobRunName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            JobRunName name = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]");
+            // Make the request
+            TerminateJobRunResponse response = cloudDeployClient.TerminateJobRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TerminateJobRunAsync</summary>
+        public async Task TerminateJobRunResourceNamesAsync()
+        {
+            // Snippet: TerminateJobRunAsync(JobRunName, CallSettings)
+            // Additional: TerminateJobRunAsync(JobRunName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            JobRunName name = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]");
+            // Make the request
+            TerminateJobRunResponse response = await cloudDeployClient.TerminateJobRunAsync(name);
             // End snippet
         }
 
