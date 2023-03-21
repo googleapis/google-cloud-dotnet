@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public async override Task<BigQueryRoutine> GetRoutineAsync(RoutineReference routineReference, GetRoutineOptions options = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryRoutine> GetRoutineAsync(RoutineReference routineReference, GetRoutineOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreateGetRoutineRequest(routineReference, options);
             var resource = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
@@ -89,7 +89,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public async override Task<BigQueryRoutine> CreateRoutineAsync(RoutineReference routineReference, Routine resource, CreateRoutineOptions options = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryRoutine> CreateRoutineAsync(RoutineReference routineReference, Routine resource, CreateRoutineOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreateInsertRoutineRequest(routineReference, resource, options);
             var result = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
@@ -119,7 +119,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public async override Task<BigQueryRoutine> GetOrCreateRoutineAsync(RoutineReference routineReference, Routine resource, GetRoutineOptions getOptions = null, CreateRoutineOptions createOptions = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryRoutine> GetOrCreateRoutineAsync(RoutineReference routineReference, Routine resource, GetRoutineOptions getOptions = null, CreateRoutineOptions createOptions = null, CancellationToken cancellationToken = default)
         {
             CheckResourceReference(routineReference, resource);
 
@@ -148,7 +148,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public async override Task DeleteRoutineAsync(RoutineReference routineReference, DeleteRoutineOptions options = null, CancellationToken cancellationToken = default)
+        public override async Task DeleteRoutineAsync(RoutineReference routineReference, DeleteRoutineOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreateDeleteRoutineRequest(routineReference, options);
             await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
@@ -163,7 +163,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public async override Task<BigQueryRoutine> UpdateRoutineAsync(RoutineReference routineReference, Routine resource, UpdateRoutineOptions options = null, CancellationToken cancellationToken = default)
+        public override async Task<BigQueryRoutine> UpdateRoutineAsync(RoutineReference routineReference, Routine resource, UpdateRoutineOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreateUpdateRoutineRequest(routineReference, resource, options);
             var routine = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);

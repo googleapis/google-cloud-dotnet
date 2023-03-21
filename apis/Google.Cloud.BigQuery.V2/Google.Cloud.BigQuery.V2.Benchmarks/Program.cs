@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@ using System.Reflection;
 
 namespace Google.Cloud.BigQuery.V2.Benchmarks
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args) =>
+        private static void Main(string[] args) =>
             new BenchmarkSwitcher(typeof(Program).GetTypeInfo().Assembly).Run(args);
     }
 }
