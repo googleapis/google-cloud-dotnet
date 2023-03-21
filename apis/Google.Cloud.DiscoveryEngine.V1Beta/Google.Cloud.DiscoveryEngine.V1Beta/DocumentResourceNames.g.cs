@@ -37,9 +37,19 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             /// .
             /// </summary>
             ProjectLocationDataStoreBranchDocument = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
+            /// .
+            /// </summary>
+            ProjectLocationCollectionDataStoreBranchDocument = 2,
         }
 
         private static gax::PathTemplate s_projectLocationDataStoreBranchDocument = new gax::PathTemplate("projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/documents/{document}");
+
+        private static gax::PathTemplate s_projectLocationCollectionDataStoreBranchDocument = new gax::PathTemplate("projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}");
 
         /// <summary>Creates a <see cref="DocumentName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -63,6 +73,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <returns>A new instance of <see cref="DocumentName"/> constructed from the provided ids.</returns>
         public static DocumentName FromProjectLocationDataStoreBranchDocument(string projectId, string locationId, string dataStoreId, string branchId, string documentId) =>
             new DocumentName(ResourceNameType.ProjectLocationDataStoreBranchDocument, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), branchId: gax::GaxPreconditions.CheckNotNullOrEmpty(branchId, nameof(branchId)), documentId: gax::GaxPreconditions.CheckNotNullOrEmpty(documentId, nameof(documentId)));
+
+        /// <summary>
+        /// Creates a <see cref="DocumentName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="branchId">The <c>Branch</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="documentId">The <c>Document</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="DocumentName"/> constructed from the provided ids.</returns>
+        public static DocumentName FromProjectLocationCollectionDataStoreBranchDocument(string projectId, string locationId, string collectionId, string dataStoreId, string branchId, string documentId) =>
+            new DocumentName(ResourceNameType.ProjectLocationCollectionDataStoreBranchDocument, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), collectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), branchId: gax::GaxPreconditions.CheckNotNullOrEmpty(branchId, nameof(branchId)), documentId: gax::GaxPreconditions.CheckNotNullOrEmpty(documentId, nameof(documentId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="DocumentName"/> with pattern
@@ -100,6 +126,27 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public static string FormatProjectLocationDataStoreBranchDocument(string projectId, string locationId, string dataStoreId, string branchId, string documentId) =>
             s_projectLocationDataStoreBranchDocument.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), gax::GaxPreconditions.CheckNotNullOrEmpty(branchId, nameof(branchId)), gax::GaxPreconditions.CheckNotNullOrEmpty(documentId, nameof(documentId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DocumentName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStoreId">The <c>DataStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="branchId">The <c>Branch</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="documentId">The <c>Document</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DocumentName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationCollectionDataStoreBranchDocument(string projectId, string locationId, string collectionId, string dataStoreId, string branchId, string documentId) =>
+            s_projectLocationCollectionDataStoreBranchDocument.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), gax::GaxPreconditions.CheckNotNullOrEmpty(branchId, nameof(branchId)), gax::GaxPreconditions.CheckNotNullOrEmpty(documentId, nameof(documentId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="DocumentName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -107,6 +154,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -125,6 +178,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -151,6 +210,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="documentName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -170,6 +235,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -194,6 +265,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
                 result = FromProjectLocationDataStoreBranchDocument(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
                 return true;
             }
+            if (s_projectLocationCollectionDataStoreBranchDocument.TryParseName(documentName, out resourceName))
+            {
+                result = FromProjectLocationCollectionDataStoreBranchDocument(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4], resourceName[5]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(documentName, out gax::UnparsedResourceName unparsedResourceName))
@@ -206,11 +282,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             return false;
         }
 
-        private DocumentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string branchId = null, string dataStoreId = null, string documentId = null, string locationId = null, string projectId = null)
+        private DocumentName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string branchId = null, string collectionId = null, string dataStoreId = null, string documentId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             BranchId = branchId;
+            CollectionId = collectionId;
             DataStoreId = dataStoreId;
             DocumentId = documentId;
             LocationId = locationId;
@@ -240,27 +317,33 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Branch</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Branch</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string BranchId { get; }
 
         /// <summary>
-        /// The <c>DataStore</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Collection</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string CollectionId { get; }
+
+        /// <summary>
+        /// The <c>DataStore</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string DataStoreId { get; }
 
         /// <summary>
-        /// The <c>Document</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Document</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string DocumentId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -275,6 +358,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationDataStoreBranchDocument: return s_projectLocationDataStoreBranchDocument.Expand(ProjectId, LocationId, DataStoreId, BranchId, DocumentId);
+                case ResourceNameType.ProjectLocationCollectionDataStoreBranchDocument: return s_projectLocationCollectionDataStoreBranchDocument.Expand(ProjectId, LocationId, CollectionId, DataStoreId, BranchId, DocumentId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
