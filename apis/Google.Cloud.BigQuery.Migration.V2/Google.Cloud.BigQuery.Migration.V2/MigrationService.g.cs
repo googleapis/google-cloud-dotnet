@@ -1890,8 +1890,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of migration tasks to return. The service may return
-    /// fewer than this number.
+    /// Optional. The maximum number of migration tasks to return. The service may
+    /// return fewer than this number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1906,8 +1906,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A page token, received from previous `ListMigrationSubtasks` call.
-    /// Provide this to retrieve the subsequent page.
+    /// Optional. A page token, received from previous `ListMigrationSubtasks`
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to `ListMigrationSubtasks`
     /// must match the call that provided the page token.
@@ -1925,9 +1925,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// Optional. The filter to apply. This can be used to get the subtasks of a specific
-    /// tasks in a workflow, e.g. `migration_task = "ab012"` where `"ab012"` is the
-    /// task ID (not the name in the named map).
+    /// Optional. The filter to apply. This can be used to get the subtasks of a
+    /// specific tasks in a workflow, e.g. `migration_task = "ab012"` where
+    /// `"ab012"` is the task ID (not the name in the named map).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
