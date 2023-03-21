@@ -1267,6 +1267,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class SimulateMaintenanceEventNodeGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteNodeTemplateRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)

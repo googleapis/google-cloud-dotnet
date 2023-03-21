@@ -64,6 +64,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             SetNodeTemplateSettings = existing.SetNodeTemplateSettings;
             SetNodeTemplateOperationsSettings = existing.SetNodeTemplateOperationsSettings.Clone();
+            SimulateMaintenanceEventSettings = existing.SimulateMaintenanceEventSettings;
+            SimulateMaintenanceEventOperationsSettings = existing.SimulateMaintenanceEventOperationsSettings.Clone();
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             OnCopy(existing);
         }
@@ -354,6 +356,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings SetNodeTemplateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NodeGroupsClient.SimulateMaintenanceEvent</c> and <c>NodeGroupsClient.SimulateMaintenanceEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SimulateMaintenanceEventSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NodeGroupsClient.SimulateMaintenanceEvent</c> and
+        /// <c>NodeGroupsClient.SimulateMaintenanceEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SimulateMaintenanceEventOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1753,6 +1785,132 @@ namespace Google.Cloud.Compute.V1
             SetNodeTemplateAsync(project, zone, nodeGroup, nodeGroupsSetNodeTemplateRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Simulates maintenance event on specified nodes from the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SimulateMaintenanceEvent(SimulateMaintenanceEventNodeGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Simulates maintenance event on specified nodes from the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(SimulateMaintenanceEventNodeGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Simulates maintenance event on specified nodes from the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(SimulateMaintenanceEventNodeGroupRequest request, st::CancellationToken cancellationToken) =>
+            SimulateMaintenanceEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SimulateMaintenanceEvent</c>.</summary>
+        public virtual lro::OperationsClient SimulateMaintenanceEventOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SimulateMaintenanceEvent</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSimulateMaintenanceEvent(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SimulateMaintenanceEventOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SimulateMaintenanceEvent</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSimulateMaintenanceEventAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SimulateMaintenanceEventOperationsClient, callSettings);
+
+        /// <summary>
+        /// Simulates maintenance event on specified nodes from the node group.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="nodeGroup">
+        /// Name of the NodeGroup resource whose nodes will go under maintenance simulation.
+        /// </param>
+        /// <param name="nodeGroupsSimulateMaintenanceEventRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> SimulateMaintenanceEvent(string project, string zone, string nodeGroup, NodeGroupsSimulateMaintenanceEventRequest nodeGroupsSimulateMaintenanceEventRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SimulateMaintenanceEvent(new SimulateMaintenanceEventNodeGroupRequest
+            {
+                NodeGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(nodeGroup, nameof(nodeGroup)),
+                NodeGroupsSimulateMaintenanceEventRequestResource = gax::GaxPreconditions.CheckNotNull(nodeGroupsSimulateMaintenanceEventRequestResource, nameof(nodeGroupsSimulateMaintenanceEventRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Simulates maintenance event on specified nodes from the node group.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="nodeGroup">
+        /// Name of the NodeGroup resource whose nodes will go under maintenance simulation.
+        /// </param>
+        /// <param name="nodeGroupsSimulateMaintenanceEventRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(string project, string zone, string nodeGroup, NodeGroupsSimulateMaintenanceEventRequest nodeGroupsSimulateMaintenanceEventRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SimulateMaintenanceEventAsync(new SimulateMaintenanceEventNodeGroupRequest
+            {
+                NodeGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(nodeGroup, nameof(nodeGroup)),
+                NodeGroupsSimulateMaintenanceEventRequestResource = gax::GaxPreconditions.CheckNotNull(nodeGroupsSimulateMaintenanceEventRequestResource, nameof(nodeGroupsSimulateMaintenanceEventRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Simulates maintenance event on specified nodes from the node group.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="nodeGroup">
+        /// Name of the NodeGroup resource whose nodes will go under maintenance simulation.
+        /// </param>
+        /// <param name="nodeGroupsSimulateMaintenanceEventRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(string project, string zone, string nodeGroup, NodeGroupsSimulateMaintenanceEventRequest nodeGroupsSimulateMaintenanceEventRequestResource, st::CancellationToken cancellationToken) =>
+            SimulateMaintenanceEventAsync(project, zone, nodeGroup, nodeGroupsSimulateMaintenanceEventRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1882,6 +2040,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<SetNodeTemplateNodeGroupRequest, Operation> _callSetNodeTemplate;
 
+        private readonly gaxgrpc::ApiCall<SimulateMaintenanceEventNodeGroupRequest, Operation> _callSimulateMaintenanceEvent;
+
         private readonly gaxgrpc::ApiCall<TestIamPermissionsNodeGroupRequest, TestPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
@@ -1901,6 +2061,7 @@ namespace Google.Cloud.Compute.V1
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PatchOperationsSettings, logger);
             SetNodeTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetNodeTemplateOperationsSettings, logger);
+            SimulateMaintenanceEventOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SimulateMaintenanceEventOperationsSettings, logger);
             _callAddNodes = clientHelper.BuildApiCall<AddNodesNodeGroupRequest, Operation>("AddNodes", grpcClient.AddNodesAsync, grpcClient.AddNodes, effectiveSettings.AddNodesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("node_group", request => request.NodeGroup);
             Modify_ApiCall(ref _callAddNodes);
             Modify_AddNodesApiCall(ref _callAddNodes);
@@ -1937,6 +2098,9 @@ namespace Google.Cloud.Compute.V1
             _callSetNodeTemplate = clientHelper.BuildApiCall<SetNodeTemplateNodeGroupRequest, Operation>("SetNodeTemplate", grpcClient.SetNodeTemplateAsync, grpcClient.SetNodeTemplate, effectiveSettings.SetNodeTemplateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("node_group", request => request.NodeGroup);
             Modify_ApiCall(ref _callSetNodeTemplate);
             Modify_SetNodeTemplateApiCall(ref _callSetNodeTemplate);
+            _callSimulateMaintenanceEvent = clientHelper.BuildApiCall<SimulateMaintenanceEventNodeGroupRequest, Operation>("SimulateMaintenanceEvent", grpcClient.SimulateMaintenanceEventAsync, grpcClient.SimulateMaintenanceEvent, effectiveSettings.SimulateMaintenanceEventSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("node_group", request => request.NodeGroup);
+            Modify_ApiCall(ref _callSimulateMaintenanceEvent);
+            Modify_SimulateMaintenanceEventApiCall(ref _callSimulateMaintenanceEvent);
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsNodeGroupRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
@@ -1969,6 +2133,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_SetNodeTemplateApiCall(ref gaxgrpc::ApiCall<SetNodeTemplateNodeGroupRequest, Operation> call);
 
+        partial void Modify_SimulateMaintenanceEventApiCall(ref gaxgrpc::ApiCall<SimulateMaintenanceEventNodeGroupRequest, Operation> call);
+
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<TestIamPermissionsNodeGroupRequest, TestPermissionsResponse> call);
 
         partial void OnConstruction(NodeGroups.NodeGroupsClient grpcClient, NodeGroupsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -1999,6 +2165,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetIamPolicyNodeGroupRequest(ref SetIamPolicyNodeGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetNodeTemplateNodeGroupRequest(ref SetNodeTemplateNodeGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SimulateMaintenanceEventNodeGroupRequest(ref SimulateMaintenanceEventNodeGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsNodeGroupRequest(ref TestIamPermissionsNodeGroupRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2344,6 +2512,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetNodeTemplateOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SimulateMaintenanceEvent</c>.</summary>
+        public override lro::OperationsClient SimulateMaintenanceEventOperationsClient { get; }
+
+        /// <summary>
+        /// Simulates maintenance event on specified nodes from the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> SimulateMaintenanceEvent(SimulateMaintenanceEventNodeGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SimulateMaintenanceEventNodeGroupRequest(ref request, ref callSettings);
+            Operation response = _callSimulateMaintenanceEvent.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SimulateMaintenanceEventOperationsClient);
+        }
+
+        /// <summary>
+        /// Simulates maintenance event on specified nodes from the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(SimulateMaintenanceEventNodeGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SimulateMaintenanceEventNodeGroupRequest(ref request, ref callSettings);
+            Operation response = await _callSimulateMaintenanceEvent.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SimulateMaintenanceEventOperationsClient);
         }
 
         /// <summary>

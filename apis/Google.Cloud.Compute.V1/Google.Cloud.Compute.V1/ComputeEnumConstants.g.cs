@@ -1517,6 +1517,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.GuestOsFeature.Types.Type.SevCapable"/>.</summary>
                 public const string SevCapable = "SEV_CAPABLE";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.GuestOsFeature.Types.Type.SevLiveMigratable"/>.</summary>
+                public const string SevLiveMigratable = "SEV_LIVE_MIGRATABLE";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.GuestOsFeature.Types.Type.SevSnpCapable"/>.</summary>
                 public const string SevSnpCapable = "SEV_SNP_CAPABLE";
 
