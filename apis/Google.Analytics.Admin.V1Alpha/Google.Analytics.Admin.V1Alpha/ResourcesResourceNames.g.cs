@@ -4852,6 +4852,262 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(BigQueryLinkName a, BigQueryLinkName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>EnhancedMeasurementSettings</c> resource.</summary>
+    public sealed partial class EnhancedMeasurementSettingsName : gax::IResourceName, sys::IEquatable<EnhancedMeasurementSettingsName>
+    {
+        /// <summary>The possible contents of <see cref="EnhancedMeasurementSettingsName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>.
+            /// </summary>
+            PropertyDataStream = 1,
+        }
+
+        private static gax::PathTemplate s_propertyDataStream = new gax::PathTemplate("properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings");
+
+        /// <summary>
+        /// Creates a <see cref="EnhancedMeasurementSettingsName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="EnhancedMeasurementSettingsName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static EnhancedMeasurementSettingsName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new EnhancedMeasurementSettingsName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="EnhancedMeasurementSettingsName"/> with the pattern
+        /// <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="EnhancedMeasurementSettingsName"/> constructed from the provided ids.
+        /// </returns>
+        public static EnhancedMeasurementSettingsName FromPropertyDataStream(string propertyId, string dataStreamId) =>
+            new EnhancedMeasurementSettingsName(ResourceNameType.PropertyDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), dataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="EnhancedMeasurementSettingsName"/> with
+        /// pattern <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="EnhancedMeasurementSettingsName"/> with pattern
+        /// <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>.
+        /// </returns>
+        public static string Format(string propertyId, string dataStreamId) =>
+            FormatPropertyDataStream(propertyId, dataStreamId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="EnhancedMeasurementSettingsName"/> with
+        /// pattern <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="EnhancedMeasurementSettingsName"/> with pattern
+        /// <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>.
+        /// </returns>
+        public static string FormatPropertyDataStream(string propertyId, string dataStreamId) =>
+            s_propertyDataStream.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="EnhancedMeasurementSettingsName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="enhancedMeasurementSettingsName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="EnhancedMeasurementSettingsName"/> if successful.</returns>
+        public static EnhancedMeasurementSettingsName Parse(string enhancedMeasurementSettingsName) =>
+            Parse(enhancedMeasurementSettingsName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="EnhancedMeasurementSettingsName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="enhancedMeasurementSettingsName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="EnhancedMeasurementSettingsName"/> if successful.</returns>
+        public static EnhancedMeasurementSettingsName Parse(string enhancedMeasurementSettingsName, bool allowUnparsed) =>
+            TryParse(enhancedMeasurementSettingsName, allowUnparsed, out EnhancedMeasurementSettingsName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="EnhancedMeasurementSettingsName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="enhancedMeasurementSettingsName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="EnhancedMeasurementSettingsName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string enhancedMeasurementSettingsName, out EnhancedMeasurementSettingsName result) =>
+            TryParse(enhancedMeasurementSettingsName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="EnhancedMeasurementSettingsName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="enhancedMeasurementSettingsName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="EnhancedMeasurementSettingsName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string enhancedMeasurementSettingsName, bool allowUnparsed, out EnhancedMeasurementSettingsName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(enhancedMeasurementSettingsName, nameof(enhancedMeasurementSettingsName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyDataStream.TryParseName(enhancedMeasurementSettingsName, out resourceName))
+            {
+                result = FromPropertyDataStream(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(enhancedMeasurementSettingsName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private EnhancedMeasurementSettingsName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string dataStreamId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DataStreamId = dataStreamId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="EnhancedMeasurementSettingsName"/> class from the component parts
+        /// of pattern <c>properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dataStreamId">The <c>DataStream</c> ID. Must not be <c>null</c> or empty.</param>
+        public EnhancedMeasurementSettingsName(string propertyId, string dataStreamId) : this(ResourceNameType.PropertyDataStream, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), dataStreamId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStreamId, nameof(dataStreamId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DataStream</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string DataStreamId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyDataStream: return s_propertyDataStream.Expand(PropertyId, DataStreamId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as EnhancedMeasurementSettingsName);
+
+        /// <inheritdoc/>
+        public bool Equals(EnhancedMeasurementSettingsName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(EnhancedMeasurementSettingsName a, EnhancedMeasurementSettingsName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(EnhancedMeasurementSettingsName a, EnhancedMeasurementSettingsName b) => !(a == b);
+    }
+
     public partial class Account
     {
         /// <summary>
@@ -5133,6 +5389,19 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::BigQueryLinkName BigQueryLinkName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::BigQueryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EnhancedMeasurementSettings
+    {
+        /// <summary>
+        /// <see cref="gaav::EnhancedMeasurementSettingsName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::EnhancedMeasurementSettingsName EnhancedMeasurementSettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::EnhancedMeasurementSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

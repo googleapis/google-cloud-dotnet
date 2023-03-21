@@ -3,7 +3,7 @@
 //     source: google/analytics/admin/v1alpha/analytics_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -377,6 +377,22 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetEnhancedMeasurementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> __Marshaller_google_analytics_admin_v1alpha_EnhancedMeasurementSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateEnhancedMeasurementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest> __Marshaller_google_analytics_admin_v1alpha_CreateConnectedSiteTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse> __Marshaller_google_analytics_admin_v1alpha_CreateConnectedSiteTagResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteConnectedSiteTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest> __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -1193,6 +1209,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         "ListBigQueryLinks",
         __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksRequest,
         __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> __Method_GetEnhancedMeasurementSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEnhancedMeasurementSettings",
+        __Marshaller_google_analytics_admin_v1alpha_GetEnhancedMeasurementSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_EnhancedMeasurementSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> __Method_UpdateEnhancedMeasurementSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateEnhancedMeasurementSettings",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateEnhancedMeasurementSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_EnhancedMeasurementSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest, global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse> __Method_CreateConnectedSiteTag = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest, global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateConnectedSiteTag",
+        __Marshaller_google_analytics_admin_v1alpha_CreateConnectedSiteTagRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CreateConnectedSiteTagResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteConnectedSiteTag = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteConnectedSiteTag",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteConnectedSiteTagRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> __Method_ListConnectedSiteTags = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListConnectedSiteTags",
+        __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -2517,6 +2573,75 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> ListBigQueryLinks(global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> GetEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a connected site tag for a Universal Analytics property. You can
+      /// create a maximum of 20 connected site tags per property.
+      /// Note: This API cannot be used on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse> CreateConnectedSiteTag(global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a connected site tag for a Universal Analytics property.
+      /// Note: this has no effect on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConnectedSiteTag(global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the connected site tags for a Universal Analytics property. A maximum
+      /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+      /// property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> ListConnectedSiteTags(global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -7818,6 +7943,282 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBigQueryLinks, null, options, request);
       }
+      /// <summary>
+      /// Returns the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings GetEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEnhancedMeasurementSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings GetEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEnhancedMeasurementSettings, null, options, request);
+      }
+      /// <summary>
+      /// Returns the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEnhancedMeasurementSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEnhancedMeasurementSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings UpdateEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEnhancedMeasurementSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings UpdateEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateEnhancedMeasurementSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEnhancedMeasurementSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the enhanced measurement settings for this data stream.
+      /// Note that the stream must enable enhanced measurement for these settings to
+      /// take effect.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateEnhancedMeasurementSettings, null, options, request);
+      }
+      /// <summary>
+      /// Creates a connected site tag for a Universal Analytics property. You can
+      /// create a maximum of 20 connected site tags per property.
+      /// Note: This API cannot be used on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse CreateConnectedSiteTag(global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateConnectedSiteTag(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a connected site tag for a Universal Analytics property. You can
+      /// create a maximum of 20 connected site tags per property.
+      /// Note: This API cannot be used on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse CreateConnectedSiteTag(global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateConnectedSiteTag, null, options, request);
+      }
+      /// <summary>
+      /// Creates a connected site tag for a Universal Analytics property. You can
+      /// create a maximum of 20 connected site tags per property.
+      /// Note: This API cannot be used on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse> CreateConnectedSiteTagAsync(global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateConnectedSiteTagAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a connected site tag for a Universal Analytics property. You can
+      /// create a maximum of 20 connected site tags per property.
+      /// Note: This API cannot be used on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse> CreateConnectedSiteTagAsync(global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateConnectedSiteTag, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a connected site tag for a Universal Analytics property.
+      /// Note: this has no effect on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConnectedSiteTag(global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteConnectedSiteTag(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a connected site tag for a Universal Analytics property.
+      /// Note: this has no effect on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConnectedSiteTag(global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteConnectedSiteTag, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a connected site tag for a Universal Analytics property.
+      /// Note: this has no effect on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConnectedSiteTagAsync(global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteConnectedSiteTagAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a connected site tag for a Universal Analytics property.
+      /// Note: this has no effect on GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConnectedSiteTagAsync(global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteConnectedSiteTag, null, options, request);
+      }
+      /// <summary>
+      /// Lists the connected site tags for a Universal Analytics property. A maximum
+      /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+      /// property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse ListConnectedSiteTags(global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListConnectedSiteTags(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the connected site tags for a Universal Analytics property. A maximum
+      /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+      /// property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse ListConnectedSiteTags(global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListConnectedSiteTags, null, options, request);
+      }
+      /// <summary>
+      /// Lists the connected site tags for a Universal Analytics property. A maximum
+      /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+      /// property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListConnectedSiteTagsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the connected site tags for a Universal Analytics property. A maximum
+      /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+      /// property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListConnectedSiteTags, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -7933,7 +8334,12 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl.SetAutomatedGa4ConfigurationOptOut)
           .AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl.FetchAutomatedGa4ConfigurationOptOut)
           .AddMethod(__Method_GetBigQueryLink, serviceImpl.GetBigQueryLink)
-          .AddMethod(__Method_ListBigQueryLinks, serviceImpl.ListBigQueryLinks).Build();
+          .AddMethod(__Method_ListBigQueryLinks, serviceImpl.ListBigQueryLinks)
+          .AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl.GetEnhancedMeasurementSettings)
+          .AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl.UpdateEnhancedMeasurementSettings)
+          .AddMethod(__Method_CreateConnectedSiteTag, serviceImpl.CreateConnectedSiteTag)
+          .AddMethod(__Method_DeleteConnectedSiteTag, serviceImpl.DeleteConnectedSiteTag)
+          .AddMethod(__Method_ListConnectedSiteTags, serviceImpl.ListConnectedSiteTags).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -8045,6 +8451,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.FetchAutomatedGa4ConfigurationOptOut));
       serviceBinder.AddMethod(__Method_GetBigQueryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(serviceImpl.GetBigQueryLink));
       serviceBinder.AddMethod(__Method_ListBigQueryLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse>(serviceImpl.ListBigQueryLinks));
+      serviceBinder.AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.GetEnhancedMeasurementSettings));
+      serviceBinder.AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.UpdateEnhancedMeasurementSettings));
+      serviceBinder.AddMethod(__Method_CreateConnectedSiteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest, global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse>(serviceImpl.CreateConnectedSiteTag));
+      serviceBinder.AddMethod(__Method_DeleteConnectedSiteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConnectedSiteTag));
+      serviceBinder.AddMethod(__Method_ListConnectedSiteTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse>(serviceImpl.ListConnectedSiteTags));
     }
 
   }
