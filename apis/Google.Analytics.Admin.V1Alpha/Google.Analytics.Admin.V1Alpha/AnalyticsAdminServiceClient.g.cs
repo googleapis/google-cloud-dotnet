@@ -150,6 +150,11 @@ namespace Google.Analytics.Admin.V1Alpha
             FetchAutomatedGa4ConfigurationOptOutSettings = existing.FetchAutomatedGa4ConfigurationOptOutSettings;
             GetBigQueryLinkSettings = existing.GetBigQueryLinkSettings;
             ListBigQueryLinksSettings = existing.ListBigQueryLinksSettings;
+            GetEnhancedMeasurementSettingsSettings = existing.GetEnhancedMeasurementSettingsSettings;
+            UpdateEnhancedMeasurementSettingsSettings = existing.UpdateEnhancedMeasurementSettingsSettings;
+            CreateConnectedSiteTagSettings = existing.CreateConnectedSiteTagSettings;
+            DeleteConnectedSiteTagSettings = existing.DeleteConnectedSiteTagSettings;
+            ListConnectedSiteTagsSettings = existing.ListConnectedSiteTagsSettings;
             OnCopy(existing);
         }
 
@@ -2136,6 +2141,98 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListBigQueryLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetEnhancedMeasurementSettings</c> and
+        /// <c>AnalyticsAdminServiceClient.GetEnhancedMeasurementSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEnhancedMeasurementSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateEnhancedMeasurementSettings</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateEnhancedMeasurementSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateEnhancedMeasurementSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateConnectedSiteTag</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateConnectedSiteTagAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateConnectedSiteTagSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteConnectedSiteTag</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteConnectedSiteTagAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteConnectedSiteTagSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListConnectedSiteTags</c> and
+        /// <c>AnalyticsAdminServiceClient.ListConnectedSiteTagsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListConnectedSiteTagsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -12448,6 +12545,344 @@ namespace Google.Analytics.Admin.V1Alpha
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EnhancedMeasurementSettings GetEnhancedMeasurementSettings(GetEnhancedMeasurementSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(GetEnhancedMeasurementSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(GetEnhancedMeasurementSettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetEnhancedMeasurementSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings
+        /// Example: "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EnhancedMeasurementSettings GetEnhancedMeasurementSettings(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnhancedMeasurementSettings(new GetEnhancedMeasurementSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings
+        /// Example: "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnhancedMeasurementSettingsAsync(new GetEnhancedMeasurementSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings
+        /// Example: "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEnhancedMeasurementSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings
+        /// Example: "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EnhancedMeasurementSettings GetEnhancedMeasurementSettings(EnhancedMeasurementSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnhancedMeasurementSettings(new GetEnhancedMeasurementSettingsRequest
+            {
+                EnhancedMeasurementSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings
+        /// Example: "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEnhancedMeasurementSettingsAsync(new GetEnhancedMeasurementSettingsRequest
+            {
+                EnhancedMeasurementSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the settings to lookup.
+        /// Format:
+        /// properties/{property}/dataStreams/{data_stream}/enhancedMeasurementSettings
+        /// Example: "properties/1000/dataStreams/2000/enhancedMeasurementSettings"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettingsName name, st::CancellationToken cancellationToken) =>
+            GetEnhancedMeasurementSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EnhancedMeasurementSettings UpdateEnhancedMeasurementSettings(UpdateEnhancedMeasurementSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(UpdateEnhancedMeasurementSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(UpdateEnhancedMeasurementSettingsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateEnhancedMeasurementSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="enhancedMeasurementSettings">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EnhancedMeasurementSettings UpdateEnhancedMeasurementSettings(EnhancedMeasurementSettings enhancedMeasurementSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEnhancedMeasurementSettings(new UpdateEnhancedMeasurementSettingsRequest
+            {
+                EnhancedMeasurementSettings = gax::GaxPreconditions.CheckNotNull(enhancedMeasurementSettings, nameof(enhancedMeasurementSettings)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="enhancedMeasurementSettings">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettings enhancedMeasurementSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateEnhancedMeasurementSettingsAsync(new UpdateEnhancedMeasurementSettingsRequest
+            {
+                EnhancedMeasurementSettings = gax::GaxPreconditions.CheckNotNull(enhancedMeasurementSettings, nameof(enhancedMeasurementSettings)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="enhancedMeasurementSettings">
+        /// Required. The settings to update.
+        /// The `name` field is used to identify the settings to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettings enhancedMeasurementSettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateEnhancedMeasurementSettingsAsync(enhancedMeasurementSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a connected site tag for a Universal Analytics property. You can
+        /// create a maximum of 20 connected site tags per property.
+        /// Note: This API cannot be used on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CreateConnectedSiteTagResponse CreateConnectedSiteTag(CreateConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a connected site tag for a Universal Analytics property. You can
+        /// create a maximum of 20 connected site tags per property.
+        /// Note: This API cannot be used on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CreateConnectedSiteTagResponse> CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a connected site tag for a Universal Analytics property. You can
+        /// create a maximum of 20 connected site tags per property.
+        /// Note: This API cannot be used on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CreateConnectedSiteTagResponse> CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest request, st::CancellationToken cancellationToken) =>
+            CreateConnectedSiteTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a connected site tag for a Universal Analytics property.
+        /// Note: this has no effect on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteConnectedSiteTag(DeleteConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a connected site tag for a Universal Analytics property.
+        /// Note: this has no effect on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a connected site tag for a Universal Analytics property.
+        /// Note: this has no effect on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest request, st::CancellationToken cancellationToken) =>
+            DeleteConnectedSiteTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the connected site tags for a Universal Analytics property. A maximum
+        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListConnectedSiteTagsResponse ListConnectedSiteTags(ListConnectedSiteTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the connected site tags for a Universal Analytics property. A maximum
+        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the connected site tags for a Universal Analytics property. A maximum
+        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest request, st::CancellationToken cancellationToken) =>
+            ListConnectedSiteTagsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -12659,6 +13094,16 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<GetBigQueryLinkRequest, BigQueryLink> _callGetBigQueryLink;
 
         private readonly gaxgrpc::ApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse> _callListBigQueryLinks;
+
+        private readonly gaxgrpc::ApiCall<GetEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> _callGetEnhancedMeasurementSettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> _callUpdateEnhancedMeasurementSettings;
+
+        private readonly gaxgrpc::ApiCall<CreateConnectedSiteTagRequest, CreateConnectedSiteTagResponse> _callCreateConnectedSiteTag;
+
+        private readonly gaxgrpc::ApiCall<DeleteConnectedSiteTagRequest, wkt::Empty> _callDeleteConnectedSiteTag;
+
+        private readonly gaxgrpc::ApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse> _callListConnectedSiteTags;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -12978,6 +13423,21 @@ namespace Google.Analytics.Admin.V1Alpha
             _callListBigQueryLinks = clientHelper.BuildApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse>("ListBigQueryLinks", grpcClient.ListBigQueryLinksAsync, grpcClient.ListBigQueryLinks, effectiveSettings.ListBigQueryLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBigQueryLinks);
             Modify_ListBigQueryLinksApiCall(ref _callListBigQueryLinks);
+            _callGetEnhancedMeasurementSettings = clientHelper.BuildApiCall<GetEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings>("GetEnhancedMeasurementSettings", grpcClient.GetEnhancedMeasurementSettingsAsync, grpcClient.GetEnhancedMeasurementSettings, effectiveSettings.GetEnhancedMeasurementSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEnhancedMeasurementSettings);
+            Modify_GetEnhancedMeasurementSettingsApiCall(ref _callGetEnhancedMeasurementSettings);
+            _callUpdateEnhancedMeasurementSettings = clientHelper.BuildApiCall<UpdateEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings>("UpdateEnhancedMeasurementSettings", grpcClient.UpdateEnhancedMeasurementSettingsAsync, grpcClient.UpdateEnhancedMeasurementSettings, effectiveSettings.UpdateEnhancedMeasurementSettingsSettings).WithGoogleRequestParam("enhanced_measurement_settings.name", request => request.EnhancedMeasurementSettings?.Name);
+            Modify_ApiCall(ref _callUpdateEnhancedMeasurementSettings);
+            Modify_UpdateEnhancedMeasurementSettingsApiCall(ref _callUpdateEnhancedMeasurementSettings);
+            _callCreateConnectedSiteTag = clientHelper.BuildApiCall<CreateConnectedSiteTagRequest, CreateConnectedSiteTagResponse>("CreateConnectedSiteTag", grpcClient.CreateConnectedSiteTagAsync, grpcClient.CreateConnectedSiteTag, effectiveSettings.CreateConnectedSiteTagSettings);
+            Modify_ApiCall(ref _callCreateConnectedSiteTag);
+            Modify_CreateConnectedSiteTagApiCall(ref _callCreateConnectedSiteTag);
+            _callDeleteConnectedSiteTag = clientHelper.BuildApiCall<DeleteConnectedSiteTagRequest, wkt::Empty>("DeleteConnectedSiteTag", grpcClient.DeleteConnectedSiteTagAsync, grpcClient.DeleteConnectedSiteTag, effectiveSettings.DeleteConnectedSiteTagSettings);
+            Modify_ApiCall(ref _callDeleteConnectedSiteTag);
+            Modify_DeleteConnectedSiteTagApiCall(ref _callDeleteConnectedSiteTag);
+            _callListConnectedSiteTags = clientHelper.BuildApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse>("ListConnectedSiteTags", grpcClient.ListConnectedSiteTagsAsync, grpcClient.ListConnectedSiteTags, effectiveSettings.ListConnectedSiteTagsSettings);
+            Modify_ApiCall(ref _callListConnectedSiteTags);
+            Modify_ListConnectedSiteTagsApiCall(ref _callListConnectedSiteTags);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -13187,6 +13647,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_ListBigQueryLinksApiCall(ref gaxgrpc::ApiCall<ListBigQueryLinksRequest, ListBigQueryLinksResponse> call);
 
+        partial void Modify_GetEnhancedMeasurementSettingsApiCall(ref gaxgrpc::ApiCall<GetEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> call);
+
+        partial void Modify_UpdateEnhancedMeasurementSettingsApiCall(ref gaxgrpc::ApiCall<UpdateEnhancedMeasurementSettingsRequest, EnhancedMeasurementSettings> call);
+
+        partial void Modify_CreateConnectedSiteTagApiCall(ref gaxgrpc::ApiCall<CreateConnectedSiteTagRequest, CreateConnectedSiteTagResponse> call);
+
+        partial void Modify_DeleteConnectedSiteTagApiCall(ref gaxgrpc::ApiCall<DeleteConnectedSiteTagRequest, wkt::Empty> call);
+
+        partial void Modify_ListConnectedSiteTagsApiCall(ref gaxgrpc::ApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse> call);
+
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AnalyticsAdminService client</summary>
@@ -13395,6 +13865,16 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_GetBigQueryLinkRequest(ref GetBigQueryLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBigQueryLinksRequest(ref ListBigQueryLinksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEnhancedMeasurementSettingsRequest(ref GetEnhancedMeasurementSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateEnhancedMeasurementSettingsRequest(ref UpdateEnhancedMeasurementSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateConnectedSiteTagRequest(ref CreateConnectedSiteTagRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteConnectedSiteTagRequest(ref DeleteConnectedSiteTagRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListConnectedSiteTagsRequest(ref ListConnectedSiteTagsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -16032,6 +16512,144 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_ListBigQueryLinksRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBigQueryLinksRequest, ListBigQueryLinksResponse, BigQueryLink>(_callListBigQueryLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EnhancedMeasurementSettings GetEnhancedMeasurementSettings(GetEnhancedMeasurementSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEnhancedMeasurementSettingsRequest(ref request, ref callSettings);
+            return _callGetEnhancedMeasurementSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(GetEnhancedMeasurementSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEnhancedMeasurementSettingsRequest(ref request, ref callSettings);
+            return _callGetEnhancedMeasurementSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EnhancedMeasurementSettings UpdateEnhancedMeasurementSettings(UpdateEnhancedMeasurementSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEnhancedMeasurementSettingsRequest(ref request, ref callSettings);
+            return _callUpdateEnhancedMeasurementSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the enhanced measurement settings for this data stream.
+        /// Note that the stream must enable enhanced measurement for these settings to
+        /// take effect.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(UpdateEnhancedMeasurementSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateEnhancedMeasurementSettingsRequest(ref request, ref callSettings);
+            return _callUpdateEnhancedMeasurementSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a connected site tag for a Universal Analytics property. You can
+        /// create a maximum of 20 connected site tags per property.
+        /// Note: This API cannot be used on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CreateConnectedSiteTagResponse CreateConnectedSiteTag(CreateConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateConnectedSiteTagRequest(ref request, ref callSettings);
+            return _callCreateConnectedSiteTag.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a connected site tag for a Universal Analytics property. You can
+        /// create a maximum of 20 connected site tags per property.
+        /// Note: This API cannot be used on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CreateConnectedSiteTagResponse> CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateConnectedSiteTagRequest(ref request, ref callSettings);
+            return _callCreateConnectedSiteTag.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a connected site tag for a Universal Analytics property.
+        /// Note: this has no effect on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteConnectedSiteTag(DeleteConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteConnectedSiteTagRequest(ref request, ref callSettings);
+            _callDeleteConnectedSiteTag.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a connected site tag for a Universal Analytics property.
+        /// Note: this has no effect on GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteConnectedSiteTagRequest(ref request, ref callSettings);
+            return _callDeleteConnectedSiteTag.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the connected site tags for a Universal Analytics property. A maximum
+        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ListConnectedSiteTagsResponse ListConnectedSiteTags(ListConnectedSiteTagsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListConnectedSiteTagsRequest(ref request, ref callSettings);
+            return _callListConnectedSiteTags.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the connected site tags for a Universal Analytics property. A maximum
+        /// of 20 connected site tags will be returned. Note: this has no effect on GA4
+        /// property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListConnectedSiteTagsRequest(ref request, ref callSettings);
+            return _callListConnectedSiteTags.Async(request, callSettings);
         }
     }
 

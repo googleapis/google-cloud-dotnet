@@ -10953,5 +10953,253 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for GetEnhancedMeasurementSettings</summary>
+        public void GetEnhancedMeasurementSettingsRequestObject()
+        {
+            // Snippet: GetEnhancedMeasurementSettings(GetEnhancedMeasurementSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetEnhancedMeasurementSettingsRequest request = new GetEnhancedMeasurementSettingsRequest
+            {
+                EnhancedMeasurementSettingsName = EnhancedMeasurementSettingsName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+            };
+            // Make the request
+            EnhancedMeasurementSettings response = analyticsAdminServiceClient.GetEnhancedMeasurementSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnhancedMeasurementSettingsAsync</summary>
+        public async Task GetEnhancedMeasurementSettingsRequestObjectAsync()
+        {
+            // Snippet: GetEnhancedMeasurementSettingsAsync(GetEnhancedMeasurementSettingsRequest, CallSettings)
+            // Additional: GetEnhancedMeasurementSettingsAsync(GetEnhancedMeasurementSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEnhancedMeasurementSettingsRequest request = new GetEnhancedMeasurementSettingsRequest
+            {
+                EnhancedMeasurementSettingsName = EnhancedMeasurementSettingsName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]"),
+            };
+            // Make the request
+            EnhancedMeasurementSettings response = await analyticsAdminServiceClient.GetEnhancedMeasurementSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnhancedMeasurementSettings</summary>
+        public void GetEnhancedMeasurementSettings()
+        {
+            // Snippet: GetEnhancedMeasurementSettings(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/enhancedMeasurementSettings";
+            // Make the request
+            EnhancedMeasurementSettings response = analyticsAdminServiceClient.GetEnhancedMeasurementSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnhancedMeasurementSettingsAsync</summary>
+        public async Task GetEnhancedMeasurementSettingsAsync()
+        {
+            // Snippet: GetEnhancedMeasurementSettingsAsync(string, CallSettings)
+            // Additional: GetEnhancedMeasurementSettingsAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/dataStreams/[DATA_STREAM]/enhancedMeasurementSettings";
+            // Make the request
+            EnhancedMeasurementSettings response = await analyticsAdminServiceClient.GetEnhancedMeasurementSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnhancedMeasurementSettings</summary>
+        public void GetEnhancedMeasurementSettingsResourceNames()
+        {
+            // Snippet: GetEnhancedMeasurementSettings(EnhancedMeasurementSettingsName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            EnhancedMeasurementSettingsName name = EnhancedMeasurementSettingsName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
+            // Make the request
+            EnhancedMeasurementSettings response = analyticsAdminServiceClient.GetEnhancedMeasurementSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEnhancedMeasurementSettingsAsync</summary>
+        public async Task GetEnhancedMeasurementSettingsResourceNamesAsync()
+        {
+            // Snippet: GetEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettingsName, CallSettings)
+            // Additional: GetEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettingsName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EnhancedMeasurementSettingsName name = EnhancedMeasurementSettingsName.FromPropertyDataStream("[PROPERTY]", "[DATA_STREAM]");
+            // Make the request
+            EnhancedMeasurementSettings response = await analyticsAdminServiceClient.GetEnhancedMeasurementSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnhancedMeasurementSettings</summary>
+        public void UpdateEnhancedMeasurementSettingsRequestObject()
+        {
+            // Snippet: UpdateEnhancedMeasurementSettings(UpdateEnhancedMeasurementSettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateEnhancedMeasurementSettingsRequest request = new UpdateEnhancedMeasurementSettingsRequest
+            {
+                EnhancedMeasurementSettings = new EnhancedMeasurementSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            EnhancedMeasurementSettings response = analyticsAdminServiceClient.UpdateEnhancedMeasurementSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnhancedMeasurementSettingsAsync</summary>
+        public async Task UpdateEnhancedMeasurementSettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateEnhancedMeasurementSettingsAsync(UpdateEnhancedMeasurementSettingsRequest, CallSettings)
+            // Additional: UpdateEnhancedMeasurementSettingsAsync(UpdateEnhancedMeasurementSettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateEnhancedMeasurementSettingsRequest request = new UpdateEnhancedMeasurementSettingsRequest
+            {
+                EnhancedMeasurementSettings = new EnhancedMeasurementSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            EnhancedMeasurementSettings response = await analyticsAdminServiceClient.UpdateEnhancedMeasurementSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnhancedMeasurementSettings</summary>
+        public void UpdateEnhancedMeasurementSettings()
+        {
+            // Snippet: UpdateEnhancedMeasurementSettings(EnhancedMeasurementSettings, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            EnhancedMeasurementSettings enhancedMeasurementSettings = new EnhancedMeasurementSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            EnhancedMeasurementSettings response = analyticsAdminServiceClient.UpdateEnhancedMeasurementSettings(enhancedMeasurementSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEnhancedMeasurementSettingsAsync</summary>
+        public async Task UpdateEnhancedMeasurementSettingsAsync()
+        {
+            // Snippet: UpdateEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettings, FieldMask, CallSettings)
+            // Additional: UpdateEnhancedMeasurementSettingsAsync(EnhancedMeasurementSettings, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EnhancedMeasurementSettings enhancedMeasurementSettings = new EnhancedMeasurementSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            EnhancedMeasurementSettings response = await analyticsAdminServiceClient.UpdateEnhancedMeasurementSettingsAsync(enhancedMeasurementSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateConnectedSiteTag</summary>
+        public void CreateConnectedSiteTagRequestObject()
+        {
+            // Snippet: CreateConnectedSiteTag(CreateConnectedSiteTagRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateConnectedSiteTagRequest request = new CreateConnectedSiteTagRequest
+            {
+                Property = "",
+                ConnectedSiteTag = new ConnectedSiteTag(),
+            };
+            // Make the request
+            CreateConnectedSiteTagResponse response = analyticsAdminServiceClient.CreateConnectedSiteTag(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateConnectedSiteTagAsync</summary>
+        public async Task CreateConnectedSiteTagRequestObjectAsync()
+        {
+            // Snippet: CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest, CallSettings)
+            // Additional: CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateConnectedSiteTagRequest request = new CreateConnectedSiteTagRequest
+            {
+                Property = "",
+                ConnectedSiteTag = new ConnectedSiteTag(),
+            };
+            // Make the request
+            CreateConnectedSiteTagResponse response = await analyticsAdminServiceClient.CreateConnectedSiteTagAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteConnectedSiteTag</summary>
+        public void DeleteConnectedSiteTagRequestObject()
+        {
+            // Snippet: DeleteConnectedSiteTag(DeleteConnectedSiteTagRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteConnectedSiteTagRequest request = new DeleteConnectedSiteTagRequest
+            {
+                Property = "",
+                TagId = "",
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteConnectedSiteTag(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteConnectedSiteTagAsync</summary>
+        public async Task DeleteConnectedSiteTagRequestObjectAsync()
+        {
+            // Snippet: DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest, CallSettings)
+            // Additional: DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteConnectedSiteTagRequest request = new DeleteConnectedSiteTagRequest
+            {
+                Property = "",
+                TagId = "",
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteConnectedSiteTagAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListConnectedSiteTags</summary>
+        public void ListConnectedSiteTagsRequestObject()
+        {
+            // Snippet: ListConnectedSiteTags(ListConnectedSiteTagsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListConnectedSiteTagsRequest request = new ListConnectedSiteTagsRequest { Property = "", };
+            // Make the request
+            ListConnectedSiteTagsResponse response = analyticsAdminServiceClient.ListConnectedSiteTags(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListConnectedSiteTagsAsync</summary>
+        public async Task ListConnectedSiteTagsRequestObjectAsync()
+        {
+            // Snippet: ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest, CallSettings)
+            // Additional: ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListConnectedSiteTagsRequest request = new ListConnectedSiteTagsRequest { Property = "", };
+            // Make the request
+            ListConnectedSiteTagsResponse response = await analyticsAdminServiceClient.ListConnectedSiteTagsAsync(request);
+            // End snippet
+        }
     }
 }

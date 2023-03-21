@@ -112,6 +112,12 @@
                 "CreateAudienceAsync"
               ]
             },
+            "CreateConnectedSiteTag": {
+              "methods": [
+                "CreateConnectedSiteTag",
+                "CreateConnectedSiteTagAsync"
+              ]
+            },
             "CreateConversionEvent": {
               "methods": [
                 "CreateConversionEvent",
@@ -200,6 +206,12 @@
               "methods": [
                 "DeleteAccount",
                 "DeleteAccountAsync"
+              ]
+            },
+            "DeleteConnectedSiteTag": {
+              "methods": [
+                "DeleteConnectedSiteTag",
+                "DeleteConnectedSiteTagAsync"
               ]
             },
             "DeleteConversionEvent": {
@@ -352,6 +364,12 @@
                 "GetDisplayVideo360AdvertiserLinkProposalAsync"
               ]
             },
+            "GetEnhancedMeasurementSettings": {
+              "methods": [
+                "GetEnhancedMeasurementSettings",
+                "GetEnhancedMeasurementSettingsAsync"
+              ]
+            },
             "GetExpandedDataSet": {
               "methods": [
                 "GetExpandedDataSet",
@@ -422,6 +440,12 @@
               "methods": [
                 "ListBigQueryLinks",
                 "ListBigQueryLinksAsync"
+              ]
+            },
+            "ListConnectedSiteTags": {
+              "methods": [
+                "ListConnectedSiteTags",
+                "ListConnectedSiteTagsAsync"
               ]
             },
             "ListConversionEvents": {
@@ -578,6 +602,12 @@
               "methods": [
                 "UpdateDisplayVideo360AdvertiserLink",
                 "UpdateDisplayVideo360AdvertiserLinkAsync"
+              ]
+            },
+            "UpdateEnhancedMeasurementSettings": {
+              "methods": [
+                "UpdateEnhancedMeasurementSettings",
+                "UpdateEnhancedMeasurementSettingsAsync"
               ]
             },
             "UpdateExpandedDataSet": {
