@@ -54,21 +54,23 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "Z2luZS52MWJldGEuUmVjb21tZW5kUmVzcG9uc2UuUmVjb21tZW5kYXRpb25S",
             "ZXN1bHQuTWV0YWRhdGFFbnRyeRpHCg1NZXRhZGF0YUVudHJ5EgsKA2tleRgB",
             "IAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToC",
-            "OAEyzAIKFVJlY29tbWVuZGF0aW9uU2VydmljZRLeAQoJUmVjb21tZW5kEjUu",
+            "OAEyugMKFVJlY29tbWVuZGF0aW9uU2VydmljZRLMAgoJUmVjb21tZW5kEjUu",
             "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUmVjb21tZW5k",
             "UmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
-            "LlJlY29tbWVuZFJlc3BvbnNlImKC0+STAlwiVy92MWJldGEve3NlcnZpbmdf",
-            "Y29uZmlnPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8qL3Nl",
-            "cnZpbmdDb25maWdzLyp9OnJlY29tbWVuZDoBKhpSykEeZGlzY292ZXJ5ZW5n",
-            "aW5lLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKhAgonY29tLmdvb2dsZS5jbG91ZC5k",
-            "aXNjb3ZlcnllbmdpbmUudjFiZXRhQhpSZWNvbW1lbmRhdGlvblNlcnZpY2VQ",
-            "cm90b1ABWlFjbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9h",
-            "cGl2MWJldGEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKi",
-            "Ag9ESVNDT1ZFUllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5n",
-            "aW5lLlYxQmV0YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFi",
-            "ZXRh6gImR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFi",
-            "BnByb3RvMw=="));
+            "LlJlY29tbWVuZFJlc3BvbnNlIs8BgtPkkwLIASJXL3YxYmV0YS97c2Vydmlu",
+            "Z19jb25maWc9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyov",
+            "c2VydmluZ0NvbmZpZ3MvKn06cmVjb21tZW5kOgEqWmoiZS92MWJldGEve3Nl",
+            "cnZpbmdfY29uZmlnPXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlv",
+            "bnMvKi9kYXRhU3RvcmVzLyovc2VydmluZ0NvbmZpZ3MvKn06cmVjb21tZW5k",
+            "OgEqGlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQqEC",
+            "Cidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCGlJl",
+            "Y29tbWVuZGF0aW9uU2VydmljZVByb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVw",
+            "YjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2ds",
+            "ZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3Vk",
+            "XERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNj",
+            "b3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -138,7 +140,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string servingConfig_ = "";
     /// <summary>
     /// Required. Full resource name of the format:
-    /// projects/*/locations/global/dataStores/*/servingConfigs/*
+    /// projects/*/locations/global/collections/*/dataStores/*/servingConfigs/*
     ///
     /// Before you can request recommendations from your model, you must create at
     /// least one serving config  for it.
@@ -306,8 +308,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///   key with multiple resources.
     /// * Keys must start with a lowercase letter or international character.
     ///
-    /// See [Google Cloud
-    /// Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+    /// See [Requirements for
+    /// labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
     /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
