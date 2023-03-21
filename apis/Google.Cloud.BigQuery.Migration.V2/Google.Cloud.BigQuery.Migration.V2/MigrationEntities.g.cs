@@ -58,7 +58,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wInIKBVN0YXRlEhUKEVNU",
             "QVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEhEKDU9SQ0hFU1RSQVRJ",
             "TkcQAhILCgdSVU5OSU5HEAMSCgoGUEFVU0VEEAQSDQoJU1VDQ0VFREVEEAUS",
-            "CgoGRkFJTEVEEAZCDgoMdGFza19kZXRhaWxzItwFChBNaWdyYXRpb25TdWJ0",
+            "CgoGRkFJTEVEEAZCDgoMdGFza19kZXRhaWxzIvQFChBNaWdyYXRpb25TdWJ0",
             "YXNrEhQKBG5hbWUYASABKAlCBuBBA+BBBRIPCgd0YXNrX2lkGAIgASgJEgwK",
             "BHR5cGUYAyABKAkSTgoFc3RhdGUYBSABKA4yOi5nb29nbGUuY2xvdWQuYmln",
             "cXVlcnkubWlncmF0aW9uLnYyLk1pZ3JhdGlvblN1YnRhc2suU3RhdGVCA+BB",
@@ -69,17 +69,18 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "LwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
             "YW1wEjQKEGxhc3RfdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9i",
             "dWYuVGltZXN0YW1wEj8KB21ldHJpY3MYCyADKAsyLi5nb29nbGUuY2xvdWQu",
-            "YmlncXVlcnkubWlncmF0aW9uLnYyLlRpbWVTZXJpZXMiXgoFU3RhdGUSFQoR",
+            "YmlncXVlcnkubWlncmF0aW9uLnYyLlRpbWVTZXJpZXMidgoFU3RhdGUSFQoR",
             "U1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARILCgdSVU5OSU5HEAIS",
-            "DQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQSCgoGUEFVU0VEEAU6iAHqQYQB",
-            "CjFiaWdxdWVyeW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRpb25T",
-            "dWJ0YXNrEk9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vd29ya2Zsb3dzL3t3b3JrZmxvd30vc3VidGFza3Mve3N1YnRhc2t9QtIB",
-            "CiZjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52MkIWTWln",
-            "cmF0aW9uRW50aXRpZXNQcm90b1ABWkRjbG91ZC5nb29nbGUuY29tL2dvL2Jp",
-            "Z3F1ZXJ5L21pZ3JhdGlvbi9hcGl2Mi9taWdyYXRpb25wYjttaWdyYXRpb25w",
-            "YqoCIkdvb2dsZS5DbG91ZC5CaWdRdWVyeS5NaWdyYXRpb24uVjLKAiJHb29n",
-            "bGVcQ2xvdWRcQmlnUXVlcnlcTWlncmF0aW9uXFYyYgZwcm90bzM="));
+            "DQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQSCgoGUEFVU0VEEAUSFgoSUEVO",
+            "RElOR19ERVBFTkRFTkNZEAY6iAHqQYQBCjFiaWdxdWVyeW1pZ3JhdGlvbi5n",
+            "b29nbGVhcGlzLmNvbS9NaWdyYXRpb25TdWJ0YXNrEk9wcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29ya2Zsb3dzL3t3b3JrZmxv",
+            "d30vc3VidGFza3Mve3N1YnRhc2t9QtIBCiZjb20uZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5Lm1pZ3JhdGlvbi52MkIWTWlncmF0aW9uRW50aXRpZXNQcm90b1AB",
+            "WkRjbG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L21pZ3JhdGlvbi9hcGl2",
+            "Mi9taWdyYXRpb25wYjttaWdyYXRpb25wYqoCIkdvb2dsZS5DbG91ZC5CaWdR",
+            "dWVyeS5NaWdyYXRpb24uVjLKAiJHb29nbGVcQ2xvdWRcQmlnUXVlcnlcTWln",
+            "cmF0aW9uXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationErrorDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationMetricsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -638,7 +639,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     /// Translation_Oracle2BQ, Translation_HiveQL2BQ, Translation_SparkSQL2BQ,
     /// Translation_Snowflake2BQ, Translation_Netezza2BQ,
     /// Translation_AzureSynapse2BQ, Translation_Vertica2BQ,
-    /// Translation_SQLServer2BQ, Translation_Presto2BQ, Translation_MySQL2BQ.
+    /// Translation_SQLServer2BQ, Translation_Presto2BQ, Translation_MySQL2BQ,
+    /// Translation_Postgresql2BQ.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1701,6 +1703,11 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         /// assigned,it might still finish but no new lease renewals will be granted.
         /// </summary>
         [pbr::OriginalName("PAUSED")] Paused = 5,
+        /// <summary>
+        /// The subtask is pending a dependency. It will be scheduled once its
+        /// dependencies are done.
+        /// </summary>
+        [pbr::OriginalName("PENDING_DEPENDENCY")] PendingDependency = 6,
       }
 
     }
