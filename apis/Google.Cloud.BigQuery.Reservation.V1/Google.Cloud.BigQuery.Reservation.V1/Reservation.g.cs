@@ -31,29 +31,37 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             "dG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aG2dvb2dsZS9wcm90b2J1",
             "Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJv",
             "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9y",
-            "cGMvc3RhdHVzLnByb3RvIukCCgtSZXNlcnZhdGlvbhIMCgRuYW1lGAEgASgJ",
+            "cGMvc3RhdHVzLnByb3RvIrUECgtSZXNlcnZhdGlvbhIMCgRuYW1lGAEgASgJ",
             "EhUKDXNsb3RfY2FwYWNpdHkYAiABKAMSGQoRaWdub3JlX2lkbGVfc2xvdHMY",
-            "BCABKAgSEwoLY29uY3VycmVuY3kYECABKAMSNgoNY3JlYXRpb25fdGltZRgI",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
-            "dGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIeChZtdWx0aV9yZWdpb25fYXV4aWxpYXJ5GA4gASgIOnfqQXQKLmJpZ3F1",
-            "ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vUmVzZXJ2YXRpb24SQnBy",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXNlcnZh",
-            "dGlvbnMve3Jlc2VydmF0aW9ufSLLBgoSQ2FwYWNpdHlDb21taXRtZW50EhEK",
-            "BG5hbWUYASABKAlCA+BBAxISCgpzbG90X2NvdW50GAIgASgDElUKBHBsYW4Y",
-            "AyABKA4yRy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEu",
-            "Q2FwYWNpdHlDb21taXRtZW50LkNvbW1pdG1lbnRQbGFuElIKBXN0YXRlGAQg",
-            "ASgOMj4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNh",
-            "cGFjaXR5Q29tbWl0bWVudC5TdGF0ZUID4EEDEj4KFWNvbW1pdG1lbnRfc3Rh",
-            "cnRfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxI8ChNjb21taXRtZW50X2VuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEi8KDmZhaWx1cmVfc3RhdHVzGAcgASgLMhIu",
-            "Z29vZ2xlLnJwYy5TdGF0dXNCA+BBAxJdCgxyZW5ld2FsX3BsYW4YCCABKA4y",
-            "Ry5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ2FwYWNp",
-            "dHlDb21taXRtZW50LkNvbW1pdG1lbnRQbGFuEh4KFm11bHRpX3JlZ2lvbl9h",
-            "dXhpbGlhcnkYCiABKAgiXwoOQ29tbWl0bWVudFBsYW4SHwobQ09NTUlUTUVO",
-            "VF9QTEFOX1VOU1BFQ0lGSUVEEAASCAoERkxFWBADEgkKBVRSSUFMEAUSCwoH",
-            "TU9OVEhMWRACEgoKBkFOTlVBTBAEIkMKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
+            "BCABKAgSTgoJYXV0b3NjYWxlGAcgASgLMjsuZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uLkF1dG9zY2FsZRITCgtj",
+            "b25jdXJyZW5jeRgQIAEoAxI2Cg1jcmVhdGlvbl90aW1lGAggASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAkg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEh4KFm11bHRp",
+            "X3JlZ2lvbl9hdXhpbGlhcnkYDiABKAgSPgoHZWRpdGlvbhgRIAEoDjItLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5FZGl0aW9uGjoK",
+            "CUF1dG9zY2FsZRIaCg1jdXJyZW50X3Nsb3RzGAEgASgDQgPgQQMSEQoJbWF4",
+            "X3Nsb3RzGAIgASgDOnfqQXQKLmJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xl",
+            "YXBpcy5jb20vUmVzZXJ2YXRpb24SQnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9yZXNlcnZhdGlvbnMve3Jlc2VydmF0aW9ufSLn",
+            "BwoSQ2FwYWNpdHlDb21taXRtZW50EhEKBG5hbWUYASABKAlCA+BBAxISCgpz",
+            "bG90X2NvdW50GAIgASgDElUKBHBsYW4YAyABKA4yRy5nb29nbGUuY2xvdWQu",
+            "YmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ2FwYWNpdHlDb21taXRtZW50LkNv",
+            "bW1pdG1lbnRQbGFuElIKBXN0YXRlGAQgASgOMj4uZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudC5TdGF0",
+            "ZUID4EEDEj4KFWNvbW1pdG1lbnRfc3RhcnRfdGltZRgJIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI8ChNjb21taXRtZW50X2VuZF90",
+            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEi8K",
+            "DmZhaWx1cmVfc3RhdHVzGAcgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BB",
+            "AxJdCgxyZW5ld2FsX3BsYW4YCCABKA4yRy5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkucmVzZXJ2YXRpb24udjEuQ2FwYWNpdHlDb21taXRtZW50LkNvbW1pdG1l",
+            "bnRQbGFuEh4KFm11bHRpX3JlZ2lvbl9hdXhpbGlhcnkYCiABKAgSPgoHZWRp",
+            "dGlvbhgMIAEoDjItLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
+            "bi52MS5FZGl0aW9uIroBCg5Db21taXRtZW50UGxhbhIfChtDT01NSVRNRU5U",
+            "X1BMQU5fVU5TUEVDSUZJRUQQABIICgRGTEVYEAMSEgoORkxFWF9GTEFUX1JB",
+            "VEUQBxIJCgVUUklBTBAFEgsKB01PTlRITFkQAhIVChFNT05USExZX0ZMQVRf",
+            "UkFURRAIEgoKBkFOTlVBTBAEEhQKEEFOTlVBTF9GTEFUX1JBVEUQCRIOCgpU",
+            "SFJFRV9ZRUFSEAoSCAoETk9ORRAGIkMKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
             "Q0lGSUVEEAASCwoHUEVORElORxABEgoKBkFDVElWRRACEgoKBkZBSUxFRBAD",
             "Oo4B6kGKAQo1YmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9D",
             "YXBhY2l0eUNvbW1pdG1lbnQSUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
@@ -108,185 +116,188 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             "dG1lbnQijgEKH01lcmdlQ2FwYWNpdHlDb21taXRtZW50c1JlcXVlc3QSSgoG",
             "cGFyZW50GAEgASgJQjr6QTcSNWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xl",
             "YXBpcy5jb20vQ2FwYWNpdHlDb21taXRtZW50Eh8KF2NhcGFjaXR5X2NvbW1p",
-            "dG1lbnRfaWRzGAIgAygJIuQDCgpBc3NpZ25tZW50EhEKBG5hbWUYASABKAlC",
+            "dG1lbnRfaWRzGAIgAygJIvQDCgpBc3NpZ25tZW50EhEKBG5hbWUYASABKAlC",
             "A+BBAxIQCghhc3NpZ25lZRgEIAEoCRJKCghqb2JfdHlwZRgDIAEoDjI4Lmdv",
             "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50",
             "LkpvYlR5cGUSSgoFc3RhdGUYBiABKA4yNi5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudC5TdGF0ZUID4EEDIk0KB0pv",
+            "cnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudC5TdGF0ZUID4EEDIl0KB0pv",
             "YlR5cGUSGAoUSk9CX1RZUEVfVU5TUEVDSUZJRUQQABIMCghQSVBFTElORRAB",
-            "EgkKBVFVRVJZEAISDwoLTUxfRVhURVJOQUwQAyI3CgVTdGF0ZRIVChFTVEFU",
-            "RV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIKCgZBQ1RJVkUQAjqQAepB",
-            "jAEKLWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQXNzaWdu",
-            "bWVudBJbcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L3Jlc2VydmF0aW9ucy97cmVzZXJ2YXRpb259L2Fzc2lnbm1lbnRzL3thc3Np",
-            "Z25tZW50fSK9AQoXQ3JlYXRlQXNzaWdubWVudFJlcXVlc3QSRQoGcGFyZW50",
-            "GAEgASgJQjXgQQL6QS8SLWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBp",
-            "cy5jb20vQXNzaWdubWVudBJECgphc3NpZ25tZW50GAIgASgLMjAuZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQSFQoN",
-            "YXNzaWdubWVudF9pZBgEIAEoCSKGAQoWTGlzdEFzc2lnbm1lbnRzUmVxdWVz",
-            "dBJFCgZwYXJlbnQYASABKAlCNeBBAvpBLxItYmlncXVlcnlyZXNlcnZhdGlv",
-            "bi5nb29nbGVhcGlzLmNvbS9Bc3NpZ25tZW50EhEKCXBhZ2Vfc2l6ZRgCIAEo",
-            "BRISCgpwYWdlX3Rva2VuGAMgASgJInkKF0xpc3RBc3NpZ25tZW50c1Jlc3Bv",
-            "bnNlEkUKC2Fzc2lnbm1lbnRzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQSFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJIl4KF0RlbGV0ZUFzc2lnbm1lbnRSZXF1ZXN0EkMKBG5hbWUY",
-            "ASABKAlCNeBBAvpBLwotYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlz",
-            "LmNvbS9Bc3NpZ25tZW50IosBChhTZWFyY2hBc3NpZ25tZW50c1JlcXVlc3QS",
-            "OQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlz",
-            "LmNvbS9Mb2NhdGlvbhINCgVxdWVyeRgCIAEoCRIRCglwYWdlX3NpemUYAyAB",
-            "KAUSEgoKcGFnZV90b2tlbhgEIAEoCSKOAQobU2VhcmNoQWxsQXNzaWdubWVu",
-            "dHNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMu",
-            "Z29vZ2xlYXBpcy5jb20vTG9jYXRpb24SDQoFcXVlcnkYAiABKAkSEQoJcGFn",
-            "ZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiewoZU2VhcmNoQXNz",
-            "aWdubWVudHNSZXNwb25zZRJFCgthc3NpZ25tZW50cxgBIAMoCzIwLmdvb2ds",
-            "ZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50EhcK",
-            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJ+ChxTZWFyY2hBbGxBc3NpZ25tZW50",
-            "c1Jlc3BvbnNlEkUKC2Fzc2lnbm1lbnRzGAEgAygLMjAuZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJIqgBChVNb3ZlQXNzaWdubWVudFJlcXVlc3QSQwoE",
-            "bmFtZRgBIAEoCUI14EEC+kEvCi1iaWdxdWVyeXJlc2VydmF0aW9uLmdvb2ds",
-            "ZWFwaXMuY29tL0Fzc2lnbm1lbnQSSgoOZGVzdGluYXRpb25faWQYAyABKAlC",
-            "MvpBLxItYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9Bc3Np",
-            "Z25tZW50IpABChdVcGRhdGVBc3NpZ25tZW50UmVxdWVzdBJECgphc3NpZ25t",
-            "ZW50GAEgASgLMjAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9u",
-            "LnYxLkFzc2lnbm1lbnQSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuRmllbGRNYXNrIkoKDlRhYmxlUmVmZXJlbmNlEhIKCnByb2pl",
-            "Y3RfaWQYASABKAkSEgoKZGF0YXNldF9pZBgCIAEoCRIQCgh0YWJsZV9pZBgD",
-            "IAEoCSKfAgoNQmlSZXNlcnZhdGlvbhIMCgRuYW1lGAEgASgJEjQKC3VwZGF0",
-            "ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EgwKBHNpemUYBCABKAMSTgoQcHJlZmVycmVkX3RhYmxlcxgFIAMoCzI0Lmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5UYWJsZVJlZmVy",
-            "ZW5jZTps6kFpCjBiaWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29t",
-            "L0JpUmVzZXJ2YXRpb24SNXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9iaVJlc2VydmF0aW9uImEKF0dldEJpUmVzZXJ2YXRpb25S",
-            "ZXF1ZXN0EkYKBG5hbWUYASABKAlCOOBBAvpBMgowYmlncXVlcnlyZXNlcnZh",
-            "dGlvbi5nb29nbGVhcGlzLmNvbS9CaVJlc2VydmF0aW9uIpoBChpVcGRhdGVC",
-            "aVJlc2VydmF0aW9uUmVxdWVzdBJLCg5iaV9yZXNlcnZhdGlvbhgBIAEoCzIz",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5CaVJlc2Vy",
-            "dmF0aW9uEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LkZpZWxkTWFzazLBJwoSUmVzZXJ2YXRpb25TZXJ2aWNlEvEBChFDcmVhdGVS",
-            "ZXNlcnZhdGlvbhI+Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
-            "bi52MS5DcmVhdGVSZXNlcnZhdGlvblJlcXVlc3QaMS5nb29nbGUuY2xvdWQu",
-            "YmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24iaYLT5JMCPyIw",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcmVzZXJ2YXRp",
-            "b25zOgtyZXNlcnZhdGlvbtpBIXBhcmVudCxyZXNlcnZhdGlvbixyZXNlcnZh",
-            "dGlvbl9pZBLUAQoQTGlzdFJlc2VydmF0aW9ucxI9Lmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0UmVzZXJ2YXRpb25zUmVxdWVz",
-            "dBo+Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0",
-            "UmVzZXJ2YXRpb25zUmVzcG9uc2UiQYLT5JMCMhIwL3YxL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKn0vcmVzZXJ2YXRpb25z2kEGcGFyZW50EsEB",
-            "Cg5HZXRSZXNlcnZhdGlvbhI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNl",
-            "cnZhdGlvbi52MS5HZXRSZXNlcnZhdGlvblJlcXVlc3QaMS5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24iP4LT5JMC",
-            "MhIwL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRp",
-            "b25zLyp92kEEbmFtZRKsAQoRRGVsZXRlUmVzZXJ2YXRpb24SPi5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuRGVsZXRlUmVzZXJ2YXRp",
-            "b25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij+C0+STAjIqMC92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8q",
-            "fdpBBG5hbWUS8wEKEVVwZGF0ZVJlc2VydmF0aW9uEj4uZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlVwZGF0ZVJlc2VydmF0aW9uUmVx",
-            "dWVzdBoxLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5S",
-            "ZXNlcnZhdGlvbiJrgtPkkwJLMjwvdjEve3Jlc2VydmF0aW9uLm5hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKn06C3Jlc2VydmF0",
-            "aW9u2kEXcmVzZXJ2YXRpb24sdXBkYXRlX21hc2sSjgIKGENyZWF0ZUNhcGFj",
-            "aXR5Q29tbWl0bWVudBJFLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZh",
-            "dGlvbi52MS5DcmVhdGVDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0GjguZ29v",
-            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29t",
-            "bWl0bWVudCJxgtPkkwJOIjcvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9jYXBhY2l0eUNvbW1pdG1lbnRzOhNjYXBhY2l0eV9jb21taXRt",
-            "ZW502kEacGFyZW50LGNhcGFjaXR5X2NvbW1pdG1lbnQS8AEKF0xpc3RDYXBh",
-            "Y2l0eUNvbW1pdG1lbnRzEkQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
-            "dmF0aW9uLnYxLkxpc3RDYXBhY2l0eUNvbW1pdG1lbnRzUmVxdWVzdBpFLmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0Q2FwYWNp",
-            "dHlDb21taXRtZW50c1Jlc3BvbnNlIkiC0+STAjkSNy92MS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L2NhcGFjaXR5Q29tbWl0bWVudHPaQQZw",
-            "YXJlbnQS3QEKFUdldENhcGFjaXR5Q29tbWl0bWVudBJCLmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5HZXRDYXBhY2l0eUNvbW1pdG1l",
-            "bnRSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9u",
-            "LnYxLkNhcGFjaXR5Q29tbWl0bWVudCJGgtPkkwI5EjcvdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9jYXBhY2l0eUNvbW1pdG1lbnRzLyp92kEE",
-            "bmFtZRLBAQoYRGVsZXRlQ2FwYWNpdHlDb21taXRtZW50EkUuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkRlbGV0ZUNhcGFjaXR5Q29t",
-            "bWl0bWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRoLT5JMC",
-            "OSo3L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2FwYWNpdHlD",
-            "b21taXRtZW50cy8qfdpBBG5hbWUSqAIKGFVwZGF0ZUNhcGFjaXR5Q29tbWl0",
-            "bWVudBJFLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5V",
-            "cGRhdGVDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0GjguZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudCKK",
-            "AYLT5JMCYjJLL3YxL3tjYXBhY2l0eV9jb21taXRtZW50Lm5hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9jYXBhY2l0eUNvbW1pdG1lbnRzLyp9OhNjYXBh",
-            "Y2l0eV9jb21taXRtZW502kEfY2FwYWNpdHlfY29tbWl0bWVudCx1cGRhdGVf",
-            "bWFzaxKCAgoXU3BsaXRDYXBhY2l0eUNvbW1pdG1lbnQSRC5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuU3BsaXRDYXBhY2l0eUNvbW1p",
-            "dG1lbnRSZXF1ZXN0GkUuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0",
-            "aW9uLnYxLlNwbGl0Q2FwYWNpdHlDb21taXRtZW50UmVzcG9uc2UiWoLT5JMC",
-            "QiI9L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2FwYWNpdHlD",
-            "b21taXRtZW50cy8qfTpzcGxpdDoBKtpBD25hbWUsc2xvdF9jb3VudBKGAgoY",
-            "TWVyZ2VDYXBhY2l0eUNvbW1pdG1lbnRzEkUuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnJlc2VydmF0aW9uLnYxLk1lcmdlQ2FwYWNpdHlDb21taXRtZW50c1Jl",
-            "cXVlc3QaOC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEu",
-            "Q2FwYWNpdHlDb21taXRtZW50ImmC0+STAkIiPS92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L2NhcGFjaXR5Q29tbWl0bWVudHM6bWVyZ2U6",
-            "ASraQR5wYXJlbnQsY2FwYWNpdHlfY29tbWl0bWVudF9pZHMS6wEKEENyZWF0",
-            "ZUFzc2lnbm1lbnQSPS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRp",
-            "b24udjEuQ3JlYXRlQXNzaWdubWVudFJlcXVlc3QaMC5nb29nbGUuY2xvdWQu",
-            "YmlncXVlcnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudCJmgtPkkwJMIj4v",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9u",
-            "cy8qfS9hc3NpZ25tZW50czoKYXNzaWdubWVudNpBEXBhcmVudCxhc3NpZ25t",
-            "ZW50Et8BCg9MaXN0QXNzaWdubWVudHMSPC5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkucmVzZXJ2YXRpb24udjEuTGlzdEFzc2lnbm1lbnRzUmVxdWVzdBo9Lmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0QXNzaWdu",
-            "bWVudHNSZXNwb25zZSJPgtPkkwJAEj4vdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfS9hc3NpZ25tZW50c9pBBnBh",
-            "cmVudBK4AQoQRGVsZXRlQXNzaWdubWVudBI9Lmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5yZXNlcnZhdGlvbi52MS5EZWxldGVBc3NpZ25tZW50UmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJNgtPkkwJAKj4vdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKi9hc3NpZ25tZW50",
-            "cy8qfdpBBG5hbWUS5QEKEVNlYXJjaEFzc2lnbm1lbnRzEj4uZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlNlYXJjaEFzc2lnbm1lbnRz",
-            "UmVxdWVzdBo/Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
-            "MS5TZWFyY2hBc3NpZ25tZW50c1Jlc3BvbnNlIk+IAgGC0+STAjcSNS92MS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9OnNlYXJjaEFzc2lnbm1l",
-            "bnRz2kEMcGFyZW50LHF1ZXJ5Eu4BChRTZWFyY2hBbGxBc3NpZ25tZW50cxJB",
+            "EgkKBVFVRVJZEAISDwoLTUxfRVhURVJOQUwQAxIOCgpCQUNLR1JPVU5EEAQi",
+            "NwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAES",
+            "CgoGQUNUSVZFEAI6kAHqQYwBCi1iaWdxdWVyeXJlc2VydmF0aW9uLmdvb2ds",
+            "ZWFwaXMuY29tL0Fzc2lnbm1lbnQSW3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9yZXNlcnZhdGlvbnMve3Jlc2VydmF0aW9ufS9h",
+            "c3NpZ25tZW50cy97YXNzaWdubWVudH0ivQEKF0NyZWF0ZUFzc2lnbm1lbnRS",
+            "ZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUI14EEC+kEvEi1iaWdxdWVyeXJlc2Vy",
+            "dmF0aW9uLmdvb2dsZWFwaXMuY29tL0Fzc2lnbm1lbnQSRAoKYXNzaWdubWVu",
+            "dBgCIAEoCzIwLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
+            "MS5Bc3NpZ25tZW50EhUKDWFzc2lnbm1lbnRfaWQYBCABKAkihgEKFkxpc3RB",
+            "c3NpZ25tZW50c1JlcXVlc3QSRQoGcGFyZW50GAEgASgJQjXgQQL6QS8SLWJp",
+            "Z3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQXNzaWdubWVudBIR",
+            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ5ChdMaXN0",
+            "QXNzaWdubWVudHNSZXNwb25zZRJFCgthc3NpZ25tZW50cxgBIAMoCzIwLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50",
+            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJeChdEZWxldGVBc3NpZ25tZW50",
+            "UmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLWJpZ3F1ZXJ5cmVzZXJ2",
+            "YXRpb24uZ29vZ2xlYXBpcy5jb20vQXNzaWdubWVudCKLAQoYU2VhcmNoQXNz",
+            "aWdubWVudHNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2Nh",
+            "dGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SDQoFcXVlcnkYAiABKAkS",
+            "EQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkijgEKG1Nl",
+            "YXJjaEFsbEFzc2lnbm1lbnRzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBB",
+            "AvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEg0KBXF1",
+            "ZXJ5GAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQg",
+            "ASgJInsKGVNlYXJjaEFzc2lnbm1lbnRzUmVzcG9uc2USRQoLYXNzaWdubWVu",
+            "dHMYASADKAsyMC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
+            "djEuQXNzaWdubWVudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkifgocU2Vh",
+            "cmNoQWxsQXNzaWdubWVudHNSZXNwb25zZRJFCgthc3NpZ25tZW50cxgBIAMo",
+            "CzIwLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3Np",
+            "Z25tZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSK/AQoVTW92ZUFzc2ln",
+            "bm1lbnRSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBBAvpBLwotYmlncXVlcnly",
+            "ZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9Bc3NpZ25tZW50EkoKDmRlc3Rp",
+            "bmF0aW9uX2lkGAMgASgJQjL6QS8SLWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29v",
+            "Z2xlYXBpcy5jb20vQXNzaWdubWVudBIVCg1hc3NpZ25tZW50X2lkGAUgASgJ",
+            "IpABChdVcGRhdGVBc3NpZ25tZW50UmVxdWVzdBJECgphc3NpZ25tZW50GAEg",
+            "ASgLMjAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFz",
+            "c2lnbm1lbnQSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuRmllbGRNYXNrIkoKDlRhYmxlUmVmZXJlbmNlEhIKCnByb2plY3RfaWQY",
+            "ASABKAkSEgoKZGF0YXNldF9pZBgCIAEoCRIQCgh0YWJsZV9pZBgDIAEoCSKf",
+            "AgoNQmlSZXNlcnZhdGlvbhIMCgRuYW1lGAEgASgJEjQKC3VwZGF0ZV90aW1l",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEgwKBHNp",
+            "emUYBCABKAMSTgoQcHJlZmVycmVkX3RhYmxlcxgFIAMoCzI0Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5UYWJsZVJlZmVyZW5jZTps",
+            "6kFpCjBiaWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL0JpUmVz",
+            "ZXJ2YXRpb24SNXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9iaVJlc2VydmF0aW9uImEKF0dldEJpUmVzZXJ2YXRpb25SZXF1ZXN0",
+            "EkYKBG5hbWUYASABKAlCOOBBAvpBMgowYmlncXVlcnlyZXNlcnZhdGlvbi5n",
+            "b29nbGVhcGlzLmNvbS9CaVJlc2VydmF0aW9uIpoBChpVcGRhdGVCaVJlc2Vy",
+            "dmF0aW9uUmVxdWVzdBJLCg5iaV9yZXNlcnZhdGlvbhgBIAEoCzIzLmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5CaVJlc2VydmF0aW9u",
+            "Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFzaypVCgdFZGl0aW9uEhcKE0VESVRJT05fVU5TUEVDSUZJRUQQABIMCghT",
+            "VEFOREFSRBABEg4KCkVOVEVSUFJJU0UQAhITCg9FTlRFUlBSSVNFX1BMVVMQ",
+            "AzLBJwoSUmVzZXJ2YXRpb25TZXJ2aWNlEvEBChFDcmVhdGVSZXNlcnZhdGlv",
+            "bhI+Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DcmVh",
+            "dGVSZXNlcnZhdGlvblJlcXVlc3QaMS5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "cmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24iaYLT5JMCPyIwL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcmVzZXJ2YXRpb25zOgtyZXNl",
+            "cnZhdGlvbtpBIXBhcmVudCxyZXNlcnZhdGlvbixyZXNlcnZhdGlvbl9pZBLU",
+            "AQoQTGlzdFJlc2VydmF0aW9ucxI9Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5y",
+            "ZXNlcnZhdGlvbi52MS5MaXN0UmVzZXJ2YXRpb25zUmVxdWVzdBo+Lmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0UmVzZXJ2YXRp",
+            "b25zUmVzcG9uc2UiQYLT5JMCMhIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vcmVzZXJ2YXRpb25z2kEGcGFyZW50EsEBCg5HZXRSZXNl",
+            "cnZhdGlvbhI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
+            "MS5HZXRSZXNlcnZhdGlvblJlcXVlc3QaMS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24iP4LT5JMCMhIwL3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyp92kEE",
+            "bmFtZRKsAQoRRGVsZXRlUmVzZXJ2YXRpb24SPi5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkucmVzZXJ2YXRpb24udjEuRGVsZXRlUmVzZXJ2YXRpb25SZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij+C0+STAjIqMC92MS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfdpBBG5hbWUS",
+            "8wEKEVVwZGF0ZVJlc2VydmF0aW9uEj4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LnJlc2VydmF0aW9uLnYxLlVwZGF0ZVJlc2VydmF0aW9uUmVxdWVzdBoxLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5SZXNlcnZhdGlv",
+            "biJrgtPkkwJLMjwvdjEve3Jlc2VydmF0aW9uLm5hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKn06C3Jlc2VydmF0aW9u2kEXcmVz",
+            "ZXJ2YXRpb24sdXBkYXRlX21hc2sSjgIKGENyZWF0ZUNhcGFjaXR5Q29tbWl0",
+            "bWVudBJFLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5D",
+            "cmVhdGVDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0GjguZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudCJx",
+            "gtPkkwJOIjcvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9j",
+            "YXBhY2l0eUNvbW1pdG1lbnRzOhNjYXBhY2l0eV9jb21taXRtZW502kEacGFy",
+            "ZW50LGNhcGFjaXR5X2NvbW1pdG1lbnQS8AEKF0xpc3RDYXBhY2l0eUNvbW1p",
+            "dG1lbnRzEkQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYx",
+            "Lkxpc3RDYXBhY2l0eUNvbW1pdG1lbnRzUmVxdWVzdBpFLmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0Q2FwYWNpdHlDb21taXRt",
+            "ZW50c1Jlc3BvbnNlIkiC0+STAjkSNy92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2NhcGFjaXR5Q29tbWl0bWVudHPaQQZwYXJlbnQS3QEK",
+            "FUdldENhcGFjaXR5Q29tbWl0bWVudBJCLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5yZXNlcnZhdGlvbi52MS5HZXRDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0",
+            "GjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFj",
+            "aXR5Q29tbWl0bWVudCJGgtPkkwI5EjcvdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9jYXBhY2l0eUNvbW1pdG1lbnRzLyp92kEEbmFtZRLBAQoY",
+            "RGVsZXRlQ2FwYWNpdHlDb21taXRtZW50EkUuZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnJlc2VydmF0aW9uLnYxLkRlbGV0ZUNhcGFjaXR5Q29tbWl0bWVudFJl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRoLT5JMCOSo3L3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2FwYWNpdHlDb21taXRtZW50",
+            "cy8qfdpBBG5hbWUSqAIKGFVwZGF0ZUNhcGFjaXR5Q29tbWl0bWVudBJFLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5VcGRhdGVDYXBh",
+            "Y2l0eUNvbW1pdG1lbnRSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudCKKAYLT5JMCYjJL",
+            "L3YxL3tjYXBhY2l0eV9jb21taXRtZW50Lm5hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9jYXBhY2l0eUNvbW1pdG1lbnRzLyp9OhNjYXBhY2l0eV9jb21t",
+            "aXRtZW502kEfY2FwYWNpdHlfY29tbWl0bWVudCx1cGRhdGVfbWFzaxKCAgoX",
+            "U3BsaXRDYXBhY2l0eUNvbW1pdG1lbnQSRC5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkucmVzZXJ2YXRpb24udjEuU3BsaXRDYXBhY2l0eUNvbW1pdG1lbnRSZXF1",
+            "ZXN0GkUuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlNw",
+            "bGl0Q2FwYWNpdHlDb21taXRtZW50UmVzcG9uc2UiWoLT5JMCQiI9L3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2FwYWNpdHlDb21taXRtZW50",
+            "cy8qfTpzcGxpdDoBKtpBD25hbWUsc2xvdF9jb3VudBKGAgoYTWVyZ2VDYXBh",
+            "Y2l0eUNvbW1pdG1lbnRzEkUuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
+            "dmF0aW9uLnYxLk1lcmdlQ2FwYWNpdHlDb21taXRtZW50c1JlcXVlc3QaOC5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ2FwYWNpdHlD",
+            "b21taXRtZW50ImmC0+STAkIiPS92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9L2NhcGFjaXR5Q29tbWl0bWVudHM6bWVyZ2U6ASraQR5wYXJl",
+            "bnQsY2FwYWNpdHlfY29tbWl0bWVudF9pZHMS6wEKEENyZWF0ZUFzc2lnbm1l",
+            "bnQSPS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ3Jl",
+            "YXRlQXNzaWdubWVudFJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "cmVzZXJ2YXRpb24udjEuQXNzaWdubWVudCJmgtPkkwJMIj4vdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfS9hc3Np",
+            "Z25tZW50czoKYXNzaWdubWVudNpBEXBhcmVudCxhc3NpZ25tZW50Et8BCg9M",
+            "aXN0QXNzaWdubWVudHMSPC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
+            "YXRpb24udjEuTGlzdEFzc2lnbm1lbnRzUmVxdWVzdBo9Lmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0QXNzaWdubWVudHNSZXNw",
+            "b25zZSJPgtPkkwJAEj4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3Jlc2VydmF0aW9ucy8qfS9hc3NpZ25tZW50c9pBBnBhcmVudBK4AQoQ",
+            "RGVsZXRlQXNzaWdubWVudBI9Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNl",
+            "cnZhdGlvbi52MS5EZWxldGVBc3NpZ25tZW50UmVxdWVzdBoWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eSJNgtPkkwJAKj4vdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKi9hc3NpZ25tZW50cy8qfdpBBG5h",
+            "bWUS5QEKEVNlYXJjaEFzc2lnbm1lbnRzEj4uZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnJlc2VydmF0aW9uLnYxLlNlYXJjaEFzc2lnbm1lbnRzUmVxdWVzdBo/",
             "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5TZWFyY2hB",
-            "bGxBc3NpZ25tZW50c1JlcXVlc3QaQi5nb29nbGUuY2xvdWQuYmlncXVlcnku",
-            "cmVzZXJ2YXRpb24udjEuU2VhcmNoQWxsQXNzaWdubWVudHNSZXNwb25zZSJP",
-            "gtPkkwI6EjgvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpz",
-            "ZWFyY2hBbGxBc3NpZ25tZW50c9pBDHBhcmVudCxxdWVyeRLlAQoOTW92ZUFz",
-            "c2lnbm1lbnQSOy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
-            "djEuTW92ZUFzc2lnbm1lbnRSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQiZILT5JMCSCJDL3YxL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyovYXNz",
-            "aWdubWVudHMvKn06bW92ZToBKtpBE25hbWUsZGVzdGluYXRpb25faWQS+wEK",
-            "EFVwZGF0ZUFzc2lnbm1lbnQSPS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVz",
-            "ZXJ2YXRpb24udjEuVXBkYXRlQXNzaWdubWVudFJlcXVlc3QaMC5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudCJ2gtPk",
-            "kwJXMkkvdjEve2Fzc2lnbm1lbnQubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL3Jlc2VydmF0aW9ucy8qL2Fzc2lnbm1lbnRzLyp9Ogphc3NpZ25tZW50",
-            "2kEWYXNzaWdubWVudCx1cGRhdGVfbWFzaxLGAQoQR2V0QmlSZXNlcnZhdGlv",
-            "bhI9Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5HZXRC",
-            "aVJlc2VydmF0aW9uUmVxdWVzdBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5y",
-            "ZXNlcnZhdGlvbi52MS5CaVJlc2VydmF0aW9uIj6C0+STAjESLy92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2JpUmVzZXJ2YXRpb2592kEEbmFt",
-            "ZRKBAgoTVXBkYXRlQmlSZXNlcnZhdGlvbhJALmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5yZXNlcnZhdGlvbi52MS5VcGRhdGVCaVJlc2VydmF0aW9uUmVxdWVz",
-            "dBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5CaVJl",
-            "c2VydmF0aW9uInOC0+STAlAyPi92MS97YmlfcmVzZXJ2YXRpb24ubmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2JpUmVzZXJ2YXRpb259Og5iaV9yZXNl",
-            "cnZhdGlvbtpBGmJpX3Jlc2VydmF0aW9uLHVwZGF0ZV9tYXNrGn/KQSJiaWdx",
-            "dWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9iaWdxdWVyeSxodHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtgBCihjb20uZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxQhBSZXNlcnZhdGlvblBy",
-            "b3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vYmlncXVlcnkvcmVzZXJ2YXRp",
-            "b24vYXBpdjEvcmVzZXJ2YXRpb25wYjtyZXNlcnZhdGlvbnBiqgIkR29vZ2xl",
-            "LkNsb3VkLkJpZ1F1ZXJ5LlJlc2VydmF0aW9uLlYxygIkR29vZ2xlXENsb3Vk",
-            "XEJpZ1F1ZXJ5XFJlc2VydmF0aW9uXFYxYgZwcm90bzM="));
+            "c3NpZ25tZW50c1Jlc3BvbnNlIk+IAgGC0+STAjcSNS92MS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9OnNlYXJjaEFzc2lnbm1lbnRz2kEMcGFy",
+            "ZW50LHF1ZXJ5Eu4BChRTZWFyY2hBbGxBc3NpZ25tZW50cxJBLmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5TZWFyY2hBbGxBc3NpZ25t",
+            "ZW50c1JlcXVlc3QaQi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRp",
+            "b24udjEuU2VhcmNoQWxsQXNzaWdubWVudHNSZXNwb25zZSJPgtPkkwI6Ejgv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpzZWFyY2hBbGxB",
+            "c3NpZ25tZW50c9pBDHBhcmVudCxxdWVyeRLlAQoOTW92ZUFzc2lnbm1lbnQS",
+            "Oy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuTW92ZUFz",
+            "c2lnbm1lbnRSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
+            "dmF0aW9uLnYxLkFzc2lnbm1lbnQiZILT5JMCSCJDL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyovYXNzaWdubWVudHMv",
+            "Kn06bW92ZToBKtpBE25hbWUsZGVzdGluYXRpb25faWQS+wEKEFVwZGF0ZUFz",
+            "c2lnbm1lbnQSPS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
+            "djEuVXBkYXRlQXNzaWdubWVudFJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudCJ2gtPkkwJXMkkvdjEv",
+            "e2Fzc2lnbm1lbnQubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2Vy",
+            "dmF0aW9ucy8qL2Fzc2lnbm1lbnRzLyp9Ogphc3NpZ25tZW502kEWYXNzaWdu",
+            "bWVudCx1cGRhdGVfbWFzaxLGAQoQR2V0QmlSZXNlcnZhdGlvbhI9Lmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5HZXRCaVJlc2VydmF0",
+            "aW9uUmVxdWVzdBozLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
+            "bi52MS5CaVJlc2VydmF0aW9uIj6C0+STAjESLy92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2JpUmVzZXJ2YXRpb2592kEEbmFtZRKBAgoTVXBk",
+            "YXRlQmlSZXNlcnZhdGlvbhJALmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNl",
+            "cnZhdGlvbi52MS5VcGRhdGVCaVJlc2VydmF0aW9uUmVxdWVzdBozLmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5CaVJlc2VydmF0aW9u",
+            "InOC0+STAlAyPi92MS97YmlfcmVzZXJ2YXRpb24ubmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2JpUmVzZXJ2YXRpb259Og5iaV9yZXNlcnZhdGlvbtpB",
+            "GmJpX3Jlc2VydmF0aW9uLHVwZGF0ZV9tYXNrGn/KQSJiaWdxdWVyeXJlc2Vy",
+            "dmF0aW9uLmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9iaWdxdWVyeSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtgBCihjb20uZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxQhBSZXNlcnZhdGlvblByb3RvUAFaSmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYmlncXVlcnkvcmVzZXJ2YXRpb24vYXBpdjEv",
+            "cmVzZXJ2YXRpb25wYjtyZXNlcnZhdGlvbnBiqgIkR29vZ2xlLkNsb3VkLkJp",
+            "Z1F1ZXJ5LlJlc2VydmF0aW9uLlYxygIkR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5",
+            "XFJlc2VydmF0aW9uXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Parser, new[]{ "Name", "SlotCapacity", "IgnoreIdleSlots", "Concurrency", "CreationTime", "UpdateTime", "MultiRegionAuxiliary" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment), global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Parser, new[]{ "Name", "SlotCount", "Plan", "State", "CommitmentStartTime", "CommitmentEndTime", "FailureStatus", "RenewalPlan", "MultiRegionAuxiliary" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.CommitmentPlan), typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.State) }, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Reservation.V1.Edition), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Parser, new[]{ "Name", "SlotCapacity", "IgnoreIdleSlots", "Autoscale", "Concurrency", "CreationTime", "UpdateTime", "MultiRegionAuxiliary", "Edition" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale.Parser, new[]{ "CurrentSlots", "MaxSlots" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment), global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Parser, new[]{ "Name", "SlotCount", "Plan", "State", "CommitmentStartTime", "CommitmentEndTime", "FailureStatus", "RenewalPlan", "MultiRegionAuxiliary", "Edition" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.CommitmentPlan), typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest), global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest.Parser, new[]{ "Parent", "ReservationId", "Reservation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest), global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse), global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse.Parser, new[]{ "Reservations", "NextPageToken" }, null, null, null, null),
@@ -311,7 +322,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest), global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest.Parser, new[]{ "Parent", "Query", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse), global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse.Parser, new[]{ "Assignments", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse), global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse.Parser, new[]{ "Assignments", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest.Parser, new[]{ "Name", "DestinationId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest.Parser, new[]{ "Name", "DestinationId", "AssignmentId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest.Parser, new[]{ "Assignment", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.TableReference), global::Google.Cloud.BigQuery.Reservation.V1.TableReference.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.BiReservation), global::Google.Cloud.BigQuery.Reservation.V1.BiReservation.Parser, new[]{ "Name", "UpdateTime", "Size", "PreferredTables" }, null, null, null, null),
@@ -322,6 +333,33 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// The type of editions.
+  /// Different features and behaviors are provided to different editions
+  /// Capacity commitments and reservations are linked to editions.
+  /// </summary>
+  public enum Edition {
+    /// <summary>
+    /// Default value, which will be treated as ENTERPRISE.
+    /// </summary>
+    [pbr::OriginalName("EDITION_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Standard edition.
+    /// </summary>
+    [pbr::OriginalName("STANDARD")] Standard = 1,
+    /// <summary>
+    /// Enterprise edition.
+    /// </summary>
+    [pbr::OriginalName("ENTERPRISE")] Enterprise = 2,
+    /// <summary>
+    /// Enterprise plus edition.
+    /// </summary>
+    [pbr::OriginalName("ENTERPRISE_PLUS")] EnterprisePlus = 3,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A reservation is a mechanism used to guarantee slots to users.
@@ -363,10 +401,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       name_ = other.name_;
       slotCapacity_ = other.slotCapacity_;
       ignoreIdleSlots_ = other.ignoreIdleSlots_;
+      autoscale_ = other.autoscale_ != null ? other.autoscale_.Clone() : null;
       concurrency_ = other.concurrency_;
       creationTime_ = other.creationTime_ != null ? other.creationTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       multiRegionAuxiliary_ = other.multiRegionAuxiliary_;
+      edition_ = other.edition_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -405,10 +445,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     /// Queries using this reservation might use more slots during runtime if
     /// ignore_idle_slots is set to false.
     ///
-    /// If the new reservation's slot capacity exceeds the project's slot capacity
-    /// or if total slot capacity of the new reservation and its siblings exceeds
-    /// the project's slot capacity, the request will fail with
-    /// `google.rpc.Code.RESOURCE_EXHAUSTED`.
+    /// If total slot_capacity of the reservation and its siblings
+    /// exceeds the total slot_count of all capacity commitments, the request will
+    /// fail with `google.rpc.Code.RESOURCE_EXHAUSTED`.
     ///
     /// NOTE: for reservations in US or EU multi-regions, slot capacity constraints
     /// are checked separately for default and auxiliary regions. See
@@ -441,15 +480,34 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
     }
 
+    /// <summary>Field number for the "autoscale" field.</summary>
+    public const int AutoscaleFieldNumber = 7;
+    private global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale autoscale_;
+    /// <summary>
+    /// The configuration parameters for the auto scaling feature. Note this is an
+    /// alpha feature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale Autoscale {
+      get { return autoscale_; }
+      set {
+        autoscale_ = value;
+      }
+    }
+
     /// <summary>Field number for the "concurrency" field.</summary>
     public const int ConcurrencyFieldNumber = 16;
     private long concurrency_;
     /// <summary>
-    /// Maximum number of queries that are allowed to run concurrently in this
-    /// reservation. This is a soft limit due to asynchronous nature of the system
-    /// and various optimizations for small queries.
-    /// Default value is 0 which means that concurrency will be automatically set
-    /// based on the reservation size.
+    /// Job concurrency target which sets a soft upper bound on the number of jobs
+    /// that can run concurrently in this reservation. This is a soft target due to
+    /// asynchronous nature of the system and various optimizations for small
+    /// queries.
+    /// Default value is 0 which means that concurrency target will be
+    /// automatically computed by the system.
+    /// NOTE: this field is exposed as `target_job_concurrency` in the Information
+    /// Schema, DDL and BQ CLI.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -510,6 +568,21 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
     }
 
+    /// <summary>Field number for the "edition" field.</summary>
+    public const int EditionFieldNumber = 17;
+    private global::Google.Cloud.BigQuery.Reservation.V1.Edition edition_ = global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified;
+    /// <summary>
+    /// Edition of the reservation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Reservation.V1.Edition Edition {
+      get { return edition_; }
+      set {
+        edition_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -528,10 +601,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (Name != other.Name) return false;
       if (SlotCapacity != other.SlotCapacity) return false;
       if (IgnoreIdleSlots != other.IgnoreIdleSlots) return false;
+      if (!object.Equals(Autoscale, other.Autoscale)) return false;
       if (Concurrency != other.Concurrency) return false;
       if (!object.Equals(CreationTime, other.CreationTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (MultiRegionAuxiliary != other.MultiRegionAuxiliary) return false;
+      if (Edition != other.Edition) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -542,10 +617,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (SlotCapacity != 0L) hash ^= SlotCapacity.GetHashCode();
       if (IgnoreIdleSlots != false) hash ^= IgnoreIdleSlots.GetHashCode();
+      if (autoscale_ != null) hash ^= Autoscale.GetHashCode();
       if (Concurrency != 0L) hash ^= Concurrency.GetHashCode();
       if (creationTime_ != null) hash ^= CreationTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (MultiRegionAuxiliary != false) hash ^= MultiRegionAuxiliary.GetHashCode();
+      if (Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) hash ^= Edition.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -576,6 +653,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(32);
         output.WriteBool(IgnoreIdleSlots);
       }
+      if (autoscale_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Autoscale);
+      }
       if (creationTime_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(CreationTime);
@@ -591,6 +672,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (Concurrency != 0L) {
         output.WriteRawTag(128, 1);
         output.WriteInt64(Concurrency);
+      }
+      if (Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) Edition);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -614,6 +699,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(32);
         output.WriteBool(IgnoreIdleSlots);
       }
+      if (autoscale_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Autoscale);
+      }
       if (creationTime_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(CreationTime);
@@ -629,6 +718,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (Concurrency != 0L) {
         output.WriteRawTag(128, 1);
         output.WriteInt64(Concurrency);
+      }
+      if (Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) Edition);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -649,6 +742,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (IgnoreIdleSlots != false) {
         size += 1 + 1;
       }
+      if (autoscale_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Autoscale);
+      }
       if (Concurrency != 0L) {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(Concurrency);
       }
@@ -660,6 +756,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (MultiRegionAuxiliary != false) {
         size += 1 + 1;
+      }
+      if (Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Edition);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -682,6 +781,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (other.IgnoreIdleSlots != false) {
         IgnoreIdleSlots = other.IgnoreIdleSlots;
       }
+      if (other.autoscale_ != null) {
+        if (autoscale_ == null) {
+          Autoscale = new global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale();
+        }
+        Autoscale.MergeFrom(other.Autoscale);
+      }
       if (other.Concurrency != 0L) {
         Concurrency = other.Concurrency;
       }
@@ -699,6 +804,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (other.MultiRegionAuxiliary != false) {
         MultiRegionAuxiliary = other.MultiRegionAuxiliary;
+      }
+      if (other.Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) {
+        Edition = other.Edition;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -727,6 +835,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             IgnoreIdleSlots = input.ReadBool();
             break;
           }
+          case 58: {
+            if (autoscale_ == null) {
+              Autoscale = new global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale();
+            }
+            input.ReadMessage(Autoscale);
+            break;
+          }
           case 66: {
             if (creationTime_ == null) {
               CreationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -747,6 +862,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           }
           case 128: {
             Concurrency = input.ReadInt64();
+            break;
+          }
+          case 136: {
+            Edition = (global::Google.Cloud.BigQuery.Reservation.V1.Edition) input.ReadEnum();
             break;
           }
         }
@@ -776,6 +895,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             IgnoreIdleSlots = input.ReadBool();
             break;
           }
+          case 58: {
+            if (autoscale_ == null) {
+              Autoscale = new global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale();
+            }
+            input.ReadMessage(Autoscale);
+            break;
+          }
           case 66: {
             if (creationTime_ == null) {
               CreationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -798,10 +924,258 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             Concurrency = input.ReadInt64();
             break;
           }
+          case 136: {
+            Edition = (global::Google.Cloud.BigQuery.Reservation.V1.Edition) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Reservation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Auto scaling settings.
+      /// </summary>
+      public sealed partial class Autoscale : pb::IMessage<Autoscale>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Autoscale> _parser = new pb::MessageParser<Autoscale>(() => new Autoscale());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Autoscale> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Autoscale() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Autoscale(Autoscale other) : this() {
+          currentSlots_ = other.currentSlots_;
+          maxSlots_ = other.maxSlots_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Autoscale Clone() {
+          return new Autoscale(this);
+        }
+
+        /// <summary>Field number for the "current_slots" field.</summary>
+        public const int CurrentSlotsFieldNumber = 1;
+        private long currentSlots_;
+        /// <summary>
+        /// Output only. The slot capacity added to this reservation when autoscale
+        /// happens. Will be between [0, max_slots].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long CurrentSlots {
+          get { return currentSlots_; }
+          set {
+            currentSlots_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "max_slots" field.</summary>
+        public const int MaxSlotsFieldNumber = 2;
+        private long maxSlots_;
+        /// <summary>
+        /// Number of slots to be scaled when needed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long MaxSlots {
+          get { return maxSlots_; }
+          set {
+            maxSlots_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Autoscale);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Autoscale other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (CurrentSlots != other.CurrentSlots) return false;
+          if (MaxSlots != other.MaxSlots) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (CurrentSlots != 0L) hash ^= CurrentSlots.GetHashCode();
+          if (MaxSlots != 0L) hash ^= MaxSlots.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (CurrentSlots != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(CurrentSlots);
+          }
+          if (MaxSlots != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(MaxSlots);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (CurrentSlots != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(CurrentSlots);
+          }
+          if (MaxSlots != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(MaxSlots);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (CurrentSlots != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(CurrentSlots);
+          }
+          if (MaxSlots != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxSlots);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Autoscale other) {
+          if (other == null) {
+            return;
+          }
+          if (other.CurrentSlots != 0L) {
+            CurrentSlots = other.CurrentSlots;
+          }
+          if (other.MaxSlots != 0L) {
+            MaxSlots = other.MaxSlots;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                CurrentSlots = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                MaxSlots = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                CurrentSlots = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                MaxSlots = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -860,6 +1234,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       failureStatus_ = other.failureStatus_ != null ? other.failureStatus_.Clone() : null;
       renewalPlan_ = other.renewalPlan_;
       multiRegionAuxiliary_ = other.multiRegionAuxiliary_;
+      edition_ = other.edition_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -937,8 +1312,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int CommitmentStartTimeFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp commitmentStartTime_;
     /// <summary>
-    /// Output only. The start of the current commitment period. It is applicable only for
-    /// ACTIVE capacity commitments.
+    /// Output only. The start of the current commitment period. It is applicable
+    /// only for ACTIVE capacity commitments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -953,8 +1328,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int CommitmentEndTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp commitmentEndTime_;
     /// <summary>
-    /// Output only. The end of the current commitment period. It is applicable only for ACTIVE
-    /// capacity commitments.
+    /// Output only. The end of the current commitment period. It is applicable
+    /// only for ACTIVE capacity commitments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1017,6 +1392,21 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
     }
 
+    /// <summary>Field number for the "edition" field.</summary>
+    public const int EditionFieldNumber = 12;
+    private global::Google.Cloud.BigQuery.Reservation.V1.Edition edition_ = global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified;
+    /// <summary>
+    /// Edition of the capacity commitment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Reservation.V1.Edition Edition {
+      get { return edition_; }
+      set {
+        edition_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1041,6 +1431,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (!object.Equals(FailureStatus, other.FailureStatus)) return false;
       if (RenewalPlan != other.RenewalPlan) return false;
       if (MultiRegionAuxiliary != other.MultiRegionAuxiliary) return false;
+      if (Edition != other.Edition) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1057,6 +1448,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (failureStatus_ != null) hash ^= FailureStatus.GetHashCode();
       if (RenewalPlan != global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.CommitmentPlan.Unspecified) hash ^= RenewalPlan.GetHashCode();
       if (MultiRegionAuxiliary != false) hash ^= MultiRegionAuxiliary.GetHashCode();
+      if (Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) hash ^= Edition.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1111,6 +1503,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(80);
         output.WriteBool(MultiRegionAuxiliary);
       }
+      if (Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Edition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1157,6 +1553,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(80);
         output.WriteBool(MultiRegionAuxiliary);
       }
+      if (Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Edition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1193,6 +1593,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (MultiRegionAuxiliary != false) {
         size += 1 + 1;
+      }
+      if (Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Edition);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1241,6 +1644,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (other.MultiRegionAuxiliary != false) {
         MultiRegionAuxiliary = other.MultiRegionAuxiliary;
+      }
+      if (other.Edition != global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified) {
+        Edition = other.Edition;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1300,6 +1706,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           }
           case 80: {
             MultiRegionAuxiliary = input.ReadBool();
+            break;
+          }
+          case 96: {
+            Edition = (global::Google.Cloud.BigQuery.Reservation.V1.Edition) input.ReadEnum();
             break;
           }
         }
@@ -1362,6 +1772,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             MultiRegionAuxiliary = input.ReadBool();
             break;
           }
+          case 96: {
+            Edition = (global::Google.Cloud.BigQuery.Reservation.V1.Edition) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1389,6 +1803,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// </summary>
         [pbr::OriginalName("FLEX")] Flex = 3,
         /// <summary>
+        /// Same as FLEX, should only be used if flat-rate commitments are still
+        /// available.
+        /// </summary>
+        [pbr::OriginalName("FLEX_FLAT_RATE")] FlexFlatRate = 7,
+        /// <summary>
         /// Trial commitments have a committed period of 182 days after becoming
         /// ACTIVE. After that, they are converted to a new commitment based on the
         /// `renewal_plan`. Default `renewal_plan` for Trial commitment is Flex so
@@ -1402,11 +1821,36 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// </summary>
         [pbr::OriginalName("MONTHLY")] Monthly = 2,
         /// <summary>
+        /// Same as MONTHLY, should only be used if flat-rate commitments are still
+        /// available.
+        /// </summary>
+        [pbr::OriginalName("MONTHLY_FLAT_RATE")] MonthlyFlatRate = 8,
+        /// <summary>
         /// Annual commitments have a committed period of 365 days after becoming
         /// ACTIVE. After that they are converted to a new commitment based on the
         /// renewal_plan.
         /// </summary>
         [pbr::OriginalName("ANNUAL")] Annual = 4,
+        /// <summary>
+        /// Same as ANNUAL, should only be used if flat-rate commitments are still
+        /// available.
+        /// </summary>
+        [pbr::OriginalName("ANNUAL_FLAT_RATE")] AnnualFlatRate = 9,
+        /// <summary>
+        /// 3-year commitments have a committed period of 1095(3 * 365) days after
+        /// becoming ACTIVE. After that they are converted to a new commitment based
+        /// on the renewal_plan.
+        /// </summary>
+        [pbr::OriginalName("THREE_YEAR")] ThreeYear = 10,
+        /// <summary>
+        /// Should only be used for `renewal_plan` and is only meaningful if
+        /// edition is specified to values other than EDITION_UNSPECIFIED. Otherwise
+        /// CreateCapacityCommitmentRequest or UpdateCapacityCommitmentRequest will
+        /// be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`. If the
+        /// renewal_plan is NONE, capacity commitment will be removed at the end of
+        /// its commitment period.
+        /// </summary>
+        [pbr::OriginalName("NONE")] None = 6,
       }
 
       /// <summary>
@@ -1440,7 +1884,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.CreateReservation][google.cloud.bigquery.reservation.v1.ReservationService.CreateReservation].
+  /// The request for
+  /// [ReservationService.CreateReservation][google.cloud.bigquery.reservation.v1.ReservationService.CreateReservation].
   /// </summary>
   public sealed partial class CreateReservationRequest : pb::IMessage<CreateReservationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1727,7 +2172,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.ListReservations][google.cloud.bigquery.reservation.v1.ReservationService.ListReservations].
+  /// The request for
+  /// [ReservationService.ListReservations][google.cloud.bigquery.reservation.v1.ReservationService.ListReservations].
   /// </summary>
   public sealed partial class ListReservationsRequest : pb::IMessage<ListReservationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2003,7 +2449,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The response for [ReservationService.ListReservations][google.cloud.bigquery.reservation.v1.ReservationService.ListReservations].
+  /// The response for
+  /// [ReservationService.ListReservations][google.cloud.bigquery.reservation.v1.ReservationService.ListReservations].
   /// </summary>
   public sealed partial class ListReservationsResponse : pb::IMessage<ListReservationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2228,7 +2675,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.GetReservation][google.cloud.bigquery.reservation.v1.ReservationService.GetReservation].
+  /// The request for
+  /// [ReservationService.GetReservation][google.cloud.bigquery.reservation.v1.ReservationService.GetReservation].
   /// </summary>
   public sealed partial class GetReservationRequest : pb::IMessage<GetReservationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2424,7 +2872,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.DeleteReservation][google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservation].
+  /// The request for
+  /// [ReservationService.DeleteReservation][google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservation].
   /// </summary>
   public sealed partial class DeleteReservationRequest : pb::IMessage<DeleteReservationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2620,7 +3069,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.UpdateReservation][google.cloud.bigquery.reservation.v1.ReservationService.UpdateReservation].
+  /// The request for
+  /// [ReservationService.UpdateReservation][google.cloud.bigquery.reservation.v1.ReservationService.UpdateReservation].
   /// </summary>
   public sealed partial class UpdateReservationRequest : pb::IMessage<UpdateReservationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2873,7 +3323,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.CreateCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.CreateCapacityCommitment].
+  /// The request for
+  /// [ReservationService.CreateCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.CreateCapacityCommitment].
   /// </summary>
   public sealed partial class CreateCapacityCommitmentRequest : pb::IMessage<CreateCapacityCommitmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3203,7 +3654,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.ListCapacityCommitments][google.cloud.bigquery.reservation.v1.ReservationService.ListCapacityCommitments].
+  /// The request for
+  /// [ReservationService.ListCapacityCommitments][google.cloud.bigquery.reservation.v1.ReservationService.ListCapacityCommitments].
   /// </summary>
   public sealed partial class ListCapacityCommitmentsRequest : pb::IMessage<ListCapacityCommitmentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3479,7 +3931,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The response for [ReservationService.ListCapacityCommitments][google.cloud.bigquery.reservation.v1.ReservationService.ListCapacityCommitments].
+  /// The response for
+  /// [ReservationService.ListCapacityCommitments][google.cloud.bigquery.reservation.v1.ReservationService.ListCapacityCommitments].
   /// </summary>
   public sealed partial class ListCapacityCommitmentsResponse : pb::IMessage<ListCapacityCommitmentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3704,7 +4157,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.GetCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.GetCapacityCommitment].
+  /// The request for
+  /// [ReservationService.GetCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.GetCapacityCommitment].
   /// </summary>
   public sealed partial class GetCapacityCommitmentRequest : pb::IMessage<GetCapacityCommitmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3900,7 +4354,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.DeleteCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.DeleteCapacityCommitment].
+  /// The request for
+  /// [ReservationService.DeleteCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.DeleteCapacityCommitment].
   /// </summary>
   public sealed partial class DeleteCapacityCommitmentRequest : pb::IMessage<DeleteCapacityCommitmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4138,7 +4593,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.UpdateCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.UpdateCapacityCommitment].
+  /// The request for
+  /// [ReservationService.UpdateCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.UpdateCapacityCommitment].
   /// </summary>
   public sealed partial class UpdateCapacityCommitmentRequest : pb::IMessage<UpdateCapacityCommitmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4391,7 +4847,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.SplitCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.SplitCapacityCommitment].
+  /// The request for
+  /// [ReservationService.SplitCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.SplitCapacityCommitment].
   /// </summary>
   public sealed partial class SplitCapacityCommitmentRequest : pb::IMessage<SplitCapacityCommitmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4627,7 +5084,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The response for [ReservationService.SplitCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.SplitCapacityCommitment].
+  /// The response for
+  /// [ReservationService.SplitCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.SplitCapacityCommitment].
   /// </summary>
   public sealed partial class SplitCapacityCommitmentResponse : pb::IMessage<SplitCapacityCommitmentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4880,7 +5338,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.MergeCapacityCommitments][google.cloud.bigquery.reservation.v1.ReservationService.MergeCapacityCommitments].
+  /// The request for
+  /// [ReservationService.MergeCapacityCommitments][google.cloud.bigquery.reservation.v1.ReservationService.MergeCapacityCommitments].
   /// </summary>
   public sealed partial class MergeCapacityCommitmentsRequest : pb::IMessage<MergeCapacityCommitmentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5453,6 +5912,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// training. These jobs will not utilize idle slots from other reservations.
         /// </summary>
         [pbr::OriginalName("ML_EXTERNAL")] MlExternal = 3,
+        /// <summary>
+        /// Background jobs that BigQuery runs for the customers in the background.
+        /// </summary>
+        [pbr::OriginalName("BACKGROUND")] Background = 4,
       }
 
       /// <summary>
@@ -5482,7 +5945,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.CreateAssignment][google.cloud.bigquery.reservation.v1.ReservationService.CreateAssignment].
+  /// The request for
+  /// [ReservationService.CreateAssignment][google.cloud.bigquery.reservation.v1.ReservationService.CreateAssignment].
   /// Note: "bigquery.reservationAssignments.create" permission is required on the
   /// related assignee.
   /// </summary>
@@ -5772,7 +6236,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.ListAssignments][google.cloud.bigquery.reservation.v1.ReservationService.ListAssignments].
+  /// The request for
+  /// [ReservationService.ListAssignments][google.cloud.bigquery.reservation.v1.ReservationService.ListAssignments].
   /// </summary>
   public sealed partial class ListAssignmentsRequest : pb::IMessage<ListAssignmentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6053,7 +6518,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The response for [ReservationService.ListAssignments][google.cloud.bigquery.reservation.v1.ReservationService.ListAssignments].
+  /// The response for
+  /// [ReservationService.ListAssignments][google.cloud.bigquery.reservation.v1.ReservationService.ListAssignments].
   /// </summary>
   public sealed partial class ListAssignmentsResponse : pb::IMessage<ListAssignmentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6278,7 +6744,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.DeleteAssignment][google.cloud.bigquery.reservation.v1.ReservationService.DeleteAssignment].
+  /// The request for
+  /// [ReservationService.DeleteAssignment][google.cloud.bigquery.reservation.v1.ReservationService.DeleteAssignment].
   /// Note: "bigquery.reservationAssignments.delete" permission is required on the
   /// related assignee.
   /// </summary>
@@ -6532,8 +6999,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the admin project(containing project and location),
-    /// e.g.:
+    /// Required. The resource name of the admin project(containing project and
+    /// location), e.g.:
     ///   `projects/myproject/locations/US`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6858,8 +7325,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name with location (project name could be the wildcard '-'),
-    /// e.g.:
+    /// Required. The resource name with location (project name could be the
+    /// wildcard '-'), e.g.:
     ///   `projects/-/locations/US`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7128,7 +7595,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The response for [ReservationService.SearchAssignments][google.cloud.bigquery.reservation.v1.ReservationService.SearchAssignments].
+  /// The response for
+  /// [ReservationService.SearchAssignments][google.cloud.bigquery.reservation.v1.ReservationService.SearchAssignments].
   /// </summary>
   public sealed partial class SearchAssignmentsResponse : pb::IMessage<SearchAssignmentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7353,7 +7821,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The response for [ReservationService.SearchAllAssignments][google.cloud.bigquery.reservation.v1.ReservationService.SearchAllAssignments].
+  /// The response for
+  /// [ReservationService.SearchAllAssignments][google.cloud.bigquery.reservation.v1.ReservationService.SearchAllAssignments].
   /// </summary>
   public sealed partial class SearchAllAssignmentsResponse : pb::IMessage<SearchAllAssignmentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7624,6 +8093,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public MoveAssignmentRequest(MoveAssignmentRequest other) : this() {
       name_ = other.name_;
       destinationId_ = other.destinationId_;
+      assignmentId_ = other.assignmentId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7666,6 +8136,25 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
     }
 
+    /// <summary>Field number for the "assignment_id" field.</summary>
+    public const int AssignmentIdFieldNumber = 5;
+    private string assignmentId_ = "";
+    /// <summary>
+    /// The optional assignment ID. A new assignment name is generated if this
+    /// field is empty.
+    ///
+    /// This field can contain only lowercase alphanumeric characters or dashes.
+    /// Max length is 64 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AssignmentId {
+      get { return assignmentId_; }
+      set {
+        assignmentId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7683,6 +8172,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (Name != other.Name) return false;
       if (DestinationId != other.DestinationId) return false;
+      if (AssignmentId != other.AssignmentId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7692,6 +8182,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DestinationId.Length != 0) hash ^= DestinationId.GetHashCode();
+      if (AssignmentId.Length != 0) hash ^= AssignmentId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7718,6 +8209,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(26);
         output.WriteString(DestinationId);
       }
+      if (AssignmentId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AssignmentId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7736,6 +8231,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(26);
         output.WriteString(DestinationId);
       }
+      if (AssignmentId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AssignmentId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7751,6 +8250,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (DestinationId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationId);
+      }
+      if (AssignmentId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AssignmentId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7769,6 +8271,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (other.DestinationId.Length != 0) {
         DestinationId = other.DestinationId;
+      }
+      if (other.AssignmentId.Length != 0) {
+        AssignmentId = other.AssignmentId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7791,6 +8296,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           }
           case 26: {
             DestinationId = input.ReadString();
+            break;
+          }
+          case 42: {
+            AssignmentId = input.ReadString();
             break;
           }
         }
@@ -7816,6 +8325,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             DestinationId = input.ReadString();
             break;
           }
+          case 42: {
+            AssignmentId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -7824,7 +8337,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
-  /// The request for [ReservationService.UpdateAssignment][google.cloud.bigquery.reservation.v1.ReservationService.UpdateAssignment].
+  /// The request for
+  /// [ReservationService.UpdateAssignment][google.cloud.bigquery.reservation.v1.ReservationService.UpdateAssignment].
   /// </summary>
   public sealed partial class UpdateAssignmentRequest : pb::IMessage<UpdateAssignmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
