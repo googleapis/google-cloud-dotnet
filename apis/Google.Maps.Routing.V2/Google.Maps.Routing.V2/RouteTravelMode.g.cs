@@ -43,8 +43,8 @@ namespace Google.Maps.Routing.V2 {
   #region Enums
   /// <summary>
   /// A set of values used to specify the mode of travel.
-  /// NOTE: WALK, BICYCLE, and TWO_WHEELER routes are in beta and might sometimes
-  /// be missing clear sidewalks, pedestrian paths, or bicycling paths.
+  /// NOTE: `WALK`, `BICYCLE`, and `TWO_WHEELER` routes are in beta and might
+  /// sometimes be missing clear sidewalks, pedestrian paths, or bicycling paths.
   /// You must display this warning to the user for all walking, bicycling, and
   /// two-wheel routes that you display in your app.
   /// </summary>

@@ -172,12 +172,12 @@ namespace Google.Maps.Routing.V2 {
     private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLeg> legs_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.RouteLeg>();
     /// <summary>
     /// A collection of legs (path segments between waypoints) that make-up the
-    /// route. Each leg corresponds to the trip between two non-`via` Waypoints.
-    /// For example, a route with no intermediate waypoints has only one leg. A
-    /// route that includes one non-`via` intermediate waypoint has two legs. A
-    /// route that includes one `via` intermediate waypoint has one leg. The order
-    /// of the legs matches the order of Waypoints from `origin` to `intermediates`
-    /// to `destination`.
+    /// route. Each leg corresponds to the trip between two non-`via`
+    /// [Waypoints][google.maps.routing.v2.Waypoint]. For example, a route with no
+    /// intermediate waypoints has only one leg. A route that includes one
+    /// non-`via` intermediate waypoint has two legs. A route that includes one
+    /// `via` intermediate waypoint has one leg. The order of the legs matches the
+    /// order of Waypoints from `origin` to `intermediates` to `destination`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1973,8 +1973,9 @@ namespace Google.Maps.Routing.V2 {
   }
 
   /// <summary>
-  /// Encapsulates a segment of a `RouteLeg`. A step corresponds to a single
-  /// navigation instruction. Route legs are made up of steps.
+  /// Encapsulates a segment of a [RouteLeg][google.maps.routing.v2.RouteLeg]. A
+  /// step corresponds to a single navigation instruction. Route legs are made up
+  /// of steps.
   /// </summary>
   public sealed partial class RouteLegStep : pb::IMessage<RouteLegStep>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

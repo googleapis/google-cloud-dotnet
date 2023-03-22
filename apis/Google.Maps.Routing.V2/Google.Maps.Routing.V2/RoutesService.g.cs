@@ -414,10 +414,11 @@ namespace Google.Maps.Routing.V2 {
     private global::Google.Maps.Routing.V2.Units units_ = global::Google.Maps.Routing.V2.Units.Unspecified;
     /// <summary>
     /// Optional. Specifies the units of measure for the display fields. This
-    /// includes the `instruction` field in `NavigationInstruction`. The units of
-    /// measure used for the route, leg, step distance, and duration are not
-    /// affected by this value. If you don't provide this value, then the display
-    /// units are inferred from the location of the request.
+    /// includes the `instruction` field in
+    /// [NavigationInstruction][google.maps.routing.v2.NavigationInstruction]. The
+    /// units of measure used for the route, leg, step distance, and duration are
+    /// not affected by this value. If you don't provide this value, then the
+    /// display units are inferred from the location of the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -437,7 +438,7 @@ namespace Google.Maps.Routing.V2 {
     /// Optional. Specifies what reference routes to calculate as part of the
     /// request in addition to the default route. A reference route is a route with
     /// a different route calculation objective than the default route. For example
-    /// an FUEL_EFFICIENT reference route calculation takes into account various
+    /// a `FUEL_EFFICIENT` reference route calculation takes into account various
     /// parameters that would generate an optimal fuel efficient route.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2398,10 +2399,11 @@ namespace Google.Maps.Routing.V2 {
     private global::Google.Protobuf.WellKnownTypes.Duration duration_;
     /// <summary>
     /// The length of time needed to navigate the route. If you set the
-    /// `routing_preference` to `TRAFFIC_UNAWARE`, then this value is the same as
-    /// `static_duration`. If you set the `routing_preference` to either
-    /// `TRAFFIC_AWARE` or `TRAFFIC_AWARE_OPTIMAL`, then this value is calculated
-    /// taking traffic conditions into account.
+    /// [routing_preference][google.maps.routing.v2.ComputeRouteMatrixRequest.routing_preference]
+    /// to `TRAFFIC_UNAWARE`, then this value is the same as `static_duration`. If
+    /// you set the `routing_preference` to either `TRAFFIC_AWARE` or
+    /// `TRAFFIC_AWARE_OPTIMAL`, then this value is calculated taking traffic
+    /// conditions into account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

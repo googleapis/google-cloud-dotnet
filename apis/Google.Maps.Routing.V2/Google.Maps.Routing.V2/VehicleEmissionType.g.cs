@@ -44,11 +44,12 @@ namespace Google.Maps.Routing.V2 {
   #region Enums
   /// <summary>
   /// A set of values describing the vehicle's emission type.
-  /// Applies only to the DRIVE travel mode.
+  /// Applies only to the `DRIVE`
+  /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
   /// </summary>
   public enum VehicleEmissionType {
     /// <summary>
-    /// No emission type specified. Default to GASOLINE.
+    /// No emission type specified. Default to `GASOLINE`.
     /// </summary>
     [pbr::OriginalName("VEHICLE_EMISSION_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>

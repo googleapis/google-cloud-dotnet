@@ -43,7 +43,8 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Messages
   /// <summary>
-  /// Encapsulates toll information on a `Route` or on a `RouteLeg`.
+  /// Encapsulates toll information on a [Route][google.maps.routing.v2.Route] or
+  /// on a [RouteLeg][google.maps.routing.v2.RouteLeg].
   /// </summary>
   public sealed partial class TollInfo : pb::IMessage<TollInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -95,12 +96,13 @@ namespace Google.Maps.Routing.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Type.Money.Parser);
     private readonly pbc::RepeatedField<global::Google.Type.Money> estimatedPrice_ = new pbc::RepeatedField<global::Google.Type.Money>();
     /// <summary>
-    /// The monetary amount of tolls for the corresponding Route or RouteLeg.
-    /// This list contains a money amount for each currency that is expected
-    /// to be charged by the toll stations. Typically this list will contain only
-    /// one item for routes with tolls in one currency. For international trips,
-    /// this list may contain multiple items to reflect tolls in different
-    /// currencies.
+    /// The monetary amount of tolls for the corresponding
+    /// [Route][google.maps.routing.v2.Route] or
+    /// [RouteLeg][google.maps.routing.v2.RouteLeg]. This list contains a money
+    /// amount for each currency that is expected to be charged by the toll
+    /// stations. Typically this list will contain only one item for routes with
+    /// tolls in one currency. For international trips, this list may contain
+    /// multiple items to reflect tolls in different currencies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
