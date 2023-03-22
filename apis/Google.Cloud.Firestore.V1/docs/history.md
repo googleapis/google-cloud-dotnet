@@ -4,6 +4,17 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.2.0, released 2023-03-22
+
+### New features
+
+- Add `OR` query support ([commit a88bcd7](https://github.com/googleapis/google-cloud-dotnet/commit/a88bcd79f3039261fb3cc4f2c37e592ec1e8718d))
+
+### Documentation improvements
+
+- Improve the API documentation for the `Firestore.ListDocuments` RPC ([commit a88bcd7](https://github.com/googleapis/google-cloud-dotnet/commit/a88bcd79f3039261fb3cc4f2c37e592ec1e8718d))
+- Minor documentation formatting and cleanup ([commit a88bcd7](https://github.com/googleapis/google-cloud-dotnet/commit/a88bcd79f3039261fb3cc4f2c37e592ec1e8718d))
+
 ## Version 3.1.0, released 2023-02-08
 
 ### New features
