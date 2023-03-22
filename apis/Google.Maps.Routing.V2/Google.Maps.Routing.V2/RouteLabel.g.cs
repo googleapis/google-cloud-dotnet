@@ -42,8 +42,8 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Enums
   /// <summary>
-  /// Labels for the `Route` that are useful to identify specific properties
-  /// of the route to compare against others.
+  /// Labels for the [Route][google.maps.routing.v2.Route] that are useful to
+  /// identify specific properties of the route to compare against others.
   /// </summary>
   public enum RouteLabel {
     /// <summary>
@@ -56,8 +56,9 @@ namespace Google.Maps.Routing.V2 {
     [pbr::OriginalName("DEFAULT_ROUTE")] DefaultRoute = 1,
     /// <summary>
     /// An alternative to the default "best" route. Routes like this will be
-    /// returned when `ComputeRoutesRequest.compute_alternative_routes` is
-    /// specified.
+    /// returned when
+    /// [compute_alternative_routes][google.maps.routing.v2.ComputeRoutesRequest.compute_alternative_routes]
+    /// is specified.
     /// </summary>
     [pbr::OriginalName("DEFAULT_ROUTE_ALTERNATE")] DefaultRouteAlternate = 2,
     /// <summary>

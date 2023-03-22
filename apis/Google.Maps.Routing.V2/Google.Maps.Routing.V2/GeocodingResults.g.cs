@@ -53,8 +53,9 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Messages
   /// <summary>
-  /// Contains GeocodedWaypoints for origin, destination and intermediate
-  /// waypoints. Only populated for address waypoints.
+  /// Contains [GeocodedWaypoints][google.maps.routing.v2.GeocodedWaypoint] for
+  /// origin, destination and intermediate waypoints. Only populated for address
+  /// waypoints.
   /// </summary>
   public sealed partial class GeocodingResults : pb::IMessage<GeocodingResults>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
