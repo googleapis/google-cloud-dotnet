@@ -674,6 +674,11 @@ namespace Google.Cloud.Datastore.V1 {
     /// The properties to make distinct. The query results will contain the first
     /// result for each distinct combination of values for the given properties
     /// (if empty, all results are returned).
+    ///
+    /// Requires:
+    ///
+    /// * If `order` is specified, the set of distinct on properties must appear
+    /// before the non-distinct on properties in `order`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1330,7 +1335,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Defines a aggregation that produces a single result.
+      /// Defines an aggregation that produces a single result.
       /// </summary>
       public sealed partial class Aggregation : pb::IMessage<Aggregation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1412,7 +1417,7 @@ namespace Google.Cloud.Datastore.V1 {
         ///   COUNT_UP_TO(1) AS count_up_to_1,
         ///   COUNT_UP_TO(2),
         ///   COUNT_UP_TO(3) AS count_up_to_3,
-        ///   COUNT_UP_TO(4)
+        ///   COUNT(*)
         /// OVER (
         ///   ...
         /// );
@@ -1425,7 +1430,7 @@ namespace Google.Cloud.Datastore.V1 {
         ///   COUNT_UP_TO(1) AS count_up_to_1,
         ///   COUNT_UP_TO(2) AS property_1,
         ///   COUNT_UP_TO(3) AS count_up_to_3,
-        ///   COUNT_UP_TO(4) AS property_2
+        ///   COUNT(*) AS property_2
         /// OVER (
         ///   ...
         /// );
@@ -1703,7 +1708,7 @@ namespace Google.Cloud.Datastore.V1 {
             /// count.
             ///
             /// This provides a way to set an upper bound on the number of entities
-            /// to scan, limiting latency and cost.
+            /// to scan, limiting latency, and cost.
             ///
             /// Unspecified is interpreted as no bound.
             ///
