@@ -30,6 +30,7 @@ namespace Google.Analytics.Admin.V1Beta
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AccessReportReflection.Descriptor;
             yield return AnalyticsAdminReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
         }
