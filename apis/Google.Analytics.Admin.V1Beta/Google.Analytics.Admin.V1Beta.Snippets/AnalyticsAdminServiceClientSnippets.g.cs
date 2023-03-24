@@ -5213,5 +5213,76 @@ namespace Google.Analytics.Admin.V1Beta.Snippets
             DataStream response = await analyticsAdminServiceClient.GetDataStreamAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for RunAccessReport</summary>
+        public void RunAccessReportRequestObject()
+        {
+            // Snippet: RunAccessReport(RunAccessReportRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            RunAccessReportRequest request = new RunAccessReportRequest
+            {
+                Entity = "",
+                Dimensions =
+                {
+                    new AccessDimension(),
+                },
+                Metrics = { new AccessMetric(), },
+                DateRanges =
+                {
+                    new AccessDateRange(),
+                },
+                DimensionFilter = new AccessFilterExpression(),
+                MetricFilter = new AccessFilterExpression(),
+                Offset = 0L,
+                Limit = 0L,
+                TimeZone = "",
+                OrderBys =
+                {
+                    new AccessOrderBy(),
+                },
+                ReturnEntityQuota = false,
+            };
+            // Make the request
+            RunAccessReportResponse response = analyticsAdminServiceClient.RunAccessReport(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunAccessReportAsync</summary>
+        public async Task RunAccessReportRequestObjectAsync()
+        {
+            // Snippet: RunAccessReportAsync(RunAccessReportRequest, CallSettings)
+            // Additional: RunAccessReportAsync(RunAccessReportRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RunAccessReportRequest request = new RunAccessReportRequest
+            {
+                Entity = "",
+                Dimensions =
+                {
+                    new AccessDimension(),
+                },
+                Metrics = { new AccessMetric(), },
+                DateRanges =
+                {
+                    new AccessDateRange(),
+                },
+                DimensionFilter = new AccessFilterExpression(),
+                MetricFilter = new AccessFilterExpression(),
+                Offset = 0L,
+                Limit = 0L,
+                TimeZone = "",
+                OrderBys =
+                {
+                    new AccessOrderBy(),
+                },
+                ReturnEntityQuota = false,
+            };
+            // Make the request
+            RunAccessReportResponse response = await analyticsAdminServiceClient.RunAccessReportAsync(request);
+            // End snippet
+        }
     }
 }

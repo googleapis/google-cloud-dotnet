@@ -11879,6 +11879,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1beta_generated_AnalyticsAdminService_RunAccessReport_sync",
+      "title": "RunAccessReportRequestObject",
+      "description": "Snippet for RunAccessReport",
+      "file": "AnalyticsAdminServiceClient.RunAccessReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAccessReport",
+        "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.RunAccessReport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.RunAccessReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Beta.RunAccessReportResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "RunAccessReport",
+          "fullName": "google.analytics.admin.v1beta.AnalyticsAdminService.RunAccessReport",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1beta.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1beta_generated_AnalyticsAdminService_RunAccessReport_async",
+      "title": "RunAccessReportRequestObjectAsync",
+      "description": "Snippet for RunAccessReportAsync",
+      "file": "AnalyticsAdminServiceClient.RunAccessReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAccessReportAsync",
+        "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient.RunAccessReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Beta.RunAccessReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Beta.RunAccessReportResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Beta.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "RunAccessReport",
+          "fullName": "google.analytics.admin.v1beta.AnalyticsAdminService.RunAccessReport",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1beta.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
