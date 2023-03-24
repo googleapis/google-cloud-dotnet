@@ -4516,6 +4516,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.2.0",
+        "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.3"
       },
       "generator": "micro",

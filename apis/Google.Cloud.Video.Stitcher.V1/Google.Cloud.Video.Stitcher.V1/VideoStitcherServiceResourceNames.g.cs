@@ -235,4 +235,52 @@ namespace Google.Cloud.Video.Stitcher.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateLiveConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListLiveConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetLiveConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcvsv::LiveConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvsv::LiveConfigName LiveConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvsv::LiveConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteLiveConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcvsv::LiveConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvsv::LiveConfigName LiveConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvsv::LiveConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

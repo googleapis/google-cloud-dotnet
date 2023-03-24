@@ -18,6 +18,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -40,7 +41,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 CdnKeyId = "",
             };
             // Make the request
-            CdnKey response = videoStitcherServiceClient.CreateCdnKey(request);
+            Operation<CdnKey, OperationMetadata> response = videoStitcherServiceClient.CreateCdnKey(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateCdnKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -59,7 +76,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 CdnKeyId = "",
             };
             // Make the request
-            CdnKey response = await videoStitcherServiceClient.CreateCdnKeyAsync(request);
+            Operation<CdnKey, OperationMetadata> response = await videoStitcherServiceClient.CreateCdnKeyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -74,7 +107,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             CdnKey cdnKey = new CdnKey();
             string cdnKeyId = "";
             // Make the request
-            CdnKey response = videoStitcherServiceClient.CreateCdnKey(parent, cdnKey, cdnKeyId);
+            Operation<CdnKey, OperationMetadata> response = videoStitcherServiceClient.CreateCdnKey(parent, cdnKey, cdnKeyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateCdnKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -90,7 +139,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             CdnKey cdnKey = new CdnKey();
             string cdnKeyId = "";
             // Make the request
-            CdnKey response = await videoStitcherServiceClient.CreateCdnKeyAsync(parent, cdnKey, cdnKeyId);
+            Operation<CdnKey, OperationMetadata> response = await videoStitcherServiceClient.CreateCdnKeyAsync(parent, cdnKey, cdnKeyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -105,7 +170,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             CdnKey cdnKey = new CdnKey();
             string cdnKeyId = "";
             // Make the request
-            CdnKey response = videoStitcherServiceClient.CreateCdnKey(parent, cdnKey, cdnKeyId);
+            Operation<CdnKey, OperationMetadata> response = videoStitcherServiceClient.CreateCdnKey(parent, cdnKey, cdnKeyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateCdnKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -121,7 +202,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             CdnKey cdnKey = new CdnKey();
             string cdnKeyId = "";
             // Make the request
-            CdnKey response = await videoStitcherServiceClient.CreateCdnKeyAsync(parent, cdnKey, cdnKeyId);
+            Operation<CdnKey, OperationMetadata> response = await videoStitcherServiceClient.CreateCdnKeyAsync(parent, cdnKey, cdnKeyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -504,7 +601,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 CdnKeyName = CdnKeyName.FromProjectLocationCdnKey("[PROJECT]", "[LOCATION]", "[CDN_KEY]"),
             };
             // Make the request
-            videoStitcherServiceClient.DeleteCdnKey(request);
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteCdnKey(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteCdnKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -521,7 +634,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 CdnKeyName = CdnKeyName.FromProjectLocationCdnKey("[PROJECT]", "[LOCATION]", "[CDN_KEY]"),
             };
             // Make the request
-            await videoStitcherServiceClient.DeleteCdnKeyAsync(request);
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteCdnKeyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -534,7 +663,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/cdnKeys/[CDN_KEY]";
             // Make the request
-            videoStitcherServiceClient.DeleteCdnKey(name);
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteCdnKey(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteCdnKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -548,7 +693,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/cdnKeys/[CDN_KEY]";
             // Make the request
-            await videoStitcherServiceClient.DeleteCdnKeyAsync(name);
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteCdnKeyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -561,7 +722,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             CdnKeyName name = CdnKeyName.FromProjectLocationCdnKey("[PROJECT]", "[LOCATION]", "[CDN_KEY]");
             // Make the request
-            videoStitcherServiceClient.DeleteCdnKey(name);
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteCdnKey(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteCdnKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -575,7 +752,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             CdnKeyName name = CdnKeyName.FromProjectLocationCdnKey("[PROJECT]", "[LOCATION]", "[CDN_KEY]");
             // Make the request
-            await videoStitcherServiceClient.DeleteCdnKeyAsync(name);
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteCdnKeyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -592,7 +785,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            CdnKey response = videoStitcherServiceClient.UpdateCdnKey(request);
+            Operation<CdnKey, OperationMetadata> response = videoStitcherServiceClient.UpdateCdnKey(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceUpdateCdnKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -610,7 +819,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            CdnKey response = await videoStitcherServiceClient.UpdateCdnKeyAsync(request);
+            Operation<CdnKey, OperationMetadata> response = await videoStitcherServiceClient.UpdateCdnKeyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -624,7 +849,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             CdnKey cdnKey = new CdnKey();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            CdnKey response = videoStitcherServiceClient.UpdateCdnKey(cdnKey, updateMask);
+            Operation<CdnKey, OperationMetadata> response = videoStitcherServiceClient.UpdateCdnKey(cdnKey, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceUpdateCdnKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -639,7 +880,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             CdnKey cdnKey = new CdnKey();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            CdnKey response = await videoStitcherServiceClient.UpdateCdnKeyAsync(cdnKey, updateMask);
+            Operation<CdnKey, OperationMetadata> response = await videoStitcherServiceClient.UpdateCdnKeyAsync(cdnKey, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1924,9 +2181,26 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SlateId = "",
                 Slate = new Slate(),
+                RequestId = "",
             };
             // Make the request
-            Slate response = videoStitcherServiceClient.CreateSlate(request);
+            Operation<Slate, OperationMetadata> response = videoStitcherServiceClient.CreateSlate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1943,9 +2217,26 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SlateId = "",
                 Slate = new Slate(),
+                RequestId = "",
             };
             // Make the request
-            Slate response = await videoStitcherServiceClient.CreateSlateAsync(request);
+            Operation<Slate, OperationMetadata> response = await videoStitcherServiceClient.CreateSlateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateSlateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1960,7 +2251,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             Slate slate = new Slate();
             string slateId = "";
             // Make the request
-            Slate response = videoStitcherServiceClient.CreateSlate(parent, slate, slateId);
+            Operation<Slate, OperationMetadata> response = videoStitcherServiceClient.CreateSlate(parent, slate, slateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1976,7 +2283,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             Slate slate = new Slate();
             string slateId = "";
             // Make the request
-            Slate response = await videoStitcherServiceClient.CreateSlateAsync(parent, slate, slateId);
+            Operation<Slate, OperationMetadata> response = await videoStitcherServiceClient.CreateSlateAsync(parent, slate, slateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateSlateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1991,7 +2314,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             Slate slate = new Slate();
             string slateId = "";
             // Make the request
-            Slate response = videoStitcherServiceClient.CreateSlate(parent, slate, slateId);
+            Operation<Slate, OperationMetadata> response = videoStitcherServiceClient.CreateSlate(parent, slate, slateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2007,7 +2346,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             Slate slate = new Slate();
             string slateId = "";
             // Make the request
-            Slate response = await videoStitcherServiceClient.CreateSlateAsync(parent, slate, slateId);
+            Operation<Slate, OperationMetadata> response = await videoStitcherServiceClient.CreateSlateAsync(parent, slate, slateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateSlateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2391,7 +2746,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Slate response = videoStitcherServiceClient.UpdateSlate(request);
+            Operation<Slate, OperationMetadata> response = videoStitcherServiceClient.UpdateSlate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceUpdateSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2409,7 +2780,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Slate response = await videoStitcherServiceClient.UpdateSlateAsync(request);
+            Operation<Slate, OperationMetadata> response = await videoStitcherServiceClient.UpdateSlateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateSlateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2423,7 +2810,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             Slate slate = new Slate();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Slate response = videoStitcherServiceClient.UpdateSlate(slate, updateMask);
+            Operation<Slate, OperationMetadata> response = videoStitcherServiceClient.UpdateSlate(slate, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceUpdateSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2438,7 +2841,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             Slate slate = new Slate();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Slate response = await videoStitcherServiceClient.UpdateSlateAsync(slate, updateMask);
+            Operation<Slate, OperationMetadata> response = await videoStitcherServiceClient.UpdateSlateAsync(slate, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateSlateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2454,7 +2873,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 SlateName = SlateName.FromProjectLocationSlate("[PROJECT]", "[LOCATION]", "[SLATE]"),
             };
             // Make the request
-            videoStitcherServiceClient.DeleteSlate(request);
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteSlate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2471,7 +2906,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 SlateName = SlateName.FromProjectLocationSlate("[PROJECT]", "[LOCATION]", "[SLATE]"),
             };
             // Make the request
-            await videoStitcherServiceClient.DeleteSlateAsync(request);
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteSlateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteSlateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2484,7 +2935,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/slates/[SLATE]";
             // Make the request
-            videoStitcherServiceClient.DeleteSlate(name);
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteSlate(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2498,7 +2965,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/slates/[SLATE]";
             // Make the request
-            await videoStitcherServiceClient.DeleteSlateAsync(name);
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteSlateAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteSlateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2511,7 +2994,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             SlateName name = SlateName.FromProjectLocationSlate("[PROJECT]", "[LOCATION]", "[SLATE]");
             // Make the request
-            videoStitcherServiceClient.DeleteSlate(name);
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteSlate(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2525,7 +3024,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             SlateName name = SlateName.FromProjectLocationSlate("[PROJECT]", "[LOCATION]", "[SLATE]");
             // Make the request
-            await videoStitcherServiceClient.DeleteSlateAsync(name);
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteSlateAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteSlateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2706,6 +3221,753 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             LiveSessionName name = LiveSessionName.FromProjectLocationLiveSession("[PROJECT]", "[LOCATION]", "[LIVE_SESSION]");
             // Make the request
             LiveSession response = await videoStitcherServiceClient.GetLiveSessionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLiveConfig</summary>
+        public void CreateLiveConfigRequestObject()
+        {
+            // Snippet: CreateLiveConfig(CreateLiveConfigRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            CreateLiveConfigRequest request = new CreateLiveConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                LiveConfigId = "",
+                LiveConfig = new LiveConfig(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = videoStitcherServiceClient.CreateLiveConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateLiveConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLiveConfigAsync</summary>
+        public async Task CreateLiveConfigRequestObjectAsync()
+        {
+            // Snippet: CreateLiveConfigAsync(CreateLiveConfigRequest, CallSettings)
+            // Additional: CreateLiveConfigAsync(CreateLiveConfigRequest, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateLiveConfigRequest request = new CreateLiveConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                LiveConfigId = "",
+                LiveConfig = new LiveConfig(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = await videoStitcherServiceClient.CreateLiveConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateLiveConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLiveConfig</summary>
+        public void CreateLiveConfig()
+        {
+            // Snippet: CreateLiveConfig(string, LiveConfig, string, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            LiveConfig liveConfig = new LiveConfig();
+            string liveConfigId = "";
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = videoStitcherServiceClient.CreateLiveConfig(parent, liveConfig, liveConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateLiveConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLiveConfigAsync</summary>
+        public async Task CreateLiveConfigAsync()
+        {
+            // Snippet: CreateLiveConfigAsync(string, LiveConfig, string, CallSettings)
+            // Additional: CreateLiveConfigAsync(string, LiveConfig, string, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            LiveConfig liveConfig = new LiveConfig();
+            string liveConfigId = "";
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = await videoStitcherServiceClient.CreateLiveConfigAsync(parent, liveConfig, liveConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateLiveConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLiveConfig</summary>
+        public void CreateLiveConfigResourceNames()
+        {
+            // Snippet: CreateLiveConfig(LocationName, LiveConfig, string, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            LiveConfig liveConfig = new LiveConfig();
+            string liveConfigId = "";
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = videoStitcherServiceClient.CreateLiveConfig(parent, liveConfig, liveConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateLiveConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLiveConfigAsync</summary>
+        public async Task CreateLiveConfigResourceNamesAsync()
+        {
+            // Snippet: CreateLiveConfigAsync(LocationName, LiveConfig, string, CallSettings)
+            // Additional: CreateLiveConfigAsync(LocationName, LiveConfig, string, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            LiveConfig liveConfig = new LiveConfig();
+            string liveConfigId = "";
+            // Make the request
+            Operation<LiveConfig, OperationMetadata> response = await videoStitcherServiceClient.CreateLiveConfigAsync(parent, liveConfig, liveConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LiveConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LiveConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LiveConfig, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateLiveConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LiveConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLiveConfigs</summary>
+        public void ListLiveConfigsRequestObject()
+        {
+            // Snippet: ListLiveConfigs(ListLiveConfigsRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            ListLiveConfigsRequest request = new ListLiveConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LiveConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLiveConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LiveConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LiveConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LiveConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLiveConfigsAsync</summary>
+        public async Task ListLiveConfigsRequestObjectAsync()
+        {
+            // Snippet: ListLiveConfigsAsync(ListLiveConfigsRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListLiveConfigsRequest request = new ListLiveConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LiveConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLiveConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LiveConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LiveConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LiveConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLiveConfigs</summary>
+        public void ListLiveConfigs()
+        {
+            // Snippet: ListLiveConfigs(string, string, int?, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LiveConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLiveConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LiveConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LiveConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LiveConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLiveConfigsAsync</summary>
+        public async Task ListLiveConfigsAsync()
+        {
+            // Snippet: ListLiveConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LiveConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLiveConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LiveConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LiveConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LiveConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLiveConfigs</summary>
+        public void ListLiveConfigsResourceNames()
+        {
+            // Snippet: ListLiveConfigs(LocationName, string, int?, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LiveConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLiveConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LiveConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LiveConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LiveConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLiveConfigsAsync</summary>
+        public async Task ListLiveConfigsResourceNamesAsync()
+        {
+            // Snippet: ListLiveConfigsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> response = videoStitcherServiceClient.ListLiveConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LiveConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLiveConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LiveConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LiveConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LiveConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLiveConfig</summary>
+        public void GetLiveConfigRequestObject()
+        {
+            // Snippet: GetLiveConfig(GetLiveConfigRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            GetLiveConfigRequest request = new GetLiveConfigRequest
+            {
+                LiveConfigName = LiveConfigName.FromProjectLocationLiveConfig("[PROJECT]", "[LOCATION]", "[LIVE_CONFIG]"),
+            };
+            // Make the request
+            LiveConfig response = videoStitcherServiceClient.GetLiveConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLiveConfigAsync</summary>
+        public async Task GetLiveConfigRequestObjectAsync()
+        {
+            // Snippet: GetLiveConfigAsync(GetLiveConfigRequest, CallSettings)
+            // Additional: GetLiveConfigAsync(GetLiveConfigRequest, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetLiveConfigRequest request = new GetLiveConfigRequest
+            {
+                LiveConfigName = LiveConfigName.FromProjectLocationLiveConfig("[PROJECT]", "[LOCATION]", "[LIVE_CONFIG]"),
+            };
+            // Make the request
+            LiveConfig response = await videoStitcherServiceClient.GetLiveConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLiveConfig</summary>
+        public void GetLiveConfig()
+        {
+            // Snippet: GetLiveConfig(string, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/liveConfigs/[LIVE_CONFIG]";
+            // Make the request
+            LiveConfig response = videoStitcherServiceClient.GetLiveConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLiveConfigAsync</summary>
+        public async Task GetLiveConfigAsync()
+        {
+            // Snippet: GetLiveConfigAsync(string, CallSettings)
+            // Additional: GetLiveConfigAsync(string, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/liveConfigs/[LIVE_CONFIG]";
+            // Make the request
+            LiveConfig response = await videoStitcherServiceClient.GetLiveConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLiveConfig</summary>
+        public void GetLiveConfigResourceNames()
+        {
+            // Snippet: GetLiveConfig(LiveConfigName, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            LiveConfigName name = LiveConfigName.FromProjectLocationLiveConfig("[PROJECT]", "[LOCATION]", "[LIVE_CONFIG]");
+            // Make the request
+            LiveConfig response = videoStitcherServiceClient.GetLiveConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLiveConfigAsync</summary>
+        public async Task GetLiveConfigResourceNamesAsync()
+        {
+            // Snippet: GetLiveConfigAsync(LiveConfigName, CallSettings)
+            // Additional: GetLiveConfigAsync(LiveConfigName, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LiveConfigName name = LiveConfigName.FromProjectLocationLiveConfig("[PROJECT]", "[LOCATION]", "[LIVE_CONFIG]");
+            // Make the request
+            LiveConfig response = await videoStitcherServiceClient.GetLiveConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLiveConfig</summary>
+        public void DeleteLiveConfigRequestObject()
+        {
+            // Snippet: DeleteLiveConfig(DeleteLiveConfigRequest, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteLiveConfigRequest request = new DeleteLiveConfigRequest
+            {
+                LiveConfigName = LiveConfigName.FromProjectLocationLiveConfig("[PROJECT]", "[LOCATION]", "[LIVE_CONFIG]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteLiveConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteLiveConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLiveConfigAsync</summary>
+        public async Task DeleteLiveConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteLiveConfigAsync(DeleteLiveConfigRequest, CallSettings)
+            // Additional: DeleteLiveConfigAsync(DeleteLiveConfigRequest, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteLiveConfigRequest request = new DeleteLiveConfigRequest
+            {
+                LiveConfigName = LiveConfigName.FromProjectLocationLiveConfig("[PROJECT]", "[LOCATION]", "[LIVE_CONFIG]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteLiveConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteLiveConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLiveConfig</summary>
+        public void DeleteLiveConfig()
+        {
+            // Snippet: DeleteLiveConfig(string, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/liveConfigs/[LIVE_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteLiveConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteLiveConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLiveConfigAsync</summary>
+        public async Task DeleteLiveConfigAsync()
+        {
+            // Snippet: DeleteLiveConfigAsync(string, CallSettings)
+            // Additional: DeleteLiveConfigAsync(string, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/liveConfigs/[LIVE_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteLiveConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteLiveConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLiveConfig</summary>
+        public void DeleteLiveConfigResourceNames()
+        {
+            // Snippet: DeleteLiveConfig(LiveConfigName, CallSettings)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = VideoStitcherServiceClient.Create();
+            // Initialize request argument(s)
+            LiveConfigName name = LiveConfigName.FromProjectLocationLiveConfig("[PROJECT]", "[LOCATION]", "[LIVE_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = videoStitcherServiceClient.DeleteLiveConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceDeleteLiveConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLiveConfigAsync</summary>
+        public async Task DeleteLiveConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteLiveConfigAsync(LiveConfigName, CallSettings)
+            // Additional: DeleteLiveConfigAsync(LiveConfigName, CancellationToken)
+            // Create client
+            VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LiveConfigName name = LiveConfigName.FromProjectLocationLiveConfig("[PROJECT]", "[LOCATION]", "[LIVE_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteLiveConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteLiveConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

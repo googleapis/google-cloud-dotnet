@@ -19,6 +19,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
     // [START videostitcher_v1_generated_VideoStitcherService_CreateCdnKey_async]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Video.Stitcher.V1;
+    using Google.LongRunning;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedVideoStitcherServiceClientSnippets
@@ -43,7 +44,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 CdnKeyId = "",
             };
             // Make the request
-            CdnKey response = await videoStitcherServiceClient.CreateCdnKeyAsync(request);
+            Operation<CdnKey, OperationMetadata> response = await videoStitcherServiceClient.CreateCdnKeyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceCreateCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
         }
     }
     // [END videostitcher_v1_generated_VideoStitcherService_CreateCdnKey_async]
