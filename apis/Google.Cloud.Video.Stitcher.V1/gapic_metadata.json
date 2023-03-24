@@ -16,6 +16,12 @@
                 "CreateCdnKeyAsync"
               ]
             },
+            "CreateLiveConfig": {
+              "methods": [
+                "CreateLiveConfig",
+                "CreateLiveConfigAsync"
+              ]
+            },
             "CreateLiveSession": {
               "methods": [
                 "CreateLiveSession",
@@ -40,6 +46,12 @@
                 "DeleteCdnKeyAsync"
               ]
             },
+            "DeleteLiveConfig": {
+              "methods": [
+                "DeleteLiveConfig",
+                "DeleteLiveConfigAsync"
+              ]
+            },
             "DeleteSlate": {
               "methods": [
                 "DeleteSlate",
@@ -56,6 +68,12 @@
               "methods": [
                 "GetLiveAdTagDetail",
                 "GetLiveAdTagDetailAsync"
+              ]
+            },
+            "GetLiveConfig": {
+              "methods": [
+                "GetLiveConfig",
+                "GetLiveConfigAsync"
               ]
             },
             "GetLiveSession": {
@@ -98,6 +116,12 @@
               "methods": [
                 "ListLiveAdTagDetails",
                 "ListLiveAdTagDetailsAsync"
+              ]
+            },
+            "ListLiveConfigs": {
+              "methods": [
+                "ListLiveConfigs",
+                "ListLiveConfigsAsync"
               ]
             },
             "ListSlates": {

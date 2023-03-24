@@ -18,6 +18,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_UpdateCdnKey_async]
     using Google.Cloud.Video.Stitcher.V1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
@@ -42,7 +43,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            CdnKey response = await videoStitcherServiceClient.UpdateCdnKeyAsync(request);
+            Operation<CdnKey, OperationMetadata> response = await videoStitcherServiceClient.UpdateCdnKeyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CdnKey, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CdnKey result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CdnKey, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceUpdateCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CdnKey retrievedResult = retrievedResponse.Result;
+            }
         }
     }
     // [END videostitcher_v1_generated_VideoStitcherService_UpdateCdnKey_async]

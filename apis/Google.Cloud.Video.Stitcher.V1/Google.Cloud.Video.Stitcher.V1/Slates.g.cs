@@ -27,16 +27,19 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "Citnb29nbGUvY2xvdWQvdmlkZW8vc3RpdGNoZXIvdjEvc2xhdGVzLnByb3Rv",
             "Eh5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEaH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8iiAEKBVNsYXRlEhEKBG5hbWUYASABKAlCA+BBAxILCgN1cmkYAiABKAk6",
-            "X+pBXAoidmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9TbGF0ZRI2cHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NsYXRlcy97",
-            "c2xhdGV9QnMKImNvbS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjFC",
-            "C1NsYXRlc1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vc3Rp",
-            "dGNoZXIvYXBpdjEvc3RpdGNoZXJwYjtzdGl0Y2hlcnBiYgZwcm90bzM="));
+            "dG8ijQIKBVNsYXRlEhEKBG5hbWUYASABKAlCA+BBAxILCgN1cmkYAiABKAkS",
+            "QQoJZ2FtX3NsYXRlGAMgASgLMi4uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRj",
+            "aGVyLnYxLlNsYXRlLkdhbVNsYXRlGkAKCEdhbVNsYXRlEhkKDG5ldHdvcmtf",
+            "Y29kZRgBIAEoCUID4EECEhkKDGdhbV9zbGF0ZV9pZBgCIAEoA0ID4EEDOl/q",
+            "QVwKInZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vU2xhdGUSNnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zbGF0ZXMve3Ns",
+            "YXRlfUJzCiJjb20uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxQgtT",
+            "bGF0ZXNQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL3N0aXRj",
+            "aGVyL2FwaXYxL3N0aXRjaGVycGI7c3RpdGNoZXJwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.Slate), global::Google.Cloud.Video.Stitcher.V1.Slate.Parser, new[]{ "Name", "Uri" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.Slate), global::Google.Cloud.Video.Stitcher.V1.Slate.Parser, new[]{ "Name", "Uri", "GamSlate" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate), global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate.Parser, new[]{ "NetworkCode", "GamSlateId" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -82,6 +85,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public Slate(Slate other) : this() {
       name_ = other.name_;
       uri_ = other.uri_;
+      gamSlate_ = other.gamSlate_ != null ? other.gamSlate_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -123,6 +127,21 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
     }
 
+    /// <summary>Field number for the "gam_slate" field.</summary>
+    public const int GamSlateFieldNumber = 3;
+    private global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate gamSlate_;
+    /// <summary>
+    /// gam_slate has all the GAM related attributes of slates.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate GamSlate {
+      get { return gamSlate_; }
+      set {
+        gamSlate_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -140,6 +159,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (Name != other.Name) return false;
       if (Uri != other.Uri) return false;
+      if (!object.Equals(GamSlate, other.GamSlate)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,6 +169,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (gamSlate_ != null) hash ^= GamSlate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -175,6 +196,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(18);
         output.WriteString(Uri);
       }
+      if (gamSlate_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(GamSlate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -193,6 +218,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(18);
         output.WriteString(Uri);
       }
+      if (gamSlate_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(GamSlate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -208,6 +237,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (Uri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (gamSlate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GamSlate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -226,6 +258,12 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (other.Uri.Length != 0) {
         Uri = other.Uri;
+      }
+      if (other.gamSlate_ != null) {
+        if (gamSlate_ == null) {
+          GamSlate = new global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate();
+        }
+        GamSlate.MergeFrom(other.GamSlate);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -248,6 +286,13 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           }
           case 18: {
             Uri = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (gamSlate_ == null) {
+              GamSlate = new global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate();
+            }
+            input.ReadMessage(GamSlate);
             break;
           }
         }
@@ -273,10 +318,261 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             Uri = input.ReadString();
             break;
           }
+          case 26: {
+            if (gamSlate_ == null) {
+              GamSlate = new global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate();
+            }
+            input.ReadMessage(GamSlate);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Slate message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// GamSlate object has Google Ad Manager (GAM) related properties for the
+      /// slate.
+      /// </summary>
+      public sealed partial class GamSlate : pb::IMessage<GamSlate>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GamSlate> _parser = new pb::MessageParser<GamSlate>(() => new GamSlate());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GamSlate> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Stitcher.V1.Slate.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GamSlate() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GamSlate(GamSlate other) : this() {
+          networkCode_ = other.networkCode_;
+          gamSlateId_ = other.gamSlateId_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GamSlate Clone() {
+          return new GamSlate(this);
+        }
+
+        /// <summary>Field number for the "network_code" field.</summary>
+        public const int NetworkCodeFieldNumber = 1;
+        private string networkCode_ = "";
+        /// <summary>
+        /// Required. Ad Manager network code to associate with the live config.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NetworkCode {
+          get { return networkCode_; }
+          set {
+            networkCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "gam_slate_id" field.</summary>
+        public const int GamSlateIdFieldNumber = 2;
+        private long gamSlateId_;
+        /// <summary>
+        /// Output only. The identifier generated for the slate by GAM.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long GamSlateId {
+          get { return gamSlateId_; }
+          set {
+            gamSlateId_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GamSlate);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GamSlate other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (NetworkCode != other.NetworkCode) return false;
+          if (GamSlateId != other.GamSlateId) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (NetworkCode.Length != 0) hash ^= NetworkCode.GetHashCode();
+          if (GamSlateId != 0L) hash ^= GamSlateId.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (NetworkCode.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NetworkCode);
+          }
+          if (GamSlateId != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(GamSlateId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (NetworkCode.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NetworkCode);
+          }
+          if (GamSlateId != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(GamSlateId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (NetworkCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkCode);
+          }
+          if (GamSlateId != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(GamSlateId);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GamSlate other) {
+          if (other == null) {
+            return;
+          }
+          if (other.NetworkCode.Length != 0) {
+            NetworkCode = other.NetworkCode;
+          }
+          if (other.GamSlateId != 0L) {
+            GamSlateId = other.GamSlateId;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                NetworkCode = input.ReadString();
+                break;
+              }
+              case 16: {
+                GamSlateId = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                NetworkCode = input.ReadString();
+                break;
+              }
+              case 16: {
+                GamSlateId = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
