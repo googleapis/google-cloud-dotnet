@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google Inc. All Rights Reserved.
+// Copyright 2022 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,38 +16,37 @@ using System.Net;
 using System.Net.Http;
 using Xunit;
 
-namespace Google.Cloud.Storage.V1.Tests
+namespace Google.Cloud.Storage.V1.Tests;
+
+public class RetryHandlerTest
 {
-    public class RetryHandlerTest
+    [Fact]
+    public void IsRetriableResponse_BadGateway()
     {
-        [Fact]
-        public void IsRetriableResponse_BadGateway()
+        var httpResponse = new HttpResponseMessage
         {
-            var httpResponse = new HttpResponseMessage
-            {
-                StatusCode = HttpStatusCode.BadGateway
-            };
-            var actual = RetryHandler.IsRetriableResponse(httpResponse);
-            Assert.True(actual.Result);
-        }
+            StatusCode = HttpStatusCode.BadGateway
+        };
+        var actual = RetryHandler.IsRetriableResponse(httpResponse);
+        Assert.True(actual.Result);
+    }
 
-        [Fact]
-        public void NonRetriableResponse_RequestUriTooLong()
+    [Fact]
+    public void NonRetriableResponse_RequestUriTooLong()
+    {
+        var httpResponse = new HttpResponseMessage
         {
-            var httpResponse = new HttpResponseMessage
-            {
-                StatusCode = HttpStatusCode.RequestUriTooLong
-            };
-            var actual = RetryHandler.IsRetriableResponse(httpResponse);
-            Assert.False(actual.Result);
-        }
+            StatusCode = HttpStatusCode.RequestUriTooLong
+        };
+        var actual = RetryHandler.IsRetriableResponse(httpResponse);
+        Assert.False(actual.Result);
+    }
 
-        [Fact]
-        public void NonRetriableResponse_NoErrorCode()
-        {
-            var httpResponse = new HttpResponseMessage();
-            var actual = RetryHandler.IsRetriableResponse(httpResponse);
-            Assert.False(actual.Result);
-        }
+    [Fact]
+    public void NonRetriableResponse_NoErrorCode()
+    {
+        var httpResponse = new HttpResponseMessage();
+        var actual = RetryHandler.IsRetriableResponse(httpResponse);
+        Assert.False(actual.Result);
     }
 }
