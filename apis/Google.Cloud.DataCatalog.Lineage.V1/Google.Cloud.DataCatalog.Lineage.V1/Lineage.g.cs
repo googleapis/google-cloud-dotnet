@@ -6608,7 +6608,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project and location you want search in.
+    /// Required. The project and location you want search in the format `projects/*/locations/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7649,7 +7649,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project and location where you want to search.
+    /// Required. The project and location you want search in the format `projects/*/locations/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
