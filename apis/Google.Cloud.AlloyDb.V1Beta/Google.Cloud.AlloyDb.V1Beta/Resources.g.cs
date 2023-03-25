@@ -6854,10 +6854,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
 
       /// <summary>
       /// The Availability type of an instance. Potential values:
-      ///   &lt;br>&lt;b>ZONAL&lt;/b>: The instance serves data from only one zone.
-      /// Outages in that zone affect instance availability.
-      ///   &lt;br>&lt;b>REGIONAL&lt;/b>: The instance can serve data from more than one zone
-      ///   in a region (it is highly available).
+      /// - ZONAL: The instance serves data from only one zone. Outages in that
+      /// zone affect instance availability.
+      /// - REGIONAL: The instance can serve data from more than one zone in a
+      /// region (it is highly available).
       /// </summary>
       public enum AvailabilityType {
         /// <summary>
