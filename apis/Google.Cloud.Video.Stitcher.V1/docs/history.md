@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0, released 2023-03-27
+
+### New features
+
+- **BREAKING CHANGE** LRO changes for CdnKey and Slate methods, VodSession changes for ad tracking, and LiveSession changes for live config ([commit 6c65d96](https://github.com/googleapis/google-cloud-dotnet/commit/6c65d964be25a0135294cc66acc5ec904ec782cf))
+
 ## Version 1.1.0, released 2022-11-02
 
 ### New features
