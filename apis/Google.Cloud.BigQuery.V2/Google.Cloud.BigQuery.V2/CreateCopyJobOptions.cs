@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,6 +38,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
 
+        /// <summary>
+        /// Specifies the operation type for the job, if any.
+        /// </summary>
+        public CopyOperationType? OperationType { get; set; }
+
         internal void ModifyRequest(JobConfigurationTableCopy copy)
         {
             if (CreateDisposition != null)
@@ -51,6 +56,10 @@ namespace Google.Cloud.BigQuery.V2
             if (DestinationEncryptionConfiguration != null)
             {
                 copy.DestinationEncryptionConfiguration = DestinationEncryptionConfiguration;
+            }
+            if (OperationType != null)
+            {
+                copy.OperationType = EnumMap.ToApiValue(OperationType.Value);
             }
         }
     }
