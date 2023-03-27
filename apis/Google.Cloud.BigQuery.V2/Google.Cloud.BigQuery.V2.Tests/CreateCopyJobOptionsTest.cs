@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,11 +27,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 CreateDisposition = CreateDisposition.CreateIfNeeded,
                 WriteDisposition = WriteDisposition.WriteIfEmpty,
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
+                OperationType = CopyOperationType.Clone
             };
             JobConfigurationTableCopy request = new JobConfigurationTableCopy();
             options.ModifyRequest(request);
             Assert.Equal("CREATE_IF_NEEDED", request.CreateDisposition);
             Assert.Equal("WRITE_EMPTY", request.WriteDisposition);
+            Assert.Equal("CLONE", request.OperationType);
             Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", request.DestinationEncryptionConfiguration.KmsKeyName);
         }        
     }
