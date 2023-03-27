@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2023-03-27
+
+### New features
+
+- Add request_source field and update formatting ([commit c620f61](https://github.com/googleapis/google-cloud-dotnet/commit/c620f612d1634db4d75dbe7efcd03e4abc473f6e))
+
 ## Version 1.0.0, released 2022-09-15
 
 No API surface changes; just dependency updates and promotion to GA.
