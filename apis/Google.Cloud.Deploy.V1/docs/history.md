@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.3.0, released 2023-03-27
+
+### New features
+
+- Added supported for Cloud Deploy Progressive Deployment Strategy ([commit 1b6adf3](https://github.com/googleapis/google-cloud-dotnet/commit/1b6adf30328422af2ebbf0a20d9b583d845a4915))
+
+### Deprecations
+
+- TYPE_RENDER_STATUSES_CHANGE is deprecated, use RELEASE_RENDER log type instead ([commit 1b6adf3](https://github.com/googleapis/google-cloud-dotnet/commit/1b6adf30328422af2ebbf0a20d9b583d845a4915))
+
 ## Version 2.2.0, released 2023-01-19
 
 ### New features
