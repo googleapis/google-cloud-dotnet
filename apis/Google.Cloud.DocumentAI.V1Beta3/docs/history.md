@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta10, released 2023-03-27
+
+### New features
+
+- Add ImportProcessorVersion in v1beta3 ([commit e54a307](https://github.com/googleapis/google-cloud-dotnet/commit/e54a307315fb97918527cb185d7f199ed4e557ab))
+
 ## Version 2.0.0-beta09, released 2023-03-20
 
 ### New features
