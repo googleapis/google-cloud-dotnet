@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.0.0-alpha07, released 2023-03-27
+
+### New features
+
+- Add account-level binding for the`RunAccessReport` method (example: /v1alpha/accounts/1234567:runAccessReport) ([commit 94adeed](https://github.com/googleapis/google-cloud-dotnet/commit/94adeed8d5afba8d537ec2787f1bee54d7ab271f))
+- Add `GetEnhancedMeasurementSettings`, `UpdateEnhancedMeasurementSettings` methods to the Admin API v1alpha ([commit 94adeed](https://github.com/googleapis/google-cloud-dotnet/commit/94adeed8d5afba8d537ec2787f1bee54d7ab271f))
+- Add `CreateConnectedSiteTag`, `DeleteConnectedSiteTag`, `ListConnectedSiteTags` methods to the Admin API v1alpha ([commit 94adeed](https://github.com/googleapis/google-cloud-dotnet/commit/94adeed8d5afba8d537ec2787f1bee54d7ab271f))
+- Add `EnhancedMeasurementSettings`, `ConnectedSiteTag` resource types to the Admin API v1alpha ([commit 94adeed](https://github.com/googleapis/google-cloud-dotnet/commit/94adeed8d5afba8d537ec2787f1bee54d7ab271f))
+- Add `GetEnhancedMeasurementSettingsRequest`, ([commit 94adeed](https://github.com/googleapis/google-cloud-dotnet/commit/94adeed8d5afba8d537ec2787f1bee54d7ab271f))
+- Add `ENHANCED_MEASUREMENT_SETTINGS` option to the `ChangeHistoryResourceType` enum ([commit 94adeed](https://github.com/googleapis/google-cloud-dotnet/commit/94adeed8d5afba8d537ec2787f1bee54d7ab271f))
+- Add `enhanced_measurement_settings` option to the `ChangeHistoryResource.resource` oneof field ([commit 94adeed](https://github.com/googleapis/google-cloud-dotnet/commit/94adeed8d5afba8d537ec2787f1bee54d7ab271f))
+- Add `intraday_export_enabled` field to the `BigQueryLink` resource ([commit 94adeed](https://github.com/googleapis/google-cloud-dotnet/commit/94adeed8d5afba8d537ec2787f1bee54d7ab271f))
+
 ## Version 2.0.0-alpha06, released 2023-02-21
 
 ### New features
