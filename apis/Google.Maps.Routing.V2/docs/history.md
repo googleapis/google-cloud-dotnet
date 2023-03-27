@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2023-03-27
+
+### New features
+
+- **BREAKING CHANGE** Moved speed in SpeedReadingInterval into a oneof speed_type, this is a breaking change for Go client libraries ([commit 9732e20](https://github.com/googleapis/google-cloud-dotnet/commit/9732e20cc7b62eb0a19b2f5ea5598c7f6fcbff6e))
+
+### Documentation improvements
+
+- Update proto comments to contain concrete references to other proto messages ([commit 9732e20](https://github.com/googleapis/google-cloud-dotnet/commit/9732e20cc7b62eb0a19b2f5ea5598c7f6fcbff6e))
+
 ## Version 1.0.0-beta08, released 2023-03-20
 
 ### New features
