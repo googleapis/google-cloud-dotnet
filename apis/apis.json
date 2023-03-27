@@ -1305,7 +1305,7 @@
     },
     {
       "id": "Google.Cloud.DataCatalog.Lineage.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Data Lineage",
       "productUrl": "https://cloud.google.com/data-catalog/docs/concepts/about-data-lineage",
@@ -1316,7 +1316,9 @@
         "data"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.3.1",
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.5"
       },
       "generator": "micro",
       "protoPath": "google/cloud/datacatalog/lineage/v1",
