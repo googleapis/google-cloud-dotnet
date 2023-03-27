@@ -770,7 +770,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.DataPolicies.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BigQuery Data Policy",
       "productUrl": "https://cloud.google.com/bigquery/docs/data-governance",
@@ -780,7 +780,9 @@
         "policies"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.3.1",
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Grpc.Core": "2.46.5"
       },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/datapolicies/v1",
