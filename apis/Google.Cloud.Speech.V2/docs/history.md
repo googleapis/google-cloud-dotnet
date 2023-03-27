@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2023-03-27
+
+### New features
+
+- Add support for BatchRecognize ([commit 406087a](https://github.com/googleapis/google-cloud-dotnet/commit/406087ac4d57c8364326616b38ffbed9254e33e9))
+
 ## Version 1.0.0-beta03, released 2023-01-19
 
 ### New features
