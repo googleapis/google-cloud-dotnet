@@ -27,7 +27,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "CjFnb29nbGUvY2xvdWQvdmlkZW8vc3RpdGNoZXIvdjEvbGl2ZV9jb25maWdz",
             "LnByb3RvEh5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEaH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90byLMBgoK",
+            "Y2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90byKOBgoK",
             "TGl2ZUNvbmZpZxIRCgRuYW1lGAEgASgJQgPgQQMSFwoKc291cmNlX3VyaRgC",
             "IAEoCUID4EECEhIKCmFkX3RhZ191cmkYAyABKAkSRgoPZ2FtX2xpdmVfY29u",
             "ZmlnGAQgASgLMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkdh",
@@ -39,27 +39,26 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "aW5nX3BvbGljeRgIIAEoDjI6Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hl",
             "ci52MS5MaXZlQ29uZmlnLlN0aXRjaGluZ1BvbGljeRJHCg9wcmVmZXRjaF9j",
             "b25maWcYCiABKAsyLi5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEu",
-            "UHJlZmV0Y2hDb25maWcSPAoZZGVmYXVsdF9hZF9icmVha19kdXJhdGlvbhgL",
-            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJFCgVTdGF0ZRIVChFT",
-            "VEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIM",
-            "CghERUxFVElORxADIlUKD1N0aXRjaGluZ1BvbGljeRIgChxTVElUQ0hJTkdf",
-            "UE9MSUNZX1VOU1BFQ0lGSUVEEAASDwoLQ1VUX0NVUlJFTlQQARIPCgtDT01Q",
-            "TEVURV9BRBACOm/qQWwKJ3ZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20v",
-            "TGl2ZUNvbmZpZxJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2xpdmVDb25maWdzL3tsaXZlX2NvbmZpZ30iZgoOUHJlZmV0Y2hD",
-            "b25maWcSFAoHZW5hYmxlZBgBIAEoCEID4EECEj4KG2luaXRpYWxfYWRfcmVx",
-            "dWVzdF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "biJhCg1HYW1MaXZlQ29uZmlnEhkKDG5ldHdvcmtfY29kZRgBIAEoCUID4EEC",
-            "EhYKCWFzc2V0X2tleRgCIAEoCUID4EEDEh0KEGN1c3RvbV9hc3NldF9rZXkY",
-            "AyABKAlCA+BBAypBCgpBZFRyYWNraW5nEhsKF0FEX1RSQUNLSU5HX1VOU1BF",
-            "Q0lGSUVEEAASCgoGQ0xJRU5UEAESCgoGU0VSVkVSEAJCeAoiY29tLmdvb2ds",
-            "ZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUIQTGl2ZUNvbmZpZ3NQcm90b1AB",
-            "Wj5jbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL3N0aXRjaGVyL2FwaXYxL3N0",
-            "aXRjaGVycGI7c3RpdGNoZXJwYmIGcHJvdG8z"));
+            "UHJlZmV0Y2hDb25maWciRQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABIMCghDUkVBVElORxABEgkKBVJFQURZEAISDAoIREVMRVRJTkcQAyJVCg9T",
+            "dGl0Y2hpbmdQb2xpY3kSIAocU1RJVENISU5HX1BPTElDWV9VTlNQRUNJRklF",
+            "RBAAEg8KC0NVVF9DVVJSRU5UEAESDwoLQ09NUExFVEVfQUQQAjpv6kFsCid2",
+            "aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xpdmVDb25maWcSQXByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9saXZlQ29uZmln",
+            "cy97bGl2ZV9jb25maWd9ImYKDlByZWZldGNoQ29uZmlnEhQKB2VuYWJsZWQY",
+            "ASABKAhCA+BBAhI+Chtpbml0aWFsX2FkX3JlcXVlc3RfZHVyYXRpb24YAiAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iYQoNR2FtTGl2ZUNvbmZp",
+            "ZxIZCgxuZXR3b3JrX2NvZGUYASABKAlCA+BBAhIWCglhc3NldF9rZXkYAiAB",
+            "KAlCA+BBAxIdChBjdXN0b21fYXNzZXRfa2V5GAMgASgJQgPgQQMqQQoKQWRU",
+            "cmFja2luZxIbChdBRF9UUkFDS0lOR19VTlNQRUNJRklFRBAAEgoKBkNMSUVO",
+            "VBABEgoKBlNFUlZFUhACQngKImNvbS5nb29nbGUuY2xvdWQudmlkZW8uc3Rp",
+            "dGNoZXIudjFCEExpdmVDb25maWdzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby92aWRlby9zdGl0Y2hlci9hcGl2MS9zdGl0Y2hlcnBiO3N0aXRjaGVy",
+            "cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Video.Stitcher.V1.AdTracking), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveConfig), global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Parser, new[]{ "Name", "SourceUri", "AdTagUri", "GamLiveConfig", "State", "AdTracking", "DefaultSlate", "StitchingPolicy", "PrefetchConfig", "DefaultAdBreakDuration" }, null, new[]{ typeof(global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Types.State), typeof(global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Types.StitchingPolicy) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveConfig), global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Parser, new[]{ "Name", "SourceUri", "AdTagUri", "GamLiveConfig", "State", "AdTracking", "DefaultSlate", "StitchingPolicy", "PrefetchConfig" }, null, new[]{ typeof(global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Types.State), typeof(global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Types.StitchingPolicy) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.PrefetchConfig), global::Google.Cloud.Video.Stitcher.V1.PrefetchConfig.Parser, new[]{ "Enabled", "InitialAdRequestDuration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GamLiveConfig), global::Google.Cloud.Video.Stitcher.V1.GamLiveConfig.Parser, new[]{ "NetworkCode", "AssetKey", "CustomAssetKey" }, null, null, null, null)
           }));
@@ -137,7 +136,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       defaultSlate_ = other.defaultSlate_;
       stitchingPolicy_ = other.stitchingPolicy_;
       prefetchConfig_ = other.prefetchConfig_ != null ? other.prefetchConfig_.Clone() : null;
-      defaultAdBreakDuration_ = other.defaultAdBreakDuration_ != null ? other.defaultAdBreakDuration_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -290,23 +288,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
     }
 
-    /// <summary>Field number for the "default_ad_break_duration" field.</summary>
-    public const int DefaultAdBreakDurationFieldNumber = 11;
-    private global::Google.Protobuf.WellKnownTypes.Duration defaultAdBreakDuration_;
-    /// <summary>
-    /// The default ad pod duration in seconds that will be requested when a
-    /// cue-out does not specify a duration.
-    /// The default value of this field is 30s.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Duration DefaultAdBreakDuration {
-      get { return defaultAdBreakDuration_; }
-      set {
-        defaultAdBreakDuration_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -331,7 +312,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (DefaultSlate != other.DefaultSlate) return false;
       if (StitchingPolicy != other.StitchingPolicy) return false;
       if (!object.Equals(PrefetchConfig, other.PrefetchConfig)) return false;
-      if (!object.Equals(DefaultAdBreakDuration, other.DefaultAdBreakDuration)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -348,7 +328,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (DefaultSlate.Length != 0) hash ^= DefaultSlate.GetHashCode();
       if (StitchingPolicy != global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Types.StitchingPolicy.Unspecified) hash ^= StitchingPolicy.GetHashCode();
       if (prefetchConfig_ != null) hash ^= PrefetchConfig.GetHashCode();
-      if (defaultAdBreakDuration_ != null) hash ^= DefaultAdBreakDuration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -403,10 +382,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(PrefetchConfig);
       }
-      if (defaultAdBreakDuration_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(DefaultAdBreakDuration);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -453,10 +428,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(PrefetchConfig);
       }
-      if (defaultAdBreakDuration_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(DefaultAdBreakDuration);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -493,9 +464,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (prefetchConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrefetchConfig);
-      }
-      if (defaultAdBreakDuration_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultAdBreakDuration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -541,12 +509,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           PrefetchConfig = new global::Google.Cloud.Video.Stitcher.V1.PrefetchConfig();
         }
         PrefetchConfig.MergeFrom(other.PrefetchConfig);
-      }
-      if (other.defaultAdBreakDuration_ != null) {
-        if (defaultAdBreakDuration_ == null) {
-          DefaultAdBreakDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
-        }
-        DefaultAdBreakDuration.MergeFrom(other.DefaultAdBreakDuration);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -605,13 +567,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             input.ReadMessage(PrefetchConfig);
             break;
           }
-          case 90: {
-            if (defaultAdBreakDuration_ == null) {
-              DefaultAdBreakDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
-            }
-            input.ReadMessage(DefaultAdBreakDuration);
-            break;
-          }
         }
       }
     #endif
@@ -667,13 +622,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
               PrefetchConfig = new global::Google.Cloud.Video.Stitcher.V1.PrefetchConfig();
             }
             input.ReadMessage(PrefetchConfig);
-            break;
-          }
-          case 90: {
-            if (defaultAdBreakDuration_ == null) {
-              DefaultAdBreakDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
-            }
-            input.ReadMessage(DefaultAdBreakDuration);
             break;
           }
         }
