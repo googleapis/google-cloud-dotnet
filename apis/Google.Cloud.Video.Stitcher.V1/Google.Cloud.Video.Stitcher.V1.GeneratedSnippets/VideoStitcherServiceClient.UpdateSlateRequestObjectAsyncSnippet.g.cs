@@ -17,6 +17,7 @@
 namespace Google.Cloud.Video.Stitcher.V1.Snippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_UpdateSlate_async]
+    using Google.Cloud.Common;
     using Google.Cloud.Video.Stitcher.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;

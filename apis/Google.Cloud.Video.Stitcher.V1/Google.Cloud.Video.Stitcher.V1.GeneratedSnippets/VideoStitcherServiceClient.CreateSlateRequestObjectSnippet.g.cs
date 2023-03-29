@@ -18,6 +18,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_CreateSlate_sync]
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Common;
     using Google.Cloud.Video.Stitcher.V1;
     using Google.LongRunning;
 
