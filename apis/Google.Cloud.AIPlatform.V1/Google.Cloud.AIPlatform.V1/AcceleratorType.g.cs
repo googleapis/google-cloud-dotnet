@@ -46,7 +46,6 @@ namespace Google.Cloud.AIPlatform.V1 {
   #region Enums
   /// <summary>
   /// Represents a hardware accelerator type.
-  /// NEXT ID: 11.
   /// </summary>
   public enum AcceleratorType {
     /// <summary>
