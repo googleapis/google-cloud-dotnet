@@ -107,12 +107,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             "ZGRyZXNzQ29uZmlndXJhdGlvbhIZChVXT1JLRVJfSVBfVU5TUEVDSUZJRUQQ",
             "ABIUChBXT1JLRVJfSVBfUFVCTElDEAESFQoRV09SS0VSX0lQX1BSSVZBVEUQ",
             "AipMCgtTaHVmZmxlTW9kZRIcChhTSFVGRkxFX01PREVfVU5TUEVDSUZJRUQQ",
-            "ABIMCghWTV9CQVNFRBABEhEKDVNFUlZJQ0VfQkFTRUQQAkLVAQobY29tLmdv",
-            "b2dsZS5kYXRhZmxvdy52MWJldGEzQhBFbnZpcm9ubWVudFByb3RvUAFaP2dv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YWZsb3cv",
-            "djFiZXRhMztkYXRhZmxvd6oCHUdvb2dsZS5DbG91ZC5EYXRhZmxvdy5WMUJl",
-            "dGEzygIdR29vZ2xlXENsb3VkXERhdGFmbG93XFYxYmV0YTPqAiBHb29nbGU6",
-            "OkNsb3VkOjpEYXRhZmxvdzo6VjFiZXRhM2IGcHJvdG8z"));
+            "ABIMCghWTV9CQVNFRBABEhEKDVNFUlZJQ0VfQkFTRUQQAkLTAQobY29tLmdv",
+            "b2dsZS5kYXRhZmxvdy52MWJldGEzQhBFbnZpcm9ubWVudFByb3RvUAFaPWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGF0YWZsb3cvYXBpdjFiZXRhMy9kYXRhZmxv",
+            "d3BiO2RhdGFmbG93cGKqAh1Hb29nbGUuQ2xvdWQuRGF0YWZsb3cuVjFCZXRh",
+            "M8oCHUdvb2dsZVxDbG91ZFxEYXRhZmxvd1xWMWJldGEz6gIgR29vZ2xlOjpD",
+            "bG91ZDo6RGF0YWZsb3c6OlYxYmV0YTNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataflow.V1Beta3.JobType), typeof(global::Google.Cloud.Dataflow.V1Beta3.FlexResourceSchedulingGoal), typeof(global::Google.Cloud.Dataflow.V1Beta3.TeardownPolicy), typeof(global::Google.Cloud.Dataflow.V1Beta3.DefaultPackageSet), typeof(global::Google.Cloud.Dataflow.V1Beta3.AutoscalingAlgorithm), typeof(global::Google.Cloud.Dataflow.V1Beta3.WorkerIPAddressConfiguration), typeof(global::Google.Cloud.Dataflow.V1Beta3.ShuffleMode), }, null, new pbr::GeneratedClrTypeInfo[] {

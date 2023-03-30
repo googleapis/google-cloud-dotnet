@@ -42,9 +42,9 @@ namespace Google.Cloud.ServiceControl.V1 {
             "rAISHwoaU0VSVklDRV9TVEFUVVNfVU5BVkFJTEFCTEUQrQISHwoaQklMTElO",
             "R19TVEFUVVNfVU5BVkFJTEFCTEUQrgISLwoqQ0xPVURfUkVTT1VSQ0VfTUFO",
             "QUdFUl9CQUNLRU5EX1VOQVZBSUxBQkxFELECQuoBCiBjb20uZ29vZ2xlLmFw",
-            "aS5zZXJ2aWNlY29udHJvbC52MUIPQ2hlY2tFcnJvclByb3RvUAFaSmdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYXBpL3NlcnZpY2Vj",
-            "b250cm9sL3YxO3NlcnZpY2Vjb250cm9s+AEBqgIeR29vZ2xlLkNsb3VkLlNl",
+            "aS5zZXJ2aWNlY29udHJvbC52MUIPQ2hlY2tFcnJvclByb3RvUAFaSmNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vc2VydmljZWNvbnRyb2wvYXBpdjEvc2VydmljZWNv",
+            "bnRyb2xwYjtzZXJ2aWNlY29udHJvbHBi+AEBqgIeR29vZ2xlLkNsb3VkLlNl",
             "cnZpY2VDb250cm9sLlYxygIeR29vZ2xlXENsb3VkXFNlcnZpY2VDb250cm9s",
             "XFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VydmljZUNvbnRyb2w6OlYxYgZwcm90",
             "bzM="));

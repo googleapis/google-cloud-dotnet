@@ -96,10 +96,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             "a2Vuc19wZXJfcHJvamVjdF9wZXJfaG91chgFIAEoCzIxLmdvb2dsZS5hbmFs",
             "eXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nlc3NRdW90YVN0YXR1cyI4ChFBY2Nl",
             "c3NRdW90YVN0YXR1cxIQCghjb25zdW1lZBgBIAEoBRIRCglyZW1haW5pbmcY",
-            "AiABKAVCfgoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYUIR",
-            "QWNjZXNzUmVwb3J0UHJvdG9QAVpDZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvYWRtaW4vdjFhbHBoYTthZG1pbmIG",
-            "cHJvdG8z"));
+            "AiABKAVCeQoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYUIR",
+            "QWNjZXNzUmVwb3J0UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9hbmFs",
+            "eXRpY3MvYWRtaW4vYXBpdjFhbHBoYS9hZG1pbnBiO2FkbWlucGJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

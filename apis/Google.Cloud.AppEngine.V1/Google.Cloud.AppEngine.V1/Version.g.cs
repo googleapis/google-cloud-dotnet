@@ -132,11 +132,11 @@ namespace Google.Cloud.AppEngine.V1 {
             "T1VORF9TRVJWSUNFX0NIQU5ORUxfUFJFU0VOQ0UQBxIaChZJTkJPVU5EX1NF",
             "UlZJQ0VfV0FSTVVQEAkqSQoNU2VydmluZ1N0YXR1cxIeChpTRVJWSU5HX1NU",
             "QVRVU19VTlNQRUNJRklFRBAAEgsKB1NFUlZJTkcQARILCgdTVE9QUEVEEAJC",
-            "vgEKF2NvbS5nb29nbGUuYXBwZW5naW5lLnYxQgxWZXJzaW9uUHJvdG9QAVo8",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hcHBlbmdp",
-            "bmUvdjE7YXBwZW5naW5lqgIZR29vZ2xlLkNsb3VkLkFwcEVuZ2luZS5WMcoC",
-            "GUdvb2dsZVxDbG91ZFxBcHBFbmdpbmVcVjHqAhxHb29nbGU6OkNsb3VkOjpB",
-            "cHBFbmdpbmU6OlYxYgZwcm90bzM="));
+            "vQEKF2NvbS5nb29nbGUuYXBwZW5naW5lLnYxQgxWZXJzaW9uUHJvdG9QAVo7",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9hcHBlbmdpbmUvYXBpdjEvYXBwZW5naW5l",
+            "cGI7YXBwZW5naW5lcGKqAhlHb29nbGUuQ2xvdWQuQXBwRW5naW5lLlYxygIZ",
+            "R29vZ2xlXENsb3VkXEFwcEVuZ2luZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkFw",
+            "cEVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.AppEngine.V1.AppYamlReflection.Descriptor, global::Google.Cloud.AppEngine.V1.DeployReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AppEngine.V1.InboundServiceType), typeof(global::Google.Cloud.AppEngine.V1.ServingStatus), }, null, new pbr::GeneratedClrTypeInfo[] {

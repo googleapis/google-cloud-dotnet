@@ -144,10 +144,10 @@ namespace Google.Area120.Tables.V1Alpha1 {
             "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kcml2ZS5yZWFkb25seSxodHRw",
             "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyxodHRw",
             "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cy5yZWFk",
-            "b25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3RhYmxlc0J5",
+            "b25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3RhYmxlc0J1",
             "CiJjb20uZ29vZ2xlLmFyZWExMjAudGFibGVzLnYxYWxwaGExQgtUYWJsZXNQ",
-            "cm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2FyZWExMjAvdGFibGVzL3YxYWxwaGExO3RhYmxlc2IGcHJvdG8z"));
+            "cm90b1ABWkBjbG91ZC5nb29nbGUuY29tL2dvL2FyZWExMjAvdGFibGVzL2Fw",
+            "aXYxYWxwaGExL3RhYmxlc3BiO3RhYmxlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Area120.Tables.V1Alpha1.View), }, null, new pbr::GeneratedClrTypeInfo[] {
