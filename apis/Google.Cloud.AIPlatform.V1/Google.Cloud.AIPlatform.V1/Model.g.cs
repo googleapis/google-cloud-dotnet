@@ -87,16 +87,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b3VkLmFpcGxhdGZvcm0udjEuRW52VmFyQgPgQQUSNAoFcG9ydHMYBSADKAsy",
             "IC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qb3J0QgPgQQUSGgoNcHJl",
             "ZGljdF9yb3V0ZRgGIAEoCUID4EEFEhkKDGhlYWx0aF9yb3V0ZRgHIAEoCUID",
-            "4EEFIh4KBFBvcnQSFgoOY29udGFpbmVyX3BvcnQYAyABKAUiuwEKD01vZGVs",
+            "4EEFIh4KBFBvcnQSFgoOY29udGFpbmVyX3BvcnQYAyABKAUi2wEKD01vZGVs",
             "U291cmNlSW5mbxJQCgtzb3VyY2VfdHlwZRgBIAEoDjI7Lmdvb2dsZS5jbG91",
             "ZC5haXBsYXRmb3JtLnYxLk1vZGVsU291cmNlSW5mby5Nb2RlbFNvdXJjZVR5",
-            "cGUiVgoPTW9kZWxTb3VyY2VUeXBlEiEKHU1PREVMX1NPVVJDRV9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASCgoGQVVUT01MEAESCgoGQ1VTVE9NEAISCAoEQlFNTBAD",
-            "QsgBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCCk1vZGVsUHJv",
-            "dG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2Fp",
-            "cGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0",
-            "Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xl",
-            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "cGUSDAoEY29weRgCIAEoCCJoCg9Nb2RlbFNvdXJjZVR5cGUSIQodTU9ERUxf",
+            "U09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZBVVRPTUwQARIKCgZDVVNU",
+            "T00QAhIICgRCUU1MEAMSEAoMTU9ERUxfR0FSREVOEARCyAEKHmNvbS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIKTW9kZWxQcm90b1ABWj5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
+            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
+            "YXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -106,7 +107,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictSchemata), global::Google.Cloud.AIPlatform.V1.PredictSchemata.Parser, new[]{ "InstanceSchemaUri", "ParametersSchemaUri", "PredictionSchemaUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelContainerSpec), global::Google.Cloud.AIPlatform.V1.ModelContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env", "Ports", "PredictRoute", "HealthRoute" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Port), global::Google.Cloud.AIPlatform.V1.Port.Parser, new[]{ "ContainerPort" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelSourceInfo), global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Parser, new[]{ "SourceType" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Types.ModelSourceType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelSourceInfo), global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Parser, new[]{ "SourceType", "Copy" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Types.ModelSourceType) }, null, null)
           }));
     }
     #endregion
@@ -3230,6 +3231,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelSourceInfo(ModelSourceInfo other) : this() {
       sourceType_ = other.sourceType_;
+      copy_ = other.copy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3254,6 +3256,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "copy" field.</summary>
+    public const int CopyFieldNumber = 2;
+    private bool copy_;
+    /// <summary>
+    /// If this Model is copy of another Model. If true then
+    /// [source_type][google.cloud.aiplatform.v1.ModelSourceInfo.source_type]
+    /// pertains to the original.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Copy {
+      get { return copy_; }
+      set {
+        copy_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3270,6 +3289,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (SourceType != other.SourceType) return false;
+      if (Copy != other.Copy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3278,6 +3298,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (SourceType != global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Types.ModelSourceType.Unspecified) hash ^= SourceType.GetHashCode();
+      if (Copy != false) hash ^= Copy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3300,6 +3321,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) SourceType);
       }
+      if (Copy != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Copy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3314,6 +3339,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) SourceType);
       }
+      if (Copy != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Copy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3326,6 +3355,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int size = 0;
       if (SourceType != global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Types.ModelSourceType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SourceType);
+      }
+      if (Copy != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3341,6 +3373,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.SourceType != global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Types.ModelSourceType.Unspecified) {
         SourceType = other.SourceType;
+      }
+      if (other.Copy != false) {
+        Copy = other.Copy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3361,6 +3396,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             SourceType = (global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Types.ModelSourceType) input.ReadEnum();
             break;
           }
+          case 16: {
+            Copy = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -3378,6 +3417,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             break;
           case 8: {
             SourceType = (global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Types.ModelSourceType) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            Copy = input.ReadBool();
             break;
           }
         }
@@ -3410,6 +3453,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The Model is registered and sync'ed from BigQuery ML.
         /// </summary>
         [pbr::OriginalName("BQML")] Bqml = 3,
+        /// <summary>
+        /// The Model is saved or tuned from Model Garden.
+        /// </summary>
+        [pbr::OriginalName("MODEL_GARDEN")] ModelGarden = 4,
       }
 
     }

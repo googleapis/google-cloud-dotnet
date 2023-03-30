@@ -3520,10 +3520,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesRequest.Types.EntityTypeSpec> entityTypeSpecs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesRequest.Types.EntityTypeSpec>();
     /// <summary>
     /// Required. Specifies EntityType grouping Features to read values of and
-    /// settings. Each EntityType referenced in
-    /// [BatchReadFeatureValuesRequest.entity_type_specs] must have a column
-    /// specifying entity IDs in the EntityType in
-    /// [BatchReadFeatureValuesRequest.request][] .
+    /// settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
