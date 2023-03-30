@@ -107,12 +107,12 @@ namespace Google.Maps.Routing.V2 {
             "bWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QaKi5n",
             "b29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4RWxlbWVudCIwgtPk",
             "kwIqIiUvZGlzdGFuY2VNYXRyaXgvdjI6Y29tcHV0ZVJvdXRlTWF0cml4OgEq",
-            "MAEaGMpBFXJvdXRlcy5nb29nbGVhcGlzLmNvbULKAQoaY29tLmdvb2dsZS5t",
-            "YXBzLnJvdXRpbmcudjJCElJvdXRlc1NlcnZpY2VQcm90b1ABWj1nb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21hcHMvcm91dGluZy92",
-            "Mjtyb3V0aW5n+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYy",
-            "ygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91",
-            "dGluZzo6VjJiBnByb3RvMw=="));
+            "MAEaGMpBFXJvdXRlcy5nb29nbGVhcGlzLmNvbULHAQoaY29tLmdvb2dsZS5t",
+            "YXBzLnJvdXRpbmcudjJCElJvdXRlc1NlcnZpY2VQcm90b1ABWjpjbG91ZC5n",
+            "b29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91",
+            "dGluZ3Bi+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIW",
+            "R29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGlu",
+            "Zzo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.Routing.V2.FallbackInfoReflection.Descriptor, global::Google.Maps.Routing.V2.GeocodingResultsReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteReflection.Descriptor, global::Google.Maps.Routing.V2.RouteModifiersReflection.Descriptor, global::Google.Maps.Routing.V2.RouteTravelModeReflection.Descriptor, global::Google.Maps.Routing.V2.RoutingPreferenceReflection.Descriptor, global::Google.Maps.Routing.V2.UnitsReflection.Descriptor, global::Google.Maps.Routing.V2.WaypointReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteMatrixElementCondition), }, null, new pbr::GeneratedClrTypeInfo[] {

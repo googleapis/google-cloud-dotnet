@@ -75,14 +75,14 @@ namespace Google.Maps.AddressValidation.V1 {
             "YWxpZGF0aW9uRmVlZGJhY2tSZXF1ZXN0GkMuZ29vZ2xlLm1hcHMuYWRkcmVz",
             "c3ZhbGlkYXRpb24udjEuUHJvdmlkZVZhbGlkYXRpb25GZWVkYmFja1Jlc3Bv",
             "bnNlIiiC0+STAiIiHS92MTpwcm92aWRlVmFsaWRhdGlvbkZlZWRiYWNrOgEq",
-            "GiPKQSBhZGRyZXNzdmFsaWRhdGlvbi5nb29nbGVhcGlzLmNvbUKTAgokY29t",
+            "GiPKQSBhZGRyZXNzdmFsaWRhdGlvbi5nb29nbGVhcGlzLmNvbUKaAgokY29t",
             "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxQh1BZGRyZXNzVmFs",
-            "aWRhdGlvblNlcnZpY2VQcm90b1ABWlFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL21hcHMvYWRkcmVzc3ZhbGlkYXRpb24vdjE7YWRk",
-            "cmVzc3ZhbGlkYXRpb274AQGiAgdHTVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRk",
-            "cmVzc1ZhbGlkYXRpb24uVjHKAiBHb29nbGVcTWFwc1xBZGRyZXNzVmFsaWRh",
-            "dGlvblxWMeoCI0dvb2dsZTo6TWFwczo6QWRkcmVzc1ZhbGlkYXRpb246OlYx",
-            "YgZwcm90bzM="));
+            "aWRhdGlvblNlcnZpY2VQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dvL21h",
+            "cHMvYWRkcmVzc3ZhbGlkYXRpb24vYXBpdjEvYWRkcmVzc3ZhbGlkYXRpb25w",
+            "YjthZGRyZXNzdmFsaWRhdGlvbnBi+AEBogIHR01QQVZWMaoCIEdvb2dsZS5N",
+            "YXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYxygIgR29vZ2xlXE1hcHNcQWRkcmVz",
+            "c1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OkFkZHJlc3NWYWxpZGF0",
+            "aW9uOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.AddressValidation.V1.AddressReflection.Descriptor, global::Google.Maps.AddressValidation.V1.GeocodeReflection.Descriptor, global::Google.Maps.AddressValidation.V1.MetadataReflection.Descriptor, global::Google.Maps.AddressValidation.V1.UspsDataReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
