@@ -36,12 +36,6 @@ the request and want to put work into it.
 - Status: No customer requests for this yet; can implement when
   required.
 
-## Storage: Better handling of compressed objects when compression is disabled
-
-- Issue: [#1784](https://github.com/googleapis/google-cloud-dotnet/issues/1784)
-- Issue: [#7154](https://github.com/googleapis/google-cloud-dotnet/issues/7154)
-- Status: All possible options need server changes in some form or other.
-
 ## Diagnostics: Log exceptions thrown in TimedBuffer
 
 - Issue: [#2182](https://github.com/googleapis/google-cloud-dotnet/issues/2182)
@@ -51,11 +45,6 @@ the request and want to put work into it.
 
 - Issue: [#2166](https://github.com/googleapis/google-cloud-dotnet/issues/2166)
 - Status: We haven't received interest for this feature.
-
-## Diagnostics: Expose Tracing, Error Reporting and Logging common parts in a consumable way.
-
-- Issue: [#2164](https://github.com/googleapis/google-cloud-dotnet/issues/2164)
-- Status: This might not be a good idea, especially with OpenCensus integration coming up.
 
 ## Diagnostics: Including information stored in System.Exception.Data in the Stackdriver Error Reporting entry.
 
@@ -87,3 +76,10 @@ the request and want to put work into it.
 - Issue: [#5325](https://github.com/googleapis/google-cloud-dotnet/issues/5325)
 - Status: Waiting for more demand on this so we can have better requirements.
 
+## Storage: Provide writable upload and readable download streams
+
+- Issue [#9250](https://github.com/googleapis/google-cloud-dotnet/issues/9250)
+- Status: Unlikely to implement in Google.Cloud.Storage.V1. Should
+  be considered from the start for any future Storage library - with
+  a greenfield API surface and without the implementation constraints of
+  Google.Apis, we're much more likely to be able to do this cleanly.
