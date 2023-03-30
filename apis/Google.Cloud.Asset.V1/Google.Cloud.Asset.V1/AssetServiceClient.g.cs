@@ -465,11 +465,20 @@ namespace Google.Cloud.Asset.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings AnalyzeOrgPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings AnalyzeOrgPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -478,11 +487,20 @@ namespace Google.Cloud.Asset.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings AnalyzeOrgPolicyGovernedContainersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings AnalyzeOrgPolicyGovernedContainersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -491,11 +509,20 @@ namespace Google.Cloud.Asset.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings AnalyzeOrgPolicyGovernedAssetsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings AnalyzeOrgPolicyGovernedAssetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AssetServiceSettings"/> object.</returns>
@@ -939,7 +966,7 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this feed
         /// should be created in. It can only be an organization number (such as
         /// "organizations/123"), a folder number (such as "folders/123"), a project ID
-        /// (such as "projects/my-project-id")", or a project number (such as
+        /// (such as "projects/my-project-id"), or a project number (such as
         /// "projects/12345").
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -958,7 +985,7 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this feed
         /// should be created in. It can only be an organization number (such as
         /// "organizations/123"), a folder number (such as "folders/123"), a project ID
-        /// (such as "projects/my-project-id")", or a project number (such as
+        /// (such as "projects/my-project-id"), or a project number (such as
         /// "projects/12345").
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -977,7 +1004,7 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this feed
         /// should be created in. It can only be an organization number (such as
         /// "organizations/123"), a folder number (such as "folders/123"), a project ID
-        /// (such as "projects/my-project-id")", or a project number (such as
+        /// (such as "projects/my-project-id"), or a project number (such as
         /// "projects/12345").
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2071,8 +2098,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2106,8 +2133,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2141,8 +2168,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2171,8 +2198,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2206,8 +2233,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2241,8 +2268,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2271,8 +2298,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2306,8 +2333,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2341,8 +2368,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2371,8 +2398,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2406,8 +2433,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
@@ -2441,8 +2468,8 @@ namespace Google.Cloud.Asset.V1
         /// Required. The name of the project/folder/organization where this
         /// saved_query should be created in. It can only be an organization number
         /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-        /// project ID (such as "projects/my-project-id")", or a project number (such
-        /// as "projects/12345").
+        /// project ID (such as "projects/my-project-id"), or a project number (such as
+        /// "projects/12345").
         /// </param>
         /// <param name="savedQuery">
         /// Required. The saved_query details. The `name` field must be empty as it
