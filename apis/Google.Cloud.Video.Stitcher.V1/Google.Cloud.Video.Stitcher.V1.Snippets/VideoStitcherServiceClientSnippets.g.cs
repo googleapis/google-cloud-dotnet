@@ -18,7 +18,6 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
-    using Google.Cloud.Common;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
