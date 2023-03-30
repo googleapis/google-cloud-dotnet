@@ -282,14 +282,14 @@ namespace Google.Identity.AccessContextManager.V1 {
             "c2lvbnM6ASpaSyJGL3YxL3tyZXNvdXJjZT1hY2Nlc3NQb2xpY2llcy8qL3Nl",
             "cnZpY2VQZXJpbWV0ZXJzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKhpXykEj",
             "YWNjZXNzY29udGV4dG1hbmFnZXIuZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQq8CCitj",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrACCitj",
             "b20uZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxQhlB",
-            "Y2Nlc3NDb250ZXh0TWFuYWdlclByb3RvUAFaW2dvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvaWRlbnRpdHkvYWNjZXNzY29udGV4dG1h",
-            "bmFnZXIvdjE7YWNjZXNzY29udGV4dG1hbmFnZXKiAgRHQUNNqgInR29vZ2xl",
-            "LklkZW50aXR5LkFjY2Vzc0NvbnRleHRNYW5hZ2VyLlYxygInR29vZ2xlXElk",
-            "ZW50aXR5XEFjY2Vzc0NvbnRleHRNYW5hZ2VyXFYx6gIqR29vZ2xlOjpJZGVu",
-            "dGl0eTo6QWNjZXNzQ29udGV4dE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "Y2Nlc3NDb250ZXh0TWFuYWdlclByb3RvUAFaXGNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWNjZXNzY29udGV4dG1hbmFnZXIvYXBpdjEvYWNjZXNzY29udGV4dG1h",
+            "bmFnZXJwYjthY2Nlc3Njb250ZXh0bWFuYWdlcnBiogIER0FDTaoCJ0dvb2ds",
+            "ZS5JZGVudGl0eS5BY2Nlc3NDb250ZXh0TWFuYWdlci5WMcoCJ0dvb2dsZVxJ",
+            "ZGVudGl0eVxBY2Nlc3NDb250ZXh0TWFuYWdlclxWMeoCKkdvb2dsZTo6SWRl",
+            "bnRpdHk6OkFjY2Vzc0NvbnRleHRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.GcpUserAccessBindingReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Identity.AccessContextManager.V1.LevelFormat), }, null, new pbr::GeneratedClrTypeInfo[] {

@@ -56,13 +56,13 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
             "LQorbWFwc3BsYXRmb3JtZGF0YXNldHMuZ29vZ2xlYXBpcy5jb20vRGF0YXNl",
             "dBINCgVmb3JjZRgCIAEoCCJgChtEZWxldGVEYXRhc2V0VmVyc2lvblJlcXVl",
             "c3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCittYXBzcGxhdGZvcm1kYXRhc2V0",
-            "cy5nb29nbGVhcGlzLmNvbS9EYXRhc2V0Qv8BCixjb20uZ29vZ2xlLm1hcHMu",
+            "cy5nb29nbGVhcGlzLmNvbS9EYXRhc2V0QokCCixjb20uZ29vZ2xlLm1hcHMu",
             "bWFwc3BsYXRmb3JtZGF0YXNldHMudjFhbHBoYUIZTWFwc1BsYXRmb3JtRGF0",
-            "YXNldHNQcm90b1ABWlxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL21hcHMvbWFwc3BsYXRmb3JtZGF0YXNldHMvdjFhbHBoYTttYXBz",
-            "cGxhdGZvcm1kYXRhc2V0c6oCKEdvb2dsZS5NYXBzLk1hcHNQbGF0Zm9ybURh",
-            "dGFzZXRzLlYxQWxwaGHKAihHb29nbGVcTWFwc1xNYXBzUGxhdGZvcm1EYXRh",
-            "c2V0c1xWMWFscGhhYgZwcm90bzM="));
+            "YXNldHNQcm90b1ABWmZjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvbWFwc3Bs",
+            "YXRmb3JtZGF0YXNldHMvYXBpdjFhbHBoYS9tYXBzcGxhdGZvcm1kYXRhc2V0",
+            "c3BiO21hcHNwbGF0Zm9ybWRhdGFzZXRzcGKqAihHb29nbGUuTWFwcy5NYXBz",
+            "UGxhdGZvcm1EYXRhc2V0cy5WMUFscGhhygIoR29vZ2xlXE1hcHNcTWFwc1Bs",
+            "YXRmb3JtRGF0YXNldHNcVjFhbHBoYWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

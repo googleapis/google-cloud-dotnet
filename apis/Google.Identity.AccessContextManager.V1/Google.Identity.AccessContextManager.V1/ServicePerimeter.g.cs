@@ -86,14 +86,14 @@ namespace Google.Identity.AccessContextManager.V1 {
             "ZXIudjEuU2VydmljZVBlcmltZXRlckNvbmZpZy5FZ3Jlc3NUbyJuCgxJZGVu",
             "dGl0eVR5cGUSHQoZSURFTlRJVFlfVFlQRV9VTlNQRUNJRklFRBAAEhAKDEFO",
             "WV9JREVOVElUWRABEhQKEEFOWV9VU0VSX0FDQ09VTlQQAhIXChNBTllfU0VS",
-            "VklDRV9BQ0NPVU5UEANCqwIKK2NvbS5nb29nbGUuaWRlbnRpdHkuYWNjZXNz",
-            "Y29udGV4dG1hbmFnZXIudjFCFVNlcnZpY2VQZXJpbWV0ZXJQcm90b1ABWltn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lkZW50aXR5",
-            "L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3YxO2FjY2Vzc2NvbnRleHRtYW5hZ2Vy",
-            "ogIER0FDTaoCJ0dvb2dsZS5JZGVudGl0eS5BY2Nlc3NDb250ZXh0TWFuYWdl",
-            "ci5WMcoCJ0dvb2dsZVxJZGVudGl0eVxBY2Nlc3NDb250ZXh0TWFuYWdlclxW",
-            "MeoCKkdvb2dsZTo6SWRlbnRpdHk6OkFjY2Vzc0NvbnRleHRNYW5hZ2VyOjpW",
-            "MWIGcHJvdG8z"));
+            "VklDRV9BQ0NPVU5UEANCrAIKK2NvbS5nb29nbGUuaWRlbnRpdHkuYWNjZXNz",
+            "Y29udGV4dG1hbmFnZXIudjFCFVNlcnZpY2VQZXJpbWV0ZXJQcm90b1ABWlxj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2FjY2Vzc2NvbnRleHRtYW5hZ2VyL2FwaXYx",
+            "L2FjY2Vzc2NvbnRleHRtYW5hZ2VycGI7YWNjZXNzY29udGV4dG1hbmFnZXJw",
+            "YqICBEdBQ02qAidHb29nbGUuSWRlbnRpdHkuQWNjZXNzQ29udGV4dE1hbmFn",
+            "ZXIuVjHKAidHb29nbGVcSWRlbnRpdHlcQWNjZXNzQ29udGV4dE1hbmFnZXJc",
+            "VjHqAipHb29nbGU6OklkZW50aXR5OjpBY2Nlc3NDb250ZXh0TWFuYWdlcjo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

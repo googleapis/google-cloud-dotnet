@@ -34,14 +34,14 @@ namespace Google.Identity.AccessContextManager.V1 {
             "ZXNzTGV2ZWw6jAHqQYgBCjhhY2Nlc3Njb250ZXh0bWFuYWdlci5nb29nbGVh",
             "cGlzLmNvbS9HY3BVc2VyQWNjZXNzQmluZGluZxJMb3JnYW5pemF0aW9ucy97",
             "b3JnYW5pemF0aW9ufS9nY3BVc2VyQWNjZXNzQmluZGluZ3Mve2djcF91c2Vy",
-            "X2FjY2Vzc19iaW5kaW5nfUKvAgorY29tLmdvb2dsZS5pZGVudGl0eS5hY2Nl",
+            "X2FjY2Vzc19iaW5kaW5nfUKwAgorY29tLmdvb2dsZS5pZGVudGl0eS5hY2Nl",
             "c3Njb250ZXh0bWFuYWdlci52MUIZR2NwVXNlckFjY2Vzc0JpbmRpbmdQcm90",
-            "b1ABWltnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2lk",
-            "ZW50aXR5L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3YxO2FjY2Vzc2NvbnRleHRt",
-            "YW5hZ2VyogIER0FDTaoCJ0dvb2dsZS5JZGVudGl0eS5BY2Nlc3NDb250ZXh0",
-            "TWFuYWdlci5WMcoCJ0dvb2dsZVxJZGVudGl0eVxBY2Nlc3NDb250ZXh0TWFu",
-            "YWdlclxWMeoCKkdvb2dsZTo6SWRlbnRpdHk6OkFjY2Vzc0NvbnRleHRNYW5h",
-            "Z2VyOjpWMWIGcHJvdG8z"));
+            "b1ABWlxjbG91ZC5nb29nbGUuY29tL2dvL2FjY2Vzc2NvbnRleHRtYW5hZ2Vy",
+            "L2FwaXYxL2FjY2Vzc2NvbnRleHRtYW5hZ2VycGI7YWNjZXNzY29udGV4dG1h",
+            "bmFnZXJwYqICBEdBQ02qAidHb29nbGUuSWRlbnRpdHkuQWNjZXNzQ29udGV4",
+            "dE1hbmFnZXIuVjHKAidHb29nbGVcSWRlbnRpdHlcQWNjZXNzQ29udGV4dE1h",
+            "bmFnZXJcVjHqAipHb29nbGU6OklkZW50aXR5OjpBY2Nlc3NDb250ZXh0TWFu",
+            "YWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

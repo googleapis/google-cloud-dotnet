@@ -44,13 +44,13 @@ namespace Google.Maps.AddressValidation.V1 {
             "TlNQRUNJRklFRBAAEg0KCUNPTkZJUk1FRBABEh0KGVVOQ09ORklSTUVEX0JV",
             "VF9QTEFVU0lCTEUQAhIeChpVTkNPTkZJUk1FRF9BTkRfU1VTUElDSU9VUxAD",
             "IjQKDUNvbXBvbmVudE5hbWUSDAoEdGV4dBgBIAEoCRIVCg1sYW5ndWFnZV9j",
-            "b2RlGAIgASgJQoICCiRjb20uZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
-            "b24udjFCDEFkZHJlc3NQcm90b1ABWlFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL21hcHMvYWRkcmVzc3ZhbGlkYXRpb24vdjE7YWRk",
-            "cmVzc3ZhbGlkYXRpb274AQGiAgdHTVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRk",
-            "cmVzc1ZhbGlkYXRpb24uVjHKAiBHb29nbGVcTWFwc1xBZGRyZXNzVmFsaWRh",
-            "dGlvblxWMeoCI0dvb2dsZTo6TWFwczo6QWRkcmVzc1ZhbGlkYXRpb246OlYx",
-            "YgZwcm90bzM="));
+            "b2RlGAIgASgJQokCCiRjb20uZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
+            "b24udjFCDEFkZHJlc3NQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dvL21h",
+            "cHMvYWRkcmVzc3ZhbGlkYXRpb24vYXBpdjEvYWRkcmVzc3ZhbGlkYXRpb25w",
+            "YjthZGRyZXNzdmFsaWRhdGlvbnBi+AEBogIHR01QQVZWMaoCIEdvb2dsZS5N",
+            "YXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYxygIgR29vZ2xlXE1hcHNcQWRkcmVz",
+            "c1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OkFkZHJlc3NWYWxpZGF0",
+            "aW9uOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
