@@ -43,8 +43,8 @@ namespace Google.Cloud.ServiceControl.V1 {
             "QW55Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
             "CToCOAEiHwoKSW1wb3J0YW5jZRIHCgNMT1cQABIICgRISUdIEAFC6QEKIGNv",
             "bS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxQg5PcGVyYXRpb25Qcm90",
-            "b1ABWkpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fw",
-            "aS9zZXJ2aWNlY29udHJvbC92MTtzZXJ2aWNlY29udHJvbPgBAaoCHkdvb2ds",
+            "b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3NlcnZpY2Vjb250cm9sL2FwaXYx",
+            "L3NlcnZpY2Vjb250cm9scGI7c2VydmljZWNvbnRyb2xwYvgBAaoCHkdvb2ds",
             "ZS5DbG91ZC5TZXJ2aWNlQ29udHJvbC5WMcoCHkdvb2dsZVxDbG91ZFxTZXJ2",
             "aWNlQ29udHJvbFxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VDb250cm9s",
             "OjpWMWIGcHJvdG8z"));

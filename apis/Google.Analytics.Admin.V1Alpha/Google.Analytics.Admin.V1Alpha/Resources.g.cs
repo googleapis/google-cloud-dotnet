@@ -365,10 +365,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             "T0JTT0xFVEUQBiqCAQoMUHJvcGVydHlUeXBlEh0KGVBST1BFUlRZX1RZUEVf",
             "VU5TUEVDSUZJRUQQABIaChZQUk9QRVJUWV9UWVBFX09SRElOQVJZEAESHQoZ",
             "UFJPUEVSVFlfVFlQRV9TVUJQUk9QRVJUWRACEhgKFFBST1BFUlRZX1RZUEVf",
-            "Uk9MTFVQEANCewoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
-            "YUIOUmVzb3VyY2VzUHJvdG9QAVpDZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvYWRtaW4vdjFhbHBoYTthZG1pbmIG",
-            "cHJvdG8z"));
+            "Uk9MTFVQEANCdgoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
+            "YUIOUmVzb3VyY2VzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9hbmFs",
+            "eXRpY3MvYWRtaW4vYXBpdjFhbHBoYS9hZG1pbnBiO2FkbWlucGJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Analytics.Admin.V1Alpha.ExpandedDataSetReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), typeof(global::Google.Analytics.Admin.V1Alpha.PropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {

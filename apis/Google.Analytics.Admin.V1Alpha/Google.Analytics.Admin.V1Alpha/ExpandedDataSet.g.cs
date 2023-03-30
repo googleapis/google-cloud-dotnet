@@ -59,10 +59,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             "X3N0YXJ0X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "QgPgQQM6bupBawotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXhw",
             "YW5kZWREYXRhU2V0Ejpwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZXhwYW5kZWRE",
-            "YXRhU2V0cy97ZXhwYW5kZWRfZGF0YV9zZXR9QoEBCiJjb20uZ29vZ2xlLmFu",
-            "YWx5dGljcy5hZG1pbi52MWFscGhhQhRFeHBhbmRlZERhdGFTZXRQcm90b1AB",
-            "WkNnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FuYWx5",
-            "dGljcy9hZG1pbi92MWFscGhhO2FkbWluYgZwcm90bzM="));
+            "YXRhU2V0cy97ZXhwYW5kZWRfZGF0YV9zZXR9QnwKImNvbS5nb29nbGUuYW5h",
+            "bHl0aWNzLmFkbWluLnYxYWxwaGFCFEV4cGFuZGVkRGF0YVNldFByb3RvUAFa",
+            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYW5hbHl0aWNzL2FkbWluL2FwaXYxYWxw",
+            "aGEvYWRtaW5wYjthZG1pbnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

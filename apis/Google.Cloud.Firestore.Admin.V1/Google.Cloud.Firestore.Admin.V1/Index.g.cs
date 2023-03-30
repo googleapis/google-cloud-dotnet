@@ -44,12 +44,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "U19SRVBBSVIQAzp66kF3Ch5maXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vSW5k",
             "ZXgSVXByb2plY3RzL3twcm9qZWN0fS9kYXRhYmFzZXMve2RhdGFiYXNlfS9j",
             "b2xsZWN0aW9uR3JvdXBzL3tjb2xsZWN0aW9ufS9pbmRleGVzL3tpbmRleH1C",
-            "3gEKHWNvbS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxQgpJbmRleFByb3Rv",
-            "UAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZmly",
-            "ZXN0b3JlL2FkbWluL3YxO2FkbWluogIER0NGU6oCH0dvb2dsZS5DbG91ZC5G",
-            "aXJlc3RvcmUuQWRtaW4uVjHKAh9Hb29nbGVcQ2xvdWRcRmlyZXN0b3JlXEFk",
-            "bWluXFYx6gIjR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpBZG1pbjo6VjFi",
-            "BnByb3RvMw=="));
+            "2QEKHWNvbS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxQgpJbmRleFByb3Rv",
+            "UAFaOWNsb3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2FkbWlu",
+            "L2FwaXYxcGI7YXBpdjFwYqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmlyZXN0",
+            "b3JlLkFkbWluLlYxygIfR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1pblxW",
+            "MeoCI0dvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

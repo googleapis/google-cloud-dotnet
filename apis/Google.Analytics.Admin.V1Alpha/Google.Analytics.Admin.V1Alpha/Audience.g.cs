@@ -128,10 +128,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             "RklMVEVSX1NDT1BFX1VOU1BFQ0lGSUVEEAASKwonQVVESUVOQ0VfRklMVEVS",
             "X1NDT1BFX1dJVEhJTl9TQU1FX0VWRU5UEAESLQopQVVESUVOQ0VfRklMVEVS",
             "X1NDT1BFX1dJVEhJTl9TQU1FX1NFU1NJT04QAhItCilBVURJRU5DRV9GSUxU",
-            "RVJfU0NPUEVfQUNST1NTX0FMTF9TRVNTSU9OUxADQnoKImNvbS5nb29nbGUu",
-            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGFCDUF1ZGllbmNlUHJvdG9QAVpDZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3Mv",
-            "YWRtaW4vdjFhbHBoYTthZG1pbmIGcHJvdG8z"));
+            "RVJfU0NPUEVfQUNST1NTX0FMTF9TRVNTSU9OUxADQnUKImNvbS5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGFCDUF1ZGllbmNlUHJvdG9QAVo+Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9hbmFseXRpY3MvYWRtaW4vYXBpdjFhbHBoYS9h",
+            "ZG1pbnBiO2FkbWlucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.AudienceFilterScope), }, null, new pbr::GeneratedClrTypeInfo[] {

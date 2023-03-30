@@ -176,14 +176,14 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
             "cHJvamVjdF9zZXR0aW5ncyx1cGRhdGVfbWFzaxqMAcpBH2FydGlmYWN0cmVn",
             "aXN0cnkuZ29vZ2xlYXBpcy5jb23SQWdodHRwczovL3d3dy5nb29nbGVhcGlz",
             "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0ucmVhZC1vbmx5QpMCCixjb20u",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0ucmVhZC1vbmx5QpACCixjb20u",
             "Z29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjFiZXRhMkIMU2Vy",
-            "dmljZVByb3RvUAFaWGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvZGV2dG9vbHMvYXJ0aWZhY3RyZWdpc3RyeS92MWJldGEyO2FydGlm",
-            "YWN0cmVnaXN0cnmqAiVHb29nbGUuQ2xvdWQuQXJ0aWZhY3RSZWdpc3RyeS5W",
-            "MUJldGEyygIlR29vZ2xlXENsb3VkXEFydGlmYWN0UmVnaXN0cnlcVjFiZXRh",
-            "MuoCKEdvb2dsZTo6Q2xvdWQ6OkFydGlmYWN0UmVnaXN0cnk6OlYxYmV0YTJi",
-            "BnByb3RvMw=="));
+            "dmljZVByb3RvUAFaVWNsb3VkLmdvb2dsZS5jb20vZ28vYXJ0aWZhY3RyZWdp",
+            "c3RyeS9hcGl2MWJldGEyL2FydGlmYWN0cmVnaXN0cnlwYjthcnRpZmFjdHJl",
+            "Z2lzdHJ5cGKqAiVHb29nbGUuQ2xvdWQuQXJ0aWZhY3RSZWdpc3RyeS5WMUJl",
+            "dGEyygIlR29vZ2xlXENsb3VkXEFydGlmYWN0UmVnaXN0cnlcVjFiZXRhMuoC",
+            "KEdvb2dsZTo6Q2xvdWQ6OkFydGlmYWN0UmVnaXN0cnk6OlYxYmV0YTJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1Beta2.AptArtifactReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1Beta2.FileReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1Beta2.PackageReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1Beta2.RepositoryReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1Beta2.SettingsReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1Beta2.TagReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1Beta2.VersionReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1Beta2.YumArtifactReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
