@@ -4059,9 +4059,6 @@ namespace Google.Cloud.Iap.V1 {
         /// Prompts the user to log in again.
         /// </summary>
         [pbr::OriginalName("LOGIN")] Login = 1,
-        /// <summary>
-        /// Deprecated, no longer accepted by IAP APIs.
-        /// </summary>
         [pbr::OriginalName("PASSWORD")] Password = 2,
         /// <summary>
         /// User must use their secure key 2nd factor device.
@@ -5255,25 +5252,31 @@ namespace Google.Cloud.Iap.V1 {
     public const int ExpressionFieldNumber = 1;
     private string expression_;
     /// <summary>
-    /// Raw string CEL expression. Must return a list of attributes. Maximum of 45
-    /// attributes can be selected. Expressions can select different attribute
+    /// Raw string CEL expression. Must return a list of attributes. A maximum of
+    /// 45 attributes can be selected. Expressions can select different attribute
     /// types from `attributes`: `attributes.saml_attributes`,
-    /// `attributes.iap_attributes`. Limited functions are supported:
-    ///  - `filter: &lt;list>.filter(&lt;iter_var>, &lt;predicate>)` -> returns a subset of
+    /// `attributes.iap_attributes`. The following functions are supported:
+    ///
+    ///  - filter `&lt;list>.filter(&lt;iter_var>, &lt;predicate>)`: Returns a subset of
     ///  `&lt;list>` where `&lt;predicate>` is true for every item.
-    ///  - `in: &lt;var> in &lt;list>` -> returns true if `&lt;list>` contains `&lt;var>`
-    ///  - `selectByName: &lt;list>.selectByName(&lt;string>)` -> returns the attribute
+    ///
+    ///  - in `&lt;var> in &lt;list>`: Returns true if `&lt;list>` contains `&lt;var>`.
+    ///
+    ///  - selectByName `&lt;list>.selectByName(&lt;string>)`: Returns the attribute
     ///  in
     ///  `&lt;list>` with the given `&lt;string>` name, otherwise returns empty.
-    ///  - `emitAs: &lt;attribute>.emitAs(&lt;string>)` -> sets the `&lt;attribute>` name
+    ///
+    ///  - emitAs `&lt;attribute>.emitAs(&lt;string>)`: Sets the `&lt;attribute>` name
     ///  field to the given `&lt;string>` for propagation in selected output
     ///  credentials.
-    ///  - `strict: &lt;attribute>.strict()` -> ignore the `x-goog-iap-attr-` prefix
-    ///  for the provided `&lt;attribute>` when propagating via the `HEADER` output
-    ///  credential, i.e. request headers.
-    ///  - `append: &lt;target_list>.append(&lt;attribute>)` OR
-    ///  `&lt;target_list>.append(&lt;list>)` -> append the provided `&lt;attribute>` or
-    ///  `&lt;list>` onto the end of `&lt;target_list>`.
+    ///
+    ///  - strict `&lt;attribute>.strict()`: Ignores the `x-goog-iap-attr-` prefix
+    ///  for the provided `&lt;attribute>` when propagating with the `HEADER` output
+    ///  credential, such as request headers.
+    ///
+    ///  - append `&lt;target_list>.append(&lt;attribute>)` OR
+    ///  `&lt;target_list>.append(&lt;list>)`: Appends the provided `&lt;attribute>` or
+    ///  `&lt;list>` to the end of `&lt;target_list>`.
     ///
     /// Example expression: `attributes.saml_attributes.filter(x, x.name in
     /// ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())`
@@ -5528,7 +5531,7 @@ namespace Google.Cloud.Iap.V1 {
       /// </summary>
       public enum OutputCredentials {
         /// <summary>
-        /// No output credential. This is an unsupported default.
+        /// An output credential is required.
         /// </summary>
         [pbr::OriginalName("OUTPUT_CREDENTIALS_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
