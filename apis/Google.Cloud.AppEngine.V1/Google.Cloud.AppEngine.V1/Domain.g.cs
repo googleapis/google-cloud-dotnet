@@ -44,7 +44,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// A domain that a user has been authorized to administer. To authorize use
   /// of a domain, verify ownership via
-  /// [Webmaster Central](https://www.google.com/webmasters/verification/home).
+  /// [Search Console](https://search.google.com/search-console/welcome).
   /// </summary>
   public sealed partial class AuthorizedDomain : pb::IMessage<AuthorizedDomain>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
