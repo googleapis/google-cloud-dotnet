@@ -12532,6 +12532,9 @@ namespace Google.Cloud.Audit {
         private readonly pbc::RepeatedField<global::Google.Cloud.Audit.BigQueryAuditMetadata.Types.JobStats.Types.ReservationResourceUsage> reservationUsage_ = new pbc::RepeatedField<global::Google.Cloud.Audit.BigQueryAuditMetadata.Types.JobStats.Types.ReservationResourceUsage>();
         /// <summary>
         /// Reservation usage attributed from each tier of a reservation hierarchy.
+        /// This field reported misleading information and will no longer be
+        /// populated. Aggregate usage of all jobs submitted to a reservation
+        /// should provide a more reliable indicator of reservation imbalance.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
