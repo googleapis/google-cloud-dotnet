@@ -68,6 +68,10 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.Conversation> __Marshaller_google_cloud_contactcenterinsights_v1_Conversation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.Conversation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UploadConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest.Parser));
@@ -81,8 +85,6 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateAnalysisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetAnalysisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -179,6 +181,14 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         "CreateConversation",
         __Marshaller_google_cloud_contactcenterinsights_v1_CreateConversationRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Conversation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest, global::Google.LongRunning.Operation> __Method_UploadConversation = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UploadConversation",
+        __Marshaller_google_cloud_contactcenterinsights_v1_UploadConversationRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation> __Method_UpdateConversation = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(
@@ -486,6 +496,20 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Conversation> CreateConversation(global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a longrunning conversation upload operation. This method differs
+      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// redaction.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UploadConversation(global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1002,6 +1026,62 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Conversation> CreateConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConversation, null, options, request);
+      }
+      /// <summary>
+      /// Create a longrunning conversation upload operation. This method differs
+      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// redaction.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UploadConversation(global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UploadConversation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a longrunning conversation upload operation. This method differs
+      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// redaction.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UploadConversation(global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UploadConversation, null, options, request);
+      }
+      /// <summary>
+      /// Create a longrunning conversation upload operation. This method differs
+      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// redaction.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UploadConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UploadConversationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a longrunning conversation upload operation. This method differs
+      /// from CreateConversation by allowing audio transcription and optional DLP
+      /// redaction.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UploadConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UploadConversation, null, options, request);
       }
       /// <summary>
       /// Updates a conversation.
@@ -2762,6 +2842,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateConversation, serviceImpl.CreateConversation)
+          .AddMethod(__Method_UploadConversation, serviceImpl.UploadConversation)
           .AddMethod(__Method_UpdateConversation, serviceImpl.UpdateConversation)
           .AddMethod(__Method_GetConversation, serviceImpl.GetConversation)
           .AddMethod(__Method_ListConversations, serviceImpl.ListConversations)
@@ -2808,6 +2889,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ContactCenterInsightsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(serviceImpl.CreateConversation));
+      serviceBinder.AddMethod(__Method_UploadConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest, global::Google.LongRunning.Operation>(serviceImpl.UploadConversation));
       serviceBinder.AddMethod(__Method_UpdateConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(serviceImpl.UpdateConversation));
       serviceBinder.AddMethod(__Method_GetConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(serviceImpl.GetConversation));
       serviceBinder.AddMethod(__Method_ListConversations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse>(serviceImpl.ListConversations));

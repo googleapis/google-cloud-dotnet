@@ -231,6 +231,12 @@
                 "UpdateView",
                 "UpdateViewAsync"
               ]
+            },
+            "UploadConversation": {
+              "methods": [
+                "UploadConversation",
+                "UploadConversationAsync"
+              ]
             }
           }
         }
