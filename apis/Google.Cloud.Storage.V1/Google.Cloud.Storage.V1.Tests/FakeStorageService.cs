@@ -55,6 +55,14 @@ namespace Google.Cloud.Storage.V1.Tests
             handler.ExpectRequest(httpRequest.RequestUri, httpRequest.Content?.ReadAsStringAsync()?.Result, responseMessage);
         }
 
+        public void ExpectRequests<TResponse>(ClientServiceRequest<TResponse> request, HttpStatusCode statusCode, int expectedCount)
+        {
+            for (int i = 0; i < expectedCount; i++)
+            {
+                ExpectRequest(request, statusCode);
+            }
+        }
+
         public void Verify() => handler.Verify();
     }
 }

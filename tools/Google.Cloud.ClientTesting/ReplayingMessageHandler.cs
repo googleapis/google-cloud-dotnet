@@ -36,6 +36,11 @@ namespace Google.Cloud.ClientTesting
             new Queue<Tuple<Uri, string, HttpResponseMessage>>();
 
         /// <summary>
+        /// Stores the timestamp of each attempt made to execute the operation.
+        /// </summary>
+        public List<DateTime> AttemptTimestamps { get; } = new List<DateTime>();
+
+        /// <summary>
         /// The captured headers, or null if headers are not being captured.
         /// There is one element per request, with an element value of null if the header is not present for the corresponding request.
         /// </summary>
@@ -60,6 +65,8 @@ namespace Google.Cloud.ClientTesting
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
+            AttemptTimestamps.Add(DateTime.UtcNow);
+
             Assert.NotEmpty(_requestResponses);
             if (_headerToCapture is string header)
             {
