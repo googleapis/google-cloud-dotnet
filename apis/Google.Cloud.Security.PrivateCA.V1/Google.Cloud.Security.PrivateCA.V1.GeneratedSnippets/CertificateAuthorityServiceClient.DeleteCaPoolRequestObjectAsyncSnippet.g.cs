@@ -41,6 +41,7 @@ namespace Google.Cloud.Security.PrivateCA.V1.Snippets
             {
                 CaPoolName = CaPoolName.FromProjectLocationCaPool("[PROJECT]", "[LOCATION]", "[CA_POOL]"),
                 RequestId = "",
+                IgnoreDependentResources = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await certificateAuthorityServiceClient.DeleteCaPoolAsync(request);
