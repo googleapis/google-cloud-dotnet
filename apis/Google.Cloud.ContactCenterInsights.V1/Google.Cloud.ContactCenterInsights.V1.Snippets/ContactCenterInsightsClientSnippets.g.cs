@@ -126,6 +126,77 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UploadConversation</summary>
+        public void UploadConversationRequestObject()
+        {
+            // Snippet: UploadConversation(UploadConversationRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UploadConversationRequest request = new UploadConversationRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Conversation = new Conversation(),
+                ConversationId = "",
+                RedactionConfig = new RedactionConfig(),
+            };
+            // Make the request
+            Operation<Conversation, UploadConversationMetadata> response = contactCenterInsightsClient.UploadConversation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Conversation, UploadConversationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Conversation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Conversation, UploadConversationMetadata> retrievedResponse = contactCenterInsightsClient.PollOnceUploadConversation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Conversation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UploadConversationAsync</summary>
+        public async Task UploadConversationRequestObjectAsync()
+        {
+            // Snippet: UploadConversationAsync(UploadConversationRequest, CallSettings)
+            // Additional: UploadConversationAsync(UploadConversationRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UploadConversationRequest request = new UploadConversationRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Conversation = new Conversation(),
+                ConversationId = "",
+                RedactionConfig = new RedactionConfig(),
+            };
+            // Make the request
+            Operation<Conversation, UploadConversationMetadata> response = await contactCenterInsightsClient.UploadConversationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Conversation, UploadConversationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Conversation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Conversation, UploadConversationMetadata> retrievedResponse = await contactCenterInsightsClient.PollOnceUploadConversationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Conversation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateConversation</summary>
         public void UpdateConversationRequestObject()
         {
