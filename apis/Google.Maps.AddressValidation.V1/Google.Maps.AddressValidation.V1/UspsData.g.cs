@@ -581,7 +581,10 @@ namespace Google.Maps.AddressValidation.V1 {
   }
 
   /// <summary>
-  /// The USPS data for the address.
+  /// The USPS data for the address. `uspsData` is not guaranteed to be fully
+  /// populated for every US or PR address sent to the Address Validation API. It's
+  /// recommended to integrate the backup address fields in the response if you
+  /// utilize uspsData as the primary part of the response.
   /// </summary>
   public sealed partial class UspsData : pb::IMessage<UspsData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
