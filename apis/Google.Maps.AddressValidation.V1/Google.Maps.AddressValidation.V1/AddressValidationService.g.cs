@@ -1200,7 +1200,8 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int MetadataFieldNumber = 4;
     private global::Google.Maps.AddressValidation.V1.AddressMetadata metadata_;
     /// <summary>
-    /// Other information relevant to deliverability.
+    /// Other information relevant to deliverability. `metadata` is not guaranteed
+    /// to be fully populated for every address sent to the Address Validation API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

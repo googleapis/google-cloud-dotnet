@@ -46,7 +46,8 @@ namespace Google.Maps.AddressValidation.V1 {
   }
   #region Messages
   /// <summary>
-  /// The metadata for the address.
+  /// The metadata for the address. `metadata` is not guaranteed to be fully
+  /// populated for every address sent to the Address Validation API.
   /// </summary>
   public sealed partial class AddressMetadata : pb::IMessage<AddressMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

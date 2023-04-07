@@ -64,7 +64,9 @@ namespace Google.Maps.AddressValidation.V1 {
   }
   #region Messages
   /// <summary>
-  /// Details of the address parsed from the input.
+  /// Details of the post-processed address. Post-processing includes
+  /// correcting misspelled parts of the address, replacing incorrect parts, and
+  /// inferring missing parts.
   /// </summary>
   public sealed partial class Address : pb::IMessage<Address>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -119,8 +121,8 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int FormattedAddressFieldNumber = 2;
     private string formattedAddress_ = "";
     /// <summary>
-    /// The corrected address, formatted as a single-line address following the
-    /// address formatting rules of the region where the address is located.
+    /// The post-processed address, formatted as a single-line address following
+    /// the address formatting rules of the region where the address is located.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,9 +154,9 @@ namespace Google.Maps.AddressValidation.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Maps.AddressValidation.V1.AddressComponent.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.AddressValidation.V1.AddressComponent> addressComponents_ = new pbc::RepeatedField<global::Google.Maps.AddressValidation.V1.AddressComponent>();
     /// <summary>
-    /// Unordered list. The individual address components of the formatted and corrected address,
-    /// along with validation information. This provides information on the
-    /// validation status of the individual components.
+    /// Unordered list. The individual address components of the formatted and
+    /// corrected address, along with validation information. This provides
+    /// information on the validation status of the individual components.
     ///
     /// Address components are not ordered in a particular way. Do not make any
     /// assumptions on the ordering of the address components in the list.
