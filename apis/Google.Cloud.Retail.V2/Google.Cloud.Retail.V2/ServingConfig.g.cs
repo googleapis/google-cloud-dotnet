@@ -202,7 +202,7 @@ namespace Google.Cloud.Retail.V2 {
     ///  Allowed values are:
     ///
     /// * `no-price-reranking`
-    /// * `low-price-raranking`
+    /// * `low-price-reranking`
     /// * `medium-price-reranking`
     /// * `high-price-reranking`
     ///
@@ -476,8 +476,8 @@ namespace Google.Cloud.Retail.V2 {
     public const int DiversityTypeFieldNumber = 20;
     private global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType diversityType_ = global::Google.Cloud.Retail.V2.ServingConfig.Types.DiversityType.Unspecified;
     /// <summary>
-    /// What kind of diversity to use - data driven or rule based. If unset,
-    /// the server behavior defaults to
+    /// What kind of diversity to use - data driven or rule based. If unset, the
+    /// server behavior defaults to
     /// [RULE_BASED_DIVERSITY][google.cloud.retail.v2.ServingConfig.DiversityType.RULE_BASED_DIVERSITY].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

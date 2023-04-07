@@ -59,6 +59,7 @@ namespace Google.Cloud.Retail.V2.Snippets
                 PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
                 Labels = { { "", "" }, },
                 SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
+                Entity = "",
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);

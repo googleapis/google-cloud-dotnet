@@ -79,6 +79,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcrv::ModelServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddModelServiceClient(this IServiceCollection services, sys::Action<gcrv::ModelServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::ModelServiceClientBuilder builder = new gcrv::ModelServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcrv::PredictionServiceClient"/> to <paramref name="services"/>.
         /// </summary>
