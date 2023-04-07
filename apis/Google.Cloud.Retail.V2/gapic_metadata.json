@@ -140,6 +140,63 @@
         }
       }
     },
+    "ModelService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ModelServiceClient",
+          "rpcs": {
+            "CreateModel": {
+              "methods": [
+                "CreateModel",
+                "CreateModelAsync"
+              ]
+            },
+            "DeleteModel": {
+              "methods": [
+                "DeleteModel",
+                "DeleteModelAsync"
+              ]
+            },
+            "GetModel": {
+              "methods": [
+                "GetModel",
+                "GetModelAsync"
+              ]
+            },
+            "ListModels": {
+              "methods": [
+                "ListModels",
+                "ListModelsAsync"
+              ]
+            },
+            "PauseModel": {
+              "methods": [
+                "PauseModel",
+                "PauseModelAsync"
+              ]
+            },
+            "ResumeModel": {
+              "methods": [
+                "ResumeModel",
+                "ResumeModelAsync"
+              ]
+            },
+            "TuneModel": {
+              "methods": [
+                "TuneModel",
+                "TuneModelAsync"
+              ]
+            },
+            "UpdateModel": {
+              "methods": [
+                "UpdateModel",
+                "UpdateModelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "PredictionService": {
       "clients": {
         "grpc": {

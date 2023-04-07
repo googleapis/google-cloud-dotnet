@@ -38,6 +38,7 @@ namespace Google.Cloud.Retail.V2.Snippets
                 MaxSuggestions = 0,
                 Dataset = "",
                 VisitorId = "",
+                Entity = "",
             };
             // Make the request
             CompleteQueryResponse response = completionServiceClient.CompleteQuery(request);
@@ -61,6 +62,7 @@ namespace Google.Cloud.Retail.V2.Snippets
                 MaxSuggestions = 0,
                 Dataset = "",
                 VisitorId = "",
+                Entity = "",
             };
             // Make the request
             CompleteQueryResponse response = await completionServiceClient.CompleteQueryAsync(request);
