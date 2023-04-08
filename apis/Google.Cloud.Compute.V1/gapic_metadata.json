@@ -2278,6 +2278,12 @@
                 "SetNodeTemplateAsync"
               ]
             },
+            "SimulateMaintenanceEvent": {
+              "methods": [
+                "SimulateMaintenanceEvent",
+                "SimulateMaintenanceEventAsync"
+              ]
+            },
             "TestIamPermissions": {
               "methods": [
                 "TestIamPermissions",

@@ -170,8 +170,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.BigQuery.Migration.V2.Point.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.Point> points_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.Point>();
     /// <summary>
-    /// Required. The data points of this time series. When listing time series, points are
-    /// returned in reverse time order.
+    /// Required. The data points of this time series. When listing time series,
+    /// points are returned in reverse time order.
     ///
     /// When creating a time series, this field must contain exactly one point and
     /// the point's type must be the same as the value type of the associated

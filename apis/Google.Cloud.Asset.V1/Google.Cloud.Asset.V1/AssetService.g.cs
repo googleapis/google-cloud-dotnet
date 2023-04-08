@@ -2860,7 +2860,7 @@ namespace Google.Cloud.Asset.V1 {
     /// Required. The name of the project/folder/organization where this feed
     /// should be created in. It can only be an organization number (such as
     /// "organizations/123"), a folder number (such as "folders/123"), a project ID
-    /// (such as "projects/my-project-id")", or a project number (such as
+    /// (such as "projects/my-project-id"), or a project number (such as
     /// "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13027,8 +13027,8 @@ namespace Google.Cloud.Asset.V1 {
     /// Required. The name of the project/folder/organization where this
     /// saved_query should be created in. It can only be an organization number
     /// (such as "organizations/123"), a folder number (such as "folders/123"), a
-    /// project ID (such as "projects/my-project-id")", or a project number (such
-    /// as "projects/12345").
+    /// project ID (such as "projects/my-project-id"), or a project number (such as
+    /// "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13561,8 +13561,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// Optional. The maximum number of saved queries to return per page. The
     /// service may return fewer than this value. If unspecified, at most 50 will
-    /// be returned.
-    ///  The maximum value is 1000; values above 1000 will be coerced to 1000.
+    /// be returned. The maximum value is 1000; values above 1000 will be coerced
+    /// to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -24441,7 +24441,7 @@ namespace Google.Cloud.Asset.V1 {
         public const int ProjectFieldNumber = 5;
         private string project_ = "";
         /// <summary>
-        /// The project that this resource belongs to, in the form of
+        /// The project that this resource belongs to, in the format of
         /// projects/{PROJECT_NUMBER}. This field is available when the resource
         /// belongs to a project.
         /// </summary>
@@ -24460,9 +24460,9 @@ namespace Google.Cloud.Asset.V1 {
             = pb::FieldCodec.ForString(50);
         private readonly pbc::RepeatedField<string> folders_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The folder(s) that this resource belongs to, in the form of
+        /// The folder(s) that this resource belongs to, in the format of
         /// folders/{FOLDER_NUMBER}. This field is available when the resource
-        /// belongs(directly or cascadingly) to one or more folders.
+        /// belongs (directly or cascadingly) to one or more folders.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -24474,9 +24474,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int OrganizationFieldNumber = 7;
         private string organization_ = "";
         /// <summary>
-        /// The organization that this resource belongs to, in the form of
+        /// The organization that this resource belongs to, in the format of
         /// organizations/{ORGANIZATION_NUMBER}. This field is available when the
-        /// resource belongs(directly or cascadingly) to an organization.
+        /// resource belongs (directly or cascadingly) to an organization.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -24797,7 +24797,7 @@ namespace Google.Cloud.Asset.V1 {
         public const int ProjectFieldNumber = 5;
         private string project_ = "";
         /// <summary>
-        /// The project that this IAM policy belongs to, in the form of
+        /// The project that this IAM policy belongs to, in the format of
         /// projects/{PROJECT_NUMBER}. This field is available when the IAM policy
         /// belongs to a project.
         /// </summary>
@@ -24816,9 +24816,9 @@ namespace Google.Cloud.Asset.V1 {
             = pb::FieldCodec.ForString(50);
         private readonly pbc::RepeatedField<string> folders_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The folder(s) that this IAM policy belongs to, in the form of
+        /// The folder(s) that this IAM policy belongs to, in the format of
         /// folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-        /// belongs(directly or cascadingly) to one or more folders.
+        /// belongs (directly or cascadingly) to one or more folders.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -24830,9 +24830,9 @@ namespace Google.Cloud.Asset.V1 {
         public const int OrganizationFieldNumber = 7;
         private string organization_ = "";
         /// <summary>
-        /// The organization that this IAM policy belongs to, in the form of
+        /// The organization that this IAM policy belongs to, in the format of
         /// organizations/{ORGANIZATION_NUMBER}. This field is available when the
-        /// IAM policy belongs(directly or cascadingly) to an organization.
+        /// IAM policy belongs (directly or cascadingly) to an organization.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

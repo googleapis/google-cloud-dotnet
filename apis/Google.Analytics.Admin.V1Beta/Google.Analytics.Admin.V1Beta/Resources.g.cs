@@ -998,10 +998,10 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int PropertyTypeFieldNumber = 14;
     private global::Google.Analytics.Admin.V1Beta.PropertyType propertyType_ = global::Google.Analytics.Admin.V1Beta.PropertyType.Unspecified;
     /// <summary>
-    /// Immutable. The property type for this Property resource. When creating a property, if
-    /// the type is "PROPERTY_TYPE_UNSPECIFIED", then "ORDINARY_PROPERTY" will be
-    /// implied. "SUBPROPERTY" and "ROLLUP_PROPERTY" types cannot yet be created
-    /// via Google Analytics Admin API.
+    /// Immutable. The property type for this Property resource. When creating a
+    /// property, if the type is "PROPERTY_TYPE_UNSPECIFIED", then
+    /// "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and "ROLLUP_PROPERTY"
+    /// types cannot yet be created with the Google Analytics Admin API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1098,9 +1098,9 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int TimeZoneFieldNumber = 7;
     private string timeZone_ = "";
     /// <summary>
-    /// Required. Reporting Time Zone, used as the day boundary for reports, regardless of
-    /// where the data originates. If the time zone honors DST, Analytics will
-    /// automatically adjust for the changes.
+    /// Required. Reporting Time Zone, used as the day boundary for reports,
+    /// regardless of where the data originates. If the time zone honors DST,
+    /// Analytics will automatically adjust for the changes.
     ///
     /// NOTE: Changing the time zone only affects data going forward, and is not
     /// applied retroactively.
@@ -1139,7 +1139,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int ServiceLevelFieldNumber = 10;
     private global::Google.Analytics.Admin.V1Beta.ServiceLevel serviceLevel_ = global::Google.Analytics.Admin.V1Beta.ServiceLevel.Unspecified;
     /// <summary>
-    /// Output only. The Google Analytics service level that applies to this property.
+    /// Output only. The Google Analytics service level that applies to this
+    /// property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1154,8 +1155,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int DeleteTimeFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. If set, the time at which this property was trashed. If not set, then this
-    /// property is not currently in the trash can.
+    /// Output only. If set, the time at which this property was trashed. If not
+    /// set, then this property is not currently in the trash can.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1170,9 +1171,9 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int ExpireTimeFieldNumber = 12;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// Output only. If set, the time at which this trashed property will be permanently
-    /// deleted. If not set, then this property is not currently in the trash can
-    /// and is not slated to be deleted.
+    /// Output only. If set, the time at which this trashed property will be
+    /// permanently deleted. If not set, then this property is not currently in the
+    /// trash can and is not slated to be deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3084,9 +3085,9 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int ProjectFieldNumber = 2;
     private string project_ = "";
     /// <summary>
-    /// Immutable. Firebase project resource name. When creating a FirebaseLink, you may
-    /// provide this resource name using either a project number or project ID.
-    /// Once this resource has been created, returned FirebaseLinks will always
+    /// Immutable. Firebase project resource name. When creating a FirebaseLink,
+    /// you may provide this resource name using either a project number or project
+    /// ID. Once this resource has been created, returned FirebaseLinks will always
     /// have a project_name that contains a project number.
     ///
     /// Format: 'projects/{project number}'
@@ -3363,7 +3364,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId}
+    /// Output only. Format:
+    /// properties/{propertyId}/googleAdsLinks/{googleAdsLinkId}
     ///
     /// Note: googleAdsLinkId is not the Google Ads customer ID.
     /// </summary>
@@ -4858,9 +4860,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Resource name of this secret. This secret may be a child of any type of
-    /// stream.
-    /// Format:
+    /// Output only. Resource name of this secret. This secret may be a child of
+    /// any type of stream. Format:
     /// properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4891,8 +4892,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int SecretValueFieldNumber = 3;
     private string secretValue_ = "";
     /// <summary>
-    /// Output only. The measurement protocol secret value. Pass this value to the api_secret
-    /// field of the Measurement Protocol API when sending hits to this
+    /// Output only. The measurement protocol secret value. Pass this value to the
+    /// api_secret field of the Measurement Protocol API when sending hits to this
     /// secret's parent property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6561,7 +6562,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int DeletableFieldNumber = 4;
     private bool deletable_;
     /// <summary>
-    /// Output only. If set, this event can currently be deleted via DeleteConversionEvent.
+    /// Output only. If set, this event can currently be deleted with
+    /// DeleteConversionEvent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6576,11 +6578,11 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int CustomFieldNumber = 5;
     private bool custom_;
     /// <summary>
-    /// Output only. If set to true, this conversion event refers to a custom event.  If set to
-    /// false, this conversion event refers to a default event in GA. Default
-    /// events typically have special meaning in GA. Default events are usually
-    /// created for you by the GA system, but in some cases can be created by
-    /// property admins. Custom events count towards the maximum number of
+    /// Output only. If set to true, this conversion event refers to a custom
+    /// event.  If set to false, this conversion event refers to a default event in
+    /// GA. Default events typically have special meaning in GA. Default events are
+    /// usually created for you by the GA system, but in some cases can be created
+    /// by property admins. Custom events count towards the maximum number of
     /// custom conversion events that may be created per property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6925,8 +6927,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int DisplayNameFieldNumber = 3;
     private string displayName_ = "";
     /// <summary>
-    /// Required. Display name for this custom dimension as shown in the Analytics UI.
-    /// Max length of 82 characters, alphanumeric plus space and underscore
+    /// Required. Display name for this custom dimension as shown in the Analytics
+    /// UI. Max length of 82 characters, alphanumeric plus space and underscore
     /// starting with a letter. Legacy system-generated display names may contain
     /// square brackets, but updates to this field will never permit square
     /// brackets.
@@ -6944,7 +6946,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int DescriptionFieldNumber = 4;
     private string description_ = "";
     /// <summary>
-    /// Optional. Description for this custom dimension. Max length of 150 characters.
+    /// Optional. Description for this custom dimension. Max length of 150
+    /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6974,8 +6977,8 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int DisallowAdsPersonalizationFieldNumber = 6;
     private bool disallowAdsPersonalization_;
     /// <summary>
-    /// Optional. If set to true, sets this dimension as NPA and excludes it from ads
-    /// personalization.
+    /// Optional. If set to true, sets this dimension as NPA and excludes it from
+    /// ads personalization.
     ///
     /// This is currently only supported by user-scoped custom dimensions.
     /// </summary>
@@ -7428,9 +7431,9 @@ namespace Google.Analytics.Admin.V1Beta {
         = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.RestrictedMetricType) x);
     private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.RestrictedMetricType> restrictedMetricType_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.RestrictedMetricType>();
     /// <summary>
-    /// Optional. Types of restricted data that this metric may contain. Required for metrics
-    /// with CURRENCY measurement unit. Must be empty for metrics with a
-    /// non-CURRENCY measurement unit.
+    /// Optional. Types of restricted data that this metric may contain. Required
+    /// for metrics with CURRENCY measurement unit. Must be empty for metrics with
+    /// a non-CURRENCY measurement unit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

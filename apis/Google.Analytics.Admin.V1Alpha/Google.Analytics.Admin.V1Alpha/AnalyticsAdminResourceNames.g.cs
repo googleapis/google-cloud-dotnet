@@ -1417,4 +1417,17 @@ namespace Google.Analytics.Admin.V1Alpha
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetEnhancedMeasurementSettingsRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::EnhancedMeasurementSettingsName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::EnhancedMeasurementSettingsName EnhancedMeasurementSettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::EnhancedMeasurementSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

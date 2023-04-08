@@ -27,12 +27,12 @@ namespace Google.Maps.Routing.V2 {
             "Cihnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlX2xhYmVsLnByb3RvEhZn",
             "b29nbGUubWFwcy5yb3V0aW5nLnYyKm0KClJvdXRlTGFiZWwSGwoXUk9VVEVf",
             "TEFCRUxfVU5TUEVDSUZJRUQQABIRCg1ERUZBVUxUX1JPVVRFEAESGwoXREVG",
-            "QVVMVF9ST1VURV9BTFRFUk5BVEUQAhISCg5GVUVMX0VGRklDSUVOVBADQscB",
+            "QVVMVF9ST1VURV9BTFRFUk5BVEUQAhISCg5GVUVMX0VGRklDSUVOVBADQsQB",
             "Chpjb20uZ29vZ2xlLm1hcHMucm91dGluZy52MkIPUm91dGVMYWJlbFByb3Rv",
-            "UAFaPWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbWFw",
-            "cy9yb3V0aW5nL3YyO3JvdXRpbmf4AQGiAgVHTVJWMqoCFkdvb2dsZS5NYXBz",
-            "LlJvdXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xl",
-            "OjpNYXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
+            "UAFaOmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9yb3V0aW5nL2FwaXYyL3Jv",
+            "dXRpbmdwYjtyb3V0aW5ncGL4AQGiAgVHTVJWMqoCFkdvb2dsZS5NYXBzLlJv",
+            "dXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xlOjpN",
+            "YXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteLabel), }, null, null));
@@ -42,8 +42,8 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Enums
   /// <summary>
-  /// Labels for the `Route` that are useful to identify specific properties
-  /// of the route to compare against others.
+  /// Labels for the [Route][google.maps.routing.v2.Route] that are useful to
+  /// identify specific properties of the route to compare against others.
   /// </summary>
   public enum RouteLabel {
     /// <summary>
@@ -56,8 +56,9 @@ namespace Google.Maps.Routing.V2 {
     [pbr::OriginalName("DEFAULT_ROUTE")] DefaultRoute = 1,
     /// <summary>
     /// An alternative to the default "best" route. Routes like this will be
-    /// returned when `ComputeRoutesRequest.compute_alternative_routes` is
-    /// specified.
+    /// returned when
+    /// [compute_alternative_routes][google.maps.routing.v2.ComputeRoutesRequest.compute_alternative_routes]
+    /// is specified.
     /// </summary>
     [pbr::OriginalName("DEFAULT_ROUTE_ALTERNATE")] DefaultRouteAlternate = 2,
     /// <summary>

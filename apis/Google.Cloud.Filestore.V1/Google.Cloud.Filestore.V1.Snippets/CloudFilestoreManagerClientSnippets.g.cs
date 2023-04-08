@@ -797,6 +797,7 @@ namespace Google.Cloud.Filestore.V1.Snippets
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = cloudFilestoreManagerClient.DeleteInstance(request);
@@ -830,6 +831,7 @@ namespace Google.Cloud.Filestore.V1.Snippets
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await cloudFilestoreManagerClient.DeleteInstanceAsync(request);
@@ -966,6 +968,879 @@ namespace Google.Cloud.Filestore.V1.Snippets
             {
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSnapshots</summary>
+        public void ListSnapshotsRequestObject()
+        {
+            // Snippet: ListSnapshots(ListSnapshotsRequest, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            ListSnapshotsRequest request = new ListSnapshotsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshots(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Snapshot item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSnapshotsAsync</summary>
+        public async Task ListSnapshotsRequestObjectAsync()
+        {
+            // Snippet: ListSnapshotsAsync(ListSnapshotsRequest, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSnapshotsRequest request = new ListSnapshotsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshotsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Snapshot item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSnapshots</summary>
+        public void ListSnapshots()
+        {
+            // Snippet: ListSnapshots(string, string, int?, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            PagedEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshots(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Snapshot item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSnapshotsAsync</summary>
+        public async Task ListSnapshotsAsync()
+        {
+            // Snippet: ListSnapshotsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshotsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Snapshot item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSnapshots</summary>
+        public void ListSnapshotsResourceNames()
+        {
+            // Snippet: ListSnapshots(InstanceName, string, int?, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            PagedEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshots(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Snapshot item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSnapshotsAsync</summary>
+        public async Task ListSnapshotsResourceNamesAsync()
+        {
+            // Snippet: ListSnapshotsAsync(InstanceName, string, int?, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshotsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Snapshot item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshot</summary>
+        public void GetSnapshotRequestObject()
+        {
+            // Snippet: GetSnapshot(GetSnapshotRequest, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            GetSnapshotRequest request = new GetSnapshotRequest
+            {
+                SnapshotName = SnapshotName.FromProjectLocationInstanceSnapshot("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            Snapshot response = cloudFilestoreManagerClient.GetSnapshot(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshotAsync</summary>
+        public async Task GetSnapshotRequestObjectAsync()
+        {
+            // Snippet: GetSnapshotAsync(GetSnapshotRequest, CallSettings)
+            // Additional: GetSnapshotAsync(GetSnapshotRequest, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSnapshotRequest request = new GetSnapshotRequest
+            {
+                SnapshotName = SnapshotName.FromProjectLocationInstanceSnapshot("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            Snapshot response = await cloudFilestoreManagerClient.GetSnapshotAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshot</summary>
+        public void GetSnapshot()
+        {
+            // Snippet: GetSnapshot(string, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]/snapshots/[SNAPSHOT]";
+            // Make the request
+            Snapshot response = cloudFilestoreManagerClient.GetSnapshot(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshotAsync</summary>
+        public async Task GetSnapshotAsync()
+        {
+            // Snippet: GetSnapshotAsync(string, CallSettings)
+            // Additional: GetSnapshotAsync(string, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]/snapshots/[SNAPSHOT]";
+            // Make the request
+            Snapshot response = await cloudFilestoreManagerClient.GetSnapshotAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshot</summary>
+        public void GetSnapshotResourceNames()
+        {
+            // Snippet: GetSnapshot(SnapshotName, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            SnapshotName name = SnapshotName.FromProjectLocationInstanceSnapshot("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[SNAPSHOT]");
+            // Make the request
+            Snapshot response = cloudFilestoreManagerClient.GetSnapshot(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshotAsync</summary>
+        public async Task GetSnapshotResourceNamesAsync()
+        {
+            // Snippet: GetSnapshotAsync(SnapshotName, CallSettings)
+            // Additional: GetSnapshotAsync(SnapshotName, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            SnapshotName name = SnapshotName.FromProjectLocationInstanceSnapshot("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[SNAPSHOT]");
+            // Make the request
+            Snapshot response = await cloudFilestoreManagerClient.GetSnapshotAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSnapshot</summary>
+        public void CreateSnapshotRequestObject()
+        {
+            // Snippet: CreateSnapshot(CreateSnapshotRequest, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            CreateSnapshotRequest request = new CreateSnapshotRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SnapshotId = "",
+                Snapshot = new Snapshot(),
+            };
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = cloudFilestoreManagerClient.CreateSnapshot(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceCreateSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSnapshotAsync</summary>
+        public async Task CreateSnapshotRequestObjectAsync()
+        {
+            // Snippet: CreateSnapshotAsync(CreateSnapshotRequest, CallSettings)
+            // Additional: CreateSnapshotAsync(CreateSnapshotRequest, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSnapshotRequest request = new CreateSnapshotRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SnapshotId = "",
+                Snapshot = new Snapshot(),
+            };
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = await cloudFilestoreManagerClient.CreateSnapshotAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceCreateSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSnapshot</summary>
+        public void CreateSnapshot()
+        {
+            // Snippet: CreateSnapshot(string, Snapshot, string, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            Snapshot snapshot = new Snapshot();
+            string snapshotId = "";
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = cloudFilestoreManagerClient.CreateSnapshot(parent, snapshot, snapshotId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceCreateSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSnapshotAsync</summary>
+        public async Task CreateSnapshotAsync()
+        {
+            // Snippet: CreateSnapshotAsync(string, Snapshot, string, CallSettings)
+            // Additional: CreateSnapshotAsync(string, Snapshot, string, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            Snapshot snapshot = new Snapshot();
+            string snapshotId = "";
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = await cloudFilestoreManagerClient.CreateSnapshotAsync(parent, snapshot, snapshotId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceCreateSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSnapshot</summary>
+        public void CreateSnapshotResourceNames()
+        {
+            // Snippet: CreateSnapshot(InstanceName, Snapshot, string, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            Snapshot snapshot = new Snapshot();
+            string snapshotId = "";
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = cloudFilestoreManagerClient.CreateSnapshot(parent, snapshot, snapshotId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceCreateSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSnapshotAsync</summary>
+        public async Task CreateSnapshotResourceNamesAsync()
+        {
+            // Snippet: CreateSnapshotAsync(InstanceName, Snapshot, string, CallSettings)
+            // Additional: CreateSnapshotAsync(InstanceName, Snapshot, string, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            Snapshot snapshot = new Snapshot();
+            string snapshotId = "";
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = await cloudFilestoreManagerClient.CreateSnapshotAsync(parent, snapshot, snapshotId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceCreateSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSnapshot</summary>
+        public void DeleteSnapshotRequestObject()
+        {
+            // Snippet: DeleteSnapshot(DeleteSnapshotRequest, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            DeleteSnapshotRequest request = new DeleteSnapshotRequest
+            {
+                SnapshotName = SnapshotName.FromProjectLocationInstanceSnapshot("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudFilestoreManagerClient.DeleteSnapshot(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceDeleteSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSnapshotAsync</summary>
+        public async Task DeleteSnapshotRequestObjectAsync()
+        {
+            // Snippet: DeleteSnapshotAsync(DeleteSnapshotRequest, CallSettings)
+            // Additional: DeleteSnapshotAsync(DeleteSnapshotRequest, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSnapshotRequest request = new DeleteSnapshotRequest
+            {
+                SnapshotName = SnapshotName.FromProjectLocationInstanceSnapshot("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudFilestoreManagerClient.DeleteSnapshotAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceDeleteSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSnapshot</summary>
+        public void DeleteSnapshot()
+        {
+            // Snippet: DeleteSnapshot(string, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]/snapshots/[SNAPSHOT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudFilestoreManagerClient.DeleteSnapshot(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceDeleteSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSnapshotAsync</summary>
+        public async Task DeleteSnapshotAsync()
+        {
+            // Snippet: DeleteSnapshotAsync(string, CallSettings)
+            // Additional: DeleteSnapshotAsync(string, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]/snapshots/[SNAPSHOT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudFilestoreManagerClient.DeleteSnapshotAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceDeleteSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSnapshot</summary>
+        public void DeleteSnapshotResourceNames()
+        {
+            // Snippet: DeleteSnapshot(SnapshotName, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            SnapshotName name = SnapshotName.FromProjectLocationInstanceSnapshot("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[SNAPSHOT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudFilestoreManagerClient.DeleteSnapshot(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceDeleteSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSnapshotAsync</summary>
+        public async Task DeleteSnapshotResourceNamesAsync()
+        {
+            // Snippet: DeleteSnapshotAsync(SnapshotName, CallSettings)
+            // Additional: DeleteSnapshotAsync(SnapshotName, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            SnapshotName name = SnapshotName.FromProjectLocationInstanceSnapshot("[PROJECT]", "[LOCATION]", "[INSTANCE]", "[SNAPSHOT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudFilestoreManagerClient.DeleteSnapshotAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceDeleteSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSnapshot</summary>
+        public void UpdateSnapshotRequestObject()
+        {
+            // Snippet: UpdateSnapshot(UpdateSnapshotRequest, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            UpdateSnapshotRequest request = new UpdateSnapshotRequest
+            {
+                UpdateMask = new FieldMask(),
+                Snapshot = new Snapshot(),
+            };
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = cloudFilestoreManagerClient.UpdateSnapshot(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceUpdateSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSnapshotAsync</summary>
+        public async Task UpdateSnapshotRequestObjectAsync()
+        {
+            // Snippet: UpdateSnapshotAsync(UpdateSnapshotRequest, CallSettings)
+            // Additional: UpdateSnapshotAsync(UpdateSnapshotRequest, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSnapshotRequest request = new UpdateSnapshotRequest
+            {
+                UpdateMask = new FieldMask(),
+                Snapshot = new Snapshot(),
+            };
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = await cloudFilestoreManagerClient.UpdateSnapshotAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceUpdateSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSnapshot</summary>
+        public void UpdateSnapshot()
+        {
+            // Snippet: UpdateSnapshot(Snapshot, FieldMask, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            Snapshot snapshot = new Snapshot();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = cloudFilestoreManagerClient.UpdateSnapshot(snapshot, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceUpdateSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSnapshotAsync</summary>
+        public async Task UpdateSnapshotAsync()
+        {
+            // Snippet: UpdateSnapshotAsync(Snapshot, FieldMask, CallSettings)
+            // Additional: UpdateSnapshotAsync(Snapshot, FieldMask, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            Snapshot snapshot = new Snapshot();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Snapshot, OperationMetadata> response = await cloudFilestoreManagerClient.UpdateSnapshotAsync(snapshot, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Snapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Snapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Snapshot, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceUpdateSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Snapshot retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

@@ -330,6 +330,103 @@
       ]
     },
     {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_UploadConversation_sync",
+      "title": "UploadConversationRequestObject",
+      "description": "Snippet for UploadConversation",
+      "file": "ContactCenterInsightsClient.UploadConversationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UploadConversation",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UploadConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.Conversation, Google.Cloud.ContactCenterInsights.V1.UploadConversationMetadata>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "UploadConversation",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.UploadConversation",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_UploadConversation_async",
+      "title": "UploadConversationRequestObjectAsync",
+      "description": "Snippet for UploadConversationAsync",
+      "file": "ContactCenterInsightsClient.UploadConversationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UploadConversationAsync",
+        "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient.UploadConversationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ContactCenterInsights.V1.UploadConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ContactCenterInsights.V1.Conversation, Google.Cloud.ContactCenterInsights.V1.UploadConversationMetadata>>",
+        "client": {
+          "shortName": "ContactCenterInsightsClient",
+          "fullName": "Google.Cloud.ContactCenterInsights.V1.ContactCenterInsightsClient"
+        },
+        "method": {
+          "shortName": "UploadConversation",
+          "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights.UploadConversation",
+          "service": {
+            "shortName": "ContactCenterInsights",
+            "fullName": "google.cloud.contactcenterinsights.v1.ContactCenterInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "contactcenterinsights_v1_generated_ContactCenterInsights_UpdateConversation_sync",
       "title": "UpdateConversationRequestObject",
       "description": "Snippet for UpdateConversation",

@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.2.0, released 2023-03-20
+
+### New features
+
+- Add `available_cpu ` field ([commit 1fe48c2](https://github.com/googleapis/google-cloud-dotnet/commit/1fe48c20af36a2f9d5b6de66a2d8ddda3383e991))
+- Add `kms_key_name` field to ServiceConfig (the CMEK use case) ([commit 1fe48c2](https://github.com/googleapis/google-cloud-dotnet/commit/1fe48c20af36a2f9d5b6de66a2d8ddda3383e991))
+- Add `max_instance_request_concurrency` field ([commit 1fe48c2](https://github.com/googleapis/google-cloud-dotnet/commit/1fe48c20af36a2f9d5b6de66a2d8ddda3383e991))
+- Add `security_level` field ([commit 1fe48c2](https://github.com/googleapis/google-cloud-dotnet/commit/1fe48c20af36a2f9d5b6de66a2d8ddda3383e991))
+
 ## Version 1.1.0, released 2023-01-19
 
 ### New features

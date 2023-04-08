@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Retail.V2 {
   /// <summary>
-  /// Auto-completion service for retail.
+  /// Autocomplete service for retail.
   ///
   /// This feature is only available for users who have Retail Search enabled.
   /// Enable Retail Search on Cloud Console before using this feature.

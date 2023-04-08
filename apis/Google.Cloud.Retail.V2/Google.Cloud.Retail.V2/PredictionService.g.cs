@@ -255,6 +255,9 @@ namespace Google.Cloud.Retail.V2 {
     ///  * (colors: ANY("Red", "Blue")) AND NOT (categories: ANY("Phones"))
     ///  * (availability: ANY("IN_STOCK")) AND
     ///    (colors: ANY("Red") OR categories: ANY("Phones"))
+    ///
+    /// For more information, see
+    /// [Filter recommendations](https://cloud.google.com/retail/docs/filter-recs).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

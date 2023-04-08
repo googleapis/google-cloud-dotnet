@@ -35,12 +35,12 @@ namespace Google.Maps.Routing.V2 {
             "cnBjLlN0YXR1cxIwCiNpbnRlcm1lZGlhdGVfd2F5cG9pbnRfcmVxdWVzdF9p",
             "bmRleBgCIAEoBUgAiAEBEgwKBHR5cGUYAyADKAkSFQoNcGFydGlhbF9tYXRj",
             "aBgEIAEoCBIQCghwbGFjZV9pZBgFIAEoCUImCiRfaW50ZXJtZWRpYXRlX3dh",
-            "eXBvaW50X3JlcXVlc3RfaW5kZXhCzQEKGmNvbS5nb29nbGUubWFwcy5yb3V0",
-            "aW5nLnYyQhVHZW9jb2RpbmdSZXN1bHRzUHJvdG9QAVo9Z29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tYXBzL3JvdXRpbmcvdjI7cm91",
-            "dGluZ/gBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdv",
-            "b2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6",
-            "OlYyYgZwcm90bzM="));
+            "eXBvaW50X3JlcXVlc3RfaW5kZXhCygEKGmNvbS5nb29nbGUubWFwcy5yb3V0",
+            "aW5nLnYyQhVHZW9jb2RpbmdSZXN1bHRzUHJvdG9QAVo6Y2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91dGluZ3BiO3JvdXRpbmdw",
+            "YvgBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2ds",
+            "ZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYy",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,8 +53,9 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Messages
   /// <summary>
-  /// Contains GeocodedWaypoints for origin, destination and intermediate
-  /// waypoints. Only populated for address waypoints.
+  /// Contains [GeocodedWaypoints][google.maps.routing.v2.GeocodedWaypoint] for
+  /// origin, destination and intermediate waypoints. Only populated for address
+  /// waypoints.
   /// </summary>
   public sealed partial class GeocodingResults : pb::IMessage<GeocodingResults>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

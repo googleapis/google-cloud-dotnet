@@ -18,6 +18,8 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_DeleteCdnKey_async_flattened]
     using Google.Cloud.Video.Stitcher.V1;
+    using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedVideoStitcherServiceClientSnippets
@@ -37,7 +39,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/cdnKeys/[CDN_KEY]";
             // Make the request
-            await videoStitcherServiceClient.DeleteCdnKeyAsync(name);
+            Operation<Empty, OperationMetadata> response = await videoStitcherServiceClient.DeleteCdnKeyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await videoStitcherServiceClient.PollOnceDeleteCdnKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
         }
     }
     // [END videostitcher_v1_generated_VideoStitcherService_DeleteCdnKey_async_flattened]

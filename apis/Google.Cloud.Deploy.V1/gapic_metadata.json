@@ -16,10 +16,22 @@
                 "AbandonReleaseAsync"
               ]
             },
+            "AdvanceRollout": {
+              "methods": [
+                "AdvanceRollout",
+                "AdvanceRolloutAsync"
+              ]
+            },
             "ApproveRollout": {
               "methods": [
                 "ApproveRollout",
                 "ApproveRolloutAsync"
+              ]
+            },
+            "CancelRollout": {
+              "methods": [
+                "CancelRollout",
+                "CancelRolloutAsync"
               ]
             },
             "CreateDeliveryPipeline": {
@@ -94,6 +106,12 @@
                 "GetTargetAsync"
               ]
             },
+            "IgnoreJob": {
+              "methods": [
+                "IgnoreJob",
+                "IgnoreJobAsync"
+              ]
+            },
             "ListDeliveryPipelines": {
               "methods": [
                 "ListDeliveryPipelines",
@@ -128,6 +146,12 @@
               "methods": [
                 "RetryJob",
                 "RetryJobAsync"
+              ]
+            },
+            "TerminateJobRun": {
+              "methods": [
+                "TerminateJobRun",
+                "TerminateJobRunAsync"
               ]
             },
             "UpdateDeliveryPipeline": {

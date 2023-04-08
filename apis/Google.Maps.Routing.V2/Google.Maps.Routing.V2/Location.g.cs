@@ -28,12 +28,12 @@ namespace Google.Maps.Routing.V2 {
             "bGUubWFwcy5yb3V0aW5nLnYyGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMu",
             "cHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90byJeCghMb2NhdGlvbhIk",
             "CgdsYXRfbG5nGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEiwKB2hlYWRp",
-            "bmcYAiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZULFAQoaY29t",
-            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCDUxvY2F0aW9uUHJvdG9QAVo9Z29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tYXBzL3JvdXRp",
-            "bmcvdjI7cm91dGluZ/gBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGlu",
-            "Zy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6",
-            "OlJvdXRpbmc6OlYyYgZwcm90bzM="));
+            "bmcYAiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZULCAQoaY29t",
+            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCDUxvY2F0aW9uUHJvdG9QAVo6Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91dGluZ3Bi",
+            "O3JvdXRpbmdwYvgBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5W",
+            "MsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJv",
+            "dXRpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -116,7 +116,8 @@ namespace Google.Maps.Routing.V2 {
     /// This value is used to specify the side of the road to use for pickup and
     /// drop-off. Heading values can be from 0 to 360, where 0 specifies a heading
     /// of due North, 90 specifies a heading of due East, etc. You can use this
-    /// field only for `DRIVE` and `TWO_WHEELER` travel modes.
+    /// field only for `DRIVE` and `TWO_WHEELER`
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -48,10 +49,13 @@ namespace Google.Cloud.Video.Stitcher.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateCdnKeySettings = existing.CreateCdnKeySettings;
+            CreateCdnKeyOperationsSettings = existing.CreateCdnKeyOperationsSettings.Clone();
             ListCdnKeysSettings = existing.ListCdnKeysSettings;
             GetCdnKeySettings = existing.GetCdnKeySettings;
             DeleteCdnKeySettings = existing.DeleteCdnKeySettings;
+            DeleteCdnKeyOperationsSettings = existing.DeleteCdnKeyOperationsSettings.Clone();
             UpdateCdnKeySettings = existing.UpdateCdnKeySettings;
+            UpdateCdnKeyOperationsSettings = existing.UpdateCdnKeyOperationsSettings.Clone();
             CreateVodSessionSettings = existing.CreateVodSessionSettings;
             GetVodSessionSettings = existing.GetVodSessionSettings;
             ListVodStitchDetailsSettings = existing.ListVodStitchDetailsSettings;
@@ -61,12 +65,21 @@ namespace Google.Cloud.Video.Stitcher.V1
             ListLiveAdTagDetailsSettings = existing.ListLiveAdTagDetailsSettings;
             GetLiveAdTagDetailSettings = existing.GetLiveAdTagDetailSettings;
             CreateSlateSettings = existing.CreateSlateSettings;
+            CreateSlateOperationsSettings = existing.CreateSlateOperationsSettings.Clone();
             ListSlatesSettings = existing.ListSlatesSettings;
             GetSlateSettings = existing.GetSlateSettings;
             UpdateSlateSettings = existing.UpdateSlateSettings;
+            UpdateSlateOperationsSettings = existing.UpdateSlateOperationsSettings.Clone();
             DeleteSlateSettings = existing.DeleteSlateSettings;
+            DeleteSlateOperationsSettings = existing.DeleteSlateOperationsSettings.Clone();
             CreateLiveSessionSettings = existing.CreateLiveSessionSettings;
             GetLiveSessionSettings = existing.GetLiveSessionSettings;
+            CreateLiveConfigSettings = existing.CreateLiveConfigSettings;
+            CreateLiveConfigOperationsSettings = existing.CreateLiveConfigOperationsSettings.Clone();
+            ListLiveConfigsSettings = existing.ListLiveConfigsSettings;
+            GetLiveConfigSettings = existing.GetLiveConfigSettings;
+            DeleteLiveConfigSettings = existing.DeleteLiveConfigSettings;
+            DeleteLiveConfigOperationsSettings = existing.DeleteLiveConfigOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -83,6 +96,24 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateCdnKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VideoStitcherServiceClient.CreateCdnKey</c> and
+        /// <c>VideoStitcherServiceClient.CreateCdnKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateCdnKeyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -121,6 +152,24 @@ namespace Google.Cloud.Video.Stitcher.V1
         public gaxgrpc::CallSettings DeleteCdnKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>VideoStitcherServiceClient.DeleteCdnKey</c> and
+        /// <c>VideoStitcherServiceClient.DeleteCdnKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteCdnKeyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>VideoStitcherServiceClient.UpdateCdnKey</c> and <c>VideoStitcherServiceClient.UpdateCdnKeyAsync</c>.
         /// </summary>
@@ -131,6 +180,24 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateCdnKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VideoStitcherServiceClient.UpdateCdnKey</c> and
+        /// <c>VideoStitcherServiceClient.UpdateCdnKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateCdnKeyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -248,6 +315,24 @@ namespace Google.Cloud.Video.Stitcher.V1
         public gaxgrpc::CallSettings CreateSlateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>VideoStitcherServiceClient.CreateSlate</c> and
+        /// <c>VideoStitcherServiceClient.CreateSlateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateSlateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>VideoStitcherServiceClient.ListSlates</c> and <c>VideoStitcherServiceClient.ListSlatesAsync</c>.
         /// </summary>
@@ -284,6 +369,24 @@ namespace Google.Cloud.Video.Stitcher.V1
         public gaxgrpc::CallSettings UpdateSlateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>VideoStitcherServiceClient.UpdateSlate</c> and
+        /// <c>VideoStitcherServiceClient.UpdateSlateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateSlateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>VideoStitcherServiceClient.DeleteSlate</c> and <c>VideoStitcherServiceClient.DeleteSlateAsync</c>.
         /// </summary>
@@ -294,6 +397,24 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSlateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VideoStitcherServiceClient.DeleteSlate</c> and
+        /// <c>VideoStitcherServiceClient.DeleteSlateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteSlateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -319,6 +440,117 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetLiveSessionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VideoStitcherServiceClient.CreateLiveConfig</c> and <c>VideoStitcherServiceClient.CreateLiveConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateLiveConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VideoStitcherServiceClient.CreateLiveConfig</c> and
+        /// <c>VideoStitcherServiceClient.CreateLiveConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateLiveConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VideoStitcherServiceClient.ListLiveConfigs</c> and <c>VideoStitcherServiceClient.ListLiveConfigsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListLiveConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VideoStitcherServiceClient.GetLiveConfig</c> and <c>VideoStitcherServiceClient.GetLiveConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetLiveConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VideoStitcherServiceClient.DeleteLiveConfig</c> and <c>VideoStitcherServiceClient.DeleteLiveConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteLiveConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VideoStitcherServiceClient.DeleteLiveConfig</c> and
+        /// <c>VideoStitcherServiceClient.DeleteLiveConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteLiveConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="VideoStitcherServiceSettings"/> object.</returns>
@@ -474,7 +706,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CdnKey CreateCdnKey(CreateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<CdnKey, OperationMetadata> CreateCdnKey(CreateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -483,7 +715,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> CreateCdnKeyAsync(CreateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> CreateCdnKeyAsync(CreateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -492,22 +724,48 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> CreateCdnKeyAsync(CreateCdnKeyRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> CreateCdnKeyAsync(CreateCdnKeyRequest request, st::CancellationToken cancellationToken) =>
             CreateCdnKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateCdnKey</c>.</summary>
+        public virtual lro::OperationsClient CreateCdnKeyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateCdnKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CdnKey, OperationMetadata> PollOnceCreateCdnKey(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CdnKey, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCdnKeyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateCdnKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> PollOnceCreateCdnKeyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CdnKey, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCdnKeyOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a new CDN key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which the CDN key should be created, in the form of
-        /// `projects/{project_number}/locations/{location}`.
+        /// Required. The project in which the CDN key should be created, in the form
+        /// of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="cdnKey">
         /// Required. The CDN key resource to create.
         /// </param>
         /// <param name="cdnKeyId">
-        /// Required. The ID to use for the CDN key, which will become the final component of
-        /// the CDN key's resource name.
+        /// Required. The ID to use for the CDN key, which will become the final
+        /// component of the CDN key's resource name.
         /// 
         /// This value should conform to RFC-1034, which restricts to
         /// lower-case letters, numbers, and hyphen, with the first character a
@@ -515,7 +773,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CdnKey CreateCdnKey(string parent, CdnKey cdnKey, string cdnKeyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<CdnKey, OperationMetadata> CreateCdnKey(string parent, CdnKey cdnKey, string cdnKeyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateCdnKey(new CreateCdnKeyRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -527,15 +785,15 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new CDN key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which the CDN key should be created, in the form of
-        /// `projects/{project_number}/locations/{location}`.
+        /// Required. The project in which the CDN key should be created, in the form
+        /// of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="cdnKey">
         /// Required. The CDN key resource to create.
         /// </param>
         /// <param name="cdnKeyId">
-        /// Required. The ID to use for the CDN key, which will become the final component of
-        /// the CDN key's resource name.
+        /// Required. The ID to use for the CDN key, which will become the final
+        /// component of the CDN key's resource name.
         /// 
         /// This value should conform to RFC-1034, which restricts to
         /// lower-case letters, numbers, and hyphen, with the first character a
@@ -543,7 +801,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> CreateCdnKeyAsync(string parent, CdnKey cdnKey, string cdnKeyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> CreateCdnKeyAsync(string parent, CdnKey cdnKey, string cdnKeyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateCdnKeyAsync(new CreateCdnKeyRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -555,15 +813,15 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new CDN key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which the CDN key should be created, in the form of
-        /// `projects/{project_number}/locations/{location}`.
+        /// Required. The project in which the CDN key should be created, in the form
+        /// of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="cdnKey">
         /// Required. The CDN key resource to create.
         /// </param>
         /// <param name="cdnKeyId">
-        /// Required. The ID to use for the CDN key, which will become the final component of
-        /// the CDN key's resource name.
+        /// Required. The ID to use for the CDN key, which will become the final
+        /// component of the CDN key's resource name.
         /// 
         /// This value should conform to RFC-1034, which restricts to
         /// lower-case letters, numbers, and hyphen, with the first character a
@@ -571,22 +829,22 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> CreateCdnKeyAsync(string parent, CdnKey cdnKey, string cdnKeyId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> CreateCdnKeyAsync(string parent, CdnKey cdnKey, string cdnKeyId, st::CancellationToken cancellationToken) =>
             CreateCdnKeyAsync(parent, cdnKey, cdnKeyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new CDN key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which the CDN key should be created, in the form of
-        /// `projects/{project_number}/locations/{location}`.
+        /// Required. The project in which the CDN key should be created, in the form
+        /// of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="cdnKey">
         /// Required. The CDN key resource to create.
         /// </param>
         /// <param name="cdnKeyId">
-        /// Required. The ID to use for the CDN key, which will become the final component of
-        /// the CDN key's resource name.
+        /// Required. The ID to use for the CDN key, which will become the final
+        /// component of the CDN key's resource name.
         /// 
         /// This value should conform to RFC-1034, which restricts to
         /// lower-case letters, numbers, and hyphen, with the first character a
@@ -594,7 +852,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CdnKey CreateCdnKey(gagr::LocationName parent, CdnKey cdnKey, string cdnKeyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<CdnKey, OperationMetadata> CreateCdnKey(gagr::LocationName parent, CdnKey cdnKey, string cdnKeyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateCdnKey(new CreateCdnKeyRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -606,15 +864,15 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new CDN key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which the CDN key should be created, in the form of
-        /// `projects/{project_number}/locations/{location}`.
+        /// Required. The project in which the CDN key should be created, in the form
+        /// of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="cdnKey">
         /// Required. The CDN key resource to create.
         /// </param>
         /// <param name="cdnKeyId">
-        /// Required. The ID to use for the CDN key, which will become the final component of
-        /// the CDN key's resource name.
+        /// Required. The ID to use for the CDN key, which will become the final
+        /// component of the CDN key's resource name.
         /// 
         /// This value should conform to RFC-1034, which restricts to
         /// lower-case letters, numbers, and hyphen, with the first character a
@@ -622,7 +880,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> CreateCdnKeyAsync(gagr::LocationName parent, CdnKey cdnKey, string cdnKeyId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> CreateCdnKeyAsync(gagr::LocationName parent, CdnKey cdnKey, string cdnKeyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateCdnKeyAsync(new CreateCdnKeyRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -634,15 +892,15 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new CDN key.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which the CDN key should be created, in the form of
-        /// `projects/{project_number}/locations/{location}`.
+        /// Required. The project in which the CDN key should be created, in the form
+        /// of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="cdnKey">
         /// Required. The CDN key resource to create.
         /// </param>
         /// <param name="cdnKeyId">
-        /// Required. The ID to use for the CDN key, which will become the final component of
-        /// the CDN key's resource name.
+        /// Required. The ID to use for the CDN key, which will become the final
+        /// component of the CDN key's resource name.
         /// 
         /// This value should conform to RFC-1034, which restricts to
         /// lower-case letters, numbers, and hyphen, with the first character a
@@ -650,7 +908,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> CreateCdnKeyAsync(gagr::LocationName parent, CdnKey cdnKey, string cdnKeyId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> CreateCdnKeyAsync(gagr::LocationName parent, CdnKey cdnKey, string cdnKeyId, st::CancellationToken cancellationToken) =>
             CreateCdnKeyAsync(parent, cdnKey, cdnKeyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -888,7 +1146,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteCdnKey(DeleteCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCdnKey(DeleteCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -897,7 +1155,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteCdnKeyAsync(DeleteCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCdnKeyAsync(DeleteCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -906,9 +1164,35 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteCdnKeyAsync(DeleteCdnKeyRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCdnKeyAsync(DeleteCdnKeyRequest request, st::CancellationToken cancellationToken) =>
             DeleteCdnKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
+        /// <summary>The long-running operations client for <c>DeleteCdnKey</c>.</summary>
+        public virtual lro::OperationsClient DeleteCdnKeyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteCdnKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteCdnKey(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCdnKeyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteCdnKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteCdnKeyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteCdnKeyOperationsClient, callSettings);
+
         /// <summary>
         /// Deletes the specified CDN key.
         /// </summary>
@@ -918,7 +1202,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteCdnKey(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCdnKey(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCdnKey(new DeleteCdnKeyRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -933,7 +1217,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteCdnKeyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCdnKeyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCdnKeyAsync(new DeleteCdnKeyRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -948,7 +1232,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteCdnKeyAsync(string name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCdnKeyAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteCdnKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -960,7 +1244,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteCdnKey(CdnKeyName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteCdnKey(CdnKeyName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCdnKey(new DeleteCdnKeyRequest
             {
                 CdnKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -975,7 +1259,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteCdnKeyAsync(CdnKeyName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCdnKeyAsync(CdnKeyName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteCdnKeyAsync(new DeleteCdnKeyRequest
             {
                 CdnKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -990,7 +1274,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteCdnKeyAsync(CdnKeyName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCdnKeyAsync(CdnKeyName name, st::CancellationToken cancellationToken) =>
             DeleteCdnKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1000,7 +1284,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CdnKey UpdateCdnKey(UpdateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<CdnKey, OperationMetadata> UpdateCdnKey(UpdateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1010,7 +1294,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> UpdateCdnKeyAsync(UpdateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> UpdateCdnKeyAsync(UpdateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1020,8 +1304,34 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> UpdateCdnKeyAsync(UpdateCdnKeyRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> UpdateCdnKeyAsync(UpdateCdnKeyRequest request, st::CancellationToken cancellationToken) =>
             UpdateCdnKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateCdnKey</c>.</summary>
+        public virtual lro::OperationsClient UpdateCdnKeyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateCdnKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CdnKey, OperationMetadata> PollOnceUpdateCdnKey(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CdnKey, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCdnKeyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateCdnKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> PollOnceUpdateCdnKeyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CdnKey, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateCdnKeyOperationsClient, callSettings);
 
         /// <summary>
         /// Updates the specified CDN key. Only update fields specified
@@ -1037,7 +1347,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CdnKey UpdateCdnKey(CdnKey cdnKey, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<CdnKey, OperationMetadata> UpdateCdnKey(CdnKey cdnKey, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateCdnKey(new UpdateCdnKeyRequest
             {
                 CdnKey = gax::GaxPreconditions.CheckNotNull(cdnKey, nameof(cdnKey)),
@@ -1058,7 +1368,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> UpdateCdnKeyAsync(CdnKey cdnKey, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> UpdateCdnKeyAsync(CdnKey cdnKey, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateCdnKeyAsync(new UpdateCdnKeyRequest
             {
                 CdnKey = gax::GaxPreconditions.CheckNotNull(cdnKey, nameof(cdnKey)),
@@ -1079,7 +1389,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CdnKey> UpdateCdnKeyAsync(CdnKey cdnKey, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<CdnKey, OperationMetadata>> UpdateCdnKeyAsync(CdnKey cdnKey, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateCdnKeyAsync(cdnKey, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1117,8 +1427,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// tracking and playback metadata of the session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the VOD session should be created, in the
-        /// form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the VOD session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="vodSession">
         /// Required. Parameters for creating a session.
@@ -1137,8 +1447,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// tracking and playback metadata of the session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the VOD session should be created, in the
-        /// form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the VOD session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="vodSession">
         /// Required. Parameters for creating a session.
@@ -1157,8 +1467,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// tracking and playback metadata of the session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the VOD session should be created, in the
-        /// form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the VOD session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="vodSession">
         /// Required. Parameters for creating a session.
@@ -1173,8 +1483,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// tracking and playback metadata of the session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the VOD session should be created, in the
-        /// form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the VOD session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="vodSession">
         /// Required. Parameters for creating a session.
@@ -1193,8 +1503,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// tracking and playback metadata of the session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the VOD session should be created, in the
-        /// form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the VOD session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="vodSession">
         /// Required. Parameters for creating a session.
@@ -1213,8 +1523,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// tracking and playback metadata of the session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the VOD session should be created, in the
-        /// form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the VOD session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="vodSession">
         /// Required. Parameters for creating a session.
@@ -1369,8 +1679,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The VOD session where the stitch details belong to, in the form of
-        /// `projects/{project}/locations/{location}/vodSessions/{id}`.
+        /// Required. The VOD session where the stitch details belong to, in the form
+        /// of `projects/{project}/locations/{location}/vodSessions/{id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1395,8 +1705,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The VOD session where the stitch details belong to, in the form of
-        /// `projects/{project}/locations/{location}/vodSessions/{id}`.
+        /// Required. The VOD session where the stitch details belong to, in the form
+        /// of `projects/{project}/locations/{location}/vodSessions/{id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1421,8 +1731,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The VOD session where the stitch details belong to, in the form of
-        /// `projects/{project}/locations/{location}/vodSessions/{id}`.
+        /// Required. The VOD session where the stitch details belong to, in the form
+        /// of `projects/{project}/locations/{location}/vodSessions/{id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1447,8 +1757,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The VOD session where the stitch details belong to, in the form of
-        /// `projects/{project}/locations/{location}/vodSessions/{id}`.
+        /// Required. The VOD session where the stitch details belong to, in the form
+        /// of `projects/{project}/locations/{location}/vodSessions/{id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1499,7 +1809,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified stitching information for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the stitch detail in the specified VOD session, in the form of
+        /// Required. The name of the stitch detail in the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodStitchDetails/{id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1514,7 +1825,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified stitching information for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the stitch detail in the specified VOD session, in the form of
+        /// Required. The name of the stitch detail in the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodStitchDetails/{id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1529,7 +1841,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified stitching information for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the stitch detail in the specified VOD session, in the form of
+        /// Required. The name of the stitch detail in the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodStitchDetails/{id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1541,7 +1854,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified stitching information for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the stitch detail in the specified VOD session, in the form of
+        /// Required. The name of the stitch detail in the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodStitchDetails/{id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1556,7 +1870,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified stitching information for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the stitch detail in the specified VOD session, in the form of
+        /// Required. The name of the stitch detail in the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodStitchDetails/{id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1571,7 +1886,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified stitching information for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the stitch detail in the specified VOD session, in the form of
+        /// Required. The name of the stitch detail in the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodStitchDetails/{id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1601,8 +1917,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Return the list of ad tag details for the specified VOD session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The VOD session which the ad tag details belong to, in the form of
-        /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
+        /// Required. The VOD session which the ad tag details belong to, in the form
+        /// of `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1626,8 +1942,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Return the list of ad tag details for the specified VOD session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The VOD session which the ad tag details belong to, in the form of
-        /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
+        /// Required. The VOD session which the ad tag details belong to, in the form
+        /// of `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1651,8 +1967,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Return the list of ad tag details for the specified VOD session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The VOD session which the ad tag details belong to, in the form of
-        /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
+        /// Required. The VOD session which the ad tag details belong to, in the form
+        /// of `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1676,8 +1992,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Return the list of ad tag details for the specified VOD session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The VOD session which the ad tag details belong to, in the form of
-        /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
+        /// Required. The VOD session which the ad tag details belong to, in the form
+        /// of `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1728,7 +2044,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified ad tag detail for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the ad tag detail for the specified VOD session, in the form of
+        /// Required. The name of the ad tag detail for the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodAdTagDetails/{vod_ad_tag_detail}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1743,7 +2060,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified ad tag detail for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the ad tag detail for the specified VOD session, in the form of
+        /// Required. The name of the ad tag detail for the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodAdTagDetails/{vod_ad_tag_detail}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1758,7 +2076,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified ad tag detail for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the ad tag detail for the specified VOD session, in the form of
+        /// Required. The name of the ad tag detail for the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodAdTagDetails/{vod_ad_tag_detail}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1770,7 +2089,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified ad tag detail for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the ad tag detail for the specified VOD session, in the form of
+        /// Required. The name of the ad tag detail for the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodAdTagDetails/{vod_ad_tag_detail}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1785,7 +2105,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified ad tag detail for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the ad tag detail for the specified VOD session, in the form of
+        /// Required. The name of the ad tag detail for the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodAdTagDetails/{vod_ad_tag_detail}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1800,7 +2121,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified ad tag detail for the specified VOD session.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the ad tag detail for the specified VOD session, in the form of
+        /// Required. The name of the ad tag detail for the specified VOD session, in
+        /// the form of
         /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodAdTagDetails/{vod_ad_tag_detail}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2043,7 +2365,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Slate CreateSlate(CreateSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Slate, OperationMetadata> CreateSlate(CreateSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2052,7 +2374,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> CreateSlateAsync(CreateSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> CreateSlateAsync(CreateSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2061,15 +2383,41 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> CreateSlateAsync(CreateSlateRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> CreateSlateAsync(CreateSlateRequest request, st::CancellationToken cancellationToken) =>
             CreateSlateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateSlate</c>.</summary>
+        public virtual lro::OperationsClient CreateSlateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateSlate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Slate, OperationMetadata> PollOnceCreateSlate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Slate, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSlateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateSlate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> PollOnceCreateSlateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Slate, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSlateOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a slate.
         /// </summary>
         /// <param name="parent">
         /// Required. The project in which the slate should be created, in the form of
-        /// `projects/{project_number}`.
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="slate">
         /// Required. The slate to create.
@@ -2082,7 +2430,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Slate CreateSlate(string parent, Slate slate, string slateId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Slate, OperationMetadata> CreateSlate(string parent, Slate slate, string slateId, gaxgrpc::CallSettings callSettings = null) =>
             CreateSlate(new CreateSlateRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -2095,7 +2443,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project in which the slate should be created, in the form of
-        /// `projects/{project_number}`.
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="slate">
         /// Required. The slate to create.
@@ -2108,7 +2456,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> CreateSlateAsync(string parent, Slate slate, string slateId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> CreateSlateAsync(string parent, Slate slate, string slateId, gaxgrpc::CallSettings callSettings = null) =>
             CreateSlateAsync(new CreateSlateRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -2121,7 +2469,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project in which the slate should be created, in the form of
-        /// `projects/{project_number}`.
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="slate">
         /// Required. The slate to create.
@@ -2134,7 +2482,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> CreateSlateAsync(string parent, Slate slate, string slateId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> CreateSlateAsync(string parent, Slate slate, string slateId, st::CancellationToken cancellationToken) =>
             CreateSlateAsync(parent, slate, slateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2142,7 +2490,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project in which the slate should be created, in the form of
-        /// `projects/{project_number}`.
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="slate">
         /// Required. The slate to create.
@@ -2155,7 +2503,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Slate CreateSlate(gagr::LocationName parent, Slate slate, string slateId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Slate, OperationMetadata> CreateSlate(gagr::LocationName parent, Slate slate, string slateId, gaxgrpc::CallSettings callSettings = null) =>
             CreateSlate(new CreateSlateRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2168,7 +2516,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project in which the slate should be created, in the form of
-        /// `projects/{project_number}`.
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="slate">
         /// Required. The slate to create.
@@ -2181,7 +2529,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> CreateSlateAsync(gagr::LocationName parent, Slate slate, string slateId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> CreateSlateAsync(gagr::LocationName parent, Slate slate, string slateId, gaxgrpc::CallSettings callSettings = null) =>
             CreateSlateAsync(new CreateSlateRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2194,7 +2542,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project in which the slate should be created, in the form of
-        /// `projects/{project_number}`.
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="slate">
         /// Required. The slate to create.
@@ -2207,7 +2555,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> CreateSlateAsync(gagr::LocationName parent, Slate slate, string slateId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> CreateSlateAsync(gagr::LocationName parent, Slate slate, string slateId, st::CancellationToken cancellationToken) =>
             CreateSlateAsync(parent, slate, slateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2232,7 +2580,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Lists all slates in the specified project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to list slates, in the form of `projects/{project_number}`.
+        /// Required. The project to list slates, in the form of
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2256,7 +2605,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Lists all slates in the specified project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to list slates, in the form of `projects/{project_number}`.
+        /// Required. The project to list slates, in the form of
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2280,7 +2630,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Lists all slates in the specified project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to list slates, in the form of `projects/{project_number}`.
+        /// Required. The project to list slates, in the form of
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2304,7 +2655,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Lists all slates in the specified project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to list slates, in the form of `projects/{project_number}`.
+        /// Required. The project to list slates, in the form of
+        /// `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2355,8 +2707,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified slate.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the slate to be retrieved, of the slate, in the form of
-        /// `projects/{project_number}/locations/{location}/slates/{id}`.
+        /// Required. The name of the slate to be retrieved, of the slate, in the form
+        /// of `projects/{project_number}/locations/{location}/slates/{id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2370,8 +2722,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified slate.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the slate to be retrieved, of the slate, in the form of
-        /// `projects/{project_number}/locations/{location}/slates/{id}`.
+        /// Required. The name of the slate to be retrieved, of the slate, in the form
+        /// of `projects/{project_number}/locations/{location}/slates/{id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2385,8 +2737,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified slate.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the slate to be retrieved, of the slate, in the form of
-        /// `projects/{project_number}/locations/{location}/slates/{id}`.
+        /// Required. The name of the slate to be retrieved, of the slate, in the form
+        /// of `projects/{project_number}/locations/{location}/slates/{id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2397,8 +2749,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified slate.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the slate to be retrieved, of the slate, in the form of
-        /// `projects/{project_number}/locations/{location}/slates/{id}`.
+        /// Required. The name of the slate to be retrieved, of the slate, in the form
+        /// of `projects/{project_number}/locations/{location}/slates/{id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2412,8 +2764,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified slate.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the slate to be retrieved, of the slate, in the form of
-        /// `projects/{project_number}/locations/{location}/slates/{id}`.
+        /// Required. The name of the slate to be retrieved, of the slate, in the form
+        /// of `projects/{project_number}/locations/{location}/slates/{id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2427,8 +2779,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Returns the specified slate.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the slate to be retrieved, of the slate, in the form of
-        /// `projects/{project_number}/locations/{location}/slates/{id}`.
+        /// Required. The name of the slate to be retrieved, of the slate, in the form
+        /// of `projects/{project_number}/locations/{location}/slates/{id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2441,7 +2793,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Slate UpdateSlate(UpdateSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Slate, OperationMetadata> UpdateSlate(UpdateSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2450,7 +2802,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> UpdateSlateAsync(UpdateSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> UpdateSlateAsync(UpdateSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2459,8 +2811,34 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> UpdateSlateAsync(UpdateSlateRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> UpdateSlateAsync(UpdateSlateRequest request, st::CancellationToken cancellationToken) =>
             UpdateSlateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateSlate</c>.</summary>
+        public virtual lro::OperationsClient UpdateSlateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateSlate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Slate, OperationMetadata> PollOnceUpdateSlate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Slate, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSlateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateSlate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> PollOnceUpdateSlateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Slate, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSlateOperationsClient, callSettings);
 
         /// <summary>
         /// Updates the specified slate.
@@ -2473,7 +2851,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Slate UpdateSlate(Slate slate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Slate, OperationMetadata> UpdateSlate(Slate slate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateSlate(new UpdateSlateRequest
             {
                 Slate = gax::GaxPreconditions.CheckNotNull(slate, nameof(slate)),
@@ -2491,7 +2869,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> UpdateSlateAsync(Slate slate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> UpdateSlateAsync(Slate slate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateSlateAsync(new UpdateSlateRequest
             {
                 Slate = gax::GaxPreconditions.CheckNotNull(slate, nameof(slate)),
@@ -2509,7 +2887,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Slate> UpdateSlateAsync(Slate slate, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Slate, OperationMetadata>> UpdateSlateAsync(Slate slate, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateSlateAsync(slate, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2518,7 +2896,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteSlate(DeleteSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSlate(DeleteSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2527,7 +2905,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSlateAsync(DeleteSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSlateAsync(DeleteSlateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2536,8 +2914,34 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSlateAsync(DeleteSlateRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSlateAsync(DeleteSlateRequest request, st::CancellationToken cancellationToken) =>
             DeleteSlateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteSlate</c>.</summary>
+        public virtual lro::OperationsClient DeleteSlateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteSlate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteSlate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSlateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteSlate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteSlateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSlateOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes the specified slate.
@@ -2548,7 +2952,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteSlate(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSlate(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSlate(new DeleteSlateRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -2563,7 +2967,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSlateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSlateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSlateAsync(new DeleteSlateRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -2578,7 +2982,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSlateAsync(string name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSlateAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteSlateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2590,7 +2994,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteSlate(SlateName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSlate(SlateName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSlate(new DeleteSlateRequest
             {
                 SlateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2605,7 +3009,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSlateAsync(SlateName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSlateAsync(SlateName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteSlateAsync(new DeleteSlateRequest
             {
                 SlateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2620,7 +3024,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteSlateAsync(SlateName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSlateAsync(SlateName name, st::CancellationToken cancellationToken) =>
             DeleteSlateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2654,8 +3058,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new live session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the live session should be created,
-        /// in the form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the live session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="liveSession">
         /// Required. Parameters for creating a live session.
@@ -2673,8 +3077,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new live session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the live session should be created,
-        /// in the form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the live session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="liveSession">
         /// Required. Parameters for creating a live session.
@@ -2692,8 +3096,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new live session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the live session should be created,
-        /// in the form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the live session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="liveSession">
         /// Required. Parameters for creating a live session.
@@ -2707,8 +3111,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new live session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the live session should be created,
-        /// in the form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the live session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="liveSession">
         /// Required. Parameters for creating a live session.
@@ -2726,8 +3130,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new live session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the live session should be created,
-        /// in the form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the live session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="liveSession">
         /// Required. Parameters for creating a live session.
@@ -2745,8 +3149,8 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// Creates a new live session.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location in which the live session should be created,
-        /// in the form of `projects/{project_number}/locations/{location}`.
+        /// Required. The project and location in which the live session should be
+        /// created, in the form of `projects/{project_number}/locations/{location}`.
         /// </param>
         /// <param name="liveSession">
         /// Required. Parameters for creating a live session.
@@ -2866,6 +3270,583 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<LiveSession> GetLiveSessionAsync(LiveSessionName name, st::CancellationToken cancellationToken) =>
             GetLiveSessionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LiveConfig, OperationMetadata> CreateLiveConfig(CreateLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LiveConfig, OperationMetadata>> CreateLiveConfigAsync(CreateLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LiveConfig, OperationMetadata>> CreateLiveConfigAsync(CreateLiveConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateLiveConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateLiveConfig</c>.</summary>
+        public virtual lro::OperationsClient CreateLiveConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateLiveConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LiveConfig, OperationMetadata> PollOnceCreateLiveConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LiveConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLiveConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateLiveConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LiveConfig, OperationMetadata>> PollOnceCreateLiveConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LiveConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLiveConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project in which the live config should be created, in
+        /// the form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="liveConfig">
+        /// Required. The live config resource to create.
+        /// </param>
+        /// <param name="liveConfigId">
+        /// Required. The unique identifier ID to use for the live config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LiveConfig, OperationMetadata> CreateLiveConfig(string parent, LiveConfig liveConfig, string liveConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLiveConfig(new CreateLiveConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LiveConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(liveConfigId, nameof(liveConfigId)),
+                LiveConfig = gax::GaxPreconditions.CheckNotNull(liveConfig, nameof(liveConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project in which the live config should be created, in
+        /// the form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="liveConfig">
+        /// Required. The live config resource to create.
+        /// </param>
+        /// <param name="liveConfigId">
+        /// Required. The unique identifier ID to use for the live config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LiveConfig, OperationMetadata>> CreateLiveConfigAsync(string parent, LiveConfig liveConfig, string liveConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLiveConfigAsync(new CreateLiveConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LiveConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(liveConfigId, nameof(liveConfigId)),
+                LiveConfig = gax::GaxPreconditions.CheckNotNull(liveConfig, nameof(liveConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project in which the live config should be created, in
+        /// the form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="liveConfig">
+        /// Required. The live config resource to create.
+        /// </param>
+        /// <param name="liveConfigId">
+        /// Required. The unique identifier ID to use for the live config.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LiveConfig, OperationMetadata>> CreateLiveConfigAsync(string parent, LiveConfig liveConfig, string liveConfigId, st::CancellationToken cancellationToken) =>
+            CreateLiveConfigAsync(parent, liveConfig, liveConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project in which the live config should be created, in
+        /// the form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="liveConfig">
+        /// Required. The live config resource to create.
+        /// </param>
+        /// <param name="liveConfigId">
+        /// Required. The unique identifier ID to use for the live config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LiveConfig, OperationMetadata> CreateLiveConfig(gagr::LocationName parent, LiveConfig liveConfig, string liveConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLiveConfig(new CreateLiveConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LiveConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(liveConfigId, nameof(liveConfigId)),
+                LiveConfig = gax::GaxPreconditions.CheckNotNull(liveConfig, nameof(liveConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project in which the live config should be created, in
+        /// the form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="liveConfig">
+        /// Required. The live config resource to create.
+        /// </param>
+        /// <param name="liveConfigId">
+        /// Required. The unique identifier ID to use for the live config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LiveConfig, OperationMetadata>> CreateLiveConfigAsync(gagr::LocationName parent, LiveConfig liveConfig, string liveConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLiveConfigAsync(new CreateLiveConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LiveConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(liveConfigId, nameof(liveConfigId)),
+                LiveConfig = gax::GaxPreconditions.CheckNotNull(liveConfig, nameof(liveConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project in which the live config should be created, in
+        /// the form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="liveConfig">
+        /// Required. The live config resource to create.
+        /// </param>
+        /// <param name="liveConfigId">
+        /// Required. The unique identifier ID to use for the live config.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LiveConfig, OperationMetadata>> CreateLiveConfigAsync(gagr::LocationName parent, LiveConfig liveConfig, string liveConfigId, st::CancellationToken cancellationToken) =>
+            CreateLiveConfigAsync(parent, liveConfig, liveConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all live configs managed by the Video Stitcher that
+        /// belong to the specified project and region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LiveConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigs(ListLiveConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all live configs managed by the Video Stitcher that
+        /// belong to the specified project and region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LiveConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigsAsync(ListLiveConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all live configs managed by the Video Stitcher that
+        /// belong to the specified project and region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that contains the list of live configs, in the
+        /// form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LiveConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLiveConfigs(new ListLiveConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all live configs managed by the Video Stitcher that
+        /// belong to the specified project and region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that contains the list of live configs, in the
+        /// form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LiveConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLiveConfigsAsync(new ListLiveConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all live configs managed by the Video Stitcher that
+        /// belong to the specified project and region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that contains the list of live configs, in the
+        /// form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LiveConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLiveConfigs(new ListLiveConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all live configs managed by the Video Stitcher that
+        /// belong to the specified project and region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that contains the list of live configs, in the
+        /// form of `projects/{project_number}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LiveConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLiveConfigsAsync(new ListLiveConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LiveConfig GetLiveConfig(GetLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LiveConfig> GetLiveConfigAsync(GetLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LiveConfig> GetLiveConfigAsync(GetLiveConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetLiveConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be retrieved, in the form
+        /// of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LiveConfig GetLiveConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLiveConfig(new GetLiveConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be retrieved, in the form
+        /// of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LiveConfig> GetLiveConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLiveConfigAsync(new GetLiveConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be retrieved, in the form
+        /// of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LiveConfig> GetLiveConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetLiveConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be retrieved, in the form
+        /// of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LiveConfig GetLiveConfig(LiveConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLiveConfig(new GetLiveConfigRequest
+            {
+                LiveConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be retrieved, in the form
+        /// of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LiveConfig> GetLiveConfigAsync(LiveConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLiveConfigAsync(new GetLiveConfigRequest
+            {
+                LiveConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be retrieved, in the form
+        /// of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LiveConfig> GetLiveConfigAsync(LiveConfigName name, st::CancellationToken cancellationToken) =>
+            GetLiveConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLiveConfig(DeleteLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLiveConfigAsync(DeleteLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLiveConfigAsync(DeleteLiveConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteLiveConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteLiveConfig</c>.</summary>
+        public virtual lro::OperationsClient DeleteLiveConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteLiveConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteLiveConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteLiveConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteLiveConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteLiveConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteLiveConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be deleted, in the form of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLiveConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLiveConfig(new DeleteLiveConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be deleted, in the form of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLiveConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLiveConfigAsync(new DeleteLiveConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be deleted, in the form of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLiveConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteLiveConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be deleted, in the form of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLiveConfig(LiveConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLiveConfig(new DeleteLiveConfigRequest
+            {
+                LiveConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be deleted, in the form of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLiveConfigAsync(LiveConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLiveConfigAsync(new DeleteLiveConfigRequest
+            {
+                LiveConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the live config to be deleted, in the form of
+        /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLiveConfigAsync(LiveConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteLiveConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>VideoStitcherService client wrapper implementation, for convenient use.</summary>
@@ -2878,15 +3859,15 @@ namespace Google.Cloud.Video.Stitcher.V1
     /// </remarks>
     public sealed partial class VideoStitcherServiceClientImpl : VideoStitcherServiceClient
     {
-        private readonly gaxgrpc::ApiCall<CreateCdnKeyRequest, CdnKey> _callCreateCdnKey;
+        private readonly gaxgrpc::ApiCall<CreateCdnKeyRequest, lro::Operation> _callCreateCdnKey;
 
         private readonly gaxgrpc::ApiCall<ListCdnKeysRequest, ListCdnKeysResponse> _callListCdnKeys;
 
         private readonly gaxgrpc::ApiCall<GetCdnKeyRequest, CdnKey> _callGetCdnKey;
 
-        private readonly gaxgrpc::ApiCall<DeleteCdnKeyRequest, wkt::Empty> _callDeleteCdnKey;
+        private readonly gaxgrpc::ApiCall<DeleteCdnKeyRequest, lro::Operation> _callDeleteCdnKey;
 
-        private readonly gaxgrpc::ApiCall<UpdateCdnKeyRequest, CdnKey> _callUpdateCdnKey;
+        private readonly gaxgrpc::ApiCall<UpdateCdnKeyRequest, lro::Operation> _callUpdateCdnKey;
 
         private readonly gaxgrpc::ApiCall<CreateVodSessionRequest, VodSession> _callCreateVodSession;
 
@@ -2904,19 +3885,27 @@ namespace Google.Cloud.Video.Stitcher.V1
 
         private readonly gaxgrpc::ApiCall<GetLiveAdTagDetailRequest, LiveAdTagDetail> _callGetLiveAdTagDetail;
 
-        private readonly gaxgrpc::ApiCall<CreateSlateRequest, Slate> _callCreateSlate;
+        private readonly gaxgrpc::ApiCall<CreateSlateRequest, lro::Operation> _callCreateSlate;
 
         private readonly gaxgrpc::ApiCall<ListSlatesRequest, ListSlatesResponse> _callListSlates;
 
         private readonly gaxgrpc::ApiCall<GetSlateRequest, Slate> _callGetSlate;
 
-        private readonly gaxgrpc::ApiCall<UpdateSlateRequest, Slate> _callUpdateSlate;
+        private readonly gaxgrpc::ApiCall<UpdateSlateRequest, lro::Operation> _callUpdateSlate;
 
-        private readonly gaxgrpc::ApiCall<DeleteSlateRequest, wkt::Empty> _callDeleteSlate;
+        private readonly gaxgrpc::ApiCall<DeleteSlateRequest, lro::Operation> _callDeleteSlate;
 
         private readonly gaxgrpc::ApiCall<CreateLiveSessionRequest, LiveSession> _callCreateLiveSession;
 
         private readonly gaxgrpc::ApiCall<GetLiveSessionRequest, LiveSession> _callGetLiveSession;
+
+        private readonly gaxgrpc::ApiCall<CreateLiveConfigRequest, lro::Operation> _callCreateLiveConfig;
+
+        private readonly gaxgrpc::ApiCall<ListLiveConfigsRequest, ListLiveConfigsResponse> _callListLiveConfigs;
+
+        private readonly gaxgrpc::ApiCall<GetLiveConfigRequest, LiveConfig> _callGetLiveConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteLiveConfigRequest, lro::Operation> _callDeleteLiveConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the VideoStitcherService service, with the specified gRPC client and
@@ -2930,7 +3919,15 @@ namespace Google.Cloud.Video.Stitcher.V1
             GrpcClient = grpcClient;
             VideoStitcherServiceSettings effectiveSettings = settings ?? VideoStitcherServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
-            _callCreateCdnKey = clientHelper.BuildApiCall<CreateCdnKeyRequest, CdnKey>("CreateCdnKey", grpcClient.CreateCdnKeyAsync, grpcClient.CreateCdnKey, effectiveSettings.CreateCdnKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            CreateCdnKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCdnKeyOperationsSettings, logger);
+            DeleteCdnKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCdnKeyOperationsSettings, logger);
+            UpdateCdnKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCdnKeyOperationsSettings, logger);
+            CreateSlateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSlateOperationsSettings, logger);
+            UpdateSlateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSlateOperationsSettings, logger);
+            DeleteSlateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSlateOperationsSettings, logger);
+            CreateLiveConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLiveConfigOperationsSettings, logger);
+            DeleteLiveConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteLiveConfigOperationsSettings, logger);
+            _callCreateCdnKey = clientHelper.BuildApiCall<CreateCdnKeyRequest, lro::Operation>("CreateCdnKey", grpcClient.CreateCdnKeyAsync, grpcClient.CreateCdnKey, effectiveSettings.CreateCdnKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCdnKey);
             Modify_CreateCdnKeyApiCall(ref _callCreateCdnKey);
             _callListCdnKeys = clientHelper.BuildApiCall<ListCdnKeysRequest, ListCdnKeysResponse>("ListCdnKeys", grpcClient.ListCdnKeysAsync, grpcClient.ListCdnKeys, effectiveSettings.ListCdnKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2939,10 +3936,10 @@ namespace Google.Cloud.Video.Stitcher.V1
             _callGetCdnKey = clientHelper.BuildApiCall<GetCdnKeyRequest, CdnKey>("GetCdnKey", grpcClient.GetCdnKeyAsync, grpcClient.GetCdnKey, effectiveSettings.GetCdnKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCdnKey);
             Modify_GetCdnKeyApiCall(ref _callGetCdnKey);
-            _callDeleteCdnKey = clientHelper.BuildApiCall<DeleteCdnKeyRequest, wkt::Empty>("DeleteCdnKey", grpcClient.DeleteCdnKeyAsync, grpcClient.DeleteCdnKey, effectiveSettings.DeleteCdnKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteCdnKey = clientHelper.BuildApiCall<DeleteCdnKeyRequest, lro::Operation>("DeleteCdnKey", grpcClient.DeleteCdnKeyAsync, grpcClient.DeleteCdnKey, effectiveSettings.DeleteCdnKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCdnKey);
             Modify_DeleteCdnKeyApiCall(ref _callDeleteCdnKey);
-            _callUpdateCdnKey = clientHelper.BuildApiCall<UpdateCdnKeyRequest, CdnKey>("UpdateCdnKey", grpcClient.UpdateCdnKeyAsync, grpcClient.UpdateCdnKey, effectiveSettings.UpdateCdnKeySettings).WithGoogleRequestParam("cdn_key.name", request => request.CdnKey?.Name);
+            _callUpdateCdnKey = clientHelper.BuildApiCall<UpdateCdnKeyRequest, lro::Operation>("UpdateCdnKey", grpcClient.UpdateCdnKeyAsync, grpcClient.UpdateCdnKey, effectiveSettings.UpdateCdnKeySettings).WithGoogleRequestParam("cdn_key.name", request => request.CdnKey?.Name);
             Modify_ApiCall(ref _callUpdateCdnKey);
             Modify_UpdateCdnKeyApiCall(ref _callUpdateCdnKey);
             _callCreateVodSession = clientHelper.BuildApiCall<CreateVodSessionRequest, VodSession>("CreateVodSession", grpcClient.CreateVodSessionAsync, grpcClient.CreateVodSession, effectiveSettings.CreateVodSessionSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2969,7 +3966,7 @@ namespace Google.Cloud.Video.Stitcher.V1
             _callGetLiveAdTagDetail = clientHelper.BuildApiCall<GetLiveAdTagDetailRequest, LiveAdTagDetail>("GetLiveAdTagDetail", grpcClient.GetLiveAdTagDetailAsync, grpcClient.GetLiveAdTagDetail, effectiveSettings.GetLiveAdTagDetailSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetLiveAdTagDetail);
             Modify_GetLiveAdTagDetailApiCall(ref _callGetLiveAdTagDetail);
-            _callCreateSlate = clientHelper.BuildApiCall<CreateSlateRequest, Slate>("CreateSlate", grpcClient.CreateSlateAsync, grpcClient.CreateSlate, effectiveSettings.CreateSlateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateSlate = clientHelper.BuildApiCall<CreateSlateRequest, lro::Operation>("CreateSlate", grpcClient.CreateSlateAsync, grpcClient.CreateSlate, effectiveSettings.CreateSlateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSlate);
             Modify_CreateSlateApiCall(ref _callCreateSlate);
             _callListSlates = clientHelper.BuildApiCall<ListSlatesRequest, ListSlatesResponse>("ListSlates", grpcClient.ListSlatesAsync, grpcClient.ListSlates, effectiveSettings.ListSlatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2978,10 +3975,10 @@ namespace Google.Cloud.Video.Stitcher.V1
             _callGetSlate = clientHelper.BuildApiCall<GetSlateRequest, Slate>("GetSlate", grpcClient.GetSlateAsync, grpcClient.GetSlate, effectiveSettings.GetSlateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSlate);
             Modify_GetSlateApiCall(ref _callGetSlate);
-            _callUpdateSlate = clientHelper.BuildApiCall<UpdateSlateRequest, Slate>("UpdateSlate", grpcClient.UpdateSlateAsync, grpcClient.UpdateSlate, effectiveSettings.UpdateSlateSettings).WithGoogleRequestParam("slate.name", request => request.Slate?.Name);
+            _callUpdateSlate = clientHelper.BuildApiCall<UpdateSlateRequest, lro::Operation>("UpdateSlate", grpcClient.UpdateSlateAsync, grpcClient.UpdateSlate, effectiveSettings.UpdateSlateSettings).WithGoogleRequestParam("slate.name", request => request.Slate?.Name);
             Modify_ApiCall(ref _callUpdateSlate);
             Modify_UpdateSlateApiCall(ref _callUpdateSlate);
-            _callDeleteSlate = clientHelper.BuildApiCall<DeleteSlateRequest, wkt::Empty>("DeleteSlate", grpcClient.DeleteSlateAsync, grpcClient.DeleteSlate, effectiveSettings.DeleteSlateSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteSlate = clientHelper.BuildApiCall<DeleteSlateRequest, lro::Operation>("DeleteSlate", grpcClient.DeleteSlateAsync, grpcClient.DeleteSlate, effectiveSettings.DeleteSlateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSlate);
             Modify_DeleteSlateApiCall(ref _callDeleteSlate);
             _callCreateLiveSession = clientHelper.BuildApiCall<CreateLiveSessionRequest, LiveSession>("CreateLiveSession", grpcClient.CreateLiveSessionAsync, grpcClient.CreateLiveSession, effectiveSettings.CreateLiveSessionSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2990,20 +3987,32 @@ namespace Google.Cloud.Video.Stitcher.V1
             _callGetLiveSession = clientHelper.BuildApiCall<GetLiveSessionRequest, LiveSession>("GetLiveSession", grpcClient.GetLiveSessionAsync, grpcClient.GetLiveSession, effectiveSettings.GetLiveSessionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetLiveSession);
             Modify_GetLiveSessionApiCall(ref _callGetLiveSession);
+            _callCreateLiveConfig = clientHelper.BuildApiCall<CreateLiveConfigRequest, lro::Operation>("CreateLiveConfig", grpcClient.CreateLiveConfigAsync, grpcClient.CreateLiveConfig, effectiveSettings.CreateLiveConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateLiveConfig);
+            Modify_CreateLiveConfigApiCall(ref _callCreateLiveConfig);
+            _callListLiveConfigs = clientHelper.BuildApiCall<ListLiveConfigsRequest, ListLiveConfigsResponse>("ListLiveConfigs", grpcClient.ListLiveConfigsAsync, grpcClient.ListLiveConfigs, effectiveSettings.ListLiveConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListLiveConfigs);
+            Modify_ListLiveConfigsApiCall(ref _callListLiveConfigs);
+            _callGetLiveConfig = clientHelper.BuildApiCall<GetLiveConfigRequest, LiveConfig>("GetLiveConfig", grpcClient.GetLiveConfigAsync, grpcClient.GetLiveConfig, effectiveSettings.GetLiveConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetLiveConfig);
+            Modify_GetLiveConfigApiCall(ref _callGetLiveConfig);
+            _callDeleteLiveConfig = clientHelper.BuildApiCall<DeleteLiveConfigRequest, lro::Operation>("DeleteLiveConfig", grpcClient.DeleteLiveConfigAsync, grpcClient.DeleteLiveConfig, effectiveSettings.DeleteLiveConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteLiveConfig);
+            Modify_DeleteLiveConfigApiCall(ref _callDeleteLiveConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
-        partial void Modify_CreateCdnKeyApiCall(ref gaxgrpc::ApiCall<CreateCdnKeyRequest, CdnKey> call);
+        partial void Modify_CreateCdnKeyApiCall(ref gaxgrpc::ApiCall<CreateCdnKeyRequest, lro::Operation> call);
 
         partial void Modify_ListCdnKeysApiCall(ref gaxgrpc::ApiCall<ListCdnKeysRequest, ListCdnKeysResponse> call);
 
         partial void Modify_GetCdnKeyApiCall(ref gaxgrpc::ApiCall<GetCdnKeyRequest, CdnKey> call);
 
-        partial void Modify_DeleteCdnKeyApiCall(ref gaxgrpc::ApiCall<DeleteCdnKeyRequest, wkt::Empty> call);
+        partial void Modify_DeleteCdnKeyApiCall(ref gaxgrpc::ApiCall<DeleteCdnKeyRequest, lro::Operation> call);
 
-        partial void Modify_UpdateCdnKeyApiCall(ref gaxgrpc::ApiCall<UpdateCdnKeyRequest, CdnKey> call);
+        partial void Modify_UpdateCdnKeyApiCall(ref gaxgrpc::ApiCall<UpdateCdnKeyRequest, lro::Operation> call);
 
         partial void Modify_CreateVodSessionApiCall(ref gaxgrpc::ApiCall<CreateVodSessionRequest, VodSession> call);
 
@@ -3021,19 +4030,27 @@ namespace Google.Cloud.Video.Stitcher.V1
 
         partial void Modify_GetLiveAdTagDetailApiCall(ref gaxgrpc::ApiCall<GetLiveAdTagDetailRequest, LiveAdTagDetail> call);
 
-        partial void Modify_CreateSlateApiCall(ref gaxgrpc::ApiCall<CreateSlateRequest, Slate> call);
+        partial void Modify_CreateSlateApiCall(ref gaxgrpc::ApiCall<CreateSlateRequest, lro::Operation> call);
 
         partial void Modify_ListSlatesApiCall(ref gaxgrpc::ApiCall<ListSlatesRequest, ListSlatesResponse> call);
 
         partial void Modify_GetSlateApiCall(ref gaxgrpc::ApiCall<GetSlateRequest, Slate> call);
 
-        partial void Modify_UpdateSlateApiCall(ref gaxgrpc::ApiCall<UpdateSlateRequest, Slate> call);
+        partial void Modify_UpdateSlateApiCall(ref gaxgrpc::ApiCall<UpdateSlateRequest, lro::Operation> call);
 
-        partial void Modify_DeleteSlateApiCall(ref gaxgrpc::ApiCall<DeleteSlateRequest, wkt::Empty> call);
+        partial void Modify_DeleteSlateApiCall(ref gaxgrpc::ApiCall<DeleteSlateRequest, lro::Operation> call);
 
         partial void Modify_CreateLiveSessionApiCall(ref gaxgrpc::ApiCall<CreateLiveSessionRequest, LiveSession> call);
 
         partial void Modify_GetLiveSessionApiCall(ref gaxgrpc::ApiCall<GetLiveSessionRequest, LiveSession> call);
+
+        partial void Modify_CreateLiveConfigApiCall(ref gaxgrpc::ApiCall<CreateLiveConfigRequest, lro::Operation> call);
+
+        partial void Modify_ListLiveConfigsApiCall(ref gaxgrpc::ApiCall<ListLiveConfigsRequest, ListLiveConfigsResponse> call);
+
+        partial void Modify_GetLiveConfigApiCall(ref gaxgrpc::ApiCall<GetLiveConfigRequest, LiveConfig> call);
+
+        partial void Modify_DeleteLiveConfigApiCall(ref gaxgrpc::ApiCall<DeleteLiveConfigRequest, lro::Operation> call);
 
         partial void OnConstruction(VideoStitcherService.VideoStitcherServiceClient grpcClient, VideoStitcherServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3080,16 +4097,27 @@ namespace Google.Cloud.Video.Stitcher.V1
 
         partial void Modify_GetLiveSessionRequest(ref GetLiveSessionRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateLiveConfigRequest(ref CreateLiveConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListLiveConfigsRequest(ref ListLiveConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetLiveConfigRequest(ref GetLiveConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteLiveConfigRequest(ref DeleteLiveConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>The long-running operations client for <c>CreateCdnKey</c>.</summary>
+        public override lro::OperationsClient CreateCdnKeyOperationsClient { get; }
+
         /// <summary>
         /// Creates a new CDN key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override CdnKey CreateCdnKey(CreateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<CdnKey, OperationMetadata> CreateCdnKey(CreateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateCdnKeyRequest(ref request, ref callSettings);
-            return _callCreateCdnKey.Sync(request, callSettings);
+            return new lro::Operation<CdnKey, OperationMetadata>(_callCreateCdnKey.Sync(request, callSettings), CreateCdnKeyOperationsClient);
         }
 
         /// <summary>
@@ -3098,10 +4126,10 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<CdnKey> CreateCdnKeyAsync(CreateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<CdnKey, OperationMetadata>> CreateCdnKeyAsync(CreateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateCdnKeyRequest(ref request, ref callSettings);
-            return _callCreateCdnKey.Async(request, callSettings);
+            return new lro::Operation<CdnKey, OperationMetadata>(await _callCreateCdnKey.Async(request, callSettings).ConfigureAwait(false), CreateCdnKeyOperationsClient);
         }
 
         /// <summary>
@@ -3152,16 +4180,19 @@ namespace Google.Cloud.Video.Stitcher.V1
             return _callGetCdnKey.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>DeleteCdnKey</c>.</summary>
+        public override lro::OperationsClient DeleteCdnKeyOperationsClient { get; }
+
         /// <summary>
         /// Deletes the specified CDN key.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void DeleteCdnKey(DeleteCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteCdnKey(DeleteCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteCdnKeyRequest(ref request, ref callSettings);
-            _callDeleteCdnKey.Sync(request, callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteCdnKey.Sync(request, callSettings), DeleteCdnKeyOperationsClient);
         }
 
         /// <summary>
@@ -3170,11 +4201,14 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteCdnKeyAsync(DeleteCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCdnKeyAsync(DeleteCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteCdnKeyRequest(ref request, ref callSettings);
-            return _callDeleteCdnKey.Async(request, callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteCdnKey.Async(request, callSettings).ConfigureAwait(false), DeleteCdnKeyOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>UpdateCdnKey</c>.</summary>
+        public override lro::OperationsClient UpdateCdnKeyOperationsClient { get; }
 
         /// <summary>
         /// Updates the specified CDN key. Only update fields specified
@@ -3183,10 +4217,10 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override CdnKey UpdateCdnKey(UpdateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<CdnKey, OperationMetadata> UpdateCdnKey(UpdateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateCdnKeyRequest(ref request, ref callSettings);
-            return _callUpdateCdnKey.Sync(request, callSettings);
+            return new lro::Operation<CdnKey, OperationMetadata>(_callUpdateCdnKey.Sync(request, callSettings), UpdateCdnKeyOperationsClient);
         }
 
         /// <summary>
@@ -3196,10 +4230,10 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<CdnKey> UpdateCdnKeyAsync(UpdateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<CdnKey, OperationMetadata>> UpdateCdnKeyAsync(UpdateCdnKeyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateCdnKeyRequest(ref request, ref callSettings);
-            return _callUpdateCdnKey.Async(request, callSettings);
+            return new lro::Operation<CdnKey, OperationMetadata>(await _callUpdateCdnKey.Async(request, callSettings).ConfigureAwait(false), UpdateCdnKeyOperationsClient);
         }
 
         /// <summary>
@@ -3400,16 +4434,19 @@ namespace Google.Cloud.Video.Stitcher.V1
             return _callGetLiveAdTagDetail.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>CreateSlate</c>.</summary>
+        public override lro::OperationsClient CreateSlateOperationsClient { get; }
+
         /// <summary>
         /// Creates a slate.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Slate CreateSlate(CreateSlateRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Slate, OperationMetadata> CreateSlate(CreateSlateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateSlateRequest(ref request, ref callSettings);
-            return _callCreateSlate.Sync(request, callSettings);
+            return new lro::Operation<Slate, OperationMetadata>(_callCreateSlate.Sync(request, callSettings), CreateSlateOperationsClient);
         }
 
         /// <summary>
@@ -3418,10 +4455,10 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Slate> CreateSlateAsync(CreateSlateRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Slate, OperationMetadata>> CreateSlateAsync(CreateSlateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateSlateRequest(ref request, ref callSettings);
-            return _callCreateSlate.Async(request, callSettings);
+            return new lro::Operation<Slate, OperationMetadata>(await _callCreateSlate.Async(request, callSettings).ConfigureAwait(false), CreateSlateOperationsClient);
         }
 
         /// <summary>
@@ -3472,16 +4509,19 @@ namespace Google.Cloud.Video.Stitcher.V1
             return _callGetSlate.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateSlate</c>.</summary>
+        public override lro::OperationsClient UpdateSlateOperationsClient { get; }
+
         /// <summary>
         /// Updates the specified slate.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Slate UpdateSlate(UpdateSlateRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Slate, OperationMetadata> UpdateSlate(UpdateSlateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateSlateRequest(ref request, ref callSettings);
-            return _callUpdateSlate.Sync(request, callSettings);
+            return new lro::Operation<Slate, OperationMetadata>(_callUpdateSlate.Sync(request, callSettings), UpdateSlateOperationsClient);
         }
 
         /// <summary>
@@ -3490,11 +4530,14 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Slate> UpdateSlateAsync(UpdateSlateRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Slate, OperationMetadata>> UpdateSlateAsync(UpdateSlateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateSlateRequest(ref request, ref callSettings);
-            return _callUpdateSlate.Async(request, callSettings);
+            return new lro::Operation<Slate, OperationMetadata>(await _callUpdateSlate.Async(request, callSettings).ConfigureAwait(false), UpdateSlateOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>DeleteSlate</c>.</summary>
+        public override lro::OperationsClient DeleteSlateOperationsClient { get; }
 
         /// <summary>
         /// Deletes the specified slate.
@@ -3502,10 +4545,10 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void DeleteSlate(DeleteSlateRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteSlate(DeleteSlateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSlateRequest(ref request, ref callSettings);
-            _callDeleteSlate.Sync(request, callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteSlate.Sync(request, callSettings), DeleteSlateOperationsClient);
         }
 
         /// <summary>
@@ -3514,10 +4557,10 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task DeleteSlateAsync(DeleteSlateRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSlateAsync(DeleteSlateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSlateRequest(ref request, ref callSettings);
-            return _callDeleteSlate.Async(request, callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteSlate.Async(request, callSettings).ConfigureAwait(false), DeleteSlateOperationsClient);
         }
 
         /// <summary>
@@ -3567,6 +4610,114 @@ namespace Google.Cloud.Video.Stitcher.V1
             Modify_GetLiveSessionRequest(ref request, ref callSettings);
             return _callGetLiveSession.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreateLiveConfig</c>.</summary>
+        public override lro::OperationsClient CreateLiveConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LiveConfig, OperationMetadata> CreateLiveConfig(CreateLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLiveConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<LiveConfig, OperationMetadata>(_callCreateLiveConfig.Sync(request, callSettings), CreateLiveConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Registers the live config with the provided unique ID in
+        /// the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LiveConfig, OperationMetadata>> CreateLiveConfigAsync(CreateLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLiveConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<LiveConfig, OperationMetadata>(await _callCreateLiveConfig.Async(request, callSettings).ConfigureAwait(false), CreateLiveConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists all live configs managed by the Video Stitcher that
+        /// belong to the specified project and region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LiveConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigs(ListLiveConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLiveConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListLiveConfigsRequest, ListLiveConfigsResponse, LiveConfig>(_callListLiveConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all live configs managed by the Video Stitcher that
+        /// belong to the specified project and region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LiveConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListLiveConfigsResponse, LiveConfig> ListLiveConfigsAsync(ListLiveConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLiveConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLiveConfigsRequest, ListLiveConfigsResponse, LiveConfig>(_callListLiveConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LiveConfig GetLiveConfig(GetLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLiveConfigRequest(ref request, ref callSettings);
+            return _callGetLiveConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified live config managed by the Video
+        /// Stitcher service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LiveConfig> GetLiveConfigAsync(GetLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLiveConfigRequest(ref request, ref callSettings);
+            return _callGetLiveConfig.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteLiveConfig</c>.</summary>
+        public override lro::OperationsClient DeleteLiveConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteLiveConfig(DeleteLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLiveConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteLiveConfig.Sync(request, callSettings), DeleteLiveConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the specified live config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLiveConfigAsync(DeleteLiveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLiveConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteLiveConfig.Async(request, callSettings).ConfigureAwait(false), DeleteLiveConfigOperationsClient);
+        }
     }
 
     public partial class ListCdnKeysRequest : gaxgrpc::IPageRequest
@@ -3586,6 +4737,10 @@ namespace Google.Cloud.Video.Stitcher.V1
     }
 
     public partial class ListSlatesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListLiveConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3627,5 +4782,27 @@ namespace Google.Cloud.Video.Stitcher.V1
         public scg::IEnumerator<Slate> GetEnumerator() => Slates.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListLiveConfigsResponse : gaxgrpc::IPageResponse<LiveConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<LiveConfig> GetEnumerator() => LiveConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class VideoStitcherService
+    {
+        public partial class VideoStitcherServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 }

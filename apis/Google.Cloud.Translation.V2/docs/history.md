@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.2.0, released 2023-03-27
+
+No API surface changes; just dependency updates and a GA release for self-signed JWTs.
+
 ## Version 3.2.0-beta01, released 2023-01-16
 
 ### New features

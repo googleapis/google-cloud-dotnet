@@ -28,12 +28,12 @@ namespace Google.Maps.Routing.V2 {
             "ZS5wcm90bxIWZ29vZ2xlLm1hcHMucm91dGluZy52MipwChNWZWhpY2xlRW1p",
             "c3Npb25UeXBlEiUKIVZFSElDTEVfRU1JU1NJT05fVFlQRV9VTlNQRUNJRklF",
             "RBAAEgwKCEdBU09MSU5FEAESDAoIRUxFQ1RSSUMQAhIKCgZIWUJSSUQQAxIK",
-            "CgZESUVTRUwQBELQAQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCGFZl",
-            "aGljbGVFbWlzc2lvblR5cGVQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL21hcHMvcm91dGluZy92Mjtyb3V0aW5n+AEB",
-            "ogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1h",
-            "cHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnBy",
-            "b3RvMw=="));
+            "CgZESUVTRUwQBELNAQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCGFZl",
+            "aGljbGVFbWlzc2lvblR5cGVQcm90b1ABWjpjbG91ZC5nb29nbGUuY29tL2dv",
+            "L21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91dGluZ3Bi+AEBogIF",
+            "R01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNc",
+            "Um91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.VehicleEmissionType), }, null, null));
@@ -44,11 +44,12 @@ namespace Google.Maps.Routing.V2 {
   #region Enums
   /// <summary>
   /// A set of values describing the vehicle's emission type.
-  /// Applies only to the DRIVE travel mode.
+  /// Applies only to the `DRIVE`
+  /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
   /// </summary>
   public enum VehicleEmissionType {
     /// <summary>
-    /// No emission type specified. Default to GASOLINE.
+    /// No emission type specified. Default to `GASOLINE`.
     /// </summary>
     [pbr::OriginalName("VEHICLE_EMISSION_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>

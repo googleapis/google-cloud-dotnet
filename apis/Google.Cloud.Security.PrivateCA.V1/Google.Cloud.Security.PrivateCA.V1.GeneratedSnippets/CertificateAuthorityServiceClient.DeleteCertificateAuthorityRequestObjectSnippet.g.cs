@@ -41,6 +41,7 @@ namespace Google.Cloud.Security.PrivateCA.V1.Snippets
                 RequestId = "",
                 IgnoreActiveCertificates = false,
                 SkipGracePeriod = false,
+                IgnoreDependentResources = false,
             };
             // Make the request
             Operation<CertificateAuthority, OperationMetadata> response = certificateAuthorityServiceClient.DeleteCertificateAuthority(request);

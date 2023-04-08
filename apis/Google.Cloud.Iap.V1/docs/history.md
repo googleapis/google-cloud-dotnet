@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.3.0, released 2023-03-20
+
+### New features
+
+- Add an enum ENROLLED_SECOND_FACTORS under IapSettings ([commit 3c3f7f6](https://github.com/googleapis/google-cloud-dotnet/commit/3c3f7f69e1672490a1305e99c1deca4233a5fbb8))
+
+### Documentation improvements
+
+- Update doc description for field_mask ([commit 3c3f7f6](https://github.com/googleapis/google-cloud-dotnet/commit/3c3f7f69e1672490a1305e99c1deca4233a5fbb8))
+
 ## Version 2.2.0, released 2023-01-19
 
 ### New features

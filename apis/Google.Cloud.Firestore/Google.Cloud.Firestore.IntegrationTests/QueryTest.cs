@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -367,6 +367,24 @@ namespace Google.Cloud.Firestore.IntegrationTests
         }
 
         [Fact]
+        public async Task WhereIn_DocumentId_WithoutDocRef()
+        {
+            var db = _fixture.FirestoreDb;
+            var collection = _fixture.CreateUniqueCollection();
+
+            var batch = db.StartBatch();
+            batch.Set(collection.Document("a"), new { X = 1 });
+            batch.Set(collection.Document("b"), new { X = 2 });
+            batch.Set(collection.Document("c"), new { X = 3 });
+            batch.Set(collection.Document("d"), new { X = 4 });
+            await batch.CommitAsync();
+
+            var query = collection.WhereIn(FieldPath.DocumentId, new[] { "a","c" });
+            var snapshot = await query.GetSnapshotAsync();
+            Assert.Equal(2, snapshot.Count);
+        }
+
+        [Fact]
         public async Task WhereIn_ArrayValues()
         {
             var db = _fixture.FirestoreDb;
@@ -475,6 +493,18 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 .GetSnapshotAsync();
             var docs = snapshot.Documents.Select(doc => doc.ConvertTo<ArrayDocument>()).ToList();
             Assert.Equal(expectedNames.OrderBy(x => x), docs.Select(doc => doc.Name).OrderBy(x => x));
+        }
+
+        [Fact]
+        public async Task OrQueriesAsync()
+        { 
+            CollectionReference collection = _fixture.HighScoreCollection;
+            var query = collection.Where(Filter.Or(
+                                                    Filter.EqualTo("Score", 90),
+                                                    Filter.EqualTo("Score", 110)
+                                                   )); 
+            var snapshot = await query.GetSnapshotAsync();
+            Assert.Equal(2, snapshot.Count);
         }
     }
 }

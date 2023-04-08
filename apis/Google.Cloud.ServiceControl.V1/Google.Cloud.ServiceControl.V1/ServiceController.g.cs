@@ -65,9 +65,9 @@ namespace Google.Cloud.ServiceControl.V1 {
             "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
             "bSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NlcnZpY2Vjb250",
             "cm9sQvgBCiBjb20uZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MUIWU2Vy",
-            "dmljZUNvbnRyb2xsZXJQcm90b1ABWkpnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2FwaS9zZXJ2aWNlY29udHJvbC92MTtzZXJ2aWNl",
-            "Y29udHJvbPgBAaICBEdBU0OqAh5Hb29nbGUuQ2xvdWQuU2VydmljZUNvbnRy",
+            "dmljZUNvbnRyb2xsZXJQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3Nl",
+            "cnZpY2Vjb250cm9sL2FwaXYxL3NlcnZpY2Vjb250cm9scGI7c2VydmljZWNv",
+            "bnRyb2xwYvgBAaICBEdBU0OqAh5Hb29nbGUuQ2xvdWQuU2VydmljZUNvbnRy",
             "b2wuVjHKAh5Hb29nbGVcQ2xvdWRcU2VydmljZUNvbnRyb2xcVjHqAiFHb29n",
             "bGU6OkNsb3VkOjpTZXJ2aWNlQ29udHJvbDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,

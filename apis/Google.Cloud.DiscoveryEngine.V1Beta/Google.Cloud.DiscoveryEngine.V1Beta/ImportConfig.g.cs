@@ -108,8 +108,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   }
   #region Messages
   /// <summary>
-  /// Google Cloud Storage location for input content.
-  /// format.
+  /// Cloud Storage location for input content.
   /// </summary>
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -162,7 +161,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> inputUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. Google Cloud Storage URIs to input files. URI can be up to
+    /// Required. Cloud Storage URIs to input files. URI can be up to
     /// 2000 characters long. URIs can match the full object path (for example,
     /// `gs://bucket/directory/object.json`) or a pattern matching one or more
     /// files, such as `gs://bucket/directory/*.json`. A request can
@@ -180,16 +179,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// The schema to use when parsing the data from the source.
     ///
-    /// Supported values for imports:
-    ///
-    /// * `user_event` (default): One JSON
-    /// [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
+    /// Supported values for document imports:
     ///
     /// * `document` (default): One JSON
     /// [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
     /// document must
     ///   have a valid
     ///   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+    ///
+    /// Supported values for user even imports:
+    ///
+    /// * `user_event` (default): One JSON
+    /// [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -855,7 +856,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>Field number for the "gcs_prefix" field.</summary>
     public const int GcsPrefixFieldNumber = 1;
     /// <summary>
-    /// Google Cloud Storage prefix for import errors. This must be an empty,
+    /// Cloud Storage prefix for import errors. This must be an empty,
     /// existing Cloud Storage directory. Import errors will be written to
     /// sharded files in this directory, one per line, as a JSON-encoded
     /// `google.rpc.Status` message.
@@ -1106,7 +1107,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>Field number for the "gcs_source" field.</summary>
     public const int GcsSourceFieldNumber = 3;
     /// <summary>
-    /// Required. Google Cloud Storage location for the input content.
+    /// Required. Cloud Storage location for the input content.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1138,7 +1139,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent DataStore resource name, of the form
-    /// `projects/{project}/locations/{location}/dataStores/{data_store}`
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2727,7 +2728,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>Field number for the "gcs_source" field.</summary>
     public const int GcsSourceFieldNumber = 3;
     /// <summary>
-    /// Google Cloud Storage location for the input content.
+    /// Cloud Storage location for the input content.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2759,7 +2760,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent branch resource name, such as
-    /// `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
     /// Requires create/update permission.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.2.0, released 2023-03-20
+
+### Bug fixes
+
+- Marked some fields as input only or output only ([commit 87965f1](https://github.com/googleapis/google-cloud-dotnet/commit/87965f1990e2eb027e01dfc9f1c7658794bc26b5))
+
+### New features
+
+- Added new method signatures for `CreateOfflineProfile`, `UpdateProfile` ([commit 87965f1](https://github.com/googleapis/google-cloud-dotnet/commit/87965f1990e2eb027e01dfc9f1c7658794bc26b5))
+- Marked `Profile` as a resource ([commit 87965f1](https://github.com/googleapis/google-cloud-dotnet/commit/87965f1990e2eb027e01dfc9f1c7658794bc26b5))
+
+### Documentation improvements
+
+- Updated comments ([commit 87965f1](https://github.com/googleapis/google-cloud-dotnet/commit/87965f1990e2eb027e01dfc9f1c7658794bc26b5))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features

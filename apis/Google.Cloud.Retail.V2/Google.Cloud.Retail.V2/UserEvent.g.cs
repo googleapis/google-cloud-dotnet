@@ -29,7 +29,7 @@ namespace Google.Cloud.Retail.V2 {
             "b3IucHJvdG8aI2dvb2dsZS9jbG91ZC9yZXRhaWwvdjIvY29tbW9uLnByb3Rv",
             "GiRnb29nbGUvY2xvdWQvcmV0YWlsL3YyL3Byb2R1Y3QucHJvdG8aH2dvb2ds",
             "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93",
-            "cmFwcGVycy5wcm90byKHBgoJVXNlckV2ZW50EhcKCmV2ZW50X3R5cGUYASAB",
+            "cmFwcGVycy5wcm90byKXBgoJVXNlckV2ZW50EhcKCmV2ZW50X3R5cGUYASAB",
             "KAlCA+BBAhIXCgp2aXNpdG9yX2lkGAIgASgJQgPgQQISEgoKc2Vzc2lvbl9p",
             "ZBgVIAEoCRIuCgpldmVudF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcBIWCg5leHBlcmltZW50X2lkcxgEIAMoCRIZChFhdHRyaWJ1",
@@ -44,25 +44,25 @@ namespace Google.Cloud.Retail.V2 {
             "YnkYESABKAkSDgoGb2Zmc2V0GBIgASgFEhcKD3BhZ2VfY2F0ZWdvcmllcxgL",
             "IAMoCRIzCgl1c2VyX2luZm8YDCABKAsyIC5nb29nbGUuY2xvdWQucmV0YWls",
             "LnYyLlVzZXJJbmZvEgsKA3VyaRgNIAEoCRIUCgxyZWZlcnJlcl91cmkYDiAB",
-            "KAkSFAoMcGFnZV92aWV3X2lkGA8gASgJGloKD0F0dHJpYnV0ZXNFbnRyeRIL",
-            "CgNrZXkYASABKAkSNgoFdmFsdWUYAiABKAsyJy5nb29nbGUuY2xvdWQucmV0",
-            "YWlsLnYyLkN1c3RvbUF0dHJpYnV0ZToCOAEidQoNUHJvZHVjdERldGFpbBI1",
-            "Cgdwcm9kdWN0GAEgASgLMh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9k",
-            "dWN0QgPgQQISLQoIcXVhbnRpdHkYAiABKAsyGy5nb29nbGUucHJvdG9idWYu",
-            "SW50MzJWYWx1ZSJwChBDb21wbGV0aW9uRGV0YWlsEiQKHGNvbXBsZXRpb25f",
-            "YXR0cmlidXRpb25fdG9rZW4YASABKAkSGwoTc2VsZWN0ZWRfc3VnZ2VzdGlv",
-            "bhgCIAEoCRIZChFzZWxlY3RlZF9wb3NpdGlvbhgDIAEoBSJuChNQdXJjaGFz",
-            "ZVRyYW5zYWN0aW9uEgoKAmlkGAEgASgJEhQKB3JldmVudWUYAiABKAJCA+BB",
-            "AhILCgN0YXgYAyABKAISDAoEY29zdBgEIAEoAhIaCg1jdXJyZW5jeV9jb2Rl",
-            "GAUgASgJQgPgQQJCuQEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQg5V",
-            "c2VyRXZlbnRQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL3JldGFpbC9h",
-            "cGl2Mi9yZXRhaWxwYjtyZXRhaWxwYqICBlJFVEFJTKoCFkdvb2dsZS5DbG91",
-            "ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy6gIZR29vZ2xl",
-            "OjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
+            "KAkSFAoMcGFnZV92aWV3X2lkGA8gASgJEg4KBmVudGl0eRgXIAEoCRpaCg9B",
+            "dHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjYKBXZhbHVlGAIgASgLMicu",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DdXN0b21BdHRyaWJ1dGU6AjgBInUK",
+            "DVByb2R1Y3REZXRhaWwSNQoHcHJvZHVjdBgBIAEoCzIfLmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuUHJvZHVjdEID4EECEi0KCHF1YW50aXR5GAIgASgLMhsu",
+            "Z29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUicAoQQ29tcGxldGlvbkRldGFp",
+            "bBIkChxjb21wbGV0aW9uX2F0dHJpYnV0aW9uX3Rva2VuGAEgASgJEhsKE3Nl",
+            "bGVjdGVkX3N1Z2dlc3Rpb24YAiABKAkSGQoRc2VsZWN0ZWRfcG9zaXRpb24Y",
+            "AyABKAUibgoTUHVyY2hhc2VUcmFuc2FjdGlvbhIKCgJpZBgBIAEoCRIUCgdy",
+            "ZXZlbnVlGAIgASgCQgPgQQISCwoDdGF4GAMgASgCEgwKBGNvc3QYBCABKAIS",
+            "GgoNY3VycmVuY3lfY29kZRgFIAEoCUID4EECQrkBChpjb20uZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52MkIOVXNlckV2ZW50UHJvdG9QAVoyY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9yZXRhaWwvYXBpdjIvcmV0YWlscGI7cmV0YWlscGKiAgZSRVRB",
+            "SUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJl",
+            "dGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserEvent), global::Google.Cloud.Retail.V2.UserEvent.Parser, new[]{ "EventType", "VisitorId", "SessionId", "EventTime", "ExperimentIds", "AttributionToken", "ProductDetails", "CompletionDetail", "Attributes", "CartId", "PurchaseTransaction", "SearchQuery", "Filter", "OrderBy", "Offset", "PageCategories", "UserInfo", "Uri", "ReferrerUri", "PageViewId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserEvent), global::Google.Cloud.Retail.V2.UserEvent.Parser, new[]{ "EventType", "VisitorId", "SessionId", "EventTime", "ExperimentIds", "AttributionToken", "ProductDetails", "CompletionDetail", "Attributes", "CartId", "PurchaseTransaction", "SearchQuery", "Filter", "OrderBy", "Offset", "PageCategories", "UserInfo", "Uri", "ReferrerUri", "PageViewId", "Entity" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductDetail), global::Google.Cloud.Retail.V2.ProductDetail.Parser, new[]{ "Product", "Quantity" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.CompletionDetail), global::Google.Cloud.Retail.V2.CompletionDetail.Parser, new[]{ "CompletionAttributionToken", "SelectedSuggestion", "SelectedPosition" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurchaseTransaction), global::Google.Cloud.Retail.V2.PurchaseTransaction.Parser, new[]{ "Id", "Revenue", "Tax", "Cost", "CurrencyCode" }, null, null, null, null)
@@ -130,6 +130,7 @@ namespace Google.Cloud.Retail.V2 {
       uri_ = other.uri_;
       referrerUri_ = other.referrerUri_;
       pageViewId_ = other.pageViewId_;
+      entity_ = other.entity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -609,6 +610,25 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "entity" field.</summary>
+    public const int EntityFieldNumber = 23;
+    private string entity_ = "";
+    /// <summary>
+    /// The entity for customers that may run multiple different entities, domains,
+    /// sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
+    /// `google.com`, `youtube.com`, etc.
+    /// It is recommended to set this field to get better per-entity search,
+    /// completion and prediction results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Entity {
+      get { return entity_; }
+      set {
+        entity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -644,6 +664,7 @@ namespace Google.Cloud.Retail.V2 {
       if (Uri != other.Uri) return false;
       if (ReferrerUri != other.ReferrerUri) return false;
       if (PageViewId != other.PageViewId) return false;
+      if (Entity != other.Entity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -671,6 +692,7 @@ namespace Google.Cloud.Retail.V2 {
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
       if (ReferrerUri.Length != 0) hash ^= ReferrerUri.GetHashCode();
       if (PageViewId.Length != 0) hash ^= PageViewId.GetHashCode();
+      if (Entity.Length != 0) hash ^= Entity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -757,6 +779,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(CompletionDetail);
       }
+      if (Entity.Length != 0) {
+        output.WriteRawTag(186, 1);
+        output.WriteString(Entity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -835,6 +861,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(CompletionDetail);
       }
+      if (Entity.Length != 0) {
+        output.WriteRawTag(186, 1);
+        output.WriteString(Entity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -896,6 +926,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (PageViewId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageViewId);
+      }
+      if (Entity.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Entity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -972,6 +1005,9 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (other.PageViewId.Length != 0) {
         PageViewId = other.PageViewId;
+      }
+      if (other.Entity.Length != 0) {
+        Entity = other.Entity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1080,6 +1116,10 @@ namespace Google.Cloud.Retail.V2 {
             input.ReadMessage(CompletionDetail);
             break;
           }
+          case 186: {
+            Entity = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1185,6 +1225,10 @@ namespace Google.Cloud.Retail.V2 {
               CompletionDetail = new global::Google.Cloud.Retail.V2.CompletionDetail();
             }
             input.ReadMessage(CompletionDetail);
+            break;
+          }
+          case 186: {
+            Entity = input.ReadString();
             break;
           }
         }

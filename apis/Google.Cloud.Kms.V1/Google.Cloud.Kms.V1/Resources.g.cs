@@ -3100,15 +3100,21 @@ namespace Google.Cloud.Kms.V1 {
         [pbr::OriginalName("RSA_DECRYPT_OAEP_4096_SHA1")] RsaDecryptOaep4096Sha1 = 39,
         /// <summary>
         /// ECDSA on the NIST P-256 curve with a SHA256 digest.
+        /// Other hash functions can also be used:
+        /// https://cloud.google.com/kms/docs/create-validate-signatures#ecdsa_support_for_other_hash_algorithms
         /// </summary>
         [pbr::OriginalName("EC_SIGN_P256_SHA256")] EcSignP256Sha256 = 12,
         /// <summary>
         /// ECDSA on the NIST P-384 curve with a SHA384 digest.
+        /// Other hash functions can also be used:
+        /// https://cloud.google.com/kms/docs/create-validate-signatures#ecdsa_support_for_other_hash_algorithms
         /// </summary>
         [pbr::OriginalName("EC_SIGN_P384_SHA384")] EcSignP384Sha384 = 13,
         /// <summary>
         /// ECDSA on the non-NIST secp256k1 curve. This curve is only supported for
         /// HSM protection level.
+        /// Other hash functions can also be used:
+        /// https://cloud.google.com/kms/docs/create-validate-signatures#ecdsa_support_for_other_hash_algorithms
         /// </summary>
         [pbr::OriginalName("EC_SIGN_SECP256K1_SHA256")] EcSignSecp256K1Sha256 = 31,
         /// <summary>

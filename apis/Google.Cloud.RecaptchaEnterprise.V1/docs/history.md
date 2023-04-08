@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2023-03-20
+
+### New features
+
+- Add reCAPTCHA Enterprise Fraud Prevention API ([commit c655f99](https://github.com/googleapis/google-cloud-dotnet/commit/c655f99aa7e6579a58b7c0b1dd8b4c3126a96fdc))
+
 ## Version 2.3.0, released 2022-12-14
 
 ### New features

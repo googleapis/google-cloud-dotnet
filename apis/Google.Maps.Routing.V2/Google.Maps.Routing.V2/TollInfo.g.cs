@@ -27,11 +27,11 @@ namespace Google.Maps.Routing.V2 {
             "CiZnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3RvbGxfaW5mby5wcm90bxIWZ29v",
             "Z2xlLm1hcHMucm91dGluZy52MhoXZ29vZ2xlL3R5cGUvbW9uZXkucHJvdG8i",
             "NwoIVG9sbEluZm8SKwoPZXN0aW1hdGVkX3ByaWNlGAEgAygLMhIuZ29vZ2xl",
-            "LnR5cGUuTW9uZXlCxQEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQg1U",
-            "b2xsSW5mb1Byb3RvUAFaPWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvbWFwcy9yb3V0aW5nL3YyO3JvdXRpbmf4AQGiAgVHTVJWMqoC",
-            "Fkdvb2dsZS5NYXBzLlJvdXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5n",
-            "XFYy6gIZR29vZ2xlOjpNYXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
+            "LnR5cGUuTW9uZXlCwgEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQg1U",
+            "b2xsSW5mb1Byb3RvUAFaOmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9yb3V0",
+            "aW5nL2FwaXYyL3JvdXRpbmdwYjtyb3V0aW5ncGL4AQGiAgVHTVJWMqoCFkdv",
+            "b2dsZS5NYXBzLlJvdXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy",
+            "6gIZR29vZ2xlOjpNYXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -43,7 +43,8 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Messages
   /// <summary>
-  /// Encapsulates toll information on a `Route` or on a `RouteLeg`.
+  /// Encapsulates toll information on a [Route][google.maps.routing.v2.Route] or
+  /// on a [RouteLeg][google.maps.routing.v2.RouteLeg].
   /// </summary>
   public sealed partial class TollInfo : pb::IMessage<TollInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -95,12 +96,13 @@ namespace Google.Maps.Routing.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Type.Money.Parser);
     private readonly pbc::RepeatedField<global::Google.Type.Money> estimatedPrice_ = new pbc::RepeatedField<global::Google.Type.Money>();
     /// <summary>
-    /// The monetary amount of tolls for the corresponding Route or RouteLeg.
-    /// This list contains a money amount for each currency that is expected
-    /// to be charged by the toll stations. Typically this list will contain only
-    /// one item for routes with tolls in one currency. For international trips,
-    /// this list may contain multiple items to reflect tolls in different
-    /// currencies.
+    /// The monetary amount of tolls for the corresponding
+    /// [Route][google.maps.routing.v2.Route] or
+    /// [RouteLeg][google.maps.routing.v2.RouteLeg]. This list contains a money
+    /// amount for each currency that is expected to be charged by the toll
+    /// stations. Typically this list will contain only one item for routes with
+    /// tolls in one currency. For international trips, this list may contain
+    /// multiple items to reflect tolls in different currencies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -136,8 +136,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int ErrorCountFieldNumber = 3;
     private int errorCount_;
     /// <summary>
-    /// Required. How many errors there are in total for the resource. Truncation can be
-    /// indicated by having an `error_count` that is higher than the size of
+    /// Required. How many errors there are in total for the resource. Truncation
+    /// can be indicated by having an `error_count` that is higher than the size of
     /// `error_details`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -635,8 +635,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int LineFieldNumber = 1;
     private int line_;
     /// <summary>
-    /// Optional. If applicable, denotes the line where the error occurred. A zero value
-    /// means that there is no line information.
+    /// Optional. If applicable, denotes the line where the error occurred. A zero
+    /// value means that there is no line information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -651,8 +651,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int ColumnFieldNumber = 2;
     private int column_;
     /// <summary>
-    /// Optional. If applicable, denotes the column where the error occurred. A zero value
-    /// means that there is no columns information.
+    /// Optional. If applicable, denotes the column where the error occurred. A
+    /// zero value means that there is no columns information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

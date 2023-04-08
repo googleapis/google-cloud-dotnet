@@ -3042,7 +3042,7 @@ namespace Google.Cloud.Asset.V1 {
 
   /// <summary>
   /// A result of Resource Search, containing information of a cloud resource.
-  /// Next ID: 31
+  /// Next ID: 32
   /// </summary>
   public sealed partial class ResourceSearchResult : pb::IMessage<ResourceSearchResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

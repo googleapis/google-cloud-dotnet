@@ -208,15 +208,15 @@ namespace Google.Cloud.CloudBuild.V2 {
             "c1Jlc3BvbnNlIleC0+STAlESTy92Mi97Y29ubmVjdGlvbj1wcm9qZWN0cy8q",
             "L2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OmZldGNoTGlua2FibGVSZXBv",
             "c2l0b3JpZXMaTcpBGWNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtIC",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQskC",
             "Chhjb20uZ29vZ2xlLmNsb3VkYnVpbGQudjJCFlJlcG9zaXRvcnlNYW5hZ2Vy",
-            "UHJvdG9QAVpHZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9kZXZ0b29scy9jbG91ZGJ1aWxkL3YyO2Nsb3VkYnVpbGSiAgNHQ0KqAhpH",
-            "b29nbGUuQ2xvdWQuQ2xvdWRCdWlsZC5WMsoCFUdvb2dsZVxDbG91ZFxCdWls",
-            "ZFxWMuoCGEdvb2dsZTo6Q2xvdWQ6OkJ1aWxkOjpWMupBfAonc2VydmljZWRp",
-            "cmVjdG9yeS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlElFwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbmFtZXNwYWNlcy97bmFtZXNw",
-            "YWNlfS9zZXJ2aWNlcy97c2VydmljZX1iBnByb3RvMw=="));
+            "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZGJ1aWxkL2FwaXYy",
+            "L2Nsb3VkYnVpbGRwYjtjbG91ZGJ1aWxkcGKiAgNHQ0KqAhpHb29nbGUuQ2xv",
+            "dWQuQ2xvdWRCdWlsZC5WMsoCFUdvb2dsZVxDbG91ZFxCdWlsZFxWMuoCGEdv",
+            "b2dsZTo6Q2xvdWQ6OkJ1aWxkOjpWMupBfAonc2VydmljZWRpcmVjdG9yeS5n",
+            "b29nbGVhcGlzLmNvbS9TZXJ2aWNlElFwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vbmFtZXNwYWNlcy97bmFtZXNwYWNlfS9zZXJ2",
+            "aWNlcy97c2VydmljZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

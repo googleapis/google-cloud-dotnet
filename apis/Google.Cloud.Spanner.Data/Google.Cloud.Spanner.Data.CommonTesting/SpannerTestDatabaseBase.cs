@@ -58,13 +58,10 @@ public abstract class SpannerTestDatabaseBase
     /// </summary>
     public string SpannerDatabase { get; }
 
-    // This is the simplest way of checking whether the environment variable was specified or not.
-    // It's a little ugly, but simpler than the alternatives.
     /// <summary>
-    /// Returns true if the database was created just for this test, or false if the database was an existing one
-    /// specified through an environment variable.
+    /// Returns true if a new database was created just for this test, false otherwise.
     /// </summary>
-    public bool Fresh => SpannerDatabase == GeneratedDatabaseName;
+    public bool Fresh { get; }
 
     /// <summary>
     /// Connection string including database.
@@ -113,14 +110,10 @@ public abstract class SpannerTestDatabaseBase
         // In production, we expect the instance to already exist.
         MaybeCreateInstanceOnEmulator(projectId);
 
-        if (Fresh)
+        Fresh = TryCreateDatabase();
+        if (!Fresh)
         {
-            CreateDatabase();
-            Logger.DefaultLogger.Debug($"Created database {SpannerDatabase}.");
-        }
-        else
-        {
-            Logger.DefaultLogger.Debug($"Using existing database {SpannerDatabase}");
+            Logger.DefaultLogger.Debug($"Using existing database {SpannerDatabase}.");
         }
     }
 
@@ -130,7 +123,11 @@ public abstract class SpannerTestDatabaseBase
         return string.IsNullOrEmpty(value) ? defaultValue : value;
     }
 
-    protected abstract void CreateDatabase();
+    /// <summary>
+    /// Creates a new database with name <cref name="SpannerDatabase /> if it doesn't exist already.
+    /// </summary>
+    /// <returns>true if the database creation was successful; false otherwise.</returns>
+    protected abstract bool TryCreateDatabase();
 
     protected void MaybeCreateInstanceOnEmulator(string projectId)
     {

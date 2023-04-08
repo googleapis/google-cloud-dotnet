@@ -32,12 +32,12 @@ namespace Google.Maps.Routing.V2 {
             "b2lkX2ZlcnJpZXMYAyABKAgSFAoMYXZvaWRfaW5kb29yGAQgASgIEjkKDHZl",
             "aGljbGVfaW5mbxgFIAEoCzIjLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVmVo",
             "aWNsZUluZm8SNQoLdG9sbF9wYXNzZXMYBiADKA4yIC5nb29nbGUubWFwcy5y",
-            "b3V0aW5nLnYyLlRvbGxQYXNzQssBChpjb20uZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52MkITUm91dGVNb2RpZmllcnNQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL21hcHMvcm91dGluZy92Mjtyb3V0aW5n",
-            "+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xl",
-            "XE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJi",
-            "BnByb3RvMw=="));
+            "b3V0aW5nLnYyLlRvbGxQYXNzQsgBChpjb20uZ29vZ2xlLm1hcHMucm91dGlu",
+            "Zy52MkITUm91dGVNb2RpZmllcnNQcm90b1ABWjpjbG91ZC5nb29nbGUuY29t",
+            "L2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91dGluZ3Bi+AEB",
+            "ogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1h",
+            "cHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Maps.Routing.V2.TollPassesReflection.Descriptor, global::Google.Maps.Routing.V2.VehicleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -107,7 +107,7 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Specifies whether to avoid toll roads where reasonable. Preference will be
     /// given to routes not containing toll roads. Applies only to the `DRIVE` and
-    /// `TWO_WHEELER` travel modes.
+    /// `TWO_WHEELER` [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Specifies whether to avoid highways where reasonable. Preference will be
     /// given to routes not containing highways. Applies only to the `DRIVE` and
-    /// `TWO_WHEELER` travel modes.
+    /// `TWO_WHEELER` [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -141,7 +141,8 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Specifies whether to avoid ferries where reasonable. Preference will be
     /// given to routes not containing travel by ferries.
-    /// Applies only to the `DRIVE` and`TWO_WHEELER` travel modes.
+    /// Applies only to the `DRIVE` and`TWO_WHEELER`
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,7 +159,8 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Specifies whether to avoid navigating indoors where reasonable. Preference
     /// will be given to routes not containing indoor navigation.
-    /// Applies only to the `WALK` travel mode.
+    /// Applies only to the `WALK`
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -194,7 +196,8 @@ namespace Google.Maps.Routing.V2 {
     /// If toll passes are provided, the API tries to return the pass price. If
     /// toll passes are not provided, the API treats the toll pass as unknown and
     /// tries to return the cash price.
-    /// Applies only to the DRIVE and TWO_WHEELER travel modes.
+    /// Applies only to the `DRIVE` and `TWO_WHEELER`
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

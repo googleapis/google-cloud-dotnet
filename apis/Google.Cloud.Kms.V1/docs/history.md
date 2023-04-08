@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.4.0, released 2023-03-20
+
+### New features
+
+- Add support for Coordinated External Keys ([commit 08d67d7](https://github.com/googleapis/google-cloud-dotnet/commit/08d67d7dd565dcbf814259038cfb6504b721a5d0))
+
 ## Version 3.3.0, released 2023-01-19
 
 ### New features

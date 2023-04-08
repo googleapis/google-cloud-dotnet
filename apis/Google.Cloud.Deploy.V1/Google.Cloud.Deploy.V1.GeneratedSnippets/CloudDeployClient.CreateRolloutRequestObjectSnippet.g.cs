@@ -42,6 +42,7 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 Rollout = new Rollout(),
                 RequestId = "",
                 ValidateOnly = false,
+                StartingPhaseId = "",
             };
             // Make the request
             Operation<Rollout, OperationMetadata> response = cloudDeployClient.CreateRollout(request);

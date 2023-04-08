@@ -452,6 +452,10 @@ namespace Google.Cloud.Retail.V2 {
     /// characters and underscores. For example, an attribute named
     /// `attributes.abc_xyz` can be indexed, but an attribute named
     /// `attributes.abc-xyz` cannot be indexed.
+    ///
+    /// If the attribute key starts with `attributes.`, then the attribute is a
+    /// custom attribute. Attributes such as `brands`, `patterns`, and `title` are
+    /// built-in and called system attributes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -588,7 +592,9 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable.
     /// This property only applies to textual custom attributes and requires
-    /// indexable set to enabled to enable exact-searchable.
+    /// indexable set to enabled to enable exact-searchable. If unset, the server
+    /// behavior defaults to
+    /// [EXACT_SEARCHABLE_DISABLED][google.cloud.retail.v2.CatalogAttribute.ExactSearchableOption.EXACT_SEARCHABLE_DISABLED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -604,7 +610,8 @@ namespace Google.Cloud.Retail.V2 {
     private global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption retrievableOption_ = global::Google.Cloud.Retail.V2.CatalogAttribute.Types.RetrievableOption.Unspecified;
     /// <summary>
     /// If RETRIEVABLE_ENABLED, attribute values are retrievable in the search
-    /// results.
+    /// results. If unset, the server behavior defaults to
+    /// [RETRIEVABLE_DISABLED][google.cloud.retail.v2.CatalogAttribute.RetrievableOption.RETRIEVABLE_DISABLED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -999,8 +1006,7 @@ namespace Google.Cloud.Retail.V2 {
       /// </summary>
       public enum ExactSearchableOption {
         /// <summary>
-        /// Value used when unset. Defaults to
-        /// [EXACT_SEARCHABLE_DISABLED][google.cloud.retail.v2.CatalogAttribute.ExactSearchableOption.EXACT_SEARCHABLE_DISABLED].
+        /// Value used when unset.
         /// </summary>
         [pbr::OriginalName("EXACT_SEARCHABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -1018,8 +1024,7 @@ namespace Google.Cloud.Retail.V2 {
       /// </summary>
       public enum RetrievableOption {
         /// <summary>
-        /// Value used when unset. Defaults to
-        /// [RETRIEVABLE_DISABLED][google.cloud.retail.v2.CatalogAttribute.RetrievableOption.RETRIEVABLE_DISABLED].
+        /// Value used when unset.
         /// </summary>
         [pbr::OriginalName("RETRIEVABLE_OPTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>

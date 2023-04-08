@@ -47,13 +47,13 @@ namespace Google.Maps.AddressValidation.V1 {
             "GgoSc3VpdGVsaW5rX2Zvb3Rub3RlGBYgASgJEhYKDnBtYl9kZXNpZ25hdG9y",
             "GBcgASgJEhIKCnBtYl9udW1iZXIYGCABKAkSGwoTYWRkcmVzc19yZWNvcmRf",
             "dHlwZRgZIAEoCRIXCg9kZWZhdWx0X2FkZHJlc3MYGiABKAgSFQoNZXJyb3Jf",
-            "bWVzc2FnZRgbIAEoCRIWCg5jYXNzX3Byb2Nlc3NlZBgcIAEoCEKDAgokY29t",
+            "bWVzc2FnZRgbIAEoCRIWCg5jYXNzX3Byb2Nlc3NlZBgcIAEoCEKKAgokY29t",
             "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxQg1Vc3BzRGF0YVBy",
-            "b3RvUAFaUWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "bWFwcy9hZGRyZXNzdmFsaWRhdGlvbi92MTthZGRyZXNzdmFsaWRhdGlvbvgB",
-            "AaICB0dNUEFWVjGqAiBHb29nbGUuTWFwcy5BZGRyZXNzVmFsaWRhdGlvbi5W",
-            "McoCIEdvb2dsZVxNYXBzXEFkZHJlc3NWYWxpZGF0aW9uXFYx6gIjR29vZ2xl",
-            "OjpNYXBzOjpBZGRyZXNzVmFsaWRhdGlvbjo6VjFiBnByb3RvMw=="));
+            "b3RvUAFaWGNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9hZGRyZXNzdmFsaWRh",
+            "dGlvbi9hcGl2MS9hZGRyZXNzdmFsaWRhdGlvbnBiO2FkZHJlc3N2YWxpZGF0",
+            "aW9ucGL4AQGiAgdHTVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRkcmVzc1ZhbGlk",
+            "YXRpb24uVjHKAiBHb29nbGVcTWFwc1xBZGRyZXNzVmFsaWRhdGlvblxWMeoC",
+            "I0dvb2dsZTo6TWFwczo6QWRkcmVzc1ZhbGlkYXRpb246OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -581,7 +581,10 @@ namespace Google.Maps.AddressValidation.V1 {
   }
 
   /// <summary>
-  /// The USPS data for the address.
+  /// The USPS data for the address. `uspsData` is not guaranteed to be fully
+  /// populated for every US or PR address sent to the Address Validation API. It's
+  /// recommended to integrate the backup address fields in the response if you
+  /// utilize uspsData as the primary part of the response.
   /// </summary>
   public sealed partial class UspsData : pb::IMessage<UspsData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

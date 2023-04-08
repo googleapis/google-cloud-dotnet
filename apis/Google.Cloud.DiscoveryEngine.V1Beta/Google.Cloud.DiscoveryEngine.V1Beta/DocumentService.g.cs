@@ -48,48 +48,61 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuRG9jdW1lbnRC",
             "A+BBAhIVCg1hbGxvd19taXNzaW5nGAIgASgIIlYKFURlbGV0ZURvY3VtZW50",
             "UmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ2Rpc2NvdmVyeWVuZ2lu",
-            "ZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudDKFDAoPRG9jdW1lbnRTZXJ2aWNl",
-            "Es8BCgtHZXREb2N1bWVudBI3Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "ZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudDLZEAoPRG9jdW1lbnRTZXJ2aWNl",
+            "EqwCCgtHZXREb2N1bWVudBI3Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
             "bmUudjFiZXRhLkdldERvY3VtZW50UmVxdWVzdBotLmdvb2dsZS5jbG91ZC5k",
-            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkRvY3VtZW50IliC0+STAksSSS92MWJl",
-            "dGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyov",
-            "YnJhbmNoZXMvKi9kb2N1bWVudHMvKn3aQQRuYW1lEuIBCg1MaXN0RG9jdW1l",
-            "bnRzEjkuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuTGlz",
-            "dERvY3VtZW50c1JlcXVlc3QaOi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
-            "aW5lLnYxYmV0YS5MaXN0RG9jdW1lbnRzUmVzcG9uc2UiWoLT5JMCSxJJL3Yx",
-            "YmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jl",
-            "cy8qL2JyYW5jaGVzLyp9L2RvY3VtZW50c9pBBnBhcmVudBL2AQoOQ3JlYXRl",
-            "RG9jdW1lbnQSOi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
-            "YS5DcmVhdGVEb2N1bWVudFJlcXVlc3QaLS5nb29nbGUuY2xvdWQuZGlzY292",
-            "ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1bWVudCJ5gtPkkwJVIkkvdjFiZXRhL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJh",
-            "bmNoZXMvKn0vZG9jdW1lbnRzOghkb2N1bWVudNpBG3BhcmVudCxkb2N1bWVu",
-            "dCxkb2N1bWVudF9pZBLhAQoOVXBkYXRlRG9jdW1lbnQSOi5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5VcGRhdGVEb2N1bWVudFJlcXVl",
-            "c3QaLS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1",
-            "bWVudCJkgtPkkwJeMlIvdjFiZXRhL3tkb2N1bWVudC5uYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyovZG9jdW1l",
-            "bnRzLyp9Oghkb2N1bWVudBK+AQoORGVsZXRlRG9jdW1lbnQSOi5nb29nbGUu",
-            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5EZWxldGVEb2N1bWVudFJl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiWILT5JMCSypJL3YxYmV0",
-            "YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9i",
-            "cmFuY2hlcy8qL2RvY3VtZW50cy8qfdpBBG5hbWUSyAIKD0ltcG9ydERvY3Vt",
-            "ZW50cxI7Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLklt",
-            "cG9ydERvY3VtZW50c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uItgBgtPkkwJVIlAvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkRvY3VtZW50IrQBgtPkkwKmARJJL3Yx",
+            "YmV0YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMv",
+            "Ki9icmFuY2hlcy8qL2RvY3VtZW50cy8qfVpZElcvdjFiZXRhL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVz",
+            "LyovYnJhbmNoZXMvKi9kb2N1bWVudHMvKn3aQQRuYW1lEr8CCg1MaXN0RG9j",
+            "dW1lbnRzEjkuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
+            "TGlzdERvY3VtZW50c1JlcXVlc3QaOi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxYmV0YS5MaXN0RG9jdW1lbnRzUmVzcG9uc2UitgGC0+STAqYB",
+            "EkkvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRh",
+            "U3RvcmVzLyovYnJhbmNoZXMvKn0vZG9jdW1lbnRzWlkSVy92MWJldGEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0",
+            "YVN0b3Jlcy8qL2JyYW5jaGVzLyp9L2RvY3VtZW50c9pBBnBhcmVudBLdAgoO",
+            "Q3JlYXRlRG9jdW1lbnQSOi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxYmV0YS5DcmVhdGVEb2N1bWVudFJlcXVlc3QaLS5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1bWVudCLfAYLT5JMCugEiSS92",
+            "MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9y",
+            "ZXMvKi9icmFuY2hlcy8qfS9kb2N1bWVudHM6CGRvY3VtZW50WmMiVy92MWJl",
+            "dGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25z",
+            "LyovZGF0YVN0b3Jlcy8qL2JyYW5jaGVzLyp9L2RvY3VtZW50czoIZG9jdW1l",
+            "bnTaQRtwYXJlbnQsZG9jdW1lbnQsZG9jdW1lbnRfaWQS0QIKDlVwZGF0ZURv",
+            "Y3VtZW50EjouZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
+            "VXBkYXRlRG9jdW1lbnRSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MWJldGEuRG9jdW1lbnQi0wGC0+STAswBMlIvdjFiZXRhL3tk",
+            "b2N1bWVudC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jl",
+            "cy8qL2JyYW5jaGVzLyovZG9jdW1lbnRzLyp9Oghkb2N1bWVudFpsMmAvdjFi",
+            "ZXRhL3tkb2N1bWVudC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29s",
+            "bGVjdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJhbmNoZXMvKi9kb2N1bWVudHMv",
+            "Kn06CGRvY3VtZW50EpsCCg5EZWxldGVEb2N1bWVudBI6Lmdvb2dsZS5jbG91",
+            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkRlbGV0ZURvY3VtZW50UmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSK0AYLT5JMCpgEqSS92MWJldGEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJh",
+            "bmNoZXMvKi9kb2N1bWVudHMvKn1aWSpXL3YxYmV0YS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL2Jy",
+            "YW5jaGVzLyovZG9jdW1lbnRzLyp92kEEbmFtZRKuAwoPSW1wb3J0RG9jdW1l",
+            "bnRzEjsuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuSW1w",
+            "b3J0RG9jdW1lbnRzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24ivgKC0+STAroBIlAvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9s",
             "b2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovYnJhbmNoZXMvKn0vZG9jdW1lbnRz",
-            "OmltcG9ydDoBKspBego7Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MWJldGEuSW1wb3J0RG9jdW1lbnRzUmVzcG9uc2USO2dvb2dsZS5jbG91ZC5k",
-            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkltcG9ydERvY3VtZW50c01ldGFkYXRh",
-            "GlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpsCCidj",
-            "b20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCFERvY3Vt",
-            "ZW50U2VydmljZVByb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292",
-            "ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zl",
-            "cnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5E",
-            "aXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVy",
-            "eUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdp",
-            "bmU6OlYxYmV0YWIGcHJvdG8z"));
+            "OmltcG9ydDoBKlpjIl4vdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8q",
+            "fS9kb2N1bWVudHM6aW1wb3J0OgEqykF6Cjtnb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxYmV0YS5JbXBvcnREb2N1bWVudHNSZXNwb25zZRI7Z29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuSW1wb3J0RG9jdW1l",
+            "bnRzTWV0YWRhdGEaUspBHmRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNv",
+            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm1CmwIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "YmV0YUIURG9jdW1lbnRTZXJ2aWNlUHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2lu",
+            "ZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29v",
+            "Z2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xv",
+            "dWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRp",
+            "c2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ImportConfigReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -160,7 +173,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Required. Full resource name of
     /// [Document][google.cloud.discoveryengine.v1beta.Document], such as
-    /// `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/documents/{document}`.
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`.
     ///
     /// If the caller does not have permission to access the
     /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
@@ -367,7 +380,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent branch resource name, such as
-    /// `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
     /// Use `default_branch` as the branch ID, to list documents under the default
     /// branch.
     ///
@@ -893,7 +906,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource name, such as
-    /// `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1454,7 +1467,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// Required. Full resource name of
     /// [Document][google.cloud.discoveryengine.v1beta.Document], such as
-    /// `projects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/documents/{document}`.
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`.
     ///
     /// If the caller does not have permission to delete the
     /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of

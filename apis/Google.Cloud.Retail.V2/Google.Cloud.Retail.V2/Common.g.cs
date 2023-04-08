@@ -94,17 +94,21 @@ namespace Google.Cloud.Retail.V2 {
             "VEVfQ09ORklHEAESIgoeQ0FUQUxPR19MRVZFTF9BVFRSSUJVVEVfQ09ORklH",
             "EAIqaQoMU29sdXRpb25UeXBlEh0KGVNPTFVUSU9OX1RZUEVfVU5TUEVDSUZJ",
             "RUQQABIgChxTT0xVVElPTl9UWVBFX1JFQ09NTUVOREFUSU9OEAESGAoUU09M",
-            "VVRJT05fVFlQRV9TRUFSQ0gQAiqLAQoVU2VhcmNoU29sdXRpb25Vc2VDYXNl",
-            "EigKJFNFQVJDSF9TT0xVVElPTl9VU0VfQ0FTRV9VTlNQRUNJRklFRBAAEiMK",
-            "H1NFQVJDSF9TT0xVVElPTl9VU0VfQ0FTRV9TRUFSQ0gQARIjCh9TRUFSQ0hf",
-            "U09MVVRJT05fVVNFX0NBU0VfQlJPV1NFEAJCtgEKGmNvbS5nb29nbGUuY2xv",
-            "dWQucmV0YWlsLnYyQgtDb21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29t",
-            "L2dvL3JldGFpbC9hcGl2Mi9yZXRhaWxwYjtyZXRhaWxwYqICBlJFVEFJTKoC",
-            "Fkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWls",
-            "XFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
+            "VVRJT05fVFlQRV9TRUFSQ0gQAiqhAQoeUmVjb21tZW5kYXRpb25zRmlsdGVy",
+            "aW5nT3B0aW9uEjAKLFJFQ09NTUVOREFUSU9OU19GSUxURVJJTkdfT1BUSU9O",
+            "X1VOU1BFQ0lGSUVEEAASJgoiUkVDT01NRU5EQVRJT05TX0ZJTFRFUklOR19E",
+            "SVNBQkxFRBABEiUKIVJFQ09NTUVOREFUSU9OU19GSUxURVJJTkdfRU5BQkxF",
+            "RBADKosBChVTZWFyY2hTb2x1dGlvblVzZUNhc2USKAokU0VBUkNIX1NPTFVU",
+            "SU9OX1VTRV9DQVNFX1VOU1BFQ0lGSUVEEAASIwofU0VBUkNIX1NPTFVUSU9O",
+            "X1VTRV9DQVNFX1NFQVJDSBABEiMKH1NFQVJDSF9TT0xVVElPTl9VU0VfQ0FT",
+            "RV9CUk9XU0UQAkK2AQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCC0Nv",
+            "bW1vblByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vcmV0YWlsL2FwaXYy",
+            "L3JldGFpbHBiO3JldGFpbHBiogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJl",
+            "dGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNs",
+            "b3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Retail.V2.AttributeConfigLevel), typeof(global::Google.Cloud.Retail.V2.SolutionType), typeof(global::Google.Cloud.Retail.V2.SearchSolutionUseCase), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Retail.V2.AttributeConfigLevel), typeof(global::Google.Cloud.Retail.V2.SolutionType), typeof(global::Google.Cloud.Retail.V2.RecommendationsFilteringOption), typeof(global::Google.Cloud.Retail.V2.SearchSolutionUseCase), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition), global::Google.Cloud.Retail.V2.Condition.Parser, new[]{ "QueryTerms", "ActiveTimeRange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition.Types.QueryTerm), global::Google.Cloud.Retail.V2.Condition.Types.QueryTerm.Parser, new[]{ "Value", "FullMatch" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Condition.Types.TimeRange), global::Google.Cloud.Retail.V2.Condition.Types.TimeRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule), global::Google.Cloud.Retail.V2.Rule.Parser, new[]{ "BoostAction", "RedirectAction", "OnewaySynonymsAction", "DoNotAssociateAction", "ReplacementAction", "IgnoreAction", "FilterAction", "TwowaySynonymsAction", "Condition" }, new[]{ "Action" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Rule.Types.BoostAction), global::Google.Cloud.Retail.V2.Rule.Types.BoostAction.Parser, new[]{ "Boost", "ProductsFilter" }, null, null, null, null),
@@ -168,6 +172,26 @@ namespace Google.Cloud.Retail.V2 {
     /// Used for Retail Search.
     /// </summary>
     [pbr::OriginalName("SOLUTION_TYPE_SEARCH")] Search = 2,
+  }
+
+  /// <summary>
+  /// If filtering for recommendations is enabled.
+  /// </summary>
+  public enum RecommendationsFilteringOption {
+    /// <summary>
+    /// Value used when unset.
+    /// In this case, server behavior defaults to
+    /// [RECOMMENDATIONS_FILTERING_DISABLED][google.cloud.retail.v2.RecommendationsFilteringOption.RECOMMENDATIONS_FILTERING_DISABLED].
+    /// </summary>
+    [pbr::OriginalName("RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Recommendation filtering is disabled.
+    /// </summary>
+    [pbr::OriginalName("RECOMMENDATIONS_FILTERING_DISABLED")] RecommendationsFilteringDisabled = 1,
+    /// <summary>
+    /// Recommendation filtering is enabled.
+    /// </summary>
+    [pbr::OriginalName("RECOMMENDATIONS_FILTERING_ENABLED")] RecommendationsFilteringEnabled = 3,
   }
 
   /// <summary>
@@ -3761,7 +3785,7 @@ namespace Google.Cloud.Retail.V2 {
     /// it is expected to have only 1 color. May consider using single "Mixed"
     /// instead of multiple values.
     ///
-    /// A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded
+    /// A maximum of 75 colors are allowed. Each value must be a UTF-8 encoded
     /// string with a length limit of 128 characters. Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     ///

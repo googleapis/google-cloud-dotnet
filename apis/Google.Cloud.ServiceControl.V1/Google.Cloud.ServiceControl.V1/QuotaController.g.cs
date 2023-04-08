@@ -61,9 +61,9 @@ namespace Google.Cloud.ServiceControl.V1 {
             "b2wuZ29vZ2xlYXBpcy5jb23SQV1odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
             "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
             "Y29tL2F1dGgvc2VydmljZWNvbnRyb2xC7wEKIGNvbS5nb29nbGUuYXBpLnNl",
-            "cnZpY2Vjb250cm9sLnYxQhRRdW90YUNvbnRyb2xsZXJQcm90b1ABWkpnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FwaS9zZXJ2aWNl",
-            "Y29udHJvbC92MTtzZXJ2aWNlY29udHJvbPgBAaoCHkdvb2dsZS5DbG91ZC5T",
+            "cnZpY2Vjb250cm9sLnYxQhRRdW90YUNvbnRyb2xsZXJQcm90b1ABWkpjbG91",
+            "ZC5nb29nbGUuY29tL2dvL3NlcnZpY2Vjb250cm9sL2FwaXYxL3NlcnZpY2Vj",
+            "b250cm9scGI7c2VydmljZWNvbnRyb2xwYvgBAaoCHkdvb2dsZS5DbG91ZC5T",
             "ZXJ2aWNlQ29udHJvbC5WMcoCHkdvb2dsZVxDbG91ZFxTZXJ2aWNlQ29udHJv",
             "bFxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VDb250cm9sOjpWMWIGcHJv",
             "dG8z"));

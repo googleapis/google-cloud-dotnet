@@ -20,7 +20,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
-using System.Net.NetworkInformation;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -37,46 +36,52 @@ namespace Google.Cloud.Storage.V1
         internal const string InvocationIdHeaderPart = "gccl-invocation-id";
         internal const string AttemptCountHeaderPart = "gccl-attempt-count";
 
-        private static readonly int[] s_retriableErrorCodes =
-        {
-                408, // Request timeout
-                429, // Too many requests
-                500, // Internal server error
-                502, // Bad gateway
-                503, // Service unavailable
-                504 // Gateway timeout
-        };
-        private static readonly RetryHandler s_instance = new RetryHandler();
+        private readonly RetryOptions _retryOptions;
 
-        private RetryHandler() { }
+        private RetryHandler(RetryOptions retryOptions) => _retryOptions = retryOptions;
 
+        // TODO: Will remove it once the implementation across all APIs is complete
         internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request)
         {
+            RetryHandler retryHandler = new RetryHandler(RetryOptions.IdempotentRetryOptions);
+
             // Note: we can't use ModifyRequest, as the x-goog-api-client header is added later by ConfigurableMessageHandler.
             // Additionally, that's only called once, and we may want to record the attempt number as well.
             request.AddExecuteInterceptor(InvocationIdInterceptor.Instance);
-            request.AddUnsuccessfulResponseHandler(s_instance);
+            request.AddUnsuccessfulResponseHandler(retryHandler);
         }
 
-        // This function is designed to support asynchrony in case we need to examine the response content, but for now we only need the status code
-        internal static Task<bool> IsRetriableResponse(HttpResponseMessage response) => 
-            Task.FromResult(s_retriableErrorCodes.Contains(((int)response.StatusCode)));
+        /// <summary>
+        /// It marks the request as retriable with the retry options as provided.
+        /// In case null retry options or Never is passed, retry will not happen in case of failure.
+        /// </summary>
+        internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request, RetryOptions options)
+        {
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+
+            if (options.Predicate == RetryPredicate.Never || options == RetryOptions.Never)
+            {
+                return;
+            }
+            RetryHandler retryHandler = new RetryHandler(options);
+
+            // Note: we can't use ModifyRequest, as the x-goog-api-client header is added later by ConfigurableMessageHandler.
+            // Additionally, that's only called once, and we may want to record the attempt number as well.
+            request.AddExecuteInterceptor(InvocationIdInterceptor.Instance);
+            request.AddUnsuccessfulResponseHandler(retryHandler);
+        }
 
         public async Task<bool> HandleResponseAsync(HandleUnsuccessfulResponseArgs args)
         {
-            var retry = args.SupportsRetry && await IsRetriableResponse(args.Response).ConfigureAwait(false);
+            var retry = args.SupportsRetry && _retryOptions.Predicate.ShouldRetry((int) args.Response.StatusCode);
             if (!retry)
             {
                 return false;
             }
-            // The first failure will have args.CurrentFailedTry set to 1,
-            // whereas we want the first delay to be 1 second. We use Math.Min on the power
-            // rather than on the result to obtain a max retry of 32 seconds without risking
-            // calling Math.Pow with a huge number.
-            int power = Math.Min(args.CurrentFailedTry - 1, 5);
-            double seconds = Math.Pow(2.0, power);
-            var delay = TimeSpan.FromSeconds(seconds);
+
+            TimeSpan delay = _retryOptions.Timing.GetDelay(args.CurrentFailedTry);
             await Task.Delay(delay, args.CancellationToken).ConfigureAwait(false);
+
             return true;
         }
 

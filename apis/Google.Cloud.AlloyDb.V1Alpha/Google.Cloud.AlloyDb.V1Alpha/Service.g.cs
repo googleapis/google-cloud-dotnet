@@ -304,7 +304,7 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
             "Lmdvb2dsZS5jb20vZ28vYWxsb3lkYi9hcGl2MWFscGhhL2FsbG95ZGJwYjth",
             "bGxveWRicGKqAhxHb29nbGUuQ2xvdWQuQWxsb3lEYi5WMUFscGhhygIcR29v",
             "Z2xlXENsb3VkXEFsbG95RGJcVjFhbHBoYeoCH0dvb2dsZTo6Q2xvdWQ6OkFs",
-            "bG95RGI6OlYxYWxwaGFiBnByb3RvMw=="));
+            "bG95REI6OlYxYWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AlloyDb.V1Alpha.ResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

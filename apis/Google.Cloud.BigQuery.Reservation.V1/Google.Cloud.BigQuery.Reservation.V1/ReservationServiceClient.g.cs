@@ -488,7 +488,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
     /// <summary>ReservationService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// This API allows users to manage their flat-rate BigQuery reservations.
+    /// This API allows users to manage their BigQuery reservations.
     /// 
     /// A reservation provides computational resource guarantees, in the form of
     /// [slots](https://cloud.google.com/bigquery/docs/slots), to users. A slot is a
@@ -3238,8 +3238,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// nor locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the admin project(containing project and location),
-        /// e.g.:
+        /// Required. The resource name of the admin project(containing project and
+        /// location), e.g.:
         /// `projects/myproject/locations/US`.
         /// </param>
         /// <param name="query">
@@ -3297,8 +3297,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// nor locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the admin project(containing project and location),
-        /// e.g.:
+        /// Required. The resource name of the admin project(containing project and
+        /// location), e.g.:
         /// `projects/myproject/locations/US`.
         /// </param>
         /// <param name="query">
@@ -3356,8 +3356,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// nor locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the admin project(containing project and location),
-        /// e.g.:
+        /// Required. The resource name of the admin project(containing project and
+        /// location), e.g.:
         /// `projects/myproject/locations/US`.
         /// </param>
         /// <param name="query">
@@ -3415,8 +3415,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// nor locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the admin project(containing project and location),
-        /// e.g.:
+        /// Required. The resource name of the admin project(containing project and
+        /// location), e.g.:
         /// `projects/myproject/locations/US`.
         /// </param>
         /// <param name="query">
@@ -3527,8 +3527,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name with location (project name could be the wildcard '-'),
-        /// e.g.:
+        /// Required. The resource name with location (project name could be the
+        /// wildcard '-'), e.g.:
         /// `projects/-/locations/US`.
         /// </param>
         /// <param name="query">
@@ -3582,8 +3582,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name with location (project name could be the wildcard '-'),
-        /// e.g.:
+        /// Required. The resource name with location (project name could be the
+        /// wildcard '-'), e.g.:
         /// `projects/-/locations/US`.
         /// </param>
         /// <param name="query">
@@ -3637,8 +3637,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name with location (project name could be the wildcard '-'),
-        /// e.g.:
+        /// Required. The resource name with location (project name could be the
+        /// wildcard '-'), e.g.:
         /// `projects/-/locations/US`.
         /// </param>
         /// <param name="query">
@@ -3692,8 +3692,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `projects/*/locations/*reservations/*`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name with location (project name could be the wildcard '-'),
-        /// e.g.:
+        /// Required. The resource name with location (project name could be the
+        /// wildcard '-'), e.g.:
         /// `projects/-/locations/US`.
         /// </param>
         /// <param name="query">
@@ -4227,7 +4227,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
     /// <summary>ReservationService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// This API allows users to manage their flat-rate BigQuery reservations.
+    /// This API allows users to manage their BigQuery reservations.
     /// 
     /// A reservation provides computational resource guarantees, in the form of
     /// [slots](https://cloud.google.com/bigquery/docs/slots), to users. A slot is a

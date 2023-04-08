@@ -291,11 +291,11 @@ namespace Google.Cloud.AppEngine.V1 {
             "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FwcGVuZ2luZS5hZG1p",
             "bixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
             "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm0ucmVhZC1vbmx5QsABChdjb20uZ29vZ2xlLmFwcGVuZ2luZS52MUIO",
-            "QXBwZW5naW5lUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9hcHBlbmdpbmUvdjE7YXBwZW5naW5lqgIZR29vZ2xlLkNs",
-            "b3VkLkFwcEVuZ2luZS5WMcoCGUdvb2dsZVxDbG91ZFxBcHBFbmdpbmVcVjHq",
-            "AhxHb29nbGU6OkNsb3VkOjpBcHBFbmdpbmU6OlYxYgZwcm90bzM="));
+            "dGZvcm0ucmVhZC1vbmx5Qr8BChdjb20uZ29vZ2xlLmFwcGVuZ2luZS52MUIO",
+            "QXBwZW5naW5lUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9hcHBlbmdp",
+            "bmUvYXBpdjEvYXBwZW5naW5lcGI7YXBwZW5naW5lcGKqAhlHb29nbGUuQ2xv",
+            "dWQuQXBwRW5naW5lLlYxygIZR29vZ2xlXENsb3VkXEFwcEVuZ2luZVxWMeoC",
+            "HEdvb2dsZTo6Q2xvdWQ6OkFwcEVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.AppEngine.V1.ApplicationReflection.Descriptor, global::Google.Cloud.AppEngine.V1.CertificateReflection.Descriptor, global::Google.Cloud.AppEngine.V1.DomainReflection.Descriptor, global::Google.Cloud.AppEngine.V1.DomainMappingReflection.Descriptor, global::Google.Cloud.AppEngine.V1.FirewallReflection.Descriptor, global::Google.Cloud.AppEngine.V1.InstanceReflection.Descriptor, global::Google.Cloud.AppEngine.V1.ServiceReflection.Descriptor, global::Google.Cloud.AppEngine.V1.VersionReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AppEngine.V1.VersionView), typeof(global::Google.Cloud.AppEngine.V1.AuthorizedCertificateView), typeof(global::Google.Cloud.AppEngine.V1.DomainOverrideStrategy), }, null, new pbr::GeneratedClrTypeInfo[] {

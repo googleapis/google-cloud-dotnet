@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -31,6 +32,16 @@ namespace Google.Cloud.Speech.V2
             .WithRequestNumericEnumJsonEncoding(true)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v2/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiEvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0=")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v2/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("Eh8vdjIve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                },
                 {
                     "google.longrunning.Operations.CancelOperation",
                     // { "post": "/v2/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
@@ -55,6 +66,7 @@ namespace Google.Cloud.Speech.V2
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return gcl::LocationsReflection.Descriptor;
             yield return CloudSpeechReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

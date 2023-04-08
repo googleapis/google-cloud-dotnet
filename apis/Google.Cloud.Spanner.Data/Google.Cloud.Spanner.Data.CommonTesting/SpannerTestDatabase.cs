@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Grpc.Core;
 using System;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting;
@@ -66,11 +67,19 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
     {
     }
 
-    protected override void CreateDatabase()
+    protected override bool TryCreateDatabase()
     {
         using var connection = new SpannerConnection(NoDbConnectionString);
         var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}");
-        createCmd.ExecuteNonQuery();
-        Logger.DefaultLogger.Debug($"Created database {SpannerDatabase}");
+        try
+        {
+            createCmd.ExecuteNonQuery();
+            Logger.DefaultLogger.Debug($"Created database {SpannerDatabase}.");
+            return true;
+        }
+        catch (SpannerException e) when (e.RpcException?.StatusCode == StatusCode.AlreadyExists)
+        {
+            return false;
+        }
     }
 }

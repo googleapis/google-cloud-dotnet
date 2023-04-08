@@ -132,6 +132,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsRequest> __Marshaller_google_cloud_documentai_v1beta3_ListEvaluationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse> __Marshaller_google_cloud_documentai_v1beta3_ListEvaluationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest> __Marshaller_google_cloud_documentai_v1beta3_ImportProcessorVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.ProcessRequest, global::Google.Cloud.DocumentAI.V1Beta3.ProcessResponse> __Method_ProcessDocument = new grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.ProcessRequest, global::Google.Cloud.DocumentAI.V1Beta3.ProcessResponse>(
@@ -308,6 +310,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         "ListEvaluations",
         __Marshaller_google_cloud_documentai_v1beta3_ListEvaluationsRequest,
         __Marshaller_google_cloud_documentai_v1beta3_ListEvaluationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest, global::Google.LongRunning.Operation> __Method_ImportProcessorVersion = new grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportProcessorVersion",
+        __Marshaller_google_cloud_documentai_v1beta3_ImportProcessorVersionRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -592,6 +602,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse> ListEvaluations(global::Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports a processor version from source processor version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportProcessorVersion(global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1733,6 +1755,54 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEvaluations, null, options, request);
       }
+      /// <summary>
+      /// Imports a processor version from source processor version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportProcessorVersion(global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportProcessorVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports a processor version from source processor version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportProcessorVersion(global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportProcessorVersion, null, options, request);
+      }
+      /// <summary>
+      /// Imports a processor version from source processor version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportProcessorVersionAsync(global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportProcessorVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports a processor version from source processor version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportProcessorVersionAsync(global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportProcessorVersion, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DocumentProcessorServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1768,7 +1838,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           .AddMethod(__Method_ReviewDocument, serviceImpl.ReviewDocument)
           .AddMethod(__Method_EvaluateProcessorVersion, serviceImpl.EvaluateProcessorVersion)
           .AddMethod(__Method_GetEvaluation, serviceImpl.GetEvaluation)
-          .AddMethod(__Method_ListEvaluations, serviceImpl.ListEvaluations).Build();
+          .AddMethod(__Method_ListEvaluations, serviceImpl.ListEvaluations)
+          .AddMethod(__Method_ImportProcessorVersion, serviceImpl.ImportProcessorVersion).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1800,6 +1871,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       serviceBinder.AddMethod(__Method_EvaluateProcessorVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.EvaluateProcessorVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.EvaluateProcessorVersion));
       serviceBinder.AddMethod(__Method_GetEvaluation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.GetEvaluationRequest, global::Google.Cloud.DocumentAI.V1Beta3.Evaluation>(serviceImpl.GetEvaluation));
       serviceBinder.AddMethod(__Method_ListEvaluations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsRequest, global::Google.Cloud.DocumentAI.V1Beta3.ListEvaluationsResponse>(serviceImpl.ListEvaluations));
+      serviceBinder.AddMethod(__Method_ImportProcessorVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.ImportProcessorVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportProcessorVersion));
     }
 
   }

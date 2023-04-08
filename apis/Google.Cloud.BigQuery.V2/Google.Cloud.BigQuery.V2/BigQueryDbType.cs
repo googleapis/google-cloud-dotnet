@@ -111,7 +111,7 @@ namespace Google.Cloud.BigQuery.V2
         // The names given in query parameters aren't always the same as the names in the rest of the API.
         // (BOOL is BOOLEAN elsewhere, for example.) We could use another attribute, but a dictionary
         // is a bit simpler.
-        private static Dictionary<BigQueryDbType, string> s_typeToNameMapping = new Dictionary<BigQueryDbType, string>
+        private static readonly Dictionary<BigQueryDbType, string> s_typeToNameMapping = new Dictionary<BigQueryDbType, string>
         {
             { BigQueryDbType.Int64, "INTEGER" },
             { BigQueryDbType.Float64, "FLOAT" },

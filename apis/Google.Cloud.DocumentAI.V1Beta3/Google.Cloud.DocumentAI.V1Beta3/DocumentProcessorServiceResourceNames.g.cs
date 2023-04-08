@@ -547,4 +547,39 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class ImportProcessorVersionRequest
+    {
+        /// <summary>
+        /// <see cref="ProcessorName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProcessorName ParentAsProcessorName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ProcessorName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ProcessorVersionName"/>-typed view over the <see cref="ProcessorVersionSource"/> resource name
+        /// property.
+        /// </summary>
+        public ProcessorVersionName ProcessorVersionSourceAsProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(ProcessorVersionSource) ? null : ProcessorVersionName.Parse(ProcessorVersionSource, allowUnparsed: true);
+            set => ProcessorVersionSource = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportProcessorVersionResponse
+    {
+        /// <summary>
+        /// <see cref="ProcessorVersionName"/>-typed view over the <see cref="ProcessorVersion"/> resource name
+        /// property.
+        /// </summary>
+        public ProcessorVersionName ProcessorVersionAsProcessorVersionName
+        {
+            get => string.IsNullOrEmpty(ProcessorVersion) ? null : ProcessorVersionName.Parse(ProcessorVersion, allowUnparsed: true);
+            set => ProcessorVersion = value?.ToString() ?? "";
+        }
+    }
 }

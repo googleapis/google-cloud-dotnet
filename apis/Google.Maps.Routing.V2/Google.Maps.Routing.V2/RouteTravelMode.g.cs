@@ -27,12 +27,12 @@ namespace Google.Maps.Routing.V2 {
             "Ci5nb29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlX3RyYXZlbF9tb2RlLnBy",
             "b3RvEhZnb29nbGUubWFwcy5yb3V0aW5nLnYyKmEKD1JvdXRlVHJhdmVsTW9k",
             "ZRIbChdUUkFWRUxfTU9ERV9VTlNQRUNJRklFRBAAEgkKBURSSVZFEAESCwoH",
-            "QklDWUNMRRACEggKBFdBTEsQAxIPCgtUV09fV0hFRUxFUhAEQswBChpjb20u",
+            "QklDWUNMRRACEggKBFdBTEsQAxIPCgtUV09fV0hFRUxFUhAEQskBChpjb20u",
             "Z29vZ2xlLm1hcHMucm91dGluZy52MkIUUm91dGVUcmF2ZWxNb2RlUHJvdG9Q",
-            "AVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tYXBz",
-            "L3JvdXRpbmcvdjI7cm91dGluZ/gBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMu",
-            "Um91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6",
-            "Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
+            "AVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91",
+            "dGluZ3BiO3JvdXRpbmdwYvgBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91",
+            "dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1h",
+            "cHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteTravelMode), }, null, null));
@@ -43,8 +43,8 @@ namespace Google.Maps.Routing.V2 {
   #region Enums
   /// <summary>
   /// A set of values used to specify the mode of travel.
-  /// NOTE: WALK, BICYCLE, and TWO_WHEELER routes are in beta and might sometimes
-  /// be missing clear sidewalks, pedestrian paths, or bicycling paths.
+  /// NOTE: `WALK`, `BICYCLE`, and `TWO_WHEELER` routes are in beta and might
+  /// sometimes be missing clear sidewalks, pedestrian paths, or bicycling paths.
   /// You must display this warning to the user for all walking, bicycling, and
   /// two-wheel routes that you display in your app.
   /// </summary>

@@ -57,6 +57,7 @@ namespace Google.Maps.Routing.V2.Snippets
                 {
                     ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
                 },
+                RegionCode = "",
             };
             // Make the request
             ComputeRoutesResponse response = routesClient.ComputeRoutes(request);

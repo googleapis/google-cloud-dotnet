@@ -3444,5 +3444,190 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for ImportProcessorVersion</summary>
+        public void ImportProcessorVersionRequestObject()
+        {
+            // Snippet: ImportProcessorVersion(ImportProcessorVersionRequest, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            ImportProcessorVersionRequest request = new ImportProcessorVersionRequest
+            {
+                ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                ProcessorVersionSourceAsProcessorVersionName = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]"),
+            };
+            // Make the request
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> response = documentProcessorServiceClient.ImportProcessorVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceImportProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportProcessorVersionAsync</summary>
+        public async Task ImportProcessorVersionRequestObjectAsync()
+        {
+            // Snippet: ImportProcessorVersionAsync(ImportProcessorVersionRequest, CallSettings)
+            // Additional: ImportProcessorVersionAsync(ImportProcessorVersionRequest, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportProcessorVersionRequest request = new ImportProcessorVersionRequest
+            {
+                ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                ProcessorVersionSourceAsProcessorVersionName = ProcessorVersionName.FromProjectLocationProcessorProcessorVersion("[PROJECT]", "[LOCATION]", "[PROCESSOR]", "[PROCESSOR_VERSION]"),
+            };
+            // Make the request
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> response = await documentProcessorServiceClient.ImportProcessorVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceImportProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportProcessorVersion</summary>
+        public void ImportProcessorVersion()
+        {
+            // Snippet: ImportProcessorVersion(string, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]";
+            // Make the request
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> response = documentProcessorServiceClient.ImportProcessorVersion(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceImportProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportProcessorVersionAsync</summary>
+        public async Task ImportProcessorVersionAsync()
+        {
+            // Snippet: ImportProcessorVersionAsync(string, CallSettings)
+            // Additional: ImportProcessorVersionAsync(string, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]";
+            // Make the request
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> response = await documentProcessorServiceClient.ImportProcessorVersionAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceImportProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportProcessorVersion</summary>
+        public void ImportProcessorVersionResourceNames()
+        {
+            // Snippet: ImportProcessorVersion(ProcessorName, CallSettings)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            // Initialize request argument(s)
+            ProcessorName parent = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            // Make the request
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> response = documentProcessorServiceClient.ImportProcessorVersion(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceImportProcessorVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportProcessorVersionAsync</summary>
+        public async Task ImportProcessorVersionResourceNamesAsync()
+        {
+            // Snippet: ImportProcessorVersionAsync(ProcessorName, CallSettings)
+            // Additional: ImportProcessorVersionAsync(ProcessorName, CancellationToken)
+            // Create client
+            DocumentProcessorServiceClient documentProcessorServiceClient = await DocumentProcessorServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProcessorName parent = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            // Make the request
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> response = await documentProcessorServiceClient.ImportProcessorVersionAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportProcessorVersionResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportProcessorVersionResponse, ImportProcessorVersionMetadata> retrievedResponse = await documentProcessorServiceClient.PollOnceImportProcessorVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -342,7 +342,7 @@ namespace Google.Cloud.BigQuery.V2
             ? resource
             : throw new GoogleApiException(Service.Name, "ETag didn't match") { HttpStatusCode = HttpStatusCode.PreconditionFailed };
 
-        static internal void RetryIfETagPresent<TResource, TResponse>(BigqueryBaseServiceRequest<TResponse> request, TResource resource)
+        internal static void RetryIfETagPresent<TResource, TResponse>(BigqueryBaseServiceRequest<TResponse> request, TResource resource)
             where TResource : IDirectResponseSchema
         {
             if (resource.ETag != null)

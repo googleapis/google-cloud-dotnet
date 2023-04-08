@@ -25,23 +25,23 @@ namespace Google.Maps.Routing.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjNnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3NwZWVkX3JlYWRpbmdfaW50ZXJ2",
-            "YWwucHJvdG8SFmdvb2dsZS5tYXBzLnJvdXRpbmcudjIirAIKFFNwZWVkUmVh",
+            "YWwucHJvdG8SFmdvb2dsZS5tYXBzLnJvdXRpbmcudjIivAIKFFNwZWVkUmVh",
             "ZGluZ0ludGVydmFsEicKGnN0YXJ0X3BvbHlsaW5lX3BvaW50X2luZGV4GAEg",
-            "ASgFSACIAQESJQoYZW5kX3BvbHlsaW5lX3BvaW50X2luZGV4GAIgASgFSAGI",
-            "AQESQQoFc3BlZWQYAyABKA4yMi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlNw",
-            "ZWVkUmVhZGluZ0ludGVydmFsLlNwZWVkIkUKBVNwZWVkEhUKEVNQRUVEX1VO",
-            "U1BFQ0lGSUVEEAASCgoGTk9STUFMEAESCAoEU0xPVxACEg8KC1RSQUZGSUNf",
-            "SkFNEANCHQobX3N0YXJ0X3BvbHlsaW5lX3BvaW50X2luZGV4QhsKGV9lbmRf",
-            "cG9seWxpbmVfcG9pbnRfaW5kZXhC0QEKGmNvbS5nb29nbGUubWFwcy5yb3V0",
-            "aW5nLnYyQhlTcGVlZFJlYWRpbmdJbnRlcnZhbFByb3RvUAFaPWdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbWFwcy9yb3V0aW5nL3Yy",
-            "O3JvdXRpbmf4AQGiAgVHTVJWMqoCFkdvb2dsZS5NYXBzLlJvdXRpbmcuVjLK",
-            "AhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xlOjpNYXBzOjpSb3V0",
-            "aW5nOjpWMmIGcHJvdG8z"));
+            "ASgFSAGIAQESJQoYZW5kX3BvbHlsaW5lX3BvaW50X2luZGV4GAIgASgFSAKI",
+            "AQESQwoFc3BlZWQYAyABKA4yMi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlNw",
+            "ZWVkUmVhZGluZ0ludGVydmFsLlNwZWVkSAAiRQoFU3BlZWQSFQoRU1BFRURf",
+            "VU5TUEVDSUZJRUQQABIKCgZOT1JNQUwQARIICgRTTE9XEAISDwoLVFJBRkZJ",
+            "Q19KQU0QA0IMCgpzcGVlZF90eXBlQh0KG19zdGFydF9wb2x5bGluZV9wb2lu",
+            "dF9pbmRleEIbChlfZW5kX3BvbHlsaW5lX3BvaW50X2luZGV4Qs4BChpjb20u",
+            "Z29vZ2xlLm1hcHMucm91dGluZy52MkIZU3BlZWRSZWFkaW5nSW50ZXJ2YWxQ",
+            "cm90b1ABWjpjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2",
+            "Mi9yb3V0aW5ncGI7cm91dGluZ3Bi+AEBogIFR01SVjKqAhZHb29nbGUuTWFw",
+            "cy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2ds",
+            "ZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.SpeedReadingInterval), global::Google.Maps.Routing.V2.SpeedReadingInterval.Parser, new[]{ "StartPolylinePointIndex", "EndPolylinePointIndex", "Speed" }, new[]{ "StartPolylinePointIndex", "EndPolylinePointIndex" }, new[]{ typeof(global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.SpeedReadingInterval), global::Google.Maps.Routing.V2.SpeedReadingInterval.Parser, new[]{ "StartPolylinePointIndex", "EndPolylinePointIndex", "Speed" }, new[]{ "SpeedType", "StartPolylinePointIndex", "EndPolylinePointIndex" }, new[]{ typeof(global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) }, null, null)
           }));
     }
     #endregion
@@ -92,7 +92,12 @@ namespace Google.Maps.Routing.V2 {
       _hasBits0 = other._hasBits0;
       startPolylinePointIndex_ = other.startPolylinePointIndex_;
       endPolylinePointIndex_ = other.endPolylinePointIndex_;
-      speed_ = other.speed_;
+      switch (other.SpeedTypeCase) {
+        case SpeedTypeOneofCase.Speed:
+          Speed = other.Speed;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -160,17 +165,37 @@ namespace Google.Maps.Routing.V2 {
 
     /// <summary>Field number for the "speed" field.</summary>
     public const int SpeedFieldNumber = 3;
-    private global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed speed_ = global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified;
     /// <summary>
     /// Traffic speed in this interval.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed Speed {
-      get { return speed_; }
+      get { return speedTypeCase_ == SpeedTypeOneofCase.Speed ? (global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) speedType_ : global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified; }
       set {
-        speed_ = value;
+        speedType_ = value;
+        speedTypeCase_ = SpeedTypeOneofCase.Speed;
       }
+    }
+
+    private object speedType_;
+    /// <summary>Enum of possible cases for the "speed_type" oneof.</summary>
+    public enum SpeedTypeOneofCase {
+      None = 0,
+      Speed = 3,
+    }
+    private SpeedTypeOneofCase speedTypeCase_ = SpeedTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SpeedTypeOneofCase SpeedTypeCase {
+      get { return speedTypeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSpeedType() {
+      speedTypeCase_ = SpeedTypeOneofCase.None;
+      speedType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -191,6 +216,7 @@ namespace Google.Maps.Routing.V2 {
       if (StartPolylinePointIndex != other.StartPolylinePointIndex) return false;
       if (EndPolylinePointIndex != other.EndPolylinePointIndex) return false;
       if (Speed != other.Speed) return false;
+      if (SpeedTypeCase != other.SpeedTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -200,7 +226,8 @@ namespace Google.Maps.Routing.V2 {
       int hash = 1;
       if (HasStartPolylinePointIndex) hash ^= StartPolylinePointIndex.GetHashCode();
       if (HasEndPolylinePointIndex) hash ^= EndPolylinePointIndex.GetHashCode();
-      if (Speed != global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified) hash ^= Speed.GetHashCode();
+      if (speedTypeCase_ == SpeedTypeOneofCase.Speed) hash ^= Speed.GetHashCode();
+      hash ^= (int) speedTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -227,7 +254,7 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(16);
         output.WriteInt32(EndPolylinePointIndex);
       }
-      if (Speed != global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified) {
+      if (speedTypeCase_ == SpeedTypeOneofCase.Speed) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Speed);
       }
@@ -249,7 +276,7 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(16);
         output.WriteInt32(EndPolylinePointIndex);
       }
-      if (Speed != global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified) {
+      if (speedTypeCase_ == SpeedTypeOneofCase.Speed) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Speed);
       }
@@ -269,7 +296,7 @@ namespace Google.Maps.Routing.V2 {
       if (HasEndPolylinePointIndex) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(EndPolylinePointIndex);
       }
-      if (Speed != global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified) {
+      if (speedTypeCase_ == SpeedTypeOneofCase.Speed) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Speed);
       }
       if (_unknownFields != null) {
@@ -290,9 +317,12 @@ namespace Google.Maps.Routing.V2 {
       if (other.HasEndPolylinePointIndex) {
         EndPolylinePointIndex = other.EndPolylinePointIndex;
       }
-      if (other.Speed != global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified) {
-        Speed = other.Speed;
+      switch (other.SpeedTypeCase) {
+        case SpeedTypeOneofCase.Speed:
+          Speed = other.Speed;
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -317,7 +347,8 @@ namespace Google.Maps.Routing.V2 {
             break;
           }
           case 24: {
-            Speed = (global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) input.ReadEnum();
+            speedType_ = input.ReadEnum();
+            speedTypeCase_ = SpeedTypeOneofCase.Speed;
             break;
           }
         }
@@ -344,7 +375,8 @@ namespace Google.Maps.Routing.V2 {
             break;
           }
           case 24: {
-            Speed = (global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) input.ReadEnum();
+            speedType_ = input.ReadEnum();
+            speedTypeCase_ = SpeedTypeOneofCase.Speed;
             break;
           }
         }

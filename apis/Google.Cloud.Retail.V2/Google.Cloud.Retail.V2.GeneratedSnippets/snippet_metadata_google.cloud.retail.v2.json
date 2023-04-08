@@ -2403,12 +2403,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 51,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 48,
+          "end": 49,
           "type": "SHORT"
         }
       ]
@@ -2452,12 +2452,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 51,
+          "end": 52,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 49,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -3964,6 +3964,2165 @@
         {
           "start": 38,
           "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_CreateModel_sync",
+      "title": "CreateModelRequestObject",
+      "description": "Snippet for CreateModel",
+      "file": "ModelServiceClient.CreateModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.CreateModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CreateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.Model, Google.Cloud.Retail.V2.CreateModelMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.CreateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_CreateModel_async",
+      "title": "CreateModelRequestObjectAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "ModelServiceClient.CreateModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CreateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.Model, Google.Cloud.Retail.V2.CreateModelMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.CreateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_CreateModel_sync_flattened",
+      "title": "CreateModel",
+      "description": "Snippet for CreateModel",
+      "file": "ModelServiceClient.CreateModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.CreateModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.Model, Google.Cloud.Retail.V2.CreateModelMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.CreateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_CreateModel_async_flattened",
+      "title": "CreateModelAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "ModelServiceClient.CreateModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.Model, Google.Cloud.Retail.V2.CreateModelMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.CreateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_CreateModel_sync_flattened_resourceNames",
+      "title": "CreateModelResourceNames",
+      "description": "Snippet for CreateModel",
+      "file": "ModelServiceClient.CreateModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.CreateModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.Model, Google.Cloud.Retail.V2.CreateModelMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.CreateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_CreateModel_async_flattened_resourceNames",
+      "title": "CreateModelResourceNamesAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "ModelServiceClient.CreateModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Retail.V2.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.Model, Google.Cloud.Retail.V2.CreateModelMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.CreateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_GetModel_sync",
+      "title": "GetModelRequestObject",
+      "description": "Snippet for GetModel",
+      "file": "ModelServiceClient.GetModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.GetModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.retail.v2.ModelService.GetModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_GetModel_async",
+      "title": "GetModelRequestObjectAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "ModelServiceClient.GetModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.retail.v2.ModelService.GetModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_GetModel_sync_flattened",
+      "title": "GetModel",
+      "description": "Snippet for GetModel",
+      "file": "ModelServiceClient.GetModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.GetModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.retail.v2.ModelService.GetModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_GetModel_async_flattened",
+      "title": "GetModelAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "ModelServiceClient.GetModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.retail.v2.ModelService.GetModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_GetModel_sync_flattened_resourceNames",
+      "title": "GetModelResourceNames",
+      "description": "Snippet for GetModel",
+      "file": "ModelServiceClient.GetModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.GetModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.retail.v2.ModelService.GetModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_GetModel_async_flattened_resourceNames",
+      "title": "GetModelResourceNamesAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "ModelServiceClient.GetModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.retail.v2.ModelService.GetModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_PauseModel_sync",
+      "title": "PauseModelRequestObject",
+      "description": "Snippet for PauseModel",
+      "file": "ModelServiceClient.PauseModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.PauseModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PauseModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "PauseModel",
+          "fullName": "google.cloud.retail.v2.ModelService.PauseModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_PauseModel_async",
+      "title": "PauseModelRequestObjectAsync",
+      "description": "Snippet for PauseModelAsync",
+      "file": "ModelServiceClient.PauseModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.PauseModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PauseModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "PauseModel",
+          "fullName": "google.cloud.retail.v2.ModelService.PauseModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_PauseModel_sync_flattened",
+      "title": "PauseModel",
+      "description": "Snippet for PauseModel",
+      "file": "ModelServiceClient.PauseModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.PauseModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "PauseModel",
+          "fullName": "google.cloud.retail.v2.ModelService.PauseModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_PauseModel_async_flattened",
+      "title": "PauseModelAsync",
+      "description": "Snippet for PauseModelAsync",
+      "file": "ModelServiceClient.PauseModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.PauseModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "PauseModel",
+          "fullName": "google.cloud.retail.v2.ModelService.PauseModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_PauseModel_sync_flattened_resourceNames",
+      "title": "PauseModelResourceNames",
+      "description": "Snippet for PauseModel",
+      "file": "ModelServiceClient.PauseModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.PauseModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "PauseModel",
+          "fullName": "google.cloud.retail.v2.ModelService.PauseModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_PauseModel_async_flattened_resourceNames",
+      "title": "PauseModelResourceNamesAsync",
+      "description": "Snippet for PauseModelAsync",
+      "file": "ModelServiceClient.PauseModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.PauseModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "PauseModel",
+          "fullName": "google.cloud.retail.v2.ModelService.PauseModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ResumeModel_sync",
+      "title": "ResumeModelRequestObject",
+      "description": "Snippet for ResumeModel",
+      "file": "ModelServiceClient.ResumeModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ResumeModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ResumeModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeModel",
+          "fullName": "google.cloud.retail.v2.ModelService.ResumeModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ResumeModel_async",
+      "title": "ResumeModelRequestObjectAsync",
+      "description": "Snippet for ResumeModelAsync",
+      "file": "ModelServiceClient.ResumeModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ResumeModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ResumeModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeModel",
+          "fullName": "google.cloud.retail.v2.ModelService.ResumeModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ResumeModel_sync_flattened",
+      "title": "ResumeModel",
+      "description": "Snippet for ResumeModel",
+      "file": "ModelServiceClient.ResumeModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ResumeModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeModel",
+          "fullName": "google.cloud.retail.v2.ModelService.ResumeModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ResumeModel_async_flattened",
+      "title": "ResumeModelAsync",
+      "description": "Snippet for ResumeModelAsync",
+      "file": "ModelServiceClient.ResumeModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ResumeModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeModel",
+          "fullName": "google.cloud.retail.v2.ModelService.ResumeModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_DeleteModel_sync",
+      "title": "DeleteModelRequestObject",
+      "description": "Snippet for DeleteModel",
+      "file": "ModelServiceClient.DeleteModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.DeleteModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.retail.v2.ModelService.DeleteModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_DeleteModel_async",
+      "title": "DeleteModelRequestObjectAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "ModelServiceClient.DeleteModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.DeleteModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.retail.v2.ModelService.DeleteModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_DeleteModel_sync_flattened",
+      "title": "DeleteModel",
+      "description": "Snippet for DeleteModel",
+      "file": "ModelServiceClient.DeleteModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.retail.v2.ModelService.DeleteModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_DeleteModel_async_flattened",
+      "title": "DeleteModelAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "ModelServiceClient.DeleteModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.retail.v2.ModelService.DeleteModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_DeleteModel_sync_flattened_resourceNames",
+      "title": "DeleteModelResourceNames",
+      "description": "Snippet for DeleteModel",
+      "file": "ModelServiceClient.DeleteModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.retail.v2.ModelService.DeleteModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_DeleteModel_async_flattened_resourceNames",
+      "title": "DeleteModelResourceNamesAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "ModelServiceClient.DeleteModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.retail.v2.ModelService.DeleteModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ListModels_sync",
+      "title": "ListModelsRequestObject",
+      "description": "Snippet for ListModels",
+      "file": "ModelServiceClient.ListModelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ListModels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListModelsResponse, Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.retail.v2.ModelService.ListModels",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ListModels_async",
+      "title": "ListModelsRequestObjectAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "ModelServiceClient.ListModelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListModelsResponse, Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.retail.v2.ModelService.ListModels",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ListModels_sync_flattened",
+      "title": "ListModels",
+      "description": "Snippet for ListModels",
+      "file": "ModelServiceClient.ListModelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ListModels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListModelsResponse, Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.retail.v2.ModelService.ListModels",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ListModels_async_flattened",
+      "title": "ListModelsAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "ModelServiceClient.ListModelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListModelsResponse, Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.retail.v2.ModelService.ListModels",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ListModels_sync_flattened_resourceNames",
+      "title": "ListModelsResourceNames",
+      "description": "Snippet for ListModels",
+      "file": "ModelServiceClient.ListModelsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ListModels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Retail.V2.ListModelsResponse, Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.retail.v2.ModelService.ListModels",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_ListModels_async_flattened_resourceNames",
+      "title": "ListModelsResourceNamesAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "ModelServiceClient.ListModelsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Retail.V2.ListModelsResponse, Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.retail.v2.ModelService.ListModels",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_UpdateModel_sync",
+      "title": "UpdateModelRequestObject",
+      "description": "Snippet for UpdateModel",
+      "file": "ModelServiceClient.UpdateModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.UpdateModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.UpdateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_UpdateModel_async",
+      "title": "UpdateModelRequestObjectAsync",
+      "description": "Snippet for UpdateModelAsync",
+      "file": "ModelServiceClient.UpdateModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.UpdateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.UpdateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_UpdateModel_sync_flattened",
+      "title": "UpdateModel",
+      "description": "Snippet for UpdateModel",
+      "file": "ModelServiceClient.UpdateModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.UpdateModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.Model",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.UpdateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_UpdateModel_async_flattened",
+      "title": "UpdateModelAsync",
+      "description": "Snippet for UpdateModelAsync",
+      "file": "ModelServiceClient.UpdateModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.UpdateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.Model>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateModel",
+          "fullName": "google.cloud.retail.v2.ModelService.UpdateModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_TuneModel_sync",
+      "title": "TuneModelRequestObject",
+      "description": "Snippet for TuneModel",
+      "file": "ModelServiceClient.TuneModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TuneModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.TuneModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.TuneModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.TuneModelResponse, Google.Cloud.Retail.V2.TuneModelMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "TuneModel",
+          "fullName": "google.cloud.retail.v2.ModelService.TuneModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_TuneModel_async",
+      "title": "TuneModelRequestObjectAsync",
+      "description": "Snippet for TuneModelAsync",
+      "file": "ModelServiceClient.TuneModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TuneModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.TuneModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.TuneModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.TuneModelResponse, Google.Cloud.Retail.V2.TuneModelMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "TuneModel",
+          "fullName": "google.cloud.retail.v2.ModelService.TuneModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_TuneModel_sync_flattened",
+      "title": "TuneModel",
+      "description": "Snippet for TuneModel",
+      "file": "ModelServiceClient.TuneModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TuneModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.TuneModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.TuneModelResponse, Google.Cloud.Retail.V2.TuneModelMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "TuneModel",
+          "fullName": "google.cloud.retail.v2.ModelService.TuneModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_TuneModel_async_flattened",
+      "title": "TuneModelAsync",
+      "description": "Snippet for TuneModelAsync",
+      "file": "ModelServiceClient.TuneModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TuneModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.TuneModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.TuneModelResponse, Google.Cloud.Retail.V2.TuneModelMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "TuneModel",
+          "fullName": "google.cloud.retail.v2.ModelService.TuneModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_TuneModel_sync_flattened_resourceNames",
+      "title": "TuneModelResourceNames",
+      "description": "Snippet for TuneModel",
+      "file": "ModelServiceClient.TuneModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TuneModel",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.TuneModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.TuneModelResponse, Google.Cloud.Retail.V2.TuneModelMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "TuneModel",
+          "fullName": "google.cloud.retail.v2.ModelService.TuneModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ModelService_TuneModel_async_flattened_resourceNames",
+      "title": "TuneModelResourceNamesAsync",
+      "description": "Snippet for TuneModelAsync",
+      "file": "ModelServiceClient.TuneModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TuneModelAsync",
+        "fullName": "Google.Cloud.Retail.V2.ModelServiceClient.TuneModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.TuneModelResponse, Google.Cloud.Retail.V2.TuneModelMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "TuneModel",
+          "fullName": "google.cloud.retail.v2.ModelService.TuneModel",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.retail.v2.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
           "type": "SHORT"
         }
       ]
@@ -6957,12 +9116,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 98,
+          "end": 99,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 96,
+          "end": 97,
           "type": "SHORT"
         }
       ]
@@ -7006,12 +9165,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 100,
+          "end": 101,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 98,
+          "end": 99,
           "type": "SHORT"
         }
       ]

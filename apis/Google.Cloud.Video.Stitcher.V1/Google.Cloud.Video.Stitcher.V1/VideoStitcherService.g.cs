@@ -30,175 +30,220 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "L2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxozZ29vZ2xlL2Nsb3VkL3Zp",
             "ZGVvL3N0aXRjaGVyL3YxL2FkX3RhZ19kZXRhaWxzLnByb3RvGi1nb29nbGUv",
-            "Y2xvdWQvdmlkZW8vc3RpdGNoZXIvdjEvY2RuX2tleXMucHJvdG8aLWdvb2ds",
-            "ZS9jbG91ZC92aWRlby9zdGl0Y2hlci92MS9zZXNzaW9ucy5wcm90bxorZ29v",
-            "Z2xlL2Nsb3VkL3ZpZGVvL3N0aXRjaGVyL3YxL3NsYXRlcy5wcm90bxozZ29v",
-            "Z2xlL2Nsb3VkL3ZpZGVvL3N0aXRjaGVyL3YxL3N0aXRjaF9kZXRhaWxzLnBy",
-            "b3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90",
-            "b2J1Zi9maWVsZF9tYXNrLnByb3RvIqkBChNDcmVhdGVDZG5LZXlSZXF1ZXN0",
-            "EjsKBnBhcmVudBgBIAEoCUIr4EEC+kElEiN2aWRlb3N0aXRjaGVyLmdvb2ds",
-            "ZWFwaXMuY29tL0NkbktleRI8CgdjZG5fa2V5GAIgASgLMiYuZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLnN0aXRjaGVyLnYxLkNkbktleUID4EECEhcKCmNkbl9rZXlf",
-            "aWQYAyABKAlCA+BBAiKaAQoSTGlzdENkbktleXNSZXF1ZXN0EjsKBnBhcmVu",
-            "dBgBIAEoCUIr4EEC+kElEiN2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29t",
-            "L0NkbktleRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEo",
-            "CRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkifQoTTGlzdENk",
-            "bktleXNSZXNwb25zZRI4CghjZG5fa2V5cxgBIAMoCzImLmdvb2dsZS5jbG91",
-            "ZC52aWRlby5zdGl0Y2hlci52MS5DZG5LZXkSFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIk0KEEdldENkbktleVJlcXVl",
-            "c3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiN2aWRlb3N0aXRjaGVyLmdvb2ds",
-            "ZWFwaXMuY29tL0NkbktleSJQChNEZWxldGVDZG5LZXlSZXF1ZXN0EjkKBG5h",
-            "bWUYASABKAlCK+BBAvpBJQojdmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNv",
-            "bS9DZG5LZXkiiQEKE1VwZGF0ZUNkbktleVJlcXVlc3QSPAoHY2RuX2tleRgB",
-            "IAEoCzImLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5DZG5LZXlC",
-            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2tCA+BBAiKgAQoXQ3JlYXRlVm9kU2Vzc2lvblJlcXVlc3QSPwoG",
-            "cGFyZW50GAEgASgJQi/gQQL6QSkSJ3ZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBp",
-            "cy5jb20vVm9kU2Vzc2lvbhJECgt2b2Rfc2Vzc2lvbhgCIAEoCzIqLmdvb2ds",
-            "ZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5Wb2RTZXNzaW9uQgPgQQIiVQoU",
-            "R2V0Vm9kU2Vzc2lvblJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCid2",
-            "aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL1ZvZFNlc3Npb24iigEKG0xp",
-            "c3RWb2RTdGl0Y2hEZXRhaWxzUmVxdWVzdBJECgZwYXJlbnQYASABKAlCNOBB",
-            "AvpBLhIsdmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9Wb2RTdGl0Y2hE",
-            "ZXRhaWwSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAki",
-            "hAEKHExpc3RWb2RTdGl0Y2hEZXRhaWxzUmVzcG9uc2USSwoSdm9kX3N0aXRj",
-            "aF9kZXRhaWxzGAEgAygLMi8uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVy",
-            "LnYxLlZvZFN0aXRjaERldGFpbBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
-            "XwoZR2V0Vm9kU3RpdGNoRGV0YWlsUmVxdWVzdBJCCgRuYW1lGAEgASgJQjTg",
-            "QQL6QS4KLHZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vVm9kU3RpdGNo",
-            "RGV0YWlsIogBChpMaXN0Vm9kQWRUYWdEZXRhaWxzUmVxdWVzdBJDCgZwYXJl",
-            "bnQYASABKAlCM+BBAvpBLRIrdmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNv",
-            "bS9Wb2RBZFRhZ0RldGFpbBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90",
-            "b2tlbhgDIAEoCSKCAQobTGlzdFZvZEFkVGFnRGV0YWlsc1Jlc3BvbnNlEkoK",
-            "EnZvZF9hZF90YWdfZGV0YWlscxgBIAMoCzIuLmdvb2dsZS5jbG91ZC52aWRl",
-            "by5zdGl0Y2hlci52MS5Wb2RBZFRhZ0RldGFpbBIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAiABKAkiXQoYR2V0Vm9kQWRUYWdEZXRhaWxSZXF1ZXN0EkEKBG5hbWUY",
-            "ASABKAlCM+BBAvpBLQordmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9W",
-            "b2RBZFRhZ0RldGFpbCKKAQobTGlzdExpdmVBZFRhZ0RldGFpbHNSZXF1ZXN0",
-            "EkQKBnBhcmVudBgBIAEoCUI04EEC+kEuEix2aWRlb3N0aXRjaGVyLmdvb2ds",
-            "ZWFwaXMuY29tL0xpdmVBZFRhZ0RldGFpbBIRCglwYWdlX3NpemUYAiABKAUS",
-            "EgoKcGFnZV90b2tlbhgDIAEoCSKFAQocTGlzdExpdmVBZFRhZ0RldGFpbHNS",
-            "ZXNwb25zZRJMChNsaXZlX2FkX3RhZ19kZXRhaWxzGAEgAygLMi8uZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpdmVBZFRhZ0RldGFpbBIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiXwoZR2V0TGl2ZUFkVGFnRGV0YWlsUmVx",
-            "dWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLHZpZGVvc3RpdGNoZXIuZ29v",
-            "Z2xlYXBpcy5jb20vTGl2ZUFkVGFnRGV0YWlsIqIBChJDcmVhdGVTbGF0ZVJl",
-            "cXVlc3QSOgoGcGFyZW50GAEgASgJQirgQQL6QSQSInZpZGVvc3RpdGNoZXIu",
-            "Z29vZ2xlYXBpcy5jb20vU2xhdGUSFQoIc2xhdGVfaWQYAiABKAlCA+BBAhI5",
-            "CgVzbGF0ZRgDIAEoCzIlLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52",
-            "MS5TbGF0ZUID4EECIksKD0dldFNsYXRlUmVxdWVzdBI4CgRuYW1lGAEgASgJ",
-            "QirgQQL6QSQKInZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vU2xhdGUi",
-            "mAEKEUxpc3RTbGF0ZXNSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEk",
-            "EiJ2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL1NsYXRlEhEKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEo",
-            "CRIQCghvcmRlcl9ieRgFIAEoCSJ5ChJMaXN0U2xhdGVzUmVzcG9uc2USNQoG",
-            "c2xhdGVzGAEgAygLMiUuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYx",
-            "LlNsYXRlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJs",
-            "ZRgDIAMoCSKFAQoSVXBkYXRlU2xhdGVSZXF1ZXN0EjkKBXNsYXRlGAEgASgL",
-            "MiUuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlNsYXRlQgPgQQIS",
-            "NAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
-            "YXNrQgPgQQIiTgoSRGVsZXRlU2xhdGVSZXF1ZXN0EjgKBG5hbWUYASABKAlC",
-            "KuBBAvpBJAoidmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9TbGF0ZSKk",
-            "AQoYQ3JlYXRlTGl2ZVNlc3Npb25SZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIw",
-            "4EEC+kEqCih2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xpdmVTZXNz",
-            "aW9uEkYKDGxpdmVfc2Vzc2lvbhgCIAEoCzIrLmdvb2dsZS5jbG91ZC52aWRl",
-            "by5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbkID4EECIlcKFUdldExpdmVTZXNz",
-            "aW9uUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKHZpZGVvc3RpdGNo",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vTGl2ZVNlc3Npb24yqh8KFFZpZGVvU3RpdGNo",
-            "ZXJTZXJ2aWNlEsUBCgxDcmVhdGVDZG5LZXkSMy5nb29nbGUuY2xvdWQudmlk",
-            "ZW8uc3RpdGNoZXIudjEuQ3JlYXRlQ2RuS2V5UmVxdWVzdBomLmdvb2dsZS5j",
-            "bG91ZC52aWRlby5zdGl0Y2hlci52MS5DZG5LZXkiWILT5JMCNiIrL3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vY2RuS2V5czoHY2RuX2tl",
-            "edpBGXBhcmVudCxjZG5fa2V5LGNkbl9rZXlfaWQStAEKC0xpc3RDZG5LZXlz",
-            "EjIuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpc3RDZG5LZXlz",
-            "UmVxdWVzdBozLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5MaXN0",
-            "Q2RuS2V5c1Jlc3BvbnNlIjyC0+STAi0SKy92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9L2NkbktleXPaQQZwYXJlbnQSoQEKCUdldENkbktl",
-            "eRIwLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5HZXRDZG5LZXlS",
-            "ZXF1ZXN0GiYuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkNkbktl",
-            "eSI6gtPkkwItEisvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
-            "ZG5LZXlzLyp92kEEbmFtZRKXAQoMRGVsZXRlQ2RuS2V5EjMuZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLnN0aXRjaGVyLnYxLkRlbGV0ZUNkbktleVJlcXVlc3QaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkiOoLT5JMCLSorL3YxL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovY2RuS2V5cy8qfdpBBG5hbWUSxwEKDFVwZGF0",
-            "ZUNkbktleRIzLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5VcGRh",
-            "dGVDZG5LZXlSZXF1ZXN0GiYuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVy",
-            "LnYxLkNkbktleSJagtPkkwI+MjMvdjEve2Nkbl9rZXkubmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2NkbktleXMvKn06B2Nkbl9rZXnaQRNjZG5fa2V5",
-            "LHVwZGF0ZV9tYXNrEtIBChBDcmVhdGVWb2RTZXNzaW9uEjcuZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLnN0aXRjaGVyLnYxLkNyZWF0ZVZvZFNlc3Npb25SZXF1ZXN0",
-            "GiouZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFNlc3Npb24i",
-            "WYLT5JMCPiIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
-            "dm9kU2Vzc2lvbnM6C3ZvZF9zZXNzaW9u2kEScGFyZW50LHZvZF9zZXNzaW9u",
-            "ErEBCg1HZXRWb2RTZXNzaW9uEjQuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRj",
-            "aGVyLnYxLkdldFZvZFNlc3Npb25SZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvLnN0aXRjaGVyLnYxLlZvZFNlc3Npb24iPoLT5JMCMRIvL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovdm9kU2Vzc2lvbnMvKn3aQQRuYW1l",
-            "EuYBChRMaXN0Vm9kU3RpdGNoRGV0YWlscxI7Lmdvb2dsZS5jbG91ZC52aWRl",
-            "by5zdGl0Y2hlci52MS5MaXN0Vm9kU3RpdGNoRGV0YWlsc1JlcXVlc3QaPC5n",
-            "b29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuTGlzdFZvZFN0aXRjaERl",
-            "dGFpbHNSZXNwb25zZSJTgtPkkwJEEkIvdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL3ZvZFNlc3Npb25zLyp9L3ZvZFN0aXRjaERldGFpbHPa",
-            "QQZwYXJlbnQS0wEKEkdldFZvZFN0aXRjaERldGFpbBI5Lmdvb2dsZS5jbG91",
-            "ZC52aWRlby5zdGl0Y2hlci52MS5HZXRWb2RTdGl0Y2hEZXRhaWxSZXF1ZXN0",
-            "Gi8uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFN0aXRjaERl",
-            "dGFpbCJRgtPkkwJEEkIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki92b2RTZXNzaW9ucy8qL3ZvZFN0aXRjaERldGFpbHMvKn3aQQRuYW1lEuIB",
-            "ChNMaXN0Vm9kQWRUYWdEZXRhaWxzEjouZ29vZ2xlLmNsb3VkLnZpZGVvLnN0",
-            "aXRjaGVyLnYxLkxpc3RWb2RBZFRhZ0RldGFpbHNSZXF1ZXN0GjsuZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpc3RWb2RBZFRhZ0RldGFpbHNS",
-            "ZXNwb25zZSJSgtPkkwJDEkEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3ZvZFNlc3Npb25zLyp9L3ZvZEFkVGFnRGV0YWlsc9pBBnBhcmVu",
-            "dBLPAQoRR2V0Vm9kQWRUYWdEZXRhaWwSOC5nb29nbGUuY2xvdWQudmlkZW8u",
-            "c3RpdGNoZXIudjEuR2V0Vm9kQWRUYWdEZXRhaWxSZXF1ZXN0Gi4uZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZEFkVGFnRGV0YWlsIlCC0+ST",
-            "AkMSQS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3ZvZFNlc3Np",
-            "b25zLyovdm9kQWRUYWdEZXRhaWxzLyp92kEEbmFtZRLnAQoUTGlzdExpdmVB",
-            "ZFRhZ0RldGFpbHMSOy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEu",
-            "TGlzdExpdmVBZFRhZ0RldGFpbHNSZXF1ZXN0GjwuZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvLnN0aXRjaGVyLnYxLkxpc3RMaXZlQWRUYWdEZXRhaWxzUmVzcG9uc2Ui",
-            "VILT5JMCRRJDL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9s",
-            "aXZlU2Vzc2lvbnMvKn0vbGl2ZUFkVGFnRGV0YWlsc9pBBnBhcmVudBLUAQoS",
-            "R2V0TGl2ZUFkVGFnRGV0YWlsEjkuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRj",
-            "aGVyLnYxLkdldExpdmVBZFRhZ0RldGFpbFJlcXVlc3QaLy5nb29nbGUuY2xv",
-            "dWQudmlkZW8uc3RpdGNoZXIudjEuTGl2ZUFkVGFnRGV0YWlsIlKC0+STAkUS",
-            "Qy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xpdmVTZXNzaW9u",
-            "cy8qL2xpdmVBZFRhZ0RldGFpbHMvKn3aQQRuYW1lErsBCgtDcmVhdGVTbGF0",
-            "ZRIyLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5DcmVhdGVTbGF0",
-            "ZVJlcXVlc3QaJS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuU2xh",
-            "dGUiUYLT5JMCMyIqL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Kn0vc2xhdGVzOgVzbGF0ZdpBFXBhcmVudCxzbGF0ZSxzbGF0ZV9pZBKwAQoK",
-            "TGlzdFNsYXRlcxIxLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5M",
-            "aXN0U2xhdGVzUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hl",
-            "ci52MS5MaXN0U2xhdGVzUmVzcG9uc2UiO4LT5JMCLBIqL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc2xhdGVz2kEGcGFyZW50Ep0BCghH",
-            "ZXRTbGF0ZRIvLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5HZXRT",
-            "bGF0ZVJlcXVlc3QaJS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEu",
-            "U2xhdGUiOYLT5JMCLBIqL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyovc2xhdGVzLyp92kEEbmFtZRK9AQoLVXBkYXRlU2xhdGUSMi5nb29nbGUu",
-            "Y2xvdWQudmlkZW8uc3RpdGNoZXIudjEuVXBkYXRlU2xhdGVSZXF1ZXN0GiUu",
-            "Z29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlNsYXRlIlOC0+STAjky",
-            "MC92MS97c2xhdGUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NsYXRl",
-            "cy8qfToFc2xhdGXaQRFzbGF0ZSx1cGRhdGVfbWFzaxKUAQoLRGVsZXRlU2xh",
-            "dGUSMi5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuRGVsZXRlU2xh",
-            "dGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjmC0+STAiwqKi92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NsYXRlcy8qfdpBBG5h",
-            "bWUS2AEKEUNyZWF0ZUxpdmVTZXNzaW9uEjguZ29vZ2xlLmNsb3VkLnZpZGVv",
-            "LnN0aXRjaGVyLnYxLkNyZWF0ZUxpdmVTZXNzaW9uUmVxdWVzdBorLmdvb2ds",
-            "ZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbiJcgtPkkwJA",
-            "IjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9saXZlU2Vz",
-            "c2lvbnM6DGxpdmVfc2Vzc2lvbtpBE3BhcmVudCxsaXZlX3Nlc3Npb24StQEK",
-            "DkdldExpdmVTZXNzaW9uEjUuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVy",
-            "LnYxLkdldExpdmVTZXNzaW9uUmVxdWVzdBorLmdvb2dsZS5jbG91ZC52aWRl",
-            "by5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbiI/gtPkkwIyEjAvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9saXZlU2Vzc2lvbnMvKn3aQQRuYW1l",
-            "GlDKQRx2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKBAQoiY29t",
-            "Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUIZVmlkZW9TdGl0Y2hl",
-            "clNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL3N0",
-            "aXRjaGVyL2FwaXYxL3N0aXRjaGVycGI7c3RpdGNoZXJwYmIGcHJvdG8z"));
+            "Y2xvdWQvdmlkZW8vc3RpdGNoZXIvdjEvY2RuX2tleXMucHJvdG8aMWdvb2ds",
+            "ZS9jbG91ZC92aWRlby9zdGl0Y2hlci92MS9saXZlX2NvbmZpZ3MucHJvdG8a",
+            "LWdvb2dsZS9jbG91ZC92aWRlby9zdGl0Y2hlci92MS9zZXNzaW9ucy5wcm90",
+            "bxorZ29vZ2xlL2Nsb3VkL3ZpZGVvL3N0aXRjaGVyL3YxL3NsYXRlcy5wcm90",
+            "bxozZ29vZ2xlL2Nsb3VkL3ZpZGVvL3N0aXRjaGVyL3YxL3N0aXRjaF9kZXRh",
+            "aWxzLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
+            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9i",
+            "dWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
+            "cC5wcm90byKpAQoTQ3JlYXRlQ2RuS2V5UmVxdWVzdBI7CgZwYXJlbnQYASAB",
+            "KAlCK+BBAvpBJRIjdmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9DZG5L",
+            "ZXkSPAoHY2RuX2tleRgCIAEoCzImLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0",
+            "Y2hlci52MS5DZG5LZXlCA+BBAhIXCgpjZG5fa2V5X2lkGAMgASgJQgPgQQIi",
+            "mgEKEkxpc3RDZG5LZXlzUmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+BBAvpB",
+            "JRIjdmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9DZG5LZXkSEQoJcGFn",
+            "ZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQg",
+            "ASgJEhAKCG9yZGVyX2J5GAUgASgJIn0KE0xpc3RDZG5LZXlzUmVzcG9uc2US",
+            "OAoIY2RuX2tleXMYASADKAsyJi5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNo",
+            "ZXIudjEuQ2RuS2V5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJl",
+            "YWNoYWJsZRgDIAMoCSJNChBHZXRDZG5LZXlSZXF1ZXN0EjkKBG5hbWUYASAB",
+            "KAlCK+BBAvpBJQojdmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9DZG5L",
+            "ZXkiUAoTRGVsZXRlQ2RuS2V5UmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6",
+            "QSUKI3ZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vQ2RuS2V5IokBChNV",
+            "cGRhdGVDZG5LZXlSZXF1ZXN0EjwKB2Nkbl9rZXkYASABKAsyJi5nb29nbGUu",
+            "Y2xvdWQudmlkZW8uc3RpdGNoZXIudjEuQ2RuS2V5QgPgQQISNAoLdXBkYXRl",
+            "X21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIi",
+            "oAEKF0NyZWF0ZVZvZFNlc3Npb25SZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv",
+            "4EEC+kEpEid2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL1ZvZFNlc3Np",
+            "b24SRAoLdm9kX3Nlc3Npb24YAiABKAsyKi5nb29nbGUuY2xvdWQudmlkZW8u",
+            "c3RpdGNoZXIudjEuVm9kU2Vzc2lvbkID4EECIlUKFEdldFZvZFNlc3Npb25S",
+            "ZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpBKQondmlkZW9zdGl0Y2hlci5n",
+            "b29nbGVhcGlzLmNvbS9Wb2RTZXNzaW9uIooBChtMaXN0Vm9kU3RpdGNoRGV0",
+            "YWlsc1JlcXVlc3QSRAoGcGFyZW50GAEgASgJQjTgQQL6QS4SLHZpZGVvc3Rp",
+            "dGNoZXIuZ29vZ2xlYXBpcy5jb20vVm9kU3RpdGNoRGV0YWlsEhEKCXBhZ2Vf",
+            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIoQBChxMaXN0Vm9kU3Rp",
+            "dGNoRGV0YWlsc1Jlc3BvbnNlEksKEnZvZF9zdGl0Y2hfZGV0YWlscxgBIAMo",
+            "CzIvLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5Wb2RTdGl0Y2hE",
+            "ZXRhaWwSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIl8KGUdldFZvZFN0aXRj",
+            "aERldGFpbFJlcXVlc3QSQgoEbmFtZRgBIAEoCUI04EEC+kEuCix2aWRlb3N0",
+            "aXRjaGVyLmdvb2dsZWFwaXMuY29tL1ZvZFN0aXRjaERldGFpbCKIAQoaTGlz",
+            "dFZvZEFkVGFnRGV0YWlsc1JlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPgQQL6",
+            "QS0SK3ZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vVm9kQWRUYWdEZXRh",
+            "aWwSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiggEK",
+            "G0xpc3RWb2RBZFRhZ0RldGFpbHNSZXNwb25zZRJKChJ2b2RfYWRfdGFnX2Rl",
+            "dGFpbHMYASADKAsyLi5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEu",
+            "Vm9kQWRUYWdEZXRhaWwSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIl0KGEdl",
+            "dFZvZEFkVGFnRGV0YWlsUmVxdWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6QS0K",
+            "K3ZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vVm9kQWRUYWdEZXRhaWwi",
+            "igEKG0xpc3RMaXZlQWRUYWdEZXRhaWxzUmVxdWVzdBJECgZwYXJlbnQYASAB",
+            "KAlCNOBBAvpBLhIsdmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9MaXZl",
+            "QWRUYWdEZXRhaWwSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
+            "AyABKAkihQEKHExpc3RMaXZlQWRUYWdEZXRhaWxzUmVzcG9uc2USTAoTbGl2",
+            "ZV9hZF90YWdfZGV0YWlscxgBIAMoCzIvLmdvb2dsZS5jbG91ZC52aWRlby5z",
+            "dGl0Y2hlci52MS5MaXZlQWRUYWdEZXRhaWwSFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJIl8KGUdldExpdmVBZFRhZ0RldGFpbFJlcXVlc3QSQgoEbmFtZRgB",
+            "IAEoCUI04EEC+kEuCix2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xp",
+            "dmVBZFRhZ0RldGFpbCK2AQoSQ3JlYXRlU2xhdGVSZXF1ZXN0EjoKBnBhcmVu",
+            "dBgBIAEoCUIq4EEC+kEkEiJ2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29t",
+            "L1NsYXRlEhUKCHNsYXRlX2lkGAIgASgJQgPgQQISOQoFc2xhdGUYAyABKAsy",
+            "JS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuU2xhdGVCA+BBAhIS",
+            "CgpyZXF1ZXN0X2lkGAQgASgJIksKD0dldFNsYXRlUmVxdWVzdBI4CgRuYW1l",
+            "GAEgASgJQirgQQL6QSQKInZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20v",
+            "U2xhdGUimAEKEUxpc3RTbGF0ZXNSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq",
+            "4EEC+kEkEiJ2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL1NsYXRlEhEK",
+            "CXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRl",
+            "chgEIAEoCRIQCghvcmRlcl9ieRgFIAEoCSJ5ChJMaXN0U2xhdGVzUmVzcG9u",
+            "c2USNQoGc2xhdGVzGAEgAygLMiUuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRj",
+            "aGVyLnYxLlNsYXRlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJl",
+            "YWNoYWJsZRgDIAMoCSKFAQoSVXBkYXRlU2xhdGVSZXF1ZXN0EjkKBXNsYXRl",
+            "GAEgASgLMiUuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlNsYXRl",
+            "QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "RmllbGRNYXNrQgPgQQIiTgoSRGVsZXRlU2xhdGVSZXF1ZXN0EjgKBG5hbWUY",
+            "ASABKAlCKuBBAvpBJAoidmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9T",
+            "bGF0ZSKkAQoYQ3JlYXRlTGl2ZVNlc3Npb25SZXF1ZXN0EkAKBnBhcmVudBgB",
+            "IAEoCUIw4EEC+kEqCih2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xp",
+            "dmVTZXNzaW9uEkYKDGxpdmVfc2Vzc2lvbhgCIAEoCzIrLmdvb2dsZS5jbG91",
+            "ZC52aWRlby5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbkID4EECIlcKFUdldExp",
+            "dmVTZXNzaW9uUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKHZpZGVv",
+            "c3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vTGl2ZVNlc3Npb24i0QEKF0NyZWF0",
+            "ZUxpdmVDb25maWdSZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv4EEC+kEpEid2",
+            "aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xpdmVDb25maWcSGwoObGl2",
+            "ZV9jb25maWdfaWQYAiABKAlCA+BBAhJECgtsaXZlX2NvbmZpZxgDIAEoCzIq",
+            "Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5MaXZlQ29uZmlnQgPg",
+            "QQISEgoKcmVxdWVzdF9pZBgEIAEoCSKsAQoWTGlzdExpdmVDb25maWdzUmVx",
+            "dWVzdBI/CgZwYXJlbnQYASABKAlCL+BBAvpBKRIndmlkZW9zdGl0Y2hlci5n",
+            "b29nbGVhcGlzLmNvbS9MaXZlQ29uZmlnEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIS",
+            "CgpwYWdlX3Rva2VuGAMgASgJEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9y",
+            "ZGVyX2J5GAUgASgJQgPgQQEiiQEKF0xpc3RMaXZlQ29uZmlnc1Jlc3BvbnNl",
+            "EkAKDGxpdmVfY29uZmlncxgBIAMoCzIqLmdvb2dsZS5jbG91ZC52aWRlby5z",
+            "dGl0Y2hlci52MS5MaXZlQ29uZmlnEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CRITCgt1bnJlYWNoYWJsZRgDIAMoCSJVChRHZXRMaXZlQ29uZmlnUmVxdWVz",
+            "dBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ3ZpZGVvc3RpdGNoZXIuZ29vZ2xl",
+            "YXBpcy5jb20vTGl2ZUNvbmZpZyJYChdEZWxldGVMaXZlQ29uZmlnUmVxdWVz",
+            "dBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ3ZpZGVvc3RpdGNoZXIuZ29vZ2xl",
+            "YXBpcy5jb20vTGl2ZUNvbmZpZyKQAQoRT3BlcmF0aW9uTWV0YWRhdGESLwoL",
+            "Y3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIOCgZ0YXJnZXQYAyABKAkSDAoEdmVyYhgEIAEoCTK1JwoUVmlkZW9TdGl0",
+            "Y2hlclNlcnZpY2US2gEKDENyZWF0ZUNkbktleRIzLmdvb2dsZS5jbG91ZC52",
+            "aWRlby5zdGl0Y2hlci52MS5DcmVhdGVDZG5LZXlSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ2gtPkkwI2IisvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jZG5LZXlzOgdjZG5fa2V52kEZcGFy",
+            "ZW50LGNkbl9rZXksY2RuX2tleV9pZMpBGwoGQ2RuS2V5EhFPcGVyYXRpb25N",
+            "ZXRhZGF0YRK0AQoLTGlzdENkbktleXMSMi5nb29nbGUuY2xvdWQudmlkZW8u",
+            "c3RpdGNoZXIudjEuTGlzdENkbktleXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3Vk",
+            "LnZpZGVvLnN0aXRjaGVyLnYxLkxpc3RDZG5LZXlzUmVzcG9uc2UiPILT5JMC",
+            "LRIrL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vY2RuS2V5",
+            "c9pBBnBhcmVudBKhAQoJR2V0Q2RuS2V5EjAuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LnN0aXRjaGVyLnYxLkdldENkbktleVJlcXVlc3QaJi5nb29nbGUuY2xvdWQu",
+            "dmlkZW8uc3RpdGNoZXIudjEuQ2RuS2V5IjqC0+STAi0SKy92MS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NkbktleXMvKn3aQQRuYW1lEssBCgxE",
+            "ZWxldGVDZG5LZXkSMy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEu",
+            "RGVsZXRlQ2RuS2V5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24iZ4LT5JMCLSorL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovY2RuS2V5cy8qfdpBBG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRIRT3BlcmF0aW9uTWV0YWRhdGES3AEKDFVwZGF0ZUNkbktleRIzLmdvb2ds",
+            "ZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5VcGRhdGVDZG5LZXlSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ4gtPkkwI+MjMvdjEv",
+            "e2Nkbl9rZXkubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NkbktleXMv",
+            "Kn06B2Nkbl9rZXnaQRNjZG5fa2V5LHVwZGF0ZV9tYXNrykEbCgZDZG5LZXkS",
+            "EU9wZXJhdGlvbk1ldGFkYXRhEtIBChBDcmVhdGVWb2RTZXNzaW9uEjcuZ29v",
+            "Z2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkNyZWF0ZVZvZFNlc3Npb25S",
+            "ZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFNl",
+            "c3Npb24iWYLT5JMCPiIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0vdm9kU2Vzc2lvbnM6C3ZvZF9zZXNzaW9u2kEScGFyZW50LHZvZF9z",
+            "ZXNzaW9uErEBCg1HZXRWb2RTZXNzaW9uEjQuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LnN0aXRjaGVyLnYxLkdldFZvZFNlc3Npb25SZXF1ZXN0GiouZ29vZ2xlLmNs",
+            "b3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFNlc3Npb24iPoLT5JMCMRIvL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdm9kU2Vzc2lvbnMvKn3a",
+            "QQRuYW1lEuYBChRMaXN0Vm9kU3RpdGNoRGV0YWlscxI7Lmdvb2dsZS5jbG91",
+            "ZC52aWRlby5zdGl0Y2hlci52MS5MaXN0Vm9kU3RpdGNoRGV0YWlsc1JlcXVl",
+            "c3QaPC5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuTGlzdFZvZFN0",
+            "aXRjaERldGFpbHNSZXNwb25zZSJTgtPkkwJEEkIvdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3ZvZFNlc3Npb25zLyp9L3ZvZFN0aXRjaERl",
+            "dGFpbHPaQQZwYXJlbnQS0wEKEkdldFZvZFN0aXRjaERldGFpbBI5Lmdvb2ds",
+            "ZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5HZXRWb2RTdGl0Y2hEZXRhaWxS",
+            "ZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFN0",
+            "aXRjaERldGFpbCJRgtPkkwJEEkIvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi92b2RTZXNzaW9ucy8qL3ZvZFN0aXRjaERldGFpbHMvKn3aQQRu",
+            "YW1lEuIBChNMaXN0Vm9kQWRUYWdEZXRhaWxzEjouZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnN0aXRjaGVyLnYxLkxpc3RWb2RBZFRhZ0RldGFpbHNSZXF1ZXN0Gjsu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpc3RWb2RBZFRhZ0Rl",
+            "dGFpbHNSZXNwb25zZSJSgtPkkwJDEkEvdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL3ZvZFNlc3Npb25zLyp9L3ZvZEFkVGFnRGV0YWlsc9pB",
+            "BnBhcmVudBLPAQoRR2V0Vm9kQWRUYWdEZXRhaWwSOC5nb29nbGUuY2xvdWQu",
+            "dmlkZW8uc3RpdGNoZXIudjEuR2V0Vm9kQWRUYWdEZXRhaWxSZXF1ZXN0Gi4u",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZEFkVGFnRGV0YWls",
+            "IlCC0+STAkMSQS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Zv",
+            "ZFNlc3Npb25zLyovdm9kQWRUYWdEZXRhaWxzLyp92kEEbmFtZRLnAQoUTGlz",
+            "dExpdmVBZFRhZ0RldGFpbHMSOy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNo",
+            "ZXIudjEuTGlzdExpdmVBZFRhZ0RldGFpbHNSZXF1ZXN0GjwuZ29vZ2xlLmNs",
+            "b3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpc3RMaXZlQWRUYWdEZXRhaWxzUmVz",
+            "cG9uc2UiVILT5JMCRRJDL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9saXZlU2Vzc2lvbnMvKn0vbGl2ZUFkVGFnRGV0YWlsc9pBBnBhcmVu",
+            "dBLUAQoSR2V0TGl2ZUFkVGFnRGV0YWlsEjkuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LnN0aXRjaGVyLnYxLkdldExpdmVBZFRhZ0RldGFpbFJlcXVlc3QaLy5nb29n",
+            "bGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuTGl2ZUFkVGFnRGV0YWlsIlKC",
+            "0+STAkUSQy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xpdmVT",
+            "ZXNzaW9ucy8qL2xpdmVBZFRhZ0RldGFpbHMvKn3aQQRuYW1lEtABCgtDcmVh",
+            "dGVTbGF0ZRIyLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5DcmVh",
+            "dGVTbGF0ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "Im6C0+STAjMiKi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "L3NsYXRlczoFc2xhdGXaQRVwYXJlbnQsc2xhdGUsc2xhdGVfaWTKQRoKBVNs",
+            "YXRlEhFPcGVyYXRpb25NZXRhZGF0YRKwAQoKTGlzdFNsYXRlcxIxLmdvb2ds",
+            "ZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5MaXN0U2xhdGVzUmVxdWVzdBoy",
+            "Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5MaXN0U2xhdGVzUmVz",
+            "cG9uc2UiO4LT5JMCLBIqL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0vc2xhdGVz2kEGcGFyZW50Ep0BCghHZXRTbGF0ZRIvLmdvb2dsZS5j",
+            "bG91ZC52aWRlby5zdGl0Y2hlci52MS5HZXRTbGF0ZVJlcXVlc3QaJS5nb29n",
+            "bGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuU2xhdGUiOYLT5JMCLBIqL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc2xhdGVzLyp92kEEbmFt",
+            "ZRLSAQoLVXBkYXRlU2xhdGUSMi5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNo",
+            "ZXIudjEuVXBkYXRlU2xhdGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiJwgtPkkwI5MjAvdjEve3NsYXRlLm5hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9zbGF0ZXMvKn06BXNsYXRl2kERc2xhdGUsdXBkYXRl",
+            "X21hc2vKQRoKBVNsYXRlEhFPcGVyYXRpb25NZXRhZGF0YRLIAQoLRGVsZXRl",
+            "U2xhdGUSMi5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuRGVsZXRl",
+            "U2xhdGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJm",
+            "gtPkkwIsKiovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zbGF0",
+            "ZXMvKn3aQQRuYW1lykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJh",
+            "dGlvbk1ldGFkYXRhEtgBChFDcmVhdGVMaXZlU2Vzc2lvbhI4Lmdvb2dsZS5j",
+            "bG91ZC52aWRlby5zdGl0Y2hlci52MS5DcmVhdGVMaXZlU2Vzc2lvblJlcXVl",
+            "c3QaKy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuTGl2ZVNlc3Np",
+            "b24iXILT5JMCQCIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Kn0vbGl2ZVNlc3Npb25zOgxsaXZlX3Nlc3Npb27aQRNwYXJlbnQsbGl2ZV9z",
+            "ZXNzaW9uErUBCg5HZXRMaXZlU2Vzc2lvbhI1Lmdvb2dsZS5jbG91ZC52aWRl",
+            "by5zdGl0Y2hlci52MS5HZXRMaXZlU2Vzc2lvblJlcXVlc3QaKy5nb29nbGUu",
+            "Y2xvdWQudmlkZW8uc3RpdGNoZXIudjEuTGl2ZVNlc3Npb24iP4LT5JMCMhIw",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbGl2ZVNlc3Npb25z",
+            "Lyp92kEEbmFtZRL3AQoQQ3JlYXRlTGl2ZUNvbmZpZxI3Lmdvb2dsZS5jbG91",
+            "ZC52aWRlby5zdGl0Y2hlci52MS5DcmVhdGVMaXZlQ29uZmlnUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iigGC0+STAj4iLy92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2xpdmVDb25maWdzOgts",
+            "aXZlX2NvbmZpZ9pBIXBhcmVudCxsaXZlX2NvbmZpZyxsaXZlX2NvbmZpZ19p",
+            "ZMpBHwoKTGl2ZUNvbmZpZxIRT3BlcmF0aW9uTWV0YWRhdGESxAEKD0xpc3RM",
+            "aXZlQ29uZmlncxI2Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5M",
+            "aXN0TGl2ZUNvbmZpZ3NSZXF1ZXN0GjcuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0",
+            "aXRjaGVyLnYxLkxpc3RMaXZlQ29uZmlnc1Jlc3BvbnNlIkCC0+STAjESLy92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2xpdmVDb25maWdz",
+            "2kEGcGFyZW50ErEBCg1HZXRMaXZlQ29uZmlnEjQuZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnN0aXRjaGVyLnYxLkdldExpdmVDb25maWdSZXF1ZXN0GiouZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpdmVDb25maWciPoLT5JMCMRIv",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbGl2ZUNvbmZpZ3Mv",
+            "Kn3aQQRuYW1lEtcBChBEZWxldGVMaXZlQ29uZmlnEjcuZ29vZ2xlLmNsb3Vk",
+            "LnZpZGVvLnN0aXRjaGVyLnYxLkRlbGV0ZUxpdmVDb25maWdSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJrgtPkkwIxKi8vdjEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9saXZlQ29uZmlncy8qfdpBBG5h",
+            "bWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRh",
+            "dGEaUMpBHHZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoEBCiJj",
+            "b20uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxQhlWaWRlb1N0aXRj",
+            "aGVyU2VydmljZVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8v",
+            "c3RpdGNoZXIvYXBpdjEvc3RpdGNoZXJwYjtzdGl0Y2hlcnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.AdTagDetailsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.CdnKeysReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.SlatesReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.StitchDetailsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.AdTagDetailsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.CdnKeysReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.LiveConfigsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.SlatesReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.StitchDetailsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.CreateCdnKeyRequest), global::Google.Cloud.Video.Stitcher.V1.CreateCdnKeyRequest.Parser, new[]{ "Parent", "CdnKey", "CdnKeyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ListCdnKeysRequest), global::Google.Cloud.Video.Stitcher.V1.ListCdnKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
@@ -217,14 +262,20 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsRequest), global::Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsResponse), global::Google.Cloud.Video.Stitcher.V1.ListLiveAdTagDetailsResponse.Parser, new[]{ "LiveAdTagDetails", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GetLiveAdTagDetailRequest), global::Google.Cloud.Video.Stitcher.V1.GetLiveAdTagDetailRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.CreateSlateRequest), global::Google.Cloud.Video.Stitcher.V1.CreateSlateRequest.Parser, new[]{ "Parent", "SlateId", "Slate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.CreateSlateRequest), global::Google.Cloud.Video.Stitcher.V1.CreateSlateRequest.Parser, new[]{ "Parent", "SlateId", "Slate", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GetSlateRequest), global::Google.Cloud.Video.Stitcher.V1.GetSlateRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ListSlatesRequest), global::Google.Cloud.Video.Stitcher.V1.ListSlatesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ListSlatesResponse), global::Google.Cloud.Video.Stitcher.V1.ListSlatesResponse.Parser, new[]{ "Slates", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.UpdateSlateRequest), global::Google.Cloud.Video.Stitcher.V1.UpdateSlateRequest.Parser, new[]{ "Slate", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.DeleteSlateRequest), global::Google.Cloud.Video.Stitcher.V1.DeleteSlateRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.CreateLiveSessionRequest), global::Google.Cloud.Video.Stitcher.V1.CreateLiveSessionRequest.Parser, new[]{ "Parent", "LiveSession" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GetLiveSessionRequest), global::Google.Cloud.Video.Stitcher.V1.GetLiveSessionRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GetLiveSessionRequest), global::Google.Cloud.Video.Stitcher.V1.GetLiveSessionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.CreateLiveConfigRequest), global::Google.Cloud.Video.Stitcher.V1.CreateLiveConfigRequest.Parser, new[]{ "Parent", "LiveConfigId", "LiveConfig", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ListLiveConfigsRequest), global::Google.Cloud.Video.Stitcher.V1.ListLiveConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ListLiveConfigsResponse), global::Google.Cloud.Video.Stitcher.V1.ListLiveConfigsResponse.Parser, new[]{ "LiveConfigs", "NextPageToken", "Unreachable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GetLiveConfigRequest), global::Google.Cloud.Video.Stitcher.V1.GetLiveConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.DeleteLiveConfigRequest), global::Google.Cloud.Video.Stitcher.V1.DeleteLiveConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.OperationMetadata), global::Google.Cloud.Video.Stitcher.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb" }, null, null, null, null)
           }));
     }
     #endregion
@@ -284,8 +335,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project in which the CDN key should be created, in the form of
-    /// `projects/{project_number}/locations/{location}`.
+    /// Required. The project in which the CDN key should be created, in the form
+    /// of `projects/{project_number}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -315,8 +366,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int CdnKeyIdFieldNumber = 3;
     private string cdnKeyId_ = "";
     /// <summary>
-    /// Required. The ID to use for the CDN key, which will become the final component of
-    /// the CDN key's resource name.
+    /// Required. The ID to use for the CDN key, which will become the final
+    /// component of the CDN key's resource name.
     ///
     /// This value should conform to RFC-1034, which restricts to
     /// lower-case letters, numbers, and hyphen, with the first character a
@@ -1830,8 +1881,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project and location in which the VOD session should be created, in the
-    /// form of `projects/{project_number}/locations/{location}`.
+    /// Required. The project and location in which the VOD session should be
+    /// created, in the form of `projects/{project_number}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2272,8 +2323,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The VOD session where the stitch details belong to, in the form of
-    /// `projects/{project}/locations/{location}/vodSessions/{id}`.
+    /// Required. The VOD session where the stitch details belong to, in the form
+    /// of `projects/{project}/locations/{location}/vodSessions/{id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2770,7 +2821,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the stitch detail in the specified VOD session, in the form of
+    /// Required. The name of the stitch detail in the specified VOD session, in
+    /// the form of
     /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodStitchDetails/{id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2968,8 +3020,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The VOD session which the ad tag details belong to, in the form of
-    /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
+    /// Required. The VOD session which the ad tag details belong to, in the form
+    /// of `projects/{project}/locations/{location}/vodSessions/{vod_session_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3466,7 +3518,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the ad tag detail for the specified VOD session, in the form of
+    /// Required. The name of the ad tag detail for the specified VOD session, in
+    /// the form of
     /// `projects/{project}/locations/{location}/vodSessions/{vod_session_id}/vodAdTagDetails/{vod_ad_tag_detail}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4347,6 +4400,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       parent_ = other.parent_;
       slateId_ = other.slateId_;
       slate_ = other.slate_ != null ? other.slate_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4361,7 +4415,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project in which the slate should be created, in the form of
-    /// `projects/{project_number}`.
+    /// `projects/{project_number}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4405,6 +4459,33 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// A request ID to identify requests. Specify a unique request ID
+    /// so that if you must retry your request, the server will know to ignore
+    /// the request if it has already been completed. The server will guarantee
+    /// that for at least 60 minutes since the first request.
+    ///
+    /// For example, consider a situation where you make an initial request and the
+    /// request times out. If you make the request again with the same request ID,
+    /// the server can check if original operation with the same request ID was
+    /// received, and if so, will ignore the second request. This prevents clients
+    /// from accidentally creating duplicate commitments.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported `(00000000-0000-0000-0000-000000000000)`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4423,6 +4504,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (Parent != other.Parent) return false;
       if (SlateId != other.SlateId) return false;
       if (!object.Equals(Slate, other.Slate)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4433,6 +4515,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (SlateId.Length != 0) hash ^= SlateId.GetHashCode();
       if (slate_ != null) hash ^= Slate.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4463,6 +4546,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Slate);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4485,6 +4572,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Slate);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4503,6 +4594,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
       if (slate_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Slate);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4527,6 +4621,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           Slate = new global::Google.Cloud.Video.Stitcher.V1.Slate();
         }
         Slate.MergeFrom(other.Slate);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4558,6 +4655,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             input.ReadMessage(Slate);
             break;
           }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4586,6 +4687,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
               Slate = new global::Google.Cloud.Video.Stitcher.V1.Slate();
             }
             input.ReadMessage(Slate);
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -4646,8 +4751,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the slate to be retrieved, of the slate, in the form of
-    /// `projects/{project_number}/locations/{location}/slates/{id}`.
+    /// Required. The name of the slate to be retrieved, of the slate, in the form
+    /// of `projects/{project_number}/locations/{location}/slates/{id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4846,7 +4951,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project to list slates, in the form of `projects/{project_number}`.
+    /// Required. The project to list slates, in the form of
+    /// `projects/{project_number}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5901,8 +6007,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project and location in which the live session should be created,
-    /// in the form of `projects/{project_number}/locations/{location}`.
+    /// Required. The project and location in which the live session should be
+    /// created, in the form of `projects/{project_number}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6281,6 +6387,1681 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for VideoStitcherService.createLiveConfig
+  /// </summary>
+  public sealed partial class CreateLiveConfigRequest : pb::IMessage<CreateLiveConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateLiveConfigRequest> _parser = new pb::MessageParser<CreateLiveConfigRequest>(() => new CreateLiveConfigRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateLiveConfigRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLiveConfigRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLiveConfigRequest(CreateLiveConfigRequest other) : this() {
+      parent_ = other.parent_;
+      liveConfigId_ = other.liveConfigId_;
+      liveConfig_ = other.liveConfig_ != null ? other.liveConfig_.Clone() : null;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateLiveConfigRequest Clone() {
+      return new CreateLiveConfigRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The project in which the live config should be created, in
+    /// the form of `projects/{project_number}/locations/{location}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "live_config_id" field.</summary>
+    public const int LiveConfigIdFieldNumber = 2;
+    private string liveConfigId_ = "";
+    /// <summary>
+    /// Required. The unique identifier ID to use for the live config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LiveConfigId {
+      get { return liveConfigId_; }
+      set {
+        liveConfigId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "live_config" field.</summary>
+    public const int LiveConfigFieldNumber = 3;
+    private global::Google.Cloud.Video.Stitcher.V1.LiveConfig liveConfig_;
+    /// <summary>
+    /// Required. The live config resource to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.Stitcher.V1.LiveConfig LiveConfig {
+      get { return liveConfig_; }
+      set {
+        liveConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// A request ID to identify requests. Specify a unique request ID
+    /// so that if you must retry your request, the server will know to ignore
+    /// the request if it has already been completed. The server will guarantee
+    /// that for at least 60 minutes since the first request.
+    ///
+    /// For example, consider a situation where you make an initial request and the
+    /// request times out. If you make the request again with the same request ID,
+    /// the server can check if original operation with the same request ID was
+    /// received, and if so, will ignore the second request. This prevents clients
+    /// from accidentally creating duplicate commitments.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported `(00000000-0000-0000-0000-000000000000)`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateLiveConfigRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateLiveConfigRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (LiveConfigId != other.LiveConfigId) return false;
+      if (!object.Equals(LiveConfig, other.LiveConfig)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (LiveConfigId.Length != 0) hash ^= LiveConfigId.GetHashCode();
+      if (liveConfig_ != null) hash ^= LiveConfig.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (LiveConfigId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LiveConfigId);
+      }
+      if (liveConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LiveConfig);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (LiveConfigId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LiveConfigId);
+      }
+      if (liveConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LiveConfig);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (LiveConfigId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LiveConfigId);
+      }
+      if (liveConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LiveConfig);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateLiveConfigRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.LiveConfigId.Length != 0) {
+        LiveConfigId = other.LiveConfigId;
+      }
+      if (other.liveConfig_ != null) {
+        if (liveConfig_ == null) {
+          LiveConfig = new global::Google.Cloud.Video.Stitcher.V1.LiveConfig();
+        }
+        LiveConfig.MergeFrom(other.LiveConfig);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            LiveConfigId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (liveConfig_ == null) {
+              LiveConfig = new global::Google.Cloud.Video.Stitcher.V1.LiveConfig();
+            }
+            input.ReadMessage(LiveConfig);
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            LiveConfigId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (liveConfig_ == null) {
+              LiveConfig = new global::Google.Cloud.Video.Stitcher.V1.LiveConfig();
+            }
+            input.ReadMessage(LiveConfig);
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for VideoStitcherService.listLiveConfig.
+  /// </summary>
+  public sealed partial class ListLiveConfigsRequest : pb::IMessage<ListLiveConfigsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListLiveConfigsRequest> _parser = new pb::MessageParser<ListLiveConfigsRequest>(() => new ListLiveConfigsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListLiveConfigsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLiveConfigsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLiveConfigsRequest(ListLiveConfigsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLiveConfigsRequest Clone() {
+      return new ListLiveConfigsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The project that contains the list of live configs, in the
+    /// form of `projects/{project_number}/locations/{location}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of items to return.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The next_page_token value returned from a previous List request, if any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. The filter to apply to list results (see
+    /// [Filtering](https://google.aip.dev/160)).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. Specifies the ordering of results following
+    /// [Cloud API
+    /// syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListLiveConfigsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListLiveConfigsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListLiveConfigsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for VideoStitcher.ListLiveConfig.
+  /// </summary>
+  public sealed partial class ListLiveConfigsResponse : pb::IMessage<ListLiveConfigsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListLiveConfigsResponse> _parser = new pb::MessageParser<ListLiveConfigsResponse>(() => new ListLiveConfigsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListLiveConfigsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLiveConfigsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLiveConfigsResponse(ListLiveConfigsResponse other) : this() {
+      liveConfigs_ = other.liveConfigs_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListLiveConfigsResponse Clone() {
+      return new ListLiveConfigsResponse(this);
+    }
+
+    /// <summary>Field number for the "live_configs" field.</summary>
+    public const int LiveConfigsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Video.Stitcher.V1.LiveConfig> _repeated_liveConfigs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Video.Stitcher.V1.LiveConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Video.Stitcher.V1.LiveConfig> liveConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Video.Stitcher.V1.LiveConfig>();
+    /// <summary>
+    /// List of live configs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Video.Stitcher.V1.LiveConfig> LiveConfigs {
+      get { return liveConfigs_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// The pagination token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that could not be reached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListLiveConfigsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListLiveConfigsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!liveConfigs_.Equals(other.liveConfigs_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= liveConfigs_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      liveConfigs_.WriteTo(output, _repeated_liveConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      liveConfigs_.WriteTo(ref output, _repeated_liveConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += liveConfigs_.CalculateSize(_repeated_liveConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListLiveConfigsResponse other) {
+      if (other == null) {
+        return;
+      }
+      liveConfigs_.Add(other.liveConfigs_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachable_.Add(other.unreachable_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            liveConfigs_.AddEntriesFrom(input, _repeated_liveConfigs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            liveConfigs_.AddEntriesFrom(ref input, _repeated_liveConfigs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for VideoStitcherService.getLiveConfig.
+  /// </summary>
+  public sealed partial class GetLiveConfigRequest : pb::IMessage<GetLiveConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetLiveConfigRequest> _parser = new pb::MessageParser<GetLiveConfigRequest>(() => new GetLiveConfigRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetLiveConfigRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetLiveConfigRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetLiveConfigRequest(GetLiveConfigRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetLiveConfigRequest Clone() {
+      return new GetLiveConfigRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the live config to be retrieved, in the form
+    /// of
+    /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetLiveConfigRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetLiveConfigRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetLiveConfigRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for VideoStitcherService.deleteLiveConfig.
+  /// </summary>
+  public sealed partial class DeleteLiveConfigRequest : pb::IMessage<DeleteLiveConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteLiveConfigRequest> _parser = new pb::MessageParser<DeleteLiveConfigRequest>(() => new DeleteLiveConfigRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteLiveConfigRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceReflection.Descriptor.MessageTypes[29]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLiveConfigRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLiveConfigRequest(DeleteLiveConfigRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteLiveConfigRequest Clone() {
+      return new DeleteLiveConfigRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the live config to be deleted, in the form of
+    /// `projects/{project_number}/locations/{location}/liveConfigs/{id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteLiveConfigRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteLiveConfigRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteLiveConfigRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents the metadata of the long-running operation.
+  /// </summary>
+  public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OperationMetadata> _parser = new pb::MessageParser<OperationMetadata>(() => new OperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.Stitcher.V1.VideoStitcherServiceReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationMetadata(OperationMetadata other) : this() {
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      target_ = other.target_;
+      verb_ = other.verb_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OperationMetadata Clone() {
+      return new OperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// The time the operation was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time the operation finished running.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "target" field.</summary>
+    public const int TargetFieldNumber = 3;
+    private string target_ = "";
+    /// <summary>
+    /// Server-defined resource path for the target of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Target {
+      get { return target_; }
+      set {
+        target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "verb" field.</summary>
+    public const int VerbFieldNumber = 4;
+    private string verb_ = "";
+    /// <summary>
+    /// Name of the verb executed by the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Verb {
+      get { return verb_; }
+      set {
+        verb_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (Target != other.Target) return false;
+      if (Verb != other.Verb) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (Target.Length != 0) hash ^= Target.GetHashCode();
+      if (Verb.Length != 0) hash ^= Verb.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (createTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CreateTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (Target.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Target);
+      }
+      if (Verb.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Verb);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (createTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CreateTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (Target.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Target);
+      }
+      if (Verb.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Verb);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (Target.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Target);
+      }
+      if (Verb.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Verb);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.Target.Length != 0) {
+        Target = other.Target;
+      }
+      if (other.Verb.Length != 0) {
+        Verb = other.Verb;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            Target = input.ReadString();
+            break;
+          }
+          case 34: {
+            Verb = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            Target = input.ReadString();
+            break;
+          }
+          case 34: {
+            Verb = input.ReadString();
             break;
           }
         }

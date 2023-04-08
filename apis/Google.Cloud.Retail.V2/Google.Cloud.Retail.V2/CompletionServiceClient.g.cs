@@ -180,7 +180,7 @@ namespace Google.Cloud.Retail.V2
 
     /// <summary>CompletionService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Auto-completion service for retail.
+    /// Autocomplete service for retail.
     /// 
     /// This feature is only available for users who have Retail Search enabled.
     /// Enable Retail Search on Cloud Console before using this feature.
@@ -385,7 +385,7 @@ namespace Google.Cloud.Retail.V2
 
     /// <summary>CompletionService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Auto-completion service for retail.
+    /// Autocomplete service for retail.
     /// 
     /// This feature is only available for users who have Retail Search enabled.
     /// Enable Retail Search on Cloud Console before using this feature.

@@ -229,15 +229,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "b2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp9L2RhdGFiYXNlUm9s",
             "ZXPaQQZwYXJlbnQaeMpBFnNwYW5uZXIuZ29vZ2xlYXBpcy5jb23SQVxodHRw",
             "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5hZG1pbkLa",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5hZG1pbkLY",
             "AgokY29tLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxQhlTcGFu",
-            "bmVyRGF0YWJhc2VBZG1pblByb3RvUAFaSGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvc3Bhbm5lci9hZG1pbi9kYXRhYmFzZS92MTtk",
-            "YXRhYmFzZaoCJkdvb2dsZS5DbG91ZC5TcGFubmVyLkFkbWluLkRhdGFiYXNl",
-            "LlYxygImR29vZ2xlXENsb3VkXFNwYW5uZXJcQWRtaW5cRGF0YWJhc2VcVjHq",
-            "AitHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpBZG1pbjo6RGF0YWJhc2U6OlYx",
-            "6kFKCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEidwcm9qZWN0",
-            "cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX1iBnByb3RvMw=="));
+            "bmVyRGF0YWJhc2VBZG1pblByb3RvUAFaRmNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "c3Bhbm5lci9hZG1pbi9kYXRhYmFzZS9hcGl2MS9kYXRhYmFzZXBiO2RhdGFi",
+            "YXNlcGKqAiZHb29nbGUuQ2xvdWQuU3Bhbm5lci5BZG1pbi5EYXRhYmFzZS5W",
+            "McoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFkbWluXERhdGFiYXNlXFYx6gIr",
+            "R29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6QWRtaW46OkRhdGFiYXNlOjpWMepB",
+            "Sgofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMv",
+            "e3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.BackupReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {

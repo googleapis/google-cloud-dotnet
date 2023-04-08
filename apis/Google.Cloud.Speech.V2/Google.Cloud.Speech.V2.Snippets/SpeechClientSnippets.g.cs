@@ -1333,6 +1333,7 @@ namespace Google.Cloud.Speech.V2.Snippets
                 },
                 Config = new RecognitionConfig(),
                 ConfigMask = new FieldMask(),
+                RecognitionOutputConfig = new RecognitionOutputConfig(),
             };
             // Make the request
             Operation<BatchRecognizeResponse, OperationMetadata> response = speechClient.BatchRecognize(request);
@@ -1372,6 +1373,7 @@ namespace Google.Cloud.Speech.V2.Snippets
                 },
                 Config = new RecognitionConfig(),
                 ConfigMask = new FieldMask(),
+                RecognitionOutputConfig = new RecognitionOutputConfig(),
             };
             // Make the request
             Operation<BatchRecognizeResponse, OperationMetadata> response = await speechClient.BatchRecognizeAsync(request);

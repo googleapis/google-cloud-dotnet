@@ -44,13 +44,13 @@ namespace Google.Maps.AddressValidation.V1 {
             "TlNQRUNJRklFRBAAEg0KCUNPTkZJUk1FRBABEh0KGVVOQ09ORklSTUVEX0JV",
             "VF9QTEFVU0lCTEUQAhIeChpVTkNPTkZJUk1FRF9BTkRfU1VTUElDSU9VUxAD",
             "IjQKDUNvbXBvbmVudE5hbWUSDAoEdGV4dBgBIAEoCRIVCg1sYW5ndWFnZV9j",
-            "b2RlGAIgASgJQoICCiRjb20uZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
-            "b24udjFCDEFkZHJlc3NQcm90b1ABWlFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL21hcHMvYWRkcmVzc3ZhbGlkYXRpb24vdjE7YWRk",
-            "cmVzc3ZhbGlkYXRpb274AQGiAgdHTVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRk",
-            "cmVzc1ZhbGlkYXRpb24uVjHKAiBHb29nbGVcTWFwc1xBZGRyZXNzVmFsaWRh",
-            "dGlvblxWMeoCI0dvb2dsZTo6TWFwczo6QWRkcmVzc1ZhbGlkYXRpb246OlYx",
-            "YgZwcm90bzM="));
+            "b2RlGAIgASgJQokCCiRjb20uZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
+            "b24udjFCDEFkZHJlc3NQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dvL21h",
+            "cHMvYWRkcmVzc3ZhbGlkYXRpb24vYXBpdjEvYWRkcmVzc3ZhbGlkYXRpb25w",
+            "YjthZGRyZXNzdmFsaWRhdGlvbnBi+AEBogIHR01QQVZWMaoCIEdvb2dsZS5N",
+            "YXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYxygIgR29vZ2xlXE1hcHNcQWRkcmVz",
+            "c1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OkFkZHJlc3NWYWxpZGF0",
+            "aW9uOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,7 +64,9 @@ namespace Google.Maps.AddressValidation.V1 {
   }
   #region Messages
   /// <summary>
-  /// Details of the address parsed from the input.
+  /// Details of the post-processed address. Post-processing includes
+  /// correcting misspelled parts of the address, replacing incorrect parts, and
+  /// inferring missing parts.
   /// </summary>
   public sealed partial class Address : pb::IMessage<Address>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -119,8 +121,8 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int FormattedAddressFieldNumber = 2;
     private string formattedAddress_ = "";
     /// <summary>
-    /// The corrected address, formatted as a single-line address following the
-    /// address formatting rules of the region where the address is located.
+    /// The post-processed address, formatted as a single-line address following
+    /// the address formatting rules of the region where the address is located.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,9 +154,9 @@ namespace Google.Maps.AddressValidation.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Maps.AddressValidation.V1.AddressComponent.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.AddressValidation.V1.AddressComponent> addressComponents_ = new pbc::RepeatedField<global::Google.Maps.AddressValidation.V1.AddressComponent>();
     /// <summary>
-    /// Unordered list. The individual address components of the formatted and corrected address,
-    /// along with validation information. This provides information on the
-    /// validation status of the individual components.
+    /// Unordered list. The individual address components of the formatted and
+    /// corrected address, along with validation information. This provides
+    /// information on the validation status of the individual components.
     ///
     /// Address components are not ordered in a particular way. Do not make any
     /// assumptions on the ordering of the address components in the list.

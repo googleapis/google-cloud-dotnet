@@ -239,7 +239,7 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
             "c291cmNlc1Byb3RvUAFaOmNsb3VkLmdvb2dsZS5jb20vZ28vYWxsb3lkYi9h",
             "cGl2MWFscGhhL2FsbG95ZGJwYjthbGxveWRicGKqAhxHb29nbGUuQ2xvdWQu",
             "QWxsb3lEYi5WMUFscGhhygIcR29vZ2xlXENsb3VkXEFsbG95RGJcVjFhbHBo",
-            "YeoCH0dvb2dsZTo6Q2xvdWQ6OkFsbG95RGI6OlYxYWxwaGHqQaYBCihjbG91",
+            "YeoCH0dvb2dsZTo6Q2xvdWQ6OkFsbG95REI6OlYxYWxwaGHqQaYBCihjbG91",
             "ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uEnpwcm9qZWN0",
             "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tl",
             "eV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fS9jcnlwdG9LZXlWZXJz",
@@ -6855,10 +6855,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
 
       /// <summary>
       /// The Availability type of an instance. Potential values:
-      ///   &lt;br>&lt;b>ZONAL&lt;/b>: The instance serves data from only one zone.
-      /// Outages in that zone affect instance availability.
-      ///   &lt;br>&lt;b>REGIONAL&lt;/b>: The instance can serve data from more than one zone
-      ///   in a region (it is highly available).
+      /// - ZONAL: The instance serves data from only one zone. Outages in that
+      /// zone affect instance availability.
+      /// - REGIONAL: The instance can serve data from more than one zone in a
+      /// region (it is highly available).
       /// </summary>
       public enum AvailabilityType {
         /// <summary>

@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.2.0, released 2023-03-22
+
+### New features
+
+- Add support for OR Queries Firestore ([commit bf224d6](https://github.com/googleapis/google-cloud-dotnet/commit/bf224d65227abab553fbe1be59772cd1b42729bd))
+- Add support for multiple databases ([commit 3a40583](https://github.com/googleapis/google-cloud-dotnet/commit/3a40583c8746e8c3b471f8be6ae21daa28b8acdf))
+
 ## Version 3.1.0, released 2023-02-08
 
 ### New features

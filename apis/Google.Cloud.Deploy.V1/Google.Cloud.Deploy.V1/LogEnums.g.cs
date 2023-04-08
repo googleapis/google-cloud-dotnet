@@ -25,12 +25,12 @@ namespace Google.Cloud.Deploy.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvZGVwbG95L3YxL2xvZ19lbnVtcy5wcm90bxIWZ29v",
-            "Z2xlLmNsb3VkLmRlcGxveS52MSpiCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJ",
-            "RUQQABIkCiBUWVBFX1BVQlNVQl9OT1RJRklDQVRJT05fRkFJTFVSRRABEh4K",
-            "GlRZUEVfUkVOREVSX1NUQVRVRVNfQ0hBTkdFEAJCYQoaY29tLmdvb2dsZS5j",
-            "bG91ZC5kZXBsb3kudjFCDUxvZ0VudW1zUHJvdG9QAVoyY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kZXBsb3kvYXBpdjEvZGVwbG95cGI7ZGVwbG95cGJiBnByb3Rv",
-            "Mw=="));
+            "Z2xlLmNsb3VkLmRlcGxveS52MSpmCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJ",
+            "RUQQABIkCiBUWVBFX1BVQlNVQl9OT1RJRklDQVRJT05fRkFJTFVSRRABEiIK",
+            "GlRZUEVfUkVOREVSX1NUQVRVRVNfQ0hBTkdFEAIaAggBQmEKGmNvbS5nb29n",
+            "bGUuY2xvdWQuZGVwbG95LnYxQg1Mb2dFbnVtc1Byb3RvUAFaMmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGVwbG95L2FwaXYxL2RlcGxveXBiO2RlcGxveXBiYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Deploy.V1.Type), }, null, null));
@@ -52,7 +52,7 @@ namespace Google.Cloud.Deploy.V1 {
     /// </summary>
     [pbr::OriginalName("TYPE_PUBSUB_NOTIFICATION_FAILURE")] PubsubNotificationFailure = 1,
     /// <summary>
-    /// Release render status changed notification.
+    /// Deprecated: This field is never used. Use release_render log type instead.
     /// </summary>
     [pbr::OriginalName("TYPE_RENDER_STATUES_CHANGE")] RenderStatuesChange = 2,
   }

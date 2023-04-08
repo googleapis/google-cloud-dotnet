@@ -98,8 +98,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   }
   #region Messages
   /// <summary>
-  /// UserEvent captures all metadata information DiscoveryEngine API needs to know
-  /// about how end users interact with customers' website.
+  /// UserEvent captures all metadata information Discovery Engine API needs to
+  /// know about how end users interact with customers' website.
   /// </summary>
   public sealed partial class UserEvent : pb::IMessage<UserEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -169,6 +169,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// Required. User event type. Allowed values are:
     ///
     /// Generic values:
+    ///
     /// * `search`: Search for Documents.
     /// * `view-item`: Detailed page view of a Document.
     /// * `view-item-list`: View of a panel or ordered list of Documents.
@@ -176,10 +177,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// * `view-category-page`: View of a category page, e.g. Home > Men > Jeans
     ///
     /// Retail-related values:
+    ///
     /// * `add-to-cart`: Add an item(s) to cart, e.g. in Retail online shopping
     /// * `purchase`: Purchase an item(s)
     ///
     /// Media-related values:
+    ///
     /// * `media-play`: Start/resume watching a video, playing a song, etc.
     /// * `media-complete`: Finished or stopped midway through a video, song, etc.
     /// </summary>
@@ -288,7 +291,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// 128 bytes. A session is an aggregation of an end user behavior in a time
     /// span.
     ///
-    /// A general guideline to populate the sesion_id:
+    /// A general guideline to populate the session_id:
+    ///
     /// 1. If user has no activity for 30 min, a new session_id should be assigned.
     /// 2. The session_id should be unique across users, suggest use uuid or add
     /// [UserEvent.user_pseudo_id][google.cloud.discoveryengine.v1beta.UserEvent.user_pseudo_id]
@@ -522,7 +526,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// If you provide custom attributes for ingested user events, also include
     /// them in the user events that you associate with prediction requests. Custom
     /// attribute formatting must be consistent between imported events and events
-    /// provided with prediction requests. This lets the DiscoveryEngine API use
+    /// provided with prediction requests. This lets the Discovery Engine API use
     /// those custom attributes when training models and serving predictions, which
     /// helps improve recommendation quality.
     ///
@@ -2594,7 +2598,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int NameFieldNumber = 2;
     /// <summary>
     /// Required. The Document resource full name, of the form:
-    /// projects/&lt;project_id>/locations/&lt;location>/dataStores/&lt;data_store_id>/branches/&lt;branch_id>/documents/&lt;document_id>
+    /// projects/{project\_id}/locations/{location}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2616,6 +2620,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// are involved in a `add-to-cart` event.
     ///
     /// Required for events of the following event types:
+    ///
     /// * `add-to-cart`
     /// * `purchase`
     /// </summary>

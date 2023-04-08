@@ -3,7 +3,7 @@
 //     source: google/cloud/bigquery/reservation/v1/reservation.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.BigQuery.Reservation.V1 {
   /// <summary>
-  /// This API allows users to manage their flat-rate BigQuery reservations.
+  /// This API allows users to manage their BigQuery reservations.
   ///
   /// A reservation provides computational resource guarantees, in the form of
   /// [slots](https://cloud.google.com/bigquery/docs/slots), to users. A slot is a

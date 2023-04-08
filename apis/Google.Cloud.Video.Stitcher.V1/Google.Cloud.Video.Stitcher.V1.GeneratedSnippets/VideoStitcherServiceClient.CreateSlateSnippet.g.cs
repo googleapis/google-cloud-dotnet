@@ -18,6 +18,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_CreateSlate_sync_flattened]
     using Google.Cloud.Video.Stitcher.V1;
+    using Google.LongRunning;
 
     public sealed partial class GeneratedVideoStitcherServiceClientSnippets
     {
@@ -38,7 +39,23 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             Slate slate = new Slate();
             string slateId = "";
             // Make the request
-            Slate response = videoStitcherServiceClient.CreateSlate(parent, slate, slateId);
+            Operation<Slate, OperationMetadata> response = videoStitcherServiceClient.CreateSlate(parent, slate, slateId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Slate, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Slate result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Slate, OperationMetadata> retrievedResponse = videoStitcherServiceClient.PollOnceCreateSlate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Slate retrievedResult = retrievedResponse.Result;
+            }
         }
     }
     // [END videostitcher_v1_generated_VideoStitcherService_CreateSlate_sync_flattened]

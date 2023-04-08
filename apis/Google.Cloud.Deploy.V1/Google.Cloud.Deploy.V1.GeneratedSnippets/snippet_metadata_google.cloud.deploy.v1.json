@@ -4334,6 +4334,596 @@
       ]
     },
     {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AdvanceRollout_sync",
+      "title": "AdvanceRolloutRequestObject",
+      "description": "Snippet for AdvanceRollout",
+      "file": "CloudDeployClient.AdvanceRolloutRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AdvanceRollout",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AdvanceRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AdvanceRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.AdvanceRolloutResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AdvanceRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AdvanceRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AdvanceRollout_async",
+      "title": "AdvanceRolloutRequestObjectAsync",
+      "description": "Snippet for AdvanceRolloutAsync",
+      "file": "CloudDeployClient.AdvanceRolloutRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AdvanceRolloutAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AdvanceRolloutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.AdvanceRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AdvanceRolloutResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AdvanceRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AdvanceRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AdvanceRollout_sync_flattened",
+      "title": "AdvanceRollout",
+      "description": "Snippet for AdvanceRollout",
+      "file": "CloudDeployClient.AdvanceRolloutSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AdvanceRollout",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AdvanceRollout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.AdvanceRolloutResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AdvanceRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AdvanceRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AdvanceRollout_async_flattened",
+      "title": "AdvanceRolloutAsync",
+      "description": "Snippet for AdvanceRolloutAsync",
+      "file": "CloudDeployClient.AdvanceRolloutAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AdvanceRolloutAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AdvanceRolloutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AdvanceRolloutResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AdvanceRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AdvanceRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AdvanceRollout_sync_flattened_resourceNames",
+      "title": "AdvanceRolloutResourceNames",
+      "description": "Snippet for AdvanceRollout",
+      "file": "CloudDeployClient.AdvanceRolloutResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AdvanceRollout",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AdvanceRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.AdvanceRolloutResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AdvanceRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AdvanceRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_AdvanceRollout_async_flattened_resourceNames",
+      "title": "AdvanceRolloutResourceNamesAsync",
+      "description": "Snippet for AdvanceRolloutAsync",
+      "file": "CloudDeployClient.AdvanceRolloutResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AdvanceRolloutAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.AdvanceRolloutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.AdvanceRolloutResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "AdvanceRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.AdvanceRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelRollout_sync",
+      "title": "CancelRolloutRequestObject",
+      "description": "Snippet for CancelRollout",
+      "file": "CloudDeployClient.CancelRolloutRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelRollout",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CancelRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.CancelRolloutResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelRollout_async",
+      "title": "CancelRolloutRequestObjectAsync",
+      "description": "Snippet for CancelRolloutAsync",
+      "file": "CloudDeployClient.CancelRolloutRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelRolloutAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelRolloutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.CancelRolloutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.CancelRolloutResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelRollout_sync_flattened",
+      "title": "CancelRollout",
+      "description": "Snippet for CancelRollout",
+      "file": "CloudDeployClient.CancelRolloutSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelRollout",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelRollout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.CancelRolloutResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelRollout_async_flattened",
+      "title": "CancelRolloutAsync",
+      "description": "Snippet for CancelRolloutAsync",
+      "file": "CloudDeployClient.CancelRolloutAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelRolloutAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelRolloutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.CancelRolloutResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelRollout_sync_flattened_resourceNames",
+      "title": "CancelRolloutResourceNames",
+      "description": "Snippet for CancelRollout",
+      "file": "CloudDeployClient.CancelRolloutResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelRollout",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelRollout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.CancelRolloutResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_CancelRollout_async_flattened_resourceNames",
+      "title": "CancelRolloutResourceNamesAsync",
+      "description": "Snippet for CancelRolloutAsync",
+      "file": "CloudDeployClient.CancelRolloutResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelRolloutAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.CancelRolloutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.CancelRolloutResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "CancelRollout",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.CancelRollout",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "clouddeploy_v1_generated_CloudDeploy_ListRollouts_sync",
       "title": "ListRolloutsRequestObject",
       "description": "Snippet for ListRollouts",
@@ -4977,12 +5567,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -5026,12 +5616,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -5254,6 +5844,325 @@
         {
           "start": 36,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_IgnoreJob_sync",
+      "title": "IgnoreJobRequestObject",
+      "description": "Snippet for IgnoreJob",
+      "file": "CloudDeployClient.IgnoreJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IgnoreJob",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.IgnoreJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.IgnoreJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.IgnoreJobResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "IgnoreJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.IgnoreJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_IgnoreJob_async",
+      "title": "IgnoreJobRequestObjectAsync",
+      "description": "Snippet for IgnoreJobAsync",
+      "file": "CloudDeployClient.IgnoreJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IgnoreJobAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.IgnoreJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.IgnoreJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.IgnoreJobResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "IgnoreJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.IgnoreJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_IgnoreJob_sync_flattened",
+      "title": "IgnoreJob",
+      "description": "Snippet for IgnoreJob",
+      "file": "CloudDeployClient.IgnoreJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IgnoreJob",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.IgnoreJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.IgnoreJobResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "IgnoreJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.IgnoreJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_IgnoreJob_async_flattened",
+      "title": "IgnoreJobAsync",
+      "description": "Snippet for IgnoreJobAsync",
+      "file": "CloudDeployClient.IgnoreJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IgnoreJobAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.IgnoreJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.IgnoreJobResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "IgnoreJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.IgnoreJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_IgnoreJob_sync_flattened_resourceNames",
+      "title": "IgnoreJobResourceNames",
+      "description": "Snippet for IgnoreJob",
+      "file": "CloudDeployClient.IgnoreJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IgnoreJob",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.IgnoreJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.IgnoreJobResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "IgnoreJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.IgnoreJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_IgnoreJob_async_flattened_resourceNames",
+      "title": "IgnoreJobResourceNamesAsync",
+      "description": "Snippet for IgnoreJobAsync",
+      "file": "CloudDeployClient.IgnoreJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IgnoreJobAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.IgnoreJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.RolloutName",
+            "name": "rollout"
+          },
+          {
+            "type": "System.String",
+            "name": "phaseId"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.IgnoreJobResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "IgnoreJob",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.IgnoreJob",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
           "type": "SHORT"
         }
       ]
@@ -6163,6 +7072,293 @@
         "method": {
           "shortName": "GetJobRun",
           "fullName": "google.cloud.deploy.v1.CloudDeploy.GetJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_TerminateJobRun_sync",
+      "title": "TerminateJobRunRequestObject",
+      "description": "Snippet for TerminateJobRun",
+      "file": "CloudDeployClient.TerminateJobRunRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateJobRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.TerminateJobRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.TerminateJobRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.TerminateJobRunResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "TerminateJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.TerminateJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_TerminateJobRun_async",
+      "title": "TerminateJobRunRequestObjectAsync",
+      "description": "Snippet for TerminateJobRunAsync",
+      "file": "CloudDeployClient.TerminateJobRunRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateJobRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.TerminateJobRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.TerminateJobRunRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.TerminateJobRunResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "TerminateJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.TerminateJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_TerminateJobRun_sync_flattened",
+      "title": "TerminateJobRun",
+      "description": "Snippet for TerminateJobRun",
+      "file": "CloudDeployClient.TerminateJobRunSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateJobRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.TerminateJobRun",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.TerminateJobRunResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "TerminateJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.TerminateJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_TerminateJobRun_async_flattened",
+      "title": "TerminateJobRunAsync",
+      "description": "Snippet for TerminateJobRunAsync",
+      "file": "CloudDeployClient.TerminateJobRunAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateJobRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.TerminateJobRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.TerminateJobRunResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "TerminateJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.TerminateJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_TerminateJobRun_sync_flattened_resourceNames",
+      "title": "TerminateJobRunResourceNames",
+      "description": "Snippet for TerminateJobRun",
+      "file": "CloudDeployClient.TerminateJobRunResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateJobRun",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.TerminateJobRun",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.JobRunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Deploy.V1.TerminateJobRunResponse",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "TerminateJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.TerminateJobRun",
+          "service": {
+            "shortName": "CloudDeploy",
+            "fullName": "google.cloud.deploy.v1.CloudDeploy"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouddeploy_v1_generated_CloudDeploy_TerminateJobRun_async_flattened_resourceNames",
+      "title": "TerminateJobRunResourceNamesAsync",
+      "description": "Snippet for TerminateJobRunAsync",
+      "file": "CloudDeployClient.TerminateJobRunResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateJobRunAsync",
+        "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient.TerminateJobRunAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Deploy.V1.JobRunName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Deploy.V1.TerminateJobRunResponse>",
+        "client": {
+          "shortName": "CloudDeployClient",
+          "fullName": "Google.Cloud.Deploy.V1.CloudDeployClient"
+        },
+        "method": {
+          "shortName": "TerminateJobRun",
+          "fullName": "google.cloud.deploy.v1.CloudDeploy.TerminateJobRun",
           "service": {
             "shortName": "CloudDeploy",
             "fullName": "google.cloud.deploy.v1.CloudDeploy"

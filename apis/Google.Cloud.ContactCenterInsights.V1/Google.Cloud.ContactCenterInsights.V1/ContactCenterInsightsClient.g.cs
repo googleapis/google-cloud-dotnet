@@ -51,6 +51,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateConversationSettings = existing.CreateConversationSettings;
+            UploadConversationSettings = existing.UploadConversationSettings;
+            UploadConversationOperationsSettings = existing.UploadConversationOperationsSettings.Clone();
             UpdateConversationSettings = existing.UpdateConversationSettings;
             GetConversationSettings = existing.GetConversationSettings;
             ListConversationsSettings = existing.ListConversationsSettings;
@@ -118,6 +120,43 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateConversationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UploadConversation</c> and
+        /// <c>ContactCenterInsightsClient.UploadConversationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UploadConversationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.UploadConversation</c> and
+        /// <c>ContactCenterInsightsClient.UploadConversationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UploadConversationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1256,6 +1295,66 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Conversation> CreateConversationAsync(gagr::LocationName parent, Conversation conversation, string conversationId, st::CancellationToken cancellationToken) =>
             CreateConversationAsync(parent, conversation, conversationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a longrunning conversation upload operation. This method differs
+        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// redaction.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Conversation, UploadConversationMetadata> UploadConversation(UploadConversationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a longrunning conversation upload operation. This method differs
+        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// redaction.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Conversation, UploadConversationMetadata>> UploadConversationAsync(UploadConversationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a longrunning conversation upload operation. This method differs
+        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// redaction.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Conversation, UploadConversationMetadata>> UploadConversationAsync(UploadConversationRequest request, st::CancellationToken cancellationToken) =>
+            UploadConversationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UploadConversation</c>.</summary>
+        public virtual lro::OperationsClient UploadConversationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UploadConversation</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Conversation, UploadConversationMetadata> PollOnceUploadConversation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Conversation, UploadConversationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UploadConversationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UploadConversation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Conversation, UploadConversationMetadata>> PollOnceUploadConversationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Conversation, UploadConversationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UploadConversationOperationsClient, callSettings);
 
         /// <summary>
         /// Updates a conversation.
@@ -5336,6 +5435,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
     {
         private readonly gaxgrpc::ApiCall<CreateConversationRequest, Conversation> _callCreateConversation;
 
+        private readonly gaxgrpc::ApiCall<UploadConversationRequest, lro::Operation> _callUploadConversation;
+
         private readonly gaxgrpc::ApiCall<UpdateConversationRequest, Conversation> _callUpdateConversation;
 
         private readonly gaxgrpc::ApiCall<GetConversationRequest, Conversation> _callGetConversation;
@@ -5420,6 +5521,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
             GrpcClient = grpcClient;
             ContactCenterInsightsSettings effectiveSettings = settings ?? ContactCenterInsightsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            UploadConversationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadConversationOperationsSettings, logger);
             CreateAnalysisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnalysisOperationsSettings, logger);
             BulkAnalyzeConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkAnalyzeConversationsOperationsSettings, logger);
             IngestConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.IngestConversationsOperationsSettings, logger);
@@ -5431,6 +5533,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callCreateConversation = clientHelper.BuildApiCall<CreateConversationRequest, Conversation>("CreateConversation", grpcClient.CreateConversationAsync, grpcClient.CreateConversation, effectiveSettings.CreateConversationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversation);
             Modify_CreateConversationApiCall(ref _callCreateConversation);
+            _callUploadConversation = clientHelper.BuildApiCall<UploadConversationRequest, lro::Operation>("UploadConversation", grpcClient.UploadConversationAsync, grpcClient.UploadConversation, effectiveSettings.UploadConversationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callUploadConversation);
+            Modify_UploadConversationApiCall(ref _callUploadConversation);
             _callUpdateConversation = clientHelper.BuildApiCall<UpdateConversationRequest, Conversation>("UpdateConversation", grpcClient.UpdateConversationAsync, grpcClient.UpdateConversation, effectiveSettings.UpdateConversationSettings).WithGoogleRequestParam("conversation.name", request => request.Conversation?.Name);
             Modify_ApiCall(ref _callUpdateConversation);
             Modify_UpdateConversationApiCall(ref _callUpdateConversation);
@@ -5546,6 +5651,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_CreateConversationApiCall(ref gaxgrpc::ApiCall<CreateConversationRequest, Conversation> call);
 
+        partial void Modify_UploadConversationApiCall(ref gaxgrpc::ApiCall<UploadConversationRequest, lro::Operation> call);
+
         partial void Modify_UpdateConversationApiCall(ref gaxgrpc::ApiCall<UpdateConversationRequest, Conversation> call);
 
         partial void Modify_GetConversationApiCall(ref gaxgrpc::ApiCall<GetConversationRequest, Conversation> call);
@@ -5624,6 +5731,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public override ContactCenterInsights.ContactCenterInsightsClient GrpcClient { get; }
 
         partial void Modify_CreateConversationRequest(ref CreateConversationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UploadConversationRequest(ref UploadConversationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateConversationRequest(ref UpdateConversationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5719,6 +5828,37 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_CreateConversationRequest(ref request, ref callSettings);
             return _callCreateConversation.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UploadConversation</c>.</summary>
+        public override lro::OperationsClient UploadConversationOperationsClient { get; }
+
+        /// <summary>
+        /// Create a longrunning conversation upload operation. This method differs
+        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// redaction.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Conversation, UploadConversationMetadata> UploadConversation(UploadConversationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UploadConversationRequest(ref request, ref callSettings);
+            return new lro::Operation<Conversation, UploadConversationMetadata>(_callUploadConversation.Sync(request, callSettings), UploadConversationOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a longrunning conversation upload operation. This method differs
+        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// redaction.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Conversation, UploadConversationMetadata>> UploadConversationAsync(UploadConversationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UploadConversationRequest(ref request, ref callSettings);
+            return new lro::Operation<Conversation, UploadConversationMetadata>(await _callUploadConversation.Async(request, callSettings).ConfigureAwait(false), UploadConversationOperationsClient);
         }
 
         /// <summary>
