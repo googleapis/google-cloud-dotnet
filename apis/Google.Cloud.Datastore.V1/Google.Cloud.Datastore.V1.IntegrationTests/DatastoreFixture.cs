@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,12 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using Google.Api.Gax;
+using Google.Api.Gax.ResourceNames;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Http;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Firestore.Admin.V1;
 using System;
 using System.Linq;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.Admin.V1.Database.Types;
 
 namespace Google.Cloud.Datastore.V1.IntegrationTests
 {
@@ -31,12 +37,35 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         private const int RetryCount = 10;
         private static readonly TimeSpan RetryDelay = TimeSpan.FromSeconds(3);
 
+        private readonly HttpClient _firestoreRestApiHttpClient = new();
+        private readonly FirestoreAdminClient _firestoreAdminClient;
+
+        internal bool RunningOnEmulator { get; }
+
+        // Creating databases and indexes can take a while.
+        // We don't want to wait *forever* (which would be the behavior of default poll settings)
+        // but we need to have a timeout of more than a minute.
+        private static readonly PollSettings AdminOperationPollSettings =
+            new PollSettings(expiration: Expiration.FromTimeout(TimeSpan.FromMinutes(5)), delay: TimeSpan.FromSeconds(5));
+
         public string NamespaceId { get; }
         public PartitionId PartitionId => new PartitionId { ProjectId = ProjectId, NamespaceId = NamespaceId };
 
         public DatastoreFixture()
         {
             NamespaceId = IdGenerator.FromDateTime(prefix: "test-");
+            RunningOnEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("DATASTORE_EMULATOR_HOST"));
+            _firestoreAdminClient = FirestoreAdminClient.Create();
+
+            // Scope used for the REST API to delete databases.
+            string scope = "https://www.googleapis.com/auth/datastore";
+            string credentialsPath = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");
+
+            // Initalize credentials to be used with REST API calls. 
+            GoogleCredential googleCredential = GoogleCredential.FromFile(credentialsPath).CreateScoped(scope);
+            _firestoreRestApiHttpClient = new HttpClientFactory()
+                .CreateHttpClient(new CreateHttpClientArgs { Initializers = { googleCredential } });
+            _firestoreRestApiHttpClient.BaseAddress = new Uri("https://firestore.googleapis.com");
         }
 
         public override void Dispose()
@@ -98,6 +127,71 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 EmulatorDetection = EmulatorDetection.EmulatorOrProduction
             };
             return builder.Build();
+        }
+
+        public DatastoreDb CreateDatastoreDbWithDatabase(string databaseId)
+        {
+            var builder = new DatastoreDbBuilder
+            {
+                ProjectId = ProjectId,
+                NamespaceId = NamespaceId,
+                DatabaseId = databaseId ?? "",
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
+            };
+            return builder.Build();
+        }
+
+        public async Task RunWithTemporaryDatabaseAsync(Action<string> testFunction)
+        {
+            var databaseId = IdGenerator.FromDateTime(prefix: "test-db-");
+            await CreateDatabaseAsync(databaseId);
+
+            try
+            {
+                testFunction(databaseId);
+            }
+            finally
+            {
+                // Cleanup the test database.
+                try
+                {
+                    await DeleteDatabaseAsync(databaseId);
+                }
+                catch (Exception)
+                {
+                    // Silently ignore errors to prevent tests from failing.
+                }
+            }
+        }
+
+        /// <summary>
+        /// Creates a new Datastore database using Firestore Admin Client.
+        /// </summary>
+        public async Task CreateDatabaseAsync(string databaseId)
+        {
+            var pr = new ProjectName(ProjectId);
+            // Creating a new database is not supported on Datastore emulator.
+            Assert.False(RunningOnEmulator);
+            var operation = await _firestoreAdminClient.CreateDatabaseAsync(
+                new ProjectName(ProjectId),
+                new Database { LocationId = "us-east1", Type = DatabaseType.DatastoreMode },
+                databaseId);
+            await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
+            Console.WriteLine($"Success creating database {databaseId}");
+        }
+
+        private async Task DeleteDatabaseAsync(string databaseId)
+        {
+            var deleteDbUrl = $"/v1/projects/{ProjectId}/databases/{databaseId}";
+            try
+            {
+                var response = await _firestoreRestApiHttpClient.DeleteAsync(deleteDbUrl).ConfigureAwait(false);
+                response.EnsureSuccessStatusCode();
+            }
+            catch (Exception)
+            {
+                // Silently ignore errors to prevent tests from failing.
+            }
         }
     }
 }

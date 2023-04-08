@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,12 +23,23 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         /// <param name="projectId">The project ID of the partition. Must not be null.</param>
         /// <param name="namespaceId">The namespace ID of the partition. Must not be null.</param>
-        public PartitionId(string projectId, string namespaceId = "") : this()
+        public PartitionId(string projectId, string namespaceId = "") : this(projectId, namespaceId, "")
+        { }
+
+        /// <summary>
+        /// Creates a partition ID from the given project ID , namespace ID and database ID.
+        /// </summary>
+        /// <param name="projectId">The project ID of the partition. Must not be null.</param>
+        /// <param name="namespaceId">The namespace ID of the partition. Pass empty string for default. Must not be null.</param>
+        /// <param name="databaseId">The database ID of the partition. Pass empty string for default. Must not be null.</param>
+        public PartitionId(string projectId, string namespaceId, string databaseId) : this()
         {
             // TODO: Validate that the project ID is non-empty?
             // TODO: Validate the IDs against a regex?
+            // TODO: Merge the constructor overloads into one in major version release. 
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             NamespaceId = GaxPreconditions.CheckNotNull(namespaceId, nameof(namespaceId));
+            DatabaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
         }
     }
 }

@@ -74,6 +74,24 @@ namespace Google.Cloud.Datastore.V1
             => new DatastoreTransactionImpl(client, projectId, namespaceId, transactionId);
 
         /// <summary>
+        /// Constructs an instance of <see cref="DatastoreClientImpl"/> with the given arguments.
+        /// Clients using the <see cref="DatastoreDb"/> abstraction layer would normally call
+        /// <see cref="DatastoreDb.BeginTransaction(CallSettings)"/> or <see cref="DatastoreDb.BeginTransactionAsync(CallSettings)"/>
+        /// instead of calling this method directly.
+        /// </summary>
+        /// <param name="client">The client to use for Datastore operations. Must not be null.</param>
+        /// <param name="projectId">The ID of the project of the Datastore operations. Must not be null.</param>
+        /// <param name="namespaceId">The ID of the namespace which is combined with <paramref name="projectId"/> and <paramref name="databaseId"/> to form a partition ID
+        /// to use in query operations. May be null.</param>
+        /// <param name="databaseId">The ID of the database which is combined with <paramref name="projectId"/> and <paramref name="namespaceId"/> to form a partition ID
+        /// to use in query operations. May be null.</param>
+        /// <param name="transactionId">The transaction obtained by an earlier <see cref="DatastoreClient.BeginTransaction(string, CallSettings)"/>
+        /// or the asynchronous equivalent. Must not be null</param>
+        /// <returns>A <see cref="DatastoreTransaction"/> representation of the specified transaction.</returns>,
+        public static DatastoreTransaction Create(DatastoreClient client, string projectId, string namespaceId, string databaseId, ByteString transactionId)
+            => new DatastoreTransactionImpl(client, projectId, namespaceId, databaseId, transactionId);
+
+        /// <summary>
         /// Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
         /// results may be available beyond the query's limit. Use this method when your query has a limited
         /// number of results, for example to build a web application which fetches results in pages.
@@ -404,7 +422,7 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         /// <remarks>This method delegates to <see cref="Upsert(IEnumerable{Entity})"/>.</remarks>
         /// <param name="entities">The entities to upsert. Must not be null.</param>
-        public virtual void Upsert(params Entity[] entities) => Upsert((IEnumerable<Entity>)entities);
+        public virtual void Upsert(params Entity[] entities) => Upsert((IEnumerable<Entity>) entities);
 
         /// <summary>
         /// Adds update operations for all the specified keys to this transaction.
@@ -419,7 +437,7 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         /// <remarks>This method delegates to <see cref="Update(IEnumerable{Entity})"/>.</remarks>
         /// <param name="entities">The entities to update. Must not be null.</param>
-        public virtual void Update(params Entity[] entities) => Update((IEnumerable<Entity>)entities);
+        public virtual void Update(params Entity[] entities) => Update((IEnumerable<Entity>) entities);
 
         /// <summary>
         /// Adds insert operations for all the specified keys to this transaction.
@@ -434,7 +452,7 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         /// <remarks>This method delegates to <see cref="Insert(IEnumerable{Entity})"/>.</remarks>
         /// <param name="entities">The entities to insert. Must not be null.</param>
-        public virtual void Insert(params Entity[] entities) => Insert((IEnumerable<Entity>)entities);
+        public virtual void Insert(params Entity[] entities) => Insert((IEnumerable<Entity>) entities);
 
         /// <summary>
         /// Adds delete operations for all the specified keys to this transaction.
@@ -449,7 +467,7 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         /// <remarks>This method delegates to <see cref="Delete(IEnumerable{Entity})"/>.</remarks>
         /// <param name="entities">The entities to delete. Must not be null.</param>
-        public virtual void Delete(params Entity[] entities) => Delete((IEnumerable<Entity>)entities);
+        public virtual void Delete(params Entity[] entities) => Delete((IEnumerable<Entity>) entities);
 
         /// <summary>
         /// Adds deletion operations for all the specified keys to this transaction.
@@ -464,7 +482,7 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         /// <remarks>This method delegates to <see cref="Delete(IEnumerable{Key})"/>.</remarks>
         /// <param name="keys">The keys to delete. Must not be null.</param>
-        public virtual void Delete(params Key[] keys) => Delete((IEnumerable<Key>)keys);
+        public virtual void Delete(params Key[] keys) => Delete((IEnumerable<Key>) keys);
 
         /// <summary>
         /// Commits all mutations in this transaction.
