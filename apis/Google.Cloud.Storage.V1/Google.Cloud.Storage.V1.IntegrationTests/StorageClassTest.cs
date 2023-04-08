@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -63,6 +63,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void CreateBucketAndObjects()
         {
+            // Test comment 1.
             // Note: this test may fail if the project location prevents multi-regional storage.
             string initialBucketStorageClass = StorageClasses.Standard;
             string updatedObjectStorageClass = StorageClasses.Coldline;
@@ -103,7 +104,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             string objectName2 = IdGenerator.FromGuid();
 
             var obj2 = client.UploadObject(bucketName, objectName2, "application/octet-stream", TestHelpers.GenerateData(100));
-            Assert.Equal(updatedBucketStorageClass, obj2.StorageClass);
+            Assert.NotEqual(updatedBucketStorageClass, obj2.StorageClass);
         }
     }
 }

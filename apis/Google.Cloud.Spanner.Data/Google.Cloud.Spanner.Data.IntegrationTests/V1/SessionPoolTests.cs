@@ -43,7 +43,6 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
                 MinimumPooledSessions = 5,
                 MaximumActiveSessions = 5,
                 IdleSessionRefreshDelay = TimeSpan.FromSeconds(10),
-                WriteSessionsFraction = 0,
                 SessionRefreshJitter = RetrySettings.NoJitter
             };
 

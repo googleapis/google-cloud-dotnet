@@ -147,6 +147,7 @@ namespace Google.Cloud.Spanner.Data
                 // until you commit or rollback.
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
+                
 
                 return await ((ISpannerTransaction)transaction)
                     .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
@@ -154,7 +155,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken, int timeoutSeconds /* ignored */)
+        public Task<ReliableStreamReader>  ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken, int timeoutSeconds /* ignored */)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteReadOrQuery", _connection.Logger);
 

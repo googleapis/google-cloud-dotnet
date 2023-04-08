@@ -24,7 +24,7 @@ namespace Google.Cloud.Spanner.V1
     {
         /// <summary>
         /// A "session pool" for sessions that aren't really pooled. This is used by
-        /// <see cref="SessionPool.CreateDetachedSession(SessionName, Protobuf.ByteString, TransactionOptions.ModeOneofCase, Timestamp)"/>.
+        /// <see cref="SessionPool.CreateDetachedSession(SessionName, Protobuf.ByteString, TransactionOptions, Timestamp)"/>.
         /// We need to have it in *a* pool so that we can use <see cref="PooledSession"/>, and we need to be able to
         /// delete the session if requested (so we need to know our parent), but that's all.
         /// </summary>

@@ -48,7 +48,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// See <see cref="ReadRequest.Transaction"/> and <see cref="ExecuteSqlRequest.Transaction"/>
         /// </summary>
-        TransactionSelector Transaction { set; }
+        TransactionSelector Transaction { get; set; }
 
         /// <summary>
         /// See <see cref="ReadRequest.ResumeToken"/> and <see cref="ExecuteSqlRequest.ResumeToken"/>
@@ -234,6 +234,7 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public TransactionSelector Transaction
         {
+            get => Request.Transaction;
             set => Request.Transaction = value;
         }
 

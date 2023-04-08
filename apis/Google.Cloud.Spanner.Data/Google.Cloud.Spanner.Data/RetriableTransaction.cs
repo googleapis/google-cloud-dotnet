@@ -59,9 +59,14 @@ namespace Google.Cloud.Spanner.Data
 
                         try
                         {
-                            session = await (session?.WithFreshTransactionOrNewAsync(SpannerConnection.ReadWriteTransactionOptions, cancellationToken) ?? _connection.AcquireReadWriteSessionAsync(cancellationToken)).ConfigureAwait(false);
-                            transaction = new SpannerTransaction(_connection, TransactionMode.ReadWrite, session, null, true);
+                            if (session == null)
+                            {
+                                session = await _connection.AcquireReadWriteSessionAsync(cancellationToken).ConfigureAwait(false);
+                            }
+                            // Begins new transaction in the session.
+                            session = await session.WithFreshTransactionOrNewAsync(SpannerConnection.ReadWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
 
+                            transaction = new SpannerTransaction(_connection, TransactionMode.ReadWrite, session, null, true);
                             TResult result = await asyncWork(transaction).ConfigureAwait(false);
                             await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
 

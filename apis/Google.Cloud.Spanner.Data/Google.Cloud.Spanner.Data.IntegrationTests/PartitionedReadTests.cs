@@ -32,6 +32,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [SkippableTheory, CombinatorialData]
         public async Task DistributedReadAsync(bool dataBoostEnabled)
         {
+            Skip.If(dataBoostEnabled, "https://github.com/googleapis/google-cloud-dotnet/issues/10492");
             // TODO: xUnit 3 will allow to set traits to individual data rows, and we should use that instead for consistency.
             Skip.If(dataBoostEnabled && _fixture.RunningOnEmulator, "DataBoostEnabled is not supported on the emulator");
 
@@ -46,15 +47,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await AssertAllRowsReadAsync(partitions, transactionId);
             }
             finally
-            { 
+            {
                 DisposeTransaction(transactionId);
             }
-
         }
 
         [SkippableTheory, CombinatorialData]
         public async Task DistributedQueryAsync(bool dataBoostEnabled)
         {
+            Skip.If(dataBoostEnabled, "https://github.com/googleapis/google-cloud-dotnet/issues/10492");
             // TODO: xUnit 3 will allow to set traits to individual data rows, and we should use that instead for consistency.
             Skip.If(dataBoostEnabled && _fixture.RunningOnEmulator, "DataBoostEnabled is not supported on the emulator");
 
@@ -105,11 +106,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using var connection = new SpannerConnection(id.ConnectionString);
             using var transaction = connection.BeginReadOnlyTransaction(id);
             using var cmd = connection.CreateCommandWithPartition(readPartition, transaction);
-            using (var reader = await cmd.ExecuteReaderAsync())            
-            while (await reader.ReadAsync())
-            {
-                readRows++;
-            }
+            using (var reader = await cmd.ExecuteReaderAsync())
+                while (await reader.ReadAsync())
+                {
+                    readRows++;
+                }
             return readRows;
         }
 

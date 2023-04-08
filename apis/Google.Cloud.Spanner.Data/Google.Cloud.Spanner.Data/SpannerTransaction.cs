@@ -511,18 +511,18 @@ namespace Google.Cloud.Spanner.Data
             switch (mode)
             {
                 case TransactionMode.ReadOnly:
-                {
-                    GaxPreconditions.CheckState(
-                        Mode == TransactionMode.ReadOnly || Mode == TransactionMode.ReadWrite,
-                        "You can only execute reads on a ReadWrite or ReadOnly Transaction!");
-                }
+                    {
+                        GaxPreconditions.CheckState(
+                            Mode == TransactionMode.ReadOnly || Mode == TransactionMode.ReadWrite,
+                            "You can only execute reads on a ReadWrite or ReadOnly Transaction!");
+                    }
                     break;
                 case TransactionMode.ReadWrite:
-                {
-                    GaxPreconditions.CheckState(
-                        Mode == TransactionMode.ReadWrite,
-                        "You can only execute read/write commands on a ReadWrite Transaction!");
-                }
+                    {
+                        GaxPreconditions.CheckState(
+                            Mode == TransactionMode.ReadWrite,
+                            "You can only execute read/write commands on a ReadWrite Transaction!");
+                    }
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);

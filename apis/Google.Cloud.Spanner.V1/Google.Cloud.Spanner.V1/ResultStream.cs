@@ -50,7 +50,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly LinkedList<PartialResultSet> _buffer;
         private readonly SpannerClient _client;
         private readonly ReadOrQueryRequest _request;
-        private readonly Session _session;
+        private readonly PooledSession _session;
         private readonly CallSettings _callSettings;
         private readonly RetrySettings _retrySettings;
         private readonly int _maxBufferSize;
@@ -66,7 +66,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Constructor for normal usage, with default buffer size, backoff settings and jitter.
         /// </summary>
-        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, Session session, CallSettings callSettings)
+        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, PooledSession session, CallSettings callSettings)
             : this(client, request, session, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
         {
         }
@@ -77,7 +77,7 @@ namespace Google.Cloud.Spanner.V1
         internal ResultStream(
             SpannerClient client,
             ReadOrQueryRequest request,
-            Session session,
+            PooledSession session,
             CallSettings callSettings,
             int maxBufferSize,
             RetrySettings retrySettings)
@@ -103,7 +103,12 @@ namespace Google.Cloud.Spanner.V1
 
         public async Task<bool> MoveNext(CancellationToken cancellationToken)
         {
+            _session.SetTransactionSelector(_request);
             var value = await ComputeNextAsync(cancellationToken).ConfigureAwait(false);
+            if (_session.TransactionId == null)
+            {
+                _session.TransactionId = value.Metadata.Transaction.Id;
+            }
             Current = value;
             return value != null;
         }
@@ -139,7 +144,7 @@ namespace Google.Cloud.Spanner.V1
                     }
                     bool hasNext = await _grpcCall.ResponseStream
                         .MoveNext(cancellationToken)
-                        .WithSessionExpiryChecking(_session)
+                        .WithSessionExpiryChecking(_session.Session)
                         .ConfigureAwait(false);
                     retryState.Reset();
 

@@ -203,10 +203,10 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         /// <param name="sessionName">The name of the transaction. Must not be null.</param>
         /// <param name="transactionId">The ID of the transaction. Must not be null.</param>
-        /// <param name="transactionMode">The mode of the transaction.</param>
+        /// <param name="transactionOptions"> The <see cref="TransactionOptions"/> containing the mode of the transaction.</param>
         /// <returns>A <see cref="PooledSession"/> for the given session and transaction.</returns>
-        public PooledSession CreateDetachedSession(SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode) =>
-            CreateDetachedSession(sessionName, transactionId, transactionMode, readTimestamp: null);
+        public PooledSession CreateDetachedSession(SessionName sessionName, ByteString transactionId, TransactionOptions transactionOptions) =>
+            CreateDetachedSession(sessionName, transactionId, transactionOptions, readTimestamp: null);
 
         /// <summary>
         /// Creates a <see cref="PooledSession"/> with a known name and transaction ID/mode, with the client associated
@@ -220,14 +220,14 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         /// <param name="sessionName">The name of the transaction. Must not be null.</param>
         /// <param name="transactionId">The ID of the transaction. Must not be null.</param>
-        /// <param name="transactionMode">The mode of the transaction.</param>
+        /// <param name="transactionOptions"> The <see cref="TransactionOptions"/> containing the mode of the transaction.</param>
         /// <param name="readTimestamp">The read timestamp of the transaction.</param>
         /// <returns>A <see cref="PooledSession"/> for the given session and transaction.</returns>
-        public PooledSession CreateDetachedSession(SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp)
+        public PooledSession CreateDetachedSession(SessionName sessionName, ByteString transactionId, TransactionOptions transactionOptions, Timestamp readTimestamp)
         {
             GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, transactionMode, readTimestamp);
+            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, transactionOptions, readTimestamp);
         }
 
         /// <summary>

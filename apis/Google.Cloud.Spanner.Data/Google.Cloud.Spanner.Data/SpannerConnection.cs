@@ -278,7 +278,8 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
             SessionName sessionName = SessionName.Parse(transactionId.Session);
             ByteString transactionIdBytes = ByteString.FromBase64(transactionId.Id);
-            var session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
+            TransactionOptions transactionOptions = new TransactionOptions { ReadOnly = new TransactionOptions.Types.ReadOnly() };
+            var session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, transactionOptions);
             // This transaction is coming from another process potentially, so we don't auto close it.
             return new SpannerTransaction(this, TransactionMode.ReadOnly, session, transactionId.TimestampBound, false)
             {
@@ -291,7 +292,7 @@ namespace Google.Cloud.Spanner.Data
         /// Begins a new Spanner transaction synchronously. This method hides <see cref="DbConnection.BeginTransaction()"/>, but behaves
         /// the same way, just with a more specific return type.
         /// </summary>
-        public new SpannerTransaction BeginTransaction() => (SpannerTransaction)base.BeginTransaction();
+        public new SpannerTransaction BeginTransaction() => (SpannerTransaction) base.BeginTransaction();
 
 #if NETSTANDARD2_1_OR_GREATER
         /// <inheritdoc />
@@ -336,7 +337,7 @@ namespace Google.Cloud.Spanner.Data
         public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
-            
+
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
@@ -696,7 +697,7 @@ namespace Google.Cloud.Spanner.Data
             return Builder.SessionPoolManager.GetDatabaseStatistics(new SpannerClientCreationOptions(Builder), sessionPoolSegmentKey);
         }
 
-        private SessionPoolSegmentKey  GetSessionPoolSegmentKey(string operationName)
+        private SessionPoolSegmentKey GetSessionPoolSegmentKey(string operationName)
         {
             DatabaseName databaseName = Builder.DatabaseName;
             GaxPreconditions.CheckState(databaseName != null, $"{operationName} cannot be used without a database.");
@@ -831,6 +832,13 @@ namespace Google.Cloud.Spanner.Data
             return originalSettings.WithExpiration(expiration).WithCancellationToken(cancellationToken);
         }
 
+        internal CallSettings CreateCallSettings(Func<SpannerSettings, CallSettings> settingsProvider, TimeSpan timeoutSpanSeconds, CancellationToken cancellationToken)
+        {
+            var originalSettings = settingsProvider(Builder.SessionPoolManager.SpannerSettings);
+            var expiration = timeoutSpanSeconds == null && !Builder.AllowImmediateTimeouts ? Expiration.None : Expiration.FromTimeout(timeoutSpanSeconds);
+            return originalSettings.WithExpiration(expiration).WithCancellationToken(cancellationToken);
+        }
+
         internal async Task<PooledSession> AcquireReadWriteSessionAsync(CancellationToken cancellationToken) =>
             await AcquireSessionAsync(ReadWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
 
@@ -863,7 +871,16 @@ namespace Google.Cloud.Spanner.Data
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
                     var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
-                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp, false);
+                    var request = new BeginTransactionRequest { Options = transactionOptions };
+                    var callSettings = CreateCallSettings(settings => settings.BeginTransactionSettings, _sessionPool.Options.Timeout, cancellationToken);
+                    var transaction = await session.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
+
+                    return new SpannerTransaction(
+                        this,
+                        transactionMode,
+                        session.WithTransaction(transaction.Id, transactionOptions),
+                        targetReadTimestamp,
+                        false);
                 }, "SpannerConnection.BeginTransaction", Logger);
         }
 

@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace Google.Cloud.Spanner.V1
         private TimeSpan _idleSessionRefreshDelay = TimeSpan.FromMinutes(15);
         private TimeSpan _poolEvictionDelay = TimeSpan.FromDays(7);
         private ResourcesExhaustedBehavior _waitOnResourcesExhausted = ResourcesExhaustedBehavior.Block;
-        private double _writeSessionsFraction = 0.2;
+        private double _writeSessionsFraction = 0;
         private TimeSpan _timeout = TimeSpan.FromSeconds(60);
         private TimeSpan _maintenanceLoopDelay = TimeSpan.FromSeconds(30);
         private int _createSessionMaximumBatchSize = 5;
@@ -142,10 +142,10 @@ namespace Google.Cloud.Spanner.V1
         /// </para>
         /// <para>This property must always be in the range 0-1 (inclusive). The default value is 0.2.</para>
         /// </remarks>
-        public double WriteSessionsFraction
+        public double qWriteSessionsFraction
         {
-            get => _writeSessionsFraction;
-            set => _writeSessionsFraction = GaxPreconditions.CheckArgumentRange(value, nameof(value), 0.0, 1.0);
+            get => 0;
+            set => _writeSessionsFraction = value;
         }
 
         /// <summary>
