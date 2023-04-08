@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -959,8 +959,46 @@ namespace Google.Cloud.Spanner.Data.Tests
                 It.IsAny<CallSettings>()));
         }
 
-        [Fact]
-        public async Task CanExecuteReadPartitionedReadCommand()
+        [Theory, CombinatorialData]
+        public async Task CanExecuteReadPartitionedReadCommand(bool dataBoostEnabled)
+        {
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupPartitionAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var transaction = await connection.BeginReadOnlyTransactionAsync();
+            var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
+            command.Transaction = transaction;
+            var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10).WithDataBoostEnabled(dataBoostEnabled));
+
+            Assert.Equal(dataBoostEnabled, CommandPartition.FromBase64String(partitions.FirstOrDefault().ToBase64String()).Request.DataBoostEnabled);
+
+            foreach (var partition in partitions)
+            {
+                // Normally we would send this information to another client to read, but we are just simulating it here
+                // by serializing and deserializing the information locally.
+                var tx = connection.BeginReadOnlyTransaction(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
+                var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
+                var reader = await cmd.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request =>
+                    !request.PartitionToken.IsEmpty &&
+                    request.DataBoostEnabled == dataBoostEnabled &&
+                    object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
+                It.IsAny<CallSettings>()), Times.Exactly(10));
+        }
+
+        // This unit test will be removed once we remove the obsolete method.
+        [Fact, Obsolete]
+        public async Task CanExecuteReadPartitionedReadCommand_WithoutOptions()
         {
             var spannerClientMock = SpannerClientHelpers
                 .CreateMockClient(Logger.DefaultLogger);
@@ -975,6 +1013,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
             var partitions = await command.GetReaderPartitionsAsync(0, 10);
+
             foreach (var partition in partitions)
             {
                 // Normally we would send this information to another client to read, but we are just simulating it here
@@ -986,7 +1025,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
 
             spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => !request.PartitionToken.IsEmpty && object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
+                It.Is<ReadRequest>(request =>
+                    !request.PartitionToken.IsEmpty &&
+                    request.DataBoostEnabled == false &&
+                    object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
                 It.IsAny<CallSettings>()), Times.Exactly(10));
         }
 
@@ -1091,7 +1133,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                  "Foo", ReadOptions.FromColumns(new List<string> { "Col1" }),
                  KeySet.FromParameters(new SpannerParameterCollection
                      {
-                        { "p", dbType, value } 
+                        { "p", dbType, value }
                      }));
             using var reader = command.ExecuteReader();
             Assert.True(reader.HasRows);
@@ -1123,7 +1165,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings, spannerClient.Settings.Logger, (_o, _s, _l) => Task.FromResult(spannerClient));
             sessionPoolManager.SpannerSettings.Scheduler = spannerClient.Settings.Scheduler;
             sessionPoolManager.SpannerSettings.Clock = spannerClient.Settings.Clock;
-            
+
             builder.DataSource = DatabaseName.Format(SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance, SpannerClientHelpers.Database);
             builder.SessionPoolManager = sessionPoolManager;
             return new SpannerConnection(builder);

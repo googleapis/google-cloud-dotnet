@@ -164,7 +164,7 @@ namespace Google.Cloud.Spanner.Data
                 return effectiveTransaction.ExecuteReadOrQueryAsync(request, cancellationToken, CommandTimeout);
             }
 
-            internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(long? partitionSizeBytes, long? maxPartitions, CancellationToken cancellationToken)
+            internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(PartitionOptions options, CancellationToken cancellationToken)
             {
                 ValidateConnectionAndCommandTextBuilder();
 
@@ -173,8 +173,9 @@ namespace Google.Cloud.Spanner.Data
 
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 var readOrQueryRequest = GetReadOrQueryRequest();
+                readOrQueryRequest.DataBoostEnabled = options.DataBoostEnabled;
                 var tokens = await Transaction.GetPartitionTokensAsync(
-                        readOrQueryRequest, partitionSizeBytes, maxPartitions, cancellationToken, CommandTimeout)
+                        readOrQueryRequest, options.PartitionSizeBytes, options.MaxPartitions, cancellationToken, CommandTimeout)
                     .ConfigureAwait(false);
                 return tokens.Select(
                     x =>

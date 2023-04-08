@@ -204,7 +204,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Returns true if this transaction is being used by multiple <see cref="SpannerConnection"/> objects.
-        /// <see cref="SpannerCommand.GetReaderPartitionsAsync"/> will automatically mark the transaction as shared
+        /// <see cref="SpannerCommand.GetReaderPartitionsAsync(PartitionOptions, CancellationToken)"/> will automatically mark the transaction as shared
         /// because it is expected that you will be distributing the read among several tasks or processes.
         /// </summary>
         public bool Shared { get; internal set; }
