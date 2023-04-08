@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
+using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,42 +31,72 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public PartitionedReadTests(PartitionedReadTableFixture fixture) =>
             _fixture = fixture;
 
-        [CombinatorialData]
-        [Theory]
-        public async Task DistributedReadAsync(bool query)
+        [Theory, CombinatorialData]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
+        public async Task DistributedReadAsync(bool query, bool dataBoostEnabled)
         {
-            int numRows;
-            using (var connection = _fixture.GetConnection())
+            int numRows = await GetNumberOfRows();
+
+            using var connection = new SpannerConnection(_fixture.ConnectionString);
+            await connection.OpenAsync();
+
+            using var transaction = await connection.BeginReadOnlyTransactionAsync();
+            using var cmd = query
+                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}")
+                : connection.CreateReadCommand(_fixture.TableName, ReadOptions.FromColumns(_fixture.ColumnNames), KeySet.All);
+            transaction.DisposeBehavior = DisposeBehavior.CloseResources;
+            cmd.Transaction = transaction;
+            var partitions = await cmd.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(100).WithDataBoostEnabled(dataBoostEnabled));
+            var transactionId = transaction.TransactionId;
+
+            if (query)
             {
-                using (var cmd = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_fixture.TableName}"))
-                {
-                    numRows = await cmd.ExecuteScalarAsync<int>();
-                }
+                Assert.Equal(dataBoostEnabled, partitions.FirstOrDefault().Request.ExecuteSqlRequest.DataBoostEnabled);
+            }
+            else
+            {
+                Assert.Equal(dataBoostEnabled, partitions.FirstOrDefault().Request.ReadRequest.DataBoostEnabled);
             }
 
-            using (var connection = new SpannerConnection(_fixture.ConnectionString))
-            {
-                await connection.OpenAsync();
+            await Task.WhenAll(partitions.Select(
+                    partitions => DistributedReadWorkerAsync(partitions, transactionId)))
+                .ConfigureAwait(false);
 
-                using (var transaction = await connection.BeginReadOnlyTransactionAsync())
-                using (var cmd = query
-                    ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}")
-                    : connection.CreateReadCommand(_fixture.TableName, ReadOptions.FromColumns(_fixture.ColumnNames), KeySet.All))
-                {
-                    transaction.DisposeBehavior = DisposeBehavior.CloseResources;
-                    cmd.Transaction = transaction;
-                    var partitions = await cmd.GetReaderPartitionsAsync(1000);
-                    var transactionId = transaction.TransactionId;
+            Assert.Equal(numRows, _rowsRead);
+        }
 
-                    //we simulate a serialization/deserialization step in the call to the subtask.
-                    await Task.WhenAll(partitions.Select(
-                            x => DistributedReadWorkerAsync(CommandPartition.FromBase64String(x.ToBase64String()),
-                                            TransactionId.FromBase64String(transactionId.ToBase64String()))))
-                        .ConfigureAwait(false);
-                }
+        [Theory, CombinatorialData, Obsolete]
 
-                Assert.Equal(numRows, _rowsRead);
-            }
+        public async Task DistributedReadAsyncWithoutOptions(bool query)
+        {
+            int numRows = await GetNumberOfRows();
+
+            using var connection = new SpannerConnection(_fixture.ConnectionString);
+            await connection.OpenAsync();
+
+            using var transaction = await connection.BeginReadOnlyTransactionAsync();
+            using var cmd = query
+                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}")
+                : connection.CreateReadCommand(_fixture.TableName, ReadOptions.FromColumns(_fixture.ColumnNames), KeySet.All);
+            transaction.DisposeBehavior = DisposeBehavior.CloseResources;
+            cmd.Transaction = transaction;
+            var partitions = await cmd.GetReaderPartitionsAsync(1000);
+            var transactionId = transaction.TransactionId;
+
+            //we simulate a serialization/deserialization step in the call to the subtask.
+            await Task.WhenAll(partitions.Select(
+                    x => DistributedReadWorkerAsync(CommandPartition.FromBase64String(x.ToBase64String()),
+                                    TransactionId.FromBase64String(transactionId.ToBase64String()))))
+                .ConfigureAwait(false);
+
+            Assert.Equal(numRows, _rowsRead);
+        }
+
+        private async Task<int> GetNumberOfRows()
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_fixture.TableName}");
+            return await cmd.ExecuteScalarAsync<int>();
         }
 
         /// <summary>
