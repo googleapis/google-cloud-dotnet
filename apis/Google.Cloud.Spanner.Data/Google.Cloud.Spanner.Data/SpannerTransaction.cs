@@ -287,7 +287,7 @@ namespace Google.Cloud.Spanner.Data
                     _mutations.AddRange(mutations);
                 }
                 taskCompletionSource.SetResult(mutations.Count);
-                return taskCompletionSource.Task;
+                return Task.FromResult(taskCompletionSource.Task.Result);
             }, "SpannerTransaction.ExecuteMutations", SpannerConnection.Logger);
         }
 
@@ -362,8 +362,7 @@ namespace Google.Cloud.Spanner.Data
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
-                var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteBatchDmlSettings, timeoutSeconds, cancellationToken);
-                ExecuteBatchDmlResponse response = await _session.ExecuteBatchDmlAsync(request, callSettings).ConfigureAwait(false);
+                var response = await _session.ExecuteWithTransactionSelector(AsyncWork, request.Transaction).ConfigureAwait(false);
                 IEnumerable<long> result = response.ResultSets.Select(rs => rs.Stats.RowCountExact);
                 // Work around an issue with the emulator, which can return an ExecuteBatchDmlResponse without populating a status.
                 // TODO: Remove this when the emulator has been fixed, although it does no harm if it stays longer than strictly necessary.
@@ -381,6 +380,13 @@ namespace Google.Cloud.Spanner.Data
                     throw new SpannerBatchNonQueryException(response.Status, result);
                 }
             }, "SpannerTransaction.ExecuteBatchDml", SpannerConnection.Logger);
+
+            async Task<ExecuteBatchDmlResponse> AsyncWork(TransactionSelector transaction)
+            {
+                request.Transaction = transaction;
+                var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteBatchDmlSettings, timeoutSeconds, cancellationToken);
+                return await _session.ExecuteBatchDmlAsync(request, callSettings).ConfigureAwait(false);
+            }
         }
 
         /// <inheritdoc />
@@ -511,18 +517,18 @@ namespace Google.Cloud.Spanner.Data
             switch (mode)
             {
                 case TransactionMode.ReadOnly:
-                {
-                    GaxPreconditions.CheckState(
-                        Mode == TransactionMode.ReadOnly || Mode == TransactionMode.ReadWrite,
-                        "You can only execute reads on a ReadWrite or ReadOnly Transaction!");
-                }
+                    {
+                        GaxPreconditions.CheckState(
+                            Mode == TransactionMode.ReadOnly || Mode == TransactionMode.ReadWrite,
+                            "You can only execute reads on a ReadWrite or ReadOnly Transaction!");
+                    }
                     break;
                 case TransactionMode.ReadWrite:
-                {
-                    GaxPreconditions.CheckState(
-                        Mode == TransactionMode.ReadWrite,
-                        "You can only execute read/write commands on a ReadWrite Transaction!");
-                }
+                    {
+                        GaxPreconditions.CheckState(
+                            Mode == TransactionMode.ReadWrite,
+                            "You can only execute read/write commands on a ReadWrite Transaction!");
+                    }
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);

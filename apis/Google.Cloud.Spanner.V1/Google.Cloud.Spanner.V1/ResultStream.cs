@@ -19,6 +19,7 @@ using Google.Rpc;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -50,7 +51,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly LinkedList<PartialResultSet> _buffer;
         private readonly SpannerClient _client;
         private readonly ReadOrQueryRequest _request;
-        private readonly Session _session;
+        private readonly PooledSession _session;
         private readonly CallSettings _callSettings;
         private readonly RetrySettings _retrySettings;
         private readonly int _maxBufferSize;
@@ -66,7 +67,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Constructor for normal usage, with default buffer size, backoff settings and jitter.
         /// </summary>
-        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, Session session, CallSettings callSettings)
+        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, PooledSession session, CallSettings callSettings)
             : this(client, request, session, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
         {
         }
@@ -77,7 +78,7 @@ namespace Google.Cloud.Spanner.V1
         internal ResultStream(
             SpannerClient client,
             ReadOrQueryRequest request,
-            Session session,
+            PooledSession session,
             CallSettings callSettings,
             int maxBufferSize,
             RetrySettings retrySettings)
@@ -103,9 +104,17 @@ namespace Google.Cloud.Spanner.V1
 
         public async Task<bool> MoveNext(CancellationToken cancellationToken)
         {
-            var value = await ComputeNextAsync(cancellationToken).ConfigureAwait(false);
+            // AFTER ILB CONFIRM THIS BEHAVIOUR. IF THE TRANACTION IS NULL THEN EXECUTE THE READ/SELECT QUERY USING NULL TRANSACTION.
+            var value = await _session.ExecuteWithTransactionSelector<PartialResultSet>(AsynWork, _request.Transaction).ConfigureAwait(false);
+
             Current = value;
             return value != null;
+
+            async Task<PartialResultSet> AsynWork(TransactionSelector transaction)
+            {
+               _request.Transaction = transaction;
+               return await ComputeNextAsync(cancellationToken).ConfigureAwait(false);
+            }
         }
 
         // See https://github.com/googleapis/google-cloud-java/blob/master/google-cloud-clients/google-cloud-spanner/src/main/java/com/google/cloud/spanner/SpannerImpl.java#L2674
@@ -139,7 +148,7 @@ namespace Google.Cloud.Spanner.V1
                     }
                     bool hasNext = await _grpcCall.ResponseStream
                         .MoveNext(cancellationToken)
-                        .WithSessionExpiryChecking(_session)
+                        .WithSessionExpiryChecking(_session.Session)
                         .ConfigureAwait(false);
                     retryState.Reset();
 
