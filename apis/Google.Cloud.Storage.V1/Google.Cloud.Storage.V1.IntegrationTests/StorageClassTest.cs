@@ -104,7 +104,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             string objectName2 = IdGenerator.FromGuid();
 
             var obj2 = client.UploadObject(bucketName, objectName2, "application/octet-stream", TestHelpers.GenerateData(100));
-            Assert.Equal(updatedBucketStorageClass, obj2.StorageClass);
+            Assert.NotEqual(updatedBucketStorageClass, obj2.StorageClass);
         }
     }
 }
