@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,11 +22,11 @@ namespace Google.Cloud.Datastore.V1.Tests
         [Fact]
         public void PartitionOnlyFactory()
         {
-            var factory = new KeyFactory("project", "ns", "book");
+            var factory = new KeyFactory("project", "ns", "db", "book");
             var actual = factory.CreateKey(10L);
             var expected = new Key
             {
-                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns" },
+                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns", DatabaseId = "db" },
                 Path = { new PathElement { Id = 10L, Kind = "book" } }
             };
             Assert.Equal(expected, actual);
@@ -37,14 +37,14 @@ namespace Google.Cloud.Datastore.V1.Tests
         {
             var parentKey = new Key
             {
-                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns" },
+                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns", DatabaseId = "db" },
                 Path = { new PathElement { Id = 10L, Kind = "author" } }
             };
             var factory = new KeyFactory(parentKey, "book");
             var actual = factory.CreateKey("subkey-name");
             var expected = new Key
             {
-                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns" },
+                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns", DatabaseId = "db" },
                 Path = {
                     new PathElement { Id = 10L, Kind = "author" },
                     new PathElement { Name = "subkey-name", Kind = "book" }
@@ -58,7 +58,7 @@ namespace Google.Cloud.Datastore.V1.Tests
         {
             var parentKey = new Key
             {
-                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns" },
+                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns", DatabaseId = "db" },
                 Path = { new PathElement { Id = 10L, Kind = "author" } }
             };
             var book = new Entity { Key = parentKey };
@@ -66,7 +66,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             var actual = factory.CreateKey(20L);
             var expected = new Key
             {
-                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns" },
+                PartitionId = new PartitionId { ProjectId = "project", NamespaceId = "ns", DatabaseId = "db" },
                 Path = {
                     new PathElement { Id = 10L, Kind = "author" },
                     new PathElement { Id = 20L, Kind = "book" }

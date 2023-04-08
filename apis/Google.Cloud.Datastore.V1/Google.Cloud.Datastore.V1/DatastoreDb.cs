@@ -58,6 +58,8 @@ namespace Google.Cloud.Datastore.V1
     {
         internal const string DefaultNamespaceId = "";
 
+        internal const string DefaultDatabaseId = "";
+
         /// <summary>
         /// The <see cref="DatastoreClient"/> used for all remote operations.
         /// </summary>
@@ -72,6 +74,11 @@ namespace Google.Cloud.Datastore.V1
         /// The ID of the namespace this instance operates on.
         /// </summary>
         public virtual string NamespaceId { get { throw new NotImplementedException(); } }
+
+        /// <summary>
+        /// The ID of the database against which the request is to be made.
+        /// </summary>
+        public virtual string DatabaseId { get { throw new NotImplementedException(); } }
 
         /// <summary>
         /// Creates a <see cref="DatastoreDb"/> to operate on the partition identified by <paramref name="projectId"/>
@@ -509,6 +516,7 @@ namespace Google.Cloud.Datastore.V1
         internal static IReadOnlyList<Entity> LookupImpl(
             DatastoreClient client,
             string projectId,
+            string databaseId,
             ReadOptions readOptions,
             IEnumerable<Key> keys,
             CallSettings callSettings)
@@ -522,7 +530,15 @@ namespace Google.Cloud.Datastore.V1
             // TODO: Limit how many times we go round? Ensure that we make progress on each iteration?
             while (keysToFetch.Count() > 0)
             {
-                var response = client.Lookup(projectId, readOptions, keysToFetch, callSettings);
+                var lookupRequest = new LookupRequest
+                {
+                    ProjectId = projectId,
+                    DatabaseId = databaseId,
+                    ReadOptions = readOptions,
+                    Keys = { keysToFetch },
+                };
+
+                var response = client.Lookup(lookupRequest, callSettings);
                 foreach (var found in response.Found)
                 {
                     foreach (var index in keyToIndex[found.Entity.Key])
@@ -539,6 +555,7 @@ namespace Google.Cloud.Datastore.V1
         internal static async Task<IReadOnlyList<Entity>> LookupImplAsync(
             DatastoreClient client,
             string projectId,
+            string databaseId,
             ReadOptions readOptions,
             IEnumerable<Key> keys,
             CallSettings callSettings)
@@ -552,7 +569,15 @@ namespace Google.Cloud.Datastore.V1
             // TODO: Limit how many times we go round? Ensure that we make progress on each iteration?
             while (keysToFetch.Count() > 0)
             {
-                var response = await client.LookupAsync(projectId, readOptions, keysToFetch, callSettings).ConfigureAwait(false);
+                var lookupRequest = new LookupRequest
+                {
+                    ProjectId = projectId,
+                    DatabaseId = databaseId,
+                    ReadOptions = readOptions,
+                    Keys = { keysToFetch },
+                };
+
+                var response = await client.LookupAsync(lookupRequest, callSettings).ConfigureAwait(false);
                 foreach (var found in response.Found)
                 {
                     foreach (var index in keyToIndex[found.Entity.Key])

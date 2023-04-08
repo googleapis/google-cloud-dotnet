@@ -34,6 +34,7 @@ namespace Google.Cloud.Datastore.V1
 
         private readonly DatastoreClient _client;
         private readonly string _projectId;
+        private readonly string _databaseId;
         private readonly PartitionId _partitionId;
         private readonly List<Mutation> _mutations = new List<Mutation>();
         private readonly List<Action<Key>> _keyPropagations = new List<Action<Key>>();
@@ -53,11 +54,31 @@ namespace Google.Cloud.Datastore.V1
         /// to use in query operations. May be null.</param>
         /// <param name="transactionId">The transaction obtained by an earlier <see cref="DatastoreClient.BeginTransaction(string, CallSettings)"/>
         /// or the asynchronous equivalent. Must not be null</param>
-        public DatastoreTransactionImpl(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId)
+        public DatastoreTransactionImpl(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId) :
+            this(client, projectId, namespaceId, DatastoreDb.DefaultDatabaseId, transactionId)
+        { }
+
+        /// <summary>
+        /// Constructs a <see cref="DatastoreTransactionImpl"/> from a client, project ID and transaction ID.
+        /// </summary>
+        /// <remarks>
+        /// While this can be constructed manually, the expectation is that instances of this class are obtained via
+        /// <see cref="DatastoreDb.BeginTransaction(CallSettings)"/> or <see cref="DatastoreDb.BeginTransactionAsync(CallSettings)"/>.
+        /// </remarks>
+        /// <param name="client">The client to use for Datastore operations. Must not be null.</param>
+        /// <param name="projectId">The ID of the project of the Datastore operations. Must not be null.</param>
+        /// <param name="namespaceId">The ID of the namespace which is combined with <paramref name="projectId"/> and <paramref name="databaseId"/> to form a partition ID
+        /// to use in query operations. May be null.</param>
+        /// <param name="databaseId">The ID of the databse which is combined with <paramref name="projectId"/> and <paramref name="namespaceId"/> to form a partition ID
+        /// to use in query operations. May be null.</param>
+        /// <param name="transactionId">The transaction obtained by an earlier <see cref="DatastoreClient.BeginTransaction(string, CallSettings)"/>
+        /// or the asynchronous equivalent. Must not be null</param>
+        public DatastoreTransactionImpl(DatastoreClient client, string projectId, string namespaceId, string databaseId, ByteString transactionId)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _partitionId = new PartitionId(projectId, namespaceId);
+            _databaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
+            _partitionId = new PartitionId(projectId, namespaceId, databaseId);
             TransactionId = GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
             _readOptions = new ReadOptions { Transaction = TransactionId };
             _active = true;
@@ -70,6 +91,7 @@ namespace Google.Cloud.Datastore.V1
             var request = new RunQueryRequest
             {
                 ProjectId = _projectId,
+                DatabaseId = _databaseId,
                 PartitionId = _partitionId,
                 Query = query,
                 ReadOptions = _readOptions
@@ -85,6 +107,7 @@ namespace Google.Cloud.Datastore.V1
             var request = new RunQueryRequest
             {
                 ProjectId = _projectId,
+                DatabaseId = _databaseId,
                 PartitionId = _partitionId,
                 Query = query,
                 ReadOptions = _readOptions
@@ -100,6 +123,7 @@ namespace Google.Cloud.Datastore.V1
             var request = new RunQueryRequest
             {
                 ProjectId = _projectId,
+                DatabaseId = _databaseId,
                 PartitionId = _partitionId,
                 GqlQuery = gqlQuery,
                 ReadOptions = _readOptions
@@ -115,6 +139,7 @@ namespace Google.Cloud.Datastore.V1
             var request = new RunQueryRequest
             {
                 ProjectId = _projectId,
+                DatabaseId = _databaseId,
                 PartitionId = _partitionId,
                 GqlQuery = gqlQuery,
                 ReadOptions = _readOptions
@@ -130,6 +155,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 AggregationQuery = query,
                 ProjectId = _projectId,
+                DatabaseId = _databaseId,
                 PartitionId = _partitionId,
                 ReadOptions = _readOptions
             };
@@ -144,6 +170,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 GqlQuery = query,
                 ProjectId = _projectId,
+                DatabaseId = _databaseId,
                 PartitionId = _partitionId,
                 ReadOptions = _readOptions
             };
@@ -158,6 +185,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 AggregationQuery = query,
                 ProjectId = _projectId,
+                DatabaseId = _databaseId,
                 PartitionId = _partitionId,
                 ReadOptions = _readOptions
             };
@@ -172,6 +200,7 @@ namespace Google.Cloud.Datastore.V1
             {
                 GqlQuery = query,
                 ProjectId = _projectId,
+                DatabaseId = _databaseId,
                 PartitionId = _partitionId,
                 ReadOptions = _readOptions
             };
@@ -181,11 +210,11 @@ namespace Google.Cloud.Datastore.V1
 
         /// <inheritdoc />
         public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            DatastoreDb.LookupImpl(_client, _projectId, _readOptions, keys, callSettings);
+            DatastoreDb.LookupImpl(_client, _projectId, _databaseId, _readOptions, keys, callSettings);
 
         /// <inheritdoc />
         public override Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            DatastoreDb.LookupImplAsync(_client, _projectId, _readOptions, keys, callSettings);
+            DatastoreDb.LookupImplAsync(_client, _projectId, _databaseId, _readOptions, keys, callSettings);
 
         private void AddMutations<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Func<T, Action<Key>> keyPropagationProvider, string paramName)
         {

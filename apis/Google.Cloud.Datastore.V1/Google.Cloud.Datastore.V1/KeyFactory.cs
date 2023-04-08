@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -49,10 +49,20 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="projectId">The project ID for the factory. Must not be null.</param>
         /// <param name="namespaceId">The namespace ID for the factory. May be null in which case an empty string is used.</param>
         /// <param name="kind">The kind of root entity keys to create. Must not be null.</param>
-        public KeyFactory(string projectId, string namespaceId, string kind)
+        public KeyFactory(string projectId, string namespaceId, string kind) : this(projectId, namespaceId, null, kind)
+        { }
+
+        /// <summary>
+        /// Creates a key factory for the root of a partition.
+        /// </summary>
+        /// <param name="projectId">The project ID for the factory. Must not be null.</param>
+        /// <param name="namespaceId">The namespace ID for the factory. May be null in which case an empty string is used.</param>
+        /// <param name="databaseId">The database ID for the factory. May be null in which case an empty string is used.</param>
+        /// <param name="kind">The kind of root entity keys to create. Must not be null.</param>
+        public KeyFactory(string projectId, string namespaceId, string databaseId, string kind)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _parent = new Key { PartitionId = new PartitionId(projectId, namespaceId ?? "") };
+            _parent = new Key { PartitionId = new PartitionId(projectId, namespaceId ?? "", databaseId ?? "") };
             _kind = GaxPreconditions.CheckNotNull(kind, nameof(kind));
         }
 

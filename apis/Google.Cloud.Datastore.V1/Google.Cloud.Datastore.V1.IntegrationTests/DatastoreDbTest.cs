@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -68,6 +69,39 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.Equal("bar", (string)entity["foo"]);
         }
 
+        [Fact(Skip = "Multiple databases are available only in preview right now.")]
+        public async Task MultiDb_InsertLookupDelete()
+        {
+            await _fixture.RunWithTemporaryDatabaseAsync(databaseId =>
+            {
+                var db = _fixture.CreateDatastoreDbWithDatabase(databaseId);
+                var keyFactory = db.CreateKeyFactory("test_dbid");
+                var entities = new[]
+                {
+                    new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" },
+                    new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" }
+                };
+
+                var insertedKeys = db.Insert(entities);
+
+                Assert.Null(insertedKeys[0]); // Insert with predefined key
+                Assert.NotNull(insertedKeys[1]); // Insert with incomplete key
+                Assert.Equal(insertedKeys[1], entities[1].Key); // Inserted key is propagated into entity
+
+                var lookupKey = new Key
+                {
+                    PartitionId = new() { ProjectId = _fixture.ProjectId, NamespaceId = _fixture.NamespaceId, DatabaseId = databaseId },
+                    Path = { insertedKeys[1].Path }
+                };
+                var fetchedEntity = db.Lookup(lookupKey);
+                Assert.NotNull(fetchedEntity);
+                Assert.Equal("incomplete_key", fetchedEntity["description"]);
+
+                db.Delete(lookupKey);
+                Assert.Null(db.Lookup(lookupKey));
+            });
+        }
+
         [Fact]
         public async Task Lookup_NoPartition()
         {
@@ -85,7 +119,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 var lookupKey = new Key { Path = { insertedKey.Path } };
                 var result = db.Lookup(lookupKey);
                 Assert.NotNull(result);
-                Assert.Equal("bar", (string)entity["foo"]);
+                Assert.Equal("bar", (string) entity["foo"]);
 
                 // And the same lookup asynchronously...
                 Assert.Equal(result, await db.LookupAsync(lookupKey));
