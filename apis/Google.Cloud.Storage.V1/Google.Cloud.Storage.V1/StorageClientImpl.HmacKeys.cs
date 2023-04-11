@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -96,7 +96,8 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(accessId, nameof(accessId));
             var request = Service.Projects.HmacKeys.Get(projectId, accessId);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            RetryHandler.MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -109,7 +110,7 @@ namespace Google.Cloud.Storage.V1
             options?.ModifyRequest(request);
             if (key.ETag != null)
             {
-                RetryHandler.MarkAsRetriable(request);
+            RetryHandler.MarkAsRetriable(request);
             }
             return request;
         }
@@ -120,7 +121,8 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(accessId, nameof(accessId));
             var request = Service.Projects.HmacKeys.Delete(projectId, accessId);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            RetryHandler.MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -129,7 +131,8 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Projects.HmacKeys.List(projectId);
             request.ServiceAccountEmail = serviceAccountEmail; // Note: may be null
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            RetryHandler.MarkAsRetriable(request, retryOptions);
             return request;
         }
     }
