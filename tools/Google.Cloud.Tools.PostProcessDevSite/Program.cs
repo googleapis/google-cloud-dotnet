@@ -125,10 +125,10 @@ namespace Google.Cloud.Tools.PostProcessDevSite
         private void FixExternalReferences()
         {
             var dir = Path.Combine(_devSiteRoot, "api");
-            var manifest = File.ReadAllText(Path.Combine(dir, ".manifest"));
-            var packageUids = new HashSet<string>(JsonConvert.DeserializeObject<Dictionary<string, string>>(manifest).Keys);
 
-            Console.WriteLine($"Loaded {packageUids.Count} manifest entries");
+            var packageUids = LoadPackageUids();
+            Console.WriteLine($"Loaded {packageUids.Count} package UIDs");
+
             foreach (var yamlFile in Directory.GetFiles(dir, "*.yml"))
             {
                 if (Path.GetFileName(yamlFile) == "toc.yml")
@@ -171,10 +171,9 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                         var uidNode = GetChildByName(mappingNode, "uid");
                         var isExternalNode = GetChildByName(mappingNode, "isExternal");
                         var definitionNode = GetChildByName(mappingNode, "definition");
-                        if (uidNode is YamlScalarNode { Value: string uid } &&
-                            !packageUids.Contains(uid.TrimEnd('*')) &&
-                            isExternalNode is null &&
-                            definitionNode is null)
+                        if (isExternalNode is null &&
+                            definitionNode is null &&
+                            uidNode is YamlScalarNode { Value: string uid } && packageUids.Contains(uid))
                         {
                             mappingNode.Add("isExternal", "true");
                         }
@@ -192,6 +191,62 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                         }
                         break;
                 }
+            }
+
+            HashSet<string> LoadPackageUids()
+            {
+                var ret = new HashSet<string>();
+
+                // First load all the metadata files to find out which UIDs are created by this package.
+                foreach (var yamlFile in Directory.GetFiles(dir, "*.yml"))
+                {
+                    if (Path.GetFileName(yamlFile) == "toc.yml")
+                    {
+                        continue;
+                    }
+                    var yaml = new YamlStream();
+                    using (var reader = File.OpenText(yamlFile))
+                    {
+                        yaml.Load(reader);
+                    }
+                    var doc = (YamlMappingNode) yaml.Documents[0].RootNode;
+                    var items = GetChildByName(doc, "items");
+                    if (items is YamlSequenceNode node)
+                    {
+                        foreach (var item in node.Children.OfType<YamlMappingNode>())
+                        {
+                            if (GetChildByName(item, "uid") is not YamlScalarNode { Value: string uid })
+                            {
+                                continue;
+                            }
+                            ret.Add(uid);
+
+                            // Some nodes have an "overload" value ending in *, which are referenced elsewhere.
+                            // We can treat these as effectively internal UIDs.
+                            if (GetChildByName(item, "overload") is YamlScalarNode { Value: string overload })
+                            {
+                                ret.Add(overload);
+                            }
+
+                            // For namespaces, add all parents as well. (So if we're declaring "Google.Cloud.Xyz.V1", add "Google", "Google.Cloud", "Google.Cloud.Xyz" as well.)
+                            if (GetChildByName(item, "type") is YamlScalarNode { Value: "Namespace" })
+                            {
+                                string ns = uid;
+                                while (true)
+                                {
+                                    int lastDot = ns.LastIndexOf('.');
+                                    if (lastDot == -1)
+                                    {
+                                        break;
+                                    }
+                                    ns = ns.Substring(0, lastDot);
+                                    ret.Add(ns);
+                                }
+                            }
+                        }
+                    }
+                }
+                return ret;
             }
 
             YamlNode GetChildByName(YamlMappingNode parent, string name) =>
