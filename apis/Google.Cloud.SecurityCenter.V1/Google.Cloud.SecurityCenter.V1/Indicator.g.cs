@@ -58,10 +58,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// Represents what's commonly known as an Indicator of compromise (IoC) in
+  /// Represents what's commonly known as an _indicator of compromise_ (IoC) in
   /// computer forensics. This is an artifact observed on a network or in an
   /// operating system that, with high confidence, indicates a computer intrusion.
-  /// Reference: https://en.wikipedia.org/wiki/Indicator_of_compromise
+  /// For more information, see [Indicator of
+  /// compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
   /// </summary>
   public sealed partial class Indicator : pb::IMessage<Indicator>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -116,7 +117,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> ipAddresses_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of ip addresses associated to the Finding.
+    /// The list of IP addresses that are associated with the finding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

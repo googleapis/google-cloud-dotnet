@@ -124,7 +124,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UnexpectedCodeModificationFieldNumber = 2;
     private bool unexpectedCodeModification_;
     /// <summary>
-    /// True if unexpected modifications of kernel code memory are present.
+    /// True when unexpected modifications of kernel code memory are present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UnexpectedReadOnlyDataModificationFieldNumber = 3;
     private bool unexpectedReadOnlyDataModification_;
     /// <summary>
-    /// True if unexpected modifications of kernel read-only data memory are
+    /// True when unexpected modifications of kernel read-only data memory are
     /// present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,7 +155,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UnexpectedFtraceHandlerFieldNumber = 4;
     private bool unexpectedFtraceHandler_;
     /// <summary>
-    /// True if `ftrace` points are present with callbacks pointing to regions
+    /// True when `ftrace` points are present with callbacks pointing to regions
     /// that are not in the expected kernel or module code range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -171,7 +171,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UnexpectedKprobeHandlerFieldNumber = 5;
     private bool unexpectedKprobeHandler_;
     /// <summary>
-    /// True if `kprobe` points are present with callbacks pointing to regions
+    /// True when `kprobe` points are present with callbacks pointing to regions
     /// that are not in the expected kernel or module code range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -187,7 +187,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UnexpectedKernelCodePagesFieldNumber = 6;
     private bool unexpectedKernelCodePages_;
     /// <summary>
-    /// True if kernel code pages that are not in the expected kernel or module
+    /// True when kernel code pages that are not in the expected kernel or module
     /// code regions are present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -203,7 +203,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UnexpectedSystemCallHandlerFieldNumber = 7;
     private bool unexpectedSystemCallHandler_;
     /// <summary>
-    /// True if system call handlers that are are not in the expected kernel or
+    /// True when system call handlers that are are not in the expected kernel or
     /// module code regions are present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -219,7 +219,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UnexpectedInterruptHandlerFieldNumber = 8;
     private bool unexpectedInterruptHandler_;
     /// <summary>
-    /// True if interrupt handlers that are are not in the expected kernel or
+    /// True when interrupt handlers that are are not in the expected kernel or
     /// module code regions are present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -235,7 +235,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UnexpectedProcessesInRunqueueFieldNumber = 9;
     private bool unexpectedProcessesInRunqueue_;
     /// <summary>
-    /// True if unexpected processes in the scheduler run queue are present. Such
+    /// True when unexpected processes in the scheduler run queue are present. Such
     /// processes are in the run queue, but not in the process task list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

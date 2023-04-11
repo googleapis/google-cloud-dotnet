@@ -49,7 +49,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   #region Messages
   /// <summary>
   /// Exfiltration represents a data exfiltration attempt of one or more
-  /// sources to one or more targets.  Sources represent the source
+  /// sources to one or more targets. Sources represent the source
   /// of data that is exfiltrated, and Targets represents the destination the
   /// data was copied to.
   /// </summary>
