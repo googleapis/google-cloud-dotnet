@@ -159,6 +159,19 @@ namespace Google.Cloud.SecurityCenter.V1
         }
     }
 
+    public partial class CreateSecurityHealthAnalyticsCustomModuleRequest
+    {
+        /// <summary>
+        /// <see cref="SecurityHealthAnalyticsSettingsName"/>-typed view over the <see cref="Parent"/> resource name
+        /// property.
+        /// </summary>
+        public SecurityHealthAnalyticsSettingsName ParentAsSecurityHealthAnalyticsSettingsName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SecurityHealthAnalyticsSettingsName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateSourceRequest
     {
         /// <summary>
@@ -191,6 +204,19 @@ namespace Google.Cloud.SecurityCenter.V1
         public gcsv::NotificationConfigName NotificationConfigName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcsv::NotificationConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSecurityHealthAnalyticsCustomModuleRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::SecurityHealthAnalyticsCustomModuleName"/>-typed view over the <see cref="Name"/> resource
+        /// name property.
+        /// </summary>
+        public gcsv::SecurityHealthAnalyticsCustomModuleName SecurityHealthAnalyticsCustomModuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecurityHealthAnalyticsCustomModuleName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -239,6 +265,32 @@ namespace Google.Cloud.SecurityCenter.V1
         public gcsv::OrganizationSettingsName OrganizationSettingsName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcsv::OrganizationSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEffectiveSecurityHealthAnalyticsCustomModuleRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::EffectiveSecurityHealthAnalyticsCustomModuleName"/>-typed view over the <see cref="Name"/>
+        /// resource name property.
+        /// </summary>
+        public gcsv::EffectiveSecurityHealthAnalyticsCustomModuleName EffectiveSecurityHealthAnalyticsCustomModuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::EffectiveSecurityHealthAnalyticsCustomModuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetSecurityHealthAnalyticsCustomModuleRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::SecurityHealthAnalyticsCustomModuleName"/>-typed view over the <see cref="Name"/> resource
+        /// name property.
+        /// </summary>
+        public gcsv::SecurityHealthAnalyticsCustomModuleName SecurityHealthAnalyticsCustomModuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SecurityHealthAnalyticsCustomModuleName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -319,6 +371,19 @@ namespace Google.Cloud.SecurityCenter.V1
         public SourceName ParentAsSourceName
         {
             get => string.IsNullOrEmpty(Parent) ? null : SourceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListDescendantSecurityHealthAnalyticsCustomModulesRequest
+    {
+        /// <summary>
+        /// <see cref="SecurityHealthAnalyticsSettingsName"/>-typed view over the <see cref="Parent"/> resource name
+        /// property.
+        /// </summary>
+        public SecurityHealthAnalyticsSettingsName ParentAsSecurityHealthAnalyticsSettingsName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SecurityHealthAnalyticsSettingsName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
@@ -435,6 +500,32 @@ namespace Google.Cloud.SecurityCenter.V1
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListEffectiveSecurityHealthAnalyticsCustomModulesRequest
+    {
+        /// <summary>
+        /// <see cref="SecurityHealthAnalyticsSettingsName"/>-typed view over the <see cref="Parent"/> resource name
+        /// property.
+        /// </summary>
+        public SecurityHealthAnalyticsSettingsName ParentAsSecurityHealthAnalyticsSettingsName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SecurityHealthAnalyticsSettingsName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSecurityHealthAnalyticsCustomModulesRequest
+    {
+        /// <summary>
+        /// <see cref="SecurityHealthAnalyticsSettingsName"/>-typed view over the <see cref="Parent"/> resource name
+        /// property.
+        /// </summary>
+        public SecurityHealthAnalyticsSettingsName ParentAsSecurityHealthAnalyticsSettingsName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SecurityHealthAnalyticsSettingsName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

@@ -230,7 +230,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Representa a single contact's email address
+  /// The email address of a contact.
   /// </summary>
   public sealed partial class Contact : pb::IMessage<Contact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -280,7 +280,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int EmailFieldNumber = 1;
     private string email_ = "";
     /// <summary>
-    /// An email address e.g. "person123@company.com"
+    /// An email address. For example, "`person123@company.com`".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -51,24 +51,31 @@ namespace Google.Cloud.SecurityCenter.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             BulkMuteFindingsSettings = existing.BulkMuteFindingsSettings;
             BulkMuteFindingsOperationsSettings = existing.BulkMuteFindingsOperationsSettings.Clone();
+            CreateSecurityHealthAnalyticsCustomModuleSettings = existing.CreateSecurityHealthAnalyticsCustomModuleSettings;
             CreateSourceSettings = existing.CreateSourceSettings;
             CreateFindingSettings = existing.CreateFindingSettings;
             CreateMuteConfigSettings = existing.CreateMuteConfigSettings;
             CreateNotificationConfigSettings = existing.CreateNotificationConfigSettings;
             DeleteMuteConfigSettings = existing.DeleteMuteConfigSettings;
             DeleteNotificationConfigSettings = existing.DeleteNotificationConfigSettings;
+            DeleteSecurityHealthAnalyticsCustomModuleSettings = existing.DeleteSecurityHealthAnalyticsCustomModuleSettings;
             GetBigQueryExportSettings = existing.GetBigQueryExportSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             GetMuteConfigSettings = existing.GetMuteConfigSettings;
             GetNotificationConfigSettings = existing.GetNotificationConfigSettings;
             GetOrganizationSettingsSettings = existing.GetOrganizationSettingsSettings;
+            GetEffectiveSecurityHealthAnalyticsCustomModuleSettings = existing.GetEffectiveSecurityHealthAnalyticsCustomModuleSettings;
+            GetSecurityHealthAnalyticsCustomModuleSettings = existing.GetSecurityHealthAnalyticsCustomModuleSettings;
             GetSourceSettings = existing.GetSourceSettings;
             GroupAssetsSettings = existing.GroupAssetsSettings;
             GroupFindingsSettings = existing.GroupFindingsSettings;
             ListAssetsSettings = existing.ListAssetsSettings;
+            ListDescendantSecurityHealthAnalyticsCustomModulesSettings = existing.ListDescendantSecurityHealthAnalyticsCustomModulesSettings;
             ListFindingsSettings = existing.ListFindingsSettings;
             ListMuteConfigsSettings = existing.ListMuteConfigsSettings;
             ListNotificationConfigsSettings = existing.ListNotificationConfigsSettings;
+            ListEffectiveSecurityHealthAnalyticsCustomModulesSettings = existing.ListEffectiveSecurityHealthAnalyticsCustomModulesSettings;
+            ListSecurityHealthAnalyticsCustomModulesSettings = existing.ListSecurityHealthAnalyticsCustomModulesSettings;
             ListSourcesSettings = existing.ListSourcesSettings;
             RunAssetDiscoverySettings = existing.RunAssetDiscoverySettings;
             RunAssetDiscoveryOperationsSettings = existing.RunAssetDiscoveryOperationsSettings.Clone();
@@ -81,6 +88,7 @@ namespace Google.Cloud.SecurityCenter.V1
             UpdateMuteConfigSettings = existing.UpdateMuteConfigSettings;
             UpdateNotificationConfigSettings = existing.UpdateNotificationConfigSettings;
             UpdateOrganizationSettingsSettings = existing.UpdateOrganizationSettingsSettings;
+            UpdateSecurityHealthAnalyticsCustomModuleSettings = existing.UpdateSecurityHealthAnalyticsCustomModuleSettings;
             UpdateSourceSettings = existing.UpdateSourceSettings;
             UpdateSecurityMarksSettings = existing.UpdateSecurityMarksSettings;
             CreateBigQueryExportSettings = existing.CreateBigQueryExportSettings;
@@ -121,6 +129,19 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModule</c> and
+        /// <c>SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSecurityHealthAnalyticsCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -195,6 +216,19 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteNotificationConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModule</c> and
+        /// <c>SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSecurityHealthAnalyticsCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -287,6 +321,50 @@ namespace Google.Cloud.SecurityCenter.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModule</c> and
+        /// <c>SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEffectiveSecurityHealthAnalyticsCustomModuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.GetSecurityHealthAnalyticsCustomModule</c> and
+        /// <c>SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSecurityHealthAnalyticsCustomModuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SecurityCenterClient.GetSource</c> and <c>SecurityCenterClient.GetSourceAsync</c>.
         /// </summary>
         /// <remarks>
@@ -371,6 +449,28 @@ namespace Google.Cloud.SecurityCenter.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModules</c> and
+        /// <c>SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDescendantSecurityHealthAnalyticsCustomModulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>SecurityCenterClient.ListFindings</c> and <c>SecurityCenterClient.ListFindingsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -423,6 +523,50 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListNotificationConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModules</c> and
+        /// <c>SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEffectiveSecurityHealthAnalyticsCustomModulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.ListSecurityHealthAnalyticsCustomModules</c> and
+        /// <c>SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSecurityHealthAnalyticsCustomModulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -593,6 +737,19 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateOrganizationSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModule</c> and
+        /// <c>SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSecurityHealthAnalyticsCustomModuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -967,6 +1124,190 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<BulkMuteFindingsResponse, wkt::Empty>> BulkMuteFindingsAsync(gax::IResourceName parent, st::CancellationToken cancellationToken) =>
             BulkMuteFindingsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityHealthAnalyticsCustomModule CreateSecurityHealthAnalyticsCustomModule(CreateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(CreateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(CreateSecurityHealthAnalyticsCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new custom module's parent. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. SecurityHealthAnalytics custom module to create. The provided
+        /// name is ignored and reset with provided parent information and
+        /// server-generated ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityHealthAnalyticsCustomModule CreateSecurityHealthAnalyticsCustomModule(string parent, SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSecurityHealthAnalyticsCustomModule(new CreateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SecurityHealthAnalyticsCustomModule = gax::GaxPreconditions.CheckNotNull(securityHealthAnalyticsCustomModule, nameof(securityHealthAnalyticsCustomModule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new custom module's parent. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. SecurityHealthAnalytics custom module to create. The provided
+        /// name is ignored and reset with provided parent information and
+        /// server-generated ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(string parent, SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSecurityHealthAnalyticsCustomModuleAsync(new CreateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SecurityHealthAnalyticsCustomModule = gax::GaxPreconditions.CheckNotNull(securityHealthAnalyticsCustomModule, nameof(securityHealthAnalyticsCustomModule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new custom module's parent. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. SecurityHealthAnalytics custom module to create. The provided
+        /// name is ignored and reset with provided parent information and
+        /// server-generated ID.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(string parent, SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, st::CancellationToken cancellationToken) =>
+            CreateSecurityHealthAnalyticsCustomModuleAsync(parent, securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new custom module's parent. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. SecurityHealthAnalytics custom module to create. The provided
+        /// name is ignored and reset with provided parent information and
+        /// server-generated ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityHealthAnalyticsCustomModule CreateSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsSettingsName parent, SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSecurityHealthAnalyticsCustomModule(new CreateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SecurityHealthAnalyticsCustomModule = gax::GaxPreconditions.CheckNotNull(securityHealthAnalyticsCustomModule, nameof(securityHealthAnalyticsCustomModule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new custom module's parent. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. SecurityHealthAnalytics custom module to create. The provided
+        /// name is ignored and reset with provided parent information and
+        /// server-generated ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsSettingsName parent, SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSecurityHealthAnalyticsCustomModuleAsync(new CreateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SecurityHealthAnalyticsCustomModule = gax::GaxPreconditions.CheckNotNull(securityHealthAnalyticsCustomModule, nameof(securityHealthAnalyticsCustomModule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the new custom module's parent. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. SecurityHealthAnalytics custom module to create. The provided
+        /// name is ignored and reset with provided parent information and
+        /// server-generated ID.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsSettingsName parent, SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, st::CancellationToken cancellationToken) =>
+            CreateSecurityHealthAnalyticsCustomModuleAsync(parent, securityHealthAnalyticsCustomModule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a source.
@@ -2694,6 +3035,153 @@ namespace Google.Cloud.SecurityCenter.V1
             DeleteNotificationConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSecurityHealthAnalyticsCustomModule(DeleteSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSecurityHealthAnalyticsCustomModuleAsync(DeleteSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSecurityHealthAnalyticsCustomModuleAsync(DeleteSecurityHealthAnalyticsCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSecurityHealthAnalyticsCustomModule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSecurityHealthAnalyticsCustomModule(new DeleteSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSecurityHealthAnalyticsCustomModuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSecurityHealthAnalyticsCustomModuleAsync(new DeleteSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSecurityHealthAnalyticsCustomModuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSecurityHealthAnalyticsCustomModule(new DeleteSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSecurityHealthAnalyticsCustomModuleAsync(new DeleteSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to delete. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName name, st::CancellationToken cancellationToken) =>
+            DeleteSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3285,6 +3773,264 @@ namespace Google.Cloud.SecurityCenter.V1
             GetOrganizationSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EffectiveSecurityHealthAnalyticsCustomModule GetEffectiveSecurityHealthAnalyticsCustomModule(GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the effective custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EffectiveSecurityHealthAnalyticsCustomModule GetEffectiveSecurityHealthAnalyticsCustomModule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveSecurityHealthAnalyticsCustomModule(new GetEffectiveSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the effective custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(new GetEffectiveSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the effective custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the effective custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EffectiveSecurityHealthAnalyticsCustomModule GetEffectiveSecurityHealthAnalyticsCustomModule(EffectiveSecurityHealthAnalyticsCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveSecurityHealthAnalyticsCustomModule(new GetEffectiveSecurityHealthAnalyticsCustomModuleRequest
+            {
+                EffectiveSecurityHealthAnalyticsCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the effective custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(EffectiveSecurityHealthAnalyticsCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(new GetEffectiveSecurityHealthAnalyticsCustomModuleRequest
+            {
+                EffectiveSecurityHealthAnalyticsCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the effective custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(EffectiveSecurityHealthAnalyticsCustomModuleName name, st::CancellationToken cancellationToken) =>
+            GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityHealthAnalyticsCustomModule GetSecurityHealthAnalyticsCustomModule(GetSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(GetSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(GetSecurityHealthAnalyticsCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            GetSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityHealthAnalyticsCustomModule GetSecurityHealthAnalyticsCustomModule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecurityHealthAnalyticsCustomModule(new GetSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecurityHealthAnalyticsCustomModuleAsync(new GetSecurityHealthAnalyticsCustomModuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityHealthAnalyticsCustomModule GetSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecurityHealthAnalyticsCustomModule(new GetSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSecurityHealthAnalyticsCustomModuleAsync(new GetSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the custom module to get. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}",
+        /// or
+        /// "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName name, st::CancellationToken cancellationToken) =>
+            GetSecurityHealthAnalyticsCustomModuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a source.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3680,6 +4426,144 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> ListAssetsAsync(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListDescendantSecurityHealthAnalyticsCustomModules(ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListDescendantSecurityHealthAnalyticsCustomModulesAsync(ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list descendant custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListDescendantSecurityHealthAnalyticsCustomModules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDescendantSecurityHealthAnalyticsCustomModules(new ListDescendantSecurityHealthAnalyticsCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list descendant custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListDescendantSecurityHealthAnalyticsCustomModulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDescendantSecurityHealthAnalyticsCustomModulesAsync(new ListDescendantSecurityHealthAnalyticsCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list descendant custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListDescendantSecurityHealthAnalyticsCustomModules(SecurityHealthAnalyticsSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDescendantSecurityHealthAnalyticsCustomModules(new ListDescendantSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list descendant custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListDescendantSecurityHealthAnalyticsCustomModulesAsync(SecurityHealthAnalyticsSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListDescendantSecurityHealthAnalyticsCustomModulesAsync(new ListDescendantSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Lists an organization or source's findings.
@@ -4157,6 +5041,300 @@ namespace Google.Cloud.SecurityCenter.V1
             ListNotificationConfigsAsync(new ListNotificationConfigsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent, and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="EffectiveSecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> ListEffectiveSecurityHealthAnalyticsCustomModules(ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent, and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EffectiveSecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent, and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list effective custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="EffectiveSecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> ListEffectiveSecurityHealthAnalyticsCustomModules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveSecurityHealthAnalyticsCustomModules(new ListEffectiveSecurityHealthAnalyticsCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent, and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list effective custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EffectiveSecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(new ListEffectiveSecurityHealthAnalyticsCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent, and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list effective custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="EffectiveSecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> ListEffectiveSecurityHealthAnalyticsCustomModules(SecurityHealthAnalyticsSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveSecurityHealthAnalyticsCustomModules(new ListEffectiveSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent, and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list effective custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EffectiveSecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(SecurityHealthAnalyticsSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(new ListEffectiveSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+        /// parent. This includes resident modules defined at the scope of the parent,
+        /// and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListSecurityHealthAnalyticsCustomModules(ListSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+        /// parent. This includes resident modules defined at the scope of the parent,
+        /// and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListSecurityHealthAnalyticsCustomModulesAsync(ListSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+        /// parent. This includes resident modules defined at the scope of the parent,
+        /// and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListSecurityHealthAnalyticsCustomModules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityHealthAnalyticsCustomModules(new ListSecurityHealthAnalyticsCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+        /// parent. This includes resident modules defined at the scope of the parent,
+        /// and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListSecurityHealthAnalyticsCustomModulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityHealthAnalyticsCustomModulesAsync(new ListSecurityHealthAnalyticsCustomModulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+        /// parent. This includes resident modules defined at the scope of the parent,
+        /// and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListSecurityHealthAnalyticsCustomModules(SecurityHealthAnalyticsSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityHealthAnalyticsCustomModules(new ListSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+        /// parent. This includes resident modules defined at the scope of the parent,
+        /// and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of parent to list custom modules. Its format is
+        /// "organizations/{organization}/securityHealthAnalyticsSettings",
+        /// "folders/{folder}/securityHealthAnalyticsSettings", or
+        /// "projects/{project}/securityHealthAnalyticsSettings"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListSecurityHealthAnalyticsCustomModulesAsync(SecurityHealthAnalyticsSettingsName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSecurityHealthAnalyticsCustomModulesAsync(new ListSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -5668,6 +6846,107 @@ namespace Google.Cloud.SecurityCenter.V1
             UpdateOrganizationSettingsAsync(organizationSettings, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+        /// on the given update mask. Updating the enablement state is supported on
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of “inherited”). Updating the display name and custom
+        /// config of a module is supported on resident modules only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityHealthAnalyticsCustomModule UpdateSecurityHealthAnalyticsCustomModule(UpdateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+        /// on the given update mask. Updating the enablement state is supported on
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of “inherited”). Updating the display name and custom
+        /// config of a module is supported on resident modules only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> UpdateSecurityHealthAnalyticsCustomModuleAsync(UpdateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+        /// on the given update mask. Updating the enablement state is supported on
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of “inherited”). Updating the display name and custom
+        /// config of a module is supported on resident modules only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> UpdateSecurityHealthAnalyticsCustomModuleAsync(UpdateSecurityHealthAnalyticsCustomModuleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSecurityHealthAnalyticsCustomModuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+        /// on the given update mask. Updating the enablement state is supported on
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of “inherited”). Updating the display name and custom
+        /// config of a module is supported on resident modules only.
+        /// </summary>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. The SecurityHealthAnalytics custom module to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecurityHealthAnalyticsCustomModule UpdateSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSecurityHealthAnalyticsCustomModule(new UpdateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModule = gax::GaxPreconditions.CheckNotNull(securityHealthAnalyticsCustomModule, nameof(securityHealthAnalyticsCustomModule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+        /// on the given update mask. Updating the enablement state is supported on
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of “inherited”). Updating the display name and custom
+        /// config of a module is supported on resident modules only.
+        /// </summary>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. The SecurityHealthAnalytics custom module to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> UpdateSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSecurityHealthAnalyticsCustomModuleAsync(new UpdateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModule = gax::GaxPreconditions.CheckNotNull(securityHealthAnalyticsCustomModule, nameof(securityHealthAnalyticsCustomModule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+        /// on the given update mask. Updating the enablement state is supported on
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of “inherited”). Updating the display name and custom
+        /// config of a module is supported on resident modules only.
+        /// </summary>
+        /// <param name="securityHealthAnalyticsCustomModule">
+        /// Required. The SecurityHealthAnalytics custom module to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecurityHealthAnalyticsCustomModule> UpdateSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSecurityHealthAnalyticsCustomModuleAsync(securityHealthAnalyticsCustomModule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates a source.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6608,6 +7887,8 @@ namespace Google.Cloud.SecurityCenter.V1
     {
         private readonly gaxgrpc::ApiCall<BulkMuteFindingsRequest, lro::Operation> _callBulkMuteFindings;
 
+        private readonly gaxgrpc::ApiCall<CreateSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule> _callCreateSecurityHealthAnalyticsCustomModule;
+
         private readonly gaxgrpc::ApiCall<CreateSourceRequest, Source> _callCreateSource;
 
         private readonly gaxgrpc::ApiCall<CreateFindingRequest, Finding> _callCreateFinding;
@@ -6620,6 +7901,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> _callDeleteNotificationConfig;
 
+        private readonly gaxgrpc::ApiCall<DeleteSecurityHealthAnalyticsCustomModuleRequest, wkt::Empty> _callDeleteSecurityHealthAnalyticsCustomModule;
+
         private readonly gaxgrpc::ApiCall<GetBigQueryExportRequest, BigQueryExport> _callGetBigQueryExport;
 
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
@@ -6630,6 +7913,10 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<GetOrganizationSettingsRequest, OrganizationSettings> _callGetOrganizationSettings;
 
+        private readonly gaxgrpc::ApiCall<GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, EffectiveSecurityHealthAnalyticsCustomModule> _callGetEffectiveSecurityHealthAnalyticsCustomModule;
+
+        private readonly gaxgrpc::ApiCall<GetSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule> _callGetSecurityHealthAnalyticsCustomModule;
+
         private readonly gaxgrpc::ApiCall<GetSourceRequest, Source> _callGetSource;
 
         private readonly gaxgrpc::ApiCall<GroupAssetsRequest, GroupAssetsResponse> _callGroupAssets;
@@ -6638,11 +7925,17 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<ListAssetsRequest, ListAssetsResponse> _callListAssets;
 
+        private readonly gaxgrpc::ApiCall<ListDescendantSecurityHealthAnalyticsCustomModulesRequest, ListDescendantSecurityHealthAnalyticsCustomModulesResponse> _callListDescendantSecurityHealthAnalyticsCustomModules;
+
         private readonly gaxgrpc::ApiCall<ListFindingsRequest, ListFindingsResponse> _callListFindings;
 
         private readonly gaxgrpc::ApiCall<ListMuteConfigsRequest, ListMuteConfigsResponse> _callListMuteConfigs;
 
         private readonly gaxgrpc::ApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse> _callListNotificationConfigs;
+
+        private readonly gaxgrpc::ApiCall<ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, ListEffectiveSecurityHealthAnalyticsCustomModulesResponse> _callListEffectiveSecurityHealthAnalyticsCustomModules;
+
+        private readonly gaxgrpc::ApiCall<ListSecurityHealthAnalyticsCustomModulesRequest, ListSecurityHealthAnalyticsCustomModulesResponse> _callListSecurityHealthAnalyticsCustomModules;
 
         private readonly gaxgrpc::ApiCall<ListSourcesRequest, ListSourcesResponse> _callListSources;
 
@@ -6665,6 +7958,8 @@ namespace Google.Cloud.SecurityCenter.V1
         private readonly gaxgrpc::ApiCall<UpdateNotificationConfigRequest, NotificationConfig> _callUpdateNotificationConfig;
 
         private readonly gaxgrpc::ApiCall<UpdateOrganizationSettingsRequest, OrganizationSettings> _callUpdateOrganizationSettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule> _callUpdateSecurityHealthAnalyticsCustomModule;
 
         private readonly gaxgrpc::ApiCall<UpdateSourceRequest, Source> _callUpdateSource;
 
@@ -6694,6 +7989,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callBulkMuteFindings = clientHelper.BuildApiCall<BulkMuteFindingsRequest, lro::Operation>("BulkMuteFindings", grpcClient.BulkMuteFindingsAsync, grpcClient.BulkMuteFindings, effectiveSettings.BulkMuteFindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBulkMuteFindings);
             Modify_BulkMuteFindingsApiCall(ref _callBulkMuteFindings);
+            _callCreateSecurityHealthAnalyticsCustomModule = clientHelper.BuildApiCall<CreateSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule>("CreateSecurityHealthAnalyticsCustomModule", grpcClient.CreateSecurityHealthAnalyticsCustomModuleAsync, grpcClient.CreateSecurityHealthAnalyticsCustomModule, effectiveSettings.CreateSecurityHealthAnalyticsCustomModuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSecurityHealthAnalyticsCustomModule);
+            Modify_CreateSecurityHealthAnalyticsCustomModuleApiCall(ref _callCreateSecurityHealthAnalyticsCustomModule);
             _callCreateSource = clientHelper.BuildApiCall<CreateSourceRequest, Source>("CreateSource", grpcClient.CreateSourceAsync, grpcClient.CreateSource, effectiveSettings.CreateSourceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSource);
             Modify_CreateSourceApiCall(ref _callCreateSource);
@@ -6712,6 +8010,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callDeleteNotificationConfig = clientHelper.BuildApiCall<DeleteNotificationConfigRequest, wkt::Empty>("DeleteNotificationConfig", grpcClient.DeleteNotificationConfigAsync, grpcClient.DeleteNotificationConfig, effectiveSettings.DeleteNotificationConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteNotificationConfig);
             Modify_DeleteNotificationConfigApiCall(ref _callDeleteNotificationConfig);
+            _callDeleteSecurityHealthAnalyticsCustomModule = clientHelper.BuildApiCall<DeleteSecurityHealthAnalyticsCustomModuleRequest, wkt::Empty>("DeleteSecurityHealthAnalyticsCustomModule", grpcClient.DeleteSecurityHealthAnalyticsCustomModuleAsync, grpcClient.DeleteSecurityHealthAnalyticsCustomModule, effectiveSettings.DeleteSecurityHealthAnalyticsCustomModuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSecurityHealthAnalyticsCustomModule);
+            Modify_DeleteSecurityHealthAnalyticsCustomModuleApiCall(ref _callDeleteSecurityHealthAnalyticsCustomModule);
             _callGetBigQueryExport = clientHelper.BuildApiCall<GetBigQueryExportRequest, BigQueryExport>("GetBigQueryExport", grpcClient.GetBigQueryExportAsync, grpcClient.GetBigQueryExport, effectiveSettings.GetBigQueryExportSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBigQueryExport);
             Modify_GetBigQueryExportApiCall(ref _callGetBigQueryExport);
@@ -6727,6 +8028,12 @@ namespace Google.Cloud.SecurityCenter.V1
             _callGetOrganizationSettings = clientHelper.BuildApiCall<GetOrganizationSettingsRequest, OrganizationSettings>("GetOrganizationSettings", grpcClient.GetOrganizationSettingsAsync, grpcClient.GetOrganizationSettings, effectiveSettings.GetOrganizationSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOrganizationSettings);
             Modify_GetOrganizationSettingsApiCall(ref _callGetOrganizationSettings);
+            _callGetEffectiveSecurityHealthAnalyticsCustomModule = clientHelper.BuildApiCall<GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, EffectiveSecurityHealthAnalyticsCustomModule>("GetEffectiveSecurityHealthAnalyticsCustomModule", grpcClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsync, grpcClient.GetEffectiveSecurityHealthAnalyticsCustomModule, effectiveSettings.GetEffectiveSecurityHealthAnalyticsCustomModuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEffectiveSecurityHealthAnalyticsCustomModule);
+            Modify_GetEffectiveSecurityHealthAnalyticsCustomModuleApiCall(ref _callGetEffectiveSecurityHealthAnalyticsCustomModule);
+            _callGetSecurityHealthAnalyticsCustomModule = clientHelper.BuildApiCall<GetSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule>("GetSecurityHealthAnalyticsCustomModule", grpcClient.GetSecurityHealthAnalyticsCustomModuleAsync, grpcClient.GetSecurityHealthAnalyticsCustomModule, effectiveSettings.GetSecurityHealthAnalyticsCustomModuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSecurityHealthAnalyticsCustomModule);
+            Modify_GetSecurityHealthAnalyticsCustomModuleApiCall(ref _callGetSecurityHealthAnalyticsCustomModule);
             _callGetSource = clientHelper.BuildApiCall<GetSourceRequest, Source>("GetSource", grpcClient.GetSourceAsync, grpcClient.GetSource, effectiveSettings.GetSourceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSource);
             Modify_GetSourceApiCall(ref _callGetSource);
@@ -6739,6 +8046,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callListAssets = clientHelper.BuildApiCall<ListAssetsRequest, ListAssetsResponse>("ListAssets", grpcClient.ListAssetsAsync, grpcClient.ListAssets, effectiveSettings.ListAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAssets);
             Modify_ListAssetsApiCall(ref _callListAssets);
+            _callListDescendantSecurityHealthAnalyticsCustomModules = clientHelper.BuildApiCall<ListDescendantSecurityHealthAnalyticsCustomModulesRequest, ListDescendantSecurityHealthAnalyticsCustomModulesResponse>("ListDescendantSecurityHealthAnalyticsCustomModules", grpcClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync, grpcClient.ListDescendantSecurityHealthAnalyticsCustomModules, effectiveSettings.ListDescendantSecurityHealthAnalyticsCustomModulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDescendantSecurityHealthAnalyticsCustomModules);
+            Modify_ListDescendantSecurityHealthAnalyticsCustomModulesApiCall(ref _callListDescendantSecurityHealthAnalyticsCustomModules);
             _callListFindings = clientHelper.BuildApiCall<ListFindingsRequest, ListFindingsResponse>("ListFindings", grpcClient.ListFindingsAsync, grpcClient.ListFindings, effectiveSettings.ListFindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFindings);
             Modify_ListFindingsApiCall(ref _callListFindings);
@@ -6748,6 +8058,12 @@ namespace Google.Cloud.SecurityCenter.V1
             _callListNotificationConfigs = clientHelper.BuildApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse>("ListNotificationConfigs", grpcClient.ListNotificationConfigsAsync, grpcClient.ListNotificationConfigs, effectiveSettings.ListNotificationConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListNotificationConfigs);
             Modify_ListNotificationConfigsApiCall(ref _callListNotificationConfigs);
+            _callListEffectiveSecurityHealthAnalyticsCustomModules = clientHelper.BuildApiCall<ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, ListEffectiveSecurityHealthAnalyticsCustomModulesResponse>("ListEffectiveSecurityHealthAnalyticsCustomModules", grpcClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync, grpcClient.ListEffectiveSecurityHealthAnalyticsCustomModules, effectiveSettings.ListEffectiveSecurityHealthAnalyticsCustomModulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListEffectiveSecurityHealthAnalyticsCustomModules);
+            Modify_ListEffectiveSecurityHealthAnalyticsCustomModulesApiCall(ref _callListEffectiveSecurityHealthAnalyticsCustomModules);
+            _callListSecurityHealthAnalyticsCustomModules = clientHelper.BuildApiCall<ListSecurityHealthAnalyticsCustomModulesRequest, ListSecurityHealthAnalyticsCustomModulesResponse>("ListSecurityHealthAnalyticsCustomModules", grpcClient.ListSecurityHealthAnalyticsCustomModulesAsync, grpcClient.ListSecurityHealthAnalyticsCustomModules, effectiveSettings.ListSecurityHealthAnalyticsCustomModulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSecurityHealthAnalyticsCustomModules);
+            Modify_ListSecurityHealthAnalyticsCustomModulesApiCall(ref _callListSecurityHealthAnalyticsCustomModules);
             _callListSources = clientHelper.BuildApiCall<ListSourcesRequest, ListSourcesResponse>("ListSources", grpcClient.ListSourcesAsync, grpcClient.ListSources, effectiveSettings.ListSourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSources);
             Modify_ListSourcesApiCall(ref _callListSources);
@@ -6781,6 +8097,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callUpdateOrganizationSettings = clientHelper.BuildApiCall<UpdateOrganizationSettingsRequest, OrganizationSettings>("UpdateOrganizationSettings", grpcClient.UpdateOrganizationSettingsAsync, grpcClient.UpdateOrganizationSettings, effectiveSettings.UpdateOrganizationSettingsSettings).WithGoogleRequestParam("organization_settings.name", request => request.OrganizationSettings?.Name);
             Modify_ApiCall(ref _callUpdateOrganizationSettings);
             Modify_UpdateOrganizationSettingsApiCall(ref _callUpdateOrganizationSettings);
+            _callUpdateSecurityHealthAnalyticsCustomModule = clientHelper.BuildApiCall<UpdateSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule>("UpdateSecurityHealthAnalyticsCustomModule", grpcClient.UpdateSecurityHealthAnalyticsCustomModuleAsync, grpcClient.UpdateSecurityHealthAnalyticsCustomModule, effectiveSettings.UpdateSecurityHealthAnalyticsCustomModuleSettings).WithGoogleRequestParam("security_health_analytics_custom_module.name", request => request.SecurityHealthAnalyticsCustomModule?.Name);
+            Modify_ApiCall(ref _callUpdateSecurityHealthAnalyticsCustomModule);
+            Modify_UpdateSecurityHealthAnalyticsCustomModuleApiCall(ref _callUpdateSecurityHealthAnalyticsCustomModule);
             _callUpdateSource = clientHelper.BuildApiCall<UpdateSourceRequest, Source>("UpdateSource", grpcClient.UpdateSourceAsync, grpcClient.UpdateSource, effectiveSettings.UpdateSourceSettings).WithGoogleRequestParam("source.name", request => request.Source?.Name);
             Modify_ApiCall(ref _callUpdateSource);
             Modify_UpdateSourceApiCall(ref _callUpdateSource);
@@ -6806,6 +8125,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_BulkMuteFindingsApiCall(ref gaxgrpc::ApiCall<BulkMuteFindingsRequest, lro::Operation> call);
 
+        partial void Modify_CreateSecurityHealthAnalyticsCustomModuleApiCall(ref gaxgrpc::ApiCall<CreateSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule> call);
+
         partial void Modify_CreateSourceApiCall(ref gaxgrpc::ApiCall<CreateSourceRequest, Source> call);
 
         partial void Modify_CreateFindingApiCall(ref gaxgrpc::ApiCall<CreateFindingRequest, Finding> call);
@@ -6818,6 +8139,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_DeleteNotificationConfigApiCall(ref gaxgrpc::ApiCall<DeleteNotificationConfigRequest, wkt::Empty> call);
 
+        partial void Modify_DeleteSecurityHealthAnalyticsCustomModuleApiCall(ref gaxgrpc::ApiCall<DeleteSecurityHealthAnalyticsCustomModuleRequest, wkt::Empty> call);
+
         partial void Modify_GetBigQueryExportApiCall(ref gaxgrpc::ApiCall<GetBigQueryExportRequest, BigQueryExport> call);
 
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
@@ -6828,6 +8151,10 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_GetOrganizationSettingsApiCall(ref gaxgrpc::ApiCall<GetOrganizationSettingsRequest, OrganizationSettings> call);
 
+        partial void Modify_GetEffectiveSecurityHealthAnalyticsCustomModuleApiCall(ref gaxgrpc::ApiCall<GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, EffectiveSecurityHealthAnalyticsCustomModule> call);
+
+        partial void Modify_GetSecurityHealthAnalyticsCustomModuleApiCall(ref gaxgrpc::ApiCall<GetSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule> call);
+
         partial void Modify_GetSourceApiCall(ref gaxgrpc::ApiCall<GetSourceRequest, Source> call);
 
         partial void Modify_GroupAssetsApiCall(ref gaxgrpc::ApiCall<GroupAssetsRequest, GroupAssetsResponse> call);
@@ -6836,11 +8163,17 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_ListAssetsApiCall(ref gaxgrpc::ApiCall<ListAssetsRequest, ListAssetsResponse> call);
 
+        partial void Modify_ListDescendantSecurityHealthAnalyticsCustomModulesApiCall(ref gaxgrpc::ApiCall<ListDescendantSecurityHealthAnalyticsCustomModulesRequest, ListDescendantSecurityHealthAnalyticsCustomModulesResponse> call);
+
         partial void Modify_ListFindingsApiCall(ref gaxgrpc::ApiCall<ListFindingsRequest, ListFindingsResponse> call);
 
         partial void Modify_ListMuteConfigsApiCall(ref gaxgrpc::ApiCall<ListMuteConfigsRequest, ListMuteConfigsResponse> call);
 
         partial void Modify_ListNotificationConfigsApiCall(ref gaxgrpc::ApiCall<ListNotificationConfigsRequest, ListNotificationConfigsResponse> call);
+
+        partial void Modify_ListEffectiveSecurityHealthAnalyticsCustomModulesApiCall(ref gaxgrpc::ApiCall<ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, ListEffectiveSecurityHealthAnalyticsCustomModulesResponse> call);
+
+        partial void Modify_ListSecurityHealthAnalyticsCustomModulesApiCall(ref gaxgrpc::ApiCall<ListSecurityHealthAnalyticsCustomModulesRequest, ListSecurityHealthAnalyticsCustomModulesResponse> call);
 
         partial void Modify_ListSourcesApiCall(ref gaxgrpc::ApiCall<ListSourcesRequest, ListSourcesResponse> call);
 
@@ -6864,6 +8197,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_UpdateOrganizationSettingsApiCall(ref gaxgrpc::ApiCall<UpdateOrganizationSettingsRequest, OrganizationSettings> call);
 
+        partial void Modify_UpdateSecurityHealthAnalyticsCustomModuleApiCall(ref gaxgrpc::ApiCall<UpdateSecurityHealthAnalyticsCustomModuleRequest, SecurityHealthAnalyticsCustomModule> call);
+
         partial void Modify_UpdateSourceApiCall(ref gaxgrpc::ApiCall<UpdateSourceRequest, Source> call);
 
         partial void Modify_UpdateSecurityMarksApiCall(ref gaxgrpc::ApiCall<UpdateSecurityMarksRequest, SecurityMarks> call);
@@ -6883,6 +8218,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_BulkMuteFindingsRequest(ref BulkMuteFindingsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateSecurityHealthAnalyticsCustomModuleRequest(ref CreateSecurityHealthAnalyticsCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateSourceRequest(ref CreateSourceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateFindingRequest(ref CreateFindingRequest request, ref gaxgrpc::CallSettings settings);
@@ -6895,6 +8232,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_DeleteNotificationConfigRequest(ref DeleteNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteSecurityHealthAnalyticsCustomModuleRequest(ref DeleteSecurityHealthAnalyticsCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetBigQueryExportRequest(ref GetBigQueryExportRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
@@ -6905,6 +8244,10 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_GetOrganizationSettingsRequest(ref GetOrganizationSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetEffectiveSecurityHealthAnalyticsCustomModuleRequest(ref GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSecurityHealthAnalyticsCustomModuleRequest(ref GetSecurityHealthAnalyticsCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetSourceRequest(ref GetSourceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GroupAssetsRequest(ref GroupAssetsRequest request, ref gaxgrpc::CallSettings settings);
@@ -6913,11 +8256,17 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_ListAssetsRequest(ref ListAssetsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListDescendantSecurityHealthAnalyticsCustomModulesRequest(ref ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListFindingsRequest(ref ListFindingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListMuteConfigsRequest(ref ListMuteConfigsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListNotificationConfigsRequest(ref ListNotificationConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListEffectiveSecurityHealthAnalyticsCustomModulesRequest(ref ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSecurityHealthAnalyticsCustomModulesRequest(ref ListSecurityHealthAnalyticsCustomModulesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSourcesRequest(ref ListSourcesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6940,6 +8289,8 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_UpdateNotificationConfigRequest(ref UpdateNotificationConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateOrganizationSettingsRequest(ref UpdateOrganizationSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSecurityHealthAnalyticsCustomModuleRequest(ref UpdateSecurityHealthAnalyticsCustomModuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSourceRequest(ref UpdateSourceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6982,6 +8333,36 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             Modify_BulkMuteFindingsRequest(ref request, ref callSettings);
             return new lro::Operation<BulkMuteFindingsResponse, wkt::Empty>(await _callBulkMuteFindings.Async(request, callSettings).ConfigureAwait(false), BulkMuteFindingsOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecurityHealthAnalyticsCustomModule CreateSecurityHealthAnalyticsCustomModule(CreateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callCreateSecurityHealthAnalyticsCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+        /// given CRM parent, and also creates inherited
+        /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+        /// parent. These modules are enabled by default.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(CreateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callCreateSecurityHealthAnalyticsCustomModule.Async(request, callSettings);
         }
 
         /// <summary>
@@ -7131,6 +8512,34 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteSecurityHealthAnalyticsCustomModule(DeleteSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            _callDeleteSecurityHealthAnalyticsCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+        /// descendants in the CRM hierarchy. This method is only supported for
+        /// resident custom modules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteSecurityHealthAnalyticsCustomModuleAsync(DeleteSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callDeleteSecurityHealthAnalyticsCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets a BigQuery export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7251,6 +8660,54 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EffectiveSecurityHealthAnalyticsCustomModule GetEffectiveSecurityHealthAnalyticsCustomModule(GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callGetEffectiveSecurityHealthAnalyticsCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callGetEffectiveSecurityHealthAnalyticsCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecurityHealthAnalyticsCustomModule GetSecurityHealthAnalyticsCustomModule(GetSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callGetSecurityHealthAnalyticsCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a SecurityHealthAnalyticsCustomModule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(GetSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callGetSecurityHealthAnalyticsCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets a source.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7363,6 +8820,34 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
+        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListDescendantSecurityHealthAnalyticsCustomModules(ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDescendantSecurityHealthAnalyticsCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesRequest, ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule>(_callListDescendantSecurityHealthAnalyticsCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListDescendantSecurityHealthAnalyticsCustomModulesAsync(ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDescendantSecurityHealthAnalyticsCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesRequest, ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule>(_callListDescendantSecurityHealthAnalyticsCustomModules, request, callSettings);
+        }
+
+        /// <summary>
         /// Lists an organization or source's findings.
         /// 
         /// To list across all sources provide a `-` as the source id.
@@ -7442,6 +8927,68 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             Modify_ListNotificationConfigsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNotificationConfigsRequest, ListNotificationConfigsResponse, NotificationConfig>(_callListNotificationConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent, and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="EffectiveSecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> ListEffectiveSecurityHealthAnalyticsCustomModules(ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEffectiveSecurityHealthAnalyticsCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule>(_callListEffectiveSecurityHealthAnalyticsCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+        /// given parent. This includes resident modules defined at the scope of the
+        /// parent, and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="EffectiveSecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEffectiveSecurityHealthAnalyticsCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule>(_callListEffectiveSecurityHealthAnalyticsCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+        /// parent. This includes resident modules defined at the scope of the parent,
+        /// and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListSecurityHealthAnalyticsCustomModules(ListSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSecurityHealthAnalyticsCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSecurityHealthAnalyticsCustomModulesRequest, ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule>(_callListSecurityHealthAnalyticsCustomModules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+        /// parent. This includes resident modules defined at the scope of the parent,
+        /// and inherited modules, inherited from CRM ancestors.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SecurityHealthAnalyticsCustomModule"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> ListSecurityHealthAnalyticsCustomModulesAsync(ListSecurityHealthAnalyticsCustomModulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSecurityHealthAnalyticsCustomModulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesRequest, ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule>(_callListSecurityHealthAnalyticsCustomModules, request, callSettings);
         }
 
         /// <summary>
@@ -7726,6 +9273,38 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
+        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+        /// on the given update mask. Updating the enablement state is supported on
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of “inherited”). Updating the display name and custom
+        /// config of a module is supported on resident modules only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecurityHealthAnalyticsCustomModule UpdateSecurityHealthAnalyticsCustomModule(UpdateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callUpdateSecurityHealthAnalyticsCustomModule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+        /// on the given update mask. Updating the enablement state is supported on
+        /// both resident and inherited modules (though resident modules cannot have an
+        /// enablement state of “inherited”). Updating the display name and custom
+        /// config of a module is supported on resident modules only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecurityHealthAnalyticsCustomModule> UpdateSecurityHealthAnalyticsCustomModuleAsync(UpdateSecurityHealthAnalyticsCustomModuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSecurityHealthAnalyticsCustomModuleRequest(ref request, ref callSettings);
+            return _callUpdateSecurityHealthAnalyticsCustomModule.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Updates a source.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7890,6 +9469,10 @@ namespace Google.Cloud.SecurityCenter.V1
     {
     }
 
+    public partial class ListDescendantSecurityHealthAnalyticsCustomModulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListFindingsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -7899,6 +9482,14 @@ namespace Google.Cloud.SecurityCenter.V1
     }
 
     public partial class ListNotificationConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEffectiveSecurityHealthAnalyticsCustomModulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSecurityHealthAnalyticsCustomModulesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -7934,6 +9525,15 @@ namespace Google.Cloud.SecurityCenter.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListDescendantSecurityHealthAnalyticsCustomModulesResponse : gaxgrpc::IPageResponse<SecurityHealthAnalyticsCustomModule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SecurityHealthAnalyticsCustomModule> GetEnumerator() =>
+            SecurityHealthAnalyticsCustomModules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListFindingsResponse : gaxgrpc::IPageResponse<ListFindingsResponse.Types.ListFindingsResult>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -7954,6 +9554,24 @@ namespace Google.Cloud.SecurityCenter.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<NotificationConfig> GetEnumerator() => NotificationConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse : gaxgrpc::IPageResponse<EffectiveSecurityHealthAnalyticsCustomModule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EffectiveSecurityHealthAnalyticsCustomModule> GetEnumerator() =>
+            EffectiveSecurityHealthAnalyticsCustomModules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSecurityHealthAnalyticsCustomModulesResponse : gaxgrpc::IPageResponse<SecurityHealthAnalyticsCustomModule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SecurityHealthAnalyticsCustomModule> GetEnumerator() =>
+            SecurityHealthAnalyticsCustomModules.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

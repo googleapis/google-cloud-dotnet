@@ -81,7 +81,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// Kubernetes related attributes.
+  /// Kubernetes-related attributes.
   /// </summary>
   public sealed partial class Kubernetes : pb::IMessage<Kubernetes>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1533,8 +1533,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
             = pb::FieldCodec.ForMessage(34, global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Subject.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Subject> subjects_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Subject>();
         /// <summary>
-        /// Represents the subjects(s) bound to the role. Not always available
-        /// for PATCH requests.
+        /// Represents one or more subjects that are bound to the role. Not always
+        /// available for PATCH requests.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

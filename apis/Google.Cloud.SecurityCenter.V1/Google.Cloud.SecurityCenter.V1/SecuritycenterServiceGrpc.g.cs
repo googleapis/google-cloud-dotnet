@@ -3,7 +3,7 @@
 //     source: google/cloud/securitycenter/v1/securitycenter_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -68,6 +68,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_CreateSecurityHealthAnalyticsCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> __Marshaller_google_cloud_securitycenter_v1_SecurityHealthAnalyticsCustomModule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest> __Marshaller_google_cloud_securitycenter_v1_CreateSourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Source> __Marshaller_google_cloud_securitycenter_v1_Source = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.Source.Parser));
@@ -90,6 +94,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteSecurityHealthAnalyticsCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest> __Marshaller_google_cloud_securitycenter_v1_GetBigQueryExportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.BigQueryExport> __Marshaller_google_cloud_securitycenter_v1_BigQueryExport = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.BigQueryExport.Parser));
@@ -106,6 +112,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> __Marshaller_google_cloud_securitycenter_v1_OrganizationSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_GetEffectiveSecurityHealthAnalyticsCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule> __Marshaller_google_cloud_securitycenter_v1_EffectiveSecurityHealthAnalyticsCustomModule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_GetSecurityHealthAnalyticsCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest> __Marshaller_google_cloud_securitycenter_v1_GetSourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetSourceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest> __Marshaller_google_cloud_securitycenter_v1_GroupAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest.Parser));
@@ -120,6 +132,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse> __Marshaller_google_cloud_securitycenter_v1_ListAssetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest> __Marshaller_google_cloud_securitycenter_v1_ListDescendantSecurityHealthAnalyticsCustomModulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse> __Marshaller_google_cloud_securitycenter_v1_ListDescendantSecurityHealthAnalyticsCustomModulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest> __Marshaller_google_cloud_securitycenter_v1_ListFindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse> __Marshaller_google_cloud_securitycenter_v1_ListFindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser));
@@ -131,6 +147,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest> __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest> __Marshaller_google_cloud_securitycenter_v1_ListEffectiveSecurityHealthAnalyticsCustomModulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse> __Marshaller_google_cloud_securitycenter_v1_ListEffectiveSecurityHealthAnalyticsCustomModulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest> __Marshaller_google_cloud_securitycenter_v1_ListSecurityHealthAnalyticsCustomModulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse> __Marshaller_google_cloud_securitycenter_v1_ListSecurityHealthAnalyticsCustomModulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest> __Marshaller_google_cloud_securitycenter_v1_ListSourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -160,6 +184,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateOrganizationSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityHealthAnalyticsCustomModuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityMarksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest.Parser));
@@ -183,6 +209,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         "BulkMuteFindings",
         __Marshaller_google_cloud_securitycenter_v1_BulkMuteFindingsRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> __Method_CreateSecurityHealthAnalyticsCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSecurityHealthAnalyticsCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_CreateSecurityHealthAnalyticsCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_SecurityHealthAnalyticsCustomModule);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source> __Method_CreateSource = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(
@@ -233,6 +267,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSecurityHealthAnalyticsCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSecurityHealthAnalyticsCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_DeleteSecurityHealthAnalyticsCustomModuleRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport> __Method_GetBigQueryExport = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -273,6 +315,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_OrganizationSettings);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule> __Method_GetEffectiveSecurityHealthAnalyticsCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEffectiveSecurityHealthAnalyticsCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_GetEffectiveSecurityHealthAnalyticsCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_EffectiveSecurityHealthAnalyticsCustomModule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> __Method_GetSecurityHealthAnalyticsCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSecurityHealthAnalyticsCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_GetSecurityHealthAnalyticsCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_SecurityHealthAnalyticsCustomModule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source> __Method_GetSource = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -305,6 +363,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_ListAssetsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse> __Method_ListDescendantSecurityHealthAnalyticsCustomModules = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDescendantSecurityHealthAnalyticsCustomModules",
+        __Marshaller_google_cloud_securitycenter_v1_ListDescendantSecurityHealthAnalyticsCustomModulesRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListDescendantSecurityHealthAnalyticsCustomModulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse> __Method_ListFindings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -327,6 +393,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
         "ListNotificationConfigs",
         __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsRequest,
         __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse> __Method_ListEffectiveSecurityHealthAnalyticsCustomModules = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListEffectiveSecurityHealthAnalyticsCustomModules",
+        __Marshaller_google_cloud_securitycenter_v1_ListEffectiveSecurityHealthAnalyticsCustomModulesRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListEffectiveSecurityHealthAnalyticsCustomModulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse> __Method_ListSecurityHealthAnalyticsCustomModules = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSecurityHealthAnalyticsCustomModules",
+        __Marshaller_google_cloud_securitycenter_v1_ListSecurityHealthAnalyticsCustomModulesRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListSecurityHealthAnalyticsCustomModulesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse> __Method_ListSources = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse>(
@@ -417,6 +499,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_OrganizationSettings);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> __Method_UpdateSecurityHealthAnalyticsCustomModule = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSecurityHealthAnalyticsCustomModule",
+        __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityHealthAnalyticsCustomModuleRequest,
+        __Marshaller_google_cloud_securitycenter_v1_SecurityHealthAnalyticsCustomModule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source> __Method_UpdateSource = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -484,6 +574,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BulkMuteFindings(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+      /// given CRM parent, and also creates inherited
+      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+      /// parent. These modules are enabled by default.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -562,6 +667,20 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+      /// descendants in the CRM hierarchy. This method is only supported for
+      /// resident custom modules.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets a BigQuery export.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -622,6 +741,30 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Gets a source.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -677,6 +820,19 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse> ListDescendantSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists an organization or source's findings.
       ///
       /// To list across all sources provide a `-` as the source id.
@@ -711,6 +867,34 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> ListNotificationConfigs(global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent, and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse> ListEffectiveSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+      /// parent. This includes resident modules defined at the scope of the parent,
+      /// and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse> ListSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -851,6 +1035,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.OrganizationSettings> UpdateOrganizationSettings(global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+      /// on the given update mask. Updating the enablement state is supported on
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of “inherited”). Updating the display name and custom
+      /// config of a module is supported on resident modules only.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> UpdateSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1015,6 +1215,66 @@ namespace Google.Cloud.SecurityCenter.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkMuteFindingsAsync(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BulkMuteFindings, null, options, request);
+      }
+      /// <summary>
+      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+      /// given CRM parent, and also creates inherited
+      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+      /// parent. These modules are enabled by default.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule CreateSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+      /// given CRM parent, and also creates inherited
+      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+      /// parent. These modules are enabled by default.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule CreateSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+      /// given CRM parent, and also creates inherited
+      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+      /// parent. These modules are enabled by default.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the
+      /// given CRM parent, and also creates inherited
+      /// SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
+      /// parent. These modules are enabled by default.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> CreateSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSecurityHealthAnalyticsCustomModule, null, options, request);
       }
       /// <summary>
       /// Creates a source.
@@ -1309,6 +1569,62 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNotificationConfig, null, options, request);
       }
       /// <summary>
+      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+      /// descendants in the CRM hierarchy. This method is only supported for
+      /// resident custom modules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+      /// descendants in the CRM hierarchy. This method is only supported for
+      /// resident custom modules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+      /// descendants in the CRM hierarchy. This method is only supported for
+      /// resident custom modules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified SecurityHealthAnalyticsCustomModule and all of its
+      /// descendants in the CRM hierarchy. This method is only supported for
+      /// resident custom modules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
       /// Gets a BigQuery export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1549,6 +1865,102 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetOrganizationSettings, null, options, request);
       }
       /// <summary>
+      /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule GetEffectiveSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEffectiveSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule GetEffectiveSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEffectiveSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule> GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEffectiveSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule GetSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule GetSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a SecurityHealthAnalyticsCustomModule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> GetSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
       /// Gets a source.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1769,6 +2181,58 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAssets, null, options, request);
       }
       /// <summary>
+      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse ListDescendantSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDescendantSecurityHealthAnalyticsCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse ListDescendantSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDescendantSecurityHealthAnalyticsCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse> ListDescendantSecurityHealthAnalyticsCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDescendantSecurityHealthAnalyticsCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
+      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse> ListDescendantSecurityHealthAnalyticsCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDescendantSecurityHealthAnalyticsCustomModules, null, options, request);
+      }
+      /// <summary>
       /// Lists an organization or source's findings.
       ///
       /// To list across all sources provide a `-` as the source id.
@@ -1923,6 +2387,118 @@ namespace Google.Cloud.SecurityCenter.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> ListNotificationConfigsAsync(global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListNotificationConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent, and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse ListEffectiveSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEffectiveSecurityHealthAnalyticsCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent, and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse ListEffectiveSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListEffectiveSecurityHealthAnalyticsCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent, and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse> ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the
+      /// given parent. This includes resident modules defined at the scope of the
+      /// parent, and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse> ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListEffectiveSecurityHealthAnalyticsCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+      /// parent. This includes resident modules defined at the scope of the parent,
+      /// and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse ListSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSecurityHealthAnalyticsCustomModules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+      /// parent. This includes resident modules defined at the scope of the parent,
+      /// and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse ListSecurityHealthAnalyticsCustomModules(global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSecurityHealthAnalyticsCustomModules, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+      /// parent. This includes resident modules defined at the scope of the parent,
+      /// and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse> ListSecurityHealthAnalyticsCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSecurityHealthAnalyticsCustomModulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all SecurityHealthAnalyticsCustomModules for the given
+      /// parent. This includes resident modules defined at the scope of the parent,
+      /// and inherited modules, inherited from CRM ancestors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse> ListSecurityHealthAnalyticsCustomModulesAsync(global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSecurityHealthAnalyticsCustomModules, null, options, request);
       }
       /// <summary>
       /// Lists all sources belonging to an organization.
@@ -2485,6 +3061,70 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateOrganizationSettings, null, options, request);
       }
       /// <summary>
+      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+      /// on the given update mask. Updating the enablement state is supported on
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of “inherited”). Updating the display name and custom
+      /// config of a module is supported on resident modules only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule UpdateSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSecurityHealthAnalyticsCustomModule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+      /// on the given update mask. Updating the enablement state is supported on
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of “inherited”). Updating the display name and custom
+      /// config of a module is supported on resident modules only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule UpdateSecurityHealthAnalyticsCustomModule(global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
+      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+      /// on the given update mask. Updating the enablement state is supported on
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of “inherited”). Updating the display name and custom
+      /// config of a module is supported on resident modules only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> UpdateSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSecurityHealthAnalyticsCustomModuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the SecurityHealthAnalyticsCustomModule under the given name based
+      /// on the given update mask. Updating the enablement state is supported on
+      /// both resident and inherited modules (though resident modules cannot have an
+      /// enablement state of “inherited”). Updating the display name and custom
+      /// config of a module is supported on resident modules only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule> UpdateSecurityHealthAnalyticsCustomModuleAsync(global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSecurityHealthAnalyticsCustomModule, null, options, request);
+      }
+      /// <summary>
       /// Updates a source.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2803,24 +3443,31 @@ namespace Google.Cloud.SecurityCenter.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_BulkMuteFindings, serviceImpl.BulkMuteFindings)
+          .AddMethod(__Method_CreateSecurityHealthAnalyticsCustomModule, serviceImpl.CreateSecurityHealthAnalyticsCustomModule)
           .AddMethod(__Method_CreateSource, serviceImpl.CreateSource)
           .AddMethod(__Method_CreateFinding, serviceImpl.CreateFinding)
           .AddMethod(__Method_CreateMuteConfig, serviceImpl.CreateMuteConfig)
           .AddMethod(__Method_CreateNotificationConfig, serviceImpl.CreateNotificationConfig)
           .AddMethod(__Method_DeleteMuteConfig, serviceImpl.DeleteMuteConfig)
           .AddMethod(__Method_DeleteNotificationConfig, serviceImpl.DeleteNotificationConfig)
+          .AddMethod(__Method_DeleteSecurityHealthAnalyticsCustomModule, serviceImpl.DeleteSecurityHealthAnalyticsCustomModule)
           .AddMethod(__Method_GetBigQueryExport, serviceImpl.GetBigQueryExport)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_GetMuteConfig, serviceImpl.GetMuteConfig)
           .AddMethod(__Method_GetNotificationConfig, serviceImpl.GetNotificationConfig)
           .AddMethod(__Method_GetOrganizationSettings, serviceImpl.GetOrganizationSettings)
+          .AddMethod(__Method_GetEffectiveSecurityHealthAnalyticsCustomModule, serviceImpl.GetEffectiveSecurityHealthAnalyticsCustomModule)
+          .AddMethod(__Method_GetSecurityHealthAnalyticsCustomModule, serviceImpl.GetSecurityHealthAnalyticsCustomModule)
           .AddMethod(__Method_GetSource, serviceImpl.GetSource)
           .AddMethod(__Method_GroupAssets, serviceImpl.GroupAssets)
           .AddMethod(__Method_GroupFindings, serviceImpl.GroupFindings)
           .AddMethod(__Method_ListAssets, serviceImpl.ListAssets)
+          .AddMethod(__Method_ListDescendantSecurityHealthAnalyticsCustomModules, serviceImpl.ListDescendantSecurityHealthAnalyticsCustomModules)
           .AddMethod(__Method_ListFindings, serviceImpl.ListFindings)
           .AddMethod(__Method_ListMuteConfigs, serviceImpl.ListMuteConfigs)
           .AddMethod(__Method_ListNotificationConfigs, serviceImpl.ListNotificationConfigs)
+          .AddMethod(__Method_ListEffectiveSecurityHealthAnalyticsCustomModules, serviceImpl.ListEffectiveSecurityHealthAnalyticsCustomModules)
+          .AddMethod(__Method_ListSecurityHealthAnalyticsCustomModules, serviceImpl.ListSecurityHealthAnalyticsCustomModules)
           .AddMethod(__Method_ListSources, serviceImpl.ListSources)
           .AddMethod(__Method_RunAssetDiscovery, serviceImpl.RunAssetDiscovery)
           .AddMethod(__Method_SetFindingState, serviceImpl.SetFindingState)
@@ -2832,6 +3479,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           .AddMethod(__Method_UpdateMuteConfig, serviceImpl.UpdateMuteConfig)
           .AddMethod(__Method_UpdateNotificationConfig, serviceImpl.UpdateNotificationConfig)
           .AddMethod(__Method_UpdateOrganizationSettings, serviceImpl.UpdateOrganizationSettings)
+          .AddMethod(__Method_UpdateSecurityHealthAnalyticsCustomModule, serviceImpl.UpdateSecurityHealthAnalyticsCustomModule)
           .AddMethod(__Method_UpdateSource, serviceImpl.UpdateSource)
           .AddMethod(__Method_UpdateSecurityMarks, serviceImpl.UpdateSecurityMarks)
           .AddMethod(__Method_CreateBigQueryExport, serviceImpl.CreateBigQueryExport)
@@ -2848,24 +3496,31 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SecurityCenterBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_BulkMuteFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest, global::Google.LongRunning.Operation>(serviceImpl.BulkMuteFindings));
+      serviceBinder.AddMethod(__Method_CreateSecurityHealthAnalyticsCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>(serviceImpl.CreateSecurityHealthAnalyticsCustomModule));
       serviceBinder.AddMethod(__Method_CreateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.CreateSource));
       serviceBinder.AddMethod(__Method_CreateFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.CreateFinding));
       serviceBinder.AddMethod(__Method_CreateMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.CreateMuteConfig));
       serviceBinder.AddMethod(__Method_CreateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.CreateNotificationConfig));
       serviceBinder.AddMethod(__Method_DeleteMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMuteConfig));
       serviceBinder.AddMethod(__Method_DeleteNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteNotificationConfig));
+      serviceBinder.AddMethod(__Method_DeleteSecurityHealthAnalyticsCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSecurityHealthAnalyticsCustomModule));
       serviceBinder.AddMethod(__Method_GetBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(serviceImpl.GetBigQueryExport));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_GetMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.GetMuteConfig));
       serviceBinder.AddMethod(__Method_GetNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.GetNotificationConfig));
       serviceBinder.AddMethod(__Method_GetOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.GetOrganizationSettings));
+      serviceBinder.AddMethod(__Method_GetEffectiveSecurityHealthAnalyticsCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>(serviceImpl.GetEffectiveSecurityHealthAnalyticsCustomModule));
+      serviceBinder.AddMethod(__Method_GetSecurityHealthAnalyticsCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>(serviceImpl.GetSecurityHealthAnalyticsCustomModule));
       serviceBinder.AddMethod(__Method_GetSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.GetSource));
       serviceBinder.AddMethod(__Method_GroupAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GroupAssetsRequest, global::Google.Cloud.SecurityCenter.V1.GroupAssetsResponse>(serviceImpl.GroupAssets));
       serviceBinder.AddMethod(__Method_GroupFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest, global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse>(serviceImpl.GroupFindings));
       serviceBinder.AddMethod(__Method_ListAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest, global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse>(serviceImpl.ListAssets));
+      serviceBinder.AddMethod(__Method_ListDescendantSecurityHealthAnalyticsCustomModules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse>(serviceImpl.ListDescendantSecurityHealthAnalyticsCustomModules));
       serviceBinder.AddMethod(__Method_ListFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse>(serviceImpl.ListFindings));
       serviceBinder.AddMethod(__Method_ListMuteConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse>(serviceImpl.ListMuteConfigs));
       serviceBinder.AddMethod(__Method_ListNotificationConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse>(serviceImpl.ListNotificationConfigs));
+      serviceBinder.AddMethod(__Method_ListEffectiveSecurityHealthAnalyticsCustomModules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse>(serviceImpl.ListEffectiveSecurityHealthAnalyticsCustomModules));
+      serviceBinder.AddMethod(__Method_ListSecurityHealthAnalyticsCustomModules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest, global::Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse>(serviceImpl.ListSecurityHealthAnalyticsCustomModules));
       serviceBinder.AddMethod(__Method_ListSources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse>(serviceImpl.ListSources));
       serviceBinder.AddMethod(__Method_RunAssetDiscovery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest, global::Google.LongRunning.Operation>(serviceImpl.RunAssetDiscovery));
       serviceBinder.AddMethod(__Method_SetFindingState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.SetFindingState));
@@ -2877,6 +3532,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       serviceBinder.AddMethod(__Method_UpdateMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.UpdateMuteConfig));
       serviceBinder.AddMethod(__Method_UpdateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.UpdateNotificationConfig));
       serviceBinder.AddMethod(__Method_UpdateOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.UpdateOrganizationSettings));
+      serviceBinder.AddMethod(__Method_UpdateSecurityHealthAnalyticsCustomModule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest, global::Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>(serviceImpl.UpdateSecurityHealthAnalyticsCustomModule));
       serviceBinder.AddMethod(__Method_UpdateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.UpdateSource));
       serviceBinder.AddMethod(__Method_UpdateSecurityMarks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest, global::Google.Cloud.SecurityCenter.V1.SecurityMarks>(serviceImpl.UpdateSecurityMarks));
       serviceBinder.AddMethod(__Method_CreateBigQueryExport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateBigQueryExportRequest, global::Google.Cloud.SecurityCenter.V1.BigQueryExport>(serviceImpl.CreateBigQueryExport));

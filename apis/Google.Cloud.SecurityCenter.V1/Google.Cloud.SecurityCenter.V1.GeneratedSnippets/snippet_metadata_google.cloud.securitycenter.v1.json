@@ -298,6 +298,309 @@
       ]
     },
     {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateSecurityHealthAnalyticsCustomModule_sync",
+      "title": "CreateSecurityHealthAnalyticsCustomModuleRequestObject",
+      "description": "Snippet for CreateSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateSecurityHealthAnalyticsCustomModule_async",
+      "title": "CreateSecurityHealthAnalyticsCustomModuleRequestObjectAsync",
+      "description": "Snippet for CreateSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.CreateSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateSecurityHealthAnalyticsCustomModule_sync_flattened",
+      "title": "CreateSecurityHealthAnalyticsCustomModule",
+      "description": "Snippet for CreateSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+            "name": "securityHealthAnalyticsCustomModule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateSecurityHealthAnalyticsCustomModule_async_flattened",
+      "title": "CreateSecurityHealthAnalyticsCustomModuleAsync",
+      "description": "Snippet for CreateSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+            "name": "securityHealthAnalyticsCustomModule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateSecurityHealthAnalyticsCustomModule_sync_flattened_resourceNames",
+      "title": "CreateSecurityHealthAnalyticsCustomModuleResourceNames",
+      "description": "Snippet for CreateSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsSettingsName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+            "name": "securityHealthAnalyticsCustomModule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateSecurityHealthAnalyticsCustomModule_async_flattened_resourceNames",
+      "title": "CreateSecurityHealthAnalyticsCustomModuleResourceNamesAsync",
+      "description": "Snippet for CreateSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.CreateSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsSettingsName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+            "name": "securityHealthAnalyticsCustomModule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "CreateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.CreateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "securitycenter_v1_generated_SecurityCenter_CreateSource_sync",
       "title": "CreateSourceRequestObject",
       "description": "Snippet for CreateSource",
@@ -3394,6 +3697,290 @@
       ]
     },
     {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteSecurityHealthAnalyticsCustomModule_sync",
+      "title": "DeleteSecurityHealthAnalyticsCustomModuleRequestObject",
+      "description": "Snippet for DeleteSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteSecurityHealthAnalyticsCustomModule_async",
+      "title": "DeleteSecurityHealthAnalyticsCustomModuleRequestObjectAsync",
+      "description": "Snippet for DeleteSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.DeleteSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteSecurityHealthAnalyticsCustomModule_sync_flattened",
+      "title": "DeleteSecurityHealthAnalyticsCustomModule",
+      "description": "Snippet for DeleteSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteSecurityHealthAnalyticsCustomModule_async_flattened",
+      "title": "DeleteSecurityHealthAnalyticsCustomModuleAsync",
+      "description": "Snippet for DeleteSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteSecurityHealthAnalyticsCustomModule_sync_flattened_resourceNames",
+      "title": "DeleteSecurityHealthAnalyticsCustomModuleResourceNames",
+      "description": "Snippet for DeleteSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_DeleteSecurityHealthAnalyticsCustomModule_async_flattened_resourceNames",
+      "title": "DeleteSecurityHealthAnalyticsCustomModuleResourceNamesAsync",
+      "description": "Snippet for DeleteSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "DeleteSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.DeleteSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "securitycenter_v1_generated_SecurityCenter_GetBigQueryExport_sync",
       "title": "GetBigQueryExportRequestObject",
       "description": "Snippet for GetBigQueryExport",
@@ -4829,6 +5416,580 @@
       ]
     },
     {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetEffectiveSecurityHealthAnalyticsCustomModule_sync",
+      "title": "GetEffectiveSecurityHealthAnalyticsCustomModuleRequestObject",
+      "description": "Snippet for GetEffectiveSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetEffectiveSecurityHealthAnalyticsCustomModule_async",
+      "title": "GetEffectiveSecurityHealthAnalyticsCustomModuleRequestObjectAsync",
+      "description": "Snippet for GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.GetEffectiveSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetEffectiveSecurityHealthAnalyticsCustomModule_sync_flattened",
+      "title": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+      "description": "Snippet for GetEffectiveSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetEffectiveSecurityHealthAnalyticsCustomModule_async_flattened",
+      "title": "GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+      "description": "Snippet for GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetEffectiveSecurityHealthAnalyticsCustomModule_sync_flattened_resourceNames",
+      "title": "GetEffectiveSecurityHealthAnalyticsCustomModuleResourceNames",
+      "description": "Snippet for GetEffectiveSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetEffectiveSecurityHealthAnalyticsCustomModule_async_flattened_resourceNames",
+      "title": "GetEffectiveSecurityHealthAnalyticsCustomModuleResourceNamesAsync",
+      "description": "Snippet for GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetEffectiveSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetSecurityHealthAnalyticsCustomModule_sync",
+      "title": "GetSecurityHealthAnalyticsCustomModuleRequestObject",
+      "description": "Snippet for GetSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetSecurityHealthAnalyticsCustomModule_async",
+      "title": "GetSecurityHealthAnalyticsCustomModuleRequestObjectAsync",
+      "description": "Snippet for GetSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.GetSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetSecurityHealthAnalyticsCustomModule_sync_flattened",
+      "title": "GetSecurityHealthAnalyticsCustomModule",
+      "description": "Snippet for GetSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetSecurityHealthAnalyticsCustomModule_async_flattened",
+      "title": "GetSecurityHealthAnalyticsCustomModuleAsync",
+      "description": "Snippet for GetSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetSecurityHealthAnalyticsCustomModule_sync_flattened_resourceNames",
+      "title": "GetSecurityHealthAnalyticsCustomModuleResourceNames",
+      "description": "Snippet for GetSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_GetSecurityHealthAnalyticsCustomModule_async_flattened_resourceNames",
+      "title": "GetSecurityHealthAnalyticsCustomModuleResourceNamesAsync",
+      "description": "Snippet for GetSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.GetSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "GetSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.GetSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "securitycenter_v1_generated_SecurityCenter_GetSource_sync",
       "title": "GetSourceRequestObject",
       "description": "Snippet for GetSource",
@@ -5640,6 +6801,325 @@
         {
           "start": 40,
           "end": 85,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListDescendantSecurityHealthAnalyticsCustomModules_sync",
+      "title": "ListDescendantSecurityHealthAnalyticsCustomModulesRequestObject",
+      "description": "Snippet for ListDescendantSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListDescendantSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListDescendantSecurityHealthAnalyticsCustomModules_async",
+      "title": "ListDescendantSecurityHealthAnalyticsCustomModulesRequestObjectAsync",
+      "description": "Snippet for ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListDescendantSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListDescendantSecurityHealthAnalyticsCustomModules_sync_flattened",
+      "title": "ListDescendantSecurityHealthAnalyticsCustomModules",
+      "description": "Snippet for ListDescendantSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListDescendantSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListDescendantSecurityHealthAnalyticsCustomModules_async_flattened",
+      "title": "ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+      "description": "Snippet for ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListDescendantSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListDescendantSecurityHealthAnalyticsCustomModules_sync_flattened_resourceNames",
+      "title": "ListDescendantSecurityHealthAnalyticsCustomModulesResourceNames",
+      "description": "Snippet for ListDescendantSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsSettingsName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListDescendantSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListDescendantSecurityHealthAnalyticsCustomModules_async_flattened_resourceNames",
+      "title": "ListDescendantSecurityHealthAnalyticsCustomModulesResourceNamesAsync",
+      "description": "Snippet for ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsSettingsName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListDescendantSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListDescendantSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListDescendantSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]
@@ -6819,6 +8299,644 @@
         {
           "start": 39,
           "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListEffectiveSecurityHealthAnalyticsCustomModules_sync",
+      "title": "ListEffectiveSecurityHealthAnalyticsCustomModulesRequestObject",
+      "description": "Snippet for ListEffectiveSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListEffectiveSecurityHealthAnalyticsCustomModules_async",
+      "title": "ListEffectiveSecurityHealthAnalyticsCustomModulesRequestObjectAsync",
+      "description": "Snippet for ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListEffectiveSecurityHealthAnalyticsCustomModules_sync_flattened",
+      "title": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+      "description": "Snippet for ListEffectiveSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListEffectiveSecurityHealthAnalyticsCustomModules_async_flattened",
+      "title": "ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+      "description": "Snippet for ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListEffectiveSecurityHealthAnalyticsCustomModules_sync_flattened_resourceNames",
+      "title": "ListEffectiveSecurityHealthAnalyticsCustomModulesResourceNames",
+      "description": "Snippet for ListEffectiveSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsSettingsName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListEffectiveSecurityHealthAnalyticsCustomModules_async_flattened_resourceNames",
+      "title": "ListEffectiveSecurityHealthAnalyticsCustomModulesResourceNamesAsync",
+      "description": "Snippet for ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsSettingsName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.EffectiveSecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListEffectiveSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListSecurityHealthAnalyticsCustomModules_sync",
+      "title": "ListSecurityHealthAnalyticsCustomModulesRequestObject",
+      "description": "Snippet for ListSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListSecurityHealthAnalyticsCustomModules_async",
+      "title": "ListSecurityHealthAnalyticsCustomModulesRequestObjectAsync",
+      "description": "Snippet for ListSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListSecurityHealthAnalyticsCustomModules_sync_flattened",
+      "title": "ListSecurityHealthAnalyticsCustomModules",
+      "description": "Snippet for ListSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListSecurityHealthAnalyticsCustomModules_async_flattened",
+      "title": "ListSecurityHealthAnalyticsCustomModulesAsync",
+      "description": "Snippet for ListSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListSecurityHealthAnalyticsCustomModules_sync_flattened_resourceNames",
+      "title": "ListSecurityHealthAnalyticsCustomModulesResourceNames",
+      "description": "Snippet for ListSecurityHealthAnalyticsCustomModules",
+      "file": "SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecurityHealthAnalyticsCustomModules",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListSecurityHealthAnalyticsCustomModules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsSettingsName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_ListSecurityHealthAnalyticsCustomModules_async_flattened_resourceNames",
+      "title": "ListSecurityHealthAnalyticsCustomModulesResourceNamesAsync",
+      "description": "Snippet for ListSecurityHealthAnalyticsCustomModulesAsync",
+      "file": "SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSecurityHealthAnalyticsCustomModulesAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.ListSecurityHealthAnalyticsCustomModulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsSettingsName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.SecurityCenter.V1.ListSecurityHealthAnalyticsCustomModulesResponse, Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "ListSecurityHealthAnalyticsCustomModules",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.ListSecurityHealthAnalyticsCustomModules",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]
@@ -9954,6 +12072,206 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateSecurityHealthAnalyticsCustomModule_sync",
+      "title": "UpdateSecurityHealthAnalyticsCustomModuleRequestObject",
+      "description": "Snippet for UpdateSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "UpdateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateSecurityHealthAnalyticsCustomModule_async",
+      "title": "UpdateSecurityHealthAnalyticsCustomModuleRequestObjectAsync",
+      "description": "Snippet for UpdateSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.UpdateSecurityHealthAnalyticsCustomModuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "UpdateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateSecurityHealthAnalyticsCustomModule_sync_flattened",
+      "title": "UpdateSecurityHealthAnalyticsCustomModule",
+      "description": "Snippet for UpdateSecurityHealthAnalyticsCustomModule",
+      "file": "SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecurityHealthAnalyticsCustomModule",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+            "name": "securityHealthAnalyticsCustomModule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "UpdateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "securitycenter_v1_generated_SecurityCenter_UpdateSecurityHealthAnalyticsCustomModule_async_flattened",
+      "title": "UpdateSecurityHealthAnalyticsCustomModuleAsync",
+      "description": "Snippet for UpdateSecurityHealthAnalyticsCustomModuleAsync",
+      "file": "SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSecurityHealthAnalyticsCustomModuleAsync",
+        "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule",
+            "name": "securityHealthAnalyticsCustomModule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.SecurityCenter.V1.SecurityHealthAnalyticsCustomModule>",
+        "client": {
+          "shortName": "SecurityCenterClient",
+          "fullName": "Google.Cloud.SecurityCenter.V1.SecurityCenterClient"
+        },
+        "method": {
+          "shortName": "UpdateSecurityHealthAnalyticsCustomModule",
+          "fullName": "google.cloud.securitycenter.v1.SecurityCenter.UpdateSecurityHealthAnalyticsCustomModule",
+          "service": {
+            "shortName": "SecurityCenter",
+            "fullName": "google.cloud.securitycenter.v1.SecurityCenter"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]
