@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.5.0, released 2023-04-12
+
+### New features
+
+- Add client library support for AssetService v1 AnalyzeOrgPolicies API ([commit cc62098](https://github.com/googleapis/google-cloud-dotnet/commit/cc62098de3549c846ca6e0eb073a83cebd7a0dfa))
+- Add client library support for AssetService v1 AnalyzeOrgPolicyGovernedContainers API ([commit cc62098](https://github.com/googleapis/google-cloud-dotnet/commit/cc62098de3549c846ca6e0eb073a83cebd7a0dfa))
+- Add client library support for AssetService v1 AnalyzeOrgPolicyGovernedAssets API ([commit cc62098](https://github.com/googleapis/google-cloud-dotnet/commit/cc62098de3549c846ca6e0eb073a83cebd7a0dfa))
+
 ## Version 3.4.0, released 2023-01-16
 
 ### New features
