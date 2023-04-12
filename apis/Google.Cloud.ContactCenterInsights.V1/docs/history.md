@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.6.0, released 2023-04-12
+
+### New features
+
+- Launch UploadConversation endpoint ([commit 99ac4c9](https://github.com/googleapis/google-cloud-dotnet/commit/99ac4c9821b8315805959915b2d0bb48c9c4357e))
+
+### Documentation improvements
+
+- Reformat some lines of code ([commit 3721f87](https://github.com/googleapis/google-cloud-dotnet/commit/3721f874ba11b28fff8b2a89405d0babef8a65fa))
+
 ## Version 2.5.0, released 2023-03-06
 
 ### New features
