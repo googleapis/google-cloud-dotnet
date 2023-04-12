@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.9.0, released 2023-04-12
+
+### New features
+
+- Add support for updating additional pod IPv4 ranges for Standard and Autopilot clusters ([commit 217853b](https://github.com/googleapis/google-cloud-dotnet/commit/217853b8b06f699c6f064aef9ea9174860ed5a96))
+- Add support for disabling pod IP cidr overprovision ([commit 440c8ca](https://github.com/googleapis/google-cloud-dotnet/commit/440c8ca56d42a29dd1dd93db640e1b62e12de831))
+- Add a new fleet registration feature ([commit e6be97b](https://github.com/googleapis/google-cloud-dotnet/commit/e6be97b75027d9ad2a18e836e9312b2b77ab0b09))
+
+### Documentation improvements
+
+- Minor typo fix ([commit 891e898](https://github.com/googleapis/google-cloud-dotnet/commit/891e89876c6b91843d35c5143e63da5101c6c530))
+- Minor grammar improvements ([commit 2e674ee](https://github.com/googleapis/google-cloud-dotnet/commit/2e674ee00dc17ee64edeb9c053907fed53187a0c))
+- Add clarification on whether `NodePool.version` is a required field ([commit 50c4b0f](https://github.com/googleapis/google-cloud-dotnet/commit/50c4b0fc6005d326f500023267c797dbe39aa2db))
+- Clarified wording around the NodePoolUpdateStrategy default behavior ([commit beac7f8](https://github.com/googleapis/google-cloud-dotnet/commit/beac7f8fa14f7944a56bd5c99bc45740a130643b))
+- Add references for available node image types ([commit beac7f8](https://github.com/googleapis/google-cloud-dotnet/commit/beac7f8fa14f7944a56bd5c99bc45740a130643b))
+
 ## Version 3.8.0, released 2023-01-18
 
 ### New features
