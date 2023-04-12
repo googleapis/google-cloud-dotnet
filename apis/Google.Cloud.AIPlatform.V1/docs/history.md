@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.12.0, released 2023-04-12
+
+### New features
+
+- Add public_endpoint_enabled and publid_endpoint_domain_name to IndexEndpoint ([commit 6456df3](https://github.com/googleapis/google-cloud-dotnet/commit/6456df3710bf03715fd60988726c5fc75e76747d))
+- Add ModelSourceType.MODEL_GARDEN enum to ModelSourceInfo ([commit 6456df3](https://github.com/googleapis/google-cloud-dotnet/commit/6456df3710bf03715fd60988726c5fc75e76747d))
+- Add copy to ModelSourceInfo ([commit 6456df3](https://github.com/googleapis/google-cloud-dotnet/commit/6456df3710bf03715fd60988726c5fc75e76747d))
+
 ## Version 2.11.0, released 2023-03-06
 
 ### New features
