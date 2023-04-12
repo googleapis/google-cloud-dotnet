@@ -65,6 +65,11 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public string UserProject { get; set; }
 
+        /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
         private bool AnyExplicitPreconditions => IfMetagenerationMatch != null || IfMetagenerationNotMatch != null;
 
         internal void ModifyRequest(UpdateRequest request, Bucket bucket)
@@ -87,7 +92,6 @@ namespace Google.Cloud.Storage.V1
                 if (IfMetagenerationMatch != null)
                 {
                     request.IfMetagenerationMatch = IfMetagenerationMatch;
-                    RetryHandler.MarkAsRetriable(request);
                 }
                 if (IfMetagenerationNotMatch != null)
                 {
