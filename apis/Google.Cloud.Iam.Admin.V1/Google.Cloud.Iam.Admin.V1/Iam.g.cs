@@ -294,11 +294,11 @@ namespace Google.Cloud.Iam.Admin.V1 {
             "LnYxLkxpbnRQb2xpY3lSZXF1ZXN0GicuZ29vZ2xlLmlhbS5hZG1pbi52MS5M",
             "aW50UG9saWN5UmVzcG9uc2UiJYLT5JMCHyIaL3YxL2lhbVBvbGljaWVzOmxp",
             "bnRQb2xpY3k6ASoaRspBEmlhbS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CkAEKF2Nv",
-            "bS5nb29nbGUuaWFtLmFkbWluLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvaWFtL2FkbWluL3YxO2FkbWlu+AEBqgIZR29v",
-            "Z2xlLkNsb3VkLklhbS5BZG1pbi5WMcoCGUdvb2dsZVxDbG91ZFxJYW1cQWRt",
-            "aW5cVjFiBnByb3RvMw=="));
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CiwEKF2Nv",
+            "bS5nb29nbGUuaWFtLmFkbWluLnYxUAFaM2Nsb3VkLmdvb2dsZS5jb20vZ28v",
+            "aWFtL2FkbWluL2FwaXYxL2FkbWlucGI7YWRtaW5wYvgBAaoCGUdvb2dsZS5D",
+            "bG91ZC5JYW0uQWRtaW4uVjHKAhlHb29nbGVcQ2xvdWRcSWFtXEFkbWluXFYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountKeyAlgorithm), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountPrivateKeyType), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountPublicKeyType), typeof(global::Google.Cloud.Iam.Admin.V1.ServiceAccountKeyOrigin), typeof(global::Google.Cloud.Iam.Admin.V1.RoleView), }, null, new pbr::GeneratedClrTypeInfo[] {
