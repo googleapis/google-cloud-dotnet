@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.5.0, released 2023-04-12
+
+### New features
+
+- Add model service ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+- Support per-entity search and autocomplete ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+- Support new filter syntax for recommendation ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+- Expose A/B experiment info in search response ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+
 ## Version 2.4.0, released 2023-01-19
 
 ### New features
