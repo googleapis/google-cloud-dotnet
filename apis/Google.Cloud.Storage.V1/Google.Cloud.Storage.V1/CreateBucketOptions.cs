@@ -38,6 +38,11 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public Projection? Projection { get; set; }
 
+        /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
         internal void ModifyRequest(BucketsResource.InsertRequest request)
         {
             if (PredefinedAcl != null)
