@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2023-04-12
+
+### New features
+
+- Added ignore_dependent_resources to DeleteCaPoolRequest, DeleteCertificateAuthorityRequest, DisableCertificateAuthorityRequest ([commit ca8e6ba](https://github.com/googleapis/google-cloud-dotnet/commit/ca8e6babb24933c41c4b546965de8b88350a178c))
+
 ## Version 3.2.0, released 2023-02-22
 
 ### New features
