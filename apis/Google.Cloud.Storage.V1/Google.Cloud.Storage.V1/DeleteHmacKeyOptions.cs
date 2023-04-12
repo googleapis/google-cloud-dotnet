@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,6 +21,11 @@ namespace Google.Cloud.Storage.V1
     /// </summary>
     public sealed class DeleteHmacKeyOptions
     {
+        /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
         internal void ModifyRequest(ProjectsResource.HmacKeysResource.DeleteRequest request)
         {
         }

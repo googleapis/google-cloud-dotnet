@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,7 +35,8 @@ namespace Google.Cloud.Storage.V1
             var bucketEntity = new Bucket { Name = bucket };
             var request = Service.Buckets.GetIamPolicy(bucket);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            RetryHandler.MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

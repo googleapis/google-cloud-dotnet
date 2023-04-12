@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,6 +26,11 @@ namespace Google.Cloud.Storage.V1
         /// The caller must have suitable permissions for the project being billed.
         /// </summary>
         public string UserProject { get; set; }
+
+        /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
 
         internal void ModifyRequest(NotificationsResource.DeleteRequest request)
         {

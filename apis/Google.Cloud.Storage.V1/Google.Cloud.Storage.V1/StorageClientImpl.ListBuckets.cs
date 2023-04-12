@@ -53,7 +53,8 @@ namespace Google.Cloud.Storage.V1
         {
             var request = Service.Buckets.List(projectId);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            RetryHandler.MarkAsRetriable(request, retryOptions);
             return request;
         }
     }
