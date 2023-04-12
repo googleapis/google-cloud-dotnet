@@ -1311,11 +1311,11 @@
       "protoPath": "google/container/v1",
       "productName": "Google Kubernetes Engine",
       "productUrl": "https://cloud.google.com/kubernetes-engine/docs/reference/rest/",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Kubernetes Engine API, used for building and managing container based applications, powered by the open source Kubernetes technology.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Grpc.Core": "2.46.5"
       },
       "tags": [
