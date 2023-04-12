@@ -97,6 +97,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(notification, nameof(notification));
             var request = Service.Notifications.Insert(notification, bucket);
             options?.ModifyRequest(request);
+            RetryHandler.MarkAsRetriable(request, RetryOptions.Never);
             return request;
         }
 
