@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.9.0, released 2023-04-12
+
+### New features
+
+- Released securitycenter/v1 SHA custom modules cloud libraries: Create, Get, List, Update, Delete ([commit 96e3a2e](https://github.com/googleapis/google-cloud-dotnet/commit/96e3a2e51e5cb5daa0ad7c34f4ba94c5825a4559))
+
 ## Version 3.8.0, released 2023-01-19
 
 ### New features
