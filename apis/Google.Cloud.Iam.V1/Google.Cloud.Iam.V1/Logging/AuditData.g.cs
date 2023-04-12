@@ -27,10 +27,10 @@ namespace Google.Cloud.Iam.V1.Logging {
             "CiZnb29nbGUvaWFtL3YxL2xvZ2dpbmcvYXVkaXRfZGF0YS5wcm90bxIVZ29v",
             "Z2xlLmlhbS52MS5sb2dnaW5nGhpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90",
             "byI9CglBdWRpdERhdGESMAoMcG9saWN5X2RlbHRhGAIgASgLMhouZ29vZ2xl",
-            "LmlhbS52MS5Qb2xpY3lEZWx0YUKJAQoZY29tLmdvb2dsZS5pYW0udjEubG9n",
-            "Z2luZ0IOQXVkaXREYXRhUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9pYW0vdjEvbG9nZ2luZztsb2dnaW5nqgIbR29v",
-            "Z2xlLkNsb3VkLklhbS5WMS5Mb2dnaW5nYgZwcm90bzM="));
+            "LmlhbS52MS5Qb2xpY3lEZWx0YUKGAQoZY29tLmdvb2dsZS5pYW0udjEubG9n",
+            "Z2luZ0IOQXVkaXREYXRhUHJvdG9QAVo5Y2xvdWQuZ29vZ2xlLmNvbS9nby9p",
+            "YW0vYXBpdjEvbG9nZ2luZy9sb2dnaW5ncGI7bG9nZ2luZ3BiqgIbR29vZ2xl",
+            "LkNsb3VkLklhbS5WMS5Mb2dnaW5nYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
