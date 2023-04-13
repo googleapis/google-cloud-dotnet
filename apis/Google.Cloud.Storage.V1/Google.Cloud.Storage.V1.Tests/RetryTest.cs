@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+using Google.Api.Gax.Testing;
 using Google.Apis.Requests;
 using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
@@ -89,41 +90,45 @@ public class RetryTest
 
     private static void AssertAttempts(RetryOptions retryOptions, int statusCode, int numOfFailures, int maximumRetries, bool success, params int[] expectedBackOffs)
     {
-        var messageHandler = new ReplayingMessageHandler(VersionHeaderBuilder.HeaderName);
+        var scheduler = new FakeScheduler();
+        var clock = scheduler.Clock;
+        var messageHandler = new ReplayingMessageHandler(VersionHeaderBuilder.HeaderName, clock);
         var service = new FakeStorageService(messageHandler);
         service.HttpClient.MessageHandler.GoogleApiClientHeader = "test/fake";
         service.HttpClient.MessageHandler.NumTries = maximumRetries;
 
         var request = service.Buckets.Get("bucket");
-        var client = new StorageClientImpl(service);
-
-        // Retries for the the failures. Assumed that error code 504 is always included in the predicate for these tests.
-        service.ExpectRequests(request, (HttpStatusCode) 504, numOfFailures - 1);
-        if (numOfFailures > 0)
+        var client = new StorageClientImpl(service, encryptionKey: null, scheduler);
+        scheduler.Run(() =>
         {
-            service.ExpectRequest(request, (HttpStatusCode) statusCode);
-        }
+            // Retries for the the failures. Assumed that error code 504 is always included in the predicate for these tests.
+            service.ExpectRequests(request, (HttpStatusCode) 504, numOfFailures - 1);
+            if (numOfFailures > 0)
+            {
+                service.ExpectRequest(request, (HttpStatusCode) statusCode);
+            }
 
-        DateTime startTime = DateTime.UtcNow;
-        if (success)
-        {
-            // Last call is a success.
-            service.ExpectRequest(request, new Bucket());
+            DateTime startTime = clock.GetCurrentDateTimeUtc();
+            if (success)
+            {
+                // Last call is a success.
+                service.ExpectRequest(request, new Bucket());
 
-            client.GetBucket("bucket", new GetBucketOptions { RetryOptions = retryOptions });
+                client.GetBucket("bucket", new GetBucketOptions { RetryOptions = retryOptions });
 
-            Assert.Equal(expectedBackOffs.Count(), messageHandler.AttemptTimestamps.Count());
-            service.Verify();
-        }
-        else
-        {
-            // The call throws an exception
-            Assert.Throws<GoogleApiException>(() => client.GetBucket("bucket", new GetBucketOptions { RetryOptions = retryOptions }));
-        }
+                Assert.Equal(expectedBackOffs.Count(), messageHandler.AttemptTimestamps.Count());
+                service.Verify();
+            }
+            else
+            {
+                // The call throws an exception
+                Assert.Throws<GoogleApiException>(() => client.GetBucket("bucket", new GetBucketOptions { RetryOptions = retryOptions }));
+            }
 
-        for (int i = 0; i < messageHandler.AttemptTimestamps.Count; i++)
-        {
-            Assert.Equal(expectedBackOffs[i], (messageHandler.AttemptTimestamps[i] - startTime).TotalSeconds, 0.25);
-        }
+            for (int i = 0; i < messageHandler.AttemptTimestamps.Count; i++)
+            {
+                Assert.Equal(expectedBackOffs[i], (messageHandler.AttemptTimestamps[i] - startTime).TotalSeconds);
+            }
+        });
     }
 }
