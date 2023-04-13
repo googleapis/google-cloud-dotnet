@@ -27,16 +27,9 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0.408-jammy
 
 # Additional tooling required to regenerate libraries and project files.
 
-# Temporarily, install .NET Core 3.1 as well as .NET 6
-# This (and the apt-get install of dotnet-sdk-3.1) can
-# be removed when the generator is updated to use .NET 6
-RUN wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-RUN dpkg -i packages-microsoft-prod.deb
-
 RUN apt-get update
 RUN apt-get install -y unzip
 RUN apt-get install -y python3
-RUN apt-get install -y dotnet-sdk-3.1
 
 # Note: main.sh is not packed into the docker image.  This command
 # invokes the current main.sh in the repo.
