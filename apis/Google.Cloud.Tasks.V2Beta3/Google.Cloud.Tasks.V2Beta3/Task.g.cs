@@ -51,9 +51,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "cGF0Y2hfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
             "MQoNcmVzcG9uc2VfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
             "c3RhbXASKwoPcmVzcG9uc2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5T",
-            "dGF0dXNCYwoeY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzQglUYXNr",
-            "UHJvdG9QAVo0Y2xvdWQuZ29vZ2xlLmNvbS9nby90YXNrcy9hcGl2MmJldGEz",
-            "L3Rhc2tzcGI7dGFza3NwYmIGcHJvdG8z"));
+            "dGF0dXNCcgoeY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzQglUYXNr",
+            "UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZHRhc2tzL2FwaXYy",
+            "YmV0YTMvY2xvdWR0YXNrc3BiO2Nsb3VkdGFza3NwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -136,7 +136,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optionally caller-specified in [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
+    /// Optionally caller-specified in
+    /// [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
     ///
     /// The task name.
     ///
@@ -171,7 +172,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// HTTP request that is sent to the App Engine app handler.
     ///
-    /// An App Engine task is a task that has [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest] set.
+    /// An App Engine task is a task that has
+    /// [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest]
+    /// set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +191,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// HTTP request that is sent to the task's target.
     ///
-    /// An HTTP task is a task that has [HttpRequest][google.cloud.tasks.v2beta3.HttpRequest] set.
+    /// An HTTP task is a task that has
+    /// [HttpRequest][google.cloud.tasks.v2beta3.HttpRequest] set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -203,10 +207,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>Field number for the "pull_message" field.</summary>
     public const int PullMessageFieldNumber = 13;
     /// <summary>
-    /// Pull Message contained in a task in a [PULL][google.cloud.tasks.v2beta3.Queue.type] queue type. This
-    /// payload type cannot be explicitly set through Cloud Tasks API. Its
-    /// purpose, currently is to provide backward compatibility with App Engine
-    /// Task Queue
+    /// Pull Message contained in a task in a
+    /// [PULL][google.cloud.tasks.v2beta3.Queue.type] queue type. This payload
+    /// type cannot be explicitly set through Cloud Tasks API. Its purpose,
+    /// currently is to provide backward compatibility with App Engine Task Queue
     /// [pull](https://cloud.google.com/appengine/docs/standard/java/taskqueue/pull/)
     /// queues to provide a way to inspect contents of pull tasks through the
     /// [CloudTasks.GetTask][google.cloud.tasks.v2beta3.CloudTasks.GetTask].
@@ -264,7 +268,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// The deadline for requests sent to the worker. If the worker does not
     /// respond by this deadline then the request is cancelled and the attempt
     /// is marked as a `DEADLINE_EXCEEDED` failure. Cloud Tasks will retry the
-    /// task according to the [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig].
+    /// task according to the
+    /// [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig].
     ///
     /// Note that when the request is cancelled, Cloud Tasks will stop listening
     /// for the response, but whether the worker stops processing depends on the
@@ -273,10 +278,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///
     /// The default and maximum values depend on the type of request:
     ///
-    /// * For [HTTP tasks][google.cloud.tasks.v2beta3.HttpRequest], the default is 10 minutes. The deadline
+    /// * For [HTTP tasks][google.cloud.tasks.v2beta3.HttpRequest], the default is
+    /// 10 minutes. The deadline
     ///   must be in the interval [15 seconds, 30 minutes].
     ///
-    /// * For [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest], 0 indicates that the
+    /// * For [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest],
+    /// 0 indicates that the
     ///   request has the default deadline. The default deadline depends on the
     ///   [scaling
     ///   type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling)
@@ -341,8 +348,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// Output only. The status of the task's first attempt.
     ///
-    /// Only [dispatch_time][google.cloud.tasks.v2beta3.Attempt.dispatch_time] will be set.
-    /// The other [Attempt][google.cloud.tasks.v2beta3.Attempt] information is not retained by Cloud Tasks.
+    /// Only [dispatch_time][google.cloud.tasks.v2beta3.Attempt.dispatch_time] will
+    /// be set. The other [Attempt][google.cloud.tasks.v2beta3.Attempt] information
+    /// is not retained by Cloud Tasks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -372,8 +380,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ViewFieldNumber = 10;
     private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View view_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
-    /// Output only. The view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] has
-    /// been returned.
+    /// Output only. The view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2beta3.Task] has been returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -896,7 +904,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The view specifies a subset of [Task][google.cloud.tasks.v2beta3.Task] data.
+      /// The view specifies a subset of [Task][google.cloud.tasks.v2beta3.Task]
+      /// data.
       ///
       /// When a task is returned in a response, not all
       /// information is retrieved by default because some data, such as
@@ -914,7 +923,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         /// sensitive data.
         ///
         /// This view does not include the
-        /// [body in AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest.body].
+        /// [body in
+        /// AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest.body].
         /// Bodies are desirable to return only when needed, because they
         /// can be large and because of the sensitivity of the data that you
         /// choose to store in it.
@@ -923,9 +933,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         /// <summary>
         /// All information is returned.
         ///
-        /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL] requires
-        /// `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
-        /// permission on the [Queue][google.cloud.tasks.v2beta3.Queue] resource.
+        /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL]
+        /// requires `cloudtasks.tasks.fullView` [Google
+        /// IAM](https://cloud.google.com/iam/) permission on the
+        /// [Queue][google.cloud.tasks.v2beta3.Queue] resource.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 2,
       }
