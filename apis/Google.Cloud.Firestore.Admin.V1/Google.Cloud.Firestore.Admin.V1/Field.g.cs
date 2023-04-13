@@ -42,7 +42,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "cHJvamVjdH0vZGF0YWJhc2VzL3tkYXRhYmFzZX0vY29sbGVjdGlvbkdyb3Vw",
             "cy97Y29sbGVjdGlvbn0vZmllbGRzL3tmaWVsZH1C2QEKHWNvbS5nb29nbGUu",
             "ZmlyZXN0b3JlLmFkbWluLnYxQgpGaWVsZFByb3RvUAFaOWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2FkbWluL2FwaXYxcGI7YXBpdjFw",
+            "ZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2FkbWluL2FkbWlucGI7YWRtaW5w",
             "YqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLkFkbWluLlYxygIf",
             "R29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1pblxWMeoCI0dvb2dsZTo6Q2xv",
             "dWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYxYgZwcm90bzM="));
