@@ -74,15 +74,26 @@ namespace Google.Cloud.Storage.V1
         public override EncryptionKey EncryptionKey { get; }
 
         /// <summary>
+        /// Scheduler used for retry delays, avoiding the use of Task.Delay
+        /// in a way which is slow and hard to test thoroughly.
+        /// </summary>
+        private readonly IScheduler _scheduler;
+
+        internal StorageClientImpl(StorageService service, EncryptionKey encryptionKey, IScheduler scheduler)
+        {
+            Service = GaxPreconditions.CheckNotNull(service, nameof(service));
+            EncryptionKey = encryptionKey ?? EncryptionKey.None;
+            _scheduler = scheduler ?? SystemScheduler.Instance;
+        }
+
+        /// <summary>
         /// Constructs a new client wrapping the given <see cref="StorageService"/>.
         /// </summary>
         /// <param name="service">The service to wrap. Must not be null.</param>
         /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for object-based operations by default. May be null,
         /// in which case <see cref="EncryptionKey.None"/> will be used.</param>
-        public StorageClientImpl(StorageService service, EncryptionKey encryptionKey = null)
-        {            
-            Service = GaxPreconditions.CheckNotNull(service, nameof(service));
-            EncryptionKey = encryptionKey ?? EncryptionKey.None;
+        public StorageClientImpl(StorageService service, EncryptionKey encryptionKey = null) : this(service, encryptionKey, null)
+        {
         }
 
         /// <summary>
@@ -189,5 +200,8 @@ namespace Google.Cloud.Storage.V1
 
         /// <inheritdoc />
         public override void Dispose() => Service.Dispose();
+
+        private void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request, RetryOptions options) =>
+            RetryHandler.MarkAsRetriable(request, options, _scheduler);
     }
 }
