@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Http;
+using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -30,6 +30,7 @@ namespace Google.Cloud.ClientTesting
     /// </summary>
     public class ReplayingMessageHandler : HttpMessageHandler
     {
+        private readonly IClock _clock;
         private readonly string _headerToCapture;
 
         private readonly Queue<Tuple<Uri, string, HttpResponseMessage>> _requestResponses =
@@ -47,25 +48,36 @@ namespace Google.Cloud.ClientTesting
         public List<string> CapturedHeaders { get; }
 
         /// <summary>
-        /// Creates a handler that doesn't capture any headers
+        /// Creates a handler that captures <paramref name="header"/> (if it's not null)
+        /// and uses the given clock for obtaining the time at which each request is made.
         /// </summary>
-        public ReplayingMessageHandler()
+        /// <param name="header">The header to capture, or null to not capture any header values.</param>
+        /// <param name="clock">The clock to use to obtain timestamps, or null to use the system clock.</param>
+        public ReplayingMessageHandler(string header, IClock clock)
         {
+            _headerToCapture = header;
+            CapturedHeaders = header is null ? null : new List<string>();
+            _clock = clock ?? SystemClock.Instance;
         }
 
         /// <summary>
         /// Creates a handler that captures the given header in <see cref="CapturedHeaders"/>,
         /// once per request.
         /// </summary>
-        public ReplayingMessageHandler(string header)
+        public ReplayingMessageHandler(string header) : this(header, null)
         {
-            _headerToCapture = header;
-            CapturedHeaders = new List<string>();
+        }
+
+        /// <summary>
+        /// Creates a handler that doesn't capture any headers, and uses the system clock.
+        /// </summary>
+        public ReplayingMessageHandler() : this(null, null)
+        {
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            AttemptTimestamps.Add(DateTime.UtcNow);
+            AttemptTimestamps.Add(_clock.GetCurrentDateTimeUtc());
 
             Assert.NotEmpty(_requestResponses);
             if (_headerToCapture is string header)
