@@ -48,9 +48,10 @@ namespace Google.Cloud.Tasks.V2 {
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNZGlzcGF0Y2hfdGltZRgCIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNcmVzcG9uc2VfdGlt",
             "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoPcmVzcG9u",
-            "c2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCWQoZY29tLmdv",
-            "b2dsZS5jbG91ZC50YXNrcy52MkIJVGFza1Byb3RvUAFaL2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vdGFza3MvYXBpdjIvdGFza3NwYjt0YXNrc3BiYgZwcm90bzM="));
+            "c2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCaAoZY29tLmdv",
+            "b2dsZS5jbG91ZC50YXNrcy52MkIJVGFza1Byb3RvUAFaPmNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vY2xvdWR0YXNrcy9hcGl2Mi9jbG91ZHRhc2tzcGI7Y2xvdWR0",
+            "YXNrc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -130,7 +131,8 @@ namespace Google.Cloud.Tasks.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optionally caller-specified in [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask].
+    /// Optionally caller-specified in
+    /// [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask].
     ///
     /// The task name.
     ///
@@ -165,7 +167,8 @@ namespace Google.Cloud.Tasks.V2 {
     /// <summary>
     /// HTTP request that is sent to the App Engine app handler.
     ///
-    /// An App Engine task is a task that has [AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest] set.
+    /// An App Engine task is a task that has
+    /// [AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest] set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,7 +185,8 @@ namespace Google.Cloud.Tasks.V2 {
     /// <summary>
     /// HTTP request that is sent to the worker.
     ///
-    /// An HTTP task is a task that has [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
+    /// An HTTP task is a task that has
+    /// [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -244,10 +248,12 @@ namespace Google.Cloud.Tasks.V2 {
     ///
     /// The default and maximum values depend on the type of request:
     ///
-    /// * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10 minutes. The deadline
+    /// * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10
+    /// minutes. The deadline
     ///   must be in the interval [15 seconds, 30 minutes].
     ///
-    /// * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0 indicates that the
+    /// * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0
+    /// indicates that the
     ///   request has the default deadline. The default deadline depends on the
     ///   [scaling
     ///   type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling)
@@ -312,8 +318,9 @@ namespace Google.Cloud.Tasks.V2 {
     /// <summary>
     /// Output only. The status of the task's first attempt.
     ///
-    /// Only [dispatch_time][google.cloud.tasks.v2.Attempt.dispatch_time] will be set.
-    /// The other [Attempt][google.cloud.tasks.v2.Attempt] information is not retained by Cloud Tasks.
+    /// Only [dispatch_time][google.cloud.tasks.v2.Attempt.dispatch_time] will be
+    /// set. The other [Attempt][google.cloud.tasks.v2.Attempt] information is not
+    /// retained by Cloud Tasks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -343,8 +350,8 @@ namespace Google.Cloud.Tasks.V2 {
     public const int ViewFieldNumber = 11;
     private global::Google.Cloud.Tasks.V2.Task.Types.View view_ = global::Google.Cloud.Tasks.V2.Task.Types.View.Unspecified;
     /// <summary>
-    /// Output only. The view specifies which subset of the [Task][google.cloud.tasks.v2.Task] has
-    /// been returned.
+    /// Output only. The view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2.Task] has been returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -847,7 +854,8 @@ namespace Google.Cloud.Tasks.V2 {
         /// sensitive data.
         ///
         /// This view does not include the
-        /// [body in AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest.body].
+        /// [body in
+        /// AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest.body].
         /// Bodies are desirable to return only when needed, because they
         /// can be large and because of the sensitivity of the data that you
         /// choose to store in it.
