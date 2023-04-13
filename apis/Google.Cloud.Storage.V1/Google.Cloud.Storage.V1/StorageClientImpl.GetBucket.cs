@@ -33,7 +33,6 @@ namespace Google.Cloud.Storage.V1
         private BucketsResource.GetRequest CreateGetBucketRequest(string bucket, GetBucketOptions options)
         {
             ValidateBucketName(bucket);
-            var bucketEntity = new Bucket { Name = bucket };
             var request = Service.Buckets.Get(bucket);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
