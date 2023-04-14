@@ -137,7 +137,7 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int PostalAddressFieldNumber = 3;
     private global::Google.Type.PostalAddress postalAddress_;
     /// <summary>
-    /// The validated address represented as a postal address.
+    /// The post-processed address represented as a postal address.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
