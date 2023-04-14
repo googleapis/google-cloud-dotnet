@@ -28,32 +28,34 @@ namespace Google.Cloud.Metastore.V1Beta {
             "ZXJhdGlvbi5wcm90bxIdZ29vZ2xlLmNsb3VkLm1ldGFzdG9yZS52MWJldGEa",
             "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xp",
             "ZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhln",
-            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcv",
-            "b3BlcmF0aW9ucy5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2su",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iuwYKCkZl",
-            "ZGVyYXRpb24SEQoEbmFtZRgBIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
-            "ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EkUKBmxhYmVscxgEIAMoCzI1Lmdvb2dsZS5jbG91ZC5tZXRhc3RvcmUudjFi",
-            "ZXRhLkZlZGVyYXRpb24uTGFiZWxzRW50cnkSFAoHdmVyc2lvbhgFIAEoCUID",
-            "4EEFElwKEmJhY2tlbmRfbWV0YXN0b3JlcxgGIAMoCzJALmdvb2dsZS5jbG91",
-            "ZC5tZXRhc3RvcmUudjFiZXRhLkZlZGVyYXRpb24uQmFja2VuZE1ldGFzdG9y",
-            "ZXNFbnRyeRIZCgxlbmRwb2ludF91cmkYByABKAlCA+BBAxJDCgVzdGF0ZRgI",
-            "IAEoDjIvLmdvb2dsZS5jbG91ZC5tZXRhc3RvcmUudjFiZXRhLkZlZGVyYXRp",
-            "b24uU3RhdGVCA+BBAxIaCg1zdGF0ZV9tZXNzYWdlGAkgASgJQgPgQQMSEAoD",
-            "dWlkGAogASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ARppChZCYWNrZW5kTWV0YXN0b3Jlc0VudHJ5EgsK",
-            "A2tleRgBIAEoBRI+CgV2YWx1ZRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5tZXRh",
-            "c3RvcmUudjFiZXRhLkJhY2tlbmRNZXRhc3RvcmU6AjgBIl8KBVN0YXRlEhUK",
-            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJVkUQ",
-            "AhIMCghVUERBVElORxADEgwKCERFTEVUSU5HEAQSCQoFRVJST1IQBTpq6kFn",
-            "CiNtZXRhc3RvcmUuZ29vZ2xlYXBpcy5jb20vRmVkZXJhdGlvbhJAcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlZGVyYXRpb25z",
-            "L3tmZWRlcmF0aW9ufSLOAQoQQmFja2VuZE1ldGFzdG9yZRIMCgRuYW1lGAEg",
-            "ASgJElUKDm1ldGFzdG9yZV90eXBlGAIgASgOMj0uZ29vZ2xlLmNsb3VkLm1l",
-            "dGFzdG9yZS52MWJldGEuQmFja2VuZE1ldGFzdG9yZS5NZXRhc3RvcmVUeXBl",
-            "IlUKDU1ldGFzdG9yZVR5cGUSHgoaTUVUQVNUT1JFX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIMCghCSUdRVUVSWRACEhYKEkRBVEFQUk9DX01FVEFTVE9SRRADIrIB",
+            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGi1nb29nbGUvY2xvdWQvbWV0YXN0",
+            "b3JlL3YxYmV0YS9tZXRhc3RvcmUucHJvdG8aI2dvb2dsZS9sb25ncnVubmlu",
+            "Zy9vcGVyYXRpb25zLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJv",
+            "dG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrsGCgpGZWRlcmF0aW9uEhEKBG5h",
+            "bWUYASABKAlCA+BBBRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJFCgZsYWJlbHMYBCAD",
+            "KAsyNS5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxYmV0YS5GZWRlcmF0aW9u",
+            "LkxhYmVsc0VudHJ5EhQKB3ZlcnNpb24YBSABKAlCA+BBBRJcChJiYWNrZW5k",
+            "X21ldGFzdG9yZXMYBiADKAsyQC5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYx",
+            "YmV0YS5GZWRlcmF0aW9uLkJhY2tlbmRNZXRhc3RvcmVzRW50cnkSGQoMZW5k",
+            "cG9pbnRfdXJpGAcgASgJQgPgQQMSQwoFc3RhdGUYCCABKA4yLy5nb29nbGUu",
+            "Y2xvdWQubWV0YXN0b3JlLnYxYmV0YS5GZWRlcmF0aW9uLlN0YXRlQgPgQQMS",
+            "GgoNc3RhdGVfbWVzc2FnZRgJIAEoCUID4EEDEhAKA3VpZBgKIAEoCUID4EED",
+            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEaaQoWQmFja2VuZE1ldGFzdG9yZXNFbnRyeRILCgNrZXkYASABKAUSPgoF",
+            "dmFsdWUYAiABKAsyLy5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxYmV0YS5C",
+            "YWNrZW5kTWV0YXN0b3JlOgI4ASJfCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEgwKCENSRUFUSU5HEAESCgoGQUNUSVZFEAISDAoIVVBEQVRJTkcQ",
+            "AxIMCghERUxFVElORxAEEgkKBUVSUk9SEAU6aupBZwojbWV0YXN0b3JlLmdv",
+            "b2dsZWFwaXMuY29tL0ZlZGVyYXRpb24SQHByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9mZWRlcmF0aW9ucy97ZmVkZXJhdGlvbn0i",
+            "3AEKEEJhY2tlbmRNZXRhc3RvcmUSDAoEbmFtZRgBIAEoCRJVCg5tZXRhc3Rv",
+            "cmVfdHlwZRgCIAEoDjI9Lmdvb2dsZS5jbG91ZC5tZXRhc3RvcmUudjFiZXRh",
+            "LkJhY2tlbmRNZXRhc3RvcmUuTWV0YXN0b3JlVHlwZSJjCg1NZXRhc3RvcmVU",
+            "eXBlEh4KGk1FVEFTVE9SRV9UWVBFX1VOU1BFQ0lGSUVEEAASDAoIREFUQVBM",
+            "RVgQARIMCghCSUdRVUVSWRACEhYKEkRBVEFQUk9DX01FVEFTVE9SRRADIrIB",
             "ChZMaXN0RmVkZXJhdGlvbnNSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC",
             "+kElEiNtZXRhc3RvcmUuZ29vZ2xlYXBpcy5jb20vRmVkZXJhdGlvbhIWCglw",
             "YWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQES",
@@ -108,7 +110,7 @@ namespace Google.Cloud.Metastore.V1Beta {
             "dG9yZS9hcGl2MWJldGEvbWV0YXN0b3JlcGI7bWV0YXN0b3JlcGJiBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Metastore.V1Beta.MetastoreReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Metastore.V1Beta.Federation), global::Google.Cloud.Metastore.V1Beta.Federation.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Version", "BackendMetastores", "EndpointUri", "State", "StateMessage", "Uid" }, null, new[]{ typeof(global::Google.Cloud.Metastore.V1Beta.Federation.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Metastore.V1Beta.BackendMetastore), global::Google.Cloud.Metastore.V1Beta.BackendMetastore.Parser, new[]{ "Name", "MetastoreType" }, null, new[]{ typeof(global::Google.Cloud.Metastore.V1Beta.BackendMetastore.Types.MetastoreType) }, null, null),
@@ -781,12 +783,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     /// The formats of the relative resource names for the currently supported
     /// metastores are listed below:
     ///
-    /// * Dataplex
-    ///   * `projects/{project_id}/locations/{location}/lakes/{lake_id}`
     /// * BigQuery
-    ///   * `projects/{project_id}`
+    ///     * `projects/{project_id}`
     /// * Dataproc Metastore
-    ///   * `projects/{project_id}/locations/{location}/services/{service_id}`
+    ///     * `projects/{project_id}/locations/{location}/services/{service_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -980,6 +980,10 @@ namespace Google.Cloud.Metastore.V1Beta {
         /// The metastore type is not set.
         /// </summary>
         [pbr::OriginalName("METASTORE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The backend metastore is Dataplex.
+        /// </summary>
+        [pbr::OriginalName("DATAPLEX")] Dataplex = 1,
         /// <summary>
         /// The backend metastore is BigQuery.
         /// </summary>
