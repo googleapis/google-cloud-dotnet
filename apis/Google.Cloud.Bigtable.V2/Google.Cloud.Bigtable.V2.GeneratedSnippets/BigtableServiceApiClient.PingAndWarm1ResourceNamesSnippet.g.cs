@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened1_resourceNames]
+    // [START bigtable_v2_generated_Bigtable_PingAndWarm_sync_flattened1_resourceNames]
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Bigtable.V2;
 
@@ -40,5 +40,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened1_resourceNames]
+    // [END bigtable_v2_generated_Bigtable_PingAndWarm_sync_flattened1_resourceNames]
 }

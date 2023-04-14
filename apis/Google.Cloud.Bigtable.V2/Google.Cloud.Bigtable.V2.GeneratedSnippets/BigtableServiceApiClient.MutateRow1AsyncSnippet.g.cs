@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened1]
+    // [START bigtable_v2_generated_Bigtable_MutateRow_async_flattened1]
     using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
     using System.Collections.Generic;
@@ -44,5 +44,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(tableName, rowKey, mutations);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_MutateRow_async_flattened1]
+    // [END bigtable_v2_generated_Bigtable_MutateRow_async_flattened1]
 }

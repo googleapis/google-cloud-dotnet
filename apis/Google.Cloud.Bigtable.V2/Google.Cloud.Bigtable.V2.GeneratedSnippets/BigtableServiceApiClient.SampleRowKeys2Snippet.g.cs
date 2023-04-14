@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened2]
+    // [START bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened2]
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.V2;
     using System.Threading.Tasks;
@@ -52,5 +52,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // The response stream has completed
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_SampleRowKeys_sync_flattened2]
+    // [END bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened2]
 }

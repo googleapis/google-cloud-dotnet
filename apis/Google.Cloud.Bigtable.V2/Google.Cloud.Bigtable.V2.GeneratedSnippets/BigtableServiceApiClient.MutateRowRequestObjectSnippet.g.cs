@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_MutateRow_sync]
+    // [START bigtable_v2_generated_Bigtable_MutateRow_sync]
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
@@ -47,5 +47,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             MutateRowResponse response = bigtableServiceApiClient.MutateRow(request);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_MutateRow_sync]
+    // [END bigtable_v2_generated_Bigtable_MutateRow_sync]
 }
