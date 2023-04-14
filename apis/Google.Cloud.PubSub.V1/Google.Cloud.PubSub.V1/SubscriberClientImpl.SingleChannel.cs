@@ -132,6 +132,12 @@ public sealed partial class SubscriberClientImpl
         // We store the first time of error corresponding to the AckId, so that we retry only for specified duration
         // which is a requirement for exactly once delivery subscription.
         private readonly ConcurrentDictionary<string, RetryInfo> _retryableIds = new ConcurrentDictionary<string, RetryInfo>();
+
+        // This dictionary will store the Ack IDs of the newly fetched messages along with their corresponding receipt ModAck status.
+        // This is used in exactly once delivery flow only.
+        // The keys in the dictionary represents the Ack ID of the message, while value contains the receipt ModAck status.
+        // A value of null indicates that the status is not yet started or in progress. A value of true indicates success, and false indicates failure (which can be temporary or permanent).
+        private readonly ConcurrentDictionary<string, bool?> _receiptModAckStatusLookup = new ConcurrentDictionary<string, bool?>();
         private readonly object _lock = new object(); // For: _ackQueue, _nackQueue, _userHandlerInFlight
         private readonly Action<Task> _registerTaskFn;
         private readonly TaskHelper _taskHelper;
@@ -155,6 +161,7 @@ public sealed partial class SubscriberClientImpl
         private readonly Flow _flow;
         private readonly bool _useLegacyFlowControl;
         private readonly AsyncAutoResetEvent _eventPush;
+        private readonly AsyncAutoResetEvent _eventReceiptModAckForExactlyOnceDelivery;
         private readonly AsyncSingleRecvQueue<TaskNextAction> _continuationQueue;
         private readonly RequeueableQueue<TimedId> _extendQueue = new RequeueableQueue<TimedId>();
         private readonly RequeueableQueue<string> _ackQueue = new RequeueableQueue<string>();
@@ -165,6 +172,7 @@ public sealed partial class SubscriberClientImpl
         private SubscriberServiceApiClient.StreamingPullStream _pull = null;
         private int _concurrentPushCount = 0;
         private bool _pullComplete = false;
+        private bool _receiptModAckForExactlyOnceDelivery = false; // True if the lease is being extended for the messages for very first time in an exactly-once delivery flow; otherwise false.
         private long _extendThrottleHigh = 0; // Incremented on extension, and put on extend queue items.
         private long _extendThrottleLow = 0; // Incremented after _extendQueueThrottleInterval, checked when throttling.
         private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
@@ -196,6 +204,7 @@ public sealed partial class SubscriberClientImpl
             _flow = flow;
             _useLegacyFlowControl = useLegacyFlowControl;
             _eventPush = new AsyncAutoResetEvent(subscriber._taskHelper);
+            _eventReceiptModAckForExactlyOnceDelivery = new AsyncAutoResetEvent(subscriber._taskHelper);
             _continuationQueue = new AsyncSingleRecvQueue<TaskNextAction>(subscriber._taskHelper);
         }
 
@@ -392,13 +401,34 @@ public sealed partial class SubscriberClientImpl
                 receivedMessages.Clear();
                 // Get all ack-ids, used to extend leases as required.
                 var msgIds = new HashSet<string>(msgs.Select(x => x.AckId));
+                _receiptModAckForExactlyOnceDelivery = _exactlyOnceDeliveryEnabled;
+                if (_exactlyOnceDeliveryEnabled)
+                {
+                    // Populate receipt ModAck dictionary before the lease extends are send.
+                    PopulateAckIdsForReceiptModAck(msgIds);
+                }
+
                 // Send an initial "lease-extension"; which starts the server timer.
                 HandleExtendLease(msgIds, null);
-                // Asynchonously start message processing. Handles flow, and calls the user-supplied message handler.
-                // Uses Task.Run(), so not to clog up this "master" thread with per-message processing.
-                Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, msgIds));
-                // Once all received messages have been queued for processing, read the stream for more messages.
-                Add(messagesTask, Next(true, () => HandlePullMoveNext(null)));
+                if (_exactlyOnceDeliveryEnabled)
+                {
+                    // In the exactly-once delivery flow, we must send only those messages to the user handler which had successful receipt ModAck responses.
+                    // This is necessary to prevent message redelivery. We get the status of success or permanent failure instantly.
+                    // However, temporary failures are retried for up to three times and may eventaully succeed, result in permanent failure, or remain as temporary failure.
+                    // Therefore, we must wait for all receipt ModAck responses to complete to obtain the final status.
+                    // Then, the messages with successful receipt ModAcks are sent to the user, while those with failed ModAcks are removed from further processing.
+                    Add(_eventReceiptModAckForExactlyOnceDelivery.WaitAsync(_softStopCts.Token)
+                        .ContinueWith(task => ProcessSuccessfulMessages(msgs, msgIds), CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, _taskHelper.TaskScheduler)
+                        , Next(true, () => HandlePullMoveNext(null)));
+                }
+                else
+                {
+                    // Asynchonously start message processing. Handles flow, and calls the user-supplied message handler.
+                    // Uses Task.Run(), so not to clog up this "master" thread with per-message processing.
+                    Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, msgIds));
+                    // Once all received messages have been queued for processing, read the stream for more messages.
+                    Add(messagesTask, Next(true, () => HandlePullMoveNext(null)));
+                }
             }
             else
             {
@@ -407,8 +437,40 @@ public sealed partial class SubscriberClientImpl
                 _pullBackoff = TimeSpan.FromSeconds(0.5);
                 StartStreamingPull();
             }
-        }
 
+            // This local method is used exclusively in exactly-once delivery flow.
+            // The method processes and shares the messages that had successful receipt ModAcks.
+            // Additionaly, it removes Ack IDs of messages that failed to extend successfully from the given list of messages.
+            Task ProcessSuccessfulMessages(List<ReceivedMessage> messages, HashSet<string> messageIds)
+            {
+                // Remove all Ack IDs that failed to extend successfully.
+                // The value of false in the dictionary represents the failure.
+                var failures = _receiptModAckStatusLookup.Where(keyValue => keyValue.Value == false).Select(keyValue => keyValue.Key).ToList();
+                if (failures.Any())
+                {
+                    // Remove failed messages.
+                    var ackIdsToRemove = new HashSet<string>(failures);
+                    _ = messageIds.RemoveWhere(ackIdsToRemove.Contains);
+                    _ = messages.RemoveAll(x => ackIdsToRemove.Contains(x.AckId));
+                }
+                
+                // Clear the dictionary.
+                _receiptModAckStatusLookup.Clear();
+
+                // Reset the flag as false.
+                _receiptModAckForExactlyOnceDelivery = false;
+
+                // Process the successful messages asynchronously.
+                return _taskHelper.Run(() => ProcessPullMessagesAsync(messages, messageIds));
+            }
+
+            // This local method populates the Ack IDs of the newly fetched messages in the dictionary to track their receipt ModAck status.
+            // In this method, we initialize all Ack IDs with a null value to indicate that their receipt ModAck request hasn't started or is in progress.
+            // A value of true represents successful receipt ModAck, while a value of false indicates failure.
+            // This method is used exclusively in exactly-once delivery flow.
+            void PopulateAckIdsForReceiptModAck(HashSet<string> messageIds) => UpdateReceiptModAckStatus(messageIds, default);
+        }
+        
         private async Task ProcessPullMessagesAsync(List<ReceivedMessage> msgs, HashSet<string> msgIds)
         {
             // Running async. Common data needs locking
@@ -668,6 +730,13 @@ public sealed partial class SubscriberClientImpl
 
                     if (hasExtendIds)
                     {
+                        if (IsReceiptModAckResponse(ids, hasExtendIds))
+                        {
+                            // Extends being retried for receipt ModAck.
+                            // Update all temporary and permanent failures.
+                            UpdateModAckStatus(ids, ackError);
+                        }
+
                         RetryExtends(extendIds, ackError);
                     }
                 }
@@ -681,6 +750,13 @@ public sealed partial class SubscriberClientImpl
             {
                 // Everything succeeded. Update _retryableIds dictionary.
                 UpdateRetryableIds(ids, default);
+
+                if (IsReceiptModAckResponse(ids, hasExtendIds))
+                {
+                    // Everything succeeded for receipt ModAcks, so update the status as success and set the event.
+                    UpdateModAckStatus(ids, default);
+                    _eventReceiptModAckForExactlyOnceDelivery.Set();
+                }
             }
 
             // Perform push so that other messages can be processed.
@@ -722,6 +798,13 @@ public sealed partial class SubscriberClientImpl
                 {
                     // Retry for 10 seconds or 3 attempts only.
                     RetryTemporaryFailures(Enumerable.Empty<string>(), null, extendIdsToRetry, extendsToRetry => _extendQueue.Locked(() => _extendQueue.Requeue(extendsToRetry)), 10);
+                }
+                else if (IsReceiptModAckResponse(extendIds.Select(j => j.Id), true))
+                {
+                    // If we are here, it means we have no retryable error for the receipt ModAcks at this time.
+                    // Failures are already updated in the _receiptModAckStatusLookup dictionary.
+                    // Set the signal that receipt ModAck event is done.
+                    _eventReceiptModAckForExactlyOnceDelivery.Set();
                 }
             }
 
@@ -777,6 +860,14 @@ public sealed partial class SubscriberClientImpl
                     retriesToSchedule.Add((candidateRetryId, retryInfo));
                 }
 
+                if (IsReceiptModAckResponse(idsToRetry, hasExtends) && !retriesToSchedule.Any(j => _receiptModAckStatusLookup.Keys.Contains(j.id)))
+                {
+                    // If we are here, it means that we are retrying temporary failures of receipt ModAcks for exactly once delivery,
+                    // and the temporary error is no longer retryable as the retry timeout has expired.
+                    // Signal that receipt ModAck event has completed.
+                    _eventReceiptModAckForExactlyOnceDelivery.Set();
+                }
+
                 // We can have ids with different backoff values.
                 // Group on the backoff and add them to the corresponding queue in the increasing order of backoff.
                 var retryGroups = retriesToSchedule.GroupBy(info => info.info.Backoff).OrderBy(group => group.Key);
@@ -821,6 +912,30 @@ public sealed partial class SubscriberClientImpl
                     _ = _retryableIds.TryRemove(item, out _);
                 }
             }
+
+            // This local method is used exclusively for exactly-once delivery flow.
+            // It updates the `_receiptModAckStatusLookup` dictionary with the latest receipt ModAck response status for each Ack ID.
+            void UpdateModAckStatus(IEnumerable<string> allIds, AckError ackError)
+            {
+                var permanentFailureIds = ackError?.PermanentFailureIds ?? Enumerable.Empty<string>();
+                var temporaryFailureIds = ackError?.TemporaryFailureIds ?? Enumerable.Empty<string>();
+                var allFailureIds = permanentFailureIds.Concat(temporaryFailureIds);
+                // Successful Ids = AllIds - (TemporaryFailures + Permanent failures)
+                var successfulIds = allIds.Except(allFailureIds);
+
+                // Update failed status. The value of false represents failure.
+                UpdateReceiptModAckStatus(allFailureIds, false);
+
+                // Update success status. The value of true represents success.
+                UpdateReceiptModAckStatus(successfulIds, true);
+            }
+
+            // This local method is used to determine if the current response is for receipt ModAck. It is used exclusively for exactly-once delivery.
+            // We determine that the response is receipt ModAck, if the following three conditions are met simultaneously:
+            // 1. The response contains at least one Ack ID that is present in the `_receiptModAckStatusLookup` dictionary. This condition helps reduce reduce noise due to extends that may occur simultaneously with receipt ModAck.
+            // 2. The response contains at least one extend ID indicated by the hasExtends flag. Only extends count towards receipt ModAck, not acks or nacks.
+            // 3. The flag _receiptModAckForExactlyOnceDelivery is true. This flag is only set when the lease extension begins.
+            bool IsReceiptModAckResponse(IEnumerable<string> allIds, bool hasExtends) => _receiptModAckStatusLookup.Keys.Any(key => allIds.Contains(key)) && hasExtendIds && _receiptModAckForExactlyOnceDelivery;
         }
 
         private void HandleAckResponse(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
@@ -948,6 +1063,21 @@ public sealed partial class SubscriberClientImpl
                 {
                     // Ignore any errors.
                 }
+            }
+        }
+
+        /// <summary>
+        /// Updates the receipt ModAck status for the specified Ack IDs.
+        /// </summary>
+        /// <param name="ids">The Ack IDs for which the receipt ModAck status needs to be updated.</param>
+        /// <param name="status">The receipt ModAck status to be updated. A value of <c>null</c> indicates that the status is not started or in progress; <c>true</c> indicates success, and <c>false</c> indicates failure.</param>
+        /// <remarks> This method is used exclusively for exactly-once delivery flow.</remarks>
+        private void UpdateReceiptModAckStatus(IEnumerable<string> ids, bool? status)
+        {
+            // We ensure that ids are never null, so null check isn't needed.
+            foreach (var id in ids)
+            {
+                _ = _receiptModAckStatusLookup.AddOrUpdate(id, status, (key, value) => status);
             }
         }
     }
