@@ -380,8 +380,8 @@ namespace Google.Cloud.Metastore.V1
         /// Lists federations in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore federations
-        /// to list, in the following form:
+        /// Required. The relative resource name of the location of metastore
+        /// federations to list, in the following form:
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -406,8 +406,8 @@ namespace Google.Cloud.Metastore.V1
         /// Lists federations in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore federations
-        /// to list, in the following form:
+        /// Required. The relative resource name of the location of metastore
+        /// federations to list, in the following form:
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -432,8 +432,8 @@ namespace Google.Cloud.Metastore.V1
         /// Lists federations in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore federations
-        /// to list, in the following form:
+        /// Required. The relative resource name of the location of metastore
+        /// federations to list, in the following form:
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -458,8 +458,8 @@ namespace Google.Cloud.Metastore.V1
         /// Lists federations in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore federations
-        /// to list, in the following form:
+        /// Required. The relative resource name of the location of metastore
+        /// federations to list, in the following form:
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -511,8 +511,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -528,8 +528,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -545,8 +545,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -559,8 +559,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -576,8 +576,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -593,8 +593,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -660,8 +660,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -692,8 +692,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -724,8 +724,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -751,8 +751,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -783,8 +783,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -815,8 +815,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>

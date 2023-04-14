@@ -59,6 +59,11 @@ namespace Google.Cloud.Metastore.V1
                     proto::ByteString.FromBase64("IkMvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovc2VydmljZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWksiRi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWRlcmF0aW9ucy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASo=")
                 },
                 {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbDoBKg==")
+                },
+                {
                     "google.longrunning.Operations.DeleteOperation",
                     // { "delete": "/v1/{name=projects/*/locations/*/operations/*}" }
                     proto::ByteString.FromBase64("Ki4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
