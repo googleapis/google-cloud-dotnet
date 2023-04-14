@@ -131,7 +131,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int GamSlateFieldNumber = 3;
     private global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate gamSlate_;
     /// <summary>
-    /// gam_slate has all the GAM related attributes of slates.
+    /// gam_slate has all the GAM-related attributes of slates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
