@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmll",
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
             "MGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2VuY3J5cHRpb25fc3BlYy5w",
-            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKyBAoLVGVu",
+            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLGBAoLVGVu",
             "c29yYm9hcmQSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgC",
             "IAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEkMKD2VuY3J5cHRpb25f",
             "c3BlYxgLIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5",
@@ -37,20 +37,20 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
             "ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
             "EkMKBmxhYmVscxgIIAMoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LlRlbnNvcmJvYXJkLkxhYmVsc0VudHJ5EgwKBGV0YWcYCSABKAkaLQoLTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpu6kFr",
-            "CiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1RlbnNvcmJvYXJkEkJwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdGVuc29yYm9h",
-            "cmRzL3t0ZW5zb3Jib2FyZH1CzgEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MUIQVGVuc29yYm9hcmRQcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1w",
-            "YqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3Vk",
-            "XEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWIGcHJvdG8z"));
+            "LlRlbnNvcmJvYXJkLkxhYmVsc0VudHJ5EgwKBGV0YWcYCSABKAkSEgoKaXNf",
+            "ZGVmYXVsdBgMIAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBOm7qQWsKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
+            "b20vVGVuc29yYm9hcmQSQnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS90ZW5zb3Jib2FyZHMve3RlbnNvcmJvYXJkfULOAQoeY29t",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhBUZW5zb3Jib2FyZFByb3Rv",
+            "UAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBs",
+            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
+            "cm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6",
+            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tensorboard), global::Google.Cloud.AIPlatform.V1.Tensorboard.Parser, new[]{ "Name", "DisplayName", "Description", "EncryptionSpec", "BlobStoragePathPrefix", "RunCount", "CreateTime", "UpdateTime", "Labels", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tensorboard), global::Google.Cloud.AIPlatform.V1.Tensorboard.Parser, new[]{ "Name", "DisplayName", "Description", "EncryptionSpec", "BlobStoragePathPrefix", "RunCount", "CreateTime", "UpdateTime", "Labels", "Etag", "IsDefault" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -106,6 +106,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       labels_ = other.labels_.Clone();
       etag_ = other.etag_;
+      isDefault_ = other.isDefault_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -280,6 +281,25 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "is_default" field.</summary>
+    public const int IsDefaultFieldNumber = 12;
+    private bool isDefault_;
+    /// <summary>
+    /// Used to indicate if the TensorBoard instance is the default one.
+    /// Each project &amp; region can have at most one default TensorBoard instance.
+    /// Creation of a default TensorBoard instance and updating an existing
+    /// TensorBoard instance to be default will mark all other TensorBoard
+    /// instances (if any) as non default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsDefault {
+      get { return isDefault_; }
+      set {
+        isDefault_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -305,6 +325,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (Etag != other.Etag) return false;
+      if (IsDefault != other.IsDefault) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -322,6 +343,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (IsDefault != false) hash ^= IsDefault.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -377,6 +399,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionSpec);
       }
+      if (IsDefault != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsDefault);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -424,6 +450,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionSpec);
       }
+      if (IsDefault != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsDefault);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -461,6 +491,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += labels_.CalculateSize(_map_labels_codec);
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (IsDefault != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -510,6 +543,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       labels_.Add(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.IsDefault != false) {
+        IsDefault = other.IsDefault;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -575,6 +611,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 96: {
+            IsDefault = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -637,6 +677,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
             }
             input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 96: {
+            IsDefault = input.ReadBool();
             break;
           }
         }
