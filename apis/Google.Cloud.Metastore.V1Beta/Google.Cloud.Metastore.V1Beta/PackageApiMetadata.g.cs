@@ -59,6 +59,11 @@ namespace Google.Cloud.Metastore.V1Beta
                     proto::ByteString.FromBase64("IkcvdjFiZXRhL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpWIlEvdjFiZXRhL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3NlcnZpY2VzLyovYmFja3Vwcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaWCJTL3YxYmV0YS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qL2RhdGFiYXNlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaYSJcL3YxYmV0YS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXJ2aWNlcy8qL2RhdGFiYXNlcy8qL3RhYmxlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaTyJKL3YxYmV0YS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWRlcmF0aW9ucy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASo=")
                 },
                 {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1beta/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjkvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfTpjYW5jZWw6ASo=")
+                },
+                {
                     "google.longrunning.Operations.DeleteOperation",
                     // { "delete": "/v1beta/{name=projects/*/locations/*/operations/*}" }
                     proto::ByteString.FromBase64("KjIvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfQ==")
