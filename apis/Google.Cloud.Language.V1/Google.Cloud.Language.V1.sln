@@ -3,43 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Language.V1", "Google.Cloud.Language.V1\Google.Cloud.Language.V1.csproj", "{9A382704-5566-48F4-80EB-27BCA69DE41B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Language.V1", "Google.Cloud.Language.V1\Google.Cloud.Language.V1.csproj", "{9A382704-5566-48F4-80EB-27BCA69DE41B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Language.V1.FixGeneratedCode", "Google.Cloud.Language.V1.FixGeneratedCode\Google.Cloud.Language.V1.FixGeneratedCode.csproj", "{D4DE8080-0D4C-4190-8A6F-9ADDC655A620}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{8E19BC52-6A41-4047-85D8-C14EEC92C196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{8F6C3D32-7A47-4CD6-B57F-0EB0FBE25E6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Language.V1.GeneratedSnippets", "Google.Cloud.Language.V1.GeneratedSnippets\Google.Cloud.Language.V1.GeneratedSnippets.csproj", "{8D849122-5A90-4CB3-8727-0C0D89E94B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{8E19BC52-6A41-4047-85D8-C14EEC92C196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{D6430333-22C9-403C-93D7-B5E54646DCAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Language.V1.GeneratedSnippets", "Google.Cloud.Language.V1.GeneratedSnippets\Google.Cloud.Language.V1.GeneratedSnippets.csproj", "{8D849122-5A90-4CB3-8727-0C0D89E94B5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Language.V1.Snippets", "Google.Cloud.Language.V1.Snippets\Google.Cloud.Language.V1.Snippets.csproj", "{B5CE23D2-274A-4346-876A-14E60EDE7D34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{D6430333-22C9-403C-93D7-B5E54646DCAB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Language.V1.Snippets", "Google.Cloud.Language.V1.Snippets\Google.Cloud.Language.V1.Snippets.csproj", "{B5CE23D2-274A-4346-876A-14E60EDE7D34}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Language.V1.Tests", "Google.Cloud.Language.V1.Tests\Google.Cloud.Language.V1.Tests.csproj", "{4546902B-C815-4E9E-B004-512C49A1B963}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Language.V1.Tests", "Google.Cloud.Language.V1.Tests\Google.Cloud.Language.V1.Tests.csproj", "{4546902B-C815-4E9E-B004-512C49A1B963}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9A382704-5566-48F4-80EB-27BCA69DE41B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A382704-5566-48F4-80EB-27BCA69DE41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A382704-5566-48F4-80EB-27BCA69DE41B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A382704-5566-48F4-80EB-27BCA69DE41B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4DE8080-0D4C-4190-8A6F-9ADDC655A620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4DE8080-0D4C-4190-8A6F-9ADDC655A620}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4DE8080-0D4C-4190-8A6F-9ADDC655A620}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4DE8080-0D4C-4190-8A6F-9ADDC655A620}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F6C3D32-7A47-4CD6-B57F-0EB0FBE25E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F6C3D32-7A47-4CD6-B57F-0EB0FBE25E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F6C3D32-7A47-4CD6-B57F-0EB0FBE25E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F6C3D32-7A47-4CD6-B57F-0EB0FBE25E6E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E19BC52-6A41-4047-85D8-C14EEC92C196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E19BC52-6A41-4047-85D8-C14EEC92C196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E19BC52-6A41-4047-85D8-C14EEC92C196}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -60,5 +45,8 @@ Global
 		{4546902B-C815-4E9E-B004-512C49A1B963}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4546902B-C815-4E9E-B004-512C49A1B963}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4546902B-C815-4E9E-B004-512C49A1B963}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
