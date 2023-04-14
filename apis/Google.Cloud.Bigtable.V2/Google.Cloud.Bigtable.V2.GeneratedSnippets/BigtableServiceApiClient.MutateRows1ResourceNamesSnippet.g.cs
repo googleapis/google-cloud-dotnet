@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened1_resourceNames]
+    // [START bigtable_v2_generated_Bigtable_MutateRows_sync_flattened1_resourceNames]
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Bigtable.V2;
@@ -57,5 +57,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // The response stream has completed
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_MutateRows_sync_flattened1_resourceNames]
+    // [END bigtable_v2_generated_Bigtable_MutateRows_sync_flattened1_resourceNames]
 }

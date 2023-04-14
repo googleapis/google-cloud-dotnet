@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened2]
+    // [START bigtable_v2_generated_Bigtable_CheckAndMutateRow_async_flattened2]
     using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
     using System.Collections.Generic;
@@ -47,5 +47,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async_flattened2]
+    // [END bigtable_v2_generated_Bigtable_CheckAndMutateRow_async_flattened2]
 }

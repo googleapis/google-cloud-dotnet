@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened2]
+    // [START bigtable_v2_generated_Bigtable_PingAndWarm_sync_flattened2]
     using Google.Cloud.Bigtable.V2;
 
     public sealed partial class GeneratedBigtableServiceApiClientSnippets
@@ -40,5 +40,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(name, appProfileId);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync_flattened2]
+    // [END bigtable_v2_generated_Bigtable_PingAndWarm_sync_flattened2]
 }
