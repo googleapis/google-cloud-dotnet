@@ -68,7 +68,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   }
   #region Enums
   /// <summary>
-  /// Determines the Ad tracking policy.
+  /// Determines the ad tracking policy.
   /// </summary>
   public enum AdTracking {
     /// <summary>
@@ -76,7 +76,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     /// </summary>
     [pbr::OriginalName("AD_TRACKING_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Client side ad tracking is specified. The client player is expected to
+    /// Client-side ad tracking is specified. The client player is expected to
     /// trigger playback and activity events itself.
     /// </summary>
     [pbr::OriginalName("CLIENT")] Client = 1,
@@ -226,7 +226,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int AdTrackingFieldNumber = 6;
     private global::Google.Cloud.Video.Stitcher.V1.AdTracking adTracking_ = global::Google.Cloud.Video.Stitcher.V1.AdTracking.Unspecified;
     /// <summary>
-    /// Required. Determines how the ads should be tracked. If
+    /// Required. Determines how the ads are tracked. If
     /// [gam_live_config][google.cloud.video.stitcher.v1.LiveConfig.gam_live_config]
     /// is set, the value must be `CLIENT` because the IMA SDK handles ad tracking.
     /// </summary>
@@ -244,8 +244,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     private string defaultSlate_ = "";
     /// <summary>
     /// This must refer to a slate in the same
-    /// project. In case Google Ad Manager (GAM) is being used for ads this will be
-    /// used to set the appropriate value of slateCreativeId in
+    /// project. If Google Ad Manager (GAM) is used for ads, this string sets the
+    /// value of `slateCreativeId` in
     /// https://developers.google.com/ad-manager/api/reference/v202211/LiveStreamEventService.LiveStreamEvent#slateCreativeId
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -659,7 +659,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       /// <summary>
       /// Defines the ad stitching behavior in case the ad duration does not align
       /// exactly with the ad break boundaries. If not specified, the default is
-      /// CUT_CURRENT.
+      /// `CUT_CURRENT`.
       /// </summary>
       public enum StitchingPolicy {
         /// <summary>
