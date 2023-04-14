@@ -28,84 +28,85 @@ namespace Google.Cloud.Metastore.V1 {
             "aW9uLnByb3RvEhlnb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxGhxnb29nbGUv",
             "YXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90",
             "bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
-            "aS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlv",
-            "bnMucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9n",
-            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqsGCgpGZWRlcmF0aW9u",
-            "EhEKBG5hbWUYASABKAlCA+BBBRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgD",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJBCgZsYWJl",
-            "bHMYBCADKAsyMS5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLkZlZGVyYXRp",
-            "b24uTGFiZWxzRW50cnkSFAoHdmVyc2lvbhgFIAEoCUID4EEFElgKEmJhY2tl",
-            "bmRfbWV0YXN0b3JlcxgGIAMoCzI8Lmdvb2dsZS5jbG91ZC5tZXRhc3RvcmUu",
-            "djEuRmVkZXJhdGlvbi5CYWNrZW5kTWV0YXN0b3Jlc0VudHJ5EhkKDGVuZHBv",
-            "aW50X3VyaRgHIAEoCUID4EEDEj8KBXN0YXRlGAggASgOMisuZ29vZ2xlLmNs",
-            "b3VkLm1ldGFzdG9yZS52MS5GZWRlcmF0aW9uLlN0YXRlQgPgQQMSGgoNc3Rh",
-            "dGVfbWVzc2FnZRgJIAEoCUID4EEDEhAKA3VpZBgKIAEoCUID4EEDGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaZQoW",
-            "QmFja2VuZE1ldGFzdG9yZXNFbnRyeRILCgNrZXkYASABKAUSOgoFdmFsdWUY",
-            "AiABKAsyKy5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLkJhY2tlbmRNZXRh",
-            "c3RvcmU6AjgBIl8KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
-            "Q1JFQVRJTkcQARIKCgZBQ1RJVkUQAhIMCghVUERBVElORxADEgwKCERFTEVU",
-            "SU5HEAQSCQoFRVJST1IQBTpq6kFnCiNtZXRhc3RvcmUuZ29vZ2xlYXBpcy5j",
-            "b20vRmVkZXJhdGlvbhJAcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2ZlZGVyYXRpb25zL3tmZWRlcmF0aW9ufSK8AQoQQmFja2Vu",
-            "ZE1ldGFzdG9yZRIMCgRuYW1lGAEgASgJElEKDm1ldGFzdG9yZV90eXBlGAIg",
-            "ASgOMjkuZ29vZ2xlLmNsb3VkLm1ldGFzdG9yZS52MS5CYWNrZW5kTWV0YXN0",
-            "b3JlLk1ldGFzdG9yZVR5cGUiRwoNTWV0YXN0b3JlVHlwZRIeChpNRVRBU1RP",
-            "UkVfVFlQRV9VTlNQRUNJRklFRBAAEhYKEkRBVEFQUk9DX01FVEFTVE9SRRAD",
-            "IrIBChZMaXN0RmVkZXJhdGlvbnNSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr",
-            "4EEC+kElEiNtZXRhc3RvcmUuZ29vZ2xlYXBpcy5jb20vRmVkZXJhdGlvbhIW",
-            "CglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPg",
-            "QQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BB",
-            "ASKDAQoXTGlzdEZlZGVyYXRpb25zUmVzcG9uc2USOgoLZmVkZXJhdGlvbnMY",
-            "ASADKAsyJS5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLkZlZGVyYXRpb24S",
-            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJ",
-            "IlEKFEdldEZlZGVyYXRpb25SZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpB",
-            "JQojbWV0YXN0b3JlLmdvb2dsZWFwaXMuY29tL0ZlZGVyYXRpb24iywEKF0Ny",
-            "ZWF0ZUZlZGVyYXRpb25SZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC+kEl",
-            "EiNtZXRhc3RvcmUuZ29vZ2xlYXBpcy5jb20vRmVkZXJhdGlvbhIaCg1mZWRl",
-            "cmF0aW9uX2lkGAIgASgJQgPgQQISPgoKZmVkZXJhdGlvbhgDIAEoCzIlLmdv",
-            "b2dsZS5jbG91ZC5tZXRhc3RvcmUudjEuRmVkZXJhdGlvbkID4EECEhcKCnJl",
-            "cXVlc3RfaWQYBCABKAlCA+BBASKoAQoXVXBkYXRlRmVkZXJhdGlvblJlcXVl",
-            "c3QSNAoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrQgPgQQISPgoKZmVkZXJhdGlvbhgCIAEoCzIlLmdvb2dsZS5jbG91",
-            "ZC5tZXRhc3RvcmUudjEuRmVkZXJhdGlvbkID4EECEhcKCnJlcXVlc3RfaWQY",
-            "AyABKAlCA+BBASJtChdEZWxldGVGZWRlcmF0aW9uUmVxdWVzdBI5CgRuYW1l",
-            "GAEgASgJQivgQQL6QSUKI21ldGFzdG9yZS5nb29nbGVhcGlzLmNvbS9GZWRl",
-            "cmF0aW9uEhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBATLcCQobRGF0YXByb2NN",
-            "ZXRhc3RvcmVGZWRlcmF0aW9uEroBCg9MaXN0RmVkZXJhdGlvbnMSMS5nb29n",
-            "bGUuY2xvdWQubWV0YXN0b3JlLnYxLkxpc3RGZWRlcmF0aW9uc1JlcXVlc3Qa",
-            "Mi5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLkxpc3RGZWRlcmF0aW9uc1Jl",
-            "c3BvbnNlIkCC0+STAjESLy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyp9L2ZlZGVyYXRpb25z2kEGcGFyZW50EqcBCg1HZXRGZWRlcmF0aW9u",
-            "Ei8uZ29vZ2xlLmNsb3VkLm1ldGFzdG9yZS52MS5HZXRGZWRlcmF0aW9uUmVx",
-            "dWVzdBolLmdvb2dsZS5jbG91ZC5tZXRhc3RvcmUudjEuRmVkZXJhdGlvbiI+",
-            "gtPkkwIxEi8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWRl",
-            "cmF0aW9ucy8qfdpBBG5hbWUSiQIKEENyZWF0ZUZlZGVyYXRpb24SMi5nb29n",
-            "bGUuY2xvdWQubWV0YXN0b3JlLnYxLkNyZWF0ZUZlZGVyYXRpb25SZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKhAYLT5JMCPSIvL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZmVkZXJhdGlvbnM6",
-            "CmZlZGVyYXRpb27aQR9wYXJlbnQsZmVkZXJhdGlvbixmZWRlcmF0aW9uX2lk",
-            "ykE5CgpGZWRlcmF0aW9uEitnb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLk9w",
-            "ZXJhdGlvbk1ldGFkYXRhEosCChBVcGRhdGVGZWRlcmF0aW9uEjIuZ29vZ2xl",
-            "LmNsb3VkLm1ldGFzdG9yZS52MS5VcGRhdGVGZWRlcmF0aW9uUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iowGC0+STAkgyOi92MS97",
-            "ZmVkZXJhdGlvbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZmVkZXJh",
-            "dGlvbnMvKn06CmZlZGVyYXRpb27aQRZmZWRlcmF0aW9uLHVwZGF0ZV9tYXNr",
-            "ykE5CgpGZWRlcmF0aW9uEitnb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLk9w",
-            "ZXJhdGlvbk1ldGFkYXRhEu0BChBEZWxldGVGZWRlcmF0aW9uEjIuZ29vZ2xl",
-            "LmNsb3VkLm1ldGFzdG9yZS52MS5EZWxldGVGZWRlcmF0aW9uUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ihQGC0+STAjEqLy92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlZGVyYXRpb25zLyp92kEE",
-            "bmFtZcpBRAoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5Eitnb29nbGUuY2xvdWQu",
-            "bWV0YXN0b3JlLnYxLk9wZXJhdGlvbk1ldGFkYXRhGkzKQRhtZXRhc3RvcmUu",
-            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtQngKHWNvbS5nb29nbGUuY2xvdWQubWV0YXN0",
-            "b3JlLnYxQhhNZXRhc3RvcmVGZWRlcmF0aW9uUHJvdG9QAVo7Y2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9tZXRhc3RvcmUvYXBpdjEvbWV0YXN0b3JlcGI7bWV0YXN0",
-            "b3JlcGJiBnByb3RvMw=="));
+            "aS9yZXNvdXJjZS5wcm90bxopZ29vZ2xlL2Nsb3VkL21ldGFzdG9yZS92MS9t",
+            "ZXRhc3RvcmUucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
+            "LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9w",
+            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvIqsGCgpGZWRlcmF0aW9uEhEKBG5hbWUYASABKAlCA+BB",
+            "BRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxJBCgZsYWJlbHMYBCADKAsyMS5nb29nbGUu",
+            "Y2xvdWQubWV0YXN0b3JlLnYxLkZlZGVyYXRpb24uTGFiZWxzRW50cnkSFAoH",
+            "dmVyc2lvbhgFIAEoCUID4EEFElgKEmJhY2tlbmRfbWV0YXN0b3JlcxgGIAMo",
+            "CzI8Lmdvb2dsZS5jbG91ZC5tZXRhc3RvcmUudjEuRmVkZXJhdGlvbi5CYWNr",
+            "ZW5kTWV0YXN0b3Jlc0VudHJ5EhkKDGVuZHBvaW50X3VyaRgHIAEoCUID4EED",
+            "Ej8KBXN0YXRlGAggASgOMisuZ29vZ2xlLmNsb3VkLm1ldGFzdG9yZS52MS5G",
+            "ZWRlcmF0aW9uLlN0YXRlQgPgQQMSGgoNc3RhdGVfbWVzc2FnZRgJIAEoCUID",
+            "4EEDEhAKA3VpZBgKIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaZQoWQmFja2VuZE1ldGFzdG9yZXNF",
+            "bnRyeRILCgNrZXkYASABKAUSOgoFdmFsdWUYAiABKAsyKy5nb29nbGUuY2xv",
+            "dWQubWV0YXN0b3JlLnYxLkJhY2tlbmRNZXRhc3RvcmU6AjgBIl8KBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJ",
+            "VkUQAhIMCghVUERBVElORxADEgwKCERFTEVUSU5HEAQSCQoFRVJST1IQBTpq",
+            "6kFnCiNtZXRhc3RvcmUuZ29vZ2xlYXBpcy5jb20vRmVkZXJhdGlvbhJAcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlZGVyYXRp",
+            "b25zL3tmZWRlcmF0aW9ufSK8AQoQQmFja2VuZE1ldGFzdG9yZRIMCgRuYW1l",
+            "GAEgASgJElEKDm1ldGFzdG9yZV90eXBlGAIgASgOMjkuZ29vZ2xlLmNsb3Vk",
+            "Lm1ldGFzdG9yZS52MS5CYWNrZW5kTWV0YXN0b3JlLk1ldGFzdG9yZVR5cGUi",
+            "RwoNTWV0YXN0b3JlVHlwZRIeChpNRVRBU1RPUkVfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEhYKEkRBVEFQUk9DX01FVEFTVE9SRRADIrIBChZMaXN0RmVkZXJhdGlv",
+            "bnNSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC+kElEiNtZXRhc3RvcmUu",
+            "Z29vZ2xlYXBpcy5jb20vRmVkZXJhdGlvbhIWCglwYWdlX3NpemUYAiABKAVC",
+            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJ",
+            "QgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKDAQoXTGlzdEZlZGVyYXRp",
+            "b25zUmVzcG9uc2USOgoLZmVkZXJhdGlvbnMYASADKAsyJS5nb29nbGUuY2xv",
+            "dWQubWV0YXN0b3JlLnYxLkZlZGVyYXRpb24SFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIlEKFEdldEZlZGVyYXRpb25S",
+            "ZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojbWV0YXN0b3JlLmdvb2ds",
+            "ZWFwaXMuY29tL0ZlZGVyYXRpb24iywEKF0NyZWF0ZUZlZGVyYXRpb25SZXF1",
+            "ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC+kElEiNtZXRhc3RvcmUuZ29vZ2xl",
+            "YXBpcy5jb20vRmVkZXJhdGlvbhIaCg1mZWRlcmF0aW9uX2lkGAIgASgJQgPg",
+            "QQISPgoKZmVkZXJhdGlvbhgDIAEoCzIlLmdvb2dsZS5jbG91ZC5tZXRhc3Rv",
+            "cmUudjEuRmVkZXJhdGlvbkID4EECEhcKCnJlcXVlc3RfaWQYBCABKAlCA+BB",
+            "ASKoAQoXVXBkYXRlRmVkZXJhdGlvblJlcXVlc3QSNAoLdXBkYXRlX21hc2sY",
+            "ASABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISPgoKZmVk",
+            "ZXJhdGlvbhgCIAEoCzIlLmdvb2dsZS5jbG91ZC5tZXRhc3RvcmUudjEuRmVk",
+            "ZXJhdGlvbkID4EECEhcKCnJlcXVlc3RfaWQYAyABKAlCA+BBASJtChdEZWxl",
+            "dGVGZWRlcmF0aW9uUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI21l",
+            "dGFzdG9yZS5nb29nbGVhcGlzLmNvbS9GZWRlcmF0aW9uEhcKCnJlcXVlc3Rf",
+            "aWQYAiABKAlCA+BBATLcCQobRGF0YXByb2NNZXRhc3RvcmVGZWRlcmF0aW9u",
+            "EroBCg9MaXN0RmVkZXJhdGlvbnMSMS5nb29nbGUuY2xvdWQubWV0YXN0b3Jl",
+            "LnYxLkxpc3RGZWRlcmF0aW9uc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQubWV0",
+            "YXN0b3JlLnYxLkxpc3RGZWRlcmF0aW9uc1Jlc3BvbnNlIkCC0+STAjESLy92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2ZlZGVyYXRpb25z",
+            "2kEGcGFyZW50EqcBCg1HZXRGZWRlcmF0aW9uEi8uZ29vZ2xlLmNsb3VkLm1l",
+            "dGFzdG9yZS52MS5HZXRGZWRlcmF0aW9uUmVxdWVzdBolLmdvb2dsZS5jbG91",
+            "ZC5tZXRhc3RvcmUudjEuRmVkZXJhdGlvbiI+gtPkkwIxEi8vdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWRlcmF0aW9ucy8qfdpBBG5hbWUS",
+            "iQIKEENyZWF0ZUZlZGVyYXRpb24SMi5nb29nbGUuY2xvdWQubWV0YXN0b3Jl",
+            "LnYxLkNyZWF0ZUZlZGVyYXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLk9wZXJhdGlvbiKhAYLT5JMCPSIvL3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn0vZmVkZXJhdGlvbnM6CmZlZGVyYXRpb27aQR9wYXJl",
+            "bnQsZmVkZXJhdGlvbixmZWRlcmF0aW9uX2lkykE5CgpGZWRlcmF0aW9uEitn",
+            "b29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLk9wZXJhdGlvbk1ldGFkYXRhEosC",
+            "ChBVcGRhdGVGZWRlcmF0aW9uEjIuZ29vZ2xlLmNsb3VkLm1ldGFzdG9yZS52",
+            "MS5VcGRhdGVGZWRlcmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24iowGC0+STAkgyOi92MS97ZmVkZXJhdGlvbi5uYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovZmVkZXJhdGlvbnMvKn06CmZlZGVyYXRp",
+            "b27aQRZmZWRlcmF0aW9uLHVwZGF0ZV9tYXNrykE5CgpGZWRlcmF0aW9uEitn",
+            "b29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLk9wZXJhdGlvbk1ldGFkYXRhEu0B",
+            "ChBEZWxldGVGZWRlcmF0aW9uEjIuZ29vZ2xlLmNsb3VkLm1ldGFzdG9yZS52",
+            "MS5EZWxldGVGZWRlcmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24ihQGC0+STAjEqLy92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2ZlZGVyYXRpb25zLyp92kEEbmFtZcpBRAoVZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5Eitnb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxLk9wZXJh",
+            "dGlvbk1ldGFkYXRhGkzKQRhtZXRhc3RvcmUuZ29vZ2xlYXBpcy5jb23SQS5o",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
+            "QngKHWNvbS5nb29nbGUuY2xvdWQubWV0YXN0b3JlLnYxQhhNZXRhc3RvcmVG",
+            "ZWRlcmF0aW9uUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9tZXRhc3Rv",
+            "cmUvYXBpdjEvbWV0YXN0b3JlcGI7bWV0YXN0b3JlcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Metastore.V1.MetastoreReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Metastore.V1.Federation), global::Google.Cloud.Metastore.V1.Federation.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Version", "BackendMetastores", "EndpointUri", "State", "StateMessage", "Uid" }, null, new[]{ typeof(global::Google.Cloud.Metastore.V1.Federation.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Metastore.V1.BackendMetastore), global::Google.Cloud.Metastore.V1.BackendMetastore.Parser, new[]{ "Name", "MetastoreType" }, null, new[]{ typeof(global::Google.Cloud.Metastore.V1.BackendMetastore.Types.MetastoreType) }, null, null),
@@ -242,8 +243,8 @@ namespace Google.Cloud.Metastore.V1 {
     public const int VersionFieldNumber = 5;
     private string version_ = "";
     /// <summary>
-    /// Immutable. The Apache Hive metastore version of the federation. All backend metastore
-    /// versions must be compatible with the federation version.
+    /// Immutable. The Apache Hive metastore version of the federation. All backend
+    /// metastore versions must be compatible with the federation version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -307,8 +308,8 @@ namespace Google.Cloud.Metastore.V1 {
     public const int StateMessageFieldNumber = 9;
     private string stateMessage_ = "";
     /// <summary>
-    /// Output only. Additional information about the current state of the metastore federation,
-    /// if available.
+    /// Output only. Additional information about the current state of the
+    /// metastore federation, if available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -323,7 +324,8 @@ namespace Google.Cloud.Metastore.V1 {
     public const int UidFieldNumber = 10;
     private string uid_ = "";
     /// <summary>
-    /// Output only. The globally unique resource identifier of the metastore federation.
+    /// Output only. The globally unique resource identifier of the metastore
+    /// federation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -777,12 +779,10 @@ namespace Google.Cloud.Metastore.V1 {
     /// The formats of the relative resource names for the currently supported
     /// metastores are listed below:
     ///
-    /// * Dataplex
-    ///   * `projects/{project_id}/locations/{location}/lakes/{lake_id}`
     /// * BigQuery
-    ///   * `projects/{project_id}`
+    ///     * `projects/{project_id}`
     /// * Dataproc Metastore
-    ///   * `projects/{project_id}/locations/{location}/services/{service_id}`
+    ///     * `projects/{project_id}/locations/{location}/services/{service_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1042,8 +1042,8 @@ namespace Google.Cloud.Metastore.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the location of metastore federations
-    /// to list, in the following form:
+    /// Required. The relative resource name of the location of metastore
+    /// federations to list, in the following form:
     /// `projects/{project_number}/locations/{location_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1059,9 +1059,10 @@ namespace Google.Cloud.Metastore.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of federations to return. The response may contain less
-    /// than the maximum number. If unspecified, no more than 500 services are
-    /// returned. The maximum value is 1000; values above 1000 are changed to 1000.
+    /// Optional. The maximum number of federations to return. The response may
+    /// contain less than the maximum number. If unspecified, no more than 500
+    /// services are returned. The maximum value is 1000; values above 1000 are
+    /// changed to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1660,8 +1661,8 @@ namespace Google.Cloud.Metastore.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The relative resource name of the metastore federation to retrieve,
-    /// in the following form:
+    /// Required. The relative resource name of the metastore federation to
+    /// retrieve, in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
     /// </summary>
@@ -1861,8 +1862,8 @@ namespace Google.Cloud.Metastore.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the location in which to create a federation
-    /// service, in the following form:
+    /// Required. The relative resource name of the location in which to create a
+    /// federation service, in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}`.
     /// </summary>
@@ -1916,10 +1917,10 @@ namespace Google.Cloud.Metastore.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -2242,10 +2243,10 @@ namespace Google.Cloud.Metastore.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -2533,10 +2534,10 @@ namespace Google.Cloud.Metastore.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
