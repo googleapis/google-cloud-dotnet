@@ -40,7 +40,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Buckets.Update(bucket, bucket.Name);
             options?.ModifyRequest(request, bucket);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfMetagenerationMatch);
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

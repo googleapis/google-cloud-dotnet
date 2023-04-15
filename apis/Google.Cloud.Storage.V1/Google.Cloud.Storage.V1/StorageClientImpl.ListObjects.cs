@@ -58,7 +58,7 @@ namespace Google.Cloud.Storage.V1
             request.Prefix = prefix;
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

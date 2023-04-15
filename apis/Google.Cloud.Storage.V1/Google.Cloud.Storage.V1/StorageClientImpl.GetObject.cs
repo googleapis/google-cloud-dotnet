@@ -48,7 +48,7 @@ namespace Google.Cloud.Storage.V1
             ApplyEncryptionKey(options?.EncryptionKey, kmsNameFromOptions: null, request);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

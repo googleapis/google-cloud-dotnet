@@ -46,7 +46,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Buckets.LockRetentionPolicy(bucket, metageneration);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

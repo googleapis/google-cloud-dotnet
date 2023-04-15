@@ -87,7 +87,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(serviceAccountEmail, nameof(serviceAccountEmail));
             var request = Service.Projects.HmacKeys.Create(projectId, serviceAccountEmail);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request, RetryOptions.Never);
+            MarkAsRetriable(request, RetryOptions.Never);
             return request;
         }
 
@@ -98,7 +98,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Projects.HmacKeys.Get(projectId, accessId);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -110,7 +110,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Projects.HmacKeys.Update(key, key.ProjectId, key.AccessId);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(key.ETag);
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -121,7 +121,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Projects.HmacKeys.Delete(projectId, accessId);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -131,7 +131,7 @@ namespace Google.Cloud.Storage.V1
             request.ServiceAccountEmail = serviceAccountEmail; // Note: may be null
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

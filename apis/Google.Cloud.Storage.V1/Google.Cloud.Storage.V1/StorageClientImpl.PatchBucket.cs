@@ -41,7 +41,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Buckets.Patch(bucket, bucket.Name);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfMetagenerationMatch);
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

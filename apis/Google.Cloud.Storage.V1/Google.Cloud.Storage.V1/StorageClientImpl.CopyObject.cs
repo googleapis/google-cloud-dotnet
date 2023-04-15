@@ -76,7 +76,7 @@ namespace Google.Cloud.Storage.V1
 
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfGenerationMatch);
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             ApplyEncryptionKey(options?.EncryptionKey, options?.KmsKeyName, request);
             request.ModifyRequest += (options?.SourceEncryptionKey ?? EncryptionKey).ModifyRequestForRewriteSource;
             return request;

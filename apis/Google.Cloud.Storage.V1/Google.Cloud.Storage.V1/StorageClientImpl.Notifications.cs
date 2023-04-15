@@ -87,7 +87,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Projects.ServiceAccount.Get(projectId);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -97,7 +97,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(notification, nameof(notification));
             var request = Service.Notifications.Insert(notification, bucket);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request, RetryOptions.Never);
+            MarkAsRetriable(request, RetryOptions.Never);
             return request;
         }
 
@@ -108,7 +108,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Notifications.Get(bucket, notificationId);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -119,7 +119,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Notifications.Delete(bucket, notificationId);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -128,7 +128,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Notifications.List(bucket);
             options?.ModifyRequest(request);
             RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
-            RetryHandler.MarkAsRetriable(request, retryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }
