@@ -187,11 +187,6 @@ generate_api() {
       echo "Unknown generator: $GENERATOR"
       exit 1
   esac
-  if [[ -f $PACKAGE_DIR/postgeneration.patch ]]
-  then
-    echo "Applying post-generation patch for $PACKAGE"
-    (cd $PACKAGE_DIR; git apply postgeneration.patch)
-  fi
 
   if [[ -f $PACKAGE_DIR/postgeneration.sh ]]
   then    
