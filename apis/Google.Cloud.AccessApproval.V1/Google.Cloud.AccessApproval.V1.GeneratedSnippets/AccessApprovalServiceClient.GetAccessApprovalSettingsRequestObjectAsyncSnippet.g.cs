@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.AccessApproval.V1.Snippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_async]
+    // [START accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_async]
     using Google.Cloud.AccessApproval.V1;
     using System.Threading.Tasks;
 
@@ -43,5 +43,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             AccessApprovalSettings response = await accessApprovalServiceClient.GetAccessApprovalSettingsAsync(request);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_async]
+    // [END accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_async]
 }

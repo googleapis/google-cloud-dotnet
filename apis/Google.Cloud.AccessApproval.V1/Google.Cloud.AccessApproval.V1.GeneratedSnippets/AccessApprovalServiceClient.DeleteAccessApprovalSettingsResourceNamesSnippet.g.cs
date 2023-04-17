@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.AccessApproval.V1.Snippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_sync_flattened_resourceNames]
+    // [START accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_sync_flattened_resourceNames]
     using Google.Cloud.AccessApproval.V1;
 
     public sealed partial class GeneratedAccessApprovalServiceClientSnippets
@@ -39,5 +39,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             accessApprovalServiceClient.DeleteAccessApprovalSettings(name);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_sync_flattened_resourceNames]
+    // [END accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_sync_flattened_resourceNames]
 }

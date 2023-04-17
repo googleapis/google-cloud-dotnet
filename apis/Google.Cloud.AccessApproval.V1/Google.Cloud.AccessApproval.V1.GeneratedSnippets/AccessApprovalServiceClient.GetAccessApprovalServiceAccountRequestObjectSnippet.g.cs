@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.AccessApproval.V1.Snippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_sync]
+    // [START accessapproval_v1_generated_AccessApproval_GetAccessApprovalServiceAccount_sync]
     using Google.Cloud.AccessApproval.V1;
 
     public sealed partial class GeneratedAccessApprovalServiceClientSnippets
@@ -39,5 +39,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             AccessApprovalServiceAccount response = accessApprovalServiceClient.GetAccessApprovalServiceAccount(request);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalServiceAccount_sync]
+    // [END accessapproval_v1_generated_AccessApproval_GetAccessApprovalServiceAccount_sync]
 }
