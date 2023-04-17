@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@ using Microsoft.Extensions.Logging.Console;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -50,11 +51,19 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
     private static readonly JsonEncodedText s_scopesPropertyName = JsonEncodedText.Encode("scopes");
     private static readonly JsonEncodedText s_formatParametersPropertyName = JsonEncodedText.Encode("format_parameters");
 
+    // `trace`, `spanId` and `trace_sampled` are special JSON log fields used for log trace correlation.
+    // Please see https://cloud.google.com/logging/docs/structured-logging#special-payload-fields for more information.
+    private static readonly JsonEncodedText s_tracePropertyName = JsonEncodedText.Encode("logging.googleapis.com/trace");
+    private static readonly JsonEncodedText s_spanIdPropertyName = JsonEncodedText.Encode("logging.googleapis.com/spanId");
+    private static readonly JsonEncodedText s_traceSampledPropertyName = JsonEncodedText.Encode("logging.googleapis.com/trace_sampled");
+
     private static readonly JsonEncodedText s_debugSeverity = JsonEncodedText.Encode("DEBUG");
     private static readonly JsonEncodedText s_infoSeverity = JsonEncodedText.Encode("INFO");
     private static readonly JsonEncodedText s_warningSeverity = JsonEncodedText.Encode("WARNING");
     private static readonly JsonEncodedText s_errorSeverity = JsonEncodedText.Encode("ERROR");
     private static readonly JsonEncodedText s_criticalSeverity = JsonEncodedText.Encode("CRITICAL");
+
+    private static readonly string s_defaultTraceId = default(ActivityTraceId).ToHexString();
 
     private readonly IDisposable _optionsReloadToken;
     private GoogleCloudConsoleFormatterOptions _options;
@@ -100,6 +109,7 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
 
                 MaybeWriteFormatParameters(writer, logEntry.State);
                 MaybeWriteScopeInformation(writer, scopeProvider);
+                MaybeWriteTraceInformation(writer);
                 writer.WriteEndObject();
                 writer.Flush();
             }
@@ -175,6 +185,28 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
             writer.WriteString(key, ToInvariantString(pair.Value));
         }
         writer.WriteEndObject();
+    }
+
+    private void MaybeWriteTraceInformation(Utf8JsonWriter writer)
+    {
+        if (string.IsNullOrWhiteSpace(_options.TraceGoogleCloudProjectId) || Activity.Current is not Activity activity)
+        {
+            return;
+        }
+
+        var traceId = activity.TraceId.ToHexString();
+
+        // `Equals` implementation in `ActivityTraceId` has a bug. Please see https://github.com/dotnet/runtime/issues/85198 for more details.
+        // String comparision is unfortunate but currently the only available workaround.
+        if (traceId == s_defaultTraceId)
+        {
+            return;
+        }
+
+        var trace = $"projects/{_options.TraceGoogleCloudProjectId}/traces/{traceId}";
+        writer.WriteString(s_tracePropertyName, trace);
+        writer.WriteString(s_spanIdPropertyName, activity.SpanId.ToString());
+        writer.WriteBoolean(s_traceSampledPropertyName, activity.Recorded);
     }
 
     private static JsonEncodedText GetSeverity(LogLevel logLevel) =>
