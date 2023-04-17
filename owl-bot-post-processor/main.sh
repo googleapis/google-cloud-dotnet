@@ -98,15 +98,6 @@ copy_one_api() {
   rm -rf "$STAGING_DIR"
 
   # The following code was copied from generate_api().
-  if [[ -f $PACKAGE_DIR/postgeneration.patch ]]
-  then
-    echo "Applying post-generation patch for $PACKAGE"
-    (
-      cd $PACKAGE_DIR
-      git apply postgeneration.patch
-    )
-  fi
-
   if [[ -f $PACKAGE_DIR/postgeneration.sh ]]
   then    
     echo "Running post-generation script for $PACKAGE"
