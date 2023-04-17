@@ -17,7 +17,7 @@ gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/console-formatter
 gcloud run deploy --platform managed --image gcr.io/$GOOGLE_CLOUD_PROJECT/console-formatter
 ```
 
-The server supports four URLs:
+The server supports the following URLs:
 
 - `/simple` logs a simple informational message
 - `/complex` logs a message containing a parameter
@@ -28,3 +28,14 @@ The server supports four URLs:
 - `/async-exception` throws an exception from an async method (which
   calls other async methods)
 
+## Log trace correlation
+
+To see log trace correlation in action in the SampleApp deployed in Google Cloud Run,
+ensure that the `TraceGoogleCloudProjectId` is set to a valid Google Cloud Project ID
+where trace data is being exported to. Google Cloud Run initiates trace with the
+project ID of the Google Cloud Project where the service is deployed, so this is the ID that
+needs to be set. This can be done by setting the `TraceGoogleCloudProjectId`
+field in [appsettings.json](SampleApp/appsettings.json) before deployment.
+
+After deployment, try one of the supported URLs. This will generate a log entry with trace context information,
+which can be seen in the [Logs Viewer](https://console.cloud.google.com/logs/viewer) in the Google Cloud Console.
