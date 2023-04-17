@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.AccessApproval.V1.Snippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_async_flattened]
+    // [START accessapproval_v1_generated_AccessApproval_ListApprovalRequests_async_flattened]
     using Google.Api.Gax;
     using Google.Cloud.AccessApproval.V1;
     using System;
@@ -75,5 +75,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_async_flattened]
+    // [END accessapproval_v1_generated_AccessApproval_ListApprovalRequests_async_flattened]
 }

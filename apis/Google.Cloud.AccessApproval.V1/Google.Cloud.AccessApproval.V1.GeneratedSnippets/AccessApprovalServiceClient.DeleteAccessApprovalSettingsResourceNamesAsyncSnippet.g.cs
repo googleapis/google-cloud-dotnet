@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.AccessApproval.V1.Snippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_async_flattened_resourceNames]
+    // [START accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_async_flattened_resourceNames]
     using Google.Cloud.AccessApproval.V1;
     using System.Threading.Tasks;
 
@@ -40,5 +40,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             await accessApprovalServiceClient.DeleteAccessApprovalSettingsAsync(name);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_async_flattened_resourceNames]
+    // [END accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_async_flattened_resourceNames]
 }

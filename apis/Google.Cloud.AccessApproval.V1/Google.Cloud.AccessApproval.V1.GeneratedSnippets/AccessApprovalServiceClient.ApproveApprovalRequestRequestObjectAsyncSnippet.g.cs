@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.AccessApproval.V1.Snippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_ApproveApprovalRequest_async]
+    // [START accessapproval_v1_generated_AccessApproval_ApproveApprovalRequest_async]
     using Google.Cloud.AccessApproval.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -45,5 +45,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             ApprovalRequest response = await accessApprovalServiceClient.ApproveApprovalRequestAsync(request);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_ApproveApprovalRequest_async]
+    // [END accessapproval_v1_generated_AccessApproval_ApproveApprovalRequest_async]
 }

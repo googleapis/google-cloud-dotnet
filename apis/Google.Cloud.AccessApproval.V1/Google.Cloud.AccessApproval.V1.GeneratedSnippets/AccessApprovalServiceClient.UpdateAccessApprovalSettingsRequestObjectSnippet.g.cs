@@ -16,7 +16,7 @@
 
 namespace Google.Cloud.AccessApproval.V1.Snippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_UpdateAccessApprovalSettings_sync]
+    // [START accessapproval_v1_generated_AccessApproval_UpdateAccessApprovalSettings_sync]
     using Google.Cloud.AccessApproval.V1;
     using Google.Protobuf.WellKnownTypes;
 
@@ -44,5 +44,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             AccessApprovalSettings response = accessApprovalServiceClient.UpdateAccessApprovalSettings(request);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_UpdateAccessApprovalSettings_sync]
+    // [END accessapproval_v1_generated_AccessApproval_UpdateAccessApprovalSettings_sync]
 }
