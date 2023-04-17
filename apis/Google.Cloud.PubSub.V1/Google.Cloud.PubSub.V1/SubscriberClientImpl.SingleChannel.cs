@@ -137,7 +137,7 @@ public sealed partial class SubscriberClientImpl
         // This is used in exactly once delivery flow only.
         // The keys in the dictionary represents the Ack ID of the message, while value contains the receipt ModAck status.
         // A value of null indicates that the status is not yet started or in progress. A value of true indicates success, and false indicates failure (which can be temporary or permanent).
-        private readonly ConcurrentDictionary<string, bool?> _receiptModAckStatusLookup = new ConcurrentDictionary<string, bool?>();
+        private readonly ConcurrentDictionary<string, bool?> _receiptModAckStatusLookup = new();
         private readonly object _lock = new object(); // For: _ackQueue, _nackQueue, _userHandlerInFlight
         private readonly Action<Task> _registerTaskFn;
         private readonly TaskHelper _taskHelper;
@@ -406,14 +406,10 @@ public sealed partial class SubscriberClientImpl
                 {
                     // Populate receipt ModAck dictionary before the lease extends are send.
                     PopulateAckIdsForReceiptModAck(msgIds);
-                }
-
-                // Send an initial "lease-extension"; which starts the server timer.
-                HandleExtendLease(msgIds, null);
-                if (_exactlyOnceDeliveryEnabled)
-                {
+                    // Send an initial "lease-extension"; which starts the server timer.
+                    HandleExtendLease(msgIds, null);
                     // In the exactly-once delivery flow, we must send only those messages to the user handler which had successful receipt ModAck responses.
-                    // This is necessary to prevent message redelivery. We get the status of success or permanent failure instantly.
+                    // This is necessary to prevent message redelivery. We get the status of success and permanent failure as soon as response arrives.
                     // However, temporary failures are retried for up to three times and may eventaully succeed, result in permanent failure, or remain as temporary failure.
                     // Therefore, we must wait for all receipt ModAck responses to complete to obtain the final status.
                     // Then, the messages with successful receipt ModAcks are sent to the user, while those with failed ModAcks are removed from further processing.
@@ -423,6 +419,8 @@ public sealed partial class SubscriberClientImpl
                 }
                 else
                 {
+                    // Send an initial "lease-extension"; which starts the server timer.
+                    HandleExtendLease(msgIds, null);
                     // Asynchonously start message processing. Handles flow, and calls the user-supplied message handler.
                     // Uses Task.Run(), so not to clog up this "master" thread with per-message processing.
                     Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, msgIds));
@@ -932,10 +930,11 @@ public sealed partial class SubscriberClientImpl
 
             // This local method is used to determine if the current response is for receipt ModAck. It is used exclusively for exactly-once delivery.
             // We determine that the response is receipt ModAck, if the following three conditions are met simultaneously:
-            // 1. The response contains at least one Ack ID that is present in the `_receiptModAckStatusLookup` dictionary. This condition helps reduce reduce noise due to extends that may occur simultaneously with receipt ModAck.
-            // 2. The response contains at least one extend ID indicated by the hasExtends flag. Only extends count towards receipt ModAck, not acks or nacks.
-            // 3. The flag _receiptModAckForExactlyOnceDelivery is true. This flag is only set when the lease extension begins.
-            bool IsReceiptModAckResponse(IEnumerable<string> allIds, bool hasExtends) => _receiptModAckStatusLookup.Keys.Any(key => allIds.Contains(key)) && hasExtendIds && _receiptModAckForExactlyOnceDelivery;
+            // 1. The response contains at least one extend ID indicated by the hasExtends flag. Only extends count towards receipt ModAck, not acks or nacks.
+            // 2. The flag _receiptModAckForExactlyOnceDelivery is true. This flag is only set when the lease extension begins.
+            // 3. The response contains at least one Ack ID that is present in the `_receiptModAckStatusLookup` dictionary. This condition helps reduce reduce noise due to extends that may occur simultaneously with receipt ModAck.
+            bool IsReceiptModAckResponse(IEnumerable<string> allIds, bool hasExtends) =>
+                hasExtendIds && _receiptModAckForExactlyOnceDelivery && _receiptModAckStatusLookup.Keys.Any(key => allIds.Contains(key));
         }
 
         private void HandleAckResponse(Task writeTask, List<string> ackIds, List<string> nackIds, List<TimedId> extendIds)
@@ -1077,7 +1076,7 @@ public sealed partial class SubscriberClientImpl
             // We ensure that ids are never null, so null check isn't needed.
             foreach (var id in ids)
             {
-                _ = _receiptModAckStatusLookup.AddOrUpdate(id, status, (key, value) => status);
+                _receiptModAckStatusLookup[id] = status;
             }
         }
     }
