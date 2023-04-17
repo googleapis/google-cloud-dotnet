@@ -33,8 +33,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.DocfxMet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.FetchDependencyXrefmaps", "..\tools\Google.Cloud.Tools.FetchDependencyXrefmaps\Google.Cloud.Tools.FetchDependencyXrefmaps.csproj", "{3734E267-99C5-4C80-9D73-D411B6773BC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.UnescapeDocfxMetadataXml", "..\tools\Google.Cloud.Tools.UnescapeDocfxMetadataXml\Google.Cloud.Tools.UnescapeDocfxMetadataXml.csproj", "{60920FE5-243D-4A75-9B42-D03DF86AA6AF}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Language.V1", "..\apis\Google.Cloud.Language.V1\Google.Cloud.Language.V1\Google.Cloud.Language.V1.csproj", "{33357DA1-7028-42CA-8798-28EC86EC32C1}"
 EndProject
 Global
@@ -227,18 +225,6 @@ Global
 		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x64.Build.0 = Release|Any CPU
 		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x86.ActiveCfg = Release|Any CPU
 		{3734E267-99C5-4C80-9D73-D411B6773BC5}.Release|x86.Build.0 = Release|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|x64.Build.0 = Debug|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Debug|x86.Build.0 = Debug|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|x64.ActiveCfg = Release|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|x64.Build.0 = Release|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|x86.ActiveCfg = Release|Any CPU
-		{60920FE5-243D-4A75-9B42-D03DF86AA6AF}.Release|x86.Build.0 = Release|Any CPU
 		{33357DA1-7028-42CA-8798-28EC86EC32C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{33357DA1-7028-42CA-8798-28EC86EC32C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33357DA1-7028-42CA-8798-28EC86EC32C1}.Debug|x64.ActiveCfg = Debug|Any CPU
