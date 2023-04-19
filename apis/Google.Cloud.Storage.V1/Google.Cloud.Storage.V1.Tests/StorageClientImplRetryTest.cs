@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Testing;
 using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
@@ -395,14 +396,18 @@ namespace Google.Cloud.Storage.V1.Tests
         private static void RetryOnce<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction, T response,
             HttpStatusCode firstStatusCode = HttpStatusCode.BadGateway)
         {
+            var scheduler = new FakeScheduler();
             var service = new FakeStorageService();
-            var client = new StorageClientImpl(service);
+            var client = new StorageClientImpl(service, null, scheduler);
             var request = requestProvider(service);
 
-            service.ExpectRequest(request, firstStatusCode);
-            service.ExpectRequest(request, response);
-            clientAction(client);
-            service.Verify();
+            scheduler.Run(() =>
+            {
+                service.ExpectRequest(request, firstStatusCode);
+                service.ExpectRequest(request, response);
+                clientAction(client);
+                service.Verify();
+            });
         }
 
         /// <summary>
@@ -418,16 +423,20 @@ namespace Google.Cloud.Storage.V1.Tests
         private static void RetryThenFail<T>(Func<StorageService, ClientServiceRequest<T>> requestProvider, Action<StorageClient> clientAction, T response,
             HttpStatusCode errorCode = HttpStatusCode.BadGateway, int retryCount = 3)
         {
+            var scheduler = new FakeScheduler();
             var service = new FakeStorageService();
-            var client = new StorageClientImpl(service);
+            var client = new StorageClientImpl(service, null, scheduler);
             var request = requestProvider(service);
 
-            for (int i = 1; i <= retryCount; i++)
+            scheduler.Run(() =>
             {
-                service.ExpectRequest(request, errorCode);
-            }
-            Assert.Throws<GoogleApiException>(() => clientAction(client));
-            service.Verify();
+                for (int i = 1; i <= retryCount; i++)
+                {
+                    service.ExpectRequest(request, errorCode);
+                }
+                Assert.Throws<GoogleApiException>(() => clientAction(client));
+                service.Verify();
+            });
         }
 
         /// <summary>
