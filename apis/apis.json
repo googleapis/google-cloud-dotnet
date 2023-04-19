@@ -4216,6 +4216,29 @@
       "shortName": "storage"
     },
     {
+      "id": "Google.Cloud.StorageInsights.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Storage Insights",
+      "productUrl": "https://cloud.google.com/storage/docs/insights/inventory-reports",
+      "description": "Recommended Google client library to access the Google Cloud Storage Insights API, which helps you manage your object storage at scale.",
+      "tags": [
+        "storage",
+        "inventory",
+        "reporting"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/storageinsights/v1",
+      "shortName": "storageinsights",
+      "serviceConfigFile": "storageinsights_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.StorageTransfer.V1",
       "version": "2.2.0",
       "type": "grpc",
