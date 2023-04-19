@@ -443,7 +443,10 @@ namespace Google.Cloud.GkeHub.V1
     /// * [Membership][google.cloud.gkehub.v1.Membership]
     /// * [Feature][google.cloud.gkehub.v1.Feature]
     /// 
-    /// GKE Hub is currently only available in the global region.
+    /// GKE Hub is currently available in the global region and all regions in
+    /// https://cloud.google.com/compute/docs/regions-zones. Feature is only
+    /// available in global region while membership is global region and all the
+    /// regions.
     /// 
     /// **Membership management may be non-trivial:** it is recommended to use one
     /// of the Google-provided client libraries or tools where possible when working
@@ -550,8 +553,9 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Memberships in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be listed.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// listed. Specified in the format `projects/*/locations/*`.
+        /// `projects/*/locations/-` list memberships in all the regions.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -575,8 +579,9 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Memberships in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be listed.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// listed. Specified in the format `projects/*/locations/*`.
+        /// `projects/*/locations/-` list memberships in all the regions.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -600,8 +605,9 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Memberships in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be listed.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// listed. Specified in the format `projects/*/locations/*`.
+        /// `projects/*/locations/-` list memberships in all the regions.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -625,8 +631,9 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Memberships in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be listed.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// listed. Specified in the format `projects/*/locations/*`.
+        /// `projects/*/locations/-` list memberships in all the regions.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1047,15 +1054,15 @@ namespace Google.Cloud.GkeHub.V1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
-        /// 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a
+        /// valid RFC 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -1082,15 +1089,15 @@ namespace Google.Cloud.GkeHub.V1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
-        /// 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a
+        /// valid RFC 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -1117,15 +1124,15 @@ namespace Google.Cloud.GkeHub.V1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
-        /// 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a
+        /// valid RFC 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -1147,15 +1154,15 @@ namespace Google.Cloud.GkeHub.V1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
-        /// 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a
+        /// valid RFC 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -1182,15 +1189,15 @@ namespace Google.Cloud.GkeHub.V1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
-        /// 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a
+        /// valid RFC 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -1217,15 +1224,15 @@ namespace Google.Cloud.GkeHub.V1
         /// https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent (project and location) where the Memberships will be created.
-        /// Specified in the format `projects/*/locations/*`.
+        /// Required. The parent (project and location) where the Memberships will be
+        /// created. Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
         /// Required. The membership to create.
         /// </param>
         /// <param name="membershipId">
-        /// Required. Client chosen ID for the membership. `membership_id` must be a valid RFC
-        /// 1123 compliant DNS label:
+        /// Required. Client chosen ID for the membership. `membership_id` must be a
+        /// valid RFC 1123 compliant DNS label:
         /// 
         /// 1. At most 63 characters in length
         /// 2. It must consist of lower case alphanumeric characters or `-`
@@ -2212,7 +2219,10 @@ namespace Google.Cloud.GkeHub.V1
     /// * [Membership][google.cloud.gkehub.v1.Membership]
     /// * [Feature][google.cloud.gkehub.v1.Feature]
     /// 
-    /// GKE Hub is currently only available in the global region.
+    /// GKE Hub is currently available in the global region and all regions in
+    /// https://cloud.google.com/compute/docs/regions-zones. Feature is only
+    /// available in global region while membership is global region and all the
+    /// regions.
     /// 
     /// **Membership management may be non-trivial:** it is recommended to use one
     /// of the Google-provided client libraries or tools where possible when working
