@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.0, released 2023-04-19
+
+### New features
+
+- Reliability improvements in exactly-once delivery. ([commit 27b2430](https://github.com/googleapis/google-cloud-dotnet/commit/27b2430894ddd1f857ad49a5945282670760fa56))
+
 ## Version 3.4.0, released 2023-03-08
 
 ### Bug fixes
