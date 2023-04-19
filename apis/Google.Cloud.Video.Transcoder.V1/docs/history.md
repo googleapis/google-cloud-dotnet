@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2023-04-19
+
+### New features
+
+- Add support for batch processing mode ([commit 9eb2a76](https://github.com/googleapis/google-cloud-dotnet/commit/9eb2a76b6062711aaa2f1a22ca307bcdbac9176f))
+
 ## Version 2.4.0, released 2023-03-06
 
 ### New features
