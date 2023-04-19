@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2023-04-19
+
+### New features
+
+- Add support for updating additional pod IPv4 ranges for Standard and Autopilot clusters ([commit 744f687](https://github.com/googleapis/google-cloud-dotnet/commit/744f687d8da05eed660aedeb32bb34f467ff92c1))
+
 ## Version 3.9.0, released 2023-04-12
 
 ### New features
