@@ -268,9 +268,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A checksum computed by the server based on the current value of the
-    /// Organization resource. This may be sent on update and delete requests to
-    /// ensure the client has an up-to-date value before proceeding.
+    /// Output only. A checksum computed by the server based on the current value
+    /// of the Organization resource. This may be sent on update and delete
+    /// requests to ensure the client has an up-to-date value before proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -712,9 +712,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the Organization to fetch. This is the organization's
-    /// relative path in the API, formatted as "organizations/[organizationId]".
-    /// For example, "organizations/1234".
+    /// Required. The resource name of the Organization to fetch. This is the
+    /// organization's relative path in the API, formatted as
+    /// "organizations/[organizationId]". For example, "organizations/1234".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -912,7 +912,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     private int pageSize_;
     /// <summary>
     /// Optional. The maximum number of organizations to return in the response.
-    /// If unspecified, server picks an appropriate default.
+    /// The server can return fewer organizations than requested. If unspecified,
+    /// server picks an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -927,8 +928,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to `SearchOrganizations`
-    /// that indicates from where listing should continue.
+    /// Optional. A pagination token returned from a previous call to
+    /// `SearchOrganizations` that indicates from where listing should continue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -943,8 +944,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int QueryFieldNumber = 3;
     private string query_ = "";
     /// <summary>
-    /// Optional. An optional query string used to filter the Organizations to return in
-    /// the response. Query rules are case-insensitive.
+    /// Optional. An optional query string used to filter the Organizations to
+    /// return in the response. Query rules are case-insensitive.
     ///
     /// ```
     /// | Field            | Description                                |

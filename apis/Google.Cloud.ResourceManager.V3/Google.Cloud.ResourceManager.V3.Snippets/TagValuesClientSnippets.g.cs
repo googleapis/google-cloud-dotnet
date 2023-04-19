@@ -391,6 +391,93 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetNamespacedTagValue</summary>
+        public void GetNamespacedTagValueRequestObject()
+        {
+            // Snippet: GetNamespacedTagValue(GetNamespacedTagValueRequest, CallSettings)
+            // Create client
+            TagValuesClient tagValuesClient = TagValuesClient.Create();
+            // Initialize request argument(s)
+            GetNamespacedTagValueRequest request = new GetNamespacedTagValueRequest
+            {
+                TagValueName = TagValueName.FromTagValue("[TAG_VALUE]"),
+            };
+            // Make the request
+            TagValue response = tagValuesClient.GetNamespacedTagValue(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagValueAsync</summary>
+        public async Task GetNamespacedTagValueRequestObjectAsync()
+        {
+            // Snippet: GetNamespacedTagValueAsync(GetNamespacedTagValueRequest, CallSettings)
+            // Additional: GetNamespacedTagValueAsync(GetNamespacedTagValueRequest, CancellationToken)
+            // Create client
+            TagValuesClient tagValuesClient = await TagValuesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNamespacedTagValueRequest request = new GetNamespacedTagValueRequest
+            {
+                TagValueName = TagValueName.FromTagValue("[TAG_VALUE]"),
+            };
+            // Make the request
+            TagValue response = await tagValuesClient.GetNamespacedTagValueAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagValue</summary>
+        public void GetNamespacedTagValue()
+        {
+            // Snippet: GetNamespacedTagValue(string, CallSettings)
+            // Create client
+            TagValuesClient tagValuesClient = TagValuesClient.Create();
+            // Initialize request argument(s)
+            string name = "tagValues/[TAG_VALUE]";
+            // Make the request
+            TagValue response = tagValuesClient.GetNamespacedTagValue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagValueAsync</summary>
+        public async Task GetNamespacedTagValueAsync()
+        {
+            // Snippet: GetNamespacedTagValueAsync(string, CallSettings)
+            // Additional: GetNamespacedTagValueAsync(string, CancellationToken)
+            // Create client
+            TagValuesClient tagValuesClient = await TagValuesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "tagValues/[TAG_VALUE]";
+            // Make the request
+            TagValue response = await tagValuesClient.GetNamespacedTagValueAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagValue</summary>
+        public void GetNamespacedTagValueResourceNames()
+        {
+            // Snippet: GetNamespacedTagValue(TagValueName, CallSettings)
+            // Create client
+            TagValuesClient tagValuesClient = TagValuesClient.Create();
+            // Initialize request argument(s)
+            TagValueName name = TagValueName.FromTagValue("[TAG_VALUE]");
+            // Make the request
+            TagValue response = tagValuesClient.GetNamespacedTagValue(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagValueAsync</summary>
+        public async Task GetNamespacedTagValueResourceNamesAsync()
+        {
+            // Snippet: GetNamespacedTagValueAsync(TagValueName, CallSettings)
+            // Additional: GetNamespacedTagValueAsync(TagValueName, CancellationToken)
+            // Create client
+            TagValuesClient tagValuesClient = await TagValuesClient.CreateAsync();
+            // Initialize request argument(s)
+            TagValueName name = TagValueName.FromTagValue("[TAG_VALUE]");
+            // Make the request
+            TagValue response = await tagValuesClient.GetNamespacedTagValueAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateTagValue</summary>
         public void CreateTagValueRequestObject()
         {

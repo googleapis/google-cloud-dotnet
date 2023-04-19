@@ -52,6 +52,7 @@ namespace Google.Cloud.ResourceManager.V3
             CreateTagBindingOperationsSettings = existing.CreateTagBindingOperationsSettings.Clone();
             DeleteTagBindingSettings = existing.DeleteTagBindingSettings;
             DeleteTagBindingOperationsSettings = existing.DeleteTagBindingOperationsSettings.Clone();
+            ListEffectiveTagsSettings = existing.ListEffectiveTagsSettings;
             OnCopy(existing);
         }
 
@@ -135,6 +136,18 @@ namespace Google.Cloud.ResourceManager.V3
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TagBindingsClient.ListEffectiveTags</c> and <c>TagBindingsClient.ListEffectiveTagsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListEffectiveTagsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TagBindingsSettings"/> object.</returns>
         public TagBindingsSettings Clone() => new TagBindingsSettings(this);
@@ -194,7 +207,7 @@ namespace Google.Cloud.ResourceManager.V3
     /// <summary>TagBindings client wrapper, for convenient use.</summary>
     /// <remarks>
     /// Allow users to create and manage TagBindings between TagValues and
-    /// different cloud resources throughout the GCP resource hierarchy.
+    /// different Google Cloud resources throughout the GCP resource hierarchy.
     /// </remarks>
     public abstract partial class TagBindingsClient
     {
@@ -279,8 +292,8 @@ namespace Google.Cloud.ResourceManager.V3
         public virtual TagBindings.TagBindingsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the TagBindings for the given cloud resource, as specified with
-        /// `parent`.
+        /// Lists the TagBindings for the given Google Cloud resource, as specified
+        /// with `parent`.
         /// 
         /// NOTE: The `parent` field is expected to be a full resource name:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -292,8 +305,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the TagBindings for the given cloud resource, as specified with
-        /// `parent`.
+        /// Lists the TagBindings for the given Google Cloud resource, as specified
+        /// with `parent`.
         /// 
         /// NOTE: The `parent` field is expected to be a full resource name:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -305,16 +318,16 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the TagBindings for the given cloud resource, as specified with
-        /// `parent`.
+        /// Lists the TagBindings for the given Google Cloud resource, as specified
+        /// with `parent`.
         /// 
         /// NOTE: The `parent` field is expected to be a full resource name:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
         /// </summary>
         /// <param name="parent">
-        /// Required. The full resource name of a resource for which you want to list existing
-        /// TagBindings.
-        /// E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+        /// Required. The full resource name of a resource for which you want to list
+        /// existing TagBindings. E.g.
+        /// "//cloudresourcemanager.googleapis.com/projects/123"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -335,16 +348,16 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists the TagBindings for the given cloud resource, as specified with
-        /// `parent`.
+        /// Lists the TagBindings for the given Google Cloud resource, as specified
+        /// with `parent`.
         /// 
         /// NOTE: The `parent` field is expected to be a full resource name:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
         /// </summary>
         /// <param name="parent">
-        /// Required. The full resource name of a resource for which you want to list existing
-        /// TagBindings.
-        /// E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+        /// Required. The full resource name of a resource for which you want to list
+        /// existing TagBindings. E.g.
+        /// "//cloudresourcemanager.googleapis.com/projects/123"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -365,16 +378,16 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists the TagBindings for the given cloud resource, as specified with
-        /// `parent`.
+        /// Lists the TagBindings for the given Google Cloud resource, as specified
+        /// with `parent`.
         /// 
         /// NOTE: The `parent` field is expected to be a full resource name:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
         /// </summary>
         /// <param name="parent">
-        /// Required. The full resource name of a resource for which you want to list existing
-        /// TagBindings.
-        /// E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+        /// Required. The full resource name of a resource for which you want to list
+        /// existing TagBindings. E.g.
+        /// "//cloudresourcemanager.googleapis.com/projects/123"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -395,16 +408,16 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists the TagBindings for the given cloud resource, as specified with
-        /// `parent`.
+        /// Lists the TagBindings for the given Google Cloud resource, as specified
+        /// with `parent`.
         /// 
         /// NOTE: The `parent` field is expected to be a full resource name:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
         /// </summary>
         /// <param name="parent">
-        /// Required. The full resource name of a resource for which you want to list existing
-        /// TagBindings.
-        /// E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+        /// Required. The full resource name of a resource for which you want to list
+        /// existing TagBindings. E.g.
+        /// "//cloudresourcemanager.googleapis.com/projects/123"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -425,8 +438,7 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates a TagBinding between a TagValue and a cloud resource
-        /// (currently project, folder, or organization).
+        /// Creates a TagBinding between a TagValue and a Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -435,8 +447,7 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a TagBinding between a TagValue and a cloud resource
-        /// (currently project, folder, or organization).
+        /// Creates a TagBinding between a TagValue and a Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -445,8 +456,7 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a TagBinding between a TagValue and a cloud resource
-        /// (currently project, folder, or organization).
+        /// Creates a TagBinding between a TagValue and a Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -481,8 +491,7 @@ namespace Google.Cloud.ResourceManager.V3
             lro::Operation<TagBinding, CreateTagBindingMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateTagBindingOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a TagBinding between a TagValue and a cloud resource
-        /// (currently project, folder, or organization).
+        /// Creates a TagBinding between a TagValue and a Google Cloud resource.
         /// </summary>
         /// <param name="tagBinding">
         /// Required. The TagBinding to be created.
@@ -496,8 +505,7 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates a TagBinding between a TagValue and a cloud resource
-        /// (currently project, folder, or organization).
+        /// Creates a TagBinding between a TagValue and a Google Cloud resource.
         /// </summary>
         /// <param name="tagBinding">
         /// Required. The TagBinding to be created.
@@ -511,8 +519,7 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates a TagBinding between a TagValue and a cloud resource
-        /// (currently project, folder, or organization).
+        /// Creates a TagBinding between a TagValue and a Google Cloud resource.
         /// </summary>
         /// <param name="tagBinding">
         /// Required. The TagBinding to be created.
@@ -664,12 +671,86 @@ namespace Google.Cloud.ResourceManager.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, DeleteTagBindingMetadata>> DeleteTagBindingAsync(TagBindingName name, st::CancellationToken cancellationToken) =>
             DeleteTagBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Return a list of effective tags for the given Google Cloud resource, as
+        /// specified in `parent`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveTag"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTags(ListEffectiveTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Return a list of effective tags for the given Google Cloud resource, as
+        /// specified in `parent`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EffectiveTag"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTagsAsync(ListEffectiveTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Return a list of effective tags for the given Google Cloud resource, as
+        /// specified in `parent`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The full resource name of a resource for which you want to list
+        /// the effective tags. E.g.
+        /// "//cloudresourcemanager.googleapis.com/projects/123"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveTag"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveTags(new ListEffectiveTagsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Return a list of effective tags for the given Google Cloud resource, as
+        /// specified in `parent`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The full resource name of a resource for which you want to list
+        /// the effective tags. E.g.
+        /// "//cloudresourcemanager.googleapis.com/projects/123"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EffectiveTag"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListEffectiveTagsAsync(new ListEffectiveTagsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>TagBindings client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// Allow users to create and manage TagBindings between TagValues and
-    /// different cloud resources throughout the GCP resource hierarchy.
+    /// different Google Cloud resources throughout the GCP resource hierarchy.
     /// </remarks>
     public sealed partial class TagBindingsClientImpl : TagBindingsClient
     {
@@ -678,6 +759,8 @@ namespace Google.Cloud.ResourceManager.V3
         private readonly gaxgrpc::ApiCall<CreateTagBindingRequest, lro::Operation> _callCreateTagBinding;
 
         private readonly gaxgrpc::ApiCall<DeleteTagBindingRequest, lro::Operation> _callDeleteTagBinding;
+
+        private readonly gaxgrpc::ApiCall<ListEffectiveTagsRequest, ListEffectiveTagsResponse> _callListEffectiveTags;
 
         /// <summary>
         /// Constructs a client wrapper for the TagBindings service, with the specified gRPC client and settings.
@@ -701,6 +784,9 @@ namespace Google.Cloud.ResourceManager.V3
             _callDeleteTagBinding = clientHelper.BuildApiCall<DeleteTagBindingRequest, lro::Operation>("DeleteTagBinding", grpcClient.DeleteTagBindingAsync, grpcClient.DeleteTagBinding, effectiveSettings.DeleteTagBindingSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTagBinding);
             Modify_DeleteTagBindingApiCall(ref _callDeleteTagBinding);
+            _callListEffectiveTags = clientHelper.BuildApiCall<ListEffectiveTagsRequest, ListEffectiveTagsResponse>("ListEffectiveTags", grpcClient.ListEffectiveTagsAsync, grpcClient.ListEffectiveTags, effectiveSettings.ListEffectiveTagsSettings);
+            Modify_ApiCall(ref _callListEffectiveTags);
+            Modify_ListEffectiveTagsApiCall(ref _callListEffectiveTags);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -711,6 +797,8 @@ namespace Google.Cloud.ResourceManager.V3
         partial void Modify_CreateTagBindingApiCall(ref gaxgrpc::ApiCall<CreateTagBindingRequest, lro::Operation> call);
 
         partial void Modify_DeleteTagBindingApiCall(ref gaxgrpc::ApiCall<DeleteTagBindingRequest, lro::Operation> call);
+
+        partial void Modify_ListEffectiveTagsApiCall(ref gaxgrpc::ApiCall<ListEffectiveTagsRequest, ListEffectiveTagsResponse> call);
 
         partial void OnConstruction(TagBindings.TagBindingsClient grpcClient, TagBindingsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -723,9 +811,11 @@ namespace Google.Cloud.ResourceManager.V3
 
         partial void Modify_DeleteTagBindingRequest(ref DeleteTagBindingRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListEffectiveTagsRequest(ref ListEffectiveTagsRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Lists the TagBindings for the given cloud resource, as specified with
-        /// `parent`.
+        /// Lists the TagBindings for the given Google Cloud resource, as specified
+        /// with `parent`.
         /// 
         /// NOTE: The `parent` field is expected to be a full resource name:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -740,8 +830,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Lists the TagBindings for the given cloud resource, as specified with
-        /// `parent`.
+        /// Lists the TagBindings for the given Google Cloud resource, as specified
+        /// with `parent`.
         /// 
         /// NOTE: The `parent` field is expected to be a full resource name:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -759,8 +849,7 @@ namespace Google.Cloud.ResourceManager.V3
         public override lro::OperationsClient CreateTagBindingOperationsClient { get; }
 
         /// <summary>
-        /// Creates a TagBinding between a TagValue and a cloud resource
-        /// (currently project, folder, or organization).
+        /// Creates a TagBinding between a TagValue and a Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -772,8 +861,7 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Creates a TagBinding between a TagValue and a cloud resource
-        /// (currently project, folder, or organization).
+        /// Creates a TagBinding between a TagValue and a Google Cloud resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -810,9 +898,39 @@ namespace Google.Cloud.ResourceManager.V3
             Modify_DeleteTagBindingRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteTagBindingMetadata>(await _callDeleteTagBinding.Async(request, callSettings).ConfigureAwait(false), DeleteTagBindingOperationsClient);
         }
+
+        /// <summary>
+        /// Return a list of effective tags for the given Google Cloud resource, as
+        /// specified in `parent`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveTag"/> resources.</returns>
+        public override gax::PagedEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTags(ListEffectiveTagsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEffectiveTagsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListEffectiveTagsRequest, ListEffectiveTagsResponse, EffectiveTag>(_callListEffectiveTags, request, callSettings);
+        }
+
+        /// <summary>
+        /// Return a list of effective tags for the given Google Cloud resource, as
+        /// specified in `parent`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EffectiveTag"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListEffectiveTagsResponse, EffectiveTag> ListEffectiveTagsAsync(ListEffectiveTagsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListEffectiveTagsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEffectiveTagsRequest, ListEffectiveTagsResponse, EffectiveTag>(_callListEffectiveTags, request, callSettings);
+        }
     }
 
     public partial class ListTagBindingsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListEffectiveTagsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -820,6 +938,14 @@ namespace Google.Cloud.ResourceManager.V3
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<TagBinding> GetEnumerator() => TagBindings.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListEffectiveTagsResponse : gaxgrpc::IPageResponse<EffectiveTag>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EffectiveTag> GetEnumerator() => EffectiveTags.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

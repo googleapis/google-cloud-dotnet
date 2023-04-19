@@ -44,6 +44,7 @@ namespace Google.Cloud.ResourceManager.V3
             yield return OrganizationsReflection.Descriptor;
             yield return ProjectsReflection.Descriptor;
             yield return TagBindingsReflection.Descriptor;
+            yield return TagHoldsReflection.Descriptor;
             yield return TagKeysReflection.Descriptor;
             yield return TagValuesReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

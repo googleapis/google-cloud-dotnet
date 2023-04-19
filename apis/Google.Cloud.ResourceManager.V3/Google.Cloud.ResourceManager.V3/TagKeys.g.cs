@@ -32,76 +32,89 @@ namespace Google.Cloud.ResourceManager.V3 {
             "b3RvGhpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90bxojZ29vZ2xlL2xvbmdy",
             "dW5uaW5nL29wZXJhdGlvbnMucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
             "ZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Is0CCgZUYWdLZXkSEQoEbmFtZRgBIAEoCUID4EEFEhMKBnBhcmVudBgCIAEo",
+            "IpYECgZUYWdLZXkSEQoEbmFtZRgBIAEoCUID4EEFEhMKBnBhcmVudBgCIAEo",
             "CUID4EEFEhoKCnNob3J0X25hbWUYAyABKAlCBuBBAuBBBRIfCg9uYW1lc3Bh",
             "Y2VkX25hbWUYBCABKAlCBuBBA+BBBRIYCgtkZXNjcmlwdGlvbhgFIAEoCUID",
             "4EEBEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
             "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEhEKBGV0YWcYCCABKAlCA+BBATpF6kFC",
-            "CipjbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9UYWdLZXkS",
-            "EXRhZ0tleXMve3RhZ19rZXl9UgEBImAKEkxpc3RUYWdLZXlzUmVxdWVzdBIZ",
-            "CgZwYXJlbnQYASABKAlCCeBBAvpBAxIBKhIWCglwYWdlX3NpemUYAiABKAVC",
-            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEiaQoTTGlzdFRhZ0tleXNS",
-            "ZXNwb25zZRI5Cgh0YWdfa2V5cxgBIAMoCzInLmdvb2dsZS5jbG91ZC5yZXNv",
-            "dXJjZW1hbmFnZXIudjMuVGFnS2V5EhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSJUChBHZXRUYWdLZXlSZXF1ZXN0EkAKBG5hbWUYASABKAlCMuBBAvpBLAoq",
-            "Y2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVGFnS2V5InAK",
-            "E0NyZWF0ZVRhZ0tleVJlcXVlc3QSPQoHdGFnX2tleRgBIAEoCzInLmdvb2ds",
-            "ZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuVGFnS2V5QgPgQQISGgoNdmFs",
-            "aWRhdGVfb25seRgCIAEoCEID4EEBIhYKFENyZWF0ZVRhZ0tleU1ldGFkYXRh",
-            "IpwBChNVcGRhdGVUYWdLZXlSZXF1ZXN0Ej0KB3RhZ19rZXkYASABKAsyJy5n",
-            "b29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLlRhZ0tleUID4EECEi8K",
-            "C3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
-            "axIVCg12YWxpZGF0ZV9vbmx5GAMgASgIIhYKFFVwZGF0ZVRhZ0tleU1ldGFk",
-            "YXRhIoYBChNEZWxldGVUYWdLZXlSZXF1ZXN0EkAKBG5hbWUYASABKAlCMuBB",
-            "AvpBLAoqY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVGFn",
-            "S2V5EhoKDXZhbGlkYXRlX29ubHkYAiABKAhCA+BBARIRCgRldGFnGAMgASgJ",
-            "QgPgQQEiFgoURGVsZXRlVGFnS2V5TWV0YWRhdGEyvwsKB1RhZ0tleXMSlgEK",
-            "C0xpc3RUYWdLZXlzEjMuZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52",
-            "My5MaXN0VGFnS2V5c1JlcXVlc3QaNC5nb29nbGUuY2xvdWQucmVzb3VyY2Vt",
-            "YW5hZ2VyLnYzLkxpc3RUYWdLZXlzUmVzcG9uc2UiHILT5JMCDRILL3YzL3Rh",
-            "Z0tleXPaQQZwYXJlbnQSjAEKCUdldFRhZ0tleRIxLmdvb2dsZS5jbG91ZC5y",
-            "ZXNvdXJjZW1hbmFnZXIudjMuR2V0VGFnS2V5UmVxdWVzdBonLmdvb2dsZS5j",
-            "bG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuVGFnS2V5IiOC0+STAhYSFC92My97",
-            "bmFtZT10YWdLZXlzLyp92kEEbmFtZRKsAQoMQ3JlYXRlVGFnS2V5EjQuZ29v",
-            "Z2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52My5DcmVhdGVUYWdLZXlSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJHgtPkkwIWIgsv",
-            "djMvdGFnS2V5czoHdGFnX2tledpBB3RhZ19rZXnKQR4KBlRhZ0tleRIUQ3Jl",
-            "YXRlVGFnS2V5TWV0YWRhdGESyQEKDFVwZGF0ZVRhZ0tleRI0Lmdvb2dsZS5j",
-            "bG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuVXBkYXRlVGFnS2V5UmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iZILT5JMCJzIcL3YzL3t0",
-            "YWdfa2V5Lm5hbWU9dGFnS2V5cy8qfToHdGFnX2tledpBE3RhZ19rZXksdXBk",
-            "YXRlX21hc2vKQR4KBlRhZ0tleRIUVXBkYXRlVGFnS2V5TWV0YWRhdGESqQEK",
-            "DERlbGV0ZVRhZ0tleRI0Lmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIu",
-            "djMuRGVsZXRlVGFnS2V5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24iRILT5JMCFioUL3YzL3tuYW1lPXRhZ0tleXMvKn3aQQRuYW1l",
-            "ykEeCgZUYWdLZXkSFERlbGV0ZVRhZ0tleU1ldGFkYXRhEoYBCgxHZXRJYW1Q",
-            "b2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5n",
-            "b29nbGUuaWFtLnYxLlBvbGljeSI7gtPkkwIqIiUvdjMve3Jlc291cmNlPXRh",
-            "Z0tleXMvKn06Z2V0SWFtUG9saWN5OgEq2kEIcmVzb3VyY2USjQEKDFNldElh",
-            "bVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5UmVxdWVzdBoV",
-            "Lmdvb2dsZS5pYW0udjEuUG9saWN5IkKC0+STAioiJS92My97cmVzb3VyY2U9",
-            "dGFnS2V5cy8qfTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kS",
-            "uAEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElh",
-            "bVBlcm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBl",
-            "cm1pc3Npb25zUmVzcG9uc2UiTYLT5JMCMCIrL3YzL3tyZXNvdXJjZT10YWdL",
-            "ZXlzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKtpBFHJlc291cmNlLHBlcm1p",
-            "c3Npb25zGpABykEjY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b23SQWdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
-            "YXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
-            "cGxhdGZvcm0ucmVhZC1vbmx5Qu0BCiNjb20uZ29vZ2xlLmNsb3VkLnJlc291",
-            "cmNlbWFuYWdlci52M0IMVGFnS2V5c1Byb3RvUAFaTWNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vcmVzb3VyY2VtYW5hZ2VyL2FwaXYzL3Jlc291cmNlbWFuYWdlcnBi",
-            "O3Jlc291cmNlbWFuYWdlcnBiqgIfR29vZ2xlLkNsb3VkLlJlc291cmNlTWFu",
-            "YWdlci5WM8oCH0dvb2dsZVxDbG91ZFxSZXNvdXJjZU1hbmFnZXJcVjPqAiJH",
-            "b29nbGU6OkNsb3VkOjpSZXNvdXJjZU1hbmFnZXI6OlYzYgZwcm90bzM="));
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEhEKBGV0YWcYCCABKAlCA+BBARI+Cgdw",
+            "dXJwb3NlGAsgASgOMiguZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52",
+            "My5QdXJwb3NlQgPgQQESUwoMcHVycG9zZV9kYXRhGAwgAygLMjguZ29vZ2xl",
+            "LmNsb3VkLnJlc291cmNlbWFuYWdlci52My5UYWdLZXkuUHVycG9zZURhdGFF",
+            "bnRyeUID4EEBGjIKEFB1cnBvc2VEYXRhRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ATpF6kFCCipjbG91ZHJlc291cmNlbWFuYWdlci5n",
+            "b29nbGVhcGlzLmNvbS9UYWdLZXkSEXRhZ0tleXMve3RhZ19rZXl9UgEBImAK",
+            "Ekxpc3RUYWdLZXlzUmVxdWVzdBIZCgZwYXJlbnQYASABKAlCCeBBAvpBAxIB",
+            "KhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJ",
+            "QgPgQQEiaQoTTGlzdFRhZ0tleXNSZXNwb25zZRI5Cgh0YWdfa2V5cxgBIAMo",
+            "CzInLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuVGFnS2V5EhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJUChBHZXRUYWdLZXlSZXF1ZXN0EkAK",
+            "BG5hbWUYASABKAlCMuBBAvpBLAoqY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb20vVGFnS2V5Il4KGkdldE5hbWVzcGFjZWRUYWdLZXlSZXF1",
+            "ZXN0EkAKBG5hbWUYASABKAlCMuBBAvpBLAoqY2xvdWRyZXNvdXJjZW1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vVGFnS2V5InAKE0NyZWF0ZVRhZ0tleVJlcXVl",
+            "c3QSPQoHdGFnX2tleRgBIAEoCzInLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1h",
+            "bmFnZXIudjMuVGFnS2V5QgPgQQISGgoNdmFsaWRhdGVfb25seRgCIAEoCEID",
+            "4EEBIhYKFENyZWF0ZVRhZ0tleU1ldGFkYXRhIpwBChNVcGRhdGVUYWdLZXlS",
+            "ZXF1ZXN0Ej0KB3RhZ19rZXkYASABKAsyJy5nb29nbGUuY2xvdWQucmVzb3Vy",
+            "Y2VtYW5hZ2VyLnYzLlRhZ0tleUID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxIVCg12YWxpZGF0ZV9vbmx5",
+            "GAMgASgIIhYKFFVwZGF0ZVRhZ0tleU1ldGFkYXRhIoYBChNEZWxldGVUYWdL",
+            "ZXlSZXF1ZXN0EkAKBG5hbWUYASABKAlCMuBBAvpBLAoqY2xvdWRyZXNvdXJj",
+            "ZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVGFnS2V5EhoKDXZhbGlkYXRlX29u",
+            "bHkYAiABKAhCA+BBARIRCgRldGFnGAMgASgJQgPgQQEiFgoURGVsZXRlVGFn",
+            "S2V5TWV0YWRhdGEqNAoHUHVycG9zZRIXChNQVVJQT1NFX1VOU1BFQ0lGSUVE",
+            "EAASEAoMR0NFX0ZJUkVXQUxMEAEy5AwKB1RhZ0tleXMSlgEKC0xpc3RUYWdL",
+            "ZXlzEjMuZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52My5MaXN0VGFn",
+            "S2V5c1JlcXVlc3QaNC5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYz",
+            "Lkxpc3RUYWdLZXlzUmVzcG9uc2UiHILT5JMCDRILL3YzL3RhZ0tleXPaQQZw",
+            "YXJlbnQSjAEKCUdldFRhZ0tleRIxLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1h",
+            "bmFnZXIudjMuR2V0VGFnS2V5UmVxdWVzdBonLmdvb2dsZS5jbG91ZC5yZXNv",
+            "dXJjZW1hbmFnZXIudjMuVGFnS2V5IiOC0+STAhYSFC92My97bmFtZT10YWdL",
+            "ZXlzLyp92kEEbmFtZRKiAQoTR2V0TmFtZXNwYWNlZFRhZ0tleRI7Lmdvb2ds",
+            "ZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuR2V0TmFtZXNwYWNlZFRhZ0tl",
+            "eVJlcXVlc3QaJy5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLlRh",
+            "Z0tleSIlgtPkkwIYEhYvdjMvdGFnS2V5cy9uYW1lc3BhY2Vk2kEEbmFtZRKs",
+            "AQoMQ3JlYXRlVGFnS2V5EjQuZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdl",
+            "ci52My5DcmVhdGVUYWdLZXlSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiJHgtPkkwIWIgsvdjMvdGFnS2V5czoHdGFnX2tledpBB3Rh",
+            "Z19rZXnKQR4KBlRhZ0tleRIUQ3JlYXRlVGFnS2V5TWV0YWRhdGESyQEKDFVw",
+            "ZGF0ZVRhZ0tleRI0Lmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMu",
+            "VXBkYXRlVGFnS2V5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24iZILT5JMCJzIcL3YzL3t0YWdfa2V5Lm5hbWU9dGFnS2V5cy8qfToH",
+            "dGFnX2tledpBE3RhZ19rZXksdXBkYXRlX21hc2vKQR4KBlRhZ0tleRIUVXBk",
+            "YXRlVGFnS2V5TWV0YWRhdGESqQEKDERlbGV0ZVRhZ0tleRI0Lmdvb2dsZS5j",
+            "bG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuRGVsZXRlVGFnS2V5UmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iRILT5JMCFioUL3YzL3tu",
+            "YW1lPXRhZ0tleXMvKn3aQQRuYW1lykEeCgZUYWdLZXkSFERlbGV0ZVRhZ0tl",
+            "eU1ldGFkYXRhEoYBCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdl",
+            "dElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSI7gtPk",
+            "kwIqIiUvdjMve3Jlc291cmNlPXRhZ0tleXMvKn06Z2V0SWFtUG9saWN5OgEq",
+            "2kEIcmVzb3VyY2USjQEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEu",
+            "U2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IkKC",
+            "0+STAioiJS92My97cmVzb3VyY2U9dGFnS2V5cy8qfTpzZXRJYW1Qb2xpY3k6",
+            "ASraQQ9yZXNvdXJjZSxwb2xpY3kSuAEKElRlc3RJYW1QZXJtaXNzaW9ucxIo",
+            "Lmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdv",
+            "b2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UiTYLT5JMC",
+            "MCIrL3YzL3tyZXNvdXJjZT10YWdLZXlzLyp9OnRlc3RJYW1QZXJtaXNzaW9u",
+            "czoBKtpBFHJlc291cmNlLHBlcm1pc3Npb25zGpABykEjY2xvdWRyZXNvdXJj",
+            "ZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb23SQWdodHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0ucmVhZC1vbmx5Qu0BCiNj",
+            "b20uZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52M0IMVGFnS2V5c1By",
+            "b3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vcmVzb3VyY2VtYW5hZ2VyL2Fw",
+            "aXYzL3Jlc291cmNlbWFuYWdlcnBiO3Jlc291cmNlbWFuYWdlcnBiqgIfR29v",
+            "Z2xlLkNsb3VkLlJlc291cmNlTWFuYWdlci5WM8oCH0dvb2dsZVxDbG91ZFxS",
+            "ZXNvdXJjZU1hbmFnZXJcVjPqAiJHb29nbGU6OkNsb3VkOjpSZXNvdXJjZU1h",
+            "bmFnZXI6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.TagKey), global::Google.Cloud.ResourceManager.V3.TagKey.Parser, new[]{ "Name", "Parent", "ShortName", "NamespacedName", "Description", "CreateTime", "UpdateTime", "Etag" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ResourceManager.V3.Purpose), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.TagKey), global::Google.Cloud.ResourceManager.V3.TagKey.Parser, new[]{ "Name", "Parent", "ShortName", "NamespacedName", "Description", "CreateTime", "UpdateTime", "Etag", "Purpose", "PurposeData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListTagKeysRequest), global::Google.Cloud.ResourceManager.V3.ListTagKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListTagKeysResponse), global::Google.Cloud.ResourceManager.V3.ListTagKeysResponse.Parser, new[]{ "TagKeys", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.GetTagKeyRequest), global::Google.Cloud.ResourceManager.V3.GetTagKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.GetNamespacedTagKeyRequest), global::Google.Cloud.ResourceManager.V3.GetNamespacedTagKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.CreateTagKeyRequest), global::Google.Cloud.ResourceManager.V3.CreateTagKeyRequest.Parser, new[]{ "TagKey", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.CreateTagKeyMetadata), global::Google.Cloud.ResourceManager.V3.CreateTagKeyMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.UpdateTagKeyRequest), global::Google.Cloud.ResourceManager.V3.UpdateTagKeyRequest.Parser, new[]{ "TagKey", "UpdateMask", "ValidateOnly" }, null, null, null, null),
@@ -113,6 +126,35 @@ namespace Google.Cloud.ResourceManager.V3 {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  ///
+  /// A purpose for each policy engine requiring such an integration. A single
+  /// policy engine may have multiple purposes defined, however a TagKey may only
+  /// specify a single purpose.
+  /// </summary>
+  public enum Purpose {
+    /// <summary>
+    /// Unspecified purpose.
+    /// </summary>
+    [pbr::OriginalName("PURPOSE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Purpose for Compute Engine firewalls.
+    /// A corresponding purpose_data should be set for the network the tag is
+    /// intended for. The key should be 'network' and the value should be in
+    /// either of these two formats:
+    /// -https://www.googleapis.com/compute/{compute_version}/projects/{project_id}/global/networks/{network_id}
+    /// -{project_id}/{network_name}
+    ///
+    /// Examples:
+    /// -https://www.googleapis.com/compute/staging_v1/projects/fail-closed-load-testing/global/networks/6992953698831725600
+    /// -fail-closed-load-testing/load-testing-network
+    /// </summary>
+    [pbr::OriginalName("GCE_FIREWALL")] GceFirewall = 1,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A TagKey, used to group a set of TagValues.
@@ -159,6 +201,8 @@ namespace Google.Cloud.ResourceManager.V3 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
+      purpose_ = other.purpose_;
+      purposeData_ = other.purposeData_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -205,8 +249,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ShortNameFieldNumber = 3;
     private string shortName_ = "";
     /// <summary>
-    /// Required. Immutable. The user friendly name for a TagKey. The short name should be
-    /// unique for TagKeys within the same tag namespace.
+    /// Required. Immutable. The user friendly name for a TagKey. The short name
+    /// should be unique for TagKeys within the same tag namespace.
     ///
     /// The short name must be 1-63 characters, beginning and ending with
     /// an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
@@ -240,7 +284,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// Optional. User-assigned description of the TagKey. Must not exceed 256 characters.
+    /// Optional. User-assigned description of the TagKey. Must not exceed 256
+    /// characters.
     ///
     /// Read-write.
     /// </summary>
@@ -287,8 +332,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Entity tag which users can pass to prevent race conditions. This field is
-    /// always set in server responses. See UpdateTagKeyRequest for details.
+    /// Optional. Entity tag which users can pass to prevent race conditions. This
+    /// field is always set in server responses. See UpdateTagKeyRequest for
+    /// details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -297,6 +343,44 @@ namespace Google.Cloud.ResourceManager.V3 {
       set {
         etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "purpose" field.</summary>
+    public const int PurposeFieldNumber = 11;
+    private global::Google.Cloud.ResourceManager.V3.Purpose purpose_ = global::Google.Cloud.ResourceManager.V3.Purpose.Unspecified;
+    /// <summary>
+    /// Optional. A purpose denotes that this Tag is intended for use in policies
+    /// of a specific policy engine, and will involve that policy engine in
+    /// management operations involving this Tag. A purpose does not grant a
+    /// policy engine exclusive rights to the Tag, and it may be referenced by
+    /// other policy engines.
+    ///
+    /// A purpose cannot be changed once set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ResourceManager.V3.Purpose Purpose {
+      get { return purpose_; }
+      set {
+        purpose_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "purpose_data" field.</summary>
+    public const int PurposeDataFieldNumber = 12;
+    private static readonly pbc::MapField<string, string>.Codec _map_purposeData_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 98);
+    private readonly pbc::MapField<string, string> purposeData_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Purpose data corresponds to the policy system that the tag is
+    /// intended for. See documentation for `Purpose` for formatting of this field.
+    ///
+    /// Purpose data cannot be changed once set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> PurposeData {
+      get { return purposeData_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -322,6 +406,8 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
+      if (Purpose != other.Purpose) return false;
+      if (!PurposeData.Equals(other.PurposeData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -337,6 +423,8 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (Purpose != global::Google.Cloud.ResourceManager.V3.Purpose.Unspecified) hash ^= Purpose.GetHashCode();
+      hash ^= PurposeData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -387,6 +475,11 @@ namespace Google.Cloud.ResourceManager.V3 {
         output.WriteRawTag(66);
         output.WriteString(Etag);
       }
+      if (Purpose != global::Google.Cloud.ResourceManager.V3.Purpose.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) Purpose);
+      }
+      purposeData_.WriteTo(output, _map_purposeData_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -429,6 +522,11 @@ namespace Google.Cloud.ResourceManager.V3 {
         output.WriteRawTag(66);
         output.WriteString(Etag);
       }
+      if (Purpose != global::Google.Cloud.ResourceManager.V3.Purpose.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) Purpose);
+      }
+      purposeData_.WriteTo(ref output, _map_purposeData_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -463,6 +561,10 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
+      if (Purpose != global::Google.Cloud.ResourceManager.V3.Purpose.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Purpose);
+      }
+      size += purposeData_.CalculateSize(_map_purposeData_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -505,6 +607,10 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
+      if (other.Purpose != global::Google.Cloud.ResourceManager.V3.Purpose.Unspecified) {
+        Purpose = other.Purpose;
+      }
+      purposeData_.Add(other.purposeData_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -558,6 +664,14 @@ namespace Google.Cloud.ResourceManager.V3 {
             Etag = input.ReadString();
             break;
           }
+          case 88: {
+            Purpose = (global::Google.Cloud.ResourceManager.V3.Purpose) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            purposeData_.AddEntriesFrom(input, _map_purposeData_codec);
+            break;
+          }
         }
       }
     #endif
@@ -609,6 +723,14 @@ namespace Google.Cloud.ResourceManager.V3 {
           }
           case 66: {
             Etag = input.ReadString();
+            break;
+          }
+          case 88: {
+            Purpose = (global::Google.Cloud.ResourceManager.V3.Purpose) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            purposeData_.AddEntriesFrom(ref input, _map_purposeData_codec);
             break;
           }
         }
@@ -687,9 +809,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of TagKeys to return in the response. The server allows
-    /// a maximum of 300 TagKeys to return. If unspecified, the server will use 100
-    /// as the default.
+    /// Optional. The maximum number of TagKeys to return in the response. The
+    /// server allows a maximum of 300 TagKeys to return. If unspecified, the
+    /// server will use 100 as the default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1319,6 +1441,204 @@ namespace Google.Cloud.ResourceManager.V3 {
   }
 
   /// <summary>
+  /// The request message for getting a TagKey by its namespaced name.
+  /// </summary>
+  public sealed partial class GetNamespacedTagKeyRequest : pb::IMessage<GetNamespacedTagKeyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetNamespacedTagKeyRequest> _parser = new pb::MessageParser<GetNamespacedTagKeyRequest>(() => new GetNamespacedTagKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetNamespacedTagKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetNamespacedTagKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetNamespacedTagKeyRequest(GetNamespacedTagKeyRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetNamespacedTagKeyRequest Clone() {
+      return new GetNamespacedTagKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. A namespaced tag key name in the format
+    /// `{parentId}/{tagKeyShort}`, such as `42/foo` for a key with short name
+    /// "foo" under the organization with ID 42 or `r2-d2/bar` for a key with short
+    /// name "bar" under the project `r2-d2`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetNamespacedTagKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetNamespacedTagKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetNamespacedTagKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The request message for creating a TagKey.
   /// </summary>
   public sealed partial class CreateTagKeyRequest : pb::IMessage<CreateTagKeyRequest>
@@ -1335,7 +1655,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1370,8 +1690,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int TagKeyFieldNumber = 1;
     private global::Google.Cloud.ResourceManager.V3.TagKey tagKey_;
     /// <summary>
-    /// Required. The TagKey to be created. Only fields `short_name`, `description`,
-    /// and `parent` are considered during the creation request.
+    /// Required. The TagKey to be created. Only fields `short_name`,
+    /// `description`, and `parent` are considered during the creation request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1386,8 +1706,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Set to true to perform validations necessary for creating the resource, but
-    /// not actually perform the action.
+    /// Optional. Set to true to perform validations necessary for creating the
+    /// resource, but not actually perform the action.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1581,7 +1901,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1736,7 +2056,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1772,10 +2092,10 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int TagKeyFieldNumber = 1;
     private global::Google.Cloud.ResourceManager.V3.TagKey tagKey_;
     /// <summary>
-    /// Required. The new definition of the TagKey. Only the `description` and `etag` fields
-    /// can be updated by this request. If the `etag` field is not empty, it
-    /// must match the `etag` field of the existing tag key. Otherwise,
-    /// `FAILED_PRECONDITION` will be returned.
+    /// Required. The new definition of the TagKey. Only the `description` and
+    /// `etag` fields can be updated by this request. If the `etag` field is not
+    /// empty, it must match the `etag` field of the existing tag key. Otherwise,
+    /// `ABORTED` will be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2035,7 +2355,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2190,7 +2510,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2226,9 +2546,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of a TagKey to be deleted in the format `tagKeys/123`.
-    /// The TagKey cannot be a parent of any existing TagValues or it will not be
-    /// deleted successfully.
+    /// Required. The resource name of a TagKey to be deleted in the format
+    /// `tagKeys/123`. The TagKey cannot be a parent of any existing TagValues or
+    /// it will not be deleted successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2243,8 +2563,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Set as true to perform validations necessary for deletion, but not actually
-    /// perform the action.
+    /// Optional. Set as true to perform validations necessary for deletion, but
+    /// not actually perform the action.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2259,8 +2579,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// Optional. The etag known to the client for the expected state of the TagKey. This is
-    /// to be used for optimistic concurrency.
+    /// Optional. The etag known to the client for the expected state of the
+    /// TagKey. This is to be used for optimistic concurrency.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2469,7 +2789,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagKeysReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

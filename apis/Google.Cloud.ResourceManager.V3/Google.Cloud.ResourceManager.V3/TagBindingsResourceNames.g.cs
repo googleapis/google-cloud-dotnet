@@ -253,4 +253,23 @@ namespace Google.Cloud.ResourceManager.V3
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class EffectiveTag
+    {
+        /// <summary>
+        /// <see cref="TagValueName"/>-typed view over the <see cref="TagValue"/> resource name property.
+        /// </summary>
+        public TagValueName TagValueAsTagValueName
+        {
+            get => string.IsNullOrEmpty(TagValue) ? null : TagValueName.Parse(TagValue, allowUnparsed: true);
+            set => TagValue = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="TagKeyName"/>-typed view over the <see cref="TagKey"/> resource name property.</summary>
+        public TagKeyName TagKeyAsTagKeyName
+        {
+            get => string.IsNullOrEmpty(TagKey) ? null : TagKeyName.Parse(TagKey, allowUnparsed: true);
+            set => TagKey = value?.ToString() ?? "";
+        }
+    }
 }

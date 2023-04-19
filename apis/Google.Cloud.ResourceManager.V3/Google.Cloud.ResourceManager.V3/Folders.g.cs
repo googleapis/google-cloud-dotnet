@@ -322,9 +322,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A checksum computed by the server based on the current value of the folder
-    /// resource. This may be sent on update and delete requests to ensure the
-    /// client has an up-to-date value before proceeding.
+    /// Output only. A checksum computed by the server based on the current value
+    /// of the folder resource. This may be sent on update and delete requests to
+    /// ensure the client has an up-to-date value before proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -939,9 +939,13 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the organization or folder whose folders are
-    /// being listed.
-    /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+    /// Required. The name of the parent resource whose folders are being listed.
+    /// Only children of this parent resource are listed; descendants are not
+    /// listed.
+    ///
+    /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+    /// parent is an organization, use the value `organizations/{org_id}`.
+    ///
     /// Access to this method is controlled by checking the
     /// `resourcemanager.folders.list` permission on the `parent`.
     /// </summary>
@@ -958,8 +962,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of folders to return in the response.
-    /// If unspecified, server picks an appropriate default.
+    /// Optional. The maximum number of folders to return in the response. The
+    /// server can return fewer folders than requested. If unspecified, server
+    /// picks an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1487,8 +1492,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageSizeFieldNumber = 1;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of folders to return in the response.
-    /// If unspecified, server picks an appropriate default.
+    /// Optional. The maximum number of folders to return in the response. The
+    /// server can return fewer folders than requested. If unspecified, server
+    /// picks an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1503,8 +1509,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to `SearchFolders`
-    /// that indicates from where search should continue.
+    /// Optional. A pagination token returned from a previous call to
+    /// `SearchFolders` that indicates from where search should continue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2018,8 +2024,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int FolderFieldNumber = 2;
     private global::Google.Cloud.ResourceManager.V3.Folder folder_;
     /// <summary>
-    /// Required. The folder being created, only the display name and parent will be
-    /// consulted. All other fields will be ignored.
+    /// Required. The folder being created, only the display name and parent will
+    /// be consulted. All other fields will be ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2467,8 +2473,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int FolderFieldNumber = 1;
     private global::Google.Cloud.ResourceManager.V3.Folder folder_;
     /// <summary>
-    /// Required. The new definition of the Folder. It must include the `name` field, which
-    /// cannot be changed.
+    /// Required. The new definition of the Folder. It must include the `name`
+    /// field, which cannot be changed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2894,9 +2900,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int DestinationParentFieldNumber = 2;
     private string destinationParent_ = "";
     /// <summary>
-    /// Required. The resource name of the folder or organization which should be the
-    /// folder's new parent.
-    /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+    /// Required. The resource name of the folder or organization which should be
+    /// the folder's new parent. Must be of the form `folders/{folder_id}` or
+    /// `organizations/{org_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
