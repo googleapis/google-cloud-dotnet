@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.4.0, released 2023-04-19
+
+### New features
+
+- Add PeeredNetworkIpRange to NetworkConfigs message ([commit dcab5a1](https://github.com/googleapis/google-cloud-dotnet/commit/dcab5a1f3b313f883978d151f09bcf9a3fc0dbca))
+- Add NpmPackages to Artifact and Results messages and new SHA512 hash type ([commit dcab5a1](https://github.com/googleapis/google-cloud-dotnet/commit/dcab5a1f3b313f883978d151f09bcf9a3fc0dbca))
+- Update third party clodubuild.proto library to include git_source ([commit 6c369f5](https://github.com/googleapis/google-cloud-dotnet/commit/6c369f5baaab5af66addcde14d7cf4483a8d4709))
+
+### Documentation improvements
+
+- Various doc updates ([commit dcab5a1](https://github.com/googleapis/google-cloud-dotnet/commit/dcab5a1f3b313f883978d151f09bcf9a3fc0dbca))
+
 ## Version 2.3.0, released 2023-03-20
 
 ### New features
