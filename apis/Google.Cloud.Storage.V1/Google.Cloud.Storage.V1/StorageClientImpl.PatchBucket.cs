@@ -40,6 +40,8 @@ namespace Google.Cloud.Storage.V1
             ValidateBucket(bucket, nameof(bucket));
             var request = Service.Buckets.Patch(bucket, bucket.Name);
             options?.ModifyRequest(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfMetagenerationMatch);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

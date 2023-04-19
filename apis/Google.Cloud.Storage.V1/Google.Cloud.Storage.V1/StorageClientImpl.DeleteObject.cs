@@ -64,6 +64,10 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(name, nameof(name));
             var request = Service.Objects.Delete(bucket, name);
             options?.ModifyRequest(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? (options?.IfGenerationMatch is null && options?.Generation is null
+                ? RetryOptions.Never
+                : RetryOptions.IdempotentRetryOptions);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

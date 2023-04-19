@@ -63,6 +63,11 @@ namespace Google.Cloud.Storage.V1
         /// </remarks>
         public bool? DeleteObjects { get; set; }
 
+        /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
         internal void ModifyRequest(BucketsResource.DeleteRequest request)
         {
             if (IfMetagenerationMatch != null && IfMetagenerationNotMatch != null)

@@ -42,17 +42,6 @@ namespace Google.Cloud.Storage.V1
         private RetryHandler(RetryOptions retryOptions, IScheduler scheduler) =>
             (_retryOptions, _scheduler) = (retryOptions, scheduler);
 
-        // TODO: Will remove it once the implementation across all APIs is complete
-        internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request)
-        {
-            RetryHandler retryHandler = new RetryHandler(RetryOptions.IdempotentRetryOptions, SystemScheduler.Instance);
-
-            // Note: we can't use ModifyRequest, as the x-goog-api-client header is added later by ConfigurableMessageHandler.
-            // Additionally, that's only called once, and we may want to record the attempt number as well.
-            request.AddExecuteInterceptor(InvocationIdInterceptor.Instance);
-            request.AddUnsuccessfulResponseHandler(retryHandler);
-        }
-
         /// <summary>
         /// It marks the request as retriable with the retry options as provided.
         /// In case null retry options or Never is passed, retry will not happen in case of failure.

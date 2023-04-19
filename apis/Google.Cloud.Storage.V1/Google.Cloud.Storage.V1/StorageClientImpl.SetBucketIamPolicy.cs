@@ -36,10 +36,8 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(policy, nameof(policy));
             var request = Service.Buckets.SetIamPolicy(policy, bucket);
             options?.ModifyRequest(request);
-            if (policy.ETag is not null)
-            {
-                RetryHandler.MarkAsRetriable(request);
-            }
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(policy?.ETag);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

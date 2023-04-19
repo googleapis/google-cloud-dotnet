@@ -48,7 +48,7 @@ namespace Google.Cloud.Storage.V1
         public string UserProject { get; set; }
 
         /// <summary>
-        /// Options to pass custom retry configuration for each API request
+        /// Options to pass custom retry configuration for each API request.
         /// </summary>
         public RetryOptions RetryOptions { get; set; }  
 

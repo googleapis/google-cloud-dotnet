@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -44,7 +44,8 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckArgument(permissionsList.Count != 0, nameof(permissions), "List of permissions to test must not be empty");
             var request = Service.Buckets.TestIamPermissions(bucket, new Repeatable<string>(permissionsList));
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

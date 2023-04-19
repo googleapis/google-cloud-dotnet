@@ -39,6 +39,8 @@ namespace Google.Cloud.Storage.V1
             ValidateBucket(bucket, nameof(bucket));
             var request = Service.Buckets.Update(bucket, bucket.Name);
             options?.ModifyRequest(request, bucket);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfMetagenerationMatch);
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }
