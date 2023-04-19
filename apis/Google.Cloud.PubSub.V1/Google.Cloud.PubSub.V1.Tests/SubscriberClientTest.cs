@@ -1518,8 +1518,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             });
         }
 
-        [Fact]
-        public void ExactlyOnceDelivery_ReceiptModAck_MixedFault()
+        [Theory, CombinatorialData]
+        public void ExactlyOnceDelivery_ReceiptModAck_MixedFault([CombinatorialValues(true, false)] bool succeedOnRetry)
         {
             var msgs = new[]
             {
@@ -1534,7 +1534,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             var exception = GetExactlyOnceDeliveryMixedException();
             // We have both temporary and permanent failures.
             // Temporary failure in extend request should be retried.
-            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: 2);
+            // Based on succeedOnRetry parameter, message 2 should either succeed or fail. 
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 2 : 10);
 
             using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
 
@@ -1551,8 +1552,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(100), CancellationToken.None));
                 await fake.TaskHelper.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
                 // Permanently failed receipt ModAcks won't be passed to the user handler, so 3 is not handled.
-                // We have simulated the scenario that temporary failed ModAck (message 2) becomes successful after 1 retry and hence is handled.
-                Assert.Equal(new[] { "1", "2", "4" }, handledMsgs);
+                // Temporary failed ModAck for message 2 becomes successful or permanent failure based on succeedOnRetry flag.
+                Assert.Equal(succeedOnRetry ? new[] { "1", "2", "4" } : new[] { "1", "4" }, handledMsgs);
             });
         }
 
@@ -1633,7 +1634,8 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             var exception = GetExactlyOnceDeliveryMixedException(ackError);
 
-            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 4 : 400); // 400 is a large arbitrary number to ensure that the retry is not successful.
+            // 400 is a large arbitrary number to ensure that the retry is not successful.
+            var ackModifyAckDeadlineAction = AckModifyAckDeadlineAction.BadExtend(exception, numberOfFailures: succeedOnRetry ? 4 : 400);
 
             using var fake = Fake.Create(new[] { msgs }, useMsgAsId: true, ackModifyAckDeadlineAction: ackModifyAckDeadlineAction, isExactlyOnceDelivery: true);
 
