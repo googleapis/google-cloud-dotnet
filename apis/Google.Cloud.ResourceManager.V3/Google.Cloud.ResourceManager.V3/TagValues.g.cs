@@ -46,58 +46,64 @@ namespace Google.Cloud.ResourceManager.V3 {
             "bGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLlRhZ1ZhbHVlEhcKD25leHRf",
             "cGFnZV90b2tlbhgCIAEoCSJYChJHZXRUYWdWYWx1ZVJlcXVlc3QSQgoEbmFt",
             "ZRgBIAEoCUI04EEC+kEuCixjbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVh",
-            "cGlzLmNvbS9UYWdWYWx1ZSJ2ChVDcmVhdGVUYWdWYWx1ZVJlcXVlc3QSQQoJ",
-            "dGFnX3ZhbHVlGAEgASgLMikuZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdl",
-            "ci52My5UYWdWYWx1ZUID4EECEhoKDXZhbGlkYXRlX29ubHkYAiABKAhCA+BB",
-            "ASIYChZDcmVhdGVUYWdWYWx1ZU1ldGFkYXRhIqwBChVVcGRhdGVUYWdWYWx1",
-            "ZVJlcXVlc3QSQQoJdGFnX3ZhbHVlGAEgASgLMikuZ29vZ2xlLmNsb3VkLnJl",
-            "c291cmNlbWFuYWdlci52My5UYWdWYWx1ZUID4EECEjQKC3VwZGF0ZV9tYXNr",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBEhoKDXZh",
-            "bGlkYXRlX29ubHkYAyABKAhCA+BBASIYChZVcGRhdGVUYWdWYWx1ZU1ldGFk",
-            "YXRhIooBChVEZWxldGVUYWdWYWx1ZVJlcXVlc3QSQgoEbmFtZRgBIAEoCUI0",
-            "4EEC+kEuCixjbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9U",
-            "YWdWYWx1ZRIaCg12YWxpZGF0ZV9vbmx5GAIgASgIQgPgQQESEQoEZXRhZxgD",
-            "IAEoCUID4EEBIhgKFkRlbGV0ZVRhZ1ZhbHVlTWV0YWRhdGEy/wsKCVRhZ1Zh",
-            "bHVlcxKeAQoNTGlzdFRhZ1ZhbHVlcxI1Lmdvb2dsZS5jbG91ZC5yZXNvdXJj",
-            "ZW1hbmFnZXIudjMuTGlzdFRhZ1ZhbHVlc1JlcXVlc3QaNi5nb29nbGUuY2xv",
-            "dWQucmVzb3VyY2VtYW5hZ2VyLnYzLkxpc3RUYWdWYWx1ZXNSZXNwb25zZSIe",
-            "gtPkkwIPEg0vdjMvdGFnVmFsdWVz2kEGcGFyZW50EpQBCgtHZXRUYWdWYWx1",
-            "ZRIzLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuR2V0VGFnVmFs",
-            "dWVSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52My5U",
-            "YWdWYWx1ZSIlgtPkkwIYEhYvdjMve25hbWU9dGFnVmFsdWVzLyp92kEEbmFt",
-            "ZRK6AQoOQ3JlYXRlVGFnVmFsdWUSNi5nb29nbGUuY2xvdWQucmVzb3VyY2Vt",
-            "YW5hZ2VyLnYzLkNyZWF0ZVRhZ1ZhbHVlUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24iUYLT5JMCGiINL3YzL3RhZ1ZhbHVlczoJdGFn",
-            "X3ZhbHVl2kEJdGFnX3ZhbHVlykEiCghUYWdWYWx1ZRIWQ3JlYXRlVGFnVmFs",
-            "dWVNZXRhZGF0YRLZAQoOVXBkYXRlVGFnVmFsdWUSNi5nb29nbGUuY2xvdWQu",
-            "cmVzb3VyY2VtYW5hZ2VyLnYzLlVwZGF0ZVRhZ1ZhbHVlUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icILT5JMCLTIgL3YzL3t0YWdf",
-            "dmFsdWUubmFtZT10YWdWYWx1ZXMvKn06CXRhZ192YWx1ZdpBFXRhZ192YWx1",
-            "ZSx1cGRhdGVfbWFza8pBIgoIVGFnVmFsdWUSFlVwZGF0ZVRhZ1ZhbHVlTWV0",
-            "YWRhdGESswEKDkRlbGV0ZVRhZ1ZhbHVlEjYuZ29vZ2xlLmNsb3VkLnJlc291",
-            "cmNlbWFuYWdlci52My5EZWxldGVUYWdWYWx1ZVJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIkqC0+STAhgqFi92My97bmFtZT10YWdW",
-            "YWx1ZXMvKn3aQQRuYW1lykEiCghUYWdWYWx1ZRIWRGVsZXRlVGFnVmFsdWVN",
-            "ZXRhZGF0YRKIAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJ",
-            "YW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiPYLT5JMC",
-            "LCInL3YzL3tyZXNvdXJjZT10YWdWYWx1ZXMvKn06Z2V0SWFtUG9saWN5OgEq",
-            "2kEIcmVzb3VyY2USjwEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEu",
-            "U2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IkSC",
-            "0+STAiwiJy92My97cmVzb3VyY2U9dGFnVmFsdWVzLyp9OnNldElhbVBvbGlj",
-            "eToBKtpBD3Jlc291cmNlLHBvbGljeRK6AQoSVGVzdElhbVBlcm1pc3Npb25z",
-            "EiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0Giku",
-            "Z29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSJPgtPk",
-            "kwIyIi0vdjMve3Jlc291cmNlPXRhZ1ZhbHVlcy8qfTp0ZXN0SWFtUGVybWlz",
-            "c2lvbnM6ASraQRRyZXNvdXJjZSxwZXJtaXNzaW9ucxqQAcpBI2Nsb3VkcmVz",
-            "b3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29t0kFnaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seULv",
-            "AQojY29tLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjNCDlRhZ1Zh",
-            "bHVlc1Byb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vcmVzb3VyY2VtYW5h",
-            "Z2VyL2FwaXYzL3Jlc291cmNlbWFuYWdlcnBiO3Jlc291cmNlbWFuYWdlcnBi",
-            "qgIfR29vZ2xlLkNsb3VkLlJlc291cmNlTWFuYWdlci5WM8oCH0dvb2dsZVxD",
-            "bG91ZFxSZXNvdXJjZU1hbmFnZXJcVjPqAiJHb29nbGU6OkNsb3VkOjpSZXNv",
-            "dXJjZU1hbmFnZXI6OlYzYgZwcm90bzM="));
+            "cGlzLmNvbS9UYWdWYWx1ZSJiChxHZXROYW1lc3BhY2VkVGFnVmFsdWVSZXF1",
+            "ZXN0EkIKBG5hbWUYASABKAlCNOBBAvpBLgosY2xvdWRyZXNvdXJjZW1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vVGFnVmFsdWUidgoVQ3JlYXRlVGFnVmFsdWVS",
+            "ZXF1ZXN0EkEKCXRhZ192YWx1ZRgBIAEoCzIpLmdvb2dsZS5jbG91ZC5yZXNv",
+            "dXJjZW1hbmFnZXIudjMuVGFnVmFsdWVCA+BBAhIaCg12YWxpZGF0ZV9vbmx5",
+            "GAIgASgIQgPgQQEiGAoWQ3JlYXRlVGFnVmFsdWVNZXRhZGF0YSKsAQoVVXBk",
+            "YXRlVGFnVmFsdWVSZXF1ZXN0EkEKCXRhZ192YWx1ZRgBIAEoCzIpLmdvb2ds",
+            "ZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuVGFnVmFsdWVCA+BBAhI0Cgt1",
+            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC",
+            "A+BBARIaCg12YWxpZGF0ZV9vbmx5GAMgASgIQgPgQQEiGAoWVXBkYXRlVGFn",
+            "VmFsdWVNZXRhZGF0YSKKAQoVRGVsZXRlVGFnVmFsdWVSZXF1ZXN0EkIKBG5h",
+            "bWUYASABKAlCNOBBAvpBLgosY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xl",
+            "YXBpcy5jb20vVGFnVmFsdWUSGgoNdmFsaWRhdGVfb25seRgCIAEoCEID4EEB",
+            "EhEKBGV0YWcYAyABKAlCA+BBASIYChZEZWxldGVUYWdWYWx1ZU1ldGFkYXRh",
+            "MqwNCglUYWdWYWx1ZXMSngEKDUxpc3RUYWdWYWx1ZXMSNS5nb29nbGUuY2xv",
+            "dWQucmVzb3VyY2VtYW5hZ2VyLnYzLkxpc3RUYWdWYWx1ZXNSZXF1ZXN0GjYu",
+            "Z29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52My5MaXN0VGFnVmFsdWVz",
+            "UmVzcG9uc2UiHoLT5JMCDxINL3YzL3RhZ1ZhbHVlc9pBBnBhcmVudBKUAQoL",
+            "R2V0VGFnVmFsdWUSMy5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYz",
+            "LkdldFRhZ1ZhbHVlUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1h",
+            "bmFnZXIudjMuVGFnVmFsdWUiJYLT5JMCGBIWL3YzL3tuYW1lPXRhZ1ZhbHVl",
+            "cy8qfdpBBG5hbWUSqgEKFUdldE5hbWVzcGFjZWRUYWdWYWx1ZRI9Lmdvb2ds",
+            "ZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuR2V0TmFtZXNwYWNlZFRhZ1Zh",
+            "bHVlUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMu",
+            "VGFnVmFsdWUiJ4LT5JMCGhIYL3YzL3RhZ1ZhbHVlcy9uYW1lc3BhY2Vk2kEE",
+            "bmFtZRK6AQoOQ3JlYXRlVGFnVmFsdWUSNi5nb29nbGUuY2xvdWQucmVzb3Vy",
+            "Y2VtYW5hZ2VyLnYzLkNyZWF0ZVRhZ1ZhbHVlUmVxdWVzdBodLmdvb2dsZS5s",
+            "b25ncnVubmluZy5PcGVyYXRpb24iUYLT5JMCGiINL3YzL3RhZ1ZhbHVlczoJ",
+            "dGFnX3ZhbHVl2kEJdGFnX3ZhbHVlykEiCghUYWdWYWx1ZRIWQ3JlYXRlVGFn",
+            "VmFsdWVNZXRhZGF0YRLZAQoOVXBkYXRlVGFnVmFsdWUSNi5nb29nbGUuY2xv",
+            "dWQucmVzb3VyY2VtYW5hZ2VyLnYzLlVwZGF0ZVRhZ1ZhbHVlUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icILT5JMCLTIgL3YzL3t0",
+            "YWdfdmFsdWUubmFtZT10YWdWYWx1ZXMvKn06CXRhZ192YWx1ZdpBFXRhZ192",
+            "YWx1ZSx1cGRhdGVfbWFza8pBIgoIVGFnVmFsdWUSFlVwZGF0ZVRhZ1ZhbHVl",
+            "TWV0YWRhdGESswEKDkRlbGV0ZVRhZ1ZhbHVlEjYuZ29vZ2xlLmNsb3VkLnJl",
+            "c291cmNlbWFuYWdlci52My5EZWxldGVUYWdWYWx1ZVJlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIkqC0+STAhgqFi92My97bmFtZT10",
+            "YWdWYWx1ZXMvKn3aQQRuYW1lykEiCghUYWdWYWx1ZRIWRGVsZXRlVGFnVmFs",
+            "dWVNZXRhZGF0YRKIAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5H",
+            "ZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiPYLT",
+            "5JMCLCInL3YzL3tyZXNvdXJjZT10YWdWYWx1ZXMvKn06Z2V0SWFtUG9saWN5",
+            "OgEq2kEIcmVzb3VyY2USjwEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0u",
+            "djEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5",
+            "IkSC0+STAiwiJy92My97cmVzb3VyY2U9dGFnVmFsdWVzLyp9OnNldElhbVBv",
+            "bGljeToBKtpBD3Jlc291cmNlLHBvbGljeRK6AQoSVGVzdElhbVBlcm1pc3Np",
+            "b25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0",
+            "GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSJP",
+            "gtPkkwIyIi0vdjMve3Jlc291cmNlPXRhZ1ZhbHVlcy8qfTp0ZXN0SWFtUGVy",
+            "bWlzc2lvbnM6ASraQRRyZXNvdXJjZSxwZXJtaXNzaW9ucxqQAcpBI2Nsb3Vk",
+            "cmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29t0kFnaHR0cHM6Ly93d3cu",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25s",
+            "eULvAQojY29tLmdvb2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjNCDlRh",
+            "Z1ZhbHVlc1Byb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vcmVzb3VyY2Vt",
+            "YW5hZ2VyL2FwaXYzL3Jlc291cmNlbWFuYWdlcnBiO3Jlc291cmNlbWFuYWdl",
+            "cnBiqgIfR29vZ2xlLkNsb3VkLlJlc291cmNlTWFuYWdlci5WM8oCH0dvb2ds",
+            "ZVxDbG91ZFxSZXNvdXJjZU1hbmFnZXJcVjPqAiJHb29nbGU6OkNsb3VkOjpS",
+            "ZXNvdXJjZU1hbmFnZXI6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -105,6 +111,7 @@ namespace Google.Cloud.ResourceManager.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListTagValuesRequest), global::Google.Cloud.ResourceManager.V3.ListTagValuesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListTagValuesResponse), global::Google.Cloud.ResourceManager.V3.ListTagValuesResponse.Parser, new[]{ "TagValues", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.GetTagValueRequest), global::Google.Cloud.ResourceManager.V3.GetTagValueRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest), global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.CreateTagValueRequest), global::Google.Cloud.ResourceManager.V3.CreateTagValueRequest.Parser, new[]{ "TagValue", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.CreateTagValueMetadata), global::Google.Cloud.ResourceManager.V3.CreateTagValueMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.UpdateTagValueRequest), global::Google.Cloud.ResourceManager.V3.UpdateTagValueRequest.Parser, new[]{ "TagValue", "UpdateMask", "ValidateOnly" }, null, null, null, null),
@@ -207,8 +214,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ShortNameFieldNumber = 3;
     private string shortName_ = "";
     /// <summary>
-    /// Required. Immutable. User-assigned short name for TagValue. The short name should be
-    /// unique for TagValues within the same parent TagKey.
+    /// Required. Immutable. User-assigned short name for TagValue. The short name
+    /// should be unique for TagValues within the same parent TagKey.
     ///
     /// The short name must be 63 characters or less, beginning and ending with
     /// an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
@@ -227,8 +234,10 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NamespacedNameFieldNumber = 4;
     private string namespacedName_ = "";
     /// <summary>
-    /// Output only. Namespaced name of the TagValue. Must be in the format
-    /// `{organization_id}/{tag_key_short_name}/{short_name}`.
+    /// Output only. Namespaced name of the TagValue. Now only supported in the
+    /// format
+    /// `{organization_id}/{tag_key_short_name}/{short_name}`. Other
+    /// formats will be supported when we add non-org parented tags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -291,8 +300,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Entity tag which users can pass to prevent race conditions. This field is
-    /// always set in server responses. See UpdateTagValueRequest for details.
+    /// Optional. Entity tag which users can pass to prevent race conditions. This
+    /// field is always set in server responses. See UpdateTagValueRequest for
+    /// details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -624,6 +634,8 @@ namespace Google.Cloud.ResourceManager.V3 {
 
   /// <summary>
   /// The request message for listing TagValues for the specified TagKey.
+  /// Resource name for TagKey, parent of the TagValues to be listed,
+  /// in the format `tagKeys/123`.
   /// </summary>
   public sealed partial class ListTagValuesRequest : pb::IMessage<ListTagValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -675,8 +687,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name for TagKey, parent of the TagValues to be listed,
-    /// in the format `tagKeys/123`.
+    /// Required.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -691,9 +702,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of TagValues to return in the response. The server
-    /// allows a maximum of 300 TagValues to return. If unspecified, the server
-    /// will use 100 as the default.
+    /// Optional. The maximum number of TagValues to return in the response. The
+    /// server allows a maximum of 300 TagValues to return. If unspecified, the
+    /// server will use 100 as the default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -708,8 +719,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to `ListTagValues`
-    /// that indicates where this listing should continue from.
+    /// Optional. A pagination token returned from a previous call to
+    /// `ListTagValues` that indicates where this listing should continue from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1179,7 +1190,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Resource name for TagValue to be fetched in the format `tagValues/456`.
+    /// Required. Resource name for TagValue to be fetched in the format
+    /// `tagValues/456`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1324,6 +1336,209 @@ namespace Google.Cloud.ResourceManager.V3 {
   }
 
   /// <summary>
+  /// The request message for getting a TagValue by its namespaced name.
+  /// </summary>
+  public sealed partial class GetNamespacedTagValueRequest : pb::IMessage<GetNamespacedTagValueRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetNamespacedTagValueRequest> _parser = new pb::MessageParser<GetNamespacedTagValueRequest>(() => new GetNamespacedTagValueRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetNamespacedTagValueRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetNamespacedTagValueRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetNamespacedTagValueRequest(GetNamespacedTagValueRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetNamespacedTagValueRequest Clone() {
+      return new GetNamespacedTagValueRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. A namespaced tag value name in the following format:
+    ///
+    ///   `{parentId}/{tagKeyShort}/{tagValueShort}`
+    ///
+    /// Examples:
+    /// - `42/foo/abc` for a value with short name "abc" under the key with short
+    ///   name "foo" under the organization with ID 42
+    /// - `r2-d2/bar/xyz` for a value with short name "xyz" under the key with
+    ///    short name "bar" under the project with ID "r2-d2"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetNamespacedTagValueRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetNamespacedTagValueRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetNamespacedTagValueRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The request message for creating a TagValue.
   /// </summary>
   public sealed partial class CreateTagValueRequest : pb::IMessage<CreateTagValueRequest>
@@ -1340,7 +1555,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1375,8 +1590,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int TagValueFieldNumber = 1;
     private global::Google.Cloud.ResourceManager.V3.TagValue tagValue_;
     /// <summary>
-    /// Required. The TagValue to be created. Only fields `short_name`, `description`,
-    /// and `parent` are considered during the creation request.
+    /// Required. The TagValue to be created. Only fields `short_name`,
+    /// `description`, and `parent` are considered during the creation request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1391,8 +1606,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Set as true to perform the validations necessary for creating the resource,
-    /// but not actually perform the action.
+    /// Optional. Set as true to perform the validations necessary for creating the
+    /// resource, but not actually perform the action.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1586,7 +1801,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1741,7 +1956,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1777,10 +1992,10 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int TagValueFieldNumber = 1;
     private global::Google.Cloud.ResourceManager.V3.TagValue tagValue_;
     /// <summary>
-    /// Required. The new definition of the TagValue. Only fields `description` and `etag`
-    /// fields can be updated by this request. If the `etag` field is nonempty, it
-    /// must match the `etag` field of the existing ControlGroup. Otherwise,
-    /// `FAILED_PRECONDITION` will be returned.
+    /// Required. The new definition of the TagValue. Only fields `description` and
+    /// `etag` fields can be updated by this request. If the `etag` field is
+    /// nonempty, it must match the `etag` field of the existing ControlGroup.
+    /// Otherwise, `ABORTED` will be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1810,8 +2025,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ValidateOnlyFieldNumber = 3;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. True to perform validations necessary for updating the resource, but not
-    /// actually perform the action.
+    /// Optional. True to perform validations necessary for updating the resource,
+    /// but not actually perform the action.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2038,7 +2253,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2193,7 +2408,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2229,7 +2444,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Resource name for TagValue to be deleted in the format tagValues/456.
+    /// Required. Resource name for TagValue to be deleted in the format
+    /// tagValues/456.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2244,8 +2460,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Set as true to perform the validations necessary for deletion, but not
-    /// actually perform the action.
+    /// Optional. Set as true to perform the validations necessary for deletion,
+    /// but not actually perform the action.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2260,8 +2476,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// Optional. The etag known to the client for the expected state of the TagValue. This
-    /// is to be used for optimistic concurrency.
+    /// Optional. The etag known to the client for the expected state of the
+    /// TagValue. This is to be used for optimistic concurrency.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2470,7 +2686,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.ResourceManager.V3.TagValuesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

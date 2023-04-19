@@ -250,6 +250,18 @@ namespace Google.Cloud.ResourceManager.V3
         }
     }
 
+    public partial class GetNamespacedTagKeyRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::TagKeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::TagKeyName TagKeyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::TagKeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteTagKeyRequest
     {
         /// <summary>

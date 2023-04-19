@@ -303,9 +303,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -319,9 +319,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -335,9 +335,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -348,9 +348,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -364,9 +364,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -380,9 +380,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -429,8 +429,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `resourcemanager.organizations.get`
         /// </summary>
         /// <param name="query">
-        /// Optional. An optional query string used to filter the Organizations to return in
-        /// the response. Query rules are case-insensitive.
+        /// Optional. An optional query string used to filter the Organizations to
+        /// return in the response. Query rules are case-insensitive.
+        /// 
         /// 
         /// ```
         /// | Field            | Description                                |
@@ -476,8 +477,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `resourcemanager.organizations.get`
         /// </summary>
         /// <param name="query">
-        /// Optional. An optional query string used to filter the Organizations to return in
-        /// the response. Query rules are case-insensitive.
+        /// Optional. An optional query string used to filter the Organizations to
+        /// return in the response. Query rules are case-insensitive.
+        /// 
         /// 
         /// ```
         /// | Field            | Description                                |

@@ -29,53 +29,72 @@ namespace Google.Cloud.ResourceManager.V3 {
             "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQu",
             "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2ds",
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVy",
-            "YXRpb25zLnByb3RvIpIBCgpUYWdCaW5kaW5nEhEKBG5hbWUYASABKAlCA+BB",
-            "AxIOCgZwYXJlbnQYAiABKAkSEQoJdGFnX3ZhbHVlGAMgASgJOk7qQUsKLmNs",
-            "b3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RhZ0JpbmRpbmcS",
-            "GXRhZ0JpbmRpbmdzL3t0YWdfYmluZGluZ30iGgoYQ3JlYXRlVGFnQmluZGlu",
-            "Z01ldGFkYXRhInwKF0NyZWF0ZVRhZ0JpbmRpbmdSZXF1ZXN0EkUKC3RhZ19i",
-            "aW5kaW5nGAEgASgLMisuZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52",
-            "My5UYWdCaW5kaW5nQgPgQQISGgoNdmFsaWRhdGVfb25seRgCIAEoCEID4EEB",
-            "IhoKGERlbGV0ZVRhZ0JpbmRpbmdNZXRhZGF0YSJfChdEZWxldGVUYWdCaW5k",
-            "aW5nUmVxdWVzdBJECgRuYW1lGAEgASgJQjbgQQL6QTAKLmNsb3VkcmVzb3Vy",
-            "Y2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RhZ0JpbmRpbmciZAoWTGlzdFRh",
-            "Z0JpbmRpbmdzUmVxdWVzdBIZCgZwYXJlbnQYASABKAlCCeBBAvpBAxIBKhIW",
-            "CglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPg",
-            "QQEidQoXTGlzdFRhZ0JpbmRpbmdzUmVzcG9uc2USQQoMdGFnX2JpbmRpbmdz",
-            "GAEgAygLMisuZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52My5UYWdC",
-            "aW5kaW5nEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTLgBQoLVGFnQmluZGlu",
-            "Z3MSpgEKD0xpc3RUYWdCaW5kaW5ncxI3Lmdvb2dsZS5jbG91ZC5yZXNvdXJj",
-            "ZW1hbmFnZXIudjMuTGlzdFRhZ0JpbmRpbmdzUmVxdWVzdBo4Lmdvb2dsZS5j",
-            "bG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuTGlzdFRhZ0JpbmRpbmdzUmVzcG9u",
-            "c2UiIILT5JMCERIPL3YzL3RhZ0JpbmRpbmdz2kEGcGFyZW50EsgBChBDcmVh",
-            "dGVUYWdCaW5kaW5nEjguZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFuYWdlci52",
-            "My5DcmVhdGVUYWdCaW5kaW5nUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
-            "Zy5PcGVyYXRpb24iW4LT5JMCHiIPL3YzL3RhZ0JpbmRpbmdzOgt0YWdfYmlu",
-            "ZGluZ9pBC3RhZ19iaW5kaW5nykEmCgpUYWdCaW5kaW5nEhhDcmVhdGVUYWdC",
-            "aW5kaW5nTWV0YWRhdGESyQEKEERlbGV0ZVRhZ0JpbmRpbmcSOC5nb29nbGUu",
-            "Y2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLkRlbGV0ZVRhZ0JpbmRpbmdSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJcgtPkkwIbKhkv",
-            "djMve25hbWU9dGFnQmluZGluZ3MvKip92kEEbmFtZcpBMQoVZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5EhhEZWxldGVUYWdCaW5kaW5nTWV0YWRhdGEakAHKQSNj",
-            "bG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbdJBZ2h0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5yZWFk",
-            "LW9ubHlC8QEKI2NvbS5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYz",
-            "QhBUYWdCaW5kaW5nc1Byb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vcmVz",
-            "b3VyY2VtYW5hZ2VyL2FwaXYzL3Jlc291cmNlbWFuYWdlcnBiO3Jlc291cmNl",
-            "bWFuYWdlcnBiqgIfR29vZ2xlLkNsb3VkLlJlc291cmNlTWFuYWdlci5WM8oC",
-            "H0dvb2dsZVxDbG91ZFxSZXNvdXJjZU1hbmFnZXJcVjPqAiJHb29nbGU6OkNs",
-            "b3VkOjpSZXNvdXJjZU1hbmFnZXI6OlYzYgZwcm90bzM="));
+            "YXRpb25zLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8itQEK",
+            "ClRhZ0JpbmRpbmcSEQoEbmFtZRgBIAEoCUID4EEDEg4KBnBhcmVudBgCIAEo",
+            "CRIRCgl0YWdfdmFsdWUYAyABKAkSIQoZdGFnX3ZhbHVlX25hbWVzcGFjZWRf",
+            "bmFtZRgEIAEoCTpO6kFLCi5jbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVh",
+            "cGlzLmNvbS9UYWdCaW5kaW5nEhl0YWdCaW5kaW5ncy97dGFnX2JpbmRpbmd9",
+            "IhoKGENyZWF0ZVRhZ0JpbmRpbmdNZXRhZGF0YSJ8ChdDcmVhdGVUYWdCaW5k",
+            "aW5nUmVxdWVzdBJFCgt0YWdfYmluZGluZxgBIAEoCzIrLmdvb2dsZS5jbG91",
+            "ZC5yZXNvdXJjZW1hbmFnZXIudjMuVGFnQmluZGluZ0ID4EECEhoKDXZhbGlk",
+            "YXRlX29ubHkYAiABKAhCA+BBASIaChhEZWxldGVUYWdCaW5kaW5nTWV0YWRh",
+            "dGEiXwoXRGVsZXRlVGFnQmluZGluZ1JlcXVlc3QSRAoEbmFtZRgBIAEoCUI2",
+            "4EEC+kEwCi5jbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9U",
+            "YWdCaW5kaW5nImQKFkxpc3RUYWdCaW5kaW5nc1JlcXVlc3QSGQoGcGFyZW50",
+            "GAEgASgJQgngQQL6QQMSASoSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoK",
+            "cGFnZV90b2tlbhgDIAEoCUID4EEBInUKF0xpc3RUYWdCaW5kaW5nc1Jlc3Bv",
+            "bnNlEkEKDHRhZ19iaW5kaW5ncxgBIAMoCzIrLmdvb2dsZS5jbG91ZC5yZXNv",
+            "dXJjZW1hbmFnZXIudjMuVGFnQmluZGluZxIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkiYAoYTGlzdEVmZmVjdGl2ZVRhZ3NSZXF1ZXN0EhMKBnBhcmVudBgB",
+            "IAEoCUID4EECEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9r",
+            "ZW4YAyABKAlCA+BBASJ7ChlMaXN0RWZmZWN0aXZlVGFnc1Jlc3BvbnNlEkUK",
+            "DmVmZmVjdGl2ZV90YWdzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLnJlc291cmNl",
+            "bWFuYWdlci52My5FZmZlY3RpdmVUYWcSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
+            "ASgJIoACCgxFZmZlY3RpdmVUYWcSRAoJdGFnX3ZhbHVlGAEgASgJQjH6QS4K",
+            "LGNsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RhZ1ZhbHVl",
+            "EhwKFG5hbWVzcGFjZWRfdGFnX3ZhbHVlGAIgASgJEkAKB3RhZ19rZXkYAyAB",
+            "KAlCL/pBLAoqY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
+            "VGFnS2V5EhoKEm5hbWVzcGFjZWRfdGFnX2tleRgEIAEoCRIbChN0YWdfa2V5",
+            "X3BhcmVudF9uYW1lGAYgASgJEhEKCWluaGVyaXRlZBgFIAEoCDKRBwoLVGFn",
+            "QmluZGluZ3MSpgEKD0xpc3RUYWdCaW5kaW5ncxI3Lmdvb2dsZS5jbG91ZC5y",
+            "ZXNvdXJjZW1hbmFnZXIudjMuTGlzdFRhZ0JpbmRpbmdzUmVxdWVzdBo4Lmdv",
+            "b2dsZS5jbG91ZC5yZXNvdXJjZW1hbmFnZXIudjMuTGlzdFRhZ0JpbmRpbmdz",
+            "UmVzcG9uc2UiIILT5JMCERIPL3YzL3RhZ0JpbmRpbmdz2kEGcGFyZW50EsgB",
+            "ChBDcmVhdGVUYWdCaW5kaW5nEjguZ29vZ2xlLmNsb3VkLnJlc291cmNlbWFu",
+            "YWdlci52My5DcmVhdGVUYWdCaW5kaW5nUmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24iW4LT5JMCHiIPL3YzL3RhZ0JpbmRpbmdzOgt0",
+            "YWdfYmluZGluZ9pBC3RhZ19iaW5kaW5nykEmCgpUYWdCaW5kaW5nEhhDcmVh",
+            "dGVUYWdCaW5kaW5nTWV0YWRhdGESyQEKEERlbGV0ZVRhZ0JpbmRpbmcSOC5n",
+            "b29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLkRlbGV0ZVRhZ0JpbmRp",
+            "bmdSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJcgtPk",
+            "kwIbKhkvdjMve25hbWU9dGFnQmluZGluZ3MvKip92kEEbmFtZcpBMQoVZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5EhhEZWxldGVUYWdCaW5kaW5nTWV0YWRhdGES",
+            "rgEKEUxpc3RFZmZlY3RpdmVUYWdzEjkuZ29vZ2xlLmNsb3VkLnJlc291cmNl",
+            "bWFuYWdlci52My5MaXN0RWZmZWN0aXZlVGFnc1JlcXVlc3QaOi5nb29nbGUu",
+            "Y2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYzLkxpc3RFZmZlY3RpdmVUYWdzUmVz",
+            "cG9uc2UiIoLT5JMCExIRL3YzL2VmZmVjdGl2ZVRhZ3PaQQZwYXJlbnQakAHK",
+            "QSNjbG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbdJBZ2h0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5y",
+            "ZWFkLW9ubHlC8QEKI2NvbS5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2Vy",
+            "LnYzQhBUYWdCaW5kaW5nc1Byb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "cmVzb3VyY2VtYW5hZ2VyL2FwaXYzL3Jlc291cmNlbWFuYWdlcnBiO3Jlc291",
+            "cmNlbWFuYWdlcnBiqgIfR29vZ2xlLkNsb3VkLlJlc291cmNlTWFuYWdlci5W",
+            "M8oCH0dvb2dsZVxDbG91ZFxSZXNvdXJjZU1hbmFnZXJcVjPqAiJHb29nbGU6",
+            "OkNsb3VkOjpSZXNvdXJjZU1hbmFnZXI6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.TagBinding), global::Google.Cloud.ResourceManager.V3.TagBinding.Parser, new[]{ "Name", "Parent", "TagValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.TagBinding), global::Google.Cloud.ResourceManager.V3.TagBinding.Parser, new[]{ "Name", "Parent", "TagValue", "TagValueNamespacedName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.CreateTagBindingMetadata), global::Google.Cloud.ResourceManager.V3.CreateTagBindingMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.CreateTagBindingRequest), global::Google.Cloud.ResourceManager.V3.CreateTagBindingRequest.Parser, new[]{ "TagBinding", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.DeleteTagBindingMetadata), global::Google.Cloud.ResourceManager.V3.DeleteTagBindingMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.DeleteTagBindingRequest), global::Google.Cloud.ResourceManager.V3.DeleteTagBindingRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListTagBindingsRequest), global::Google.Cloud.ResourceManager.V3.ListTagBindingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListTagBindingsResponse), global::Google.Cloud.ResourceManager.V3.ListTagBindingsResponse.Parser, new[]{ "TagBindings", "NextPageToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListTagBindingsResponse), global::Google.Cloud.ResourceManager.V3.ListTagBindingsResponse.Parser, new[]{ "TagBindings", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest), global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse), global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse.Parser, new[]{ "EffectiveTags", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ResourceManager.V3.EffectiveTag), global::Google.Cloud.ResourceManager.V3.EffectiveTag.Parser, new[]{ "TagValue", "NamespacedTagValue", "TagKey", "NamespacedTagKey", "TagKeyParentName", "Inherited" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,9 +103,8 @@ namespace Google.Cloud.ResourceManager.V3 {
   #region Messages
   /// <summary>
   /// A TagBinding represents a connection between a TagValue and a cloud
-  /// resource (currently project, folder, or organization). Once a TagBinding is
-  /// created, the TagValue is applied to all the descendants of the cloud
-  /// resource.
+  /// resource Once a TagBinding is created, the TagValue is applied to all the
+  /// descendants of the Google Cloud resource.
   /// </summary>
   public sealed partial class TagBinding : pb::IMessage<TagBinding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -125,6 +143,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       name_ = other.name_;
       parent_ = other.parent_;
       tagValue_ = other.tagValue_;
+      tagValueNamespacedName_ = other.tagValueNamespacedName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -183,6 +202,27 @@ namespace Google.Cloud.ResourceManager.V3 {
       }
     }
 
+    /// <summary>Field number for the "tag_value_namespaced_name" field.</summary>
+    public const int TagValueNamespacedNameFieldNumber = 4;
+    private string tagValueNamespacedName_ = "";
+    /// <summary>
+    /// The namespaced name for the TagValue of the TagBinding.
+    /// Must be in the format
+    /// `{parent_id}/{tag_key_short_name}/{short_name}`.
+    ///
+    /// For methods that support TagValue namespaced name, only one of
+    /// tag_value_namespaced_name or tag_value may be filled. Requests with both
+    /// fields will be rejected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TagValueNamespacedName {
+      get { return tagValueNamespacedName_; }
+      set {
+        tagValueNamespacedName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -201,6 +241,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (Name != other.Name) return false;
       if (Parent != other.Parent) return false;
       if (TagValue != other.TagValue) return false;
+      if (TagValueNamespacedName != other.TagValueNamespacedName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -211,6 +252,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (TagValue.Length != 0) hash ^= TagValue.GetHashCode();
+      if (TagValueNamespacedName.Length != 0) hash ^= TagValueNamespacedName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -241,6 +283,10 @@ namespace Google.Cloud.ResourceManager.V3 {
         output.WriteRawTag(26);
         output.WriteString(TagValue);
       }
+      if (TagValueNamespacedName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TagValueNamespacedName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -263,6 +309,10 @@ namespace Google.Cloud.ResourceManager.V3 {
         output.WriteRawTag(26);
         output.WriteString(TagValue);
       }
+      if (TagValueNamespacedName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TagValueNamespacedName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -281,6 +331,9 @@ namespace Google.Cloud.ResourceManager.V3 {
       }
       if (TagValue.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TagValue);
+      }
+      if (TagValueNamespacedName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TagValueNamespacedName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -302,6 +355,9 @@ namespace Google.Cloud.ResourceManager.V3 {
       }
       if (other.TagValue.Length != 0) {
         TagValue = other.TagValue;
+      }
+      if (other.TagValueNamespacedName.Length != 0) {
+        TagValueNamespacedName = other.TagValueNamespacedName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -330,6 +386,10 @@ namespace Google.Cloud.ResourceManager.V3 {
             TagValue = input.ReadString();
             break;
           }
+          case 34: {
+            TagValueNamespacedName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -355,6 +415,10 @@ namespace Google.Cloud.ResourceManager.V3 {
           }
           case 26: {
             TagValue = input.ReadString();
+            break;
+          }
+          case 34: {
+            TagValueNamespacedName = input.ReadString();
             break;
           }
         }
@@ -586,8 +650,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ValidateOnlyFieldNumber = 2;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. Set to true to perform the validations necessary for creating the resource,
-    /// but not actually perform the action.
+    /// Optional. Set to true to perform the validations necessary for creating the
+    /// resource, but not actually perform the action.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1169,9 +1233,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The full resource name of a resource for which you want to list existing
-    /// TagBindings.
-    /// E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+    /// Required. The full resource name of a resource for which you want to list
+    /// existing TagBindings. E.g.
+    /// "//cloudresourcemanager.googleapis.com/projects/123"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1186,9 +1250,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of TagBindings to return in the response. The server
-    /// allows a maximum of 300 TagBindings to return. If unspecified, the server
-    /// will use 100 as the default.
+    /// Optional. The maximum number of TagBindings to return in the response. The
+    /// server allows a maximum of 300 TagBindings to return. If unspecified, the
+    /// server will use 100 as the default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1203,8 +1267,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to `ListTagBindings`
-    /// that indicates where this listing should continue from.
+    /// Optional. A pagination token returned from a previous call to
+    /// `ListTagBindings` that indicates where this listing should continue from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1450,8 +1514,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ResourceManager.V3.TagBinding.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ResourceManager.V3.TagBinding> tagBindings_ = new pbc::RepeatedField<global::Google.Cloud.ResourceManager.V3.TagBinding>();
     /// <summary>
-    /// A possibly paginated list of TagBindings for the specified TagValue or
-    /// resource.
+    /// A possibly paginated list of TagBindings for the specified resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1622,6 +1685,928 @@ namespace Google.Cloud.ResourceManager.V3 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message to ListEffectiveTags
+  /// </summary>
+  public sealed partial class ListEffectiveTagsRequest : pb::IMessage<ListEffectiveTagsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListEffectiveTagsRequest> _parser = new pb::MessageParser<ListEffectiveTagsRequest>(() => new ListEffectiveTagsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListEffectiveTagsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ResourceManager.V3.TagBindingsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListEffectiveTagsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListEffectiveTagsRequest(ListEffectiveTagsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListEffectiveTagsRequest Clone() {
+      return new ListEffectiveTagsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The full resource name of a resource for which you want to list
+    /// the effective tags. E.g.
+    /// "//cloudresourcemanager.googleapis.com/projects/123"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of effective tags to return in the response.
+    /// The server allows a maximum of 300 effective tags to return in a single
+    /// page. If unspecified, the server will use 100 as the default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A pagination token returned from a previous call to
+    /// `ListEffectiveTags` that indicates from where this listing should continue.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListEffectiveTagsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListEffectiveTagsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListEffectiveTagsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response of ListEffectiveTags.
+  /// </summary>
+  public sealed partial class ListEffectiveTagsResponse : pb::IMessage<ListEffectiveTagsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListEffectiveTagsResponse> _parser = new pb::MessageParser<ListEffectiveTagsResponse>(() => new ListEffectiveTagsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListEffectiveTagsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ResourceManager.V3.TagBindingsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListEffectiveTagsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListEffectiveTagsResponse(ListEffectiveTagsResponse other) : this() {
+      effectiveTags_ = other.effectiveTags_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListEffectiveTagsResponse Clone() {
+      return new ListEffectiveTagsResponse(this);
+    }
+
+    /// <summary>Field number for the "effective_tags" field.</summary>
+    public const int EffectiveTagsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ResourceManager.V3.EffectiveTag> _repeated_effectiveTags_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ResourceManager.V3.EffectiveTag.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ResourceManager.V3.EffectiveTag> effectiveTags_ = new pbc::RepeatedField<global::Google.Cloud.ResourceManager.V3.EffectiveTag>();
+    /// <summary>
+    /// A possibly paginated list of effective tags for the specified resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ResourceManager.V3.EffectiveTag> EffectiveTags {
+      get { return effectiveTags_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Pagination token.
+    ///
+    /// If the result set is too large to fit in a single response, this token
+    /// is returned. It encodes the position of the current result cursor.
+    /// Feeding this value into a new list request with the `page_token` parameter
+    /// gives the next page of the results.
+    ///
+    /// When `next_page_token` is not filled in, there is no next page and
+    /// the list returned is the last page in the result set.
+    ///
+    /// Pagination tokens have a limited lifetime.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListEffectiveTagsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListEffectiveTagsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!effectiveTags_.Equals(other.effectiveTags_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= effectiveTags_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      effectiveTags_.WriteTo(output, _repeated_effectiveTags_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      effectiveTags_.WriteTo(ref output, _repeated_effectiveTags_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += effectiveTags_.CalculateSize(_repeated_effectiveTags_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListEffectiveTagsResponse other) {
+      if (other == null) {
+        return;
+      }
+      effectiveTags_.Add(other.effectiveTags_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            effectiveTags_.AddEntriesFrom(input, _repeated_effectiveTags_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            effectiveTags_.AddEntriesFrom(ref input, _repeated_effectiveTags_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// An EffectiveTag represents a tag that applies to a resource during policy
+  /// evaluation. Tags can be either directly bound to a resource or inherited from
+  /// its ancestor. EffectiveTag contains the name and
+  /// namespaced_name of the tag value and tag key, with additional fields of
+  /// `inherited` to indicate the inheritance status of the effective tag.
+  /// </summary>
+  public sealed partial class EffectiveTag : pb::IMessage<EffectiveTag>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EffectiveTag> _parser = new pb::MessageParser<EffectiveTag>(() => new EffectiveTag());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EffectiveTag> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ResourceManager.V3.TagBindingsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveTag() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveTag(EffectiveTag other) : this() {
+      tagValue_ = other.tagValue_;
+      namespacedTagValue_ = other.namespacedTagValue_;
+      tagKey_ = other.tagKey_;
+      namespacedTagKey_ = other.namespacedTagKey_;
+      tagKeyParentName_ = other.tagKeyParentName_;
+      inherited_ = other.inherited_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveTag Clone() {
+      return new EffectiveTag(this);
+    }
+
+    /// <summary>Field number for the "tag_value" field.</summary>
+    public const int TagValueFieldNumber = 1;
+    private string tagValue_ = "";
+    /// <summary>
+    /// Resource name for TagValue in the format `tagValues/456`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TagValue {
+      get { return tagValue_; }
+      set {
+        tagValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "namespaced_tag_value" field.</summary>
+    public const int NamespacedTagValueFieldNumber = 2;
+    private string namespacedTagValue_ = "";
+    /// <summary>
+    /// Namespaced name of the TagValue. Now only supported in the format
+    /// `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`.
+    /// Other formats will be supported when we add non-org parented tags.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NamespacedTagValue {
+      get { return namespacedTagValue_; }
+      set {
+        namespacedTagValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tag_key" field.</summary>
+    public const int TagKeyFieldNumber = 3;
+    private string tagKey_ = "";
+    /// <summary>
+    /// The name of the TagKey, in the format `tagKeys/{id}`, such as
+    /// `tagKeys/123`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TagKey {
+      get { return tagKey_; }
+      set {
+        tagKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "namespaced_tag_key" field.</summary>
+    public const int NamespacedTagKeyFieldNumber = 4;
+    private string namespacedTagKey_ = "";
+    /// <summary>
+    /// The namespaced_name of the TagKey. Now only supported in the format of
+    /// `{organization_id}/{tag_key_short_name}`. Other formats will be
+    /// supported when we add non-org parented tags.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NamespacedTagKey {
+      get { return namespacedTagKey_; }
+      set {
+        namespacedTagKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tag_key_parent_name" field.</summary>
+    public const int TagKeyParentNameFieldNumber = 6;
+    private string tagKeyParentName_ = "";
+    /// <summary>
+    /// The parent name of the tag key.
+    /// Must be in the format `organizations/{organization_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TagKeyParentName {
+      get { return tagKeyParentName_; }
+      set {
+        tagKeyParentName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "inherited" field.</summary>
+    public const int InheritedFieldNumber = 5;
+    private bool inherited_;
+    /// <summary>
+    /// Indicates the inheritance status of a tag value
+    /// attached to the given resource. If the tag value is inherited from one of
+    /// the resource's ancestors, inherited will be true. If false, then the tag
+    /// value is directly attached to the resource, inherited will be false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Inherited {
+      get { return inherited_; }
+      set {
+        inherited_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EffectiveTag);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EffectiveTag other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TagValue != other.TagValue) return false;
+      if (NamespacedTagValue != other.NamespacedTagValue) return false;
+      if (TagKey != other.TagKey) return false;
+      if (NamespacedTagKey != other.NamespacedTagKey) return false;
+      if (TagKeyParentName != other.TagKeyParentName) return false;
+      if (Inherited != other.Inherited) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TagValue.Length != 0) hash ^= TagValue.GetHashCode();
+      if (NamespacedTagValue.Length != 0) hash ^= NamespacedTagValue.GetHashCode();
+      if (TagKey.Length != 0) hash ^= TagKey.GetHashCode();
+      if (NamespacedTagKey.Length != 0) hash ^= NamespacedTagKey.GetHashCode();
+      if (TagKeyParentName.Length != 0) hash ^= TagKeyParentName.GetHashCode();
+      if (Inherited != false) hash ^= Inherited.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TagValue.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TagValue);
+      }
+      if (NamespacedTagValue.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NamespacedTagValue);
+      }
+      if (TagKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TagKey);
+      }
+      if (NamespacedTagKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(NamespacedTagKey);
+      }
+      if (Inherited != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Inherited);
+      }
+      if (TagKeyParentName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(TagKeyParentName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TagValue.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TagValue);
+      }
+      if (NamespacedTagValue.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NamespacedTagValue);
+      }
+      if (TagKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TagKey);
+      }
+      if (NamespacedTagKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(NamespacedTagKey);
+      }
+      if (Inherited != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Inherited);
+      }
+      if (TagKeyParentName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(TagKeyParentName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TagValue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TagValue);
+      }
+      if (NamespacedTagValue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NamespacedTagValue);
+      }
+      if (TagKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TagKey);
+      }
+      if (NamespacedTagKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NamespacedTagKey);
+      }
+      if (TagKeyParentName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TagKeyParentName);
+      }
+      if (Inherited != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EffectiveTag other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TagValue.Length != 0) {
+        TagValue = other.TagValue;
+      }
+      if (other.NamespacedTagValue.Length != 0) {
+        NamespacedTagValue = other.NamespacedTagValue;
+      }
+      if (other.TagKey.Length != 0) {
+        TagKey = other.TagKey;
+      }
+      if (other.NamespacedTagKey.Length != 0) {
+        NamespacedTagKey = other.NamespacedTagKey;
+      }
+      if (other.TagKeyParentName.Length != 0) {
+        TagKeyParentName = other.TagKeyParentName;
+      }
+      if (other.Inherited != false) {
+        Inherited = other.Inherited;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TagValue = input.ReadString();
+            break;
+          }
+          case 18: {
+            NamespacedTagValue = input.ReadString();
+            break;
+          }
+          case 26: {
+            TagKey = input.ReadString();
+            break;
+          }
+          case 34: {
+            NamespacedTagKey = input.ReadString();
+            break;
+          }
+          case 40: {
+            Inherited = input.ReadBool();
+            break;
+          }
+          case 50: {
+            TagKeyParentName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TagValue = input.ReadString();
+            break;
+          }
+          case 18: {
+            NamespacedTagValue = input.ReadString();
+            break;
+          }
+          case 26: {
+            TagKey = input.ReadString();
+            break;
+          }
+          case 34: {
+            NamespacedTagKey = input.ReadString();
+            break;
+          }
+          case 40: {
+            Inherited = input.ReadBool();
+            break;
+          }
+          case 50: {
+            TagKeyParentName = input.ReadString();
             break;
           }
         }

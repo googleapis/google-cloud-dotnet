@@ -3,7 +3,7 @@
 //     source: google/cloud/resourcemanager/v3/tag_values.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -72,6 +72,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.TagValue> __Marshaller_google_cloud_resourcemanager_v3_TagValue = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.TagValue.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest> __Marshaller_google_cloud_resourcemanager_v3_GetNamespacedTagValueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.CreateTagValueRequest> __Marshaller_google_cloud_resourcemanager_v3_CreateTagValueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.CreateTagValueRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
@@ -104,6 +106,14 @@ namespace Google.Cloud.ResourceManager.V3 {
         __ServiceName,
         "GetTagValue",
         __Marshaller_google_cloud_resourcemanager_v3_GetTagValueRequest,
+        __Marshaller_google_cloud_resourcemanager_v3_TagValue);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest, global::Google.Cloud.ResourceManager.V3.TagValue> __Method_GetNamespacedTagValue = new grpc::Method<global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest, global::Google.Cloud.ResourceManager.V3.TagValue>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetNamespacedTagValue",
+        __Marshaller_google_cloud_resourcemanager_v3_GetNamespacedTagValueRequest,
         __Marshaller_google_cloud_resourcemanager_v3_TagValue);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -177,9 +187,8 @@ namespace Google.Cloud.ResourceManager.V3 {
       }
 
       /// <summary>
-      /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-      /// if the user does not have permission to view it, this method will return
-      /// `PERMISSION_DENIED`.
+      /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+      /// value does not exist or the user does not have permission to view it.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -191,9 +200,23 @@ namespace Google.Cloud.ResourceManager.V3 {
       }
 
       /// <summary>
+      /// Retrieves a TagValue by its namespaced name.
+      /// This method will return `PERMISSION_DENIED` if the value does not exist
+      /// or the user does not have permission to view it.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ResourceManager.V3.TagValue> GetNamespacedTagValue(global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a TagValue as a child of the specified TagKey. If a another
       /// request with the same parameters is sent while the original request is in
-      /// process the second request will receive an error. A maximum of 300
+      /// process the second request will receive an error. A maximum of 1000
       /// TagValues can exist under a TagKey at any given time.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -357,9 +380,8 @@ namespace Google.Cloud.ResourceManager.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTagValues, null, options, request);
       }
       /// <summary>
-      /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-      /// if the user does not have permission to view it, this method will return
-      /// `PERMISSION_DENIED`.
+      /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+      /// value does not exist or the user does not have permission to view it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -372,9 +394,8 @@ namespace Google.Cloud.ResourceManager.V3 {
         return GetTagValue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-      /// if the user does not have permission to view it, this method will return
-      /// `PERMISSION_DENIED`.
+      /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+      /// value does not exist or the user does not have permission to view it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -385,9 +406,8 @@ namespace Google.Cloud.ResourceManager.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_GetTagValue, null, options, request);
       }
       /// <summary>
-      /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-      /// if the user does not have permission to view it, this method will return
-      /// `PERMISSION_DENIED`.
+      /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+      /// value does not exist or the user does not have permission to view it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -400,9 +420,8 @@ namespace Google.Cloud.ResourceManager.V3 {
         return GetTagValueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-      /// if the user does not have permission to view it, this method will return
-      /// `PERMISSION_DENIED`.
+      /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+      /// value does not exist or the user does not have permission to view it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -413,9 +432,65 @@ namespace Google.Cloud.ResourceManager.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetTagValue, null, options, request);
       }
       /// <summary>
+      /// Retrieves a TagValue by its namespaced name.
+      /// This method will return `PERMISSION_DENIED` if the value does not exist
+      /// or the user does not have permission to view it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ResourceManager.V3.TagValue GetNamespacedTagValue(global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNamespacedTagValue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a TagValue by its namespaced name.
+      /// This method will return `PERMISSION_DENIED` if the value does not exist
+      /// or the user does not have permission to view it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ResourceManager.V3.TagValue GetNamespacedTagValue(global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetNamespacedTagValue, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a TagValue by its namespaced name.
+      /// This method will return `PERMISSION_DENIED` if the value does not exist
+      /// or the user does not have permission to view it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceManager.V3.TagValue> GetNamespacedTagValueAsync(global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetNamespacedTagValueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a TagValue by its namespaced name.
+      /// This method will return `PERMISSION_DENIED` if the value does not exist
+      /// or the user does not have permission to view it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceManager.V3.TagValue> GetNamespacedTagValueAsync(global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetNamespacedTagValue, null, options, request);
+      }
+      /// <summary>
       /// Creates a TagValue as a child of the specified TagKey. If a another
       /// request with the same parameters is sent while the original request is in
-      /// process the second request will receive an error. A maximum of 300
+      /// process the second request will receive an error. A maximum of 1000
       /// TagValues can exist under a TagKey at any given time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -431,7 +506,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       /// <summary>
       /// Creates a TagValue as a child of the specified TagKey. If a another
       /// request with the same parameters is sent while the original request is in
-      /// process the second request will receive an error. A maximum of 300
+      /// process the second request will receive an error. A maximum of 1000
       /// TagValues can exist under a TagKey at any given time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -445,7 +520,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       /// <summary>
       /// Creates a TagValue as a child of the specified TagKey. If a another
       /// request with the same parameters is sent while the original request is in
-      /// process the second request will receive an error. A maximum of 300
+      /// process the second request will receive an error. A maximum of 1000
       /// TagValues can exist under a TagKey at any given time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -461,7 +536,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       /// <summary>
       /// Creates a TagValue as a child of the specified TagKey. If a another
       /// request with the same parameters is sent while the original request is in
-      /// process the second request will receive an error. A maximum of 300
+      /// process the second request will receive an error. A maximum of 1000
       /// TagValues can exist under a TagKey at any given time.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -784,6 +859,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListTagValues, serviceImpl.ListTagValues)
           .AddMethod(__Method_GetTagValue, serviceImpl.GetTagValue)
+          .AddMethod(__Method_GetNamespacedTagValue, serviceImpl.GetNamespacedTagValue)
           .AddMethod(__Method_CreateTagValue, serviceImpl.CreateTagValue)
           .AddMethod(__Method_UpdateTagValue, serviceImpl.UpdateTagValue)
           .AddMethod(__Method_DeleteTagValue, serviceImpl.DeleteTagValue)
@@ -801,6 +877,7 @@ namespace Google.Cloud.ResourceManager.V3 {
     {
       serviceBinder.AddMethod(__Method_ListTagValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.ListTagValuesRequest, global::Google.Cloud.ResourceManager.V3.ListTagValuesResponse>(serviceImpl.ListTagValues));
       serviceBinder.AddMethod(__Method_GetTagValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.GetTagValueRequest, global::Google.Cloud.ResourceManager.V3.TagValue>(serviceImpl.GetTagValue));
+      serviceBinder.AddMethod(__Method_GetNamespacedTagValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.GetNamespacedTagValueRequest, global::Google.Cloud.ResourceManager.V3.TagValue>(serviceImpl.GetNamespacedTagValue));
       serviceBinder.AddMethod(__Method_CreateTagValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.CreateTagValueRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateTagValue));
       serviceBinder.AddMethod(__Method_UpdateTagValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.UpdateTagValueRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateTagValue));
       serviceBinder.AddMethod(__Method_DeleteTagValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.DeleteTagValueRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTagValue));

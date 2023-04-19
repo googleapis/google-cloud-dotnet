@@ -610,5 +610,185 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ListEffectiveTags</summary>
+        public void ListEffectiveTagsRequestObject()
+        {
+            // Snippet: ListEffectiveTags(ListEffectiveTagsRequest, CallSettings)
+            // Create client
+            TagBindingsClient tagBindingsClient = TagBindingsClient.Create();
+            // Initialize request argument(s)
+            ListEffectiveTagsRequest request = new ListEffectiveTagsRequest { Parent = "", };
+            // Make the request
+            PagedEnumerable<ListEffectiveTagsResponse, EffectiveTag> response = tagBindingsClient.ListEffectiveTags(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveTag item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEffectiveTagsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveTag item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveTag> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveTag item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveTagsAsync</summary>
+        public async Task ListEffectiveTagsRequestObjectAsync()
+        {
+            // Snippet: ListEffectiveTagsAsync(ListEffectiveTagsRequest, CallSettings)
+            // Create client
+            TagBindingsClient tagBindingsClient = await TagBindingsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListEffectiveTagsRequest request = new ListEffectiveTagsRequest { Parent = "", };
+            // Make the request
+            PagedAsyncEnumerable<ListEffectiveTagsResponse, EffectiveTag> response = tagBindingsClient.ListEffectiveTagsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveTag item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEffectiveTagsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveTag item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveTag> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveTag item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveTags</summary>
+        public void ListEffectiveTags()
+        {
+            // Snippet: ListEffectiveTags(string, string, int?, CallSettings)
+            // Create client
+            TagBindingsClient tagBindingsClient = TagBindingsClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedEnumerable<ListEffectiveTagsResponse, EffectiveTag> response = tagBindingsClient.ListEffectiveTags(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveTag item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEffectiveTagsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveTag item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveTag> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveTag item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveTagsAsync</summary>
+        public async Task ListEffectiveTagsAsync()
+        {
+            // Snippet: ListEffectiveTagsAsync(string, string, int?, CallSettings)
+            // Create client
+            TagBindingsClient tagBindingsClient = await TagBindingsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedAsyncEnumerable<ListEffectiveTagsResponse, EffectiveTag> response = tagBindingsClient.ListEffectiveTagsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveTag item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEffectiveTagsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveTag item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveTag> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveTag item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

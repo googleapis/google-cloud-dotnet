@@ -211,10 +211,43 @@
                 "DeleteTagBindingAsync"
               ]
             },
+            "ListEffectiveTags": {
+              "methods": [
+                "ListEffectiveTags",
+                "ListEffectiveTagsAsync"
+              ]
+            },
             "ListTagBindings": {
               "methods": [
                 "ListTagBindings",
                 "ListTagBindingsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TagHolds": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TagHoldsClient",
+          "rpcs": {
+            "CreateTagHold": {
+              "methods": [
+                "CreateTagHold",
+                "CreateTagHoldAsync"
+              ]
+            },
+            "DeleteTagHold": {
+              "methods": [
+                "DeleteTagHold",
+                "DeleteTagHoldAsync"
+              ]
+            },
+            "ListTagHolds": {
+              "methods": [
+                "ListTagHolds",
+                "ListTagHoldsAsync"
               ]
             }
           }
@@ -242,6 +275,12 @@
               "methods": [
                 "GetIamPolicy",
                 "GetIamPolicyAsync"
+              ]
+            },
+            "GetNamespacedTagKey": {
+              "methods": [
+                "GetNamespacedTagKey",
+                "GetNamespacedTagKeyAsync"
               ]
             },
             "GetTagKey": {
@@ -299,6 +338,12 @@
               "methods": [
                 "GetIamPolicy",
                 "GetIamPolicyAsync"
+              ]
+            },
+            "GetNamespacedTagValue": {
+              "methods": [
+                "GetNamespacedTagValue",
+                "GetNamespacedTagValueAsync"
               ]
             },
             "GetTagValue": {
