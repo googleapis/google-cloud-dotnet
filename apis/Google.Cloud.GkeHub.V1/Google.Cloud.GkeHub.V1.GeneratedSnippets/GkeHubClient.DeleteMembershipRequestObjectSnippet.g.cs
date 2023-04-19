@@ -40,6 +40,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             {
                 MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = gkeHubClient.DeleteMembership(request);
