@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.5.0, released 2023-04-20
+
+### New features
+
+- Support custom retry options on all API calls (other than upload/download object) ([commit cc384b5](https://github.com/googleapis/google-cloud-dotnet/commit/cc384b5e2db95b718d68300141152078f2d736d1)) and ([commit 385ee89](https://github.com/googleapis/google-cloud-dotnet/commit/385ee890cf10cbbebab000b96da04d6fc9f62bcc))
+
 ## Version 4.4.0, released 2023-02-21
 
 ### New features
