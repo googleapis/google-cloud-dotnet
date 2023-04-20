@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataCatalog.Lineage.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datalineage_v1_generated_Lineage_DeleteRun_async_flattened_resourceNames]
     using Google.Cloud.DataCatalog.Lineage.V1;

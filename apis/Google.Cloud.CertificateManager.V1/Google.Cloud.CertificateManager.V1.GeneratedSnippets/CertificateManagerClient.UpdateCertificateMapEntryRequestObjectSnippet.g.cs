@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.CertificateManager.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START certificatemanager_v1_generated_CertificateManager_UpdateCertificateMapEntry_sync]
     using Google.Cloud.CertificateManager.V1;

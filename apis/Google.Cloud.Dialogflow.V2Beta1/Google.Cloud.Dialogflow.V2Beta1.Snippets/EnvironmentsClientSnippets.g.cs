@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Protobuf.WellKnownTypes;
@@ -33,14 +33,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: ListEnvironments(ListEnvironmentsRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdv::EnvironmentsClient environmentsClient = gcdv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            gcdv::ListEnvironmentsRequest request = new gcdv::ListEnvironmentsRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironments(request);
+            PagedEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Environment item in response)
@@ -50,7 +50,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -81,14 +81,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            gcdv::ListEnvironmentsRequest request = new gcdv::ListEnvironmentsRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Environment item) =>
@@ -98,7 +98,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -129,11 +129,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: ListEnvironments(string, string, int?, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdv::EnvironmentsClient environmentsClient = gcdv::EnvironmentsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/agent";
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironments(parent);
+            PagedEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Environment item in response)
@@ -143,7 +143,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -174,11 +174,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(string, string, int?, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/agent";
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Environment item) =>
@@ -188,7 +188,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -219,11 +219,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: ListEnvironments(AgentName, string, int?, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdv::EnvironmentsClient environmentsClient = gcdv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            AgentName parent = AgentName.FromProject("[PROJECT]");
+            gcdv::AgentName parent = gcdv::AgentName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironments(parent);
+            PagedEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Environment item in response)
@@ -233,7 +233,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -264,11 +264,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(AgentName, string, int?, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            AgentName parent = AgentName.FromProject("[PROJECT]");
+            gcdv::AgentName parent = gcdv::AgentName.FromProject("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Environment item) =>
@@ -278,7 +278,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -309,11 +309,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: GetEnvironment(GetEnvironmentRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdv::EnvironmentsClient environmentsClient = gcdv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest
+            gcdv::GetEnvironmentRequest request = new gcdv::GetEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
             };
             // Make the request
             gcdv::Environment response = environmentsClient.GetEnvironment(request);
@@ -326,11 +326,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             // Snippet: GetEnvironmentAsync(GetEnvironmentRequest, CallSettings)
             // Additional: GetEnvironmentAsync(GetEnvironmentRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest
+            gcdv::GetEnvironmentRequest request = new gcdv::GetEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
             };
             // Make the request
             gcdv::Environment response = await environmentsClient.GetEnvironmentAsync(request);
@@ -342,11 +342,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: CreateEnvironment(CreateEnvironmentRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdv::EnvironmentsClient environmentsClient = gcdv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            gcdv::CreateEnvironmentRequest request = new gcdv::CreateEnvironmentRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
                 Environment = new gcdv::Environment(),
                 EnvironmentId = "",
             };
@@ -361,11 +361,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             // Snippet: CreateEnvironmentAsync(CreateEnvironmentRequest, CallSettings)
             // Additional: CreateEnvironmentAsync(CreateEnvironmentRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            gcdv::CreateEnvironmentRequest request = new gcdv::CreateEnvironmentRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
                 Environment = new gcdv::Environment(),
                 EnvironmentId = "",
             };
@@ -379,9 +379,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: UpdateEnvironment(UpdateEnvironmentRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdv::EnvironmentsClient environmentsClient = gcdv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            gcdv::UpdateEnvironmentRequest request = new gcdv::UpdateEnvironmentRequest
             {
                 Environment = new gcdv::Environment(),
                 UpdateMask = new FieldMask(),
@@ -398,9 +398,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             // Snippet: UpdateEnvironmentAsync(UpdateEnvironmentRequest, CallSettings)
             // Additional: UpdateEnvironmentAsync(UpdateEnvironmentRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            gcdv::UpdateEnvironmentRequest request = new gcdv::UpdateEnvironmentRequest
             {
                 Environment = new gcdv::Environment(),
                 UpdateMask = new FieldMask(),
@@ -416,11 +416,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: DeleteEnvironment(DeleteEnvironmentRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdv::EnvironmentsClient environmentsClient = gcdv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
+            gcdv::DeleteEnvironmentRequest request = new gcdv::DeleteEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
             };
             // Make the request
             environmentsClient.DeleteEnvironment(request);
@@ -433,11 +433,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             // Snippet: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CallSettings)
             // Additional: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
+            gcdv::DeleteEnvironmentRequest request = new gcdv::DeleteEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
             };
             // Make the request
             await environmentsClient.DeleteEnvironmentAsync(request);
@@ -449,28 +449,28 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: GetEnvironmentHistory(GetEnvironmentHistoryRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdv::EnvironmentsClient environmentsClient = gcdv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            GetEnvironmentHistoryRequest request = new GetEnvironmentHistoryRequest
+            gcdv::GetEnvironmentHistoryRequest request = new gcdv::GetEnvironmentHistoryRequest
             {
-                ParentAsEnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                ParentAsEnvironmentName = gcdv::EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
             };
             // Make the request
-            PagedEnumerable<EnvironmentHistory, EnvironmentHistory.Types.Entry> response = environmentsClient.GetEnvironmentHistory(request);
+            PagedEnumerable<gcdv::EnvironmentHistory, gcdv::EnvironmentHistory.Types.Entry> response = environmentsClient.GetEnvironmentHistory(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (EnvironmentHistory.Types.Entry item in response)
+            foreach (gcdv::EnvironmentHistory.Types.Entry item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (EnvironmentHistory page in response.AsRawResponses())
+            foreach (gcdv::EnvironmentHistory page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (EnvironmentHistory.Types.Entry item in page)
+                foreach (gcdv::EnvironmentHistory.Types.Entry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -479,10 +479,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<EnvironmentHistory.Types.Entry> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::EnvironmentHistory.Types.Entry> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (EnvironmentHistory.Types.Entry item in singlePage)
+            foreach (gcdv::EnvironmentHistory.Types.Entry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -497,28 +497,28 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         {
             // Snippet: GetEnvironmentHistoryAsync(GetEnvironmentHistoryRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            GetEnvironmentHistoryRequest request = new GetEnvironmentHistoryRequest
+            gcdv::GetEnvironmentHistoryRequest request = new gcdv::GetEnvironmentHistoryRequest
             {
-                ParentAsEnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
+                ParentAsEnvironmentName = gcdv::EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<EnvironmentHistory, EnvironmentHistory.Types.Entry> response = environmentsClient.GetEnvironmentHistoryAsync(request);
+            PagedAsyncEnumerable<gcdv::EnvironmentHistory, gcdv::EnvironmentHistory.Types.Entry> response = environmentsClient.GetEnvironmentHistoryAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EnvironmentHistory.Types.Entry item) =>
+            await response.ForEachAsync((gcdv::EnvironmentHistory.Types.Entry item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((EnvironmentHistory page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::EnvironmentHistory page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (EnvironmentHistory.Types.Entry item in page)
+                foreach (gcdv::EnvironmentHistory.Types.Entry item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -527,10 +527,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<EnvironmentHistory.Types.Entry> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::EnvironmentHistory.Types.Entry> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (EnvironmentHistory.Types.Entry item in singlePage)
+            foreach (gcdv::EnvironmentHistory.Types.Entry item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

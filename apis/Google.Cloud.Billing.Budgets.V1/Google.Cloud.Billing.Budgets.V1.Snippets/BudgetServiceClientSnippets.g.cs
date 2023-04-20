@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Billing.Budgets.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Billing.Budgets.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;

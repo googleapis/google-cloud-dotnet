@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ConfidentialComputing.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START confidentialcomputing_v1_generated_ConfidentialComputing_CreateChallenge_sync_flattened]
     using Google.Cloud.ConfidentialComputing.V1;

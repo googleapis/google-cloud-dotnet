@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeHub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gkehub_v1_generated_GkeHub_ListMemberships_async_flattened_resourceNames]
     using Google.Api.Gax;

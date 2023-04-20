@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Executions_DeleteExecution_async_flattened_resourceNames]
     using Google.LongRunning;
@@ -36,26 +36,26 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task DeleteExecutionResourceNamesAsync()
         {
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            Operation<Execution, Execution> response = await executionsClient.DeleteExecutionAsync(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = await executionsClient.DeleteExecutionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = await executionsClient.PollOnceDeleteExecutionAsync(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await executionsClient.PollOnceDeleteExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
         }
     }

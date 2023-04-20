@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Speech.V1P1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
+    using Google.Cloud.Speech.V1P1Beta1;
     using Google.LongRunning;
     using System.Threading.Tasks;
 

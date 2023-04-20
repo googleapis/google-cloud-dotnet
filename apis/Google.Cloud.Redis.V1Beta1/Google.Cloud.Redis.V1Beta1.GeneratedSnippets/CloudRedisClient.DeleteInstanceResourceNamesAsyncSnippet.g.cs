@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Redis.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START redis_v1beta1_generated_CloudRedis_DeleteInstance_async_flattened_resourceNames]
     using Google.Cloud.Redis.V1Beta1;

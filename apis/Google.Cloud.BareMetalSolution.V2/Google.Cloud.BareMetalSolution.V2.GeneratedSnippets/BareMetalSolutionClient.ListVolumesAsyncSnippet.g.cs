@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BareMetalSolution.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START baremetalsolution_v2_generated_BareMetalSolution_ListVolumes_async_flattened]
     using Google.Api.Gax;

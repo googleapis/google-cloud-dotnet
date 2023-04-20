@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Retail.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START retail_v2_generated_ServingConfigService_ListServingConfigs_async]
     using Google.Api.Gax;

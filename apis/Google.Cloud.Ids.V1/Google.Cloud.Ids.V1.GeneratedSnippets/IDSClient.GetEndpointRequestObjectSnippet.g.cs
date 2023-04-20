@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Ids.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START ids_v1_generated_IDS_GetEndpoint_sync]
     using Google.Cloud.Ids.V1;

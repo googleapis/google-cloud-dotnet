@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ConfidentialComputing.V1Alpha1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START confidentialcomputing_v1alpha1_generated_ConfidentialComputing_VerifyAttestation_sync]
     using Google.Cloud.ConfidentialComputing.V1Alpha1;

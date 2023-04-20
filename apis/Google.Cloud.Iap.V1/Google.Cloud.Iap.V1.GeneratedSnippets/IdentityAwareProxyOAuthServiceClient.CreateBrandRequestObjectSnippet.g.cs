@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Iap.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START iap_v1_generated_IdentityAwareProxyOAuthService_CreateBrand_sync]
     using Google.Cloud.Iap.V1;

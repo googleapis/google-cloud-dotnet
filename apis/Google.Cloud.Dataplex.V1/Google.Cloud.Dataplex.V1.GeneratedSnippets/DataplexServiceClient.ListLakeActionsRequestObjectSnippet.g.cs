@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_ListLakeActions_sync]
     using Google.Api.Gax;
@@ -36,14 +36,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public void ListLakeActionsRequestObject()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListLakeActionsRequest request = new ListLakeActionsRequest
+            gcdv::ListLakeActionsRequest request = new gcdv::ListLakeActionsRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
             };
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActions(request);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -53,7 +53,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

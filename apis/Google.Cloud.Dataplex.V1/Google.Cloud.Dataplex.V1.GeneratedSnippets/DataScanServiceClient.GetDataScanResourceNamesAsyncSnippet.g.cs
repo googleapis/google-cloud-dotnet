@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataScanService_GetDataScan_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetDataScanResourceNamesAsync()
         {
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataScanName name = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
+            gcdv::DataScanName name = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]");
             // Make the request
-            DataScan response = await dataScanServiceClient.GetDataScanAsync(name);
+            gcdv::DataScan response = await dataScanServiceClient.GetDataScanAsync(name);
         }
     }
     // [END dataplex_v1_generated_DataScanService_GetDataScan_async_flattened_resourceNames]

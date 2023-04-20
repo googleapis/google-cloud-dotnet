@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ResourceManager.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudresourcemanager_v3_generated_TagKeys_GetNamespacedTagKey_async_flattened]
     using Google.Cloud.ResourceManager.V3;

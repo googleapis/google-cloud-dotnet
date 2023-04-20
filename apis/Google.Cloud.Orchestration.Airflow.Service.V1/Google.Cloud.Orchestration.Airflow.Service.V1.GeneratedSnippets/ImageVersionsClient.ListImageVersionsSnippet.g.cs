@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START composer_v1_generated_ImageVersions_ListImageVersions_sync_flattened]
     using Google.Api.Gax;

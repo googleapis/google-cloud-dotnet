@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Datastream.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datastream_v1_generated_Datastream_ListStreamObjects_sync_flattened]
     using Google.Api.Gax;

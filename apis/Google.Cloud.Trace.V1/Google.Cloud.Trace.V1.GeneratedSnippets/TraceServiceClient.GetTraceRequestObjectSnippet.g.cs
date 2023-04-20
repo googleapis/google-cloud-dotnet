@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Trace.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtrace_v1_generated_TraceService_GetTrace_sync]
     using Google.Cloud.Trace.V1;

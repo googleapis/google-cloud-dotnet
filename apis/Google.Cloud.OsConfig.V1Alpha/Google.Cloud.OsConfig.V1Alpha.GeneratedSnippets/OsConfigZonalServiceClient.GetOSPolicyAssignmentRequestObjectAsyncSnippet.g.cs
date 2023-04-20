@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OsConfig.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START osconfig_v1alpha_generated_OsConfigZonalService_GetOSPolicyAssignment_async]
     using Google.Cloud.OsConfig.V1Alpha;

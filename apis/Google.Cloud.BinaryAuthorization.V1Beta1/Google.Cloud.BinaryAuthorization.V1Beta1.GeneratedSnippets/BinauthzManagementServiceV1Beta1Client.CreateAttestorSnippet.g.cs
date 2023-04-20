@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BinaryAuthorization.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START binaryauthorization_v1beta1_generated_BinauthzManagementServiceV1Beta1_CreateAttestor_sync_flattened]
     using Google.Cloud.BinaryAuthorization.V1Beta1;

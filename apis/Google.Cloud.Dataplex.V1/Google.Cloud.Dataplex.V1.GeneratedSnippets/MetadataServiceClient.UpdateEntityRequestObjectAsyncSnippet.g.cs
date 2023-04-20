@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_UpdateEntity_async]
     using System.Threading.Tasks;
@@ -35,15 +35,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task UpdateEntityRequestObjectAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateEntityRequest request = new UpdateEntityRequest
+            gcdv::UpdateEntityRequest request = new gcdv::UpdateEntityRequest
             {
-                Entity = new Entity(),
+                Entity = new gcdv::Entity(),
                 ValidateOnly = false,
             };
             // Make the request
-            Entity response = await metadataServiceClient.UpdateEntityAsync(request);
+            gcdv::Entity response = await metadataServiceClient.UpdateEntityAsync(request);
         }
     }
     // [END dataplex_v1_generated_MetadataService_UpdateEntity_async]

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Environments_ListEnvironments_sync]
     using Google.Api.Gax;
@@ -36,14 +36,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
         public void ListEnvironmentsRequestObject()
         {
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdcv::EnvironmentsClient environmentsClient = gcdcv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            gcdcv::ListEnvironmentsRequest request = new gcdcv::ListEnvironmentsRequest
             {
-                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                ParentAsAgentName = gcdcv::AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
             };
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdcv::Environment> response = environmentsClient.ListEnvironments(request);
+            PagedEnumerable<gcdcv::ListEnvironmentsResponse, gcdcv::Environment> response = environmentsClient.ListEnvironments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdcv::Environment item in response)
@@ -53,7 +53,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdcv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OsConfig.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START osconfig_v1alpha_generated_OsConfigZonalService_ListInstanceOSPoliciesCompliances_async_flattened_resourceNames]
     using Google.Api.Gax;

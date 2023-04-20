@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataCatalog.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_PolicyTagManager_CreateTaxonomy_sync]
     using Google.Api.Gax.ResourceNames;

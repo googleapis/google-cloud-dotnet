@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Iot.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudiot_v1_generated_DeviceManager_UpdateDeviceRegistry_sync]
     using Google.Cloud.Iot.V1;

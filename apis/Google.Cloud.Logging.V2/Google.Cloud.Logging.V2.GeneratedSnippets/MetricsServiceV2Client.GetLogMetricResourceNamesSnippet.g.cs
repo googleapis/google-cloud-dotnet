@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Logging.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START logging_v2_generated_MetricsServiceV2_GetLogMetric_sync_flattened_resourceNames]
     using Google.Cloud.Logging.V2;

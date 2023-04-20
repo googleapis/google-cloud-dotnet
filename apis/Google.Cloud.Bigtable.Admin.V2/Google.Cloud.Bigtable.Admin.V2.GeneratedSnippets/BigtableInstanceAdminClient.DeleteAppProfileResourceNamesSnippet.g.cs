@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.Admin.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened_resourceNames]
     using Google.Cloud.Bigtable.Admin.V2;

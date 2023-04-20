@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace GrafeasV1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START containeranalysis_v1_generated_Grafeas_ListOccurrences_sync_flattened]
     using Google.Api.Gax;
@@ -33,9 +33,8 @@ namespace GrafeasV1.Snippets
         /// </remarks>
         public void ListOccurrences()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";

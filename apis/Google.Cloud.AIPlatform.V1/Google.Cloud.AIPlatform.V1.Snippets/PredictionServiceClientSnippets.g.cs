@@ -14,12 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+#pragma warning disable CS8981
+
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
-    using Google.Protobuf.WellKnownTypes;
+    using Google.Cloud.AIPlatform.V1;
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using wkt = Google.Protobuf.WellKnownTypes;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedPredictionServiceClientSnippets
@@ -34,8 +37,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new Value(), },
-                Parameters = new Value(),
+                Instances = { new wkt::Value(), },
+                Parameters = new wkt::Value(),
             };
             // Make the request
             PredictResponse response = predictionServiceClient.Predict(request);
@@ -53,8 +56,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictRequest request = new PredictRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new Value(), },
-                Parameters = new Value(),
+                Instances = { new wkt::Value(), },
+                Parameters = new wkt::Value(),
             };
             // Make the request
             PredictResponse response = await predictionServiceClient.PredictAsync(request);
@@ -69,8 +72,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            IEnumerable<Value> instances = new Value[] { new Value(), };
-            Value parameters = new Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            wkt::Value parameters = new wkt::Value();
             // Make the request
             PredictResponse response = predictionServiceClient.Predict(endpoint, instances, parameters);
             // End snippet
@@ -85,8 +88,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            IEnumerable<Value> instances = new Value[] { new Value(), };
-            Value parameters = new Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            wkt::Value parameters = new wkt::Value();
             // Make the request
             PredictResponse response = await predictionServiceClient.PredictAsync(endpoint, instances, parameters);
             // End snippet
@@ -100,8 +103,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            IEnumerable<Value> instances = new Value[] { new Value(), };
-            Value parameters = new Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            wkt::Value parameters = new wkt::Value();
             // Make the request
             PredictResponse response = predictionServiceClient.Predict(endpoint, instances, parameters);
             // End snippet
@@ -116,8 +119,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            IEnumerable<Value> instances = new Value[] { new Value(), };
-            Value parameters = new Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            wkt::Value parameters = new wkt::Value();
             // Make the request
             PredictResponse response = await predictionServiceClient.PredictAsync(endpoint, instances, parameters);
             // End snippet
@@ -226,9 +229,9 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new Value(), },
+                Instances = { new wkt::Value(), },
                 DeployedModelId = "",
-                Parameters = new Value(),
+                Parameters = new wkt::Value(),
                 ExplanationSpecOverride = new ExplanationSpecOverride(),
             };
             // Make the request
@@ -247,9 +250,9 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             ExplainRequest request = new ExplainRequest
             {
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
-                Instances = { new Value(), },
+                Instances = { new wkt::Value(), },
                 DeployedModelId = "",
-                Parameters = new Value(),
+                Parameters = new wkt::Value(),
                 ExplanationSpecOverride = new ExplanationSpecOverride(),
             };
             // Make the request
@@ -265,8 +268,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            IEnumerable<Value> instances = new Value[] { new Value(), };
-            Value parameters = new Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            wkt::Value parameters = new wkt::Value();
             string deployedModelId = "";
             // Make the request
             ExplainResponse response = predictionServiceClient.Explain(endpoint, instances, parameters, deployedModelId);
@@ -282,8 +285,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
             // Initialize request argument(s)
             string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
-            IEnumerable<Value> instances = new Value[] { new Value(), };
-            Value parameters = new Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            wkt::Value parameters = new wkt::Value();
             string deployedModelId = "";
             // Make the request
             ExplainResponse response = await predictionServiceClient.ExplainAsync(endpoint, instances, parameters, deployedModelId);
@@ -298,8 +301,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            IEnumerable<Value> instances = new Value[] { new Value(), };
-            Value parameters = new Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            wkt::Value parameters = new wkt::Value();
             string deployedModelId = "";
             // Make the request
             ExplainResponse response = predictionServiceClient.Explain(endpoint, instances, parameters, deployedModelId);
@@ -315,8 +318,8 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
             // Initialize request argument(s)
             EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
-            IEnumerable<Value> instances = new Value[] { new Value(), };
-            Value parameters = new Value();
+            IEnumerable<wkt::Value> instances = new wkt::Value[] { new wkt::Value(), };
+            wkt::Value parameters = new wkt::Value();
             string deployedModelId = "";
             // Make the request
             ExplainResponse response = await predictionServiceClient.ExplainAsync(endpoint, instances, parameters, deployedModelId);

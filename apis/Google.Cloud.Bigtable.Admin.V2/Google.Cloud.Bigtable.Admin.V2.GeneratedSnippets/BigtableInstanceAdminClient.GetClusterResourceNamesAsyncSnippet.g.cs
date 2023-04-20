@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.Admin.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_GetCluster_async_flattened_resourceNames]
     using Google.Cloud.Bigtable.Admin.V2;

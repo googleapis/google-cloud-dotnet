@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Retail.V2.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Retail.V2;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 

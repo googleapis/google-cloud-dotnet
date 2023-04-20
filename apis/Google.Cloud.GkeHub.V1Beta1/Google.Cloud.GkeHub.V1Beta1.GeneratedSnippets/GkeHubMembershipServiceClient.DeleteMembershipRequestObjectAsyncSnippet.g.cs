@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeHub.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gkehub_v1beta1_generated_GkeHubMembershipService_DeleteMembership_async]
     using Google.Cloud.GkeHub.V1Beta1;
@@ -41,6 +41,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             {
                 MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await gkeHubMembershipServiceClient.DeleteMembershipAsync(request);

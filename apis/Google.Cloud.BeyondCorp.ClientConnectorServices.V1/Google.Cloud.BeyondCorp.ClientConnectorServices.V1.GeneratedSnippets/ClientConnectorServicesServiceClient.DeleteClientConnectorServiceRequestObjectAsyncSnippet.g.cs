@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BeyondCorp.ClientConnectorServices.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START beyondcorp_v1_generated_ClientConnectorServicesService_DeleteClientConnectorService_async]
     using Google.Cloud.BeyondCorp.ClientConnectorServices.V1;

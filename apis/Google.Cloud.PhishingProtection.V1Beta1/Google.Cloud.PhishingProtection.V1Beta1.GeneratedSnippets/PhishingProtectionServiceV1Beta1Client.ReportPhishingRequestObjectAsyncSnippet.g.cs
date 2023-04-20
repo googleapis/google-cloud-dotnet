@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START phishingprotection_v1beta1_generated_PhishingProtectionServiceV1Beta1_ReportPhishing_async]
     using Google.Api.Gax.ResourceNames;

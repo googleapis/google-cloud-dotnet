@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OsLogin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START oslogin_v1_generated_OsLoginService_GetSshPublicKey_sync_flattened_resourceNames]
     using Google.Cloud.OsLogin.Common;

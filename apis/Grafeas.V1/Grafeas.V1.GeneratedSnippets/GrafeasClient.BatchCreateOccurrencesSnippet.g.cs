@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace GrafeasV1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START containeranalysis_v1_generated_Grafeas_BatchCreateOccurrences_sync_flattened]
     using Grafeas.V1;
@@ -32,9 +32,8 @@ namespace GrafeasV1.Snippets
         /// </remarks>
         public void BatchCreateOccurrences()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };

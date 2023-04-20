@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -35,32 +35,32 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateLake(CreateLakeRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            CreateLakeRequest request = new CreateLakeRequest
+            gcdv::CreateLakeRequest request = new gcdv::CreateLakeRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LakeId = "",
-                Lake = new Lake(),
+                Lake = new gcdv::Lake(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Lake, OperationMetadata> response = dataplexServiceClient.CreateLake(request);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = dataplexServiceClient.CreateLake(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateLake(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateLake(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -71,32 +71,32 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateLakeAsync(CreateLakeRequest, CallSettings)
             // Additional: CreateLakeAsync(CreateLakeRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateLakeRequest request = new CreateLakeRequest
+            gcdv::CreateLakeRequest request = new gcdv::CreateLakeRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LakeId = "",
-                Lake = new Lake(),
+                Lake = new gcdv::Lake(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Lake, OperationMetadata> response = await dataplexServiceClient.CreateLakeAsync(request);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateLakeAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateLakeAsync(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -106,28 +106,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateLake(string, Lake, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Lake lake = new Lake();
+            gcdv::Lake lake = new gcdv::Lake();
             string lakeId = "";
             // Make the request
-            Operation<Lake, OperationMetadata> response = dataplexServiceClient.CreateLake(parent, lake, lakeId);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = dataplexServiceClient.CreateLake(parent, lake, lakeId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateLake(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateLake(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -138,28 +138,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateLakeAsync(string, Lake, string, CallSettings)
             // Additional: CreateLakeAsync(string, Lake, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Lake lake = new Lake();
+            gcdv::Lake lake = new gcdv::Lake();
             string lakeId = "";
             // Make the request
-            Operation<Lake, OperationMetadata> response = await dataplexServiceClient.CreateLakeAsync(parent, lake, lakeId);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateLakeAsync(parent, lake, lakeId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateLakeAsync(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -169,28 +169,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateLake(LocationName, Lake, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Lake lake = new Lake();
+            gcdv::Lake lake = new gcdv::Lake();
             string lakeId = "";
             // Make the request
-            Operation<Lake, OperationMetadata> response = dataplexServiceClient.CreateLake(parent, lake, lakeId);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = dataplexServiceClient.CreateLake(parent, lake, lakeId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateLake(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateLake(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -201,28 +201,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateLakeAsync(LocationName, Lake, string, CallSettings)
             // Additional: CreateLakeAsync(LocationName, Lake, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Lake lake = new Lake();
+            gcdv::Lake lake = new gcdv::Lake();
             string lakeId = "";
             // Make the request
-            Operation<Lake, OperationMetadata> response = await dataplexServiceClient.CreateLakeAsync(parent, lake, lakeId);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateLakeAsync(parent, lake, lakeId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateLakeAsync(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -232,31 +232,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateLake(UpdateLakeRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            UpdateLakeRequest request = new UpdateLakeRequest
+            gcdv::UpdateLakeRequest request = new gcdv::UpdateLakeRequest
             {
                 UpdateMask = new FieldMask(),
-                Lake = new Lake(),
+                Lake = new gcdv::Lake(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Lake, OperationMetadata> response = dataplexServiceClient.UpdateLake(request);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateLake(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateLake(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateLake(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -267,31 +267,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateLakeAsync(UpdateLakeRequest, CallSettings)
             // Additional: UpdateLakeAsync(UpdateLakeRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateLakeRequest request = new UpdateLakeRequest
+            gcdv::UpdateLakeRequest request = new gcdv::UpdateLakeRequest
             {
                 UpdateMask = new FieldMask(),
-                Lake = new Lake(),
+                Lake = new gcdv::Lake(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Lake, OperationMetadata> response = await dataplexServiceClient.UpdateLakeAsync(request);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateLakeAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateLakeAsync(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -301,27 +301,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateLake(Lake, FieldMask, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            Lake lake = new Lake();
+            gcdv::Lake lake = new gcdv::Lake();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Lake, OperationMetadata> response = dataplexServiceClient.UpdateLake(lake, updateMask);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateLake(lake, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateLake(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateLake(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -332,27 +332,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateLakeAsync(Lake, FieldMask, CallSettings)
             // Additional: UpdateLakeAsync(Lake, FieldMask, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Lake lake = new Lake();
+            gcdv::Lake lake = new gcdv::Lake();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Lake, OperationMetadata> response = await dataplexServiceClient.UpdateLakeAsync(lake, updateMask);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateLakeAsync(lake, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateLakeAsync(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -362,24 +362,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteLake(DeleteLakeRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            DeleteLakeRequest request = new DeleteLakeRequest
+            gcdv::DeleteLakeRequest request = new gcdv::DeleteLakeRequest
             {
-                LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                LakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteLake(request);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteLake(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteLake(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteLake(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -395,24 +395,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteLakeAsync(DeleteLakeRequest, CallSettings)
             // Additional: DeleteLakeAsync(DeleteLakeRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteLakeRequest request = new DeleteLakeRequest
+            gcdv::DeleteLakeRequest request = new gcdv::DeleteLakeRequest
             {
-                LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                LakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteLakeAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteLakeAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteLakeAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -427,21 +427,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteLake(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteLake(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteLake(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteLake(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteLake(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -457,21 +457,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteLakeAsync(string, CallSettings)
             // Additional: DeleteLakeAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteLakeAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteLakeAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteLakeAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -486,21 +486,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteLake(LakeName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName name = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName name = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteLake(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteLake(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteLake(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteLake(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -516,21 +516,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteLakeAsync(LakeName, CallSettings)
             // Additional: DeleteLakeAsync(LakeName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName name = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName name = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteLakeAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteLakeAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteLakeAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -545,30 +545,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakes(ListLakesRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListLakesRequest request = new ListLakesRequest
+            gcdv::ListLakesRequest request = new gcdv::ListLakesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListLakesResponse, Lake> response = dataplexServiceClient.ListLakes(request);
+            PagedEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakes(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Lake item in response)
+            foreach (gcdv::Lake item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListLakesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListLakesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Lake item in page)
+                foreach (gcdv::Lake item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -577,10 +577,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Lake> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Lake> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Lake item in singlePage)
+            foreach (gcdv::Lake item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -595,30 +595,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakesAsync(ListLakesRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListLakesRequest request = new ListLakesRequest
+            gcdv::ListLakesRequest request = new gcdv::ListLakesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListLakesResponse, Lake> response = dataplexServiceClient.ListLakesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Lake item) =>
+            await response.ForEachAsync((gcdv::Lake item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLakesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListLakesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Lake item in page)
+                foreach (gcdv::Lake item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -627,10 +627,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Lake> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Lake> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Lake item in singlePage)
+            foreach (gcdv::Lake item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -645,25 +645,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakes(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListLakesResponse, Lake> response = dataplexServiceClient.ListLakes(parent);
+            PagedEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Lake item in response)
+            foreach (gcdv::Lake item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListLakesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListLakesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Lake item in page)
+                foreach (gcdv::Lake item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -672,10 +672,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Lake> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Lake> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Lake item in singlePage)
+            foreach (gcdv::Lake item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -690,25 +690,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakesAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListLakesResponse, Lake> response = dataplexServiceClient.ListLakesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Lake item) =>
+            await response.ForEachAsync((gcdv::Lake item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLakesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListLakesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Lake item in page)
+                foreach (gcdv::Lake item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -717,10 +717,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Lake> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Lake> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Lake item in singlePage)
+            foreach (gcdv::Lake item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -735,25 +735,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakes(LocationName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListLakesResponse, Lake> response = dataplexServiceClient.ListLakes(parent);
+            PagedEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Lake item in response)
+            foreach (gcdv::Lake item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListLakesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListLakesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Lake item in page)
+                foreach (gcdv::Lake item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -762,10 +762,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Lake> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Lake> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Lake item in singlePage)
+            foreach (gcdv::Lake item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -780,25 +780,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakesAsync(LocationName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListLakesResponse, Lake> response = dataplexServiceClient.ListLakesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Lake item) =>
+            await response.ForEachAsync((gcdv::Lake item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLakesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListLakesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Lake item in page)
+                foreach (gcdv::Lake item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -807,10 +807,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Lake> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Lake> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Lake item in singlePage)
+            foreach (gcdv::Lake item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -825,14 +825,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetLake(GetLakeRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            GetLakeRequest request = new GetLakeRequest
+            gcdv::GetLakeRequest request = new gcdv::GetLakeRequest
             {
-                LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                LakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
             };
             // Make the request
-            Lake response = dataplexServiceClient.GetLake(request);
+            gcdv::Lake response = dataplexServiceClient.GetLake(request);
             // End snippet
         }
 
@@ -842,14 +842,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetLakeAsync(GetLakeRequest, CallSettings)
             // Additional: GetLakeAsync(GetLakeRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetLakeRequest request = new GetLakeRequest
+            gcdv::GetLakeRequest request = new gcdv::GetLakeRequest
             {
-                LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                LakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
             };
             // Make the request
-            Lake response = await dataplexServiceClient.GetLakeAsync(request);
+            gcdv::Lake response = await dataplexServiceClient.GetLakeAsync(request);
             // End snippet
         }
 
@@ -858,11 +858,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetLake(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            Lake response = dataplexServiceClient.GetLake(name);
+            gcdv::Lake response = dataplexServiceClient.GetLake(name);
             // End snippet
         }
 
@@ -872,11 +872,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetLakeAsync(string, CallSettings)
             // Additional: GetLakeAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            Lake response = await dataplexServiceClient.GetLakeAsync(name);
+            gcdv::Lake response = await dataplexServiceClient.GetLakeAsync(name);
             // End snippet
         }
 
@@ -885,11 +885,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetLake(LakeName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName name = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName name = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            Lake response = dataplexServiceClient.GetLake(name);
+            gcdv::Lake response = dataplexServiceClient.GetLake(name);
             // End snippet
         }
 
@@ -899,11 +899,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetLakeAsync(LakeName, CallSettings)
             // Additional: GetLakeAsync(LakeName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName name = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName name = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            Lake response = await dataplexServiceClient.GetLakeAsync(name);
+            gcdv::Lake response = await dataplexServiceClient.GetLakeAsync(name);
             // End snippet
         }
 
@@ -912,14 +912,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakeActions(ListLakeActionsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListLakeActionsRequest request = new ListLakeActionsRequest
+            gcdv::ListLakeActionsRequest request = new gcdv::ListLakeActionsRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
             };
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActions(request);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -929,7 +929,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -960,14 +960,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakeActionsAsync(ListLakeActionsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListLakeActionsRequest request = new ListLakeActionsRequest
+            gcdv::ListLakeActionsRequest request = new gcdv::ListLakeActionsRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -977,7 +977,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1008,11 +1008,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakeActions(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActions(parent);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1053,11 +1053,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakeActionsAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -1067,7 +1067,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1098,11 +1098,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakeActions(LakeName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActions(parent);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -1112,7 +1112,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1143,11 +1143,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListLakeActionsAsync(LakeName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListLakeActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -1157,7 +1157,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1188,32 +1188,32 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateZone(CreateZoneRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            CreateZoneRequest request = new CreateZoneRequest
+            gcdv::CreateZoneRequest request = new gcdv::CreateZoneRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 ZoneId = "",
-                Zone = new Zone(),
+                Zone = new gcdv::Zone(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Zone, OperationMetadata> response = dataplexServiceClient.CreateZone(request);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = dataplexServiceClient.CreateZone(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateZone(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateZone(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1224,32 +1224,32 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateZoneAsync(CreateZoneRequest, CallSettings)
             // Additional: CreateZoneAsync(CreateZoneRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateZoneRequest request = new CreateZoneRequest
+            gcdv::CreateZoneRequest request = new gcdv::CreateZoneRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 ZoneId = "",
-                Zone = new Zone(),
+                Zone = new gcdv::Zone(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Zone, OperationMetadata> response = await dataplexServiceClient.CreateZoneAsync(request);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateZoneAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateZoneAsync(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1259,28 +1259,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateZone(string, Zone, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
-            Zone zone = new Zone();
+            gcdv::Zone zone = new gcdv::Zone();
             string zoneId = "";
             // Make the request
-            Operation<Zone, OperationMetadata> response = dataplexServiceClient.CreateZone(parent, zone, zoneId);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = dataplexServiceClient.CreateZone(parent, zone, zoneId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateZone(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateZone(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1291,28 +1291,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateZoneAsync(string, Zone, string, CallSettings)
             // Additional: CreateZoneAsync(string, Zone, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
-            Zone zone = new Zone();
+            gcdv::Zone zone = new gcdv::Zone();
             string zoneId = "";
             // Make the request
-            Operation<Zone, OperationMetadata> response = await dataplexServiceClient.CreateZoneAsync(parent, zone, zoneId);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateZoneAsync(parent, zone, zoneId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateZoneAsync(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1322,28 +1322,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateZone(LakeName, Zone, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
-            Zone zone = new Zone();
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::Zone zone = new gcdv::Zone();
             string zoneId = "";
             // Make the request
-            Operation<Zone, OperationMetadata> response = dataplexServiceClient.CreateZone(parent, zone, zoneId);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = dataplexServiceClient.CreateZone(parent, zone, zoneId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateZone(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateZone(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1354,28 +1354,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateZoneAsync(LakeName, Zone, string, CallSettings)
             // Additional: CreateZoneAsync(LakeName, Zone, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
-            Zone zone = new Zone();
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::Zone zone = new gcdv::Zone();
             string zoneId = "";
             // Make the request
-            Operation<Zone, OperationMetadata> response = await dataplexServiceClient.CreateZoneAsync(parent, zone, zoneId);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateZoneAsync(parent, zone, zoneId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateZoneAsync(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1385,31 +1385,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateZone(UpdateZoneRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            UpdateZoneRequest request = new UpdateZoneRequest
+            gcdv::UpdateZoneRequest request = new gcdv::UpdateZoneRequest
             {
                 UpdateMask = new FieldMask(),
-                Zone = new Zone(),
+                Zone = new gcdv::Zone(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Zone, OperationMetadata> response = dataplexServiceClient.UpdateZone(request);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateZone(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateZone(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateZone(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1420,31 +1420,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateZoneAsync(UpdateZoneRequest, CallSettings)
             // Additional: UpdateZoneAsync(UpdateZoneRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateZoneRequest request = new UpdateZoneRequest
+            gcdv::UpdateZoneRequest request = new gcdv::UpdateZoneRequest
             {
                 UpdateMask = new FieldMask(),
-                Zone = new Zone(),
+                Zone = new gcdv::Zone(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Zone, OperationMetadata> response = await dataplexServiceClient.UpdateZoneAsync(request);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateZoneAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateZoneAsync(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1454,27 +1454,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateZone(Zone, FieldMask, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            Zone zone = new Zone();
+            gcdv::Zone zone = new gcdv::Zone();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Zone, OperationMetadata> response = dataplexServiceClient.UpdateZone(zone, updateMask);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateZone(zone, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateZone(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateZone(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1485,27 +1485,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateZoneAsync(Zone, FieldMask, CallSettings)
             // Additional: UpdateZoneAsync(Zone, FieldMask, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Zone zone = new Zone();
+            gcdv::Zone zone = new gcdv::Zone();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Zone, OperationMetadata> response = await dataplexServiceClient.UpdateZoneAsync(zone, updateMask);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateZoneAsync(zone, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateZoneAsync(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1515,24 +1515,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteZone(DeleteZoneRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            DeleteZoneRequest request = new DeleteZoneRequest
+            gcdv::DeleteZoneRequest request = new gcdv::DeleteZoneRequest
             {
-                ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteZone(request);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteZone(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteZone(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteZone(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1548,24 +1548,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteZoneAsync(DeleteZoneRequest, CallSettings)
             // Additional: DeleteZoneAsync(DeleteZoneRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteZoneRequest request = new DeleteZoneRequest
+            gcdv::DeleteZoneRequest request = new gcdv::DeleteZoneRequest
             {
-                ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteZoneAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteZoneAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteZoneAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1580,21 +1580,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteZone(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteZone(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteZone(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteZone(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteZone(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1610,21 +1610,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteZoneAsync(string, CallSettings)
             // Additional: DeleteZoneAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteZoneAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteZoneAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteZoneAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1639,21 +1639,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteZone(ZoneName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ZoneName name = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName name = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteZone(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteZone(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteZone(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteZone(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1669,21 +1669,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteZoneAsync(ZoneName, CallSettings)
             // Additional: DeleteZoneAsync(ZoneName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ZoneName name = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName name = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteZoneAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteZoneAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteZoneAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1698,30 +1698,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZones(ListZonesRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListZonesRequest request = new ListZonesRequest
+            gcdv::ListZonesRequest request = new gcdv::ListZonesRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListZonesResponse, Zone> response = dataplexServiceClient.ListZones(request);
+            PagedEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZones(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Zone item in response)
+            foreach (gcdv::Zone item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListZonesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListZonesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Zone item in page)
+                foreach (gcdv::Zone item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1730,10 +1730,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Zone> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Zone> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Zone item in singlePage)
+            foreach (gcdv::Zone item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1748,30 +1748,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZonesAsync(ListZonesRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListZonesRequest request = new ListZonesRequest
+            gcdv::ListZonesRequest request = new gcdv::ListZonesRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListZonesResponse, Zone> response = dataplexServiceClient.ListZonesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZonesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Zone item) =>
+            await response.ForEachAsync((gcdv::Zone item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListZonesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListZonesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Zone item in page)
+                foreach (gcdv::Zone item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1780,10 +1780,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Zone> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Zone> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Zone item in singlePage)
+            foreach (gcdv::Zone item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1798,25 +1798,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZones(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedEnumerable<ListZonesResponse, Zone> response = dataplexServiceClient.ListZones(parent);
+            PagedEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZones(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Zone item in response)
+            foreach (gcdv::Zone item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListZonesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListZonesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Zone item in page)
+                foreach (gcdv::Zone item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1825,10 +1825,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Zone> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Zone> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Zone item in singlePage)
+            foreach (gcdv::Zone item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1843,25 +1843,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZonesAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedAsyncEnumerable<ListZonesResponse, Zone> response = dataplexServiceClient.ListZonesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZonesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Zone item) =>
+            await response.ForEachAsync((gcdv::Zone item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListZonesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListZonesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Zone item in page)
+                foreach (gcdv::Zone item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1870,10 +1870,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Zone> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Zone> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Zone item in singlePage)
+            foreach (gcdv::Zone item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1888,25 +1888,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZones(LakeName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedEnumerable<ListZonesResponse, Zone> response = dataplexServiceClient.ListZones(parent);
+            PagedEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZones(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Zone item in response)
+            foreach (gcdv::Zone item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListZonesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListZonesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Zone item in page)
+                foreach (gcdv::Zone item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1915,10 +1915,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Zone> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Zone> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Zone item in singlePage)
+            foreach (gcdv::Zone item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1933,25 +1933,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZonesAsync(LakeName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedAsyncEnumerable<ListZonesResponse, Zone> response = dataplexServiceClient.ListZonesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZonesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Zone item) =>
+            await response.ForEachAsync((gcdv::Zone item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListZonesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListZonesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Zone item in page)
+                foreach (gcdv::Zone item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1960,10 +1960,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Zone> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Zone> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Zone item in singlePage)
+            foreach (gcdv::Zone item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1978,14 +1978,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetZone(GetZoneRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            GetZoneRequest request = new GetZoneRequest
+            gcdv::GetZoneRequest request = new gcdv::GetZoneRequest
             {
-                ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
             };
             // Make the request
-            Zone response = dataplexServiceClient.GetZone(request);
+            gcdv::Zone response = dataplexServiceClient.GetZone(request);
             // End snippet
         }
 
@@ -1995,14 +1995,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetZoneAsync(GetZoneRequest, CallSettings)
             // Additional: GetZoneAsync(GetZoneRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetZoneRequest request = new GetZoneRequest
+            gcdv::GetZoneRequest request = new gcdv::GetZoneRequest
             {
-                ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
             };
             // Make the request
-            Zone response = await dataplexServiceClient.GetZoneAsync(request);
+            gcdv::Zone response = await dataplexServiceClient.GetZoneAsync(request);
             // End snippet
         }
 
@@ -2011,11 +2011,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetZone(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            Zone response = dataplexServiceClient.GetZone(name);
+            gcdv::Zone response = dataplexServiceClient.GetZone(name);
             // End snippet
         }
 
@@ -2025,11 +2025,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetZoneAsync(string, CallSettings)
             // Additional: GetZoneAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            Zone response = await dataplexServiceClient.GetZoneAsync(name);
+            gcdv::Zone response = await dataplexServiceClient.GetZoneAsync(name);
             // End snippet
         }
 
@@ -2038,11 +2038,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetZone(ZoneName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ZoneName name = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName name = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            Zone response = dataplexServiceClient.GetZone(name);
+            gcdv::Zone response = dataplexServiceClient.GetZone(name);
             // End snippet
         }
 
@@ -2052,11 +2052,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetZoneAsync(ZoneName, CallSettings)
             // Additional: GetZoneAsync(ZoneName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ZoneName name = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName name = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            Zone response = await dataplexServiceClient.GetZoneAsync(name);
+            gcdv::Zone response = await dataplexServiceClient.GetZoneAsync(name);
             // End snippet
         }
 
@@ -2065,14 +2065,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZoneActions(ListZoneActionsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListZoneActionsRequest request = new ListZoneActionsRequest
+            gcdv::ListZoneActionsRequest request = new gcdv::ListZoneActionsRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
             };
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActions(request);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -2082,7 +2082,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2113,14 +2113,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZoneActionsAsync(ListZoneActionsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListZoneActionsRequest request = new ListZoneActionsRequest
+            gcdv::ListZoneActionsRequest request = new gcdv::ListZoneActionsRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -2130,7 +2130,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2161,11 +2161,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZoneActions(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActions(parent);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -2175,7 +2175,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2206,11 +2206,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZoneActionsAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -2220,7 +2220,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2251,11 +2251,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZoneActions(ZoneName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActions(parent);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -2265,7 +2265,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2296,11 +2296,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListZoneActionsAsync(ZoneName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -2310,7 +2310,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2341,32 +2341,32 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateAsset(CreateAssetRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            CreateAssetRequest request = new CreateAssetRequest
+            gcdv::CreateAssetRequest request = new gcdv::CreateAssetRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
                 AssetId = "",
-                Asset = new Asset(),
+                Asset = new gcdv::Asset(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Asset, OperationMetadata> response = dataplexServiceClient.CreateAsset(request);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = dataplexServiceClient.CreateAsset(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateAsset(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateAsset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2377,32 +2377,32 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateAssetAsync(CreateAssetRequest, CallSettings)
             // Additional: CreateAssetAsync(CreateAssetRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateAssetRequest request = new CreateAssetRequest
+            gcdv::CreateAssetRequest request = new gcdv::CreateAssetRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
                 AssetId = "",
-                Asset = new Asset(),
+                Asset = new gcdv::Asset(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Asset, OperationMetadata> response = await dataplexServiceClient.CreateAssetAsync(request);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateAssetAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateAssetAsync(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2412,28 +2412,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateAsset(string, Asset, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
-            Asset asset = new Asset();
+            gcdv::Asset asset = new gcdv::Asset();
             string assetId = "";
             // Make the request
-            Operation<Asset, OperationMetadata> response = dataplexServiceClient.CreateAsset(parent, asset, assetId);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = dataplexServiceClient.CreateAsset(parent, asset, assetId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateAsset(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateAsset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2444,28 +2444,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateAssetAsync(string, Asset, string, CallSettings)
             // Additional: CreateAssetAsync(string, Asset, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
-            Asset asset = new Asset();
+            gcdv::Asset asset = new gcdv::Asset();
             string assetId = "";
             // Make the request
-            Operation<Asset, OperationMetadata> response = await dataplexServiceClient.CreateAssetAsync(parent, asset, assetId);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateAssetAsync(parent, asset, assetId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateAssetAsync(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2475,28 +2475,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateAsset(ZoneName, Asset, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
-            Asset asset = new Asset();
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::Asset asset = new gcdv::Asset();
             string assetId = "";
             // Make the request
-            Operation<Asset, OperationMetadata> response = dataplexServiceClient.CreateAsset(parent, asset, assetId);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = dataplexServiceClient.CreateAsset(parent, asset, assetId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateAsset(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateAsset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2507,28 +2507,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateAssetAsync(ZoneName, Asset, string, CallSettings)
             // Additional: CreateAssetAsync(ZoneName, Asset, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
-            Asset asset = new Asset();
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::Asset asset = new gcdv::Asset();
             string assetId = "";
             // Make the request
-            Operation<Asset, OperationMetadata> response = await dataplexServiceClient.CreateAssetAsync(parent, asset, assetId);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateAssetAsync(parent, asset, assetId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateAssetAsync(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2538,31 +2538,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateAsset(UpdateAssetRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            UpdateAssetRequest request = new UpdateAssetRequest
+            gcdv::UpdateAssetRequest request = new gcdv::UpdateAssetRequest
             {
                 UpdateMask = new FieldMask(),
-                Asset = new Asset(),
+                Asset = new gcdv::Asset(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Asset, OperationMetadata> response = dataplexServiceClient.UpdateAsset(request);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateAsset(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateAsset(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateAsset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2573,31 +2573,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateAssetAsync(UpdateAssetRequest, CallSettings)
             // Additional: UpdateAssetAsync(UpdateAssetRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateAssetRequest request = new UpdateAssetRequest
+            gcdv::UpdateAssetRequest request = new gcdv::UpdateAssetRequest
             {
                 UpdateMask = new FieldMask(),
-                Asset = new Asset(),
+                Asset = new gcdv::Asset(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Asset, OperationMetadata> response = await dataplexServiceClient.UpdateAssetAsync(request);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateAssetAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateAssetAsync(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2607,27 +2607,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateAsset(Asset, FieldMask, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            Asset asset = new Asset();
+            gcdv::Asset asset = new gcdv::Asset();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Asset, OperationMetadata> response = dataplexServiceClient.UpdateAsset(asset, updateMask);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateAsset(asset, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateAsset(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateAsset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2638,27 +2638,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateAssetAsync(Asset, FieldMask, CallSettings)
             // Additional: UpdateAssetAsync(Asset, FieldMask, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Asset asset = new Asset();
+            gcdv::Asset asset = new gcdv::Asset();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Asset, OperationMetadata> response = await dataplexServiceClient.UpdateAssetAsync(asset, updateMask);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateAssetAsync(asset, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateAssetAsync(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2668,24 +2668,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteAsset(DeleteAssetRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            DeleteAssetRequest request = new DeleteAssetRequest
+            gcdv::DeleteAssetRequest request = new gcdv::DeleteAssetRequest
             {
-                AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
+                AssetName = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteAsset(request);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteAsset(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteAsset(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteAsset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2701,24 +2701,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteAssetAsync(DeleteAssetRequest, CallSettings)
             // Additional: DeleteAssetAsync(DeleteAssetRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteAssetRequest request = new DeleteAssetRequest
+            gcdv::DeleteAssetRequest request = new gcdv::DeleteAssetRequest
             {
-                AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
+                AssetName = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteAssetAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteAssetAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteAssetAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2733,21 +2733,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteAsset(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/assets/[ASSET]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteAsset(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteAsset(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteAsset(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteAsset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2763,21 +2763,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteAssetAsync(string, CallSettings)
             // Additional: DeleteAssetAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/assets/[ASSET]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteAssetAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteAssetAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteAssetAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2792,21 +2792,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteAsset(AssetName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            AssetName name = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
+            gcdv::AssetName name = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteAsset(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteAsset(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteAsset(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteAsset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2822,21 +2822,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteAssetAsync(AssetName, CallSettings)
             // Additional: DeleteAssetAsync(AssetName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            AssetName name = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
+            gcdv::AssetName name = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteAssetAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteAssetAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteAssetAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2851,30 +2851,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssets(ListAssetsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListAssetsRequest request = new ListAssetsRequest
+            gcdv::ListAssetsRequest request = new gcdv::ListAssetsRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListAssetsResponse, Asset> response = dataplexServiceClient.ListAssets(request);
+            PagedEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssets(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Asset item in response)
+            foreach (gcdv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAssetsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Asset item in page)
+                foreach (gcdv::Asset item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2883,10 +2883,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Asset> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Asset> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Asset item in singlePage)
+            foreach (gcdv::Asset item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2901,30 +2901,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetsAsync(ListAssetsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListAssetsRequest request = new ListAssetsRequest
+            gcdv::ListAssetsRequest request = new gcdv::ListAssetsRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListAssetsResponse, Asset> response = dataplexServiceClient.ListAssetsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssetsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Asset item) =>
+            await response.ForEachAsync((gcdv::Asset item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAssetsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListAssetsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Asset item in page)
+                foreach (gcdv::Asset item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2933,10 +2933,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Asset> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Asset> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Asset item in singlePage)
+            foreach (gcdv::Asset item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2951,25 +2951,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssets(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            PagedEnumerable<ListAssetsResponse, Asset> response = dataplexServiceClient.ListAssets(parent);
+            PagedEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssets(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Asset item in response)
+            foreach (gcdv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAssetsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Asset item in page)
+                foreach (gcdv::Asset item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2978,10 +2978,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Asset> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Asset> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Asset item in singlePage)
+            foreach (gcdv::Asset item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2996,25 +2996,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetsAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            PagedAsyncEnumerable<ListAssetsResponse, Asset> response = dataplexServiceClient.ListAssetsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Asset item) =>
+            await response.ForEachAsync((gcdv::Asset item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAssetsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListAssetsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Asset item in page)
+                foreach (gcdv::Asset item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3023,10 +3023,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Asset> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Asset> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Asset item in singlePage)
+            foreach (gcdv::Asset item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3041,25 +3041,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssets(ZoneName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            PagedEnumerable<ListAssetsResponse, Asset> response = dataplexServiceClient.ListAssets(parent);
+            PagedEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssets(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Asset item in response)
+            foreach (gcdv::Asset item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAssetsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListAssetsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Asset item in page)
+                foreach (gcdv::Asset item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3068,10 +3068,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Asset> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Asset> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Asset item in singlePage)
+            foreach (gcdv::Asset item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3086,25 +3086,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetsAsync(ZoneName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            PagedAsyncEnumerable<ListAssetsResponse, Asset> response = dataplexServiceClient.ListAssetsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListAssetsResponse, gcdv::Asset> response = dataplexServiceClient.ListAssetsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Asset item) =>
+            await response.ForEachAsync((gcdv::Asset item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAssetsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListAssetsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Asset item in page)
+                foreach (gcdv::Asset item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3113,10 +3113,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Asset> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Asset> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Asset item in singlePage)
+            foreach (gcdv::Asset item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3131,14 +3131,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetAsset(GetAssetRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            GetAssetRequest request = new GetAssetRequest
+            gcdv::GetAssetRequest request = new gcdv::GetAssetRequest
             {
-                AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
+                AssetName = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
             };
             // Make the request
-            Asset response = dataplexServiceClient.GetAsset(request);
+            gcdv::Asset response = dataplexServiceClient.GetAsset(request);
             // End snippet
         }
 
@@ -3148,14 +3148,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetAssetAsync(GetAssetRequest, CallSettings)
             // Additional: GetAssetAsync(GetAssetRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetAssetRequest request = new GetAssetRequest
+            gcdv::GetAssetRequest request = new gcdv::GetAssetRequest
             {
-                AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
+                AssetName = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
             };
             // Make the request
-            Asset response = await dataplexServiceClient.GetAssetAsync(request);
+            gcdv::Asset response = await dataplexServiceClient.GetAssetAsync(request);
             // End snippet
         }
 
@@ -3164,11 +3164,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetAsset(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/assets/[ASSET]";
             // Make the request
-            Asset response = dataplexServiceClient.GetAsset(name);
+            gcdv::Asset response = dataplexServiceClient.GetAsset(name);
             // End snippet
         }
 
@@ -3178,11 +3178,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetAssetAsync(string, CallSettings)
             // Additional: GetAssetAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/assets/[ASSET]";
             // Make the request
-            Asset response = await dataplexServiceClient.GetAssetAsync(name);
+            gcdv::Asset response = await dataplexServiceClient.GetAssetAsync(name);
             // End snippet
         }
 
@@ -3191,11 +3191,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetAsset(AssetName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            AssetName name = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
+            gcdv::AssetName name = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
             // Make the request
-            Asset response = dataplexServiceClient.GetAsset(name);
+            gcdv::Asset response = dataplexServiceClient.GetAsset(name);
             // End snippet
         }
 
@@ -3205,11 +3205,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetAssetAsync(AssetName, CallSettings)
             // Additional: GetAssetAsync(AssetName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            AssetName name = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
+            gcdv::AssetName name = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
             // Make the request
-            Asset response = await dataplexServiceClient.GetAssetAsync(name);
+            gcdv::Asset response = await dataplexServiceClient.GetAssetAsync(name);
             // End snippet
         }
 
@@ -3218,14 +3218,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetActions(ListAssetActionsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListAssetActionsRequest request = new ListAssetActionsRequest
+            gcdv::ListAssetActionsRequest request = new gcdv::ListAssetActionsRequest
             {
-                ParentAsAssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
+                ParentAsAssetName = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
             };
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActions(request);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -3235,7 +3235,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3266,14 +3266,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetActionsAsync(ListAssetActionsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListAssetActionsRequest request = new ListAssetActionsRequest
+            gcdv::ListAssetActionsRequest request = new gcdv::ListAssetActionsRequest
             {
-                ParentAsAssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
+                ParentAsAssetName = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -3283,7 +3283,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3314,11 +3314,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetActions(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/assets/[ASSET]";
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActions(parent);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -3328,7 +3328,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3359,11 +3359,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetActionsAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/assets/[ASSET]";
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -3373,7 +3373,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3404,11 +3404,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetActions(AssetName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            AssetName parent = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
+            gcdv::AssetName parent = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
             // Make the request
-            PagedEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActions(parent);
+            PagedEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Action item in response)
@@ -3418,7 +3418,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListActionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListActionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3449,11 +3449,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListAssetActionsAsync(AssetName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            AssetName parent = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
+            gcdv::AssetName parent = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]");
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListAssetActionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -3463,7 +3463,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3494,27 +3494,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateTask(CreateTaskRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            CreateTaskRequest request = new CreateTaskRequest
+            gcdv::CreateTaskRequest request = new gcdv::CreateTaskRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 TaskId = "",
                 Task = new gcdv::Task(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = dataplexServiceClient.CreateTask(request);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = dataplexServiceClient.CreateTask(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateTask(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateTask(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3530,27 +3530,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateTaskAsync(CreateTaskRequest, CallSettings)
             // Additional: CreateTaskAsync(CreateTaskRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateTaskRequest request = new CreateTaskRequest
+            gcdv::CreateTaskRequest request = new gcdv::CreateTaskRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 TaskId = "",
                 Task = new gcdv::Task(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = await dataplexServiceClient.CreateTaskAsync(request);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateTaskAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateTaskAsync(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3565,23 +3565,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateTask(string, Task, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             gcdv::Task task = new gcdv::Task();
             string taskId = "";
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = dataplexServiceClient.CreateTask(parent, task, taskId);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = dataplexServiceClient.CreateTask(parent, task, taskId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateTask(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateTask(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3597,23 +3597,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateTaskAsync(string, Task, string, CallSettings)
             // Additional: CreateTaskAsync(string, Task, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             gcdv::Task task = new gcdv::Task();
             string taskId = "";
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = await dataplexServiceClient.CreateTaskAsync(parent, task, taskId);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateTaskAsync(parent, task, taskId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateTaskAsync(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3628,23 +3628,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateTask(LakeName, Task, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             gcdv::Task task = new gcdv::Task();
             string taskId = "";
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = dataplexServiceClient.CreateTask(parent, task, taskId);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = dataplexServiceClient.CreateTask(parent, task, taskId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateTask(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateTask(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3660,23 +3660,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateTaskAsync(LakeName, Task, string, CallSettings)
             // Additional: CreateTaskAsync(LakeName, Task, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             gcdv::Task task = new gcdv::Task();
             string taskId = "";
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = await dataplexServiceClient.CreateTaskAsync(parent, task, taskId);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateTaskAsync(parent, task, taskId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateTaskAsync(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3691,26 +3691,26 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateTask(UpdateTaskRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            UpdateTaskRequest request = new UpdateTaskRequest
+            gcdv::UpdateTaskRequest request = new gcdv::UpdateTaskRequest
             {
                 UpdateMask = new FieldMask(),
                 Task = new gcdv::Task(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = dataplexServiceClient.UpdateTask(request);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateTask(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateTask(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateTask(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3726,26 +3726,26 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateTaskAsync(UpdateTaskRequest, CallSettings)
             // Additional: UpdateTaskAsync(UpdateTaskRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateTaskRequest request = new UpdateTaskRequest
+            gcdv::UpdateTaskRequest request = new gcdv::UpdateTaskRequest
             {
                 UpdateMask = new FieldMask(),
                 Task = new gcdv::Task(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = await dataplexServiceClient.UpdateTaskAsync(request);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateTaskAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateTaskAsync(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3760,22 +3760,22 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateTask(Task, FieldMask, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             gcdv::Task task = new gcdv::Task();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = dataplexServiceClient.UpdateTask(task, updateMask);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateTask(task, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateTask(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateTask(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3791,22 +3791,22 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateTaskAsync(Task, FieldMask, CallSettings)
             // Additional: UpdateTaskAsync(Task, FieldMask, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             gcdv::Task task = new gcdv::Task();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = await dataplexServiceClient.UpdateTaskAsync(task, updateMask);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateTaskAsync(task, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateTaskAsync(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3821,24 +3821,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteTask(DeleteTaskRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            DeleteTaskRequest request = new DeleteTaskRequest
+            gcdv::DeleteTaskRequest request = new gcdv::DeleteTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteTask(request);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteTask(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteTask(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteTask(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3854,24 +3854,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteTaskAsync(DeleteTaskRequest, CallSettings)
             // Additional: DeleteTaskAsync(DeleteTaskRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteTaskRequest request = new DeleteTaskRequest
+            gcdv::DeleteTaskRequest request = new gcdv::DeleteTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteTaskAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteTaskAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteTaskAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3886,21 +3886,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteTask(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteTask(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteTask(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteTask(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteTask(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3916,21 +3916,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteTaskAsync(string, CallSettings)
             // Additional: DeleteTaskAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteTaskAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteTaskAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteTaskAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3945,21 +3945,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteTask(TaskName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
+            gcdv::TaskName name = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteTask(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteTask(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteTask(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteTask(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3975,21 +3975,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteTaskAsync(TaskName, CallSettings)
             // Additional: DeleteTaskAsync(TaskName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
+            gcdv::TaskName name = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteTaskAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteTaskAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteTaskAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4004,16 +4004,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListTasks(ListTasksRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gcdv::ListTasksRequest request = new gcdv::ListTasksRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasks(request);
+            PagedEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasks(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Task item in response)
@@ -4023,7 +4023,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4054,16 +4054,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListTasksAsync(ListTasksRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gcdv::ListTasksRequest request = new gcdv::ListTasksRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(request);
+            PagedAsyncEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Task item) =>
@@ -4073,7 +4073,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4104,11 +4104,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListTasks(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasks(parent);
+            PagedEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Task item in response)
@@ -4118,7 +4118,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4149,11 +4149,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListTasksAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Task item) =>
@@ -4163,7 +4163,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4194,11 +4194,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListTasks(LakeName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasks(parent);
+            PagedEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Task item in response)
@@ -4208,7 +4208,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcdv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4239,11 +4239,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListTasksAsync(LakeName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListTasksResponse, gcdv::Task> response = dataplexServiceClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Task item) =>
@@ -4253,7 +4253,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -4284,11 +4284,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetTask(GetTaskRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gcdv::GetTaskRequest request = new gcdv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
             };
             // Make the request
             gcdv::Task response = dataplexServiceClient.GetTask(request);
@@ -4301,11 +4301,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetTaskAsync(GetTaskRequest, CallSettings)
             // Additional: GetTaskAsync(GetTaskRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gcdv::GetTaskRequest request = new gcdv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
             };
             // Make the request
             gcdv::Task response = await dataplexServiceClient.GetTaskAsync(request);
@@ -4317,7 +4317,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetTask(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]";
             // Make the request
@@ -4331,7 +4331,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetTaskAsync(string, CallSettings)
             // Additional: GetTaskAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]";
             // Make the request
@@ -4344,9 +4344,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetTask(TaskName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
+            gcdv::TaskName name = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
             // Make the request
             gcdv::Task response = dataplexServiceClient.GetTask(name);
             // End snippet
@@ -4358,9 +4358,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetTaskAsync(TaskName, CallSettings)
             // Additional: GetTaskAsync(TaskName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
+            gcdv::TaskName name = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
             // Make the request
             gcdv::Task response = await dataplexServiceClient.GetTaskAsync(name);
             // End snippet
@@ -4371,28 +4371,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListJobs(ListJobsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListJobsRequest request = new ListJobsRequest
+            gcdv::ListJobsRequest request = new gcdv::ListJobsRequest
             {
-                ParentAsTaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                ParentAsTaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
             };
             // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = dataplexServiceClient.ListJobs(request);
+            PagedEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
+            foreach (gcdv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcdv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4401,10 +4401,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Job> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcdv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4419,28 +4419,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListJobsAsync(ListJobsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListJobsRequest request = new ListJobsRequest
+            gcdv::ListJobsRequest request = new gcdv::ListJobsRequest
             {
-                ParentAsTaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                ParentAsTaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = dataplexServiceClient.ListJobsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcdv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcdv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4449,10 +4449,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcdv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4467,25 +4467,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListJobs(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]";
             // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = dataplexServiceClient.ListJobs(parent);
+            PagedEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
+            foreach (gcdv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcdv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4494,10 +4494,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Job> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcdv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4512,25 +4512,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListJobsAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]";
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = dataplexServiceClient.ListJobsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcdv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcdv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4539,10 +4539,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcdv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4557,25 +4557,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListJobs(TaskName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            TaskName parent = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
+            gcdv::TaskName parent = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
             // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = dataplexServiceClient.ListJobs(parent);
+            PagedEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
+            foreach (gcdv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcdv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4584,10 +4584,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Job> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcdv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4602,25 +4602,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListJobsAsync(TaskName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName parent = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
+            gcdv::TaskName parent = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = dataplexServiceClient.ListJobsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcdv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcdv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -4629,10 +4629,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcdv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4647,14 +4647,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetJob(GetJobRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            GetJobRequest request = new GetJobRequest
+            gcdv::GetJobRequest request = new gcdv::GetJobRequest
             {
-                JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
+                JobName = gcdv::JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
             };
             // Make the request
-            Job response = dataplexServiceClient.GetJob(request);
+            gcdv::Job response = dataplexServiceClient.GetJob(request);
             // End snippet
         }
 
@@ -4664,14 +4664,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetJobAsync(GetJobRequest, CallSettings)
             // Additional: GetJobAsync(GetJobRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetJobRequest request = new GetJobRequest
+            gcdv::GetJobRequest request = new gcdv::GetJobRequest
             {
-                JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
+                JobName = gcdv::JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
             };
             // Make the request
-            Job response = await dataplexServiceClient.GetJobAsync(request);
+            gcdv::Job response = await dataplexServiceClient.GetJobAsync(request);
             // End snippet
         }
 
@@ -4680,11 +4680,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetJob(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]/jobs/[JOB]";
             // Make the request
-            Job response = dataplexServiceClient.GetJob(name);
+            gcdv::Job response = dataplexServiceClient.GetJob(name);
             // End snippet
         }
 
@@ -4694,11 +4694,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetJobAsync(string, CallSettings)
             // Additional: GetJobAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]/jobs/[JOB]";
             // Make the request
-            Job response = await dataplexServiceClient.GetJobAsync(name);
+            gcdv::Job response = await dataplexServiceClient.GetJobAsync(name);
             // End snippet
         }
 
@@ -4707,11 +4707,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetJob(JobName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]");
+            gcdv::JobName name = gcdv::JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]");
             // Make the request
-            Job response = dataplexServiceClient.GetJob(name);
+            gcdv::Job response = dataplexServiceClient.GetJob(name);
             // End snippet
         }
 
@@ -4721,11 +4721,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetJobAsync(JobName, CallSettings)
             // Additional: GetJobAsync(JobName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]");
+            gcdv::JobName name = gcdv::JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]");
             // Make the request
-            Job response = await dataplexServiceClient.GetJobAsync(name);
+            gcdv::Job response = await dataplexServiceClient.GetJobAsync(name);
             // End snippet
         }
 
@@ -4734,11 +4734,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CancelJob(CancelJobRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            CancelJobRequest request = new CancelJobRequest
+            gcdv::CancelJobRequest request = new gcdv::CancelJobRequest
             {
-                JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
+                JobName = gcdv::JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
             };
             // Make the request
             dataplexServiceClient.CancelJob(request);
@@ -4751,11 +4751,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CancelJobAsync(CancelJobRequest, CallSettings)
             // Additional: CancelJobAsync(CancelJobRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CancelJobRequest request = new CancelJobRequest
+            gcdv::CancelJobRequest request = new gcdv::CancelJobRequest
             {
-                JobName = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
+                JobName = gcdv::JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]"),
             };
             // Make the request
             await dataplexServiceClient.CancelJobAsync(request);
@@ -4767,7 +4767,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CancelJob(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]/jobs/[JOB]";
             // Make the request
@@ -4781,7 +4781,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CancelJobAsync(string, CallSettings)
             // Additional: CancelJobAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]/jobs/[JOB]";
             // Make the request
@@ -4794,9 +4794,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CancelJob(JobName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]");
+            gcdv::JobName name = gcdv::JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]");
             // Make the request
             dataplexServiceClient.CancelJob(name);
             // End snippet
@@ -4808,9 +4808,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CancelJobAsync(JobName, CallSettings)
             // Additional: CancelJobAsync(JobName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]");
+            gcdv::JobName name = gcdv::JobName.FromProjectLocationLakeTaskJob("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]", "[JOB]");
             // Make the request
             await dataplexServiceClient.CancelJobAsync(name);
             // End snippet
@@ -4821,27 +4821,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateEnvironment(CreateEnvironmentRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            gcdv::CreateEnvironmentRequest request = new gcdv::CreateEnvironmentRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 EnvironmentId = "",
                 Environment = new gcdv::Environment(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.CreateEnvironment(request);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = dataplexServiceClient.CreateEnvironment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4857,27 +4857,27 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateEnvironmentAsync(CreateEnvironmentRequest, CallSettings)
             // Additional: CreateEnvironmentAsync(CreateEnvironmentRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            gcdv::CreateEnvironmentRequest request = new gcdv::CreateEnvironmentRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 EnvironmentId = "",
                 Environment = new gcdv::Environment(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(request);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4892,23 +4892,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateEnvironment(string, Environment, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             gcdv::Environment environment = new gcdv::Environment();
             string environmentId = "";
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.CreateEnvironment(parent, environment, environmentId);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = dataplexServiceClient.CreateEnvironment(parent, environment, environmentId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4924,23 +4924,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateEnvironmentAsync(string, Environment, string, CallSettings)
             // Additional: CreateEnvironmentAsync(string, Environment, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             gcdv::Environment environment = new gcdv::Environment();
             string environmentId = "";
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4955,23 +4955,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateEnvironment(LakeName, Environment, string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             gcdv::Environment environment = new gcdv::Environment();
             string environmentId = "";
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.CreateEnvironment(parent, environment, environmentId);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = dataplexServiceClient.CreateEnvironment(parent, environment, environmentId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceCreateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4987,23 +4987,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateEnvironmentAsync(LakeName, Environment, string, CallSettings)
             // Additional: CreateEnvironmentAsync(LakeName, Environment, string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             gcdv::Environment environment = new gcdv::Environment();
             string environmentId = "";
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5018,26 +5018,26 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateEnvironment(UpdateEnvironmentRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            gcdv::UpdateEnvironmentRequest request = new gcdv::UpdateEnvironmentRequest
             {
                 UpdateMask = new FieldMask(),
                 Environment = new gcdv::Environment(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.UpdateEnvironment(request);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateEnvironment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateEnvironment(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5053,26 +5053,26 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateEnvironmentAsync(UpdateEnvironmentRequest, CallSettings)
             // Additional: UpdateEnvironmentAsync(UpdateEnvironmentRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            gcdv::UpdateEnvironmentRequest request = new gcdv::UpdateEnvironmentRequest
             {
                 UpdateMask = new FieldMask(),
                 Environment = new gcdv::Environment(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.UpdateEnvironmentAsync(request);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateEnvironmentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateEnvironmentAsync(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5087,22 +5087,22 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateEnvironment(Environment, FieldMask, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             gcdv::Environment environment = new gcdv::Environment();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = dataplexServiceClient.UpdateEnvironment(environment, updateMask);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = dataplexServiceClient.UpdateEnvironment(environment, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateEnvironment(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceUpdateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5118,22 +5118,22 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateEnvironmentAsync(Environment, FieldMask, CallSettings)
             // Additional: UpdateEnvironmentAsync(Environment, FieldMask, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             gcdv::Environment environment = new gcdv::Environment();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcdv::Environment, OperationMetadata> response = await dataplexServiceClient.UpdateEnvironmentAsync(environment, updateMask);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateEnvironmentAsync(environment, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateEnvironmentAsync(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5148,24 +5148,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteEnvironment(DeleteEnvironmentRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
+            gcdv::DeleteEnvironmentRequest request = new gcdv::DeleteEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(request);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5181,24 +5181,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CallSettings)
             // Additional: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest
+            gcdv::DeleteEnvironmentRequest request = new gcdv::DeleteEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5213,21 +5213,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteEnvironment(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5243,21 +5243,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteEnvironmentAsync(string, CallSettings)
             // Additional: DeleteEnvironmentAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5272,21 +5272,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteEnvironment(EnvironmentName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            gcdv::EnvironmentName name = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataplexServiceClient.DeleteEnvironment(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataplexServiceClient.PollOnceDeleteEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5302,21 +5302,21 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteEnvironmentAsync(EnvironmentName, CallSettings)
             // Additional: DeleteEnvironmentAsync(EnvironmentName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            gcdv::EnvironmentName name = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteEnvironmentAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -5331,16 +5331,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEnvironments(ListEnvironmentsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            gcdv::ListEnvironmentsRequest request = new gcdv::ListEnvironmentsRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(request);
+            PagedEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Environment item in response)
@@ -5350,7 +5350,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5381,16 +5381,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            gcdv::ListEnvironmentsRequest request = new gcdv::ListEnvironmentsRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Environment item) =>
@@ -5400,7 +5400,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5431,11 +5431,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEnvironments(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(parent);
+            PagedEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Environment item in response)
@@ -5445,7 +5445,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5476,11 +5476,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Environment item) =>
@@ -5490,7 +5490,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5521,11 +5521,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEnvironments(LakeName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(parent);
+            PagedEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Environment item in response)
@@ -5535,7 +5535,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5566,11 +5566,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(LakeName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Environment item) =>
@@ -5580,7 +5580,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -5611,11 +5611,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetEnvironment(GetEnvironmentRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest
+            gcdv::GetEnvironmentRequest request = new gcdv::GetEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
             };
             // Make the request
             gcdv::Environment response = dataplexServiceClient.GetEnvironment(request);
@@ -5628,11 +5628,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetEnvironmentAsync(GetEnvironmentRequest, CallSettings)
             // Additional: GetEnvironmentAsync(GetEnvironmentRequest, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest
+            gcdv::GetEnvironmentRequest request = new gcdv::GetEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
             };
             // Make the request
             gcdv::Environment response = await dataplexServiceClient.GetEnvironmentAsync(request);
@@ -5644,7 +5644,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetEnvironment(string, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
             // Make the request
@@ -5658,7 +5658,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetEnvironmentAsync(string, CallSettings)
             // Additional: GetEnvironmentAsync(string, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
             // Make the request
@@ -5671,9 +5671,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetEnvironment(EnvironmentName, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            gcdv::EnvironmentName name = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
             // Make the request
             gcdv::Environment response = dataplexServiceClient.GetEnvironment(name);
             // End snippet
@@ -5685,9 +5685,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetEnvironmentAsync(EnvironmentName, CallSettings)
             // Additional: GetEnvironmentAsync(EnvironmentName, CancellationToken)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            gcdv::EnvironmentName name = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
             // Make the request
             gcdv::Environment response = await dataplexServiceClient.GetEnvironmentAsync(name);
             // End snippet
@@ -5698,29 +5698,29 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListSessions(ListSessionsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListSessionsRequest request = new ListSessionsRequest
+            gcdv::ListSessionsRequest request = new gcdv::ListSessionsRequest
             {
-                ParentAsEnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                ParentAsEnvironmentName = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessions(request);
+            PagedEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Session item in response)
+            foreach (gcdv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSessionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcdv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -5729,10 +5729,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Session> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcdv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -5747,29 +5747,29 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListSessionsAsync(ListSessionsRequest, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListSessionsRequest request = new ListSessionsRequest
+            gcdv::ListSessionsRequest request = new gcdv::ListSessionsRequest
             {
-                ParentAsEnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                ParentAsEnvironmentName = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Session item) =>
+            await response.ForEachAsync((gcdv::Session item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListSessionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcdv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -5778,10 +5778,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Session> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcdv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -5796,25 +5796,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListSessions(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
             // Make the request
-            PagedEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessions(parent);
+            PagedEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Session item in response)
+            foreach (gcdv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSessionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcdv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -5823,10 +5823,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Session> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcdv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -5841,25 +5841,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListSessionsAsync(string, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/environments/[ENVIRONMENT]";
             // Make the request
-            PagedAsyncEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Session item) =>
+            await response.ForEachAsync((gcdv::Session item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListSessionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcdv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -5868,10 +5868,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Session> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcdv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -5886,25 +5886,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListSessions(EnvironmentName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            EnvironmentName parent = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            gcdv::EnvironmentName parent = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
             // Make the request
-            PagedEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessions(parent);
+            PagedEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Session item in response)
+            foreach (gcdv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSessionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcdv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -5913,10 +5913,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Session> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcdv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -5931,25 +5931,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListSessionsAsync(EnvironmentName, string, int?, CallSettings)
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EnvironmentName parent = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            gcdv::EnvironmentName parent = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
             // Make the request
-            PagedAsyncEnumerable<ListSessionsResponse, Session> response = dataplexServiceClient.ListSessionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListSessionsResponse, gcdv::Session> response = dataplexServiceClient.ListSessionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Session item) =>
+            await response.ForEachAsync((gcdv::Session item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListSessionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcdv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -5958,10 +5958,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Session> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcdv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

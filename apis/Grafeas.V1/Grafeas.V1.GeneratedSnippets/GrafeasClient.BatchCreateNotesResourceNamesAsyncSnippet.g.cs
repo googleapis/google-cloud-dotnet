@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace GrafeasV1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START containeranalysis_v1_generated_Grafeas_BatchCreateNotes_async_flattened_resourceNames]
     using Grafeas.V1;
@@ -33,9 +33,8 @@ namespace GrafeasV1.Snippets
         /// </remarks>
         public async Task BatchCreateNotesResourceNamesAsync()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };

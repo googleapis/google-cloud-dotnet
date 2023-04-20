@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START compute_v1_generated_RegionInstanceTemplates_Insert_sync_flattened]
     using Google.Cloud.Compute.V1;

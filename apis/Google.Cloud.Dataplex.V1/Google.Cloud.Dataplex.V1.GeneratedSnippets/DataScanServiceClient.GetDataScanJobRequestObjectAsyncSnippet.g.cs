@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataScanService_GetDataScanJob_async]
     using System.Threading.Tasks;
@@ -35,15 +35,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetDataScanJobRequestObjectAsync()
         {
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetDataScanJobRequest request = new GetDataScanJobRequest
+            gcdv::GetDataScanJobRequest request = new gcdv::GetDataScanJobRequest
             {
-                DataScanJobName = DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]"),
-                View = GetDataScanJobRequest.Types.DataScanJobView.Unspecified,
+                DataScanJobName = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]"),
+                View = gcdv::GetDataScanJobRequest.Types.DataScanJobView.Unspecified,
             };
             // Make the request
-            DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(request);
+            gcdv::DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(request);
         }
     }
     // [END dataplex_v1_generated_DataScanService_GetDataScanJob_async]

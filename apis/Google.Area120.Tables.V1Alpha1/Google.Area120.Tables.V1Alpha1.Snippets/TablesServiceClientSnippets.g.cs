@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Area120.Tables.V1Alpha1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Area120.Tables.V1Alpha1;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;

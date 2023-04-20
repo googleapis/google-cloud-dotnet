@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_UpdateZone_async]
     using Google.LongRunning;
@@ -37,31 +37,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task UpdateZoneRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateZoneRequest request = new UpdateZoneRequest
+            gcdv::UpdateZoneRequest request = new gcdv::UpdateZoneRequest
             {
                 UpdateMask = new FieldMask(),
-                Zone = new Zone(),
+                Zone = new gcdv::Zone(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Zone, OperationMetadata> response = await dataplexServiceClient.UpdateZoneAsync(request);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateZoneAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Zone, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Zone, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Zone result = completedResponse.Result;
+            gcdv::Zone result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Zone, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateZoneAsync(operationName);
+            Operation<gcdv::Zone, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateZoneAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Zone retrievedResult = retrievedResponse.Result;
+                gcdv::Zone retrievedResult = retrievedResponse.Result;
             }
         }
     }

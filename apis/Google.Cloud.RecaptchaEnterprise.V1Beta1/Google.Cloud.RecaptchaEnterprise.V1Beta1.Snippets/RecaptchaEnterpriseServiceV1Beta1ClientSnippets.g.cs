@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.RecaptchaEnterprise.V1Beta1;
     using Google.Protobuf;
     using System.Threading.Tasks;
 

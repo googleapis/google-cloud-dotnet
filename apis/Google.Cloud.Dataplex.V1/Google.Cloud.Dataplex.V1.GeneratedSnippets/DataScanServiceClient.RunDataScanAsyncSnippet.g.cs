@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataScanService_RunDataScan_async_flattened]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task RunDataScanAsync()
         {
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]";
             // Make the request
-            RunDataScanResponse response = await dataScanServiceClient.RunDataScanAsync(name);
+            gcdv::RunDataScanResponse response = await dataScanServiceClient.RunDataScanAsync(name);
         }
     }
     // [END dataplex_v1_generated_DataScanService_RunDataScan_async_flattened]

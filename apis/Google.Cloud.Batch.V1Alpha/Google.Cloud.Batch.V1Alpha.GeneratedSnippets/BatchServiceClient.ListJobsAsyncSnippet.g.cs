@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Batch.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START batch_v1alpha_generated_BatchService_ListJobs_async_flattened]
     using Google.Api.Gax;
@@ -38,25 +38,25 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         public async Task ListJobsAsync()
         {
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = batchServiceClient.ListJobsAsync(parent);
+            PagedAsyncEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcbv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcbv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcbv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -65,10 +65,10 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcbv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcbv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

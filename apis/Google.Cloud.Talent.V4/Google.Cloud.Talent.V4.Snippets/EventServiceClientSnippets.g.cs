@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Talent.V4;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>

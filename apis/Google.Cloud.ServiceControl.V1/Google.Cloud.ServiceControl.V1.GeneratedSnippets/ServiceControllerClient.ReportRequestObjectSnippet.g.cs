@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ServiceControl.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START servicecontrol_v1_generated_ServiceController_Report_sync]
     using Google.Cloud.ServiceControl.V1;

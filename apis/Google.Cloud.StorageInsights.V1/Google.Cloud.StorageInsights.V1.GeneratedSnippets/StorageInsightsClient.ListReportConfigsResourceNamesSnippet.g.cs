@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.StorageInsights.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START storageinsights_v1_generated_StorageInsights_ListReportConfigs_sync_flattened_resourceNames]
     using Google.Api.Gax;

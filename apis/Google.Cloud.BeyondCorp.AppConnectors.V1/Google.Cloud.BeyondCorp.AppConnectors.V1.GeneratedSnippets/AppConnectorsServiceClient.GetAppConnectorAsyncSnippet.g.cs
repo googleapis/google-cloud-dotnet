@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BeyondCorp.AppConnectors.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START beyondcorp_v1_generated_AppConnectorsService_GetAppConnector_async_flattened]
     using Google.Cloud.BeyondCorp.AppConnectors.V1;

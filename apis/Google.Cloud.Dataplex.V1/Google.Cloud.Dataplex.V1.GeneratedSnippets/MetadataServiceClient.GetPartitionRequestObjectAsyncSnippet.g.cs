@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_GetPartition_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetPartitionRequestObjectAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetPartitionRequest request = new GetPartitionRequest
+            gcdv::GetPartitionRequest request = new gcdv::GetPartitionRequest
             {
-                PartitionName = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
+                PartitionName = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
             };
             // Make the request
-            Partition response = await metadataServiceClient.GetPartitionAsync(request);
+            gcdv::Partition response = await metadataServiceClient.GetPartitionAsync(request);
         }
     }
     // [END dataplex_v1_generated_MetadataService_GetPartition_async]

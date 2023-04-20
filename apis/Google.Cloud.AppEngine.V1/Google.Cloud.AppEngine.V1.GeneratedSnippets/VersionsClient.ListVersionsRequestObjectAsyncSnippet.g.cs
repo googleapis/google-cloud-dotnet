@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.AppEngine.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START appengine_v1_generated_Versions_ListVersions_async]
     using Google.Api.Gax;
@@ -38,15 +38,15 @@ namespace Google.Cloud.AppEngine.V1.Snippets
         public async Task ListVersionsRequestObjectAsync()
         {
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcav::VersionsClient versionsClient = await gcav::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcav::ListVersionsRequest request = new gcav::ListVersionsRequest
             {
                 Parent = "",
-                View = VersionView.Basic,
+                View = gcav::VersionView.Basic,
             };
             // Make the request
-            PagedAsyncEnumerable<ListVersionsResponse, gcav::Version> response = versionsClient.ListVersionsAsync(request);
+            PagedAsyncEnumerable<gcav::ListVersionsResponse, gcav::Version> response = versionsClient.ListVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Version item) =>
@@ -56,7 +56,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

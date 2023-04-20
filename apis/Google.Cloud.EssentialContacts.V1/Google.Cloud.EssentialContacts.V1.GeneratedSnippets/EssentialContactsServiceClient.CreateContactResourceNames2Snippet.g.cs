@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.EssentialContacts.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START essentialcontacts_v1_generated_EssentialContactsService_CreateContact_sync_flattened_resourceNames2]
     using Google.Api.Gax.ResourceNames;

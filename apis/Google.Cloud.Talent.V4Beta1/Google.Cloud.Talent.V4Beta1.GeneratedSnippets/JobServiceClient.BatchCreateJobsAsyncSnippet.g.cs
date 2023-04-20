@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START jobs_v4beta1_generated_JobService_BatchCreateJobs_async_flattened]
     using Google.Cloud.Talent.V4Beta1;

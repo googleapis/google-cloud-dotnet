@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AssuredWorkloads.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START assuredworkloads_v1_generated_AssuredWorkloadsService_CreateWorkload_sync_flattened_resourceNames]
     using Google.Cloud.AssuredWorkloads.V1;

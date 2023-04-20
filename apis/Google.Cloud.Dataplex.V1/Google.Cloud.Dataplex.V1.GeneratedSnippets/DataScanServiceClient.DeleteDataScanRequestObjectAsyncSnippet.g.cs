@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataScanService_DeleteDataScan_async]
     using Google.LongRunning;
@@ -37,24 +37,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task DeleteDataScanRequestObjectAsync()
         {
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteDataScanRequest request = new DeleteDataScanRequest
+            gcdv::DeleteDataScanRequest request = new gcdv::DeleteDataScanRequest
             {
-                DataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceDeleteDataScanAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceDeleteDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

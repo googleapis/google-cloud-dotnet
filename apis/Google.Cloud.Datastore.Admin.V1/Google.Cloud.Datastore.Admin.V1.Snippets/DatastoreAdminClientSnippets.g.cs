@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Datastore.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.LongRunning;
@@ -35,32 +35,32 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: ExportEntities(ExportEntitiesRequest, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            gcdav::DatastoreAdminClient datastoreAdminClient = gcdav::DatastoreAdminClient.Create();
             // Initialize request argument(s)
-            ExportEntitiesRequest request = new ExportEntitiesRequest
+            gcdav::ExportEntitiesRequest request = new gcdav::ExportEntitiesRequest
             {
                 ProjectId = "",
                 Labels = { { "", "" }, },
-                EntityFilter = new EntityFilter(),
+                EntityFilter = new gcdav::EntityFilter(),
                 OutputUrlPrefix = "",
             };
             // Make the request
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> response = datastoreAdminClient.ExportEntities(request);
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> response = datastoreAdminClient.ExportEntities(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            ExportEntitiesResponse result = completedResponse.Result;
+            gcdav::ExportEntitiesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> retrievedResponse = datastoreAdminClient.PollOnceExportEntities(operationName);
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> retrievedResponse = datastoreAdminClient.PollOnceExportEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ExportEntitiesResponse retrievedResult = retrievedResponse.Result;
+                gcdav::ExportEntitiesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -71,32 +71,32 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // Snippet: ExportEntitiesAsync(ExportEntitiesRequest, CallSettings)
             // Additional: ExportEntitiesAsync(ExportEntitiesRequest, CancellationToken)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ExportEntitiesRequest request = new ExportEntitiesRequest
+            gcdav::ExportEntitiesRequest request = new gcdav::ExportEntitiesRequest
             {
                 ProjectId = "",
                 Labels = { { "", "" }, },
-                EntityFilter = new EntityFilter(),
+                EntityFilter = new gcdav::EntityFilter(),
                 OutputUrlPrefix = "",
             };
             // Make the request
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> response = await datastoreAdminClient.ExportEntitiesAsync(request);
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> response = await datastoreAdminClient.ExportEntitiesAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            ExportEntitiesResponse result = completedResponse.Result;
+            gcdav::ExportEntitiesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> retrievedResponse = await datastoreAdminClient.PollOnceExportEntitiesAsync(operationName);
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> retrievedResponse = await datastoreAdminClient.PollOnceExportEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ExportEntitiesResponse retrievedResult = retrievedResponse.Result;
+                gcdav::ExportEntitiesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -106,29 +106,29 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: ExportEntities(string, IDictionary<string,string>, EntityFilter, string, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            gcdav::DatastoreAdminClient datastoreAdminClient = gcdav::DatastoreAdminClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             IDictionary<string, string> labels = new Dictionary<string, string> { { "", "" }, };
-            EntityFilter entityFilter = new EntityFilter();
+            gcdav::EntityFilter entityFilter = new gcdav::EntityFilter();
             string outputUrlPrefix = "";
             // Make the request
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> response = datastoreAdminClient.ExportEntities(projectId, labels, entityFilter, outputUrlPrefix);
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> response = datastoreAdminClient.ExportEntities(projectId, labels, entityFilter, outputUrlPrefix);
 
             // Poll until the returned long-running operation is complete
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            ExportEntitiesResponse result = completedResponse.Result;
+            gcdav::ExportEntitiesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> retrievedResponse = datastoreAdminClient.PollOnceExportEntities(operationName);
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> retrievedResponse = datastoreAdminClient.PollOnceExportEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ExportEntitiesResponse retrievedResult = retrievedResponse.Result;
+                gcdav::ExportEntitiesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -139,29 +139,29 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // Snippet: ExportEntitiesAsync(string, IDictionary<string,string>, EntityFilter, string, CallSettings)
             // Additional: ExportEntitiesAsync(string, IDictionary<string,string>, EntityFilter, string, CancellationToken)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             IDictionary<string, string> labels = new Dictionary<string, string> { { "", "" }, };
-            EntityFilter entityFilter = new EntityFilter();
+            gcdav::EntityFilter entityFilter = new gcdav::EntityFilter();
             string outputUrlPrefix = "";
             // Make the request
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> response = await datastoreAdminClient.ExportEntitiesAsync(projectId, labels, entityFilter, outputUrlPrefix);
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> response = await datastoreAdminClient.ExportEntitiesAsync(projectId, labels, entityFilter, outputUrlPrefix);
 
             // Poll until the returned long-running operation is complete
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            ExportEntitiesResponse result = completedResponse.Result;
+            gcdav::ExportEntitiesResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ExportEntitiesResponse, ExportEntitiesMetadata> retrievedResponse = await datastoreAdminClient.PollOnceExportEntitiesAsync(operationName);
+            Operation<gcdav::ExportEntitiesResponse, gcdav::ExportEntitiesMetadata> retrievedResponse = await datastoreAdminClient.PollOnceExportEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ExportEntitiesResponse retrievedResult = retrievedResponse.Result;
+                gcdav::ExportEntitiesResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -171,27 +171,27 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: ImportEntities(ImportEntitiesRequest, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            gcdav::DatastoreAdminClient datastoreAdminClient = gcdav::DatastoreAdminClient.Create();
             // Initialize request argument(s)
-            ImportEntitiesRequest request = new ImportEntitiesRequest
+            gcdav::ImportEntitiesRequest request = new gcdav::ImportEntitiesRequest
             {
                 ProjectId = "",
                 Labels = { { "", "" }, },
                 InputUrl = "",
-                EntityFilter = new EntityFilter(),
+                EntityFilter = new gcdav::EntityFilter(),
             };
             // Make the request
-            Operation<Empty, ImportEntitiesMetadata> response = datastoreAdminClient.ImportEntities(request);
+            Operation<Empty, gcdav::ImportEntitiesMetadata> response = datastoreAdminClient.ImportEntities(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, ImportEntitiesMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdav::ImportEntitiesMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, ImportEntitiesMetadata> retrievedResponse = datastoreAdminClient.PollOnceImportEntities(operationName);
+            Operation<Empty, gcdav::ImportEntitiesMetadata> retrievedResponse = datastoreAdminClient.PollOnceImportEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -207,27 +207,27 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // Snippet: ImportEntitiesAsync(ImportEntitiesRequest, CallSettings)
             // Additional: ImportEntitiesAsync(ImportEntitiesRequest, CancellationToken)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ImportEntitiesRequest request = new ImportEntitiesRequest
+            gcdav::ImportEntitiesRequest request = new gcdav::ImportEntitiesRequest
             {
                 ProjectId = "",
                 Labels = { { "", "" }, },
                 InputUrl = "",
-                EntityFilter = new EntityFilter(),
+                EntityFilter = new gcdav::EntityFilter(),
             };
             // Make the request
-            Operation<Empty, ImportEntitiesMetadata> response = await datastoreAdminClient.ImportEntitiesAsync(request);
+            Operation<Empty, gcdav::ImportEntitiesMetadata> response = await datastoreAdminClient.ImportEntitiesAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, ImportEntitiesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdav::ImportEntitiesMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, ImportEntitiesMetadata> retrievedResponse = await datastoreAdminClient.PollOnceImportEntitiesAsync(operationName);
+            Operation<Empty, gcdav::ImportEntitiesMetadata> retrievedResponse = await datastoreAdminClient.PollOnceImportEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -242,24 +242,24 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: ImportEntities(string, IDictionary<string,string>, string, EntityFilter, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            gcdav::DatastoreAdminClient datastoreAdminClient = gcdav::DatastoreAdminClient.Create();
             // Initialize request argument(s)
             string projectId = "";
             IDictionary<string, string> labels = new Dictionary<string, string> { { "", "" }, };
             string inputUrl = "";
-            EntityFilter entityFilter = new EntityFilter();
+            gcdav::EntityFilter entityFilter = new gcdav::EntityFilter();
             // Make the request
-            Operation<Empty, ImportEntitiesMetadata> response = datastoreAdminClient.ImportEntities(projectId, labels, inputUrl, entityFilter);
+            Operation<Empty, gcdav::ImportEntitiesMetadata> response = datastoreAdminClient.ImportEntities(projectId, labels, inputUrl, entityFilter);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, ImportEntitiesMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdav::ImportEntitiesMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, ImportEntitiesMetadata> retrievedResponse = datastoreAdminClient.PollOnceImportEntities(operationName);
+            Operation<Empty, gcdav::ImportEntitiesMetadata> retrievedResponse = datastoreAdminClient.PollOnceImportEntities(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -275,24 +275,24 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // Snippet: ImportEntitiesAsync(string, IDictionary<string,string>, string, EntityFilter, CallSettings)
             // Additional: ImportEntitiesAsync(string, IDictionary<string,string>, string, EntityFilter, CancellationToken)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             IDictionary<string, string> labels = new Dictionary<string, string> { { "", "" }, };
             string inputUrl = "";
-            EntityFilter entityFilter = new EntityFilter();
+            gcdav::EntityFilter entityFilter = new gcdav::EntityFilter();
             // Make the request
-            Operation<Empty, ImportEntitiesMetadata> response = await datastoreAdminClient.ImportEntitiesAsync(projectId, labels, inputUrl, entityFilter);
+            Operation<Empty, gcdav::ImportEntitiesMetadata> response = await datastoreAdminClient.ImportEntitiesAsync(projectId, labels, inputUrl, entityFilter);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, ImportEntitiesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdav::ImportEntitiesMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, ImportEntitiesMetadata> retrievedResponse = await datastoreAdminClient.PollOnceImportEntitiesAsync(operationName);
+            Operation<Empty, gcdav::ImportEntitiesMetadata> retrievedResponse = await datastoreAdminClient.PollOnceImportEntitiesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -307,25 +307,25 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: CreateIndex(CreateIndexRequest, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            gcdav::DatastoreAdminClient datastoreAdminClient = gcdav::DatastoreAdminClient.Create();
             // Initialize request argument(s)
-            CreateIndexRequest request = new CreateIndexRequest
+            gcdav::CreateIndexRequest request = new gcdav::CreateIndexRequest
             {
                 ProjectId = "",
                 Index = new gcdav::Index(),
             };
             // Make the request
-            Operation<gcdav::Index, IndexOperationMetadata> response = datastoreAdminClient.CreateIndex(request);
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> response = datastoreAdminClient.CreateIndex(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdav::Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdav::Index, IndexOperationMetadata> retrievedResponse = datastoreAdminClient.PollOnceCreateIndex(operationName);
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> retrievedResponse = datastoreAdminClient.PollOnceCreateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -341,25 +341,25 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // Snippet: CreateIndexAsync(CreateIndexRequest, CallSettings)
             // Additional: CreateIndexAsync(CreateIndexRequest, CancellationToken)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            CreateIndexRequest request = new CreateIndexRequest
+            gcdav::CreateIndexRequest request = new gcdav::CreateIndexRequest
             {
                 ProjectId = "",
                 Index = new gcdav::Index(),
             };
             // Make the request
-            Operation<gcdav::Index, IndexOperationMetadata> response = await datastoreAdminClient.CreateIndexAsync(request);
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> response = await datastoreAdminClient.CreateIndexAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdav::Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdav::Index, IndexOperationMetadata> retrievedResponse = await datastoreAdminClient.PollOnceCreateIndexAsync(operationName);
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> retrievedResponse = await datastoreAdminClient.PollOnceCreateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -374,25 +374,25 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: DeleteIndex(DeleteIndexRequest, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            gcdav::DatastoreAdminClient datastoreAdminClient = gcdav::DatastoreAdminClient.Create();
             // Initialize request argument(s)
-            DeleteIndexRequest request = new DeleteIndexRequest
+            gcdav::DeleteIndexRequest request = new gcdav::DeleteIndexRequest
             {
                 ProjectId = "",
                 IndexId = "",
             };
             // Make the request
-            Operation<gcdav::Index, IndexOperationMetadata> response = datastoreAdminClient.DeleteIndex(request);
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> response = datastoreAdminClient.DeleteIndex(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdav::Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcdav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdav::Index, IndexOperationMetadata> retrievedResponse = datastoreAdminClient.PollOnceDeleteIndex(operationName);
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> retrievedResponse = datastoreAdminClient.PollOnceDeleteIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -408,25 +408,25 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // Snippet: DeleteIndexAsync(DeleteIndexRequest, CallSettings)
             // Additional: DeleteIndexAsync(DeleteIndexRequest, CancellationToken)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteIndexRequest request = new DeleteIndexRequest
+            gcdav::DeleteIndexRequest request = new gcdav::DeleteIndexRequest
             {
                 ProjectId = "",
                 IndexId = "",
             };
             // Make the request
-            Operation<gcdav::Index, IndexOperationMetadata> response = await datastoreAdminClient.DeleteIndexAsync(request);
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> response = await datastoreAdminClient.DeleteIndexAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdav::Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdav::Index, IndexOperationMetadata> retrievedResponse = await datastoreAdminClient.PollOnceDeleteIndexAsync(operationName);
+            Operation<gcdav::Index, gcdav::IndexOperationMetadata> retrievedResponse = await datastoreAdminClient.PollOnceDeleteIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -441,9 +441,9 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: GetIndex(GetIndexRequest, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            gcdav::DatastoreAdminClient datastoreAdminClient = gcdav::DatastoreAdminClient.Create();
             // Initialize request argument(s)
-            GetIndexRequest request = new GetIndexRequest
+            gcdav::GetIndexRequest request = new gcdav::GetIndexRequest
             {
                 ProjectId = "",
                 IndexId = "",
@@ -459,9 +459,9 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // Snippet: GetIndexAsync(GetIndexRequest, CallSettings)
             // Additional: GetIndexAsync(GetIndexRequest, CancellationToken)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            GetIndexRequest request = new GetIndexRequest
+            gcdav::GetIndexRequest request = new gcdav::GetIndexRequest
             {
                 ProjectId = "",
                 IndexId = "",
@@ -476,15 +476,15 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: ListIndexes(ListIndexesRequest, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            gcdav::DatastoreAdminClient datastoreAdminClient = gcdav::DatastoreAdminClient.Create();
             // Initialize request argument(s)
-            ListIndexesRequest request = new ListIndexesRequest
+            gcdav::ListIndexesRequest request = new gcdav::ListIndexesRequest
             {
                 ProjectId = "",
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListIndexesResponse, gcdav::Index> response = datastoreAdminClient.ListIndexes(request);
+            PagedEnumerable<gcdav::ListIndexesResponse, gcdav::Index> response = datastoreAdminClient.ListIndexes(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdav::Index item in response)
@@ -494,7 +494,7 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListIndexesResponse page in response.AsRawResponses())
+            foreach (gcdav::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -525,15 +525,15 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         {
             // Snippet: ListIndexesAsync(ListIndexesRequest, CallSettings)
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ListIndexesRequest request = new ListIndexesRequest
+            gcdav::ListIndexesRequest request = new gcdav::ListIndexesRequest
             {
                 ProjectId = "",
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, gcdav::Index> response = datastoreAdminClient.ListIndexesAsync(request);
+            PagedAsyncEnumerable<gcdav::ListIndexesResponse, gcdav::Index> response = datastoreAdminClient.ListIndexesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdav::Index item) =>
@@ -543,7 +543,7 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIndexesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdav::ListIndexesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

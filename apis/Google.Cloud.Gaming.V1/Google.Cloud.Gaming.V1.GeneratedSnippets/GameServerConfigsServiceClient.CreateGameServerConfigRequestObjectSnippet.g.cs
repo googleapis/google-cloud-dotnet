@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Gaming.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gameservices_v1_generated_GameServerConfigsService_CreateGameServerConfig_sync]
     using Google.Cloud.Gaming.V1;

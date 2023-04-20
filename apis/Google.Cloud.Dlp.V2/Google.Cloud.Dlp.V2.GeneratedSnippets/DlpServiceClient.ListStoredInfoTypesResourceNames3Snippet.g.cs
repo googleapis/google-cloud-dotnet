@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dlp.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dlp_v2_generated_DlpService_ListStoredInfoTypes_sync_flattened_resourceNames3]
     using Google.Api.Gax;

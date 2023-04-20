@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Logging.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START logging_v2_generated_MetricsServiceV2_CreateLogMetric_async]
     using Google.Api.Gax.ResourceNames;

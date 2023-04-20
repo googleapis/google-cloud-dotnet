@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Security.PublicCA.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START publicca_v1beta1_generated_PublicCertificateAuthorityService_CreateExternalAccountKey_sync_flattened]
     using Google.Cloud.Security.PublicCA.V1Beta1;

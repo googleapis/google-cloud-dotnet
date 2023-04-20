@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START networkconnectivity_v1alpha1_generated_HubService_DeleteSpoke_sync_flattened]
     using Google.Cloud.NetworkConnectivity.V1Alpha1;

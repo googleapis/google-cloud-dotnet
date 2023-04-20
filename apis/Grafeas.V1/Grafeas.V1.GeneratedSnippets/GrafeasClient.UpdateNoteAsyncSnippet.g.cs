@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace GrafeasV1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START containeranalysis_v1_generated_Grafeas_UpdateNote_async_flattened]
     using Google.Protobuf.WellKnownTypes;
@@ -33,9 +33,8 @@ namespace GrafeasV1.Snippets
         /// </remarks>
         public async Task UpdateNoteAsync()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             Note note = new Note();

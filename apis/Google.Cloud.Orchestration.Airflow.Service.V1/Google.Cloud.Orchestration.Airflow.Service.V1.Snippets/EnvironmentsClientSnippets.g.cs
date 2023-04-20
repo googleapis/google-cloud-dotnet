@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.LongRunning;
@@ -34,25 +34,25 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: CreateEnvironment(CreateEnvironmentRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            gcoasv::CreateEnvironmentRequest request = new gcoasv::CreateEnvironmentRequest
             {
                 Parent = "",
                 Environment = new gcoasv::Environment(),
             };
             // Make the request
-            Operation<gcoasv::Environment, OperationMetadata> response = environmentsClient.CreateEnvironment(request);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> response = environmentsClient.CreateEnvironment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcoasv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcoasv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcoasv::Environment, OperationMetadata> retrievedResponse = environmentsClient.PollOnceCreateEnvironment(operationName);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceCreateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -68,25 +68,25 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: CreateEnvironmentAsync(CreateEnvironmentRequest, CallSettings)
             // Additional: CreateEnvironmentAsync(CreateEnvironmentRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            gcoasv::CreateEnvironmentRequest request = new gcoasv::CreateEnvironmentRequest
             {
                 Parent = "",
                 Environment = new gcoasv::Environment(),
             };
             // Make the request
-            Operation<gcoasv::Environment, OperationMetadata> response = await environmentsClient.CreateEnvironmentAsync(request);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> response = await environmentsClient.CreateEnvironmentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcoasv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcoasv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcoasv::Environment, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceCreateEnvironmentAsync(operationName);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceCreateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -101,22 +101,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: CreateEnvironment(string, Environment, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
             string parent = "";
             gcoasv::Environment environment = new gcoasv::Environment();
             // Make the request
-            Operation<gcoasv::Environment, OperationMetadata> response = environmentsClient.CreateEnvironment(parent, environment);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> response = environmentsClient.CreateEnvironment(parent, environment);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcoasv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcoasv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcoasv::Environment, OperationMetadata> retrievedResponse = environmentsClient.PollOnceCreateEnvironment(operationName);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceCreateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -132,22 +132,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: CreateEnvironmentAsync(string, Environment, CallSettings)
             // Additional: CreateEnvironmentAsync(string, Environment, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             gcoasv::Environment environment = new gcoasv::Environment();
             // Make the request
-            Operation<gcoasv::Environment, OperationMetadata> response = await environmentsClient.CreateEnvironmentAsync(parent, environment);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> response = await environmentsClient.CreateEnvironmentAsync(parent, environment);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcoasv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcoasv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcoasv::Environment, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceCreateEnvironmentAsync(operationName);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceCreateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -162,9 +162,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: GetEnvironment(GetEnvironmentRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest { Name = "", };
+            gcoasv::GetEnvironmentRequest request = new gcoasv::GetEnvironmentRequest { Name = "", };
             // Make the request
             gcoasv::Environment response = environmentsClient.GetEnvironment(request);
             // End snippet
@@ -176,9 +176,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: GetEnvironmentAsync(GetEnvironmentRequest, CallSettings)
             // Additional: GetEnvironmentAsync(GetEnvironmentRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest { Name = "", };
+            gcoasv::GetEnvironmentRequest request = new gcoasv::GetEnvironmentRequest { Name = "", };
             // Make the request
             gcoasv::Environment response = await environmentsClient.GetEnvironmentAsync(request);
             // End snippet
@@ -189,7 +189,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: GetEnvironment(string, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -203,7 +203,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: GetEnvironmentAsync(string, CallSettings)
             // Additional: GetEnvironmentAsync(string, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -216,11 +216,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: ListEnvironments(ListEnvironmentsRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest { Parent = "", };
+            gcoasv::ListEnvironmentsRequest request = new gcoasv::ListEnvironmentsRequest { Parent = "", };
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironments(request);
+            PagedEnumerable<gcoasv::ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcoasv::Environment item in response)
@@ -230,7 +230,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcoasv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -261,11 +261,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest { Parent = "", };
+            gcoasv::ListEnvironmentsRequest request = new gcoasv::ListEnvironmentsRequest { Parent = "", };
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironmentsAsync(request);
+            PagedAsyncEnumerable<gcoasv::ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcoasv::Environment item) =>
@@ -275,7 +275,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcoasv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -306,11 +306,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: ListEnvironments(string, string, int?, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironments(parent);
+            PagedEnumerable<gcoasv::ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcoasv::Environment item in response)
@@ -320,7 +320,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcoasv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -351,11 +351,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(string, string, int?, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
+            PagedAsyncEnumerable<gcoasv::ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcoasv::Environment item) =>
@@ -365,7 +365,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcoasv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -396,26 +396,26 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: UpdateEnvironment(UpdateEnvironmentRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            gcoasv::UpdateEnvironmentRequest request = new gcoasv::UpdateEnvironmentRequest
             {
                 Environment = new gcoasv::Environment(),
                 Name = "",
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<gcoasv::Environment, OperationMetadata> response = environmentsClient.UpdateEnvironment(request);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> response = environmentsClient.UpdateEnvironment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcoasv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcoasv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcoasv::Environment, OperationMetadata> retrievedResponse = environmentsClient.PollOnceUpdateEnvironment(operationName);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceUpdateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -431,26 +431,26 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: UpdateEnvironmentAsync(UpdateEnvironmentRequest, CallSettings)
             // Additional: UpdateEnvironmentAsync(UpdateEnvironmentRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateEnvironmentRequest request = new UpdateEnvironmentRequest
+            gcoasv::UpdateEnvironmentRequest request = new gcoasv::UpdateEnvironmentRequest
             {
                 Environment = new gcoasv::Environment(),
                 Name = "",
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<gcoasv::Environment, OperationMetadata> response = await environmentsClient.UpdateEnvironmentAsync(request);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> response = await environmentsClient.UpdateEnvironmentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcoasv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcoasv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcoasv::Environment, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceUpdateEnvironmentAsync(operationName);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceUpdateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -465,23 +465,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: UpdateEnvironment(string, Environment, FieldMask, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
             string name = "";
             gcoasv::Environment environment = new gcoasv::Environment();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcoasv::Environment, OperationMetadata> response = environmentsClient.UpdateEnvironment(name, environment, updateMask);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> response = environmentsClient.UpdateEnvironment(name, environment, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcoasv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcoasv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcoasv::Environment, OperationMetadata> retrievedResponse = environmentsClient.PollOnceUpdateEnvironment(operationName);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceUpdateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -497,23 +497,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: UpdateEnvironmentAsync(string, Environment, FieldMask, CallSettings)
             // Additional: UpdateEnvironmentAsync(string, Environment, FieldMask, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             gcoasv::Environment environment = new gcoasv::Environment();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcoasv::Environment, OperationMetadata> response = await environmentsClient.UpdateEnvironmentAsync(name, environment, updateMask);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> response = await environmentsClient.UpdateEnvironmentAsync(name, environment, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcoasv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcoasv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcoasv::Environment, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceUpdateEnvironmentAsync(operationName);
+            Operation<gcoasv::Environment, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceUpdateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -528,21 +528,21 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: DeleteEnvironment(DeleteEnvironmentRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest { Name = "", };
+            gcoasv::DeleteEnvironmentRequest request = new gcoasv::DeleteEnvironmentRequest { Name = "", };
             // Make the request
-            Operation<Empty, OperationMetadata> response = environmentsClient.DeleteEnvironment(request);
+            Operation<Empty, gcoasv::OperationMetadata> response = environmentsClient.DeleteEnvironment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = environmentsClient.PollOnceDeleteEnvironment(operationName);
+            Operation<Empty, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceDeleteEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -558,21 +558,21 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CallSettings)
             // Additional: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest { Name = "", };
+            gcoasv::DeleteEnvironmentRequest request = new gcoasv::DeleteEnvironmentRequest { Name = "", };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await environmentsClient.DeleteEnvironmentAsync(request);
+            Operation<Empty, gcoasv::OperationMetadata> response = await environmentsClient.DeleteEnvironmentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceDeleteEnvironmentAsync(operationName);
+            Operation<Empty, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceDeleteEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -587,21 +587,21 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: DeleteEnvironment(string, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = environmentsClient.DeleteEnvironment(name);
+            Operation<Empty, gcoasv::OperationMetadata> response = environmentsClient.DeleteEnvironment(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = environmentsClient.PollOnceDeleteEnvironment(operationName);
+            Operation<Empty, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceDeleteEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -617,21 +617,21 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: DeleteEnvironmentAsync(string, CallSettings)
             // Additional: DeleteEnvironmentAsync(string, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await environmentsClient.DeleteEnvironmentAsync(name);
+            Operation<Empty, gcoasv::OperationMetadata> response = await environmentsClient.DeleteEnvironmentAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceDeleteEnvironmentAsync(operationName);
+            Operation<Empty, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceDeleteEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -646,30 +646,30 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: SaveSnapshot(SaveSnapshotRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            SaveSnapshotRequest request = new SaveSnapshotRequest
+            gcoasv::SaveSnapshotRequest request = new gcoasv::SaveSnapshotRequest
             {
                 Environment = "",
                 SnapshotLocation = "",
             };
             // Make the request
-            Operation<SaveSnapshotResponse, OperationMetadata> response = environmentsClient.SaveSnapshot(request);
+            Operation<gcoasv::SaveSnapshotResponse, gcoasv::OperationMetadata> response = environmentsClient.SaveSnapshot(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<SaveSnapshotResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcoasv::SaveSnapshotResponse, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            SaveSnapshotResponse result = completedResponse.Result;
+            gcoasv::SaveSnapshotResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<SaveSnapshotResponse, OperationMetadata> retrievedResponse = environmentsClient.PollOnceSaveSnapshot(operationName);
+            Operation<gcoasv::SaveSnapshotResponse, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceSaveSnapshot(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                SaveSnapshotResponse retrievedResult = retrievedResponse.Result;
+                gcoasv::SaveSnapshotResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -680,30 +680,30 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: SaveSnapshotAsync(SaveSnapshotRequest, CallSettings)
             // Additional: SaveSnapshotAsync(SaveSnapshotRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            SaveSnapshotRequest request = new SaveSnapshotRequest
+            gcoasv::SaveSnapshotRequest request = new gcoasv::SaveSnapshotRequest
             {
                 Environment = "",
                 SnapshotLocation = "",
             };
             // Make the request
-            Operation<SaveSnapshotResponse, OperationMetadata> response = await environmentsClient.SaveSnapshotAsync(request);
+            Operation<gcoasv::SaveSnapshotResponse, gcoasv::OperationMetadata> response = await environmentsClient.SaveSnapshotAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<SaveSnapshotResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcoasv::SaveSnapshotResponse, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            SaveSnapshotResponse result = completedResponse.Result;
+            gcoasv::SaveSnapshotResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<SaveSnapshotResponse, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceSaveSnapshotAsync(operationName);
+            Operation<gcoasv::SaveSnapshotResponse, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceSaveSnapshotAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                SaveSnapshotResponse retrievedResult = retrievedResponse.Result;
+                gcoasv::SaveSnapshotResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -713,9 +713,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         {
             // Snippet: LoadSnapshot(LoadSnapshotRequest, CallSettings)
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            LoadSnapshotRequest request = new LoadSnapshotRequest
+            gcoasv::LoadSnapshotRequest request = new gcoasv::LoadSnapshotRequest
             {
                 Environment = "",
                 SnapshotPath = "",
@@ -725,22 +725,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
                 SkipGcsDataCopying = false,
             };
             // Make the request
-            Operation<LoadSnapshotResponse, OperationMetadata> response = environmentsClient.LoadSnapshot(request);
+            Operation<gcoasv::LoadSnapshotResponse, gcoasv::OperationMetadata> response = environmentsClient.LoadSnapshot(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<LoadSnapshotResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcoasv::LoadSnapshotResponse, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            LoadSnapshotResponse result = completedResponse.Result;
+            gcoasv::LoadSnapshotResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LoadSnapshotResponse, OperationMetadata> retrievedResponse = environmentsClient.PollOnceLoadSnapshot(operationName);
+            Operation<gcoasv::LoadSnapshotResponse, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceLoadSnapshot(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                LoadSnapshotResponse retrievedResult = retrievedResponse.Result;
+                gcoasv::LoadSnapshotResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -751,9 +751,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             // Snippet: LoadSnapshotAsync(LoadSnapshotRequest, CallSettings)
             // Additional: LoadSnapshotAsync(LoadSnapshotRequest, CancellationToken)
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            LoadSnapshotRequest request = new LoadSnapshotRequest
+            gcoasv::LoadSnapshotRequest request = new gcoasv::LoadSnapshotRequest
             {
                 Environment = "",
                 SnapshotPath = "",
@@ -763,22 +763,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
                 SkipGcsDataCopying = false,
             };
             // Make the request
-            Operation<LoadSnapshotResponse, OperationMetadata> response = await environmentsClient.LoadSnapshotAsync(request);
+            Operation<gcoasv::LoadSnapshotResponse, gcoasv::OperationMetadata> response = await environmentsClient.LoadSnapshotAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<LoadSnapshotResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcoasv::LoadSnapshotResponse, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            LoadSnapshotResponse result = completedResponse.Result;
+            gcoasv::LoadSnapshotResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LoadSnapshotResponse, OperationMetadata> retrievedResponse = await environmentsClient.PollOnceLoadSnapshotAsync(operationName);
+            Operation<gcoasv::LoadSnapshotResponse, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceLoadSnapshotAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                LoadSnapshotResponse retrievedResult = retrievedResponse.Result;
+                gcoasv::LoadSnapshotResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

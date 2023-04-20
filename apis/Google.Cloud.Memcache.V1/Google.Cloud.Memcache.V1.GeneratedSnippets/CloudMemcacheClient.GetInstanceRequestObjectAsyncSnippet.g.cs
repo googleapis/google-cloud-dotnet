@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Memcache.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START memcache_v1_generated_CloudMemcache_GetInstance_async]
     using Google.Cloud.Memcache.V1;

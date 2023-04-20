@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.TextToSpeech.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START texttospeech_v1_generated_TextToSpeech_ListVoices_async]
     using Google.Cloud.TextToSpeech.V1;

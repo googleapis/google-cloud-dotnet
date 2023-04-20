@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.WebRisk.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.WebRisk.V1;
     using Google.Protobuf;
     using System.Collections.Generic;
     using System.Threading.Tasks;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Scheduler.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudscheduler_v1_generated_CloudScheduler_DeleteJob_sync]
     using Google.Cloud.Scheduler.V1;

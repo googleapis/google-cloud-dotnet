@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Speech.V1P1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START speech_v1p1beta1_generated_Adaptation_CreateCustomClass_async]
     using Google.Api.Gax.ResourceNames;

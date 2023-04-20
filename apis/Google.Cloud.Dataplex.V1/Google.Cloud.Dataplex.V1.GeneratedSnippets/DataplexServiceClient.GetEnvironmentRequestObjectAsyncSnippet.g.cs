@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_GetEnvironment_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetEnvironmentRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest
+            gcdv::GetEnvironmentRequest request = new gcdv::GetEnvironmentRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]"),
             };
             // Make the request
-            Environment response = await dataplexServiceClient.GetEnvironmentAsync(request);
+            gcdv::Environment response = await dataplexServiceClient.GetEnvironmentAsync(request);
         }
     }
     // [END dataplex_v1_generated_DataplexService_GetEnvironment_async]

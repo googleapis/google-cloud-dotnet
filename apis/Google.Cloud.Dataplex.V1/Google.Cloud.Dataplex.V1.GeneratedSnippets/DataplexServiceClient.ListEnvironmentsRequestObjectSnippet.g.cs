@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_ListEnvironments_sync]
     using Google.Api.Gax;
@@ -36,16 +36,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public void ListEnvironmentsRequestObject()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = DataplexServiceClient.Create();
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            gcdv::ListEnvironmentsRequest request = new gcdv::ListEnvironmentsRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(request);
+            PagedEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = dataplexServiceClient.ListEnvironments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Environment item in response)
@@ -55,7 +55,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

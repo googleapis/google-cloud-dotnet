@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.ApigeeRegistry.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
     using Google.Api.Gax;
@@ -35,15 +35,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApis(ListApisRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ListApisRequest request = new ListApisRequest
+            gcav::ListApisRequest request = new gcav::ListApisRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListApisResponse, gcav::Api> response = registryClient.ListApis(request);
+            PagedEnumerable<gcav::ListApisResponse, gcav::Api> response = registryClient.ListApis(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Api item in response)
@@ -53,7 +53,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApisResponse page in response.AsRawResponses())
+            foreach (gcav::ListApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -84,15 +84,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApisAsync(ListApisRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListApisRequest request = new ListApisRequest
+            gcav::ListApisRequest request = new gcav::ListApisRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListApisResponse, gcav::Api> response = registryClient.ListApisAsync(request);
+            PagedAsyncEnumerable<gcav::ListApisResponse, gcav::Api> response = registryClient.ListApisAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Api item) =>
@@ -102,7 +102,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApisResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApisResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -133,11 +133,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApis(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListApisResponse, gcav::Api> response = registryClient.ListApis(parent);
+            PagedEnumerable<gcav::ListApisResponse, gcav::Api> response = registryClient.ListApis(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Api item in response)
@@ -147,7 +147,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApisResponse page in response.AsRawResponses())
+            foreach (gcav::ListApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -178,11 +178,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApisAsync(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListApisResponse, gcav::Api> response = registryClient.ListApisAsync(parent);
+            PagedAsyncEnumerable<gcav::ListApisResponse, gcav::Api> response = registryClient.ListApisAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Api item) =>
@@ -192,7 +192,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApisResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApisResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -223,11 +223,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApis(LocationName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListApisResponse, gcav::Api> response = registryClient.ListApis(parent);
+            PagedEnumerable<gcav::ListApisResponse, gcav::Api> response = registryClient.ListApis(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Api item in response)
@@ -237,7 +237,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApisResponse page in response.AsRawResponses())
+            foreach (gcav::ListApisResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -268,11 +268,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApisAsync(LocationName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListApisResponse, gcav::Api> response = registryClient.ListApisAsync(parent);
+            PagedAsyncEnumerable<gcav::ListApisResponse, gcav::Api> response = registryClient.ListApisAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Api item) =>
@@ -282,7 +282,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApisResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApisResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -313,11 +313,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApi(GetApiRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            GetApiRequest request = new GetApiRequest
+            gcav::GetApiRequest request = new gcav::GetApiRequest
             {
-                ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
             };
             // Make the request
             gcav::Api response = registryClient.GetApi(request);
@@ -330,11 +330,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiAsync(GetApiRequest, CallSettings)
             // Additional: GetApiAsync(GetApiRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetApiRequest request = new GetApiRequest
+            gcav::GetApiRequest request = new gcav::GetApiRequest
             {
-                ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
             };
             // Make the request
             gcav::Api response = await registryClient.GetApiAsync(request);
@@ -346,7 +346,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApi(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
             // Make the request
@@ -360,7 +360,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiAsync(string, CallSettings)
             // Additional: GetApiAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
             // Make the request
@@ -373,9 +373,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApi(ApiName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiName name = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName name = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
             gcav::Api response = registryClient.GetApi(name);
             // End snippet
@@ -387,9 +387,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiAsync(ApiName, CallSettings)
             // Additional: GetApiAsync(ApiName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiName name = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName name = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
             gcav::Api response = await registryClient.GetApiAsync(name);
             // End snippet
@@ -400,9 +400,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApi(CreateApiRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            CreateApiRequest request = new CreateApiRequest
+            gcav::CreateApiRequest request = new gcav::CreateApiRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Api = new gcav::Api(),
@@ -419,9 +419,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiAsync(CreateApiRequest, CallSettings)
             // Additional: CreateApiAsync(CreateApiRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            CreateApiRequest request = new CreateApiRequest
+            gcav::CreateApiRequest request = new gcav::CreateApiRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Api = new gcav::Api(),
@@ -437,7 +437,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApi(string, Api, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             gcav::Api api = new gcav::Api();
@@ -453,7 +453,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiAsync(string, Api, string, CallSettings)
             // Additional: CreateApiAsync(string, Api, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             gcav::Api api = new gcav::Api();
@@ -468,7 +468,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApi(LocationName, Api, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             gcav::Api api = new gcav::Api();
@@ -484,7 +484,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiAsync(LocationName, Api, string, CallSettings)
             // Additional: CreateApiAsync(LocationName, Api, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             gcav::Api api = new gcav::Api();
@@ -499,9 +499,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: UpdateApi(UpdateApiRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            UpdateApiRequest request = new UpdateApiRequest
+            gcav::UpdateApiRequest request = new gcav::UpdateApiRequest
             {
                 Api = new gcav::Api(),
                 UpdateMask = new FieldMask(),
@@ -518,9 +518,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: UpdateApiAsync(UpdateApiRequest, CallSettings)
             // Additional: UpdateApiAsync(UpdateApiRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateApiRequest request = new UpdateApiRequest
+            gcav::UpdateApiRequest request = new gcav::UpdateApiRequest
             {
                 Api = new gcav::Api(),
                 UpdateMask = new FieldMask(),
@@ -536,7 +536,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: UpdateApi(Api, FieldMask, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             gcav::Api api = new gcav::Api();
             FieldMask updateMask = new FieldMask();
@@ -551,7 +551,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: UpdateApiAsync(Api, FieldMask, CallSettings)
             // Additional: UpdateApiAsync(Api, FieldMask, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             gcav::Api api = new gcav::Api();
             FieldMask updateMask = new FieldMask();
@@ -565,11 +565,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApi(DeleteApiRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            DeleteApiRequest request = new DeleteApiRequest
+            gcav::DeleteApiRequest request = new gcav::DeleteApiRequest
             {
-                ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
                 Force = false,
             };
             // Make the request
@@ -583,11 +583,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiAsync(DeleteApiRequest, CallSettings)
             // Additional: DeleteApiAsync(DeleteApiRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteApiRequest request = new DeleteApiRequest
+            gcav::DeleteApiRequest request = new gcav::DeleteApiRequest
             {
-                ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
                 Force = false,
             };
             // Make the request
@@ -600,7 +600,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApi(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
             // Make the request
@@ -614,7 +614,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiAsync(string, CallSettings)
             // Additional: DeleteApiAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
             // Make the request
@@ -627,9 +627,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApi(ApiName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiName name = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName name = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
             registryClient.DeleteApi(name);
             // End snippet
@@ -641,9 +641,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiAsync(ApiName, CallSettings)
             // Additional: DeleteApiAsync(ApiName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiName name = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName name = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
             await registryClient.DeleteApiAsync(name);
             // End snippet
@@ -654,29 +654,29 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiVersions(ListApiVersionsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ListApiVersionsRequest request = new ListApiVersionsRequest
+            gcav::ListApiVersionsRequest request = new gcav::ListApiVersionsRequest
             {
-                ParentAsApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ParentAsApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListApiVersionsResponse, ApiVersion> response = registryClient.ListApiVersions(request);
+            PagedEnumerable<gcav::ListApiVersionsResponse, gcav::ApiVersion> response = registryClient.ListApiVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiVersion item in response)
+            foreach (gcav::ApiVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiVersionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiVersion item in page)
+                foreach (gcav::ApiVersion item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -685,10 +685,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiVersion> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiVersion> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiVersion item in singlePage)
+            foreach (gcav::ApiVersion item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -703,29 +703,29 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiVersionsAsync(ListApiVersionsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListApiVersionsRequest request = new ListApiVersionsRequest
+            gcav::ListApiVersionsRequest request = new gcav::ListApiVersionsRequest
             {
-                ParentAsApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ParentAsApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListApiVersionsResponse, ApiVersion> response = registryClient.ListApiVersionsAsync(request);
+            PagedAsyncEnumerable<gcav::ListApiVersionsResponse, gcav::ApiVersion> response = registryClient.ListApiVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiVersion item) =>
+            await response.ForEachAsync((gcav::ApiVersion item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiVersion item in page)
+                foreach (gcav::ApiVersion item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -734,10 +734,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiVersion> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiVersion> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiVersion item in singlePage)
+            foreach (gcav::ApiVersion item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -752,25 +752,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiVersions(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
             // Make the request
-            PagedEnumerable<ListApiVersionsResponse, ApiVersion> response = registryClient.ListApiVersions(parent);
+            PagedEnumerable<gcav::ListApiVersionsResponse, gcav::ApiVersion> response = registryClient.ListApiVersions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiVersion item in response)
+            foreach (gcav::ApiVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiVersionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiVersion item in page)
+                foreach (gcav::ApiVersion item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -779,10 +779,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiVersion> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiVersion> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiVersion item in singlePage)
+            foreach (gcav::ApiVersion item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -797,25 +797,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiVersionsAsync(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
             // Make the request
-            PagedAsyncEnumerable<ListApiVersionsResponse, ApiVersion> response = registryClient.ListApiVersionsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListApiVersionsResponse, gcav::ApiVersion> response = registryClient.ListApiVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiVersion item) =>
+            await response.ForEachAsync((gcav::ApiVersion item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiVersion item in page)
+                foreach (gcav::ApiVersion item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -824,10 +824,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiVersion> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiVersion> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiVersion item in singlePage)
+            foreach (gcav::ApiVersion item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -842,25 +842,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiVersions(ApiName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
-            PagedEnumerable<ListApiVersionsResponse, ApiVersion> response = registryClient.ListApiVersions(parent);
+            PagedEnumerable<gcav::ListApiVersionsResponse, gcav::ApiVersion> response = registryClient.ListApiVersions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiVersion item in response)
+            foreach (gcav::ApiVersion item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiVersionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiVersion item in page)
+                foreach (gcav::ApiVersion item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -869,10 +869,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiVersion> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiVersion> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiVersion item in singlePage)
+            foreach (gcav::ApiVersion item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -887,25 +887,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiVersionsAsync(ApiName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
-            PagedAsyncEnumerable<ListApiVersionsResponse, ApiVersion> response = registryClient.ListApiVersionsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListApiVersionsResponse, gcav::ApiVersion> response = registryClient.ListApiVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiVersion item) =>
+            await response.ForEachAsync((gcav::ApiVersion item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiVersion item in page)
+                foreach (gcav::ApiVersion item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -914,10 +914,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiVersion> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiVersion> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiVersion item in singlePage)
+            foreach (gcav::ApiVersion item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -932,14 +932,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiVersion(GetApiVersionRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            GetApiVersionRequest request = new GetApiVersionRequest
+            gcav::GetApiVersionRequest request = new gcav::GetApiVersionRequest
             {
-                ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ApiVersionName = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
             };
             // Make the request
-            ApiVersion response = registryClient.GetApiVersion(request);
+            gcav::ApiVersion response = registryClient.GetApiVersion(request);
             // End snippet
         }
 
@@ -949,14 +949,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiVersionAsync(GetApiVersionRequest, CallSettings)
             // Additional: GetApiVersionAsync(GetApiVersionRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetApiVersionRequest request = new GetApiVersionRequest
+            gcav::GetApiVersionRequest request = new gcav::GetApiVersionRequest
             {
-                ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ApiVersionName = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
             };
             // Make the request
-            ApiVersion response = await registryClient.GetApiVersionAsync(request);
+            gcav::ApiVersion response = await registryClient.GetApiVersionAsync(request);
             // End snippet
         }
 
@@ -965,11 +965,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiVersion(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
             // Make the request
-            ApiVersion response = registryClient.GetApiVersion(name);
+            gcav::ApiVersion response = registryClient.GetApiVersion(name);
             // End snippet
         }
 
@@ -979,11 +979,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiVersionAsync(string, CallSettings)
             // Additional: GetApiVersionAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
             // Make the request
-            ApiVersion response = await registryClient.GetApiVersionAsync(name);
+            gcav::ApiVersion response = await registryClient.GetApiVersionAsync(name);
             // End snippet
         }
 
@@ -992,11 +992,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiVersion(ApiVersionName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiVersionName name = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiVersionName name = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
             // Make the request
-            ApiVersion response = registryClient.GetApiVersion(name);
+            gcav::ApiVersion response = registryClient.GetApiVersion(name);
             // End snippet
         }
 
@@ -1006,11 +1006,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiVersionAsync(ApiVersionName, CallSettings)
             // Additional: GetApiVersionAsync(ApiVersionName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiVersionName name = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiVersionName name = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
             // Make the request
-            ApiVersion response = await registryClient.GetApiVersionAsync(name);
+            gcav::ApiVersion response = await registryClient.GetApiVersionAsync(name);
             // End snippet
         }
 
@@ -1019,16 +1019,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiVersion(CreateApiVersionRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            CreateApiVersionRequest request = new CreateApiVersionRequest
+            gcav::CreateApiVersionRequest request = new gcav::CreateApiVersionRequest
             {
-                ParentAsApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
-                ApiVersion = new ApiVersion(),
+                ParentAsApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ApiVersion = new gcav::ApiVersion(),
                 ApiVersionId = "",
             };
             // Make the request
-            ApiVersion response = registryClient.CreateApiVersion(request);
+            gcav::ApiVersion response = registryClient.CreateApiVersion(request);
             // End snippet
         }
 
@@ -1038,16 +1038,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiVersionAsync(CreateApiVersionRequest, CallSettings)
             // Additional: CreateApiVersionAsync(CreateApiVersionRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            CreateApiVersionRequest request = new CreateApiVersionRequest
+            gcav::CreateApiVersionRequest request = new gcav::CreateApiVersionRequest
             {
-                ParentAsApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
-                ApiVersion = new ApiVersion(),
+                ParentAsApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ApiVersion = new gcav::ApiVersion(),
                 ApiVersionId = "",
             };
             // Make the request
-            ApiVersion response = await registryClient.CreateApiVersionAsync(request);
+            gcav::ApiVersion response = await registryClient.CreateApiVersionAsync(request);
             // End snippet
         }
 
@@ -1056,13 +1056,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiVersion(string, ApiVersion, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
-            ApiVersion apiVersion = new ApiVersion();
+            gcav::ApiVersion apiVersion = new gcav::ApiVersion();
             string apiVersionId = "";
             // Make the request
-            ApiVersion response = registryClient.CreateApiVersion(parent, apiVersion, apiVersionId);
+            gcav::ApiVersion response = registryClient.CreateApiVersion(parent, apiVersion, apiVersionId);
             // End snippet
         }
 
@@ -1072,13 +1072,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiVersionAsync(string, ApiVersion, string, CallSettings)
             // Additional: CreateApiVersionAsync(string, ApiVersion, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
-            ApiVersion apiVersion = new ApiVersion();
+            gcav::ApiVersion apiVersion = new gcav::ApiVersion();
             string apiVersionId = "";
             // Make the request
-            ApiVersion response = await registryClient.CreateApiVersionAsync(parent, apiVersion, apiVersionId);
+            gcav::ApiVersion response = await registryClient.CreateApiVersionAsync(parent, apiVersion, apiVersionId);
             // End snippet
         }
 
@@ -1087,13 +1087,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiVersion(ApiName, ApiVersion, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
-            ApiVersion apiVersion = new ApiVersion();
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiVersion apiVersion = new gcav::ApiVersion();
             string apiVersionId = "";
             // Make the request
-            ApiVersion response = registryClient.CreateApiVersion(parent, apiVersion, apiVersionId);
+            gcav::ApiVersion response = registryClient.CreateApiVersion(parent, apiVersion, apiVersionId);
             // End snippet
         }
 
@@ -1103,13 +1103,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiVersionAsync(ApiName, ApiVersion, string, CallSettings)
             // Additional: CreateApiVersionAsync(ApiName, ApiVersion, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
-            ApiVersion apiVersion = new ApiVersion();
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiVersion apiVersion = new gcav::ApiVersion();
             string apiVersionId = "";
             // Make the request
-            ApiVersion response = await registryClient.CreateApiVersionAsync(parent, apiVersion, apiVersionId);
+            gcav::ApiVersion response = await registryClient.CreateApiVersionAsync(parent, apiVersion, apiVersionId);
             // End snippet
         }
 
@@ -1118,16 +1118,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: UpdateApiVersion(UpdateApiVersionRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            UpdateApiVersionRequest request = new UpdateApiVersionRequest
+            gcav::UpdateApiVersionRequest request = new gcav::UpdateApiVersionRequest
             {
-                ApiVersion = new ApiVersion(),
+                ApiVersion = new gcav::ApiVersion(),
                 UpdateMask = new FieldMask(),
                 AllowMissing = false,
             };
             // Make the request
-            ApiVersion response = registryClient.UpdateApiVersion(request);
+            gcav::ApiVersion response = registryClient.UpdateApiVersion(request);
             // End snippet
         }
 
@@ -1137,16 +1137,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: UpdateApiVersionAsync(UpdateApiVersionRequest, CallSettings)
             // Additional: UpdateApiVersionAsync(UpdateApiVersionRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateApiVersionRequest request = new UpdateApiVersionRequest
+            gcav::UpdateApiVersionRequest request = new gcav::UpdateApiVersionRequest
             {
-                ApiVersion = new ApiVersion(),
+                ApiVersion = new gcav::ApiVersion(),
                 UpdateMask = new FieldMask(),
                 AllowMissing = false,
             };
             // Make the request
-            ApiVersion response = await registryClient.UpdateApiVersionAsync(request);
+            gcav::ApiVersion response = await registryClient.UpdateApiVersionAsync(request);
             // End snippet
         }
 
@@ -1155,12 +1155,12 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: UpdateApiVersion(ApiVersion, FieldMask, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiVersion apiVersion = new ApiVersion();
+            gcav::ApiVersion apiVersion = new gcav::ApiVersion();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ApiVersion response = registryClient.UpdateApiVersion(apiVersion, updateMask);
+            gcav::ApiVersion response = registryClient.UpdateApiVersion(apiVersion, updateMask);
             // End snippet
         }
 
@@ -1170,12 +1170,12 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: UpdateApiVersionAsync(ApiVersion, FieldMask, CallSettings)
             // Additional: UpdateApiVersionAsync(ApiVersion, FieldMask, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiVersion apiVersion = new ApiVersion();
+            gcav::ApiVersion apiVersion = new gcav::ApiVersion();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ApiVersion response = await registryClient.UpdateApiVersionAsync(apiVersion, updateMask);
+            gcav::ApiVersion response = await registryClient.UpdateApiVersionAsync(apiVersion, updateMask);
             // End snippet
         }
 
@@ -1184,11 +1184,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiVersion(DeleteApiVersionRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            DeleteApiVersionRequest request = new DeleteApiVersionRequest
+            gcav::DeleteApiVersionRequest request = new gcav::DeleteApiVersionRequest
             {
-                ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ApiVersionName = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
                 Force = false,
             };
             // Make the request
@@ -1202,11 +1202,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiVersionAsync(DeleteApiVersionRequest, CallSettings)
             // Additional: DeleteApiVersionAsync(DeleteApiVersionRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteApiVersionRequest request = new DeleteApiVersionRequest
+            gcav::DeleteApiVersionRequest request = new gcav::DeleteApiVersionRequest
             {
-                ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ApiVersionName = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
                 Force = false,
             };
             // Make the request
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiVersion(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
             // Make the request
@@ -1233,7 +1233,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiVersionAsync(string, CallSettings)
             // Additional: DeleteApiVersionAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
             // Make the request
@@ -1246,9 +1246,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiVersion(ApiVersionName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiVersionName name = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiVersionName name = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
             // Make the request
             registryClient.DeleteApiVersion(name);
             // End snippet
@@ -1260,9 +1260,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiVersionAsync(ApiVersionName, CallSettings)
             // Additional: DeleteApiVersionAsync(ApiVersionName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiVersionName name = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiVersionName name = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
             // Make the request
             await registryClient.DeleteApiVersionAsync(name);
             // End snippet
@@ -1273,29 +1273,29 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiSpecs(ListApiSpecsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ListApiSpecsRequest request = new ListApiSpecsRequest
+            gcav::ListApiSpecsRequest request = new gcav::ListApiSpecsRequest
             {
-                ParentAsApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ParentAsApiVersionName = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListApiSpecsResponse, ApiSpec> response = registryClient.ListApiSpecs(request);
+            PagedEnumerable<gcav::ListApiSpecsResponse, gcav::ApiSpec> response = registryClient.ListApiSpecs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiSpec item in response)
+            foreach (gcav::ApiSpec item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiSpecsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiSpecsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiSpec item in page)
+                foreach (gcav::ApiSpec item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1304,10 +1304,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiSpec> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiSpec> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiSpec item in singlePage)
+            foreach (gcav::ApiSpec item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1322,29 +1322,29 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiSpecsAsync(ListApiSpecsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListApiSpecsRequest request = new ListApiSpecsRequest
+            gcav::ListApiSpecsRequest request = new gcav::ListApiSpecsRequest
             {
-                ParentAsApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ParentAsApiVersionName = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListApiSpecsResponse, ApiSpec> response = registryClient.ListApiSpecsAsync(request);
+            PagedAsyncEnumerable<gcav::ListApiSpecsResponse, gcav::ApiSpec> response = registryClient.ListApiSpecsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiSpec item) =>
+            await response.ForEachAsync((gcav::ApiSpec item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiSpecsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiSpecsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiSpec item in page)
+                foreach (gcav::ApiSpec item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1353,10 +1353,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiSpec> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiSpec> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiSpec item in singlePage)
+            foreach (gcav::ApiSpec item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1371,25 +1371,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiSpecs(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
             // Make the request
-            PagedEnumerable<ListApiSpecsResponse, ApiSpec> response = registryClient.ListApiSpecs(parent);
+            PagedEnumerable<gcav::ListApiSpecsResponse, gcav::ApiSpec> response = registryClient.ListApiSpecs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiSpec item in response)
+            foreach (gcav::ApiSpec item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiSpecsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiSpecsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiSpec item in page)
+                foreach (gcav::ApiSpec item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1398,10 +1398,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiSpec> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiSpec> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiSpec item in singlePage)
+            foreach (gcav::ApiSpec item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1416,25 +1416,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiSpecsAsync(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
             // Make the request
-            PagedAsyncEnumerable<ListApiSpecsResponse, ApiSpec> response = registryClient.ListApiSpecsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListApiSpecsResponse, gcav::ApiSpec> response = registryClient.ListApiSpecsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiSpec item) =>
+            await response.ForEachAsync((gcav::ApiSpec item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiSpecsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiSpecsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiSpec item in page)
+                foreach (gcav::ApiSpec item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1443,10 +1443,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiSpec> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiSpec> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiSpec item in singlePage)
+            foreach (gcav::ApiSpec item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1461,25 +1461,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiSpecs(ApiVersionName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiVersionName parent = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiVersionName parent = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
             // Make the request
-            PagedEnumerable<ListApiSpecsResponse, ApiSpec> response = registryClient.ListApiSpecs(parent);
+            PagedEnumerable<gcav::ListApiSpecsResponse, gcav::ApiSpec> response = registryClient.ListApiSpecs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiSpec item in response)
+            foreach (gcav::ApiSpec item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiSpecsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiSpecsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiSpec item in page)
+                foreach (gcav::ApiSpec item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1488,10 +1488,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiSpec> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiSpec> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiSpec item in singlePage)
+            foreach (gcav::ApiSpec item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1506,25 +1506,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiSpecsAsync(ApiVersionName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiVersionName parent = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiVersionName parent = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
             // Make the request
-            PagedAsyncEnumerable<ListApiSpecsResponse, ApiSpec> response = registryClient.ListApiSpecsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListApiSpecsResponse, gcav::ApiSpec> response = registryClient.ListApiSpecsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiSpec item) =>
+            await response.ForEachAsync((gcav::ApiSpec item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiSpecsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiSpecsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiSpec item in page)
+                foreach (gcav::ApiSpec item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1533,10 +1533,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiSpec> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiSpec> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiSpec item in singlePage)
+            foreach (gcav::ApiSpec item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1551,14 +1551,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiSpec(GetApiSpecRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            GetApiSpecRequest request = new GetApiSpecRequest
+            gcav::GetApiSpecRequest request = new gcav::GetApiSpecRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
             };
             // Make the request
-            ApiSpec response = registryClient.GetApiSpec(request);
+            gcav::ApiSpec response = registryClient.GetApiSpec(request);
             // End snippet
         }
 
@@ -1568,14 +1568,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiSpecAsync(GetApiSpecRequest, CallSettings)
             // Additional: GetApiSpecAsync(GetApiSpecRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetApiSpecRequest request = new GetApiSpecRequest
+            gcav::GetApiSpecRequest request = new gcav::GetApiSpecRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
             };
             // Make the request
-            ApiSpec response = await registryClient.GetApiSpecAsync(request);
+            gcav::ApiSpec response = await registryClient.GetApiSpecAsync(request);
             // End snippet
         }
 
@@ -1584,11 +1584,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiSpec(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
             // Make the request
-            ApiSpec response = registryClient.GetApiSpec(name);
+            gcav::ApiSpec response = registryClient.GetApiSpec(name);
             // End snippet
         }
 
@@ -1598,11 +1598,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiSpecAsync(string, CallSettings)
             // Additional: GetApiSpecAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
             // Make the request
-            ApiSpec response = await registryClient.GetApiSpecAsync(name);
+            gcav::ApiSpec response = await registryClient.GetApiSpecAsync(name);
             // End snippet
         }
 
@@ -1611,11 +1611,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiSpec(ApiSpecName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiSpecName name = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName name = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
-            ApiSpec response = registryClient.GetApiSpec(name);
+            gcav::ApiSpec response = registryClient.GetApiSpec(name);
             // End snippet
         }
 
@@ -1625,11 +1625,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiSpecAsync(ApiSpecName, CallSettings)
             // Additional: GetApiSpecAsync(ApiSpecName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiSpecName name = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName name = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
-            ApiSpec response = await registryClient.GetApiSpecAsync(name);
+            gcav::ApiSpec response = await registryClient.GetApiSpecAsync(name);
             // End snippet
         }
 
@@ -1638,11 +1638,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiSpecContents(GetApiSpecContentsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            GetApiSpecContentsRequest request = new GetApiSpecContentsRequest
+            gcav::GetApiSpecContentsRequest request = new gcav::GetApiSpecContentsRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
             };
             // Make the request
             HttpBody response = registryClient.GetApiSpecContents(request);
@@ -1655,11 +1655,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiSpecContentsAsync(GetApiSpecContentsRequest, CallSettings)
             // Additional: GetApiSpecContentsAsync(GetApiSpecContentsRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetApiSpecContentsRequest request = new GetApiSpecContentsRequest
+            gcav::GetApiSpecContentsRequest request = new gcav::GetApiSpecContentsRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
             };
             // Make the request
             HttpBody response = await registryClient.GetApiSpecContentsAsync(request);
@@ -1671,7 +1671,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiSpecContents(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
             // Make the request
@@ -1685,7 +1685,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiSpecContentsAsync(string, CallSettings)
             // Additional: GetApiSpecContentsAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
             // Make the request
@@ -1698,9 +1698,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiSpecContents(ApiSpecName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiSpecName name = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName name = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
             HttpBody response = registryClient.GetApiSpecContents(name);
             // End snippet
@@ -1712,9 +1712,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiSpecContentsAsync(ApiSpecName, CallSettings)
             // Additional: GetApiSpecContentsAsync(ApiSpecName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiSpecName name = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName name = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
             HttpBody response = await registryClient.GetApiSpecContentsAsync(name);
             // End snippet
@@ -1725,16 +1725,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiSpec(CreateApiSpecRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            CreateApiSpecRequest request = new CreateApiSpecRequest
+            gcav::CreateApiSpecRequest request = new gcav::CreateApiSpecRequest
             {
-                ParentAsApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
-                ApiSpec = new ApiSpec(),
+                ParentAsApiVersionName = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ApiSpec = new gcav::ApiSpec(),
                 ApiSpecId = "",
             };
             // Make the request
-            ApiSpec response = registryClient.CreateApiSpec(request);
+            gcav::ApiSpec response = registryClient.CreateApiSpec(request);
             // End snippet
         }
 
@@ -1744,16 +1744,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiSpecAsync(CreateApiSpecRequest, CallSettings)
             // Additional: CreateApiSpecAsync(CreateApiSpecRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            CreateApiSpecRequest request = new CreateApiSpecRequest
+            gcav::CreateApiSpecRequest request = new gcav::CreateApiSpecRequest
             {
-                ParentAsApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
-                ApiSpec = new ApiSpec(),
+                ParentAsApiVersionName = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ApiSpec = new gcav::ApiSpec(),
                 ApiSpecId = "",
             };
             // Make the request
-            ApiSpec response = await registryClient.CreateApiSpecAsync(request);
+            gcav::ApiSpec response = await registryClient.CreateApiSpecAsync(request);
             // End snippet
         }
 
@@ -1762,13 +1762,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiSpec(string, ApiSpec, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
-            ApiSpec apiSpec = new ApiSpec();
+            gcav::ApiSpec apiSpec = new gcav::ApiSpec();
             string apiSpecId = "";
             // Make the request
-            ApiSpec response = registryClient.CreateApiSpec(parent, apiSpec, apiSpecId);
+            gcav::ApiSpec response = registryClient.CreateApiSpec(parent, apiSpec, apiSpecId);
             // End snippet
         }
 
@@ -1778,13 +1778,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiSpecAsync(string, ApiSpec, string, CallSettings)
             // Additional: CreateApiSpecAsync(string, ApiSpec, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
-            ApiSpec apiSpec = new ApiSpec();
+            gcav::ApiSpec apiSpec = new gcav::ApiSpec();
             string apiSpecId = "";
             // Make the request
-            ApiSpec response = await registryClient.CreateApiSpecAsync(parent, apiSpec, apiSpecId);
+            gcav::ApiSpec response = await registryClient.CreateApiSpecAsync(parent, apiSpec, apiSpecId);
             // End snippet
         }
 
@@ -1793,13 +1793,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiSpec(ApiVersionName, ApiSpec, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiVersionName parent = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
-            ApiSpec apiSpec = new ApiSpec();
+            gcav::ApiVersionName parent = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiSpec apiSpec = new gcav::ApiSpec();
             string apiSpecId = "";
             // Make the request
-            ApiSpec response = registryClient.CreateApiSpec(parent, apiSpec, apiSpecId);
+            gcav::ApiSpec response = registryClient.CreateApiSpec(parent, apiSpec, apiSpecId);
             // End snippet
         }
 
@@ -1809,13 +1809,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiSpecAsync(ApiVersionName, ApiSpec, string, CallSettings)
             // Additional: CreateApiSpecAsync(ApiVersionName, ApiSpec, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiVersionName parent = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
-            ApiSpec apiSpec = new ApiSpec();
+            gcav::ApiVersionName parent = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiSpec apiSpec = new gcav::ApiSpec();
             string apiSpecId = "";
             // Make the request
-            ApiSpec response = await registryClient.CreateApiSpecAsync(parent, apiSpec, apiSpecId);
+            gcav::ApiSpec response = await registryClient.CreateApiSpecAsync(parent, apiSpec, apiSpecId);
             // End snippet
         }
 
@@ -1824,16 +1824,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: UpdateApiSpec(UpdateApiSpecRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            UpdateApiSpecRequest request = new UpdateApiSpecRequest
+            gcav::UpdateApiSpecRequest request = new gcav::UpdateApiSpecRequest
             {
-                ApiSpec = new ApiSpec(),
+                ApiSpec = new gcav::ApiSpec(),
                 UpdateMask = new FieldMask(),
                 AllowMissing = false,
             };
             // Make the request
-            ApiSpec response = registryClient.UpdateApiSpec(request);
+            gcav::ApiSpec response = registryClient.UpdateApiSpec(request);
             // End snippet
         }
 
@@ -1843,16 +1843,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: UpdateApiSpecAsync(UpdateApiSpecRequest, CallSettings)
             // Additional: UpdateApiSpecAsync(UpdateApiSpecRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateApiSpecRequest request = new UpdateApiSpecRequest
+            gcav::UpdateApiSpecRequest request = new gcav::UpdateApiSpecRequest
             {
-                ApiSpec = new ApiSpec(),
+                ApiSpec = new gcav::ApiSpec(),
                 UpdateMask = new FieldMask(),
                 AllowMissing = false,
             };
             // Make the request
-            ApiSpec response = await registryClient.UpdateApiSpecAsync(request);
+            gcav::ApiSpec response = await registryClient.UpdateApiSpecAsync(request);
             // End snippet
         }
 
@@ -1861,12 +1861,12 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: UpdateApiSpec(ApiSpec, FieldMask, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiSpec apiSpec = new ApiSpec();
+            gcav::ApiSpec apiSpec = new gcav::ApiSpec();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ApiSpec response = registryClient.UpdateApiSpec(apiSpec, updateMask);
+            gcav::ApiSpec response = registryClient.UpdateApiSpec(apiSpec, updateMask);
             // End snippet
         }
 
@@ -1876,12 +1876,12 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: UpdateApiSpecAsync(ApiSpec, FieldMask, CallSettings)
             // Additional: UpdateApiSpecAsync(ApiSpec, FieldMask, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiSpec apiSpec = new ApiSpec();
+            gcav::ApiSpec apiSpec = new gcav::ApiSpec();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ApiSpec response = await registryClient.UpdateApiSpecAsync(apiSpec, updateMask);
+            gcav::ApiSpec response = await registryClient.UpdateApiSpecAsync(apiSpec, updateMask);
             // End snippet
         }
 
@@ -1890,11 +1890,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiSpec(DeleteApiSpecRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            DeleteApiSpecRequest request = new DeleteApiSpecRequest
+            gcav::DeleteApiSpecRequest request = new gcav::DeleteApiSpecRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
                 Force = false,
             };
             // Make the request
@@ -1908,11 +1908,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiSpecAsync(DeleteApiSpecRequest, CallSettings)
             // Additional: DeleteApiSpecAsync(DeleteApiSpecRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteApiSpecRequest request = new DeleteApiSpecRequest
+            gcav::DeleteApiSpecRequest request = new gcav::DeleteApiSpecRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
                 Force = false,
             };
             // Make the request
@@ -1925,7 +1925,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiSpec(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
             // Make the request
@@ -1939,7 +1939,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiSpecAsync(string, CallSettings)
             // Additional: DeleteApiSpecAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
             // Make the request
@@ -1952,9 +1952,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiSpec(ApiSpecName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiSpecName name = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName name = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
             registryClient.DeleteApiSpec(name);
             // End snippet
@@ -1966,9 +1966,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiSpecAsync(ApiSpecName, CallSettings)
             // Additional: DeleteApiSpecAsync(ApiSpecName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiSpecName name = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName name = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
             await registryClient.DeleteApiSpecAsync(name);
             // End snippet
@@ -1979,15 +1979,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: TagApiSpecRevision(TagApiSpecRevisionRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            TagApiSpecRevisionRequest request = new TagApiSpecRevisionRequest
+            gcav::TagApiSpecRevisionRequest request = new gcav::TagApiSpecRevisionRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
                 Tag = "",
             };
             // Make the request
-            ApiSpec response = registryClient.TagApiSpecRevision(request);
+            gcav::ApiSpec response = registryClient.TagApiSpecRevision(request);
             // End snippet
         }
 
@@ -1997,15 +1997,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: TagApiSpecRevisionAsync(TagApiSpecRevisionRequest, CallSettings)
             // Additional: TagApiSpecRevisionAsync(TagApiSpecRevisionRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            TagApiSpecRevisionRequest request = new TagApiSpecRevisionRequest
+            gcav::TagApiSpecRevisionRequest request = new gcav::TagApiSpecRevisionRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
                 Tag = "",
             };
             // Make the request
-            ApiSpec response = await registryClient.TagApiSpecRevisionAsync(request);
+            gcav::ApiSpec response = await registryClient.TagApiSpecRevisionAsync(request);
             // End snippet
         }
 
@@ -2014,28 +2014,28 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiSpecRevisions(ListApiSpecRevisionsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ListApiSpecRevisionsRequest request = new ListApiSpecRevisionsRequest
+            gcav::ListApiSpecRevisionsRequest request = new gcav::ListApiSpecRevisionsRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
             };
             // Make the request
-            PagedEnumerable<ListApiSpecRevisionsResponse, ApiSpec> response = registryClient.ListApiSpecRevisions(request);
+            PagedEnumerable<gcav::ListApiSpecRevisionsResponse, gcav::ApiSpec> response = registryClient.ListApiSpecRevisions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiSpec item in response)
+            foreach (gcav::ApiSpec item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiSpecRevisionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiSpecRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiSpec item in page)
+                foreach (gcav::ApiSpec item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2044,10 +2044,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiSpec> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiSpec> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiSpec item in singlePage)
+            foreach (gcav::ApiSpec item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2062,28 +2062,28 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiSpecRevisionsAsync(ListApiSpecRevisionsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListApiSpecRevisionsRequest request = new ListApiSpecRevisionsRequest
+            gcav::ListApiSpecRevisionsRequest request = new gcav::ListApiSpecRevisionsRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListApiSpecRevisionsResponse, ApiSpec> response = registryClient.ListApiSpecRevisionsAsync(request);
+            PagedAsyncEnumerable<gcav::ListApiSpecRevisionsResponse, gcav::ApiSpec> response = registryClient.ListApiSpecRevisionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiSpec item) =>
+            await response.ForEachAsync((gcav::ApiSpec item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiSpecRevisionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiSpecRevisionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiSpec item in page)
+                foreach (gcav::ApiSpec item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2092,10 +2092,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiSpec> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiSpec> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiSpec item in singlePage)
+            foreach (gcav::ApiSpec item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2110,15 +2110,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: RollbackApiSpec(RollbackApiSpecRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            RollbackApiSpecRequest request = new RollbackApiSpecRequest
+            gcav::RollbackApiSpecRequest request = new gcav::RollbackApiSpecRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
                 RevisionId = "",
             };
             // Make the request
-            ApiSpec response = registryClient.RollbackApiSpec(request);
+            gcav::ApiSpec response = registryClient.RollbackApiSpec(request);
             // End snippet
         }
 
@@ -2128,15 +2128,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: RollbackApiSpecAsync(RollbackApiSpecRequest, CallSettings)
             // Additional: RollbackApiSpecAsync(RollbackApiSpecRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RollbackApiSpecRequest request = new RollbackApiSpecRequest
+            gcav::RollbackApiSpecRequest request = new gcav::RollbackApiSpecRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
                 RevisionId = "",
             };
             // Make the request
-            ApiSpec response = await registryClient.RollbackApiSpecAsync(request);
+            gcav::ApiSpec response = await registryClient.RollbackApiSpecAsync(request);
             // End snippet
         }
 
@@ -2145,14 +2145,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiSpecRevision(DeleteApiSpecRevisionRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            DeleteApiSpecRevisionRequest request = new DeleteApiSpecRevisionRequest
+            gcav::DeleteApiSpecRevisionRequest request = new gcav::DeleteApiSpecRevisionRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
             };
             // Make the request
-            ApiSpec response = registryClient.DeleteApiSpecRevision(request);
+            gcav::ApiSpec response = registryClient.DeleteApiSpecRevision(request);
             // End snippet
         }
 
@@ -2162,14 +2162,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiSpecRevisionAsync(DeleteApiSpecRevisionRequest, CallSettings)
             // Additional: DeleteApiSpecRevisionAsync(DeleteApiSpecRevisionRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteApiSpecRevisionRequest request = new DeleteApiSpecRevisionRequest
+            gcav::DeleteApiSpecRevisionRequest request = new gcav::DeleteApiSpecRevisionRequest
             {
-                ApiSpecName = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                ApiSpecName = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
             };
             // Make the request
-            ApiSpec response = await registryClient.DeleteApiSpecRevisionAsync(request);
+            gcav::ApiSpec response = await registryClient.DeleteApiSpecRevisionAsync(request);
             // End snippet
         }
 
@@ -2178,11 +2178,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiSpecRevision(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
             // Make the request
-            ApiSpec response = registryClient.DeleteApiSpecRevision(name);
+            gcav::ApiSpec response = registryClient.DeleteApiSpecRevision(name);
             // End snippet
         }
 
@@ -2192,11 +2192,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiSpecRevisionAsync(string, CallSettings)
             // Additional: DeleteApiSpecRevisionAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
             // Make the request
-            ApiSpec response = await registryClient.DeleteApiSpecRevisionAsync(name);
+            gcav::ApiSpec response = await registryClient.DeleteApiSpecRevisionAsync(name);
             // End snippet
         }
 
@@ -2205,11 +2205,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiSpecRevision(ApiSpecName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiSpecName name = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName name = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
-            ApiSpec response = registryClient.DeleteApiSpecRevision(name);
+            gcav::ApiSpec response = registryClient.DeleteApiSpecRevision(name);
             // End snippet
         }
 
@@ -2219,11 +2219,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiSpecRevisionAsync(ApiSpecName, CallSettings)
             // Additional: DeleteApiSpecRevisionAsync(ApiSpecName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiSpecName name = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName name = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
-            ApiSpec response = await registryClient.DeleteApiSpecRevisionAsync(name);
+            gcav::ApiSpec response = await registryClient.DeleteApiSpecRevisionAsync(name);
             // End snippet
         }
 
@@ -2232,29 +2232,29 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiDeployments(ListApiDeploymentsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ListApiDeploymentsRequest request = new ListApiDeploymentsRequest
+            gcav::ListApiDeploymentsRequest request = new gcav::ListApiDeploymentsRequest
             {
-                ParentAsApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ParentAsApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListApiDeploymentsResponse, ApiDeployment> response = registryClient.ListApiDeployments(request);
+            PagedEnumerable<gcav::ListApiDeploymentsResponse, gcav::ApiDeployment> response = registryClient.ListApiDeployments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiDeployment item in response)
+            foreach (gcav::ApiDeployment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiDeploymentsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiDeploymentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiDeployment item in page)
+                foreach (gcav::ApiDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2263,10 +2263,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiDeployment> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiDeployment> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiDeployment item in singlePage)
+            foreach (gcav::ApiDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2281,29 +2281,29 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiDeploymentsAsync(ListApiDeploymentsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListApiDeploymentsRequest request = new ListApiDeploymentsRequest
+            gcav::ListApiDeploymentsRequest request = new gcav::ListApiDeploymentsRequest
             {
-                ParentAsApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ParentAsApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListApiDeploymentsResponse, ApiDeployment> response = registryClient.ListApiDeploymentsAsync(request);
+            PagedAsyncEnumerable<gcav::ListApiDeploymentsResponse, gcav::ApiDeployment> response = registryClient.ListApiDeploymentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiDeployment item) =>
+            await response.ForEachAsync((gcav::ApiDeployment item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiDeploymentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiDeploymentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiDeployment item in page)
+                foreach (gcav::ApiDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2312,10 +2312,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiDeployment> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiDeployment item in singlePage)
+            foreach (gcav::ApiDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2330,25 +2330,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiDeployments(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
             // Make the request
-            PagedEnumerable<ListApiDeploymentsResponse, ApiDeployment> response = registryClient.ListApiDeployments(parent);
+            PagedEnumerable<gcav::ListApiDeploymentsResponse, gcav::ApiDeployment> response = registryClient.ListApiDeployments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiDeployment item in response)
+            foreach (gcav::ApiDeployment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiDeploymentsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiDeploymentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiDeployment item in page)
+                foreach (gcav::ApiDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2357,10 +2357,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiDeployment> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiDeployment> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiDeployment item in singlePage)
+            foreach (gcav::ApiDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2375,25 +2375,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiDeploymentsAsync(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
             // Make the request
-            PagedAsyncEnumerable<ListApiDeploymentsResponse, ApiDeployment> response = registryClient.ListApiDeploymentsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListApiDeploymentsResponse, gcav::ApiDeployment> response = registryClient.ListApiDeploymentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiDeployment item) =>
+            await response.ForEachAsync((gcav::ApiDeployment item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiDeploymentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiDeploymentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiDeployment item in page)
+                foreach (gcav::ApiDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2402,10 +2402,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiDeployment> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiDeployment item in singlePage)
+            foreach (gcav::ApiDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2420,25 +2420,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiDeployments(ApiName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
-            PagedEnumerable<ListApiDeploymentsResponse, ApiDeployment> response = registryClient.ListApiDeployments(parent);
+            PagedEnumerable<gcav::ListApiDeploymentsResponse, gcav::ApiDeployment> response = registryClient.ListApiDeployments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiDeployment item in response)
+            foreach (gcav::ApiDeployment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiDeploymentsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiDeploymentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiDeployment item in page)
+                foreach (gcav::ApiDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2447,10 +2447,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiDeployment> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiDeployment> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiDeployment item in singlePage)
+            foreach (gcav::ApiDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2465,25 +2465,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiDeploymentsAsync(ApiName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
-            PagedAsyncEnumerable<ListApiDeploymentsResponse, ApiDeployment> response = registryClient.ListApiDeploymentsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListApiDeploymentsResponse, gcav::ApiDeployment> response = registryClient.ListApiDeploymentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiDeployment item) =>
+            await response.ForEachAsync((gcav::ApiDeployment item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiDeploymentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiDeploymentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiDeployment item in page)
+                foreach (gcav::ApiDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2492,10 +2492,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiDeployment> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiDeployment item in singlePage)
+            foreach (gcav::ApiDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2510,14 +2510,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiDeployment(GetApiDeploymentRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            GetApiDeploymentRequest request = new GetApiDeploymentRequest
+            gcav::GetApiDeploymentRequest request = new gcav::GetApiDeploymentRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
             };
             // Make the request
-            ApiDeployment response = registryClient.GetApiDeployment(request);
+            gcav::ApiDeployment response = registryClient.GetApiDeployment(request);
             // End snippet
         }
 
@@ -2527,14 +2527,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiDeploymentAsync(GetApiDeploymentRequest, CallSettings)
             // Additional: GetApiDeploymentAsync(GetApiDeploymentRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetApiDeploymentRequest request = new GetApiDeploymentRequest
+            gcav::GetApiDeploymentRequest request = new gcav::GetApiDeploymentRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
             };
             // Make the request
-            ApiDeployment response = await registryClient.GetApiDeploymentAsync(request);
+            gcav::ApiDeployment response = await registryClient.GetApiDeploymentAsync(request);
             // End snippet
         }
 
@@ -2543,11 +2543,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiDeployment(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/deployments/[DEPLOYMENT]";
             // Make the request
-            ApiDeployment response = registryClient.GetApiDeployment(name);
+            gcav::ApiDeployment response = registryClient.GetApiDeployment(name);
             // End snippet
         }
 
@@ -2557,11 +2557,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiDeploymentAsync(string, CallSettings)
             // Additional: GetApiDeploymentAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/deployments/[DEPLOYMENT]";
             // Make the request
-            ApiDeployment response = await registryClient.GetApiDeploymentAsync(name);
+            gcav::ApiDeployment response = await registryClient.GetApiDeploymentAsync(name);
             // End snippet
         }
 
@@ -2570,11 +2570,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetApiDeployment(ApiDeploymentName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiDeploymentName name = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::ApiDeploymentName name = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
             // Make the request
-            ApiDeployment response = registryClient.GetApiDeployment(name);
+            gcav::ApiDeployment response = registryClient.GetApiDeployment(name);
             // End snippet
         }
 
@@ -2584,11 +2584,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetApiDeploymentAsync(ApiDeploymentName, CallSettings)
             // Additional: GetApiDeploymentAsync(ApiDeploymentName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiDeploymentName name = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::ApiDeploymentName name = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
             // Make the request
-            ApiDeployment response = await registryClient.GetApiDeploymentAsync(name);
+            gcav::ApiDeployment response = await registryClient.GetApiDeploymentAsync(name);
             // End snippet
         }
 
@@ -2597,16 +2597,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiDeployment(CreateApiDeploymentRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            CreateApiDeploymentRequest request = new CreateApiDeploymentRequest
+            gcav::CreateApiDeploymentRequest request = new gcav::CreateApiDeploymentRequest
             {
-                ParentAsApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
-                ApiDeployment = new ApiDeployment(),
+                ParentAsApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ApiDeployment = new gcav::ApiDeployment(),
                 ApiDeploymentId = "",
             };
             // Make the request
-            ApiDeployment response = registryClient.CreateApiDeployment(request);
+            gcav::ApiDeployment response = registryClient.CreateApiDeployment(request);
             // End snippet
         }
 
@@ -2616,16 +2616,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiDeploymentAsync(CreateApiDeploymentRequest, CallSettings)
             // Additional: CreateApiDeploymentAsync(CreateApiDeploymentRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            CreateApiDeploymentRequest request = new CreateApiDeploymentRequest
+            gcav::CreateApiDeploymentRequest request = new gcav::CreateApiDeploymentRequest
             {
-                ParentAsApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
-                ApiDeployment = new ApiDeployment(),
+                ParentAsApiName = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
+                ApiDeployment = new gcav::ApiDeployment(),
                 ApiDeploymentId = "",
             };
             // Make the request
-            ApiDeployment response = await registryClient.CreateApiDeploymentAsync(request);
+            gcav::ApiDeployment response = await registryClient.CreateApiDeploymentAsync(request);
             // End snippet
         }
 
@@ -2634,13 +2634,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiDeployment(string, ApiDeployment, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
-            ApiDeployment apiDeployment = new ApiDeployment();
+            gcav::ApiDeployment apiDeployment = new gcav::ApiDeployment();
             string apiDeploymentId = "";
             // Make the request
-            ApiDeployment response = registryClient.CreateApiDeployment(parent, apiDeployment, apiDeploymentId);
+            gcav::ApiDeployment response = registryClient.CreateApiDeployment(parent, apiDeployment, apiDeploymentId);
             // End snippet
         }
 
@@ -2650,13 +2650,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiDeploymentAsync(string, ApiDeployment, string, CallSettings)
             // Additional: CreateApiDeploymentAsync(string, ApiDeployment, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]";
-            ApiDeployment apiDeployment = new ApiDeployment();
+            gcav::ApiDeployment apiDeployment = new gcav::ApiDeployment();
             string apiDeploymentId = "";
             // Make the request
-            ApiDeployment response = await registryClient.CreateApiDeploymentAsync(parent, apiDeployment, apiDeploymentId);
+            gcav::ApiDeployment response = await registryClient.CreateApiDeploymentAsync(parent, apiDeployment, apiDeploymentId);
             // End snippet
         }
 
@@ -2665,13 +2665,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateApiDeployment(ApiName, ApiDeployment, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
-            ApiDeployment apiDeployment = new ApiDeployment();
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiDeployment apiDeployment = new gcav::ApiDeployment();
             string apiDeploymentId = "";
             // Make the request
-            ApiDeployment response = registryClient.CreateApiDeployment(parent, apiDeployment, apiDeploymentId);
+            gcav::ApiDeployment response = registryClient.CreateApiDeployment(parent, apiDeployment, apiDeploymentId);
             // End snippet
         }
 
@@ -2681,13 +2681,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateApiDeploymentAsync(ApiName, ApiDeployment, string, CallSettings)
             // Additional: CreateApiDeploymentAsync(ApiName, ApiDeployment, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
-            ApiDeployment apiDeployment = new ApiDeployment();
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiDeployment apiDeployment = new gcav::ApiDeployment();
             string apiDeploymentId = "";
             // Make the request
-            ApiDeployment response = await registryClient.CreateApiDeploymentAsync(parent, apiDeployment, apiDeploymentId);
+            gcav::ApiDeployment response = await registryClient.CreateApiDeploymentAsync(parent, apiDeployment, apiDeploymentId);
             // End snippet
         }
 
@@ -2696,16 +2696,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: UpdateApiDeployment(UpdateApiDeploymentRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            UpdateApiDeploymentRequest request = new UpdateApiDeploymentRequest
+            gcav::UpdateApiDeploymentRequest request = new gcav::UpdateApiDeploymentRequest
             {
-                ApiDeployment = new ApiDeployment(),
+                ApiDeployment = new gcav::ApiDeployment(),
                 UpdateMask = new FieldMask(),
                 AllowMissing = false,
             };
             // Make the request
-            ApiDeployment response = registryClient.UpdateApiDeployment(request);
+            gcav::ApiDeployment response = registryClient.UpdateApiDeployment(request);
             // End snippet
         }
 
@@ -2715,16 +2715,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: UpdateApiDeploymentAsync(UpdateApiDeploymentRequest, CallSettings)
             // Additional: UpdateApiDeploymentAsync(UpdateApiDeploymentRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateApiDeploymentRequest request = new UpdateApiDeploymentRequest
+            gcav::UpdateApiDeploymentRequest request = new gcav::UpdateApiDeploymentRequest
             {
-                ApiDeployment = new ApiDeployment(),
+                ApiDeployment = new gcav::ApiDeployment(),
                 UpdateMask = new FieldMask(),
                 AllowMissing = false,
             };
             // Make the request
-            ApiDeployment response = await registryClient.UpdateApiDeploymentAsync(request);
+            gcav::ApiDeployment response = await registryClient.UpdateApiDeploymentAsync(request);
             // End snippet
         }
 
@@ -2733,12 +2733,12 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: UpdateApiDeployment(ApiDeployment, FieldMask, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiDeployment apiDeployment = new ApiDeployment();
+            gcav::ApiDeployment apiDeployment = new gcav::ApiDeployment();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ApiDeployment response = registryClient.UpdateApiDeployment(apiDeployment, updateMask);
+            gcav::ApiDeployment response = registryClient.UpdateApiDeployment(apiDeployment, updateMask);
             // End snippet
         }
 
@@ -2748,12 +2748,12 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: UpdateApiDeploymentAsync(ApiDeployment, FieldMask, CallSettings)
             // Additional: UpdateApiDeploymentAsync(ApiDeployment, FieldMask, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiDeployment apiDeployment = new ApiDeployment();
+            gcav::ApiDeployment apiDeployment = new gcav::ApiDeployment();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ApiDeployment response = await registryClient.UpdateApiDeploymentAsync(apiDeployment, updateMask);
+            gcav::ApiDeployment response = await registryClient.UpdateApiDeploymentAsync(apiDeployment, updateMask);
             // End snippet
         }
 
@@ -2762,11 +2762,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiDeployment(DeleteApiDeploymentRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            DeleteApiDeploymentRequest request = new DeleteApiDeploymentRequest
+            gcav::DeleteApiDeploymentRequest request = new gcav::DeleteApiDeploymentRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
                 Force = false,
             };
             // Make the request
@@ -2780,11 +2780,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiDeploymentAsync(DeleteApiDeploymentRequest, CallSettings)
             // Additional: DeleteApiDeploymentAsync(DeleteApiDeploymentRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteApiDeploymentRequest request = new DeleteApiDeploymentRequest
+            gcav::DeleteApiDeploymentRequest request = new gcav::DeleteApiDeploymentRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
                 Force = false,
             };
             // Make the request
@@ -2797,7 +2797,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiDeployment(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/deployments/[DEPLOYMENT]";
             // Make the request
@@ -2811,7 +2811,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiDeploymentAsync(string, CallSettings)
             // Additional: DeleteApiDeploymentAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/deployments/[DEPLOYMENT]";
             // Make the request
@@ -2824,9 +2824,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiDeployment(ApiDeploymentName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiDeploymentName name = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::ApiDeploymentName name = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
             // Make the request
             registryClient.DeleteApiDeployment(name);
             // End snippet
@@ -2838,9 +2838,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiDeploymentAsync(ApiDeploymentName, CallSettings)
             // Additional: DeleteApiDeploymentAsync(ApiDeploymentName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiDeploymentName name = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::ApiDeploymentName name = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
             // Make the request
             await registryClient.DeleteApiDeploymentAsync(name);
             // End snippet
@@ -2851,15 +2851,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: TagApiDeploymentRevision(TagApiDeploymentRevisionRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            TagApiDeploymentRevisionRequest request = new TagApiDeploymentRevisionRequest
+            gcav::TagApiDeploymentRevisionRequest request = new gcav::TagApiDeploymentRevisionRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
                 Tag = "",
             };
             // Make the request
-            ApiDeployment response = registryClient.TagApiDeploymentRevision(request);
+            gcav::ApiDeployment response = registryClient.TagApiDeploymentRevision(request);
             // End snippet
         }
 
@@ -2869,15 +2869,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: TagApiDeploymentRevisionAsync(TagApiDeploymentRevisionRequest, CallSettings)
             // Additional: TagApiDeploymentRevisionAsync(TagApiDeploymentRevisionRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            TagApiDeploymentRevisionRequest request = new TagApiDeploymentRevisionRequest
+            gcav::TagApiDeploymentRevisionRequest request = new gcav::TagApiDeploymentRevisionRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
                 Tag = "",
             };
             // Make the request
-            ApiDeployment response = await registryClient.TagApiDeploymentRevisionAsync(request);
+            gcav::ApiDeployment response = await registryClient.TagApiDeploymentRevisionAsync(request);
             // End snippet
         }
 
@@ -2886,28 +2886,28 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiDeploymentRevisions(ListApiDeploymentRevisionsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ListApiDeploymentRevisionsRequest request = new ListApiDeploymentRevisionsRequest
+            gcav::ListApiDeploymentRevisionsRequest request = new gcav::ListApiDeploymentRevisionsRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
             };
             // Make the request
-            PagedEnumerable<ListApiDeploymentRevisionsResponse, ApiDeployment> response = registryClient.ListApiDeploymentRevisions(request);
+            PagedEnumerable<gcav::ListApiDeploymentRevisionsResponse, gcav::ApiDeployment> response = registryClient.ListApiDeploymentRevisions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ApiDeployment item in response)
+            foreach (gcav::ApiDeployment item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListApiDeploymentRevisionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListApiDeploymentRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiDeployment item in page)
+                foreach (gcav::ApiDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2916,10 +2916,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiDeployment> singlePage = response.ReadPage(pageSize);
+            Page<gcav::ApiDeployment> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiDeployment item in singlePage)
+            foreach (gcav::ApiDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2934,28 +2934,28 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListApiDeploymentRevisionsAsync(ListApiDeploymentRevisionsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListApiDeploymentRevisionsRequest request = new ListApiDeploymentRevisionsRequest
+            gcav::ListApiDeploymentRevisionsRequest request = new gcav::ListApiDeploymentRevisionsRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListApiDeploymentRevisionsResponse, ApiDeployment> response = registryClient.ListApiDeploymentRevisionsAsync(request);
+            PagedAsyncEnumerable<gcav::ListApiDeploymentRevisionsResponse, gcav::ApiDeployment> response = registryClient.ListApiDeploymentRevisionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ApiDeployment item) =>
+            await response.ForEachAsync((gcav::ApiDeployment item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListApiDeploymentRevisionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListApiDeploymentRevisionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ApiDeployment item in page)
+                foreach (gcav::ApiDeployment item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2964,10 +2964,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ApiDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::ApiDeployment> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ApiDeployment item in singlePage)
+            foreach (gcav::ApiDeployment item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2982,15 +2982,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: RollbackApiDeployment(RollbackApiDeploymentRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            RollbackApiDeploymentRequest request = new RollbackApiDeploymentRequest
+            gcav::RollbackApiDeploymentRequest request = new gcav::RollbackApiDeploymentRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
                 RevisionId = "",
             };
             // Make the request
-            ApiDeployment response = registryClient.RollbackApiDeployment(request);
+            gcav::ApiDeployment response = registryClient.RollbackApiDeployment(request);
             // End snippet
         }
 
@@ -3000,15 +3000,15 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: RollbackApiDeploymentAsync(RollbackApiDeploymentRequest, CallSettings)
             // Additional: RollbackApiDeploymentAsync(RollbackApiDeploymentRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RollbackApiDeploymentRequest request = new RollbackApiDeploymentRequest
+            gcav::RollbackApiDeploymentRequest request = new gcav::RollbackApiDeploymentRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
                 RevisionId = "",
             };
             // Make the request
-            ApiDeployment response = await registryClient.RollbackApiDeploymentAsync(request);
+            gcav::ApiDeployment response = await registryClient.RollbackApiDeploymentAsync(request);
             // End snippet
         }
 
@@ -3017,14 +3017,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiDeploymentRevision(DeleteApiDeploymentRevisionRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            DeleteApiDeploymentRevisionRequest request = new DeleteApiDeploymentRevisionRequest
+            gcav::DeleteApiDeploymentRevisionRequest request = new gcav::DeleteApiDeploymentRevisionRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
             };
             // Make the request
-            ApiDeployment response = registryClient.DeleteApiDeploymentRevision(request);
+            gcav::ApiDeployment response = registryClient.DeleteApiDeploymentRevision(request);
             // End snippet
         }
 
@@ -3034,14 +3034,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiDeploymentRevisionAsync(DeleteApiDeploymentRevisionRequest, CallSettings)
             // Additional: DeleteApiDeploymentRevisionAsync(DeleteApiDeploymentRevisionRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteApiDeploymentRevisionRequest request = new DeleteApiDeploymentRevisionRequest
+            gcav::DeleteApiDeploymentRevisionRequest request = new gcav::DeleteApiDeploymentRevisionRequest
             {
-                ApiDeploymentName = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
+                ApiDeploymentName = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]"),
             };
             // Make the request
-            ApiDeployment response = await registryClient.DeleteApiDeploymentRevisionAsync(request);
+            gcav::ApiDeployment response = await registryClient.DeleteApiDeploymentRevisionAsync(request);
             // End snippet
         }
 
@@ -3050,11 +3050,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiDeploymentRevision(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/deployments/[DEPLOYMENT]";
             // Make the request
-            ApiDeployment response = registryClient.DeleteApiDeploymentRevision(name);
+            gcav::ApiDeployment response = registryClient.DeleteApiDeploymentRevision(name);
             // End snippet
         }
 
@@ -3064,11 +3064,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiDeploymentRevisionAsync(string, CallSettings)
             // Additional: DeleteApiDeploymentRevisionAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/deployments/[DEPLOYMENT]";
             // Make the request
-            ApiDeployment response = await registryClient.DeleteApiDeploymentRevisionAsync(name);
+            gcav::ApiDeployment response = await registryClient.DeleteApiDeploymentRevisionAsync(name);
             // End snippet
         }
 
@@ -3077,11 +3077,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteApiDeploymentRevision(ApiDeploymentName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiDeploymentName name = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::ApiDeploymentName name = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
             // Make the request
-            ApiDeployment response = registryClient.DeleteApiDeploymentRevision(name);
+            gcav::ApiDeployment response = registryClient.DeleteApiDeploymentRevision(name);
             // End snippet
         }
 
@@ -3091,11 +3091,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteApiDeploymentRevisionAsync(ApiDeploymentName, CallSettings)
             // Additional: DeleteApiDeploymentRevisionAsync(ApiDeploymentName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiDeploymentName name = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::ApiDeploymentName name = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
             // Make the request
-            ApiDeployment response = await registryClient.DeleteApiDeploymentRevisionAsync(name);
+            gcav::ApiDeployment response = await registryClient.DeleteApiDeploymentRevisionAsync(name);
             // End snippet
         }
 
@@ -3104,29 +3104,29 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifacts(ListArtifactsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ListArtifactsRequest request = new ListArtifactsRequest
+            gcav::ListArtifactsRequest request = new gcav::ListArtifactsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifacts(request);
+            PagedEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifacts(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Artifact item in response)
+            foreach (gcav::Artifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3135,10 +3135,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Artifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3153,29 +3153,29 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifactsAsync(ListArtifactsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListArtifactsRequest request = new ListArtifactsRequest
+            gcav::ListArtifactsRequest request = new gcav::ListArtifactsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifactsAsync(request);
+            PagedAsyncEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifactsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Artifact item) =>
+            await response.ForEachAsync((gcav::Artifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3184,10 +3184,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Artifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3202,25 +3202,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifacts(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifacts(parent);
+            PagedEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Artifact item in response)
+            foreach (gcav::Artifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3229,10 +3229,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Artifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3247,25 +3247,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifactsAsync(string, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifactsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Artifact item) =>
+            await response.ForEachAsync((gcav::Artifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3274,10 +3274,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Artifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3292,25 +3292,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifacts(LocationName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifacts(parent);
+            PagedEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Artifact item in response)
+            foreach (gcav::Artifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3319,10 +3319,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Artifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3337,25 +3337,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifactsAsync(LocationName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifactsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Artifact item) =>
+            await response.ForEachAsync((gcav::Artifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3364,10 +3364,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Artifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3382,25 +3382,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifacts(ApiName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
-            PagedEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifacts(parent);
+            PagedEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Artifact item in response)
+            foreach (gcav::Artifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3409,10 +3409,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Artifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3427,25 +3427,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifactsAsync(ApiName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
             // Make the request
-            PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifactsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Artifact item) =>
+            await response.ForEachAsync((gcav::Artifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3454,10 +3454,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Artifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3472,25 +3472,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifacts(ApiVersionName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiVersionName parent = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiVersionName parent = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
             // Make the request
-            PagedEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifacts(parent);
+            PagedEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Artifact item in response)
+            foreach (gcav::Artifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3499,10 +3499,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Artifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3517,25 +3517,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifactsAsync(ApiVersionName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiVersionName parent = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiVersionName parent = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
             // Make the request
-            PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifactsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Artifact item) =>
+            await response.ForEachAsync((gcav::Artifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3544,10 +3544,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Artifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3562,25 +3562,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifacts(ApiSpecName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiSpecName parent = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName parent = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
-            PagedEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifacts(parent);
+            PagedEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Artifact item in response)
+            foreach (gcav::Artifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3589,10 +3589,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Artifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3607,25 +3607,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifactsAsync(ApiSpecName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiSpecName parent = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::ApiSpecName parent = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
-            PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifactsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Artifact item) =>
+            await response.ForEachAsync((gcav::Artifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3634,10 +3634,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Artifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3652,25 +3652,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifacts(ApiDeploymentName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiDeploymentName parent = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::ApiDeploymentName parent = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
             // Make the request
-            PagedEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifacts(parent);
+            PagedEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Artifact item in response)
+            foreach (gcav::Artifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3679,10 +3679,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Artifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3697,25 +3697,25 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ListArtifactsAsync(ApiDeploymentName, string, int?, CallSettings)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiDeploymentName parent = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::ApiDeploymentName parent = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
             // Make the request
-            PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response = registryClient.ListArtifactsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListArtifactsResponse, gcav::Artifact> response = registryClient.ListArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Artifact item) =>
+            await response.ForEachAsync((gcav::Artifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Artifact item in page)
+                foreach (gcav::Artifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3724,10 +3724,10 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Artifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Artifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Artifact item in singlePage)
+            foreach (gcav::Artifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3742,14 +3742,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetArtifact(GetArtifactRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            GetArtifactRequest request = new GetArtifactRequest
+            gcav::GetArtifactRequest request = new gcav::GetArtifactRequest
             {
-                ArtifactName = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
+                ArtifactName = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
             };
             // Make the request
-            Artifact response = registryClient.GetArtifact(request);
+            gcav::Artifact response = registryClient.GetArtifact(request);
             // End snippet
         }
 
@@ -3759,14 +3759,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetArtifactAsync(GetArtifactRequest, CallSettings)
             // Additional: GetArtifactAsync(GetArtifactRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetArtifactRequest request = new GetArtifactRequest
+            gcav::GetArtifactRequest request = new gcav::GetArtifactRequest
             {
-                ArtifactName = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
+                ArtifactName = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
             };
             // Make the request
-            Artifact response = await registryClient.GetArtifactAsync(request);
+            gcav::Artifact response = await registryClient.GetArtifactAsync(request);
             // End snippet
         }
 
@@ -3775,11 +3775,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetArtifact(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/artifacts/[ARTIFACT]";
             // Make the request
-            Artifact response = registryClient.GetArtifact(name);
+            gcav::Artifact response = registryClient.GetArtifact(name);
             // End snippet
         }
 
@@ -3789,11 +3789,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetArtifactAsync(string, CallSettings)
             // Additional: GetArtifactAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/artifacts/[ARTIFACT]";
             // Make the request
-            Artifact response = await registryClient.GetArtifactAsync(name);
+            gcav::Artifact response = await registryClient.GetArtifactAsync(name);
             // End snippet
         }
 
@@ -3802,11 +3802,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetArtifact(ArtifactName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ArtifactName name = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
+            gcav::ArtifactName name = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
             // Make the request
-            Artifact response = registryClient.GetArtifact(name);
+            gcav::Artifact response = registryClient.GetArtifact(name);
             // End snippet
         }
 
@@ -3816,11 +3816,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetArtifactAsync(ArtifactName, CallSettings)
             // Additional: GetArtifactAsync(ArtifactName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ArtifactName name = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
+            gcav::ArtifactName name = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
             // Make the request
-            Artifact response = await registryClient.GetArtifactAsync(name);
+            gcav::Artifact response = await registryClient.GetArtifactAsync(name);
             // End snippet
         }
 
@@ -3829,11 +3829,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetArtifactContents(GetArtifactContentsRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            GetArtifactContentsRequest request = new GetArtifactContentsRequest
+            gcav::GetArtifactContentsRequest request = new gcav::GetArtifactContentsRequest
             {
-                ArtifactName = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
+                ArtifactName = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
             };
             // Make the request
             HttpBody response = registryClient.GetArtifactContents(request);
@@ -3846,11 +3846,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetArtifactContentsAsync(GetArtifactContentsRequest, CallSettings)
             // Additional: GetArtifactContentsAsync(GetArtifactContentsRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetArtifactContentsRequest request = new GetArtifactContentsRequest
+            gcav::GetArtifactContentsRequest request = new gcav::GetArtifactContentsRequest
             {
-                ArtifactName = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
+                ArtifactName = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
             };
             // Make the request
             HttpBody response = await registryClient.GetArtifactContentsAsync(request);
@@ -3862,7 +3862,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetArtifactContents(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/artifacts/[ARTIFACT]";
             // Make the request
@@ -3876,7 +3876,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetArtifactContentsAsync(string, CallSettings)
             // Additional: GetArtifactContentsAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/artifacts/[ARTIFACT]";
             // Make the request
@@ -3889,9 +3889,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: GetArtifactContents(ArtifactName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ArtifactName name = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
+            gcav::ArtifactName name = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
             // Make the request
             HttpBody response = registryClient.GetArtifactContents(name);
             // End snippet
@@ -3903,9 +3903,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: GetArtifactContentsAsync(ArtifactName, CallSettings)
             // Additional: GetArtifactContentsAsync(ArtifactName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ArtifactName name = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
+            gcav::ArtifactName name = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
             // Make the request
             HttpBody response = await registryClient.GetArtifactContentsAsync(name);
             // End snippet
@@ -3916,16 +3916,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateArtifact(CreateArtifactRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            CreateArtifactRequest request = new CreateArtifactRequest
+            gcav::CreateArtifactRequest request = new gcav::CreateArtifactRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Artifact = new Artifact(),
+                Artifact = new gcav::Artifact(),
                 ArtifactId = "",
             };
             // Make the request
-            Artifact response = registryClient.CreateArtifact(request);
+            gcav::Artifact response = registryClient.CreateArtifact(request);
             // End snippet
         }
 
@@ -3935,16 +3935,16 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateArtifactAsync(CreateArtifactRequest, CallSettings)
             // Additional: CreateArtifactAsync(CreateArtifactRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            CreateArtifactRequest request = new CreateArtifactRequest
+            gcav::CreateArtifactRequest request = new gcav::CreateArtifactRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Artifact = new Artifact(),
+                Artifact = new gcav::Artifact(),
                 ArtifactId = "",
             };
             // Make the request
-            Artifact response = await registryClient.CreateArtifactAsync(request);
+            gcav::Artifact response = await registryClient.CreateArtifactAsync(request);
             // End snippet
         }
 
@@ -3953,13 +3953,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateArtifact(string, Artifact, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Artifact artifact = new Artifact();
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
+            gcav::Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -3969,13 +3969,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateArtifactAsync(string, Artifact, string, CallSettings)
             // Additional: CreateArtifactAsync(string, Artifact, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Artifact artifact = new Artifact();
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
+            gcav::Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -3984,13 +3984,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateArtifact(LocationName, Artifact, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Artifact artifact = new Artifact();
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
+            gcav::Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4000,13 +4000,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateArtifactAsync(LocationName, Artifact, string, CallSettings)
             // Additional: CreateArtifactAsync(LocationName, Artifact, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Artifact artifact = new Artifact();
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
+            gcav::Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4015,13 +4015,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateArtifact(ApiName, Artifact, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
-            Artifact artifact = new Artifact();
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
+            gcav::Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4031,13 +4031,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateArtifactAsync(ApiName, Artifact, string, CallSettings)
             // Additional: CreateArtifactAsync(ApiName, Artifact, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiName parent = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
-            Artifact artifact = new Artifact();
+            gcav::ApiName parent = gcav::ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]");
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
+            gcav::Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4046,13 +4046,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateArtifact(ApiVersionName, Artifact, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiVersionName parent = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
-            Artifact artifact = new Artifact();
+            gcav::ApiVersionName parent = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
+            gcav::Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4062,13 +4062,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateArtifactAsync(ApiVersionName, Artifact, string, CallSettings)
             // Additional: CreateArtifactAsync(ApiVersionName, Artifact, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiVersionName parent = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
-            Artifact artifact = new Artifact();
+            gcav::ApiVersionName parent = gcav::ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
+            gcav::Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4077,13 +4077,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateArtifact(ApiSpecName, Artifact, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiSpecName parent = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
-            Artifact artifact = new Artifact();
+            gcav::ApiSpecName parent = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
+            gcav::Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4093,13 +4093,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateArtifactAsync(ApiSpecName, Artifact, string, CallSettings)
             // Additional: CreateArtifactAsync(ApiSpecName, Artifact, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiSpecName parent = ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
-            Artifact artifact = new Artifact();
+            gcav::ApiSpecName parent = gcav::ApiSpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
+            gcav::Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4108,13 +4108,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: CreateArtifact(ApiDeploymentName, Artifact, string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ApiDeploymentName parent = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
-            Artifact artifact = new Artifact();
+            gcav::ApiDeploymentName parent = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
+            gcav::Artifact response = registryClient.CreateArtifact(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4124,13 +4124,13 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: CreateArtifactAsync(ApiDeploymentName, Artifact, string, CallSettings)
             // Additional: CreateArtifactAsync(ApiDeploymentName, Artifact, string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ApiDeploymentName parent = ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
-            Artifact artifact = new Artifact();
+            gcav::ApiDeploymentName parent = gcav::ApiDeploymentName.FromProjectLocationApiDeployment("[PROJECT]", "[LOCATION]", "[API]", "[DEPLOYMENT]");
+            gcav::Artifact artifact = new gcav::Artifact();
             string artifactId = "";
             // Make the request
-            Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
+            gcav::Artifact response = await registryClient.CreateArtifactAsync(parent, artifact, artifactId);
             // End snippet
         }
 
@@ -4139,14 +4139,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ReplaceArtifact(ReplaceArtifactRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ReplaceArtifactRequest request = new ReplaceArtifactRequest
+            gcav::ReplaceArtifactRequest request = new gcav::ReplaceArtifactRequest
             {
-                Artifact = new Artifact(),
+                Artifact = new gcav::Artifact(),
             };
             // Make the request
-            Artifact response = registryClient.ReplaceArtifact(request);
+            gcav::Artifact response = registryClient.ReplaceArtifact(request);
             // End snippet
         }
 
@@ -4156,14 +4156,14 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: ReplaceArtifactAsync(ReplaceArtifactRequest, CallSettings)
             // Additional: ReplaceArtifactAsync(ReplaceArtifactRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ReplaceArtifactRequest request = new ReplaceArtifactRequest
+            gcav::ReplaceArtifactRequest request = new gcav::ReplaceArtifactRequest
             {
-                Artifact = new Artifact(),
+                Artifact = new gcav::Artifact(),
             };
             // Make the request
-            Artifact response = await registryClient.ReplaceArtifactAsync(request);
+            gcav::Artifact response = await registryClient.ReplaceArtifactAsync(request);
             // End snippet
         }
 
@@ -4172,11 +4172,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: ReplaceArtifact(Artifact, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            Artifact artifact = new Artifact();
+            gcav::Artifact artifact = new gcav::Artifact();
             // Make the request
-            Artifact response = registryClient.ReplaceArtifact(artifact);
+            gcav::Artifact response = registryClient.ReplaceArtifact(artifact);
             // End snippet
         }
 
@@ -4186,11 +4186,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: ReplaceArtifactAsync(Artifact, CallSettings)
             // Additional: ReplaceArtifactAsync(Artifact, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            Artifact artifact = new Artifact();
+            gcav::Artifact artifact = new gcav::Artifact();
             // Make the request
-            Artifact response = await registryClient.ReplaceArtifactAsync(artifact);
+            gcav::Artifact response = await registryClient.ReplaceArtifactAsync(artifact);
             // End snippet
         }
 
@@ -4199,11 +4199,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteArtifact(DeleteArtifactRequest, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            DeleteArtifactRequest request = new DeleteArtifactRequest
+            gcav::DeleteArtifactRequest request = new gcav::DeleteArtifactRequest
             {
-                ArtifactName = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
+                ArtifactName = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
             };
             // Make the request
             registryClient.DeleteArtifact(request);
@@ -4216,11 +4216,11 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteArtifactAsync(DeleteArtifactRequest, CallSettings)
             // Additional: DeleteArtifactAsync(DeleteArtifactRequest, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteArtifactRequest request = new DeleteArtifactRequest
+            gcav::DeleteArtifactRequest request = new gcav::DeleteArtifactRequest
             {
-                ArtifactName = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
+                ArtifactName = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]"),
             };
             // Make the request
             await registryClient.DeleteArtifactAsync(request);
@@ -4232,7 +4232,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteArtifact(string, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/artifacts/[ARTIFACT]";
             // Make the request
@@ -4246,7 +4246,7 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteArtifactAsync(string, CallSettings)
             // Additional: DeleteArtifactAsync(string, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/artifacts/[ARTIFACT]";
             // Make the request
@@ -4259,9 +4259,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         {
             // Snippet: DeleteArtifact(ArtifactName, CallSettings)
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            ArtifactName name = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
+            gcav::ArtifactName name = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
             // Make the request
             registryClient.DeleteArtifact(name);
             // End snippet
@@ -4273,9 +4273,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             // Snippet: DeleteArtifactAsync(ArtifactName, CallSettings)
             // Additional: DeleteArtifactAsync(ArtifactName, CancellationToken)
             // Create client
-            RegistryClient registryClient = await RegistryClient.CreateAsync();
+            gcav::RegistryClient registryClient = await gcav::RegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ArtifactName name = ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
+            gcav::ArtifactName name = gcav::ArtifactName.FromProjectLocationArtifact("[PROJECT]", "[LOCATION]", "[ARTIFACT]");
             // Make the request
             await registryClient.DeleteArtifactAsync(name);
             // End snippet

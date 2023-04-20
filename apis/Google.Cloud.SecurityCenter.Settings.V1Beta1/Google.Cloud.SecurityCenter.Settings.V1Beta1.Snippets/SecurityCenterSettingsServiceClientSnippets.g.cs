@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.SecurityCenter.Settings.V1Beta1;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;

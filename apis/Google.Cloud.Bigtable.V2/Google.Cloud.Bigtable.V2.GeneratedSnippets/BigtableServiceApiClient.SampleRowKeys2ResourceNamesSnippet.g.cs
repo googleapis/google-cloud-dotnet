@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigtable_v2_generated_Bigtable_SampleRowKeys_sync_flattened2_resourceNames]
     using Google.Api.Gax.Grpc;

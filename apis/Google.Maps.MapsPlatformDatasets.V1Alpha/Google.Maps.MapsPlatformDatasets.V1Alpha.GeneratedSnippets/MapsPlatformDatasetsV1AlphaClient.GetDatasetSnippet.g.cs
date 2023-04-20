@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Maps.MapsPlatformDatasets.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START mapsplatformdatasets_v1alpha_generated_MapsPlatformDatasetsV1Alpha_GetDataset_sync_flattened]
     using Google.Maps.MapsPlatformDatasets.V1Alpha;

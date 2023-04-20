@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -36,30 +36,30 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListQueues(ListQueuesRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            ListQueuesRequest request = new ListQueuesRequest
+            gctv::ListQueuesRequest request = new gctv::ListQueuesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 ReadMask = new FieldMask(),
             };
             // Make the request
-            PagedEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueues(request);
+            PagedEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueues(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Queue item in response)
+            foreach (gctv::Queue item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListQueuesResponse page in response.AsRawResponses())
+            foreach (gctv::ListQueuesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Queue item in page)
+                foreach (gctv::Queue item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -68,10 +68,10 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Queue> singlePage = response.ReadPage(pageSize);
+            Page<gctv::Queue> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Queue item in singlePage)
+            foreach (gctv::Queue item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -86,30 +86,30 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListQueuesAsync(ListQueuesRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            ListQueuesRequest request = new ListQueuesRequest
+            gctv::ListQueuesRequest request = new gctv::ListQueuesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 ReadMask = new FieldMask(),
             };
             // Make the request
-            PagedAsyncEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueuesAsync(request);
+            PagedAsyncEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueuesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Queue item) =>
+            await response.ForEachAsync((gctv::Queue item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListQueuesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gctv::ListQueuesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Queue item in page)
+                foreach (gctv::Queue item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -118,10 +118,10 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Queue> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gctv::Queue> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Queue item in singlePage)
+            foreach (gctv::Queue item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -136,25 +136,25 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListQueues(string, string, int?, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueues(parent);
+            PagedEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueues(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Queue item in response)
+            foreach (gctv::Queue item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListQueuesResponse page in response.AsRawResponses())
+            foreach (gctv::ListQueuesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Queue item in page)
+                foreach (gctv::Queue item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -163,10 +163,10 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Queue> singlePage = response.ReadPage(pageSize);
+            Page<gctv::Queue> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Queue item in singlePage)
+            foreach (gctv::Queue item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -181,25 +181,25 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListQueuesAsync(string, string, int?, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueuesAsync(parent);
+            PagedAsyncEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueuesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Queue item) =>
+            await response.ForEachAsync((gctv::Queue item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListQueuesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gctv::ListQueuesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Queue item in page)
+                foreach (gctv::Queue item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -208,10 +208,10 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Queue> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gctv::Queue> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Queue item in singlePage)
+            foreach (gctv::Queue item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -226,25 +226,25 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListQueues(LocationName, string, int?, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueues(parent);
+            PagedEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueues(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Queue item in response)
+            foreach (gctv::Queue item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListQueuesResponse page in response.AsRawResponses())
+            foreach (gctv::ListQueuesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Queue item in page)
+                foreach (gctv::Queue item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -253,10 +253,10 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Queue> singlePage = response.ReadPage(pageSize);
+            Page<gctv::Queue> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Queue item in singlePage)
+            foreach (gctv::Queue item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -271,25 +271,25 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListQueuesAsync(LocationName, string, int?, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueuesAsync(parent);
+            PagedAsyncEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueuesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Queue item) =>
+            await response.ForEachAsync((gctv::Queue item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListQueuesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gctv::ListQueuesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Queue item in page)
+                foreach (gctv::Queue item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -298,10 +298,10 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Queue> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gctv::Queue> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Queue item in singlePage)
+            foreach (gctv::Queue item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -316,15 +316,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetQueue(GetQueueRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            GetQueueRequest request = new GetQueueRequest
+            gctv::GetQueueRequest request = new gctv::GetQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 ReadMask = new FieldMask(),
             };
             // Make the request
-            Queue response = cloudTasksClient.GetQueue(request);
+            gctv::Queue response = cloudTasksClient.GetQueue(request);
             // End snippet
         }
 
@@ -334,15 +334,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetQueueAsync(GetQueueRequest, CallSettings)
             // Additional: GetQueueAsync(GetQueueRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            GetQueueRequest request = new GetQueueRequest
+            gctv::GetQueueRequest request = new gctv::GetQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 ReadMask = new FieldMask(),
             };
             // Make the request
-            Queue response = await cloudTasksClient.GetQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.GetQueueAsync(request);
             // End snippet
         }
 
@@ -351,11 +351,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetQueue(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = cloudTasksClient.GetQueue(name);
+            gctv::Queue response = cloudTasksClient.GetQueue(name);
             // End snippet
         }
 
@@ -365,11 +365,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetQueueAsync(string, CallSettings)
             // Additional: GetQueueAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = await cloudTasksClient.GetQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.GetQueueAsync(name);
             // End snippet
         }
 
@@ -378,11 +378,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetQueue(QueueName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            Queue response = cloudTasksClient.GetQueue(name);
+            gctv::Queue response = cloudTasksClient.GetQueue(name);
             // End snippet
         }
 
@@ -392,11 +392,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetQueueAsync(QueueName, CallSettings)
             // Additional: GetQueueAsync(QueueName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            Queue response = await cloudTasksClient.GetQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.GetQueueAsync(name);
             // End snippet
         }
 
@@ -405,15 +405,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: CreateQueue(CreateQueueRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            CreateQueueRequest request = new CreateQueueRequest
+            gctv::CreateQueueRequest request = new gctv::CreateQueueRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new gctv::Queue(),
             };
             // Make the request
-            Queue response = cloudTasksClient.CreateQueue(request);
+            gctv::Queue response = cloudTasksClient.CreateQueue(request);
             // End snippet
         }
 
@@ -423,15 +423,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: CreateQueueAsync(CreateQueueRequest, CallSettings)
             // Additional: CreateQueueAsync(CreateQueueRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            CreateQueueRequest request = new CreateQueueRequest
+            gctv::CreateQueueRequest request = new gctv::CreateQueueRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new gctv::Queue(),
             };
             // Make the request
-            Queue response = await cloudTasksClient.CreateQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.CreateQueueAsync(request);
             // End snippet
         }
 
@@ -440,12 +440,12 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: CreateQueue(string, Queue, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Queue queue = new Queue();
+            gctv::Queue queue = new gctv::Queue();
             // Make the request
-            Queue response = cloudTasksClient.CreateQueue(parent, queue);
+            gctv::Queue response = cloudTasksClient.CreateQueue(parent, queue);
             // End snippet
         }
 
@@ -455,12 +455,12 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: CreateQueueAsync(string, Queue, CallSettings)
             // Additional: CreateQueueAsync(string, Queue, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Queue queue = new Queue();
+            gctv::Queue queue = new gctv::Queue();
             // Make the request
-            Queue response = await cloudTasksClient.CreateQueueAsync(parent, queue);
+            gctv::Queue response = await cloudTasksClient.CreateQueueAsync(parent, queue);
             // End snippet
         }
 
@@ -469,12 +469,12 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: CreateQueue(LocationName, Queue, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Queue queue = new Queue();
+            gctv::Queue queue = new gctv::Queue();
             // Make the request
-            Queue response = cloudTasksClient.CreateQueue(parent, queue);
+            gctv::Queue response = cloudTasksClient.CreateQueue(parent, queue);
             // End snippet
         }
 
@@ -484,12 +484,12 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: CreateQueueAsync(LocationName, Queue, CallSettings)
             // Additional: CreateQueueAsync(LocationName, Queue, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Queue queue = new Queue();
+            gctv::Queue queue = new gctv::Queue();
             // Make the request
-            Queue response = await cloudTasksClient.CreateQueueAsync(parent, queue);
+            gctv::Queue response = await cloudTasksClient.CreateQueueAsync(parent, queue);
             // End snippet
         }
 
@@ -498,15 +498,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: UpdateQueue(UpdateQueueRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            UpdateQueueRequest request = new UpdateQueueRequest
+            gctv::UpdateQueueRequest request = new gctv::UpdateQueueRequest
             {
-                Queue = new Queue(),
+                Queue = new gctv::Queue(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Queue response = cloudTasksClient.UpdateQueue(request);
+            gctv::Queue response = cloudTasksClient.UpdateQueue(request);
             // End snippet
         }
 
@@ -516,15 +516,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: UpdateQueueAsync(UpdateQueueRequest, CallSettings)
             // Additional: UpdateQueueAsync(UpdateQueueRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateQueueRequest request = new UpdateQueueRequest
+            gctv::UpdateQueueRequest request = new gctv::UpdateQueueRequest
             {
-                Queue = new Queue(),
+                Queue = new gctv::Queue(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Queue response = await cloudTasksClient.UpdateQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.UpdateQueueAsync(request);
             // End snippet
         }
 
@@ -533,12 +533,12 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: UpdateQueue(Queue, FieldMask, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            Queue queue = new Queue();
+            gctv::Queue queue = new gctv::Queue();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Queue response = cloudTasksClient.UpdateQueue(queue, updateMask);
+            gctv::Queue response = cloudTasksClient.UpdateQueue(queue, updateMask);
             // End snippet
         }
 
@@ -548,12 +548,12 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: UpdateQueueAsync(Queue, FieldMask, CallSettings)
             // Additional: UpdateQueueAsync(Queue, FieldMask, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            Queue queue = new Queue();
+            gctv::Queue queue = new gctv::Queue();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Queue response = await cloudTasksClient.UpdateQueueAsync(queue, updateMask);
+            gctv::Queue response = await cloudTasksClient.UpdateQueueAsync(queue, updateMask);
             // End snippet
         }
 
@@ -562,11 +562,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: DeleteQueue(DeleteQueueRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            DeleteQueueRequest request = new DeleteQueueRequest
+            gctv::DeleteQueueRequest request = new gctv::DeleteQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
             cloudTasksClient.DeleteQueue(request);
@@ -579,11 +579,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: DeleteQueueAsync(DeleteQueueRequest, CallSettings)
             // Additional: DeleteQueueAsync(DeleteQueueRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteQueueRequest request = new DeleteQueueRequest
+            gctv::DeleteQueueRequest request = new gctv::DeleteQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
             await cloudTasksClient.DeleteQueueAsync(request);
@@ -595,7 +595,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: DeleteQueue(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
@@ -609,7 +609,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: DeleteQueueAsync(string, CallSettings)
             // Additional: DeleteQueueAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
@@ -622,9 +622,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: DeleteQueue(QueueName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
             cloudTasksClient.DeleteQueue(name);
             // End snippet
@@ -636,9 +636,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: DeleteQueueAsync(QueueName, CallSettings)
             // Additional: DeleteQueueAsync(QueueName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
             await cloudTasksClient.DeleteQueueAsync(name);
             // End snippet
@@ -649,14 +649,14 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: PurgeQueue(PurgeQueueRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            PurgeQueueRequest request = new PurgeQueueRequest
+            gctv::PurgeQueueRequest request = new gctv::PurgeQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            Queue response = cloudTasksClient.PurgeQueue(request);
+            gctv::Queue response = cloudTasksClient.PurgeQueue(request);
             // End snippet
         }
 
@@ -666,14 +666,14 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: PurgeQueueAsync(PurgeQueueRequest, CallSettings)
             // Additional: PurgeQueueAsync(PurgeQueueRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            PurgeQueueRequest request = new PurgeQueueRequest
+            gctv::PurgeQueueRequest request = new gctv::PurgeQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            Queue response = await cloudTasksClient.PurgeQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.PurgeQueueAsync(request);
             // End snippet
         }
 
@@ -682,11 +682,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: PurgeQueue(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = cloudTasksClient.PurgeQueue(name);
+            gctv::Queue response = cloudTasksClient.PurgeQueue(name);
             // End snippet
         }
 
@@ -696,11 +696,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: PurgeQueueAsync(string, CallSettings)
             // Additional: PurgeQueueAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = await cloudTasksClient.PurgeQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.PurgeQueueAsync(name);
             // End snippet
         }
 
@@ -709,11 +709,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: PurgeQueue(QueueName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            Queue response = cloudTasksClient.PurgeQueue(name);
+            gctv::Queue response = cloudTasksClient.PurgeQueue(name);
             // End snippet
         }
 
@@ -723,11 +723,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: PurgeQueueAsync(QueueName, CallSettings)
             // Additional: PurgeQueueAsync(QueueName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            Queue response = await cloudTasksClient.PurgeQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.PurgeQueueAsync(name);
             // End snippet
         }
 
@@ -736,14 +736,14 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: PauseQueue(PauseQueueRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            PauseQueueRequest request = new PauseQueueRequest
+            gctv::PauseQueueRequest request = new gctv::PauseQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            Queue response = cloudTasksClient.PauseQueue(request);
+            gctv::Queue response = cloudTasksClient.PauseQueue(request);
             // End snippet
         }
 
@@ -753,14 +753,14 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: PauseQueueAsync(PauseQueueRequest, CallSettings)
             // Additional: PauseQueueAsync(PauseQueueRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            PauseQueueRequest request = new PauseQueueRequest
+            gctv::PauseQueueRequest request = new gctv::PauseQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            Queue response = await cloudTasksClient.PauseQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.PauseQueueAsync(request);
             // End snippet
         }
 
@@ -769,11 +769,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: PauseQueue(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = cloudTasksClient.PauseQueue(name);
+            gctv::Queue response = cloudTasksClient.PauseQueue(name);
             // End snippet
         }
 
@@ -783,11 +783,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: PauseQueueAsync(string, CallSettings)
             // Additional: PauseQueueAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = await cloudTasksClient.PauseQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.PauseQueueAsync(name);
             // End snippet
         }
 
@@ -796,11 +796,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: PauseQueue(QueueName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            Queue response = cloudTasksClient.PauseQueue(name);
+            gctv::Queue response = cloudTasksClient.PauseQueue(name);
             // End snippet
         }
 
@@ -810,11 +810,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: PauseQueueAsync(QueueName, CallSettings)
             // Additional: PauseQueueAsync(QueueName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            Queue response = await cloudTasksClient.PauseQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.PauseQueueAsync(name);
             // End snippet
         }
 
@@ -823,14 +823,14 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ResumeQueue(ResumeQueueRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            ResumeQueueRequest request = new ResumeQueueRequest
+            gctv::ResumeQueueRequest request = new gctv::ResumeQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            Queue response = cloudTasksClient.ResumeQueue(request);
+            gctv::Queue response = cloudTasksClient.ResumeQueue(request);
             // End snippet
         }
 
@@ -840,14 +840,14 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: ResumeQueueAsync(ResumeQueueRequest, CallSettings)
             // Additional: ResumeQueueAsync(ResumeQueueRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            ResumeQueueRequest request = new ResumeQueueRequest
+            gctv::ResumeQueueRequest request = new gctv::ResumeQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            Queue response = await cloudTasksClient.ResumeQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.ResumeQueueAsync(request);
             // End snippet
         }
 
@@ -856,11 +856,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ResumeQueue(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = cloudTasksClient.ResumeQueue(name);
+            gctv::Queue response = cloudTasksClient.ResumeQueue(name);
             // End snippet
         }
 
@@ -870,11 +870,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: ResumeQueueAsync(string, CallSettings)
             // Additional: ResumeQueueAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            Queue response = await cloudTasksClient.ResumeQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.ResumeQueueAsync(name);
             // End snippet
         }
 
@@ -883,11 +883,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ResumeQueue(QueueName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            Queue response = cloudTasksClient.ResumeQueue(name);
+            gctv::Queue response = cloudTasksClient.ResumeQueue(name);
             // End snippet
         }
 
@@ -897,11 +897,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: ResumeQueueAsync(QueueName, CallSettings)
             // Additional: ResumeQueueAsync(QueueName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName name = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName name = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            Queue response = await cloudTasksClient.ResumeQueueAsync(name);
+            gctv::Queue response = await cloudTasksClient.ResumeQueueAsync(name);
             // End snippet
         }
 
@@ -910,7 +910,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -928,7 +928,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -945,7 +945,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetIamPolicy(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             // Make the request
@@ -959,7 +959,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetIamPolicyAsync(string, CallSettings)
             // Additional: GetIamPolicyAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             // Make the request
@@ -972,7 +972,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetIamPolicy(IResourceName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
@@ -986,7 +986,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
             // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
@@ -999,7 +999,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -1018,7 +1018,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -1036,7 +1036,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: SetIamPolicy(string, Policy, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             Policy policy = new Policy();
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: SetIamPolicyAsync(string, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(string, Policy, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             Policy policy = new Policy();
@@ -1065,7 +1065,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
@@ -1080,7 +1080,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
@@ -1094,7 +1094,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
@@ -1112,7 +1112,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
@@ -1129,7 +1129,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: TestIamPermissions(string, IEnumerable<string>, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             IEnumerable<string> permissions = new string[] { "", };
@@ -1144,7 +1144,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: TestIamPermissionsAsync(string, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(string, IEnumerable<string>, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             IEnumerable<string> permissions = new string[] { "", };
@@ -1158,7 +1158,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
@@ -1173,7 +1173,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
@@ -1187,15 +1187,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListTasks(ListTasksRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gctv::ListTasksRequest request = new gctv::ListTasksRequest
             {
-                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
-            PagedEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(request);
+            PagedEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gctv::Task item in response)
@@ -1205,7 +1205,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gctv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1236,15 +1236,15 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListTasksAsync(ListTasksRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gctv::ListTasksRequest request = new gctv::ListTasksRequest
             {
-                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(request);
+            PagedAsyncEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gctv::Task item) =>
@@ -1254,7 +1254,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gctv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1285,11 +1285,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListTasks(string, string, int?, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            PagedEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(parent);
+            PagedEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gctv::Task item in response)
@@ -1299,7 +1299,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gctv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1330,11 +1330,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListTasksAsync(string, string, int?, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gctv::Task item) =>
@@ -1344,7 +1344,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gctv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1375,11 +1375,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListTasks(QueueName, string, int?, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName parent = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            PagedEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(parent);
+            PagedEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gctv::Task item in response)
@@ -1389,7 +1389,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gctv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1420,11 +1420,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: ListTasksAsync(QueueName, string, int?, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName parent = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gctv::Task item) =>
@@ -1434,7 +1434,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gctv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1465,11 +1465,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetTask(GetTaskRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gctv::GetTaskRequest request = new gctv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
@@ -1483,11 +1483,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetTaskAsync(GetTaskRequest, CallSettings)
             // Additional: GetTaskAsync(GetTaskRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gctv::GetTaskRequest request = new gctv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
@@ -1500,7 +1500,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetTask(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
@@ -1514,7 +1514,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetTaskAsync(string, CallSettings)
             // Additional: GetTaskAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
@@ -1527,9 +1527,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: GetTask(TaskName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             gctv::Task response = cloudTasksClient.GetTask(name);
             // End snippet
@@ -1541,9 +1541,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: GetTaskAsync(TaskName, CallSettings)
             // Additional: GetTaskAsync(TaskName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             gctv::Task response = await cloudTasksClient.GetTaskAsync(name);
             // End snippet
@@ -1554,11 +1554,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: CreateTask(CreateTaskRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            CreateTaskRequest request = new CreateTaskRequest
+            gctv::CreateTaskRequest request = new gctv::CreateTaskRequest
             {
-                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 Task = new gctv::Task(),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
@@ -1573,11 +1573,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: CreateTaskAsync(CreateTaskRequest, CallSettings)
             // Additional: CreateTaskAsync(CreateTaskRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            CreateTaskRequest request = new CreateTaskRequest
+            gctv::CreateTaskRequest request = new gctv::CreateTaskRequest
             {
-                ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ParentAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
                 Task = new gctv::Task(),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
@@ -1591,7 +1591,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: CreateTask(string, Task, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             gctv::Task task = new gctv::Task();
@@ -1606,7 +1606,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: CreateTaskAsync(string, Task, CallSettings)
             // Additional: CreateTaskAsync(string, Task, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             gctv::Task task = new gctv::Task();
@@ -1620,9 +1620,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: CreateTask(QueueName, Task, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            QueueName parent = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             gctv::Task task = new gctv::Task();
             // Make the request
             gctv::Task response = cloudTasksClient.CreateTask(parent, task);
@@ -1635,9 +1635,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: CreateTaskAsync(QueueName, Task, CallSettings)
             // Additional: CreateTaskAsync(QueueName, Task, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName parent = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             gctv::Task task = new gctv::Task();
             // Make the request
             gctv::Task response = await cloudTasksClient.CreateTaskAsync(parent, task);
@@ -1649,11 +1649,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: DeleteTask(DeleteTaskRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            DeleteTaskRequest request = new DeleteTaskRequest
+            gctv::DeleteTaskRequest request = new gctv::DeleteTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             // Make the request
             cloudTasksClient.DeleteTask(request);
@@ -1666,11 +1666,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: DeleteTaskAsync(DeleteTaskRequest, CallSettings)
             // Additional: DeleteTaskAsync(DeleteTaskRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteTaskRequest request = new DeleteTaskRequest
+            gctv::DeleteTaskRequest request = new gctv::DeleteTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
             };
             // Make the request
             await cloudTasksClient.DeleteTaskAsync(request);
@@ -1682,7 +1682,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: DeleteTask(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
@@ -1696,7 +1696,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: DeleteTaskAsync(string, CallSettings)
             // Additional: DeleteTaskAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
@@ -1709,9 +1709,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: DeleteTask(TaskName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             cloudTasksClient.DeleteTask(name);
             // End snippet
@@ -1723,9 +1723,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: DeleteTaskAsync(TaskName, CallSettings)
             // Additional: DeleteTaskAsync(TaskName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             await cloudTasksClient.DeleteTaskAsync(name);
             // End snippet
@@ -1736,11 +1736,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: RunTask(RunTaskRequest, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            RunTaskRequest request = new RunTaskRequest
+            gctv::RunTaskRequest request = new gctv::RunTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
@@ -1754,11 +1754,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: RunTaskAsync(RunTaskRequest, CallSettings)
             // Additional: RunTaskAsync(RunTaskRequest, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            RunTaskRequest request = new RunTaskRequest
+            gctv::RunTaskRequest request = new gctv::RunTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request
@@ -1771,7 +1771,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: RunTask(string, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
@@ -1785,7 +1785,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: RunTaskAsync(string, CallSettings)
             // Additional: RunTaskAsync(string, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]";
             // Make the request
@@ -1798,9 +1798,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         {
             // Snippet: RunTask(TaskName, CallSettings)
             // Create client
-            CloudTasksClient cloudTasksClient = CloudTasksClient.Create();
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             gctv::Task response = cloudTasksClient.RunTask(name);
             // End snippet
@@ -1812,9 +1812,9 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             // Snippet: RunTaskAsync(TaskName, CallSettings)
             // Additional: RunTaskAsync(TaskName, CancellationToken)
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
+            gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             gctv::Task response = await cloudTasksClient.RunTaskAsync(name);
             // End snippet

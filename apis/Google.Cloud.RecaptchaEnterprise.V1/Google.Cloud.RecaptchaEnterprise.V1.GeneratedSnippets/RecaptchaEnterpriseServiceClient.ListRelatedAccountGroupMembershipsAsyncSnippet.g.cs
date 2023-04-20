@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_ListRelatedAccountGroupMemberships_async_flattened]
     using Google.Api.Gax;

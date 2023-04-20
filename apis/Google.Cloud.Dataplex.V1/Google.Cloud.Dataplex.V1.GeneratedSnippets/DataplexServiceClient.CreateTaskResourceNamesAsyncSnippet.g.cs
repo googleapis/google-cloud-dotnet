@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_CreateTask_async_flattened_resourceNames]
     using Google.LongRunning;
@@ -36,23 +36,23 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task CreateTaskResourceNamesAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             gcdv::Task task = new gcdv::Task();
             string taskId = "";
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = await dataplexServiceClient.CreateTaskAsync(parent, task, taskId);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateTaskAsync(parent, task, taskId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateTaskAsync(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

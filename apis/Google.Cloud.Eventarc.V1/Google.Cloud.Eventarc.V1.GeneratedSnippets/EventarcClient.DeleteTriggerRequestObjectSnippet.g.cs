@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Eventarc.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START eventarc_v1_generated_Eventarc_DeleteTrigger_sync]
     using Google.Cloud.Eventarc.V1;

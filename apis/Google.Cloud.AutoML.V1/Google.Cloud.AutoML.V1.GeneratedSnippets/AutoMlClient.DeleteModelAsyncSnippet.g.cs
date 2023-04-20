@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AutoML.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START automl_v1_generated_AutoMl_DeleteModel_async_flattened]
     using Google.Cloud.AutoML.V1;

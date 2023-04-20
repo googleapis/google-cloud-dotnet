@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ServiceDirectory.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START servicedirectory_v1_generated_RegistrationService_ListNamespaces_sync_flattened_resourceNames]
     using Google.Api.Gax;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BinaryAuthorization.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START binaryauthorization_v1_generated_BinauthzManagementServiceV1_ListAttestors_sync]
     using Google.Api.Gax;

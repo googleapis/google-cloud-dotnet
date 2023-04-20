@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using System;
@@ -32,29 +32,29 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
         {
             // Snippet: SearchCatalogs(SearchCatalogsRequest, CallSettings)
             // Create client
-            PrivateCatalogClient privateCatalogClient = PrivateCatalogClient.Create();
+            gcpv::PrivateCatalogClient privateCatalogClient = gcpv::PrivateCatalogClient.Create();
             // Initialize request argument(s)
-            SearchCatalogsRequest request = new SearchCatalogsRequest
+            gcpv::SearchCatalogsRequest request = new gcpv::SearchCatalogsRequest
             {
                 Resource = "",
                 Query = "",
             };
             // Make the request
-            PagedEnumerable<SearchCatalogsResponse, Catalog> response = privateCatalogClient.SearchCatalogs(request);
+            PagedEnumerable<gcpv::SearchCatalogsResponse, gcpv::Catalog> response = privateCatalogClient.SearchCatalogs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Catalog item in response)
+            foreach (gcpv::Catalog item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchCatalogsResponse page in response.AsRawResponses())
+            foreach (gcpv::SearchCatalogsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Catalog item in page)
+                foreach (gcpv::Catalog item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -63,10 +63,10 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Catalog> singlePage = response.ReadPage(pageSize);
+            Page<gcpv::Catalog> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Catalog item in singlePage)
+            foreach (gcpv::Catalog item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -81,29 +81,29 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
         {
             // Snippet: SearchCatalogsAsync(SearchCatalogsRequest, CallSettings)
             // Create client
-            PrivateCatalogClient privateCatalogClient = await PrivateCatalogClient.CreateAsync();
+            gcpv::PrivateCatalogClient privateCatalogClient = await gcpv::PrivateCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            SearchCatalogsRequest request = new SearchCatalogsRequest
+            gcpv::SearchCatalogsRequest request = new gcpv::SearchCatalogsRequest
             {
                 Resource = "",
                 Query = "",
             };
             // Make the request
-            PagedAsyncEnumerable<SearchCatalogsResponse, Catalog> response = privateCatalogClient.SearchCatalogsAsync(request);
+            PagedAsyncEnumerable<gcpv::SearchCatalogsResponse, gcpv::Catalog> response = privateCatalogClient.SearchCatalogsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Catalog item) =>
+            await response.ForEachAsync((gcpv::Catalog item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchCatalogsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcpv::SearchCatalogsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Catalog item in page)
+                foreach (gcpv::Catalog item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -112,10 +112,10 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Catalog> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcpv::Catalog> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Catalog item in singlePage)
+            foreach (gcpv::Catalog item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -130,29 +130,29 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
         {
             // Snippet: SearchProducts(SearchProductsRequest, CallSettings)
             // Create client
-            PrivateCatalogClient privateCatalogClient = PrivateCatalogClient.Create();
+            gcpv::PrivateCatalogClient privateCatalogClient = gcpv::PrivateCatalogClient.Create();
             // Initialize request argument(s)
-            SearchProductsRequest request = new SearchProductsRequest
+            gcpv::SearchProductsRequest request = new gcpv::SearchProductsRequest
             {
                 Resource = "",
                 Query = "",
             };
             // Make the request
-            PagedEnumerable<SearchProductsResponse, Product> response = privateCatalogClient.SearchProducts(request);
+            PagedEnumerable<gcpv::SearchProductsResponse, gcpv::Product> response = privateCatalogClient.SearchProducts(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Product item in response)
+            foreach (gcpv::Product item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchProductsResponse page in response.AsRawResponses())
+            foreach (gcpv::SearchProductsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Product item in page)
+                foreach (gcpv::Product item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -161,10 +161,10 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Product> singlePage = response.ReadPage(pageSize);
+            Page<gcpv::Product> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Product item in singlePage)
+            foreach (gcpv::Product item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -179,29 +179,29 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
         {
             // Snippet: SearchProductsAsync(SearchProductsRequest, CallSettings)
             // Create client
-            PrivateCatalogClient privateCatalogClient = await PrivateCatalogClient.CreateAsync();
+            gcpv::PrivateCatalogClient privateCatalogClient = await gcpv::PrivateCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            SearchProductsRequest request = new SearchProductsRequest
+            gcpv::SearchProductsRequest request = new gcpv::SearchProductsRequest
             {
                 Resource = "",
                 Query = "",
             };
             // Make the request
-            PagedAsyncEnumerable<SearchProductsResponse, Product> response = privateCatalogClient.SearchProductsAsync(request);
+            PagedAsyncEnumerable<gcpv::SearchProductsResponse, gcpv::Product> response = privateCatalogClient.SearchProductsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Product item) =>
+            await response.ForEachAsync((gcpv::Product item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchProductsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcpv::SearchProductsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Product item in page)
+                foreach (gcpv::Product item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -210,10 +210,10 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Product> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcpv::Product> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Product item in singlePage)
+            foreach (gcpv::Product item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -228,15 +228,15 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
         {
             // Snippet: SearchVersions(SearchVersionsRequest, CallSettings)
             // Create client
-            PrivateCatalogClient privateCatalogClient = PrivateCatalogClient.Create();
+            gcpv::PrivateCatalogClient privateCatalogClient = gcpv::PrivateCatalogClient.Create();
             // Initialize request argument(s)
-            SearchVersionsRequest request = new SearchVersionsRequest
+            gcpv::SearchVersionsRequest request = new gcpv::SearchVersionsRequest
             {
                 Resource = "",
                 Query = "",
             };
             // Make the request
-            PagedEnumerable<SearchVersionsResponse, gcpv::Version> response = privateCatalogClient.SearchVersions(request);
+            PagedEnumerable<gcpv::SearchVersionsResponse, gcpv::Version> response = privateCatalogClient.SearchVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcpv::Version item in response)
@@ -246,7 +246,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchVersionsResponse page in response.AsRawResponses())
+            foreach (gcpv::SearchVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -277,15 +277,15 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
         {
             // Snippet: SearchVersionsAsync(SearchVersionsRequest, CallSettings)
             // Create client
-            PrivateCatalogClient privateCatalogClient = await PrivateCatalogClient.CreateAsync();
+            gcpv::PrivateCatalogClient privateCatalogClient = await gcpv::PrivateCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            SearchVersionsRequest request = new SearchVersionsRequest
+            gcpv::SearchVersionsRequest request = new gcpv::SearchVersionsRequest
             {
                 Resource = "",
                 Query = "",
             };
             // Make the request
-            PagedAsyncEnumerable<SearchVersionsResponse, gcpv::Version> response = privateCatalogClient.SearchVersionsAsync(request);
+            PagedAsyncEnumerable<gcpv::SearchVersionsResponse, gcpv::Version> response = privateCatalogClient.SearchVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcpv::Version item) =>
@@ -295,7 +295,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcpv::SearchVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

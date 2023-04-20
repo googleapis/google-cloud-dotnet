@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.ErrorReporting.V1Beta1;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>

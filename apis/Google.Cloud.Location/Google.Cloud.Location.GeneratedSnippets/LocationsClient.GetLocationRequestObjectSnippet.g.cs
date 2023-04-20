@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Location.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloud_generated_Locations_GetLocation_sync]
     using Google.Cloud.Location;

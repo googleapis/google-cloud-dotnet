@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Eventarc.Publishing.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START eventarcpublishing_v1_generated_Publisher_PublishEvents_sync]
     using Google.Cloud.Eventarc.Publishing.V1;

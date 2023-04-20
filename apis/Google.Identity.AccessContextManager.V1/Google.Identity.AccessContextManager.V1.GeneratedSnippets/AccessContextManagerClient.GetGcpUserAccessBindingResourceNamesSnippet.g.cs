@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Identity.AccessContextManager.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START accesscontextmanager_v1_generated_AccessContextManager_GetGcpUserAccessBinding_sync_flattened_resourceNames]
     using Google.Identity.AccessContextManager.V1;

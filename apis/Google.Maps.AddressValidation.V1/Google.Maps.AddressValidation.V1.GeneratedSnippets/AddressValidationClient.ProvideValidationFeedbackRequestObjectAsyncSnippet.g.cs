@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Maps.AddressValidation.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START addressvalidation_v1_generated_AddressValidation_ProvideValidationFeedback_async]
     using Google.Maps.AddressValidation.V1;

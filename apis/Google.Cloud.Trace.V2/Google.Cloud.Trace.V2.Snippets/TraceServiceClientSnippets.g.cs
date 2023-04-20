@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Trace.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Trace.V2;
     using Google.Protobuf.WellKnownTypes;
     using Google.Rpc;
     using System.Collections.Generic;

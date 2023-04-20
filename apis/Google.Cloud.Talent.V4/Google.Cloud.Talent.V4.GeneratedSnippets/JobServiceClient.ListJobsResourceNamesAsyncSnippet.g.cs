@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START jobs_v4_generated_JobService_ListJobs_async_flattened_resourceNames]
     using Google.Api.Gax;

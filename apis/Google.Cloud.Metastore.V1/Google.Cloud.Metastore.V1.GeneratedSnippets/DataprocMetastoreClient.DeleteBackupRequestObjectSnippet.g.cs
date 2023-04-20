@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Metastore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START metastore_v1_generated_DataprocMetastore_DeleteBackup_sync]
     using Google.Cloud.Metastore.V1;

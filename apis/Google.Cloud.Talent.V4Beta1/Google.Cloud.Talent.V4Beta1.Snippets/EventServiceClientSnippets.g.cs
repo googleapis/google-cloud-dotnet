@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Talent.V4Beta1;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>

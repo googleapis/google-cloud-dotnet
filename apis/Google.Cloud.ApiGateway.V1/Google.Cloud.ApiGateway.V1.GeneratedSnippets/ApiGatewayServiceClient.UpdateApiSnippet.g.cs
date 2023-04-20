@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.ApiGateway.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apigateway_v1_generated_ApiGatewayService_UpdateApi_sync_flattened]
     using Google.LongRunning;
@@ -36,22 +36,22 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
         public void UpdateApi()
         {
             // Create client
-            ApiGatewayServiceClient apiGatewayServiceClient = ApiGatewayServiceClient.Create();
+            gcav::ApiGatewayServiceClient apiGatewayServiceClient = gcav::ApiGatewayServiceClient.Create();
             // Initialize request argument(s)
             gcav::Api api = new gcav::Api();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcav::Api, OperationMetadata> response = apiGatewayServiceClient.UpdateApi(api, updateMask);
+            Operation<gcav::Api, gcav::OperationMetadata> response = apiGatewayServiceClient.UpdateApi(api, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Api, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Api, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcav::Api result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Api, OperationMetadata> retrievedResponse = apiGatewayServiceClient.PollOnceUpdateApi(operationName);
+            Operation<gcav::Api, gcav::OperationMetadata> retrievedResponse = apiGatewayServiceClient.PollOnceUpdateApi(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

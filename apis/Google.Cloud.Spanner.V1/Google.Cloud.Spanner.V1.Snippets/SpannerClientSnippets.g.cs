@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Spanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
@@ -37,15 +37,15 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: CreateSession(CreateSessionRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            CreateSessionRequest request = new CreateSessionRequest
+            gcsv::CreateSessionRequest request = new gcsv::CreateSessionRequest
             {
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                Session = new Session(),
+                Session = new gcsv::Session(),
             };
             // Make the request
-            Session response = spannerClient.CreateSession(request);
+            gcsv::Session response = spannerClient.CreateSession(request);
             // End snippet
         }
 
@@ -55,15 +55,15 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: CreateSessionAsync(CreateSessionRequest, CallSettings)
             // Additional: CreateSessionAsync(CreateSessionRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            CreateSessionRequest request = new CreateSessionRequest
+            gcsv::CreateSessionRequest request = new gcsv::CreateSessionRequest
             {
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                Session = new Session(),
+                Session = new gcsv::Session(),
             };
             // Make the request
-            Session response = await spannerClient.CreateSessionAsync(request);
+            gcsv::Session response = await spannerClient.CreateSessionAsync(request);
             // End snippet
         }
 
@@ -72,11 +72,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: CreateSession(string, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
             // Make the request
-            Session response = spannerClient.CreateSession(database);
+            gcsv::Session response = spannerClient.CreateSession(database);
             // End snippet
         }
 
@@ -86,11 +86,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: CreateSessionAsync(string, CallSettings)
             // Additional: CreateSessionAsync(string, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
             // Make the request
-            Session response = await spannerClient.CreateSessionAsync(database);
+            gcsv::Session response = await spannerClient.CreateSessionAsync(database);
             // End snippet
         }
 
@@ -99,11 +99,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: CreateSession(DatabaseName, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            Session response = spannerClient.CreateSession(database);
+            gcsv::Session response = spannerClient.CreateSession(database);
             // End snippet
         }
 
@@ -113,11 +113,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: CreateSessionAsync(DatabaseName, CallSettings)
             // Additional: CreateSessionAsync(DatabaseName, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            Session response = await spannerClient.CreateSessionAsync(database);
+            gcsv::Session response = await spannerClient.CreateSessionAsync(database);
             // End snippet
         }
 
@@ -126,16 +126,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: BatchCreateSessions(BatchCreateSessionsRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
+            gcsv::BatchCreateSessionsRequest request = new gcsv::BatchCreateSessionsRequest
             {
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                SessionTemplate = new Session(),
+                SessionTemplate = new gcsv::Session(),
                 SessionCount = 0,
             };
             // Make the request
-            BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(request);
+            gcsv::BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(request);
             // End snippet
         }
 
@@ -145,16 +145,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: BatchCreateSessionsAsync(BatchCreateSessionsRequest, CallSettings)
             // Additional: BatchCreateSessionsAsync(BatchCreateSessionsRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            BatchCreateSessionsRequest request = new BatchCreateSessionsRequest
+            gcsv::BatchCreateSessionsRequest request = new gcsv::BatchCreateSessionsRequest
             {
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                SessionTemplate = new Session(),
+                SessionTemplate = new gcsv::Session(),
                 SessionCount = 0,
             };
             // Make the request
-            BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(request);
+            gcsv::BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(request);
             // End snippet
         }
 
@@ -163,12 +163,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: BatchCreateSessions(string, int, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
             int sessionCount = 0;
             // Make the request
-            BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(database, sessionCount);
+            gcsv::BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(database, sessionCount);
             // End snippet
         }
 
@@ -178,12 +178,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: BatchCreateSessionsAsync(string, int, CallSettings)
             // Additional: BatchCreateSessionsAsync(string, int, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
             int sessionCount = 0;
             // Make the request
-            BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(database, sessionCount);
+            gcsv::BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(database, sessionCount);
             // End snippet
         }
 
@@ -192,12 +192,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: BatchCreateSessions(DatabaseName, int, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             int sessionCount = 0;
             // Make the request
-            BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(database, sessionCount);
+            gcsv::BatchCreateSessionsResponse response = spannerClient.BatchCreateSessions(database, sessionCount);
             // End snippet
         }
 
@@ -207,12 +207,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: BatchCreateSessionsAsync(DatabaseName, int, CallSettings)
             // Additional: BatchCreateSessionsAsync(DatabaseName, int, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             int sessionCount = 0;
             // Make the request
-            BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(database, sessionCount);
+            gcsv::BatchCreateSessionsResponse response = await spannerClient.BatchCreateSessionsAsync(database, sessionCount);
             // End snippet
         }
 
@@ -221,14 +221,14 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: GetSession(GetSessionRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            GetSessionRequest request = new GetSessionRequest
+            gcsv::GetSessionRequest request = new gcsv::GetSessionRequest
             {
-                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             // Make the request
-            Session response = spannerClient.GetSession(request);
+            gcsv::Session response = spannerClient.GetSession(request);
             // End snippet
         }
 
@@ -238,14 +238,14 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: GetSessionAsync(GetSessionRequest, CallSettings)
             // Additional: GetSessionAsync(GetSessionRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            GetSessionRequest request = new GetSessionRequest
+            gcsv::GetSessionRequest request = new gcsv::GetSessionRequest
             {
-                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             // Make the request
-            Session response = await spannerClient.GetSessionAsync(request);
+            gcsv::Session response = await spannerClient.GetSessionAsync(request);
             // End snippet
         }
 
@@ -254,11 +254,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: GetSession(string, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
             // Make the request
-            Session response = spannerClient.GetSession(name);
+            gcsv::Session response = spannerClient.GetSession(name);
             // End snippet
         }
 
@@ -268,11 +268,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: GetSessionAsync(string, CallSettings)
             // Additional: GetSessionAsync(string, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
             // Make the request
-            Session response = await spannerClient.GetSessionAsync(name);
+            gcsv::Session response = await spannerClient.GetSessionAsync(name);
             // End snippet
         }
 
@@ -281,11 +281,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: GetSession(SessionName, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::SessionName name = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             // Make the request
-            Session response = spannerClient.GetSession(name);
+            gcsv::Session response = spannerClient.GetSession(name);
             // End snippet
         }
 
@@ -295,11 +295,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: GetSessionAsync(SessionName, CallSettings)
             // Additional: GetSessionAsync(SessionName, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::SessionName name = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             // Make the request
-            Session response = await spannerClient.GetSessionAsync(name);
+            gcsv::Session response = await spannerClient.GetSessionAsync(name);
             // End snippet
         }
 
@@ -308,29 +308,29 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ListSessions(ListSessionsRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            ListSessionsRequest request = new ListSessionsRequest
+            gcsv::ListSessionsRequest request = new gcsv::ListSessionsRequest
             {
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListSessionsResponse, Session> response = spannerClient.ListSessions(request);
+            PagedEnumerable<gcsv::ListSessionsResponse, gcsv::Session> response = spannerClient.ListSessions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Session item in response)
+            foreach (gcsv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSessionsResponse page in response.AsRawResponses())
+            foreach (gcsv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcsv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -339,10 +339,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = response.ReadPage(pageSize);
+            Page<gcsv::Session> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcsv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -357,29 +357,29 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ListSessionsAsync(ListSessionsRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            ListSessionsRequest request = new ListSessionsRequest
+            gcsv::ListSessionsRequest request = new gcsv::ListSessionsRequest
             {
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListSessionsResponse, Session> response = spannerClient.ListSessionsAsync(request);
+            PagedAsyncEnumerable<gcsv::ListSessionsResponse, gcsv::Session> response = spannerClient.ListSessionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Session item) =>
+            await response.ForEachAsync((gcsv::Session item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcsv::ListSessionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcsv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -388,10 +388,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcsv::Session> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcsv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -406,25 +406,25 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ListSessions(string, string, int?, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
             // Make the request
-            PagedEnumerable<ListSessionsResponse, Session> response = spannerClient.ListSessions(database);
+            PagedEnumerable<gcsv::ListSessionsResponse, gcsv::Session> response = spannerClient.ListSessions(database);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Session item in response)
+            foreach (gcsv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSessionsResponse page in response.AsRawResponses())
+            foreach (gcsv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcsv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -433,10 +433,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = response.ReadPage(pageSize);
+            Page<gcsv::Session> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcsv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -451,25 +451,25 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ListSessionsAsync(string, string, int?, CallSettings)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
             // Make the request
-            PagedAsyncEnumerable<ListSessionsResponse, Session> response = spannerClient.ListSessionsAsync(database);
+            PagedAsyncEnumerable<gcsv::ListSessionsResponse, gcsv::Session> response = spannerClient.ListSessionsAsync(database);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Session item) =>
+            await response.ForEachAsync((gcsv::Session item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcsv::ListSessionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcsv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -478,10 +478,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcsv::Session> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcsv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -496,25 +496,25 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ListSessions(DatabaseName, string, int?, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            PagedEnumerable<ListSessionsResponse, Session> response = spannerClient.ListSessions(database);
+            PagedEnumerable<gcsv::ListSessionsResponse, gcsv::Session> response = spannerClient.ListSessions(database);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Session item in response)
+            foreach (gcsv::Session item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSessionsResponse page in response.AsRawResponses())
+            foreach (gcsv::ListSessionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcsv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -523,10 +523,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = response.ReadPage(pageSize);
+            Page<gcsv::Session> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcsv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -541,25 +541,25 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ListSessionsAsync(DatabaseName, string, int?, CallSettings)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            PagedAsyncEnumerable<ListSessionsResponse, Session> response = spannerClient.ListSessionsAsync(database);
+            PagedAsyncEnumerable<gcsv::ListSessionsResponse, gcsv::Session> response = spannerClient.ListSessionsAsync(database);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Session item) =>
+            await response.ForEachAsync((gcsv::Session item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSessionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcsv::ListSessionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Session item in page)
+                foreach (gcsv::Session item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -568,10 +568,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Session> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcsv::Session> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Session item in singlePage)
+            foreach (gcsv::Session item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -586,11 +586,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: DeleteSession(DeleteSessionRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            DeleteSessionRequest request = new DeleteSessionRequest
+            gcsv::DeleteSessionRequest request = new gcsv::DeleteSessionRequest
             {
-                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             // Make the request
             spannerClient.DeleteSession(request);
@@ -603,11 +603,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: DeleteSessionAsync(DeleteSessionRequest, CallSettings)
             // Additional: DeleteSessionAsync(DeleteSessionRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteSessionRequest request = new DeleteSessionRequest
+            gcsv::DeleteSessionRequest request = new gcsv::DeleteSessionRequest
             {
-                SessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
             };
             // Make the request
             await spannerClient.DeleteSessionAsync(request);
@@ -619,7 +619,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: DeleteSession(string, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
             // Make the request
@@ -633,7 +633,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: DeleteSessionAsync(string, CallSettings)
             // Additional: DeleteSessionAsync(string, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
             // Make the request
@@ -646,9 +646,9 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: DeleteSession(SessionName, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::SessionName name = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             // Make the request
             spannerClient.DeleteSession(name);
             // End snippet
@@ -660,9 +660,9 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: DeleteSessionAsync(SessionName, CallSettings)
             // Additional: DeleteSessionAsync(SessionName, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName name = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::SessionName name = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             // Make the request
             await spannerClient.DeleteSessionAsync(name);
             // End snippet
@@ -673,12 +673,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ExecuteSql(ExecuteSqlRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            ExecuteSqlRequest request = new ExecuteSqlRequest
+            gcsv::ExecuteSqlRequest request = new gcsv::ExecuteSqlRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
                 ParamTypes =
@@ -689,15 +689,15 @@ namespace Google.Cloud.Spanner.V1.Snippets
                     },
                 },
                 ResumeToken = ByteString.Empty,
-                QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
+                QueryMode = gcsv::ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
-                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
-                RequestOptions = new RequestOptions(),
+                QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
-            ResultSet response = spannerClient.ExecuteSql(request);
+            gcsv::ResultSet response = spannerClient.ExecuteSql(request);
             // End snippet
         }
 
@@ -707,12 +707,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: ExecuteSqlAsync(ExecuteSqlRequest, CallSettings)
             // Additional: ExecuteSqlAsync(ExecuteSqlRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            ExecuteSqlRequest request = new ExecuteSqlRequest
+            gcsv::ExecuteSqlRequest request = new gcsv::ExecuteSqlRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
                 ParamTypes =
@@ -723,15 +723,15 @@ namespace Google.Cloud.Spanner.V1.Snippets
                     },
                 },
                 ResumeToken = ByteString.Empty,
-                QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
+                QueryMode = gcsv::ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
-                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
-                RequestOptions = new RequestOptions(),
+                QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
-            ResultSet response = await spannerClient.ExecuteSqlAsync(request);
+            gcsv::ResultSet response = await spannerClient.ExecuteSqlAsync(request);
             // End snippet
         }
 
@@ -740,12 +740,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ExecuteStreamingSql(ExecuteSqlRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            ExecuteSqlRequest request = new ExecuteSqlRequest
+            gcsv::ExecuteSqlRequest request = new gcsv::ExecuteSqlRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
                 ParamTypes =
@@ -756,22 +756,22 @@ namespace Google.Cloud.Spanner.V1.Snippets
                     },
                 },
                 ResumeToken = ByteString.Empty,
-                QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
+                QueryMode = gcsv::ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
-                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
-                RequestOptions = new RequestOptions(),
+                QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
-            SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
+            gcsv::SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<PartialResultSet> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcsv::PartialResultSet> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                PartialResultSet responseItem = responseStream.Current;
+                gcsv::PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -783,21 +783,21 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: ExecuteBatchDml(ExecuteBatchDmlRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
+            gcsv::ExecuteBatchDmlRequest request = new gcsv::ExecuteBatchDmlRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Statements =
                 {
-                    new ExecuteBatchDmlRequest.Types.Statement(),
+                    new gcsv::ExecuteBatchDmlRequest.Types.Statement(),
                 },
                 Seqno = 0L,
-                RequestOptions = new RequestOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
             };
             // Make the request
-            ExecuteBatchDmlResponse response = spannerClient.ExecuteBatchDml(request);
+            gcsv::ExecuteBatchDmlResponse response = spannerClient.ExecuteBatchDml(request);
             // End snippet
         }
 
@@ -807,21 +807,21 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: ExecuteBatchDmlAsync(ExecuteBatchDmlRequest, CallSettings)
             // Additional: ExecuteBatchDmlAsync(ExecuteBatchDmlRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
+            gcsv::ExecuteBatchDmlRequest request = new gcsv::ExecuteBatchDmlRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Statements =
                 {
-                    new ExecuteBatchDmlRequest.Types.Statement(),
+                    new gcsv::ExecuteBatchDmlRequest.Types.Statement(),
                 },
                 Seqno = 0L,
-                RequestOptions = new RequestOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
             };
             // Make the request
-            ExecuteBatchDmlResponse response = await spannerClient.ExecuteBatchDmlAsync(request);
+            gcsv::ExecuteBatchDmlResponse response = await spannerClient.ExecuteBatchDmlAsync(request);
             // End snippet
         }
 
@@ -830,24 +830,24 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Read(ReadRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            ReadRequest request = new ReadRequest
+            gcsv::ReadRequest request = new gcsv::ReadRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Table = "",
                 Index = "",
                 Columns = { "", },
-                KeySet = new KeySet(),
+                KeySet = new gcsv::KeySet(),
                 Limit = 0L,
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
-                RequestOptions = new RequestOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
-            ResultSet response = spannerClient.Read(request);
+            gcsv::ResultSet response = spannerClient.Read(request);
             // End snippet
         }
 
@@ -857,24 +857,24 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: ReadAsync(ReadRequest, CallSettings)
             // Additional: ReadAsync(ReadRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            ReadRequest request = new ReadRequest
+            gcsv::ReadRequest request = new gcsv::ReadRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Table = "",
                 Index = "",
                 Columns = { "", },
-                KeySet = new KeySet(),
+                KeySet = new gcsv::KeySet(),
                 Limit = 0L,
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
-                RequestOptions = new RequestOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
-            ResultSet response = await spannerClient.ReadAsync(request);
+            gcsv::ResultSet response = await spannerClient.ReadAsync(request);
             // End snippet
         }
 
@@ -883,31 +883,31 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: StreamingRead(ReadRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            ReadRequest request = new ReadRequest
+            gcsv::ReadRequest request = new gcsv::ReadRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Table = "",
                 Index = "",
                 Columns = { "", },
-                KeySet = new KeySet(),
+                KeySet = new gcsv::KeySet(),
                 Limit = 0L,
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
-                RequestOptions = new RequestOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
-            SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
+            gcsv::SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<PartialResultSet> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcsv::PartialResultSet> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                PartialResultSet responseItem = responseStream.Current;
+                gcsv::PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed
@@ -919,16 +919,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: BeginTransaction(BeginTransactionRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            BeginTransactionRequest request = new BeginTransactionRequest
+            gcsv::BeginTransactionRequest request = new gcsv::BeginTransactionRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Options = new TransactionOptions(),
-                RequestOptions = new RequestOptions(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Options = new gcsv::TransactionOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
             };
             // Make the request
-            Transaction response = spannerClient.BeginTransaction(request);
+            gcsv::Transaction response = spannerClient.BeginTransaction(request);
             // End snippet
         }
 
@@ -938,16 +938,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: BeginTransactionAsync(BeginTransactionRequest, CallSettings)
             // Additional: BeginTransactionAsync(BeginTransactionRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            BeginTransactionRequest request = new BeginTransactionRequest
+            gcsv::BeginTransactionRequest request = new gcsv::BeginTransactionRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Options = new TransactionOptions(),
-                RequestOptions = new RequestOptions(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Options = new gcsv::TransactionOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
             };
             // Make the request
-            Transaction response = await spannerClient.BeginTransactionAsync(request);
+            gcsv::Transaction response = await spannerClient.BeginTransactionAsync(request);
             // End snippet
         }
 
@@ -956,12 +956,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: BeginTransaction(string, TransactionOptions, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
-            TransactionOptions options = new TransactionOptions();
+            gcsv::TransactionOptions options = new gcsv::TransactionOptions();
             // Make the request
-            Transaction response = spannerClient.BeginTransaction(session, options);
+            gcsv::Transaction response = spannerClient.BeginTransaction(session, options);
             // End snippet
         }
 
@@ -971,12 +971,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: BeginTransactionAsync(string, TransactionOptions, CallSettings)
             // Additional: BeginTransactionAsync(string, TransactionOptions, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
-            TransactionOptions options = new TransactionOptions();
+            gcsv::TransactionOptions options = new gcsv::TransactionOptions();
             // Make the request
-            Transaction response = await spannerClient.BeginTransactionAsync(session, options);
+            gcsv::Transaction response = await spannerClient.BeginTransactionAsync(session, options);
             // End snippet
         }
 
@@ -985,12 +985,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: BeginTransaction(SessionName, TransactionOptions, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            SessionName session = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions options = new TransactionOptions();
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::TransactionOptions options = new gcsv::TransactionOptions();
             // Make the request
-            Transaction response = spannerClient.BeginTransaction(session, options);
+            gcsv::Transaction response = spannerClient.BeginTransaction(session, options);
             // End snippet
         }
 
@@ -1000,12 +1000,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: BeginTransactionAsync(SessionName, TransactionOptions, CallSettings)
             // Additional: BeginTransactionAsync(SessionName, TransactionOptions, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName session = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions options = new TransactionOptions();
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::TransactionOptions options = new gcsv::TransactionOptions();
             // Make the request
-            Transaction response = await spannerClient.BeginTransactionAsync(session, options);
+            gcsv::Transaction response = await spannerClient.BeginTransactionAsync(session, options);
             // End snippet
         }
 
@@ -1014,18 +1014,21 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Commit(CommitRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            CommitRequest request = new CommitRequest
+            gcsv::CommitRequest request = new gcsv::CommitRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = ByteString.Empty,
-                Mutations = { new Mutation(), },
+                Mutations =
+                {
+                    new gcsv::Mutation(),
+                },
                 ReturnCommitStats = false,
-                RequestOptions = new RequestOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
             };
             // Make the request
-            CommitResponse response = spannerClient.Commit(request);
+            gcsv::CommitResponse response = spannerClient.Commit(request);
             // End snippet
         }
 
@@ -1035,18 +1038,21 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: CommitAsync(CommitRequest, CallSettings)
             // Additional: CommitAsync(CommitRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            CommitRequest request = new CommitRequest
+            gcsv::CommitRequest request = new gcsv::CommitRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = ByteString.Empty,
-                Mutations = { new Mutation(), },
+                Mutations =
+                {
+                    new gcsv::Mutation(),
+                },
                 ReturnCommitStats = false,
-                RequestOptions = new RequestOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
             };
             // Make the request
-            CommitResponse response = await spannerClient.CommitAsync(request);
+            gcsv::CommitResponse response = await spannerClient.CommitAsync(request);
             // End snippet
         }
 
@@ -1055,13 +1061,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Commit(string, ByteString, IEnumerable<Mutation>, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
             ByteString transactionId = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcsv::Mutation> mutations = new gcsv::Mutation[]
+            {
+                new gcsv::Mutation(),
+            };
             // Make the request
-            CommitResponse response = spannerClient.Commit(session, transactionId, mutations);
+            gcsv::CommitResponse response = spannerClient.Commit(session, transactionId, mutations);
             // End snippet
         }
 
@@ -1071,13 +1080,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: CommitAsync(string, ByteString, IEnumerable<Mutation>, CallSettings)
             // Additional: CommitAsync(string, ByteString, IEnumerable<Mutation>, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
             ByteString transactionId = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcsv::Mutation> mutations = new gcsv::Mutation[]
+            {
+                new gcsv::Mutation(),
+            };
             // Make the request
-            CommitResponse response = await spannerClient.CommitAsync(session, transactionId, mutations);
+            gcsv::CommitResponse response = await spannerClient.CommitAsync(session, transactionId, mutations);
             // End snippet
         }
 
@@ -1086,13 +1098,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Commit(SessionName, ByteString, IEnumerable<Mutation>, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            SessionName session = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             ByteString transactionId = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcsv::Mutation> mutations = new gcsv::Mutation[]
+            {
+                new gcsv::Mutation(),
+            };
             // Make the request
-            CommitResponse response = spannerClient.Commit(session, transactionId, mutations);
+            gcsv::CommitResponse response = spannerClient.Commit(session, transactionId, mutations);
             // End snippet
         }
 
@@ -1102,13 +1117,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: CommitAsync(SessionName, ByteString, IEnumerable<Mutation>, CallSettings)
             // Additional: CommitAsync(SessionName, ByteString, IEnumerable<Mutation>, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName session = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             ByteString transactionId = ByteString.Empty;
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            IEnumerable<gcsv::Mutation> mutations = new gcsv::Mutation[]
+            {
+                new gcsv::Mutation(),
+            };
             // Make the request
-            CommitResponse response = await spannerClient.CommitAsync(session, transactionId, mutations);
+            gcsv::CommitResponse response = await spannerClient.CommitAsync(session, transactionId, mutations);
             // End snippet
         }
 
@@ -1117,13 +1135,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Commit(string, TransactionOptions, IEnumerable<Mutation>, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
-            TransactionOptions singleUseTransaction = new TransactionOptions();
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            gcsv::TransactionOptions singleUseTransaction = new gcsv::TransactionOptions();
+            IEnumerable<gcsv::Mutation> mutations = new gcsv::Mutation[]
+            {
+                new gcsv::Mutation(),
+            };
             // Make the request
-            CommitResponse response = spannerClient.Commit(session, singleUseTransaction, mutations);
+            gcsv::CommitResponse response = spannerClient.Commit(session, singleUseTransaction, mutations);
             // End snippet
         }
 
@@ -1133,13 +1154,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: CommitAsync(string, TransactionOptions, IEnumerable<Mutation>, CallSettings)
             // Additional: CommitAsync(string, TransactionOptions, IEnumerable<Mutation>, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
-            TransactionOptions singleUseTransaction = new TransactionOptions();
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            gcsv::TransactionOptions singleUseTransaction = new gcsv::TransactionOptions();
+            IEnumerable<gcsv::Mutation> mutations = new gcsv::Mutation[]
+            {
+                new gcsv::Mutation(),
+            };
             // Make the request
-            CommitResponse response = await spannerClient.CommitAsync(session, singleUseTransaction, mutations);
+            gcsv::CommitResponse response = await spannerClient.CommitAsync(session, singleUseTransaction, mutations);
             // End snippet
         }
 
@@ -1148,13 +1172,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Commit(SessionName, TransactionOptions, IEnumerable<Mutation>, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            SessionName session = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions singleUseTransaction = new TransactionOptions();
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::TransactionOptions singleUseTransaction = new gcsv::TransactionOptions();
+            IEnumerable<gcsv::Mutation> mutations = new gcsv::Mutation[]
+            {
+                new gcsv::Mutation(),
+            };
             // Make the request
-            CommitResponse response = spannerClient.Commit(session, singleUseTransaction, mutations);
+            gcsv::CommitResponse response = spannerClient.Commit(session, singleUseTransaction, mutations);
             // End snippet
         }
 
@@ -1164,13 +1191,16 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: CommitAsync(SessionName, TransactionOptions, IEnumerable<Mutation>, CallSettings)
             // Additional: CommitAsync(SessionName, TransactionOptions, IEnumerable<Mutation>, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName session = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
-            TransactionOptions singleUseTransaction = new TransactionOptions();
-            IEnumerable<Mutation> mutations = new Mutation[] { new Mutation(), };
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::TransactionOptions singleUseTransaction = new gcsv::TransactionOptions();
+            IEnumerable<gcsv::Mutation> mutations = new gcsv::Mutation[]
+            {
+                new gcsv::Mutation(),
+            };
             // Make the request
-            CommitResponse response = await spannerClient.CommitAsync(session, singleUseTransaction, mutations);
+            gcsv::CommitResponse response = await spannerClient.CommitAsync(session, singleUseTransaction, mutations);
             // End snippet
         }
 
@@ -1179,11 +1209,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Rollback(RollbackRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            RollbackRequest request = new RollbackRequest
+            gcsv::RollbackRequest request = new gcsv::RollbackRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = ByteString.Empty,
             };
             // Make the request
@@ -1197,11 +1227,11 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: RollbackAsync(RollbackRequest, CallSettings)
             // Additional: RollbackAsync(RollbackRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            RollbackRequest request = new RollbackRequest
+            gcsv::RollbackRequest request = new gcsv::RollbackRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = ByteString.Empty,
             };
             // Make the request
@@ -1214,7 +1244,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Rollback(string, ByteString, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
             string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
             ByteString transactionId = ByteString.Empty;
@@ -1229,7 +1259,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: RollbackAsync(string, ByteString, CallSettings)
             // Additional: RollbackAsync(string, ByteString, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
             string session = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/sessions/[SESSION]";
             ByteString transactionId = ByteString.Empty;
@@ -1243,9 +1273,9 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: Rollback(SessionName, ByteString, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            SessionName session = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             ByteString transactionId = ByteString.Empty;
             // Make the request
             spannerClient.Rollback(session, transactionId);
@@ -1258,9 +1288,9 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: RollbackAsync(SessionName, ByteString, CallSettings)
             // Additional: RollbackAsync(SessionName, ByteString, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            SessionName session = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
+            gcsv::SessionName session = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]");
             ByteString transactionId = ByteString.Empty;
             // Make the request
             await spannerClient.RollbackAsync(session, transactionId);
@@ -1272,12 +1302,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: PartitionQuery(PartitionQueryRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            PartitionQueryRequest request = new PartitionQueryRequest
+            gcsv::PartitionQueryRequest request = new gcsv::PartitionQueryRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
                 ParamTypes =
@@ -1287,10 +1317,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
                         new gcsv::Type()
                     },
                 },
-                PartitionOptions = new PartitionOptions(),
+                PartitionOptions = new gcsv::PartitionOptions(),
             };
             // Make the request
-            PartitionResponse response = spannerClient.PartitionQuery(request);
+            gcsv::PartitionResponse response = spannerClient.PartitionQuery(request);
             // End snippet
         }
 
@@ -1300,12 +1330,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: PartitionQueryAsync(PartitionQueryRequest, CallSettings)
             // Additional: PartitionQueryAsync(PartitionQueryRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            PartitionQueryRequest request = new PartitionQueryRequest
+            gcsv::PartitionQueryRequest request = new gcsv::PartitionQueryRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
                 ParamTypes =
@@ -1315,10 +1345,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
                         new gcsv::Type()
                     },
                 },
-                PartitionOptions = new PartitionOptions(),
+                PartitionOptions = new gcsv::PartitionOptions(),
             };
             // Make the request
-            PartitionResponse response = await spannerClient.PartitionQueryAsync(request);
+            gcsv::PartitionResponse response = await spannerClient.PartitionQueryAsync(request);
             // End snippet
         }
 
@@ -1327,20 +1357,20 @@ namespace Google.Cloud.Spanner.V1.Snippets
         {
             // Snippet: PartitionRead(PartitionReadRequest, CallSettings)
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            PartitionReadRequest request = new PartitionReadRequest
+            gcsv::PartitionReadRequest request = new gcsv::PartitionReadRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Table = "",
                 Index = "",
                 Columns = { "", },
-                KeySet = new KeySet(),
-                PartitionOptions = new PartitionOptions(),
+                KeySet = new gcsv::KeySet(),
+                PartitionOptions = new gcsv::PartitionOptions(),
             };
             // Make the request
-            PartitionResponse response = spannerClient.PartitionRead(request);
+            gcsv::PartitionResponse response = spannerClient.PartitionRead(request);
             // End snippet
         }
 
@@ -1350,20 +1380,20 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Snippet: PartitionReadAsync(PartitionReadRequest, CallSettings)
             // Additional: PartitionReadAsync(PartitionReadRequest, CancellationToken)
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            PartitionReadRequest request = new PartitionReadRequest
+            gcsv::PartitionReadRequest request = new gcsv::PartitionReadRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Table = "",
                 Index = "",
                 Columns = { "", },
-                KeySet = new KeySet(),
-                PartitionOptions = new PartitionOptions(),
+                KeySet = new gcsv::KeySet(),
+                PartitionOptions = new gcsv::PartitionOptions(),
             };
             // Make the request
-            PartitionResponse response = await spannerClient.PartitionReadAsync(request);
+            gcsv::PartitionResponse response = await spannerClient.PartitionReadAsync(request);
             // End snippet
         }
     }

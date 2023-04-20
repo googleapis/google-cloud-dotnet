@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ApigeeRegistry.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apigeeregistry_v1_generated_Registry_ListApiVersions_sync_flattened]
     using Google.Api.Gax;

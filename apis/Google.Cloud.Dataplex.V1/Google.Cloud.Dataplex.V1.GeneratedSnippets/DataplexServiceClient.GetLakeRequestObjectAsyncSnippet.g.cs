@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_GetLake_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetLakeRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetLakeRequest request = new GetLakeRequest
+            gcdv::GetLakeRequest request = new gcdv::GetLakeRequest
             {
-                LakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                LakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
             };
             // Make the request
-            Lake response = await dataplexServiceClient.GetLakeAsync(request);
+            gcdv::Lake response = await dataplexServiceClient.GetLakeAsync(request);
         }
     }
     // [END dataplex_v1_generated_DataplexService_GetLake_async]

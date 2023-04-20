@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Trace.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtrace_v2_generated_TraceService_CreateSpan_sync]
     using Google.Cloud.Trace.V2;

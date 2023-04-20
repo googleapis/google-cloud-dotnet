@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Firestore.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START firestore_v1_generated_FirestoreAdmin_ImportDocuments_async_flattened_resourceNames]
     using Google.Cloud.Firestore.Admin.V1;

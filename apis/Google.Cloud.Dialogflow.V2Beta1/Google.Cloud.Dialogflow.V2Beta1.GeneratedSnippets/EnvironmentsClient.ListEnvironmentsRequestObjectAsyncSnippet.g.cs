@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2beta1_generated_Environments_ListEnvironments_async]
     using Google.Api.Gax;
@@ -38,14 +38,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
         public async Task ListEnvironmentsRequestObjectAsync()
         {
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdv::EnvironmentsClient environmentsClient = await gcdv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest
+            gcdv::ListEnvironmentsRequest request = new gcdv::ListEnvironmentsRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListEnvironmentsResponse, gcdv::Environment> response = environmentsClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Environment item) =>
@@ -55,7 +55,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
