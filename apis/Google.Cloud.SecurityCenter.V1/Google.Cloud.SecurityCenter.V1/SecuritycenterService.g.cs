@@ -1993,7 +1993,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for creating security health analytics custom modules.
+  /// Request message for creating Security Health Analytics custom modules.
   /// </summary>
   public sealed partial class CreateSecurityHealthAnalyticsCustomModuleRequest : pb::IMessage<CreateSecurityHealthAnalyticsCustomModuleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2884,7 +2884,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for deleting security health analytics custom modules.
+  /// Request message for deleting Security Health Analytics custom modules.
   /// </summary>
   public sealed partial class DeleteSecurityHealthAnalyticsCustomModuleRequest : pb::IMessage<DeleteSecurityHealthAnalyticsCustomModuleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3873,7 +3873,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for getting effective security health analytics custom
+  /// Request message for getting effective Security Health Analytics custom
   /// modules.
   /// </summary>
   public sealed partial class GetEffectiveSecurityHealthAnalyticsCustomModuleRequest : pb::IMessage<GetEffectiveSecurityHealthAnalyticsCustomModuleRequest>
@@ -4073,7 +4073,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for getting security health analytics custom modules.
+  /// Request message for getting Security Health Analytics custom modules.
   /// </summary>
   public sealed partial class GetSecurityHealthAnalyticsCustomModuleRequest : pb::IMessage<GetSecurityHealthAnalyticsCustomModuleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6457,7 +6457,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for listing descendant security health analytics custom
+  /// Request message for listing descendant Security Health Analytics custom
   /// modules.
   /// </summary>
   public sealed partial class ListDescendantSecurityHealthAnalyticsCustomModulesRequest : pb::IMessage<ListDescendantSecurityHealthAnalyticsCustomModulesRequest>
@@ -6737,7 +6737,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Response message for listing descendant security health analytics custom
+  /// Response message for listing descendant Security Health Analytics custom
   /// modules.
   /// </summary>
   public sealed partial class ListDescendantSecurityHealthAnalyticsCustomModulesResponse : pb::IMessage<ListDescendantSecurityHealthAnalyticsCustomModulesResponse>
@@ -7978,7 +7978,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for listing effective security health analytics custom
+  /// Request message for listing effective Security Health Analytics custom
   /// modules.
   /// </summary>
   public sealed partial class ListEffectiveSecurityHealthAnalyticsCustomModulesRequest : pb::IMessage<ListEffectiveSecurityHealthAnalyticsCustomModulesRequest>
@@ -8258,7 +8258,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Response message for listing effective security health analytics custom
+  /// Response message for listing effective Security Health Analytics custom
   /// modules.
   /// </summary>
   public sealed partial class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse : pb::IMessage<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse>
@@ -8484,7 +8484,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for listing security health analytics custom modules.
+  /// Request message for listing Security Health Analytics custom modules.
   /// </summary>
   public sealed partial class ListSecurityHealthAnalyticsCustomModulesRequest : pb::IMessage<ListSecurityHealthAnalyticsCustomModulesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8763,7 +8763,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Response message for listing security health analytics custom modules.
+  /// Response message for listing Security Health Analytics custom modules.
   /// </summary>
   public sealed partial class ListSecurityHealthAnalyticsCustomModulesResponse : pb::IMessage<ListSecurityHealthAnalyticsCustomModulesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14468,7 +14468,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Request message for updating security health analytics custom modules.
+  /// Request message for updating Security Health Analytics custom modules.
   /// </summary>
   public sealed partial class UpdateSecurityHealthAnalyticsCustomModuleRequest : pb::IMessage<UpdateSecurityHealthAnalyticsCustomModuleRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

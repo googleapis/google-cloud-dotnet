@@ -58,6 +58,8 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return AccessReflection.Descriptor;
             yield return AssetReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
+            yield return CloudDlpDataProfileReflection.Descriptor;
+            yield return CloudDlpInspectionReflection.Descriptor;
             yield return ComplianceReflection.Descriptor;
             yield return ConnectionReflection.Descriptor;
             yield return ContactDetailsReflection.Descriptor;
