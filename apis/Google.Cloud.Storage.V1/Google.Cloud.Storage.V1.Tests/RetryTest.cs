@@ -29,8 +29,8 @@ public class RetryTest
 {
     [Theory]
     [InlineData(new[] { 502, 200 }, true, 502, 504)] // It retries for 502 error code as it is present in retry predicate and then succeeds with 200 code.
-    [InlineData(new[] { 502, 429 }, false, 502, 504)] // It fails because the secondStatusCode is not present in the retry predicate.
-    [InlineData(new[] { 502, 200 }, false)] // It fails because the retry predicate doesnt have any retriable error code.
+    [InlineData(new[] { 502, 429 }, false, 502, 504)] // It fails because the second status code is not present in the retry predicate.
+    [InlineData(new[] { 502 }, false)] // It fails because the retry predicate doesnt have any retriable error code.
     public void CustomRetryPredicateTest(int[] responseStatusCodes, bool success, params int[] errorCodes)
     {
         RetryOptions retryOptions = new RetryOptions(
@@ -77,7 +77,7 @@ public class RetryTest
 
         AssertAttempts(
            retryOptions: retryOptions,
-           responseStatusCodes: new[] { 502, 502, 502, 502, 200 },
+           responseStatusCodes: new[] { 502, 502, 502 },
            success: false,
            expectedBackOffs: expectedBackOffs);
     }
@@ -104,12 +104,13 @@ public class RetryTest
             {
                 client.GetBucket("bucket", new GetBucketOptions { RetryOptions = retryOptions });
                 Assert.Equal(expectedBackOffs.Count(), messageHandler.AttemptTimestamps.Count());
-                service.Verify();
             }
             else
             {
                 Assert.Throws<GoogleApiException>(() => client.GetBucket("bucket", new GetBucketOptions { RetryOptions = retryOptions }));
             }
+
+            service.Verify();
 
             for (int i = 0; i < messageHandler.AttemptTimestamps.Count; i++)
             {
