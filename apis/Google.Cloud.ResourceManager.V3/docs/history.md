@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2023-04-21
+
+### New features
+
+- Add TagHolds, GetNamespacedTagKey, and GetNamespacedTagValue APIs. Adds support for project parented tags ([commit debfa3e](https://github.com/googleapis/google-cloud-dotnet/commit/debfa3ec0e61495e9001a76da7fc8dd09d082675))
+
 ## Version 2.1.0, released 2023-01-18
 
 ### New features
