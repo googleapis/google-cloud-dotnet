@@ -97,7 +97,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             Directory.CreateDirectory(_devSiteRoot);
 
             CopyApiDirectory();
-            FixExternalReferences();
+            FixExternalReferencesAndNamespaceSpecs();
             AddFriendlyNames();
             RegenerateToc();
             CopyGuides();
@@ -122,7 +122,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
         /// the references within the docfx aren't labeled as "isExternal", so they aren't resolved against
         /// xrefmaps. This method fixes that, rewriting the YAML files.
         /// </summary>
-        private void FixExternalReferences()
+        private void FixExternalReferencesAndNamespaceSpecs()
         {
             var dir = Path.Combine(_devSiteRoot, "api");
 
@@ -146,6 +146,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                 if (references is object)
                 {
                     FixExternalReferences(references);
+                    RemoveNamespaceSpecs(references);
                 }
 
                 // Note: this rewriting adds a "..." at the end of each file.
@@ -188,6 +189,31 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                         foreach (var child in sequenceNode.Children)
                         {
                             FixExternalReferences(child);
+                        }
+                        break;
+                }
+            }
+
+            void RemoveNamespaceSpecs(YamlNode node)
+            {
+                switch (node)
+                {
+                    case YamlMappingNode mappingNode:
+                        // Main part... find any uid node with a commentId starting with "N:",
+                        // and remove any spec.vb and spec.csharp children.
+                        var commentIdNode = GetChildByName(mappingNode, "commentId");
+                        if (commentIdNode is YamlScalarNode { Value: string commentId } &&
+                            commentId.StartsWith("N:"))
+                        {
+                            RemoveByName(mappingNode, "spec.vb");
+                            RemoveByName(mappingNode, "spec.csharp");                            
+                        }
+                        break;
+                    case YamlSequenceNode sequenceNode:
+                        // Recurse
+                        foreach (var child in sequenceNode.Children)
+                        {
+                            RemoveNamespaceSpecs(child);
                         }
                         break;
                 }
@@ -247,6 +273,15 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                     }
                 }
                 return ret;
+            }
+
+            void RemoveByName(YamlMappingNode parent, string name)
+            {
+                var key = parent.Children.Keys.FirstOrDefault(key => key is YamlScalarNode scalarKey && scalarKey.Value == name);
+                if (key is not null)
+                {
+                    parent.Children.Remove(key);
+                }
             }
 
             YamlNode GetChildByName(YamlMappingNode parent, string name) =>
