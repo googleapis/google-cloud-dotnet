@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 source ../toolversions.sh
 
 install_docfx
@@ -128,18 +130,19 @@ dotnet docfx metadata --logLevel Error -o output --property TargetFramework=$TAR
 
 # This will have created an output/output directory. 
 # (For some reason docfx takes "output" and doubles it to output/output.)
-# We rename this to output/devsite/api so we can use output/devsite as the
+# We rename this to output/utility/devsite/api so we can use output/utility/devsite as the
 # "root" directory for docuploader.
 # (This will make it easier to add snippets in the future if we want to.)
+# Having the pseudo-package-name of "utility" makes this more consistent with other tooling, too.
 cd output
-mkdir devsite
+mkdir -p utility/devsite
 
 # It's unclear why we need to do this, but without it we regularly
 # get errors when trying the directory move.
 mv_attempts=10
 until [[ $mv_attempts == 0 ]]
 do
-  mv output/ devsite/api/ && break
+  mv output/ utility/devsite/api/ && break
   mv_attempts=$((mv_attempts-1))
   if [[ mv_attempts == 0 ]]
   then
@@ -152,9 +155,12 @@ do
 done
 
 echo 'Regenerating TOC'
-dotnet run --project ../../tools/Google.Cloud.Tools.RegenerateToc -- devsite/api
+dotnet run --project ../../tools/Google.Cloud.Tools.RegenerateToc -- utility/devsite/api
 
-cd devsite
+echo "Post-processing YAML metadata files"
+dotnet run --project ../../tools/Google.Cloud.Tools.PostProcessDevSite -- utility
+
+cd utility/devsite
 
 echo 'Creating metadata file'
 
