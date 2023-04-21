@@ -40,9 +40,15 @@ namespace Google.Cloud.Tools.PostProcessDevSite
     /// - docs/output/{package}/devsite/api (including guides and tweaked TOC)
     /// - docs/output/{package}/devsite/examples
     /// - docs/output/{package}/devsite/docs-metadata.json (includes xrefs and xrefservices)
+    ///
+    /// If the package ID of "utility" is specified, most processing is bypassed.
+    /// We expect docs/output/devsite/api to already exist, and only metadata
+    /// processing is performed.
     /// </summary>
     internal class Program
     {
+        private const string UtilityApi = "utility";
+
         /// <summary>
         /// The package/API ID
         /// </summary>
@@ -84,6 +90,13 @@ namespace Google.Cloud.Tools.PostProcessDevSite
 
         private void Execute()
         {
+            // The utility pseudo-package only needs a few tweaks.
+            if (_apiId == UtilityApi)
+            {
+                FixExternalReferencesAndNamespaceSpecs();
+                return;
+            }
+
             if (Directory.Exists(_devSiteRoot))
             {
                 Directory.Delete(_devSiteRoot, recursive: true);
