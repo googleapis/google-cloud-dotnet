@@ -55,11 +55,23 @@ namespace Google.Cloud.Storage.V1.Tests
             handler.ExpectRequest(httpRequest.RequestUri, httpRequest.Content?.ReadAsStringAsync()?.Result, responseMessage);
         }
 
-        public void ExpectRequests<TResponse>(ClientServiceRequest<TResponse> request, HttpStatusCode statusCode, int expectedCount)
+        /// <summary>
+        /// Adds expectations for potentially multiple requests, based on status codes.
+        /// For any request with a status code of "OK", <paramref name="successResponse"/> is used as the response
+        /// body.
+        /// </summary>
+        public void ExpectRequests<TResponse>(ClientServiceRequest<TResponse> request, TResponse successResponse, params HttpStatusCode[] statusCodes)
         {
-            for (int i = 0; i < expectedCount; i++)
+            foreach (var statusCode in statusCodes)
             {
-                ExpectRequest(request, statusCode);
+                if (statusCode == HttpStatusCode.OK)
+                {
+                    ExpectRequest(request, successResponse);
+                }
+                else
+                {
+                    ExpectRequest(request, statusCode);
+                }
             }
         }
 
