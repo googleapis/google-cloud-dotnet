@@ -31,15 +31,17 @@ namespace Google.Cloud.ClientTesting
     public class ReplayingMessageHandler : HttpMessageHandler
     {
         private readonly IClock _clock;
+        private readonly DateTime _creationTime;
         private readonly string _headerToCapture;
 
         private readonly Queue<Tuple<Uri, string, HttpResponseMessage>> _requestResponses =
             new Queue<Tuple<Uri, string, HttpResponseMessage>>();
 
         /// <summary>
-        /// Stores the timestamp of each attempt made to execute the operation.
+        /// Stores the time since handler creation (according to the provided clock)
+        /// at which each request was made. (This is usually used for retry testing.)
         /// </summary>
-        public List<DateTime> AttemptTimestamps { get; } = new List<DateTime>();
+        public List<TimeSpan> RequestTimes { get; } = new List<TimeSpan>();
 
         /// <summary>
         /// The captured headers, or null if headers are not being captured.
@@ -58,6 +60,7 @@ namespace Google.Cloud.ClientTesting
             _headerToCapture = header;
             CapturedHeaders = header is null ? null : new List<string>();
             _clock = clock ?? SystemClock.Instance;
+            _creationTime = _clock.GetCurrentDateTimeUtc();
         }
 
         /// <summary>
@@ -77,7 +80,7 @@ namespace Google.Cloud.ClientTesting
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            AttemptTimestamps.Add(_clock.GetCurrentDateTimeUtc());
+            RequestTimes.Add(_clock.GetCurrentDateTimeUtc() - _creationTime);
 
             Assert.NotEmpty(_requestResponses);
             if (_headerToCapture is string header)
