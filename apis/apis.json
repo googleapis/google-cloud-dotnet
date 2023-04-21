@@ -419,7 +419,6 @@
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.OrgPolicy.V1": "3.0.0",
         "Google.Cloud.OsConfig.V1": "2.1.0",
-        "Google.Identity.AccessContextManager.Type": "2.0.0",
         "Google.Identity.AccessContextManager.V1": "2.2.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5"
