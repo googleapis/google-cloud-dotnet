@@ -46,10 +46,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CommonReflection.Descriptor;
+            yield return CompletionServiceReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
             yield return DocumentServiceReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
             yield return RecommendationServiceReflection.Descriptor;
+            yield return SchemaReflection.Descriptor;
+            yield return SchemaServiceReflection.Descriptor;
+            yield return SearchServiceReflection.Descriptor;
             yield return UserEventReflection.Descriptor;
             yield return UserEventServiceReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

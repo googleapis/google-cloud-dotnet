@@ -26,34 +26,38 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           string.Concat(
             "CjBnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxYmV0YS9jb21tb24u",
             "cHJvdG8SI2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhGhln",
-            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvIjAKD0N1c3RvbUF0dHJpYnV0ZRIM",
-            "CgR0ZXh0GAEgAygJEg8KB251bWJlcnMYAiADKAEiLwoIVXNlckluZm8SDwoH",
-            "dXNlcl9pZBgBIAEoCRISCgp1c2VyX2FnZW50GAIgASgJQtIHCidjb20uZ29v",
-            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCC0NvbW1vblByb3Rv",
-            "UAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYx",
-            "YmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJ",
-            "U0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUu",
-            "VjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHq",
-            "AiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YepB5gEK",
-            "JWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9CcmFuY2gSUXByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVz",
-            "L3tkYXRhX3N0b3JlfS9icmFuY2hlcy97YnJhbmNofRJqcHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xs",
-            "ZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9icmFuY2hlcy97YnJh",
-            "bmNofepBxQEKKGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9EYXRh",
-            "U3RvcmUSP3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfRJYcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9u",
-            "fS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfepBiQIKLGRpc2NvdmVyeWVuZ2lu",
-            "ZS5nb29nbGVhcGlzLmNvbS9TZXJ2aW5nQ29uZmlnEl9wcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9z",
-            "dG9yZX0vc2VydmluZ0NvbmZpZ3Mve3NlcnZpbmdfY29uZmlnfRJ4cHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25z",
-            "L3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9zZXJ2aW5n",
-            "Q29uZmlncy97c2VydmluZ19jb25maWd9YgZwcm90bzM="));
+            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvIngKCEludGVydmFsEhEKB21pbmlt",
+            "dW0YASABKAFIABIbChFleGNsdXNpdmVfbWluaW11bRgCIAEoAUgAEhEKB21h",
+            "eGltdW0YAyABKAFIARIbChFleGNsdXNpdmVfbWF4aW11bRgEIAEoAUgBQgUK",
+            "A21pbkIFCgNtYXgiMAoPQ3VzdG9tQXR0cmlidXRlEgwKBHRleHQYASADKAkS",
+            "DwoHbnVtYmVycxgCIAMoASIvCghVc2VySW5mbxIPCgd1c2VyX2lkGAEgASgJ",
+            "EhIKCnVzZXJfYWdlbnQYAiABKAlC0gcKJ2NvbS5nb29nbGUuY2xvdWQuZGlz",
+            "Y292ZXJ5ZW5naW5lLnYxYmV0YUILQ29tbW9uUHJvdG9QAVpRY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVy",
+            "eWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5F",
+            "qgIjR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29n",
+            "bGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xv",
+            "dWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRh6kHmAQolZGlzY292ZXJ5ZW5n",
+            "aW5lLmdvb2dsZWFwaXMuY29tL0JyYW5jaBJRcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9",
+            "L2JyYW5jaGVzL3ticmFuY2h9Empwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2RhdGFT",
+            "dG9yZXMve2RhdGFfc3RvcmV9L2JyYW5jaGVzL3ticmFuY2h96kHFAQooZGlz",
+            "Y292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRI/cHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMv",
+            "e2RhdGFfc3RvcmV9Elhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2RhdGFTdG9yZXMv",
+            "e2RhdGFfc3RvcmV96kGJAgosZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMu",
+            "Y29tL1NlcnZpbmdDb25maWcSX3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9zZXJ2aW5n",
+            "Q29uZmlncy97c2VydmluZ19jb25maWd9Enhwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259",
+            "L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L3NlcnZpbmdDb25maWdzL3tzZXJ2",
+            "aW5nX2NvbmZpZ31iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.Interval), global::Google.Cloud.DiscoveryEngine.V1Beta.Interval.Parser, new[]{ "Minimum", "ExclusiveMinimum", "Maximum", "ExclusiveMaximum" }, new[]{ "Min", "Max" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CustomAttribute), global::Google.Cloud.DiscoveryEngine.V1Beta.CustomAttribute.Parser, new[]{ "Text", "Numbers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.UserInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.UserInfo.Parser, new[]{ "UserId", "UserAgent" }, null, null, null, null)
           }));
@@ -62,6 +66,387 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
   }
   #region Messages
+  /// <summary>
+  /// A floating point interval.
+  /// </summary>
+  public sealed partial class Interval : pb::IMessage<Interval>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Interval> _parser = new pb::MessageParser<Interval>(() => new Interval());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Interval> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Interval() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Interval(Interval other) : this() {
+      switch (other.MinCase) {
+        case MinOneofCase.Minimum:
+          Minimum = other.Minimum;
+          break;
+        case MinOneofCase.ExclusiveMinimum:
+          ExclusiveMinimum = other.ExclusiveMinimum;
+          break;
+      }
+
+      switch (other.MaxCase) {
+        case MaxOneofCase.Maximum:
+          Maximum = other.Maximum;
+          break;
+        case MaxOneofCase.ExclusiveMaximum:
+          ExclusiveMaximum = other.ExclusiveMaximum;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Interval Clone() {
+      return new Interval(this);
+    }
+
+    /// <summary>Field number for the "minimum" field.</summary>
+    public const int MinimumFieldNumber = 1;
+    /// <summary>
+    /// Inclusive lower bound.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Minimum {
+      get { return minCase_ == MinOneofCase.Minimum ? (double) min_ : 0D; }
+      set {
+        min_ = value;
+        minCase_ = MinOneofCase.Minimum;
+      }
+    }
+
+    /// <summary>Field number for the "exclusive_minimum" field.</summary>
+    public const int ExclusiveMinimumFieldNumber = 2;
+    /// <summary>
+    /// Exclusive lower bound.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ExclusiveMinimum {
+      get { return minCase_ == MinOneofCase.ExclusiveMinimum ? (double) min_ : 0D; }
+      set {
+        min_ = value;
+        minCase_ = MinOneofCase.ExclusiveMinimum;
+      }
+    }
+
+    /// <summary>Field number for the "maximum" field.</summary>
+    public const int MaximumFieldNumber = 3;
+    /// <summary>
+    /// Inclusive upper bound.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Maximum {
+      get { return maxCase_ == MaxOneofCase.Maximum ? (double) max_ : 0D; }
+      set {
+        max_ = value;
+        maxCase_ = MaxOneofCase.Maximum;
+      }
+    }
+
+    /// <summary>Field number for the "exclusive_maximum" field.</summary>
+    public const int ExclusiveMaximumFieldNumber = 4;
+    /// <summary>
+    /// Exclusive upper bound.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ExclusiveMaximum {
+      get { return maxCase_ == MaxOneofCase.ExclusiveMaximum ? (double) max_ : 0D; }
+      set {
+        max_ = value;
+        maxCase_ = MaxOneofCase.ExclusiveMaximum;
+      }
+    }
+
+    private object min_;
+    /// <summary>Enum of possible cases for the "min" oneof.</summary>
+    public enum MinOneofCase {
+      None = 0,
+      Minimum = 1,
+      ExclusiveMinimum = 2,
+    }
+    private MinOneofCase minCase_ = MinOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MinOneofCase MinCase {
+      get { return minCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMin() {
+      minCase_ = MinOneofCase.None;
+      min_ = null;
+    }
+
+    private object max_;
+    /// <summary>Enum of possible cases for the "max" oneof.</summary>
+    public enum MaxOneofCase {
+      None = 0,
+      Maximum = 3,
+      ExclusiveMaximum = 4,
+    }
+    private MaxOneofCase maxCase_ = MaxOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaxOneofCase MaxCase {
+      get { return maxCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMax() {
+      maxCase_ = MaxOneofCase.None;
+      max_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Interval);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Interval other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Minimum, other.Minimum)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ExclusiveMinimum, other.ExclusiveMinimum)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Maximum, other.Maximum)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ExclusiveMaximum, other.ExclusiveMaximum)) return false;
+      if (MinCase != other.MinCase) return false;
+      if (MaxCase != other.MaxCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (minCase_ == MinOneofCase.Minimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Minimum);
+      if (minCase_ == MinOneofCase.ExclusiveMinimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMinimum);
+      if (maxCase_ == MaxOneofCase.Maximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Maximum);
+      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMaximum);
+      hash ^= (int) minCase_;
+      hash ^= (int) maxCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (minCase_ == MinOneofCase.Minimum) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Minimum);
+      }
+      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+        output.WriteRawTag(17);
+        output.WriteDouble(ExclusiveMinimum);
+      }
+      if (maxCase_ == MaxOneofCase.Maximum) {
+        output.WriteRawTag(25);
+        output.WriteDouble(Maximum);
+      }
+      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+        output.WriteRawTag(33);
+        output.WriteDouble(ExclusiveMaximum);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (minCase_ == MinOneofCase.Minimum) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Minimum);
+      }
+      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+        output.WriteRawTag(17);
+        output.WriteDouble(ExclusiveMinimum);
+      }
+      if (maxCase_ == MaxOneofCase.Maximum) {
+        output.WriteRawTag(25);
+        output.WriteDouble(Maximum);
+      }
+      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+        output.WriteRawTag(33);
+        output.WriteDouble(ExclusiveMaximum);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (minCase_ == MinOneofCase.Minimum) {
+        size += 1 + 8;
+      }
+      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+        size += 1 + 8;
+      }
+      if (maxCase_ == MaxOneofCase.Maximum) {
+        size += 1 + 8;
+      }
+      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Interval other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.MinCase) {
+        case MinOneofCase.Minimum:
+          Minimum = other.Minimum;
+          break;
+        case MinOneofCase.ExclusiveMinimum:
+          ExclusiveMinimum = other.ExclusiveMinimum;
+          break;
+      }
+
+      switch (other.MaxCase) {
+        case MaxOneofCase.Maximum:
+          Maximum = other.Maximum;
+          break;
+        case MaxOneofCase.ExclusiveMaximum:
+          ExclusiveMaximum = other.ExclusiveMaximum;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            Minimum = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            ExclusiveMinimum = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            Maximum = input.ReadDouble();
+            break;
+          }
+          case 33: {
+            ExclusiveMaximum = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            Minimum = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            ExclusiveMinimum = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            Maximum = input.ReadDouble();
+            break;
+          }
+          case 33: {
+            ExclusiveMaximum = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   /// <summary>
   /// A custom attribute that is not explicitly modeled in a resource, e.g.
   /// [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent].
@@ -80,7 +465,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -120,13 +505,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// The textual values of this custom attribute. For example, `["yellow",
     /// "green"]` when the key is "color".
     ///
-    /// Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+    /// Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
     /// returned.
     ///
     /// Exactly one of
-    /// [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-    /// [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-    /// should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+    /// or
+    /// [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+    /// should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -144,9 +530,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// when the key is "lengths_cm".
     ///
     /// Exactly one of
-    /// [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-    /// [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-    /// should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+    /// or
+    /// [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+    /// should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -310,7 +697,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -355,7 +742,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// model quality.
     ///
     /// The field must be a UTF-8 encoded string with a length limit of 128
-    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -374,7 +761,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// [SearchResponse.sponsored_results][].
     ///
     /// The field must be a UTF-8 encoded string with a length limit of 1,000
-    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
     ///
     /// This should not be set when using the client side event reporting with
     /// GTM or JavaScript tag in

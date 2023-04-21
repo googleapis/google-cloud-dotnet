@@ -177,10 +177,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///
     /// If the caller does not have permission to access the
     /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-    /// whether or not it exists, a PERMISSION_DENIED error is returned.
+    /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
     ///
     /// If the requested [Document][google.cloud.discoveryengine.v1beta.Document]
-    /// does not exist, a NOT_FOUND error is returned.
+    /// does not exist, a `NOT_FOUND` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -386,7 +386,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///
     /// If the caller does not have permission to list [Documents][]s under this
     /// branch, regardless of whether or not this branch exists, a
-    /// PERMISSION_DENIED error is returned.
+    /// `PERMISSION_DENIED` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -405,7 +405,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// to return. If unspecified, defaults to 100. The maximum allowed value is
     /// 1000. Values above 1000 will be coerced to 1000.
     ///
-    /// If this field is negative, an INVALID_ARGUMENT error is returned.
+    /// If this field is negative, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -429,7 +429,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// When paginating, all other parameters provided to
     /// [DocumentService.ListDocuments][google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments]
     /// must match the call that provided the page token. Otherwise, an
-    /// INVALID_ARGUMENT error is returned.
+    /// `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -944,16 +944,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///
     /// If the caller does not have permission to create the
     /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-    /// whether or not it exists, a PERMISSION_DENIED error is returned.
+    /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
     ///
     /// This field must be unique among all
     /// [Document][google.cloud.discoveryengine.v1beta.Document]s with the same
     /// [parent][google.cloud.discoveryengine.v1beta.CreateDocumentRequest.parent].
-    /// Otherwise, an ALREADY_EXISTS error is returned.
+    /// Otherwise, an `ALREADY_EXISTS` error is returned.
     ///
     /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
     /// standard with a length limit of 63 characters. Otherwise, an
-    /// INVALID_ARGUMENT error is returned.
+    /// `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1212,12 +1212,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///
     /// If the caller does not have permission to update the
     /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-    /// whether or not it exists, a PERMISSION_DENIED error is returned.
+    /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
     ///
     /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to update
     /// does not exist and
     /// [allow_missing][google.cloud.discoveryengine.v1beta.UpdateDocumentRequest.allow_missing]
-    /// is not set, a NOT_FOUND error is returned.
+    /// is not set, a `NOT_FOUND` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1471,10 +1471,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///
     /// If the caller does not have permission to delete the
     /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-    /// whether or not it exists, a PERMISSION_DENIED error is returned.
+    /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
     ///
     /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to delete
-    /// does not exist, a NOT_FOUND error is returned.
+    /// does not exist, a `NOT_FOUND` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

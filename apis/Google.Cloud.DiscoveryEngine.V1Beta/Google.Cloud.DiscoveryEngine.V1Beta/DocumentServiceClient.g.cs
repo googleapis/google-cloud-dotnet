@@ -365,10 +365,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to access the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the requested [Document][google.cloud.discoveryengine.v1beta.Document]
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -388,10 +388,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to access the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the requested [Document][google.cloud.discoveryengine.v1beta.Document]
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -411,10 +411,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to access the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the requested [Document][google.cloud.discoveryengine.v1beta.Document]
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -431,10 +431,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to access the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the requested [Document][google.cloud.discoveryengine.v1beta.Document]
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -454,10 +454,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to access the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the requested [Document][google.cloud.discoveryengine.v1beta.Document]
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -477,10 +477,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to access the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the requested [Document][google.cloud.discoveryengine.v1beta.Document]
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -516,7 +516,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to list [Documents][]s under this
         /// branch, regardless of whether or not this branch exists, a
-        /// PERMISSION_DENIED error is returned.
+        /// `PERMISSION_DENIED` error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -547,7 +547,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to list [Documents][]s under this
         /// branch, regardless of whether or not this branch exists, a
-        /// PERMISSION_DENIED error is returned.
+        /// `PERMISSION_DENIED` error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -578,7 +578,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to list [Documents][]s under this
         /// branch, regardless of whether or not this branch exists, a
-        /// PERMISSION_DENIED error is returned.
+        /// `PERMISSION_DENIED` error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -609,7 +609,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to list [Documents][]s under this
         /// branch, regardless of whether or not this branch exists, a
-        /// PERMISSION_DENIED error is returned.
+        /// `PERMISSION_DENIED` error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -675,16 +675,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to create the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// This field must be unique among all
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s with the same
         /// [parent][google.cloud.discoveryengine.v1beta.CreateDocumentRequest.parent].
-        /// Otherwise, an ALREADY_EXISTS error is returned.
+        /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
         /// standard with a length limit of 63 characters. Otherwise, an
-        /// INVALID_ARGUMENT error is returned.
+        /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -715,16 +715,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to create the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// This field must be unique among all
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s with the same
         /// [parent][google.cloud.discoveryengine.v1beta.CreateDocumentRequest.parent].
-        /// Otherwise, an ALREADY_EXISTS error is returned.
+        /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
         /// standard with a length limit of 63 characters. Otherwise, an
-        /// INVALID_ARGUMENT error is returned.
+        /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -755,16 +755,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to create the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// This field must be unique among all
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s with the same
         /// [parent][google.cloud.discoveryengine.v1beta.CreateDocumentRequest.parent].
-        /// Otherwise, an ALREADY_EXISTS error is returned.
+        /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
         /// standard with a length limit of 63 characters. Otherwise, an
-        /// INVALID_ARGUMENT error is returned.
+        /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -790,16 +790,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to create the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// This field must be unique among all
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s with the same
         /// [parent][google.cloud.discoveryengine.v1beta.CreateDocumentRequest.parent].
-        /// Otherwise, an ALREADY_EXISTS error is returned.
+        /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
         /// standard with a length limit of 63 characters. Otherwise, an
-        /// INVALID_ARGUMENT error is returned.
+        /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -830,16 +830,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to create the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// This field must be unique among all
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s with the same
         /// [parent][google.cloud.discoveryengine.v1beta.CreateDocumentRequest.parent].
-        /// Otherwise, an ALREADY_EXISTS error is returned.
+        /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
         /// standard with a length limit of 63 characters. Otherwise, an
-        /// INVALID_ARGUMENT error is returned.
+        /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -870,16 +870,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to create the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// This field must be unique among all
         /// [Document][google.cloud.discoveryengine.v1beta.Document]s with the same
         /// [parent][google.cloud.discoveryengine.v1beta.CreateDocumentRequest.parent].
-        /// Otherwise, an ALREADY_EXISTS error is returned.
+        /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
         /// standard with a length limit of 63 characters. Otherwise, an
-        /// INVALID_ARGUMENT error is returned.
+        /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -950,10 +950,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to delete the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to delete
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -973,10 +973,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to delete the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to delete
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -996,10 +996,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to delete the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to delete
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1016,10 +1016,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to delete the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to delete
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1039,10 +1039,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to delete the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to delete
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1062,10 +1062,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// 
         /// If the caller does not have permission to delete the
         /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
-        /// whether or not it exists, a PERMISSION_DENIED error is returned.
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
         /// 
         /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to delete
-        /// does not exist, a NOT_FOUND error is returned.
+        /// does not exist, a `NOT_FOUND` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
