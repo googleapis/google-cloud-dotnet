@@ -19720,12 +19720,12 @@ namespace Google.Cloud.Container.V1 {
     ///
     /// Examples:
     ///
-    ///   -
-    ///   `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
-    ///   -
-    ///   `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
-    ///   -
-    ///   `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
+    /// -
+    /// `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+    /// -
+    /// `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+    /// -
+    /// `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
