@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GSuiteAddOns.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gsuiteaddons_v1_generated_GSuiteAddOns_ListDeployments_async_flattened]
     using Google.Api.Gax;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_JobService_ResumeModelDeploymentMonitoringJob_sync_flattened_resourceNames]
     using Google.Cloud.AIPlatform.V1;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AlloyDb.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START alloydb_v1beta_generated_AlloyDBAdmin_FailoverInstance_sync_flattened]
     using Google.Cloud.AlloyDb.V1Beta;

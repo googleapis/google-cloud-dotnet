@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Executions_GetExecution_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetExecutionResourceNamesAsync()
         {
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            Execution response = await executionsClient.GetExecutionAsync(name);
+            gcrv::Execution response = await executionsClient.GetExecutionAsync(name);
         }
     }
     // [END run_v2_generated_Executions_GetExecution_async_flattened_resourceNames]

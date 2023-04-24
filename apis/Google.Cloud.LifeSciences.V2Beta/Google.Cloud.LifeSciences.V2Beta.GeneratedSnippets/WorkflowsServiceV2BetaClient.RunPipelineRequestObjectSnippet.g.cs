@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.LifeSciences.V2Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START lifesciences_v2beta_generated_WorkflowsServiceV2Beta_RunPipeline_sync]
     using Google.Cloud.LifeSciences.V2Beta;

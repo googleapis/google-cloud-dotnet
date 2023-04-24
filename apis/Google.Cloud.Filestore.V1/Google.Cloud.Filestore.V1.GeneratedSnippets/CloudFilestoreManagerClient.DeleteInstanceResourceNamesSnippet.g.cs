@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Filestore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START file_v1_generated_CloudFilestoreManager_DeleteInstance_sync_flattened_resourceNames]
     using Google.Cloud.Common;

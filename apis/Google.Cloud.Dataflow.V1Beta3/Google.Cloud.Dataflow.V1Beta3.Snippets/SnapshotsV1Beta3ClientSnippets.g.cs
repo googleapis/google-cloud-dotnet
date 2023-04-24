@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataflow.V1Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Dataflow.V1Beta3;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>

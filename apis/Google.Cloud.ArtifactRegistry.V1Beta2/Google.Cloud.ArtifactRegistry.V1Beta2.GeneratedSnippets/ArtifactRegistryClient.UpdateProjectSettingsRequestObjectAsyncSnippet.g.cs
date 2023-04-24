@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START artifactregistry_v1beta2_generated_ArtifactRegistry_UpdateProjectSettings_async]
     using Google.Cloud.ArtifactRegistry.V1Beta2;

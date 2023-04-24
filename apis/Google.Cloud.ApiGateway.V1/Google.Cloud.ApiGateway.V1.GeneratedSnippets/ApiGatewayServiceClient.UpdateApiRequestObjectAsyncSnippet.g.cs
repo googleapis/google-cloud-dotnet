@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.ApiGateway.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apigateway_v1_generated_ApiGatewayService_UpdateApi_async]
     using Google.LongRunning;
@@ -37,25 +37,25 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
         public async Task UpdateApiRequestObjectAsync()
         {
             // Create client
-            ApiGatewayServiceClient apiGatewayServiceClient = await ApiGatewayServiceClient.CreateAsync();
+            gcav::ApiGatewayServiceClient apiGatewayServiceClient = await gcav::ApiGatewayServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateApiRequest request = new UpdateApiRequest
+            gcav::UpdateApiRequest request = new gcav::UpdateApiRequest
             {
                 UpdateMask = new FieldMask(),
                 Api = new gcav::Api(),
             };
             // Make the request
-            Operation<gcav::Api, OperationMetadata> response = await apiGatewayServiceClient.UpdateApiAsync(request);
+            Operation<gcav::Api, gcav::OperationMetadata> response = await apiGatewayServiceClient.UpdateApiAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Api, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Api, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcav::Api result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Api, OperationMetadata> retrievedResponse = await apiGatewayServiceClient.PollOnceUpdateApiAsync(operationName);
+            Operation<gcav::Api, gcav::OperationMetadata> retrievedResponse = await apiGatewayServiceClient.PollOnceUpdateApiAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

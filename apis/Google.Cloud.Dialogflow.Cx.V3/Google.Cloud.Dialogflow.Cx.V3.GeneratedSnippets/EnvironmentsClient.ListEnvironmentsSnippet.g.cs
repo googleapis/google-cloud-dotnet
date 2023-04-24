@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Environments_ListEnvironments_sync_flattened]
     using Google.Api.Gax;
@@ -36,11 +36,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
         public void ListEnvironments()
         {
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdcv::EnvironmentsClient environmentsClient = gcdcv::EnvironmentsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]";
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcdcv::Environment> response = environmentsClient.ListEnvironments(parent);
+            PagedEnumerable<gcdcv::ListEnvironmentsResponse, gcdcv::Environment> response = environmentsClient.ListEnvironments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdcv::Environment item in response)
@@ -50,7 +50,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcdcv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

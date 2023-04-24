@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START compute_v1_generated_HealthChecks_Get_sync_flattened]
     using Google.Cloud.Compute.V1;

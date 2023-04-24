@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START securitycenter_v1_generated_SecurityCenter_SetFindingState_async]
     using Google.Cloud.SecurityCenter.V1;

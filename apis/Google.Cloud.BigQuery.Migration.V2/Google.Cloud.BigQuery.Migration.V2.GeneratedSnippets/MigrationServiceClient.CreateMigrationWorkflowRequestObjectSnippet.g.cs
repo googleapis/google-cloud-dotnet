@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.Migration.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigquerymigration_v2_generated_MigrationService_CreateMigrationWorkflow_sync]
     using Google.Api.Gax.ResourceNames;

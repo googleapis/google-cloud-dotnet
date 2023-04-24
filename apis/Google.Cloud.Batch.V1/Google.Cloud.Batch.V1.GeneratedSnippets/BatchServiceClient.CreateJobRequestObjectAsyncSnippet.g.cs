@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Batch.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START batch_v1_generated_BatchService_CreateJob_async]
     using Google.Api.Gax.ResourceNames;
@@ -36,17 +36,17 @@ namespace Google.Cloud.Batch.V1.Snippets
         public async Task CreateJobRequestObjectAsync()
         {
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateJobRequest request = new CreateJobRequest
+            gcbv::CreateJobRequest request = new gcbv::CreateJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 JobId = "",
-                Job = new Job(),
+                Job = new gcbv::Job(),
                 RequestId = "",
             };
             // Make the request
-            Job response = await batchServiceClient.CreateJobAsync(request);
+            gcbv::Job response = await batchServiceClient.CreateJobAsync(request);
         }
     }
     // [END batch_v1_generated_BatchService_CreateJob_async]

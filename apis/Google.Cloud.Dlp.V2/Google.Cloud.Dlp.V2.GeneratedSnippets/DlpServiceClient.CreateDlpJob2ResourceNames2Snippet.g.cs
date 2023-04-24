@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dlp.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dlp_v2_generated_DlpService_CreateDlpJob_sync_flattened2_resourceNames2]
     using Google.Api.Gax.ResourceNames;

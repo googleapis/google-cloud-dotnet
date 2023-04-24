@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START connectgateway_v1beta1_generated_GatewayService_PatchResource_async]
     using Google.Api;

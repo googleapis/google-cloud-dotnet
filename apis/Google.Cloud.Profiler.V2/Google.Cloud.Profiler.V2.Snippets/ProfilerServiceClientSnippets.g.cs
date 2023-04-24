@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Profiler.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Profiler.V2;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 

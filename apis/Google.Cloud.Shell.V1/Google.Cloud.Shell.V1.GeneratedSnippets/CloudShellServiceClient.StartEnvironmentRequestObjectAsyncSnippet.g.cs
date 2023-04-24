@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Shell.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudshell_v1_generated_CloudShellService_StartEnvironment_async]
     using Google.Cloud.Shell.V1;

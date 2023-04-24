@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_GetZone_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetZoneRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetZoneRequest request = new GetZoneRequest
+            gcdv::GetZoneRequest request = new gcdv::GetZoneRequest
             {
-                ZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
             };
             // Make the request
-            Zone response = await dataplexServiceClient.GetZoneAsync(request);
+            gcdv::Zone response = await dataplexServiceClient.GetZoneAsync(request);
         }
     }
     // [END dataplex_v1_generated_DataplexService_GetZone_async]

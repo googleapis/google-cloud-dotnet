@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OrgPolicy.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START orgpolicy_v2_generated_OrgPolicy_ListConstraints_async_flattened]
     using Google.Api.Gax;

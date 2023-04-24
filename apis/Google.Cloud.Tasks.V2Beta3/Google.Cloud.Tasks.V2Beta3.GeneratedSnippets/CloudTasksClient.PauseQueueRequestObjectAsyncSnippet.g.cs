@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         public async Task PauseQueueRequestObjectAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            PauseQueueRequest request = new PauseQueueRequest
+            gctv::PauseQueueRequest request = new gctv::PauseQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            Queue response = await cloudTasksClient.PauseQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.PauseQueueAsync(request);
         }
     }
     // [END cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_async]

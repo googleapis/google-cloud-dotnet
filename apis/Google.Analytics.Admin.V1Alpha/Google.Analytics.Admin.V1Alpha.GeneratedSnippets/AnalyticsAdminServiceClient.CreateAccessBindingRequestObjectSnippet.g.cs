@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAccessBinding_sync]
     using Google.Analytics.Admin.V1Alpha;

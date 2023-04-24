@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ResourceManager.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudresourcemanager_v3_generated_TagKeys_ListTagKeys_sync_flattened]
     using Google.Api.Gax;

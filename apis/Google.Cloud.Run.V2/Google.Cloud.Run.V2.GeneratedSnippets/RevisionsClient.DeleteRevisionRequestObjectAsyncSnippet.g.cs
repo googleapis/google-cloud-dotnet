@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Revisions_DeleteRevision_async]
     using Google.LongRunning;
@@ -36,31 +36,31 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task DeleteRevisionRequestObjectAsync()
         {
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteRevisionRequest request = new DeleteRevisionRequest
+            gcrv::DeleteRevisionRequest request = new gcrv::DeleteRevisionRequest
             {
-                RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
+                RevisionName = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Revision, Revision> response = await revisionsClient.DeleteRevisionAsync(request);
+            Operation<gcrv::Revision, gcrv::Revision> response = await revisionsClient.DeleteRevisionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Revision, Revision> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Revision, gcrv::Revision> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Revision result = completedResponse.Result;
+            gcrv::Revision result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Revision, Revision> retrievedResponse = await revisionsClient.PollOnceDeleteRevisionAsync(operationName);
+            Operation<gcrv::Revision, gcrv::Revision> retrievedResponse = await revisionsClient.PollOnceDeleteRevisionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Revision retrievedResult = retrievedResponse.Result;
+                gcrv::Revision retrievedResult = retrievedResponse.Result;
             }
         }
     }

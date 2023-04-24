@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Optimization.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudoptimization_v1_generated_FleetRouting_BatchOptimizeTours_sync]
     using Google.Cloud.Optimization.V1;

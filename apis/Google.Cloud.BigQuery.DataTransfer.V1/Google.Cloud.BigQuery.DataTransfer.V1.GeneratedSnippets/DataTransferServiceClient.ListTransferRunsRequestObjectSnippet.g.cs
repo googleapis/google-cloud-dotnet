@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigquerydatatransfer_v1_generated_DataTransferService_ListTransferRuns_sync]
     using Google.Api.Gax;

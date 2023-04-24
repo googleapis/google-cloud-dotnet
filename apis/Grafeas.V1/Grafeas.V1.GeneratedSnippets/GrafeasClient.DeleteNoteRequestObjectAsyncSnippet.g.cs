@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace GrafeasV1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START containeranalysis_v1_generated_Grafeas_DeleteNote_async]
     using Grafeas.V1;

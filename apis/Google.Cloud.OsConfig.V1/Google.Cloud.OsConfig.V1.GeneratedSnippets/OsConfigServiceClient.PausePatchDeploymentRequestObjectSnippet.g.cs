@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OsConfig.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START osconfig_v1_generated_OsConfigService_PausePatchDeployment_sync]
     using Google.Cloud.OsConfig.V1;

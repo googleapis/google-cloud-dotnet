@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchVersions_async]
     using Google.Api.Gax;
@@ -38,15 +38,15 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
         public async Task SearchVersionsRequestObjectAsync()
         {
             // Create client
-            PrivateCatalogClient privateCatalogClient = await PrivateCatalogClient.CreateAsync();
+            gcpv::PrivateCatalogClient privateCatalogClient = await gcpv::PrivateCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            SearchVersionsRequest request = new SearchVersionsRequest
+            gcpv::SearchVersionsRequest request = new gcpv::SearchVersionsRequest
             {
                 Resource = "",
                 Query = "",
             };
             // Make the request
-            PagedAsyncEnumerable<SearchVersionsResponse, gcpv::Version> response = privateCatalogClient.SearchVersionsAsync(request);
+            PagedAsyncEnumerable<gcpv::SearchVersionsResponse, gcpv::Version> response = privateCatalogClient.SearchVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcpv::Version item) =>
@@ -56,7 +56,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((SearchVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcpv::SearchVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

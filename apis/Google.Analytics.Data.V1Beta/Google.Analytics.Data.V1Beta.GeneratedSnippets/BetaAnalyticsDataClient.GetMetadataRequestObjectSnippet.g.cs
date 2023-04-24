@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Data.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsdata_v1beta_generated_BetaAnalyticsData_GetMetadata_sync]
     using Google.Analytics.Data.V1Beta;

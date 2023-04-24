@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START securitycenter_v1p1beta1_generated_SecurityCenter_GroupAssets_sync]
     using Google.Api.Gax;

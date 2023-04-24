@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_ContentService_CreateContent_async]
     using System.Threading.Tasks;
@@ -35,16 +35,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task CreateContentRequestObjectAsync()
         {
             // Create client
-            ContentServiceClient contentServiceClient = await ContentServiceClient.CreateAsync();
+            gcdv::ContentServiceClient contentServiceClient = await gcdv::ContentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateContentRequest request = new CreateContentRequest
+            gcdv::CreateContentRequest request = new gcdv::CreateContentRequest
             {
-                ParentAsLakeName = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
-                Content = new Content(),
+                ParentAsLakeName = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]"),
+                Content = new gcdv::Content(),
                 ValidateOnly = false,
             };
             // Make the request
-            Content response = await contentServiceClient.CreateContentAsync(request);
+            gcdv::Content response = await contentServiceClient.CreateContentAsync(request);
         }
     }
     // [END dataplex_v1_generated_ContentService_CreateContent_async]

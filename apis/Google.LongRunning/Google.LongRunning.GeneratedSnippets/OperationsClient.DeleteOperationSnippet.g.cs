@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.LongRunning.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START longrunning_generated_Operations_DeleteOperation_sync_flattened]
     using Google.LongRunning;

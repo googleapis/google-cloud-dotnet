@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Eventarc.Publishing.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Eventarc.Publishing.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 

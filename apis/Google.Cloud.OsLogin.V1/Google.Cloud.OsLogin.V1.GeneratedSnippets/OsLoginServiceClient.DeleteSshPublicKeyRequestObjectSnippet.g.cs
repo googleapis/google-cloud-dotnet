@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OsLogin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START oslogin_v1_generated_OsLoginService_DeleteSshPublicKey_sync]
     using Google.Cloud.OsLogin.Common;

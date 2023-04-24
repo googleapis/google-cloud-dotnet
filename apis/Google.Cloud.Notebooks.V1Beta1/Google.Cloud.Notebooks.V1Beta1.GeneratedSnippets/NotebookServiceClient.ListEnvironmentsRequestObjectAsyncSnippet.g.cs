@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Notebooks.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START notebooks_v1beta1_generated_NotebookService_ListEnvironments_async]
     using Google.Api.Gax;
@@ -38,11 +38,11 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
         public async Task ListEnvironmentsRequestObjectAsync()
         {
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest { Parent = "", };
+            gcnv::ListEnvironmentsRequest request = new gcnv::ListEnvironmentsRequest { Parent = "", };
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironmentsAsync(request);
+            PagedAsyncEnumerable<gcnv::ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcnv::Environment item) =>
@@ -52,7 +52,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

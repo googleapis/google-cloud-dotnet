@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Metastore.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START metastore_v1alpha_generated_DataprocMetastore_MoveTableToDatabase_async]
     using Google.Cloud.Metastore.V1Alpha;

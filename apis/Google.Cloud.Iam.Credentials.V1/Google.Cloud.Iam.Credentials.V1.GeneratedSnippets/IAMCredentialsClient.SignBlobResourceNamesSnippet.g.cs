@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Iam.Credentials.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START iamcredentials_v1_generated_IAMCredentials_SignBlob_sync_flattened_resourceNames]
     using Google.Cloud.Iam.Credentials.V1;

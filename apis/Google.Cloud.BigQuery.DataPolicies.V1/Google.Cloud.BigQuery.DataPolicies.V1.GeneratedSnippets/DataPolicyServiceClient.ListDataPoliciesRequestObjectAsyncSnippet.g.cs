@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.DataPolicies.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigquerydatapolicy_v1_generated_DataPolicyService_ListDataPolicies_async]
     using Google.Api.Gax;

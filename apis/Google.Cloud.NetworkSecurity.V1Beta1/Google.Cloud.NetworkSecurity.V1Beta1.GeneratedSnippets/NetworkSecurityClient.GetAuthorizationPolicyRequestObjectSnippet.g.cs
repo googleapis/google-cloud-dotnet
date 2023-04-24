@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.NetworkSecurity.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_sync]
     using Google.Cloud.NetworkSecurity.V1Beta1;

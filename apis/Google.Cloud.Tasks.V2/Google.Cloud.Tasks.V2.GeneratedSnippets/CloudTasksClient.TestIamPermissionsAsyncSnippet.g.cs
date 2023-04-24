@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_TestIamPermissions_async_flattened]
     using Google.Cloud.Iam.V1;
@@ -37,7 +37,7 @@ namespace Google.Cloud.Tasks.V2.Snippets
         public async Task TestIamPermissionsAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             IEnumerable<string> permissions = new string[] { "", };

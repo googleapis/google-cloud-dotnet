@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START discoveryengine_v1beta_generated_DocumentService_DeleteDocument_async_flattened_resourceNames]
     using Google.Cloud.DiscoveryEngine.V1Beta;

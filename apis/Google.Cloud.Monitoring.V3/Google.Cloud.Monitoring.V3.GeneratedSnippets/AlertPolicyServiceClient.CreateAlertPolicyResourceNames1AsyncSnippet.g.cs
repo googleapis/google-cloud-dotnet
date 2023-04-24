@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Monitoring.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START monitoring_v3_generated_AlertPolicyService_CreateAlertPolicy_async_flattened_resourceNames1]
     using Google.Api.Gax.ResourceNames;

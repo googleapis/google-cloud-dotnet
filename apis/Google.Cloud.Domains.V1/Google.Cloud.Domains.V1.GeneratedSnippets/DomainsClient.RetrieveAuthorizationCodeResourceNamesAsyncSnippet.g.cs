@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Domains.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START domains_v1_generated_Domains_RetrieveAuthorizationCode_async_flattened_resourceNames]
     using Google.Cloud.Domains.V1;

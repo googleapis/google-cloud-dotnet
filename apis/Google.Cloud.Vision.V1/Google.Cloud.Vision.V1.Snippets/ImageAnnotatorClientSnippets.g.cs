@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Vision.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Vision.V1;
     using Google.LongRunning;
     using System.Collections.Generic;
     using System.Threading.Tasks;

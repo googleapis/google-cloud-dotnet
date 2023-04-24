@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ConfidentialComputing.V1Alpha1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START confidentialcomputing_v1alpha1_generated_ConfidentialComputing_CreateChallenge_async_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

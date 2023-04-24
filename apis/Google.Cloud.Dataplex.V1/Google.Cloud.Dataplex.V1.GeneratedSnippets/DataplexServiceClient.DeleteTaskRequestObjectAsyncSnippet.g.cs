@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_DeleteTask_async]
     using Google.LongRunning;
@@ -37,24 +37,24 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task DeleteTaskRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteTaskRequest request = new DeleteTaskRequest
+            gcdv::DeleteTaskRequest request = new gcdv::DeleteTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataplexServiceClient.DeleteTaskAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataplexServiceClient.DeleteTaskAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteTaskAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceDeleteTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.DataFusion.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datafusion_v1_generated_DataFusion_ListAvailableVersions_sync]
     using Google.Api.Gax;
@@ -37,15 +37,15 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         public void ListAvailableVersionsRequestObject()
         {
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            ListAvailableVersionsRequest request = new ListAvailableVersionsRequest
+            gcdv::ListAvailableVersionsRequest request = new gcdv::ListAvailableVersionsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LatestPatchOnly = false,
             };
             // Make the request
-            PagedEnumerable<ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersions(request);
+            PagedEnumerable<gcdv::ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Version item in response)
@@ -55,7 +55,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAvailableVersionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListAvailableVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

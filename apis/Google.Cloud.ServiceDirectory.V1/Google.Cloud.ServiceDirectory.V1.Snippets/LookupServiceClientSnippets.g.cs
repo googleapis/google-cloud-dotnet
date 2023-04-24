@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ServiceDirectory.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.ServiceDirectory.V1;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.TextToSpeech.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START texttospeech_v1beta1_generated_TextToSpeechLongAudioSynthesize_SynthesizeLongAudio_async]
     using Google.Cloud.TextToSpeech.V1Beta1;

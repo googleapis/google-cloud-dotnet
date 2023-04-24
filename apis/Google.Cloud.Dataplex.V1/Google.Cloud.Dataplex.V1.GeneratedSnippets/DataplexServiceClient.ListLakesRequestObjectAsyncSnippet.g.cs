@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_ListLakes_async]
     using Google.Api.Gax;
@@ -39,30 +39,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task ListLakesRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListLakesRequest request = new ListLakesRequest
+            gcdv::ListLakesRequest request = new gcdv::ListLakesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListLakesResponse, Lake> response = dataplexServiceClient.ListLakesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListLakesResponse, gcdv::Lake> response = dataplexServiceClient.ListLakesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Lake item) =>
+            await response.ForEachAsync((gcdv::Lake item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListLakesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListLakesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Lake item in page)
+                foreach (gcdv::Lake item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -71,10 +71,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Lake> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Lake> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Lake item in singlePage)
+            foreach (gcdv::Lake item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

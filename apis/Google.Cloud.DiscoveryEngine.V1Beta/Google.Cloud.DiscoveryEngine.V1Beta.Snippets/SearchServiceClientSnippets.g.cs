@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.DiscoveryEngine.V1Beta;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;

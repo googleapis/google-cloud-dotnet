@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Debugger.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START clouddebugger_v2_generated_Debugger2_GetBreakpoint_async]
     using Google.Cloud.Debugger.V2;

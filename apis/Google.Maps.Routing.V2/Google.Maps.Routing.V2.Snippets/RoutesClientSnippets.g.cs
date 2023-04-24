@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Maps.Routing.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
+    using Google.Maps.Routing.V2;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 

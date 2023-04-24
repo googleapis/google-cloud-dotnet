@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OsLogin.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START oslogin_v1beta_generated_OsLoginService_DeletePosixAccount_sync_flattened_resourceNames]
     using Google.Cloud.OsLogin.Common;

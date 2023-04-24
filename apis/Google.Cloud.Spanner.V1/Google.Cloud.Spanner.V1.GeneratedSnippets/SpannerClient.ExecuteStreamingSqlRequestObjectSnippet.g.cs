@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Spanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_Spanner_ExecuteStreamingSql_sync]
     using Google.Api.Gax.Grpc;
@@ -38,12 +38,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task ExecuteStreamingSqlRequestObject()
         {
             // Create client
-            SpannerClient spannerClient = SpannerClient.Create();
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
             // Initialize request argument(s)
-            ExecuteSqlRequest request = new ExecuteSqlRequest
+            gcsv::ExecuteSqlRequest request = new gcsv::ExecuteSqlRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
                 ParamTypes =
@@ -54,22 +54,22 @@ namespace Google.Cloud.Spanner.V1.Snippets
                     },
                 },
                 ResumeToken = ByteString.Empty,
-                QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
+                QueryMode = gcsv::ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
-                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
-                RequestOptions = new RequestOptions(),
+                QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
-            SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
+            gcsv::SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
-            AsyncResponseStream<PartialResultSet> responseStream = response.GetResponseStream();
+            AsyncResponseStream<gcsv::PartialResultSet> responseStream = response.GetResponseStream();
             while (await responseStream.MoveNextAsync())
             {
-                PartialResultSet responseItem = responseStream.Current;
+                gcsv::PartialResultSet responseItem = responseStream.Current;
                 // Do something with streamed response
             }
             // The response stream has completed

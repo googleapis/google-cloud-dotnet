@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ServiceManagement.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START servicemanagement_v1_generated_ServiceManager_GetServiceRollout_sync]
     using Google.Cloud.ServiceManagement.V1;

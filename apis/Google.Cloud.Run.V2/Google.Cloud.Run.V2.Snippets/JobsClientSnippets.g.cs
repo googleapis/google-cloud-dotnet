@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Run.V2.Snippets
+#pragma warning disable CS8981
+
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -24,6 +26,7 @@ namespace Google.Cloud.Run.V2.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcrv = Google.Cloud.Run.V2;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedJobsClientSnippets
@@ -33,32 +36,32 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: CreateJob(CreateJobRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            CreateJobRequest request = new CreateJobRequest
+            gcrv::CreateJobRequest request = new gcrv::CreateJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new gcrv::Job(),
                 JobId = "",
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Job, Job> response = jobsClient.CreateJob(request);
+            Operation<gcrv::Job, gcrv::Job> response = jobsClient.CreateJob(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = jobsClient.PollOnceCreateJob(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = jobsClient.PollOnceCreateJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -69,32 +72,32 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: CreateJobAsync(CreateJobRequest, CallSettings)
             // Additional: CreateJobAsync(CreateJobRequest, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            CreateJobRequest request = new CreateJobRequest
+            gcrv::CreateJobRequest request = new gcrv::CreateJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new gcrv::Job(),
                 JobId = "",
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Job, Job> response = await jobsClient.CreateJobAsync(request);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.CreateJobAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceCreateJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceCreateJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -104,28 +107,28 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: CreateJob(string, Job, string, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Job job = new Job();
+            gcrv::Job job = new gcrv::Job();
             string jobId = "";
             // Make the request
-            Operation<Job, Job> response = jobsClient.CreateJob(parent, job, jobId);
+            Operation<gcrv::Job, gcrv::Job> response = jobsClient.CreateJob(parent, job, jobId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = jobsClient.PollOnceCreateJob(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = jobsClient.PollOnceCreateJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -136,28 +139,28 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: CreateJobAsync(string, Job, string, CallSettings)
             // Additional: CreateJobAsync(string, Job, string, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Job job = new Job();
+            gcrv::Job job = new gcrv::Job();
             string jobId = "";
             // Make the request
-            Operation<Job, Job> response = await jobsClient.CreateJobAsync(parent, job, jobId);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.CreateJobAsync(parent, job, jobId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceCreateJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceCreateJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -167,28 +170,28 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: CreateJob(LocationName, Job, string, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Job job = new Job();
+            gcrv::Job job = new gcrv::Job();
             string jobId = "";
             // Make the request
-            Operation<Job, Job> response = jobsClient.CreateJob(parent, job, jobId);
+            Operation<gcrv::Job, gcrv::Job> response = jobsClient.CreateJob(parent, job, jobId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = jobsClient.PollOnceCreateJob(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = jobsClient.PollOnceCreateJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -199,28 +202,28 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: CreateJobAsync(LocationName, Job, string, CallSettings)
             // Additional: CreateJobAsync(LocationName, Job, string, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Job job = new Job();
+            gcrv::Job job = new gcrv::Job();
             string jobId = "";
             // Make the request
-            Operation<Job, Job> response = await jobsClient.CreateJobAsync(parent, job, jobId);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.CreateJobAsync(parent, job, jobId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceCreateJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceCreateJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -230,14 +233,14 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetJob(GetJobRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            GetJobRequest request = new GetJobRequest
+            gcrv::GetJobRequest request = new gcrv::GetJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
-            Job response = jobsClient.GetJob(request);
+            gcrv::Job response = jobsClient.GetJob(request);
             // End snippet
         }
 
@@ -247,14 +250,14 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetJobAsync(GetJobRequest, CallSettings)
             // Additional: GetJobAsync(GetJobRequest, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            GetJobRequest request = new GetJobRequest
+            gcrv::GetJobRequest request = new gcrv::GetJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
-            Job response = await jobsClient.GetJobAsync(request);
+            gcrv::Job response = await jobsClient.GetJobAsync(request);
             // End snippet
         }
 
@@ -263,11 +266,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetJob(string, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Job response = jobsClient.GetJob(name);
+            gcrv::Job response = jobsClient.GetJob(name);
             // End snippet
         }
 
@@ -277,11 +280,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetJobAsync(string, CallSettings)
             // Additional: GetJobAsync(string, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Job response = await jobsClient.GetJobAsync(name);
+            gcrv::Job response = await jobsClient.GetJobAsync(name);
             // End snippet
         }
 
@@ -290,11 +293,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetJob(JobName, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcrv::JobName name = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = jobsClient.GetJob(name);
+            gcrv::Job response = jobsClient.GetJob(name);
             // End snippet
         }
 
@@ -304,11 +307,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetJobAsync(JobName, CallSettings)
             // Additional: GetJobAsync(JobName, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcrv::JobName name = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = await jobsClient.GetJobAsync(name);
+            gcrv::Job response = await jobsClient.GetJobAsync(name);
             // End snippet
         }
 
@@ -317,29 +320,29 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListJobs(ListJobsRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            ListJobsRequest request = new ListJobsRequest
+            gcrv::ListJobsRequest request = new gcrv::ListJobsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = jobsClient.ListJobs(request);
+            PagedEnumerable<gcrv::ListJobsResponse, gcrv::Job> response = jobsClient.ListJobs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
+            foreach (gcrv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcrv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -348,10 +351,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Job> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcrv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -366,29 +369,29 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListJobsAsync(ListJobsRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            ListJobsRequest request = new ListJobsRequest
+            gcrv::ListJobsRequest request = new gcrv::ListJobsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = jobsClient.ListJobsAsync(request);
+            PagedAsyncEnumerable<gcrv::ListJobsResponse, gcrv::Job> response = jobsClient.ListJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcrv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcrv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -397,10 +400,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcrv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -415,25 +418,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListJobs(string, string, int?, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = jobsClient.ListJobs(parent);
+            PagedEnumerable<gcrv::ListJobsResponse, gcrv::Job> response = jobsClient.ListJobs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
+            foreach (gcrv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcrv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -442,10 +445,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Job> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcrv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -460,25 +463,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListJobsAsync(string, string, int?, CallSettings)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = jobsClient.ListJobsAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListJobsResponse, gcrv::Job> response = jobsClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcrv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcrv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -487,10 +490,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcrv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -505,25 +508,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListJobs(LocationName, string, int?, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = jobsClient.ListJobs(parent);
+            PagedEnumerable<gcrv::ListJobsResponse, gcrv::Job> response = jobsClient.ListJobs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
+            foreach (gcrv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcrv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -532,10 +535,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Job> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcrv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -550,25 +553,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListJobsAsync(LocationName, string, int?, CallSettings)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = jobsClient.ListJobsAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListJobsResponse, gcrv::Job> response = jobsClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcrv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcrv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -577,10 +580,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcrv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -595,31 +598,31 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: UpdateJob(UpdateJobRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            UpdateJobRequest request = new UpdateJobRequest
+            gcrv::UpdateJobRequest request = new gcrv::UpdateJobRequest
             {
-                Job = new Job(),
+                Job = new gcrv::Job(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };
             // Make the request
-            Operation<Job, Job> response = jobsClient.UpdateJob(request);
+            Operation<gcrv::Job, gcrv::Job> response = jobsClient.UpdateJob(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = jobsClient.PollOnceUpdateJob(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = jobsClient.PollOnceUpdateJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -630,31 +633,31 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: UpdateJobAsync(UpdateJobRequest, CallSettings)
             // Additional: UpdateJobAsync(UpdateJobRequest, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateJobRequest request = new UpdateJobRequest
+            gcrv::UpdateJobRequest request = new gcrv::UpdateJobRequest
             {
-                Job = new Job(),
+                Job = new gcrv::Job(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };
             // Make the request
-            Operation<Job, Job> response = await jobsClient.UpdateJobAsync(request);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.UpdateJobAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceUpdateJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceUpdateJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -664,26 +667,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: UpdateJob(Job, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            Job job = new Job();
+            gcrv::Job job = new gcrv::Job();
             // Make the request
-            Operation<Job, Job> response = jobsClient.UpdateJob(job);
+            Operation<gcrv::Job, gcrv::Job> response = jobsClient.UpdateJob(job);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = jobsClient.PollOnceUpdateJob(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = jobsClient.PollOnceUpdateJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -694,26 +697,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: UpdateJobAsync(Job, CallSettings)
             // Additional: UpdateJobAsync(Job, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            Job job = new Job();
+            gcrv::Job job = new gcrv::Job();
             // Make the request
-            Operation<Job, Job> response = await jobsClient.UpdateJobAsync(job);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.UpdateJobAsync(job);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceUpdateJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceUpdateJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -723,31 +726,31 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteJob(DeleteJobRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            DeleteJobRequest request = new DeleteJobRequest
+            gcrv::DeleteJobRequest request = new gcrv::DeleteJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Job, Job> response = jobsClient.DeleteJob(request);
+            Operation<gcrv::Job, gcrv::Job> response = jobsClient.DeleteJob(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = jobsClient.PollOnceDeleteJob(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = jobsClient.PollOnceDeleteJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -758,31 +761,31 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteJobAsync(DeleteJobRequest, CallSettings)
             // Additional: DeleteJobAsync(DeleteJobRequest, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteJobRequest request = new DeleteJobRequest
+            gcrv::DeleteJobRequest request = new gcrv::DeleteJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Job, Job> response = await jobsClient.DeleteJobAsync(request);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.DeleteJobAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceDeleteJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceDeleteJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -792,26 +795,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteJob(string, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Operation<Job, Job> response = jobsClient.DeleteJob(name);
+            Operation<gcrv::Job, gcrv::Job> response = jobsClient.DeleteJob(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = jobsClient.PollOnceDeleteJob(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = jobsClient.PollOnceDeleteJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -822,26 +825,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteJobAsync(string, CallSettings)
             // Additional: DeleteJobAsync(string, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Operation<Job, Job> response = await jobsClient.DeleteJobAsync(name);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.DeleteJobAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceDeleteJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceDeleteJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -851,26 +854,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteJob(JobName, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcrv::JobName name = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Operation<Job, Job> response = jobsClient.DeleteJob(name);
+            Operation<gcrv::Job, gcrv::Job> response = jobsClient.DeleteJob(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = jobsClient.PollOnceDeleteJob(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = jobsClient.PollOnceDeleteJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -881,26 +884,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteJobAsync(JobName, CallSettings)
             // Additional: DeleteJobAsync(JobName, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcrv::JobName name = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Operation<Job, Job> response = await jobsClient.DeleteJobAsync(name);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.DeleteJobAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceDeleteJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceDeleteJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -910,31 +913,31 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: RunJob(RunJobRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            RunJobRequest request = new RunJobRequest
+            gcrv::RunJobRequest request = new gcrv::RunJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Execution, Execution> response = jobsClient.RunJob(request);
+            Operation<gcrv::Execution, gcrv::Execution> response = jobsClient.RunJob(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = jobsClient.PollOnceRunJob(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = jobsClient.PollOnceRunJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -945,31 +948,31 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: RunJobAsync(RunJobRequest, CallSettings)
             // Additional: RunJobAsync(RunJobRequest, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            RunJobRequest request = new RunJobRequest
+            gcrv::RunJobRequest request = new gcrv::RunJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Execution, Execution> response = await jobsClient.RunJobAsync(request);
+            Operation<gcrv::Execution, gcrv::Execution> response = await jobsClient.RunJobAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = await jobsClient.PollOnceRunJobAsync(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await jobsClient.PollOnceRunJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -979,26 +982,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: RunJob(string, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Operation<Execution, Execution> response = jobsClient.RunJob(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = jobsClient.RunJob(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = jobsClient.PollOnceRunJob(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = jobsClient.PollOnceRunJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1009,26 +1012,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: RunJobAsync(string, CallSettings)
             // Additional: RunJobAsync(string, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Operation<Execution, Execution> response = await jobsClient.RunJobAsync(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = await jobsClient.RunJobAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = await jobsClient.PollOnceRunJobAsync(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await jobsClient.PollOnceRunJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1038,26 +1041,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: RunJob(JobName, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcrv::JobName name = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Operation<Execution, Execution> response = jobsClient.RunJob(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = jobsClient.RunJob(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = jobsClient.PollOnceRunJob(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = jobsClient.PollOnceRunJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1068,26 +1071,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: RunJobAsync(JobName, CallSettings)
             // Additional: RunJobAsync(JobName, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcrv::JobName name = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Operation<Execution, Execution> response = await jobsClient.RunJobAsync(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = await jobsClient.RunJobAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = await jobsClient.PollOnceRunJobAsync(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await jobsClient.PollOnceRunJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1097,7 +1100,7 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -1115,7 +1118,7 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -1132,7 +1135,7 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -1151,7 +1154,7 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -1169,7 +1172,7 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
-            JobsClient jobsClient = JobsClient.Create();
+            gcrv::JobsClient jobsClient = gcrv::JobsClient.Create();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
@@ -1187,7 +1190,7 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {

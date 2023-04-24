@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Tasks_GetTask_async]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetTaskRequestObjectAsync()
         {
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gcrv::GetTaskRequest request = new gcrv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]"),
+                TaskName = gcrv::TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]"),
             };
             // Make the request
             gcrv::Task response = await tasksClient.GetTaskAsync(request);

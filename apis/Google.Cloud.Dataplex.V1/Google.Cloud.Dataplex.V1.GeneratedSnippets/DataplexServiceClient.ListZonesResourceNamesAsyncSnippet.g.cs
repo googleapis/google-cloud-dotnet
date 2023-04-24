@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_ListZones_async_flattened_resourceNames]
     using Google.Api.Gax;
@@ -38,25 +38,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task ListZonesResourceNamesAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName parent = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName parent = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            PagedAsyncEnumerable<ListZonesResponse, Zone> response = dataplexServiceClient.ListZonesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListZonesResponse, gcdv::Zone> response = dataplexServiceClient.ListZonesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Zone item) =>
+            await response.ForEachAsync((gcdv::Zone item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListZonesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListZonesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Zone item in page)
+                foreach (gcdv::Zone item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -65,10 +65,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Zone> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Zone> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Zone item in singlePage)
+            foreach (gcdv::Zone item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

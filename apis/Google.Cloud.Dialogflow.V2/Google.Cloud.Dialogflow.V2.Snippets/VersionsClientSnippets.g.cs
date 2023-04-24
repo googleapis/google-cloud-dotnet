@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Protobuf.WellKnownTypes;
@@ -33,14 +33,14 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: ListVersions(ListVersionsRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcdv::ListVersionsRequest request = new gcdv::ListVersionsRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersions(request);
+            PagedEnumerable<gcdv::ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Version item in response)
@@ -50,7 +50,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -81,14 +81,14 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: ListVersionsAsync(ListVersionsRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcdv::ListVersionsRequest request = new gcdv::ListVersionsRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Version item) =>
@@ -98,7 +98,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -129,11 +129,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: ListVersions(string, string, int?, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/agent";
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersions(parent);
+            PagedEnumerable<gcdv::ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Version item in response)
@@ -143,7 +143,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -174,11 +174,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: ListVersionsAsync(string, string, int?, CallSettings)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/agent";
             // Make the request
-            PagedAsyncEnumerable<ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Version item) =>
@@ -188,7 +188,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -219,11 +219,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: ListVersions(AgentName, string, int?, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            AgentName parent = AgentName.FromProject("[PROJECT]");
+            gcdv::AgentName parent = gcdv::AgentName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersions(parent);
+            PagedEnumerable<gcdv::ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Version item in response)
@@ -233,7 +233,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -264,11 +264,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: ListVersionsAsync(AgentName, string, int?, CallSettings)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            AgentName parent = AgentName.FromProject("[PROJECT]");
+            gcdv::AgentName parent = gcdv::AgentName.FromProject("[PROJECT]");
             // Make the request
-            PagedAsyncEnumerable<ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListVersionsResponse, gcdv::Version> response = versionsClient.ListVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Version item) =>
@@ -278,7 +278,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -309,11 +309,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: GetVersion(GetVersionRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            GetVersionRequest request = new GetVersionRequest
+            gcdv::GetVersionRequest request = new gcdv::GetVersionRequest
             {
-                VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
+                VersionName = gcdv::VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
             };
             // Make the request
             gcdv::Version response = versionsClient.GetVersion(request);
@@ -326,11 +326,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: GetVersionAsync(GetVersionRequest, CallSettings)
             // Additional: GetVersionAsync(GetVersionRequest, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            GetVersionRequest request = new GetVersionRequest
+            gcdv::GetVersionRequest request = new gcdv::GetVersionRequest
             {
-                VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
+                VersionName = gcdv::VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
             };
             // Make the request
             gcdv::Version response = await versionsClient.GetVersionAsync(request);
@@ -342,7 +342,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: GetVersion(string, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/agent/versions/[VERSION]";
             // Make the request
@@ -356,7 +356,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: GetVersionAsync(string, CallSettings)
             // Additional: GetVersionAsync(string, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/agent/versions/[VERSION]";
             // Make the request
@@ -369,9 +369,9 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: GetVersion(VersionName, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            VersionName name = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]");
+            gcdv::VersionName name = gcdv::VersionName.FromProjectVersion("[PROJECT]", "[VERSION]");
             // Make the request
             gcdv::Version response = versionsClient.GetVersion(name);
             // End snippet
@@ -383,9 +383,9 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: GetVersionAsync(VersionName, CallSettings)
             // Additional: GetVersionAsync(VersionName, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            VersionName name = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]");
+            gcdv::VersionName name = gcdv::VersionName.FromProjectVersion("[PROJECT]", "[VERSION]");
             // Make the request
             gcdv::Version response = await versionsClient.GetVersionAsync(name);
             // End snippet
@@ -396,11 +396,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: CreateVersion(CreateVersionRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            CreateVersionRequest request = new CreateVersionRequest
+            gcdv::CreateVersionRequest request = new gcdv::CreateVersionRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
                 Version = new gcdv::Version(),
             };
             // Make the request
@@ -414,11 +414,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: CreateVersionAsync(CreateVersionRequest, CallSettings)
             // Additional: CreateVersionAsync(CreateVersionRequest, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            CreateVersionRequest request = new CreateVersionRequest
+            gcdv::CreateVersionRequest request = new gcdv::CreateVersionRequest
             {
-                ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
+                ParentAsAgentName = gcdv::AgentName.FromProject("[PROJECT]"),
                 Version = new gcdv::Version(),
             };
             // Make the request
@@ -431,7 +431,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: CreateVersion(string, Version, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/agent";
             gcdv::Version version = new gcdv::Version();
@@ -446,7 +446,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: CreateVersionAsync(string, Version, CallSettings)
             // Additional: CreateVersionAsync(string, Version, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/agent";
             gcdv::Version version = new gcdv::Version();
@@ -460,9 +460,9 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: CreateVersion(AgentName, Version, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            AgentName parent = AgentName.FromProject("[PROJECT]");
+            gcdv::AgentName parent = gcdv::AgentName.FromProject("[PROJECT]");
             gcdv::Version version = new gcdv::Version();
             // Make the request
             gcdv::Version response = versionsClient.CreateVersion(parent, version);
@@ -475,9 +475,9 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: CreateVersionAsync(AgentName, Version, CallSettings)
             // Additional: CreateVersionAsync(AgentName, Version, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            AgentName parent = AgentName.FromProject("[PROJECT]");
+            gcdv::AgentName parent = gcdv::AgentName.FromProject("[PROJECT]");
             gcdv::Version version = new gcdv::Version();
             // Make the request
             gcdv::Version response = await versionsClient.CreateVersionAsync(parent, version);
@@ -489,9 +489,9 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: UpdateVersion(UpdateVersionRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            UpdateVersionRequest request = new UpdateVersionRequest
+            gcdv::UpdateVersionRequest request = new gcdv::UpdateVersionRequest
             {
                 Version = new gcdv::Version(),
                 UpdateMask = new FieldMask(),
@@ -507,9 +507,9 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: UpdateVersionAsync(UpdateVersionRequest, CallSettings)
             // Additional: UpdateVersionAsync(UpdateVersionRequest, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateVersionRequest request = new UpdateVersionRequest
+            gcdv::UpdateVersionRequest request = new gcdv::UpdateVersionRequest
             {
                 Version = new gcdv::Version(),
                 UpdateMask = new FieldMask(),
@@ -524,7 +524,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: UpdateVersion(Version, FieldMask, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
             gcdv::Version version = new gcdv::Version();
             FieldMask updateMask = new FieldMask();
@@ -539,7 +539,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: UpdateVersionAsync(Version, FieldMask, CallSettings)
             // Additional: UpdateVersionAsync(Version, FieldMask, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
             gcdv::Version version = new gcdv::Version();
             FieldMask updateMask = new FieldMask();
@@ -553,11 +553,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: DeleteVersion(DeleteVersionRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            DeleteVersionRequest request = new DeleteVersionRequest
+            gcdv::DeleteVersionRequest request = new gcdv::DeleteVersionRequest
             {
-                VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
+                VersionName = gcdv::VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
             };
             // Make the request
             versionsClient.DeleteVersion(request);
@@ -570,11 +570,11 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: DeleteVersionAsync(DeleteVersionRequest, CallSettings)
             // Additional: DeleteVersionAsync(DeleteVersionRequest, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteVersionRequest request = new DeleteVersionRequest
+            gcdv::DeleteVersionRequest request = new gcdv::DeleteVersionRequest
             {
-                VersionName = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
+                VersionName = gcdv::VersionName.FromProjectVersion("[PROJECT]", "[VERSION]"),
             };
             // Make the request
             await versionsClient.DeleteVersionAsync(request);
@@ -586,7 +586,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: DeleteVersion(string, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/agent/versions/[VERSION]";
             // Make the request
@@ -600,7 +600,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: DeleteVersionAsync(string, CallSettings)
             // Additional: DeleteVersionAsync(string, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/agent/versions/[VERSION]";
             // Make the request
@@ -613,9 +613,9 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
         {
             // Snippet: DeleteVersion(VersionName, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdv::VersionsClient versionsClient = gcdv::VersionsClient.Create();
             // Initialize request argument(s)
-            VersionName name = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]");
+            gcdv::VersionName name = gcdv::VersionName.FromProjectVersion("[PROJECT]", "[VERSION]");
             // Make the request
             versionsClient.DeleteVersion(name);
             // End snippet
@@ -627,9 +627,9 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Snippet: DeleteVersionAsync(VersionName, CallSettings)
             // Additional: DeleteVersionAsync(VersionName, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdv::VersionsClient versionsClient = await gcdv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            VersionName name = VersionName.FromProjectVersion("[PROJECT]", "[VERSION]");
+            gcdv::VersionName name = gcdv::VersionName.FromProjectVersion("[PROJECT]", "[VERSION]");
             // Make the request
             await versionsClient.DeleteVersionAsync(name);
             // End snippet

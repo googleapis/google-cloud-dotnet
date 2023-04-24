@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Location.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloud_generated_Locations_ListLocations_sync]
     using Google.Api.Gax;

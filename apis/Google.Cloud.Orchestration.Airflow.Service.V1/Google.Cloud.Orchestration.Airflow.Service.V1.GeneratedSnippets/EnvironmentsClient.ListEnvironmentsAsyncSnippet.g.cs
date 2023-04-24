@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START composer_v1_generated_Environments_ListEnvironments_async_flattened]
     using Google.Api.Gax;
@@ -38,11 +38,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
         public async Task ListEnvironmentsAsync()
         {
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
+            PagedAsyncEnumerable<gcoasv::ListEnvironmentsResponse, gcoasv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcoasv::Environment item) =>
@@ -52,7 +52,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcoasv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.LifeSciences.V2Beta.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.LifeSciences.V2Beta;
     using Google.LongRunning;
     using System.Threading.Tasks;
 

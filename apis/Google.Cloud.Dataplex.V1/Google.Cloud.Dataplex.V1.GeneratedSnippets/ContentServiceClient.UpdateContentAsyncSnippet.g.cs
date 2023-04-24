@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_ContentService_UpdateContent_async_flattened]
     using Google.Protobuf.WellKnownTypes;
@@ -36,12 +36,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task UpdateContentAsync()
         {
             // Create client
-            ContentServiceClient contentServiceClient = await ContentServiceClient.CreateAsync();
+            gcdv::ContentServiceClient contentServiceClient = await gcdv::ContentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            Content content = new Content();
+            gcdv::Content content = new gcdv::Content();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Content response = await contentServiceClient.UpdateContentAsync(content, updateMask);
+            gcdv::Content response = await contentServiceClient.UpdateContentAsync(content, updateMask);
         }
     }
     // [END dataplex_v1_generated_ContentService_UpdateContent_async_flattened]

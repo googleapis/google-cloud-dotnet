@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetGoogleSignalsSettings_async_flattened_resourceNames]
     using Google.Analytics.Admin.V1Alpha;

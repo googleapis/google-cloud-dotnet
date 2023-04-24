@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_GetIamPolicy_async_flattened]
     using Google.Cloud.Iam.V1;
@@ -36,7 +36,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         public async Task GetIamPolicyAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             // Make the request

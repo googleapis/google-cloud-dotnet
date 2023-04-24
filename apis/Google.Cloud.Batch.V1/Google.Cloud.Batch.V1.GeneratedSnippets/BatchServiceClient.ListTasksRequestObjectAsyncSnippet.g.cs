@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Batch.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START batch_v1_generated_BatchService_ListTasks_async]
     using Google.Api.Gax;
@@ -38,15 +38,15 @@ namespace Google.Cloud.Batch.V1.Snippets
         public async Task ListTasksRequestObjectAsync()
         {
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gcbv::ListTasksRequest request = new gcbv::ListTasksRequest
             {
-                ParentAsTaskGroupName = TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
+                ParentAsTaskGroupName = gcbv::TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(request);
+            PagedAsyncEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcbv::Task item) =>
@@ -56,7 +56,7 @@ namespace Google.Cloud.Batch.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcbv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

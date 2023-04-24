@@ -14,13 +14,16 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Run.V2.Snippets
+#pragma warning disable CS8981
+
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.LongRunning;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcrv = Google.Cloud.Run.V2;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedRevisionsClientSnippets
@@ -30,14 +33,14 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetRevision(GetRevisionRequest, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
-            GetRevisionRequest request = new GetRevisionRequest
+            gcrv::GetRevisionRequest request = new gcrv::GetRevisionRequest
             {
-                RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
+                RevisionName = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
             };
             // Make the request
-            Revision response = revisionsClient.GetRevision(request);
+            gcrv::Revision response = revisionsClient.GetRevision(request);
             // End snippet
         }
 
@@ -47,14 +50,14 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetRevisionAsync(GetRevisionRequest, CallSettings)
             // Additional: GetRevisionAsync(GetRevisionRequest, CancellationToken)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            GetRevisionRequest request = new GetRevisionRequest
+            gcrv::GetRevisionRequest request = new gcrv::GetRevisionRequest
             {
-                RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
+                RevisionName = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
             };
             // Make the request
-            Revision response = await revisionsClient.GetRevisionAsync(request);
+            gcrv::Revision response = await revisionsClient.GetRevisionAsync(request);
             // End snippet
         }
 
@@ -63,11 +66,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetRevision(string, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/revisions/[REVISION]";
             // Make the request
-            Revision response = revisionsClient.GetRevision(name);
+            gcrv::Revision response = revisionsClient.GetRevision(name);
             // End snippet
         }
 
@@ -77,11 +80,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetRevisionAsync(string, CallSettings)
             // Additional: GetRevisionAsync(string, CancellationToken)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/revisions/[REVISION]";
             // Make the request
-            Revision response = await revisionsClient.GetRevisionAsync(name);
+            gcrv::Revision response = await revisionsClient.GetRevisionAsync(name);
             // End snippet
         }
 
@@ -90,11 +93,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetRevision(RevisionName, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
-            RevisionName name = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
+            gcrv::RevisionName name = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
             // Make the request
-            Revision response = revisionsClient.GetRevision(name);
+            gcrv::Revision response = revisionsClient.GetRevision(name);
             // End snippet
         }
 
@@ -104,11 +107,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetRevisionAsync(RevisionName, CallSettings)
             // Additional: GetRevisionAsync(RevisionName, CancellationToken)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            RevisionName name = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
+            gcrv::RevisionName name = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
             // Make the request
-            Revision response = await revisionsClient.GetRevisionAsync(name);
+            gcrv::Revision response = await revisionsClient.GetRevisionAsync(name);
             // End snippet
         }
 
@@ -117,29 +120,29 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListRevisions(ListRevisionsRequest, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
-            ListRevisionsRequest request = new ListRevisionsRequest
+            gcrv::ListRevisionsRequest request = new gcrv::ListRevisionsRequest
             {
-                ParentAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ParentAsServiceName = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedEnumerable<ListRevisionsResponse, Revision> response = revisionsClient.ListRevisions(request);
+            PagedEnumerable<gcrv::ListRevisionsResponse, gcrv::Revision> response = revisionsClient.ListRevisions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Revision item in response)
+            foreach (gcrv::Revision item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRevisionsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Revision item in page)
+                foreach (gcrv::Revision item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -148,10 +151,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Revision> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Revision> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Revision item in singlePage)
+            foreach (gcrv::Revision item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -166,29 +169,29 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListRevisionsAsync(ListRevisionsRequest, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            ListRevisionsRequest request = new ListRevisionsRequest
+            gcrv::ListRevisionsRequest request = new gcrv::ListRevisionsRequest
             {
-                ParentAsServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ParentAsServiceName = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedAsyncEnumerable<ListRevisionsResponse, Revision> response = revisionsClient.ListRevisionsAsync(request);
+            PagedAsyncEnumerable<gcrv::ListRevisionsResponse, gcrv::Revision> response = revisionsClient.ListRevisionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Revision item) =>
+            await response.ForEachAsync((gcrv::Revision item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRevisionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListRevisionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Revision item in page)
+                foreach (gcrv::Revision item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -197,10 +200,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Revision> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Revision> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Revision item in singlePage)
+            foreach (gcrv::Revision item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -215,25 +218,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListRevisions(string, string, int?, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
             // Make the request
-            PagedEnumerable<ListRevisionsResponse, Revision> response = revisionsClient.ListRevisions(parent);
+            PagedEnumerable<gcrv::ListRevisionsResponse, gcrv::Revision> response = revisionsClient.ListRevisions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Revision item in response)
+            foreach (gcrv::Revision item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRevisionsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Revision item in page)
+                foreach (gcrv::Revision item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -242,10 +245,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Revision> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Revision> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Revision item in singlePage)
+            foreach (gcrv::Revision item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -260,25 +263,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListRevisionsAsync(string, string, int?, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
             // Make the request
-            PagedAsyncEnumerable<ListRevisionsResponse, Revision> response = revisionsClient.ListRevisionsAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListRevisionsResponse, gcrv::Revision> response = revisionsClient.ListRevisionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Revision item) =>
+            await response.ForEachAsync((gcrv::Revision item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRevisionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListRevisionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Revision item in page)
+                foreach (gcrv::Revision item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -287,10 +290,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Revision> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Revision> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Revision item in singlePage)
+            foreach (gcrv::Revision item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -305,25 +308,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListRevisions(ServiceName, string, int?, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
-            ServiceName parent = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            gcrv::ServiceName parent = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
             // Make the request
-            PagedEnumerable<ListRevisionsResponse, Revision> response = revisionsClient.ListRevisions(parent);
+            PagedEnumerable<gcrv::ListRevisionsResponse, gcrv::Revision> response = revisionsClient.ListRevisions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Revision item in response)
+            foreach (gcrv::Revision item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRevisionsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListRevisionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Revision item in page)
+                foreach (gcrv::Revision item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -332,10 +335,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Revision> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Revision> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Revision item in singlePage)
+            foreach (gcrv::Revision item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -350,25 +353,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListRevisionsAsync(ServiceName, string, int?, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            ServiceName parent = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            gcrv::ServiceName parent = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
             // Make the request
-            PagedAsyncEnumerable<ListRevisionsResponse, Revision> response = revisionsClient.ListRevisionsAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListRevisionsResponse, gcrv::Revision> response = revisionsClient.ListRevisionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Revision item) =>
+            await response.ForEachAsync((gcrv::Revision item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRevisionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListRevisionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Revision item in page)
+                foreach (gcrv::Revision item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -377,10 +380,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Revision> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Revision> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Revision item in singlePage)
+            foreach (gcrv::Revision item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -395,31 +398,31 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteRevision(DeleteRevisionRequest, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
-            DeleteRevisionRequest request = new DeleteRevisionRequest
+            gcrv::DeleteRevisionRequest request = new gcrv::DeleteRevisionRequest
             {
-                RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
+                RevisionName = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Revision, Revision> response = revisionsClient.DeleteRevision(request);
+            Operation<gcrv::Revision, gcrv::Revision> response = revisionsClient.DeleteRevision(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Revision, Revision> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Revision, gcrv::Revision> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Revision result = completedResponse.Result;
+            gcrv::Revision result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Revision, Revision> retrievedResponse = revisionsClient.PollOnceDeleteRevision(operationName);
+            Operation<gcrv::Revision, gcrv::Revision> retrievedResponse = revisionsClient.PollOnceDeleteRevision(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Revision retrievedResult = retrievedResponse.Result;
+                gcrv::Revision retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -430,31 +433,31 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteRevisionAsync(DeleteRevisionRequest, CallSettings)
             // Additional: DeleteRevisionAsync(DeleteRevisionRequest, CancellationToken)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteRevisionRequest request = new DeleteRevisionRequest
+            gcrv::DeleteRevisionRequest request = new gcrv::DeleteRevisionRequest
             {
-                RevisionName = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
+                RevisionName = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Revision, Revision> response = await revisionsClient.DeleteRevisionAsync(request);
+            Operation<gcrv::Revision, gcrv::Revision> response = await revisionsClient.DeleteRevisionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Revision, Revision> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Revision, gcrv::Revision> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Revision result = completedResponse.Result;
+            gcrv::Revision result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Revision, Revision> retrievedResponse = await revisionsClient.PollOnceDeleteRevisionAsync(operationName);
+            Operation<gcrv::Revision, gcrv::Revision> retrievedResponse = await revisionsClient.PollOnceDeleteRevisionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Revision retrievedResult = retrievedResponse.Result;
+                gcrv::Revision retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -464,26 +467,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteRevision(string, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/revisions/[REVISION]";
             // Make the request
-            Operation<Revision, Revision> response = revisionsClient.DeleteRevision(name);
+            Operation<gcrv::Revision, gcrv::Revision> response = revisionsClient.DeleteRevision(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Revision, Revision> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Revision, gcrv::Revision> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Revision result = completedResponse.Result;
+            gcrv::Revision result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Revision, Revision> retrievedResponse = revisionsClient.PollOnceDeleteRevision(operationName);
+            Operation<gcrv::Revision, gcrv::Revision> retrievedResponse = revisionsClient.PollOnceDeleteRevision(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Revision retrievedResult = retrievedResponse.Result;
+                gcrv::Revision retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -494,26 +497,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteRevisionAsync(string, CallSettings)
             // Additional: DeleteRevisionAsync(string, CancellationToken)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/revisions/[REVISION]";
             // Make the request
-            Operation<Revision, Revision> response = await revisionsClient.DeleteRevisionAsync(name);
+            Operation<gcrv::Revision, gcrv::Revision> response = await revisionsClient.DeleteRevisionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Revision, Revision> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Revision, gcrv::Revision> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Revision result = completedResponse.Result;
+            gcrv::Revision result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Revision, Revision> retrievedResponse = await revisionsClient.PollOnceDeleteRevisionAsync(operationName);
+            Operation<gcrv::Revision, gcrv::Revision> retrievedResponse = await revisionsClient.PollOnceDeleteRevisionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Revision retrievedResult = retrievedResponse.Result;
+                gcrv::Revision retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -523,26 +526,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteRevision(RevisionName, CallSettings)
             // Create client
-            RevisionsClient revisionsClient = RevisionsClient.Create();
+            gcrv::RevisionsClient revisionsClient = gcrv::RevisionsClient.Create();
             // Initialize request argument(s)
-            RevisionName name = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
+            gcrv::RevisionName name = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
             // Make the request
-            Operation<Revision, Revision> response = revisionsClient.DeleteRevision(name);
+            Operation<gcrv::Revision, gcrv::Revision> response = revisionsClient.DeleteRevision(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Revision, Revision> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Revision, gcrv::Revision> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Revision result = completedResponse.Result;
+            gcrv::Revision result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Revision, Revision> retrievedResponse = revisionsClient.PollOnceDeleteRevision(operationName);
+            Operation<gcrv::Revision, gcrv::Revision> retrievedResponse = revisionsClient.PollOnceDeleteRevision(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Revision retrievedResult = retrievedResponse.Result;
+                gcrv::Revision retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -553,26 +556,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteRevisionAsync(RevisionName, CallSettings)
             // Additional: DeleteRevisionAsync(RevisionName, CancellationToken)
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            RevisionName name = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
+            gcrv::RevisionName name = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
             // Make the request
-            Operation<Revision, Revision> response = await revisionsClient.DeleteRevisionAsync(name);
+            Operation<gcrv::Revision, gcrv::Revision> response = await revisionsClient.DeleteRevisionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Revision, Revision> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Revision, gcrv::Revision> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Revision result = completedResponse.Result;
+            gcrv::Revision result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Revision, Revision> retrievedResponse = await revisionsClient.PollOnceDeleteRevisionAsync(operationName);
+            Operation<gcrv::Revision, gcrv::Revision> retrievedResponse = await revisionsClient.PollOnceDeleteRevisionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Revision retrievedResult = retrievedResponse.Result;
+                gcrv::Revision retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

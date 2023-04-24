@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Revisions_ListRevisions_async_flattened_resourceNames]
     using Google.Api.Gax;
@@ -38,25 +38,25 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task ListRevisionsResourceNamesAsync()
         {
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            ServiceName parent = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            gcrv::ServiceName parent = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
             // Make the request
-            PagedAsyncEnumerable<ListRevisionsResponse, Revision> response = revisionsClient.ListRevisionsAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListRevisionsResponse, gcrv::Revision> response = revisionsClient.ListRevisionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Revision item) =>
+            await response.ForEachAsync((gcrv::Revision item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRevisionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListRevisionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Revision item in page)
+                foreach (gcrv::Revision item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -65,10 +65,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Revision> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Revision> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Revision item in singlePage)
+            foreach (gcrv::Revision item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

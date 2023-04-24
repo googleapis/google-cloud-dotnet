@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.LongRunning.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START longrunning_generated_Operations_ListOperations_sync]
     using Google.Api.Gax;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -35,25 +35,25 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: CreateIndex(CreateIndexRequest, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            CreateIndexRequest request = new CreateIndexRequest
+            gcav::CreateIndexRequest request = new gcav::CreateIndexRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Index = new gcav::Index(),
             };
             // Make the request
-            Operation<gcav::Index, CreateIndexOperationMetadata> response = indexServiceClient.CreateIndex(request);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> response = indexServiceClient.CreateIndex(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, CreateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, CreateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceCreateIndex(operationName);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceCreateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -69,25 +69,25 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: CreateIndexAsync(CreateIndexRequest, CallSettings)
             // Additional: CreateIndexAsync(CreateIndexRequest, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateIndexRequest request = new CreateIndexRequest
+            gcav::CreateIndexRequest request = new gcav::CreateIndexRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Index = new gcav::Index(),
             };
             // Make the request
-            Operation<gcav::Index, CreateIndexOperationMetadata> response = await indexServiceClient.CreateIndexAsync(request);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> response = await indexServiceClient.CreateIndexAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, CreateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, CreateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceCreateIndexAsync(operationName);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceCreateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -102,22 +102,22 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: CreateIndex(string, Index, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             gcav::Index index = new gcav::Index();
             // Make the request
-            Operation<gcav::Index, CreateIndexOperationMetadata> response = indexServiceClient.CreateIndex(parent, index);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> response = indexServiceClient.CreateIndex(parent, index);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, CreateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, CreateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceCreateIndex(operationName);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceCreateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -133,22 +133,22 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: CreateIndexAsync(string, Index, CallSettings)
             // Additional: CreateIndexAsync(string, Index, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             gcav::Index index = new gcav::Index();
             // Make the request
-            Operation<gcav::Index, CreateIndexOperationMetadata> response = await indexServiceClient.CreateIndexAsync(parent, index);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> response = await indexServiceClient.CreateIndexAsync(parent, index);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, CreateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, CreateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceCreateIndexAsync(operationName);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceCreateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -163,22 +163,22 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: CreateIndex(LocationName, Index, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             gcav::Index index = new gcav::Index();
             // Make the request
-            Operation<gcav::Index, CreateIndexOperationMetadata> response = indexServiceClient.CreateIndex(parent, index);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> response = indexServiceClient.CreateIndex(parent, index);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, CreateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, CreateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceCreateIndex(operationName);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceCreateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -194,22 +194,22 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: CreateIndexAsync(LocationName, Index, CallSettings)
             // Additional: CreateIndexAsync(LocationName, Index, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             gcav::Index index = new gcav::Index();
             // Make the request
-            Operation<gcav::Index, CreateIndexOperationMetadata> response = await indexServiceClient.CreateIndexAsync(parent, index);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> response = await indexServiceClient.CreateIndexAsync(parent, index);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, CreateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, CreateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceCreateIndexAsync(operationName);
+            Operation<gcav::Index, gcav::CreateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceCreateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -224,11 +224,11 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: GetIndex(GetIndexRequest, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            GetIndexRequest request = new GetIndexRequest
+            gcav::GetIndexRequest request = new gcav::GetIndexRequest
             {
-                IndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
             };
             // Make the request
             gcav::Index response = indexServiceClient.GetIndex(request);
@@ -241,11 +241,11 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: GetIndexAsync(GetIndexRequest, CallSettings)
             // Additional: GetIndexAsync(GetIndexRequest, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetIndexRequest request = new GetIndexRequest
+            gcav::GetIndexRequest request = new gcav::GetIndexRequest
             {
-                IndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
             };
             // Make the request
             gcav::Index response = await indexServiceClient.GetIndexAsync(request);
@@ -257,7 +257,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: GetIndex(string, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/indexes/[INDEX]";
             // Make the request
@@ -271,7 +271,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: GetIndexAsync(string, CallSettings)
             // Additional: GetIndexAsync(string, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/indexes/[INDEX]";
             // Make the request
@@ -284,9 +284,9 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: GetIndex(IndexName, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            IndexName name = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]");
+            gcav::IndexName name = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]");
             // Make the request
             gcav::Index response = indexServiceClient.GetIndex(name);
             // End snippet
@@ -298,9 +298,9 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: GetIndexAsync(IndexName, CallSettings)
             // Additional: GetIndexAsync(IndexName, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            IndexName name = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]");
+            gcav::IndexName name = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]");
             // Make the request
             gcav::Index response = await indexServiceClient.GetIndexAsync(name);
             // End snippet
@@ -311,16 +311,16 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: ListIndexes(ListIndexesRequest, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            ListIndexesRequest request = new ListIndexesRequest
+            gcav::ListIndexesRequest request = new gcav::ListIndexesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 ReadMask = new FieldMask(),
             };
             // Make the request
-            PagedEnumerable<ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexes(request);
+            PagedEnumerable<gcav::ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexes(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Index item in response)
@@ -330,7 +330,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListIndexesResponse page in response.AsRawResponses())
+            foreach (gcav::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -361,16 +361,16 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: ListIndexesAsync(ListIndexesRequest, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListIndexesRequest request = new ListIndexesRequest
+            gcav::ListIndexesRequest request = new gcav::ListIndexesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 ReadMask = new FieldMask(),
             };
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexesAsync(request);
+            PagedAsyncEnumerable<gcav::ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Index item) =>
@@ -380,7 +380,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIndexesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListIndexesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -411,11 +411,11 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: ListIndexes(string, string, int?, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexes(parent);
+            PagedEnumerable<gcav::ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Index item in response)
@@ -425,7 +425,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListIndexesResponse page in response.AsRawResponses())
+            foreach (gcav::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -456,11 +456,11 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: ListIndexesAsync(string, string, int?, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Index item) =>
@@ -470,7 +470,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIndexesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListIndexesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -501,11 +501,11 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: ListIndexes(LocationName, string, int?, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexes(parent);
+            PagedEnumerable<gcav::ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Index item in response)
@@ -515,7 +515,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListIndexesResponse page in response.AsRawResponses())
+            foreach (gcav::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -546,11 +546,11 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: ListIndexesAsync(LocationName, string, int?, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Index item) =>
@@ -560,7 +560,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIndexesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListIndexesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -591,25 +591,25 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: UpdateIndex(UpdateIndexRequest, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            UpdateIndexRequest request = new UpdateIndexRequest
+            gcav::UpdateIndexRequest request = new gcav::UpdateIndexRequest
             {
                 Index = new gcav::Index(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<gcav::Index, UpdateIndexOperationMetadata> response = indexServiceClient.UpdateIndex(request);
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> response = indexServiceClient.UpdateIndex(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, UpdateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, UpdateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceUpdateIndex(operationName);
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceUpdateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -625,25 +625,25 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: UpdateIndexAsync(UpdateIndexRequest, CallSettings)
             // Additional: UpdateIndexAsync(UpdateIndexRequest, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateIndexRequest request = new UpdateIndexRequest
+            gcav::UpdateIndexRequest request = new gcav::UpdateIndexRequest
             {
                 Index = new gcav::Index(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<gcav::Index, UpdateIndexOperationMetadata> response = await indexServiceClient.UpdateIndexAsync(request);
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> response = await indexServiceClient.UpdateIndexAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, UpdateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, UpdateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceUpdateIndexAsync(operationName);
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceUpdateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -658,22 +658,22 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: UpdateIndex(Index, FieldMask, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
             gcav::Index index = new gcav::Index();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcav::Index, UpdateIndexOperationMetadata> response = indexServiceClient.UpdateIndex(index, updateMask);
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> response = indexServiceClient.UpdateIndex(index, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, UpdateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, UpdateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceUpdateIndex(operationName);
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceUpdateIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -689,22 +689,22 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: UpdateIndexAsync(Index, FieldMask, CallSettings)
             // Additional: UpdateIndexAsync(Index, FieldMask, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
             gcav::Index index = new gcav::Index();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<gcav::Index, UpdateIndexOperationMetadata> response = await indexServiceClient.UpdateIndexAsync(index, updateMask);
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> response = await indexServiceClient.UpdateIndexAsync(index, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Index, UpdateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcav::Index result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Index, UpdateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceUpdateIndexAsync(operationName);
+            Operation<gcav::Index, gcav::UpdateIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceUpdateIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -719,24 +719,24 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: DeleteIndex(DeleteIndexRequest, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            DeleteIndexRequest request = new DeleteIndexRequest
+            gcav::DeleteIndexRequest request = new gcav::DeleteIndexRequest
             {
-                IndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
             };
             // Make the request
-            Operation<Empty, DeleteOperationMetadata> response = indexServiceClient.DeleteIndex(request);
+            Operation<Empty, gcav::DeleteOperationMetadata> response = indexServiceClient.DeleteIndex(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteOperationMetadata> retrievedResponse = indexServiceClient.PollOnceDeleteIndex(operationName);
+            Operation<Empty, gcav::DeleteOperationMetadata> retrievedResponse = indexServiceClient.PollOnceDeleteIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -752,24 +752,24 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: DeleteIndexAsync(DeleteIndexRequest, CallSettings)
             // Additional: DeleteIndexAsync(DeleteIndexRequest, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteIndexRequest request = new DeleteIndexRequest
+            gcav::DeleteIndexRequest request = new gcav::DeleteIndexRequest
             {
-                IndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
             };
             // Make the request
-            Operation<Empty, DeleteOperationMetadata> response = await indexServiceClient.DeleteIndexAsync(request);
+            Operation<Empty, gcav::DeleteOperationMetadata> response = await indexServiceClient.DeleteIndexAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceDeleteIndexAsync(operationName);
+            Operation<Empty, gcav::DeleteOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceDeleteIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -784,21 +784,21 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: DeleteIndex(string, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/indexes/[INDEX]";
             // Make the request
-            Operation<Empty, DeleteOperationMetadata> response = indexServiceClient.DeleteIndex(name);
+            Operation<Empty, gcav::DeleteOperationMetadata> response = indexServiceClient.DeleteIndex(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteOperationMetadata> retrievedResponse = indexServiceClient.PollOnceDeleteIndex(operationName);
+            Operation<Empty, gcav::DeleteOperationMetadata> retrievedResponse = indexServiceClient.PollOnceDeleteIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -814,21 +814,21 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: DeleteIndexAsync(string, CallSettings)
             // Additional: DeleteIndexAsync(string, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/indexes/[INDEX]";
             // Make the request
-            Operation<Empty, DeleteOperationMetadata> response = await indexServiceClient.DeleteIndexAsync(name);
+            Operation<Empty, gcav::DeleteOperationMetadata> response = await indexServiceClient.DeleteIndexAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceDeleteIndexAsync(operationName);
+            Operation<Empty, gcav::DeleteOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceDeleteIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -843,21 +843,21 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: DeleteIndex(IndexName, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            IndexName name = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]");
+            gcav::IndexName name = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]");
             // Make the request
-            Operation<Empty, DeleteOperationMetadata> response = indexServiceClient.DeleteIndex(name);
+            Operation<Empty, gcav::DeleteOperationMetadata> response = indexServiceClient.DeleteIndex(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteOperationMetadata> retrievedResponse = indexServiceClient.PollOnceDeleteIndex(operationName);
+            Operation<Empty, gcav::DeleteOperationMetadata> retrievedResponse = indexServiceClient.PollOnceDeleteIndex(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -873,21 +873,21 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: DeleteIndexAsync(IndexName, CallSettings)
             // Additional: DeleteIndexAsync(IndexName, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            IndexName name = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]");
+            gcav::IndexName name = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]");
             // Make the request
-            Operation<Empty, DeleteOperationMetadata> response = await indexServiceClient.DeleteIndexAsync(name);
+            Operation<Empty, gcav::DeleteOperationMetadata> response = await indexServiceClient.DeleteIndexAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceDeleteIndexAsync(operationName);
+            Operation<Empty, gcav::DeleteOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceDeleteIndexAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -902,18 +902,18 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: UpsertDatapoints(UpsertDatapointsRequest, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            UpsertDatapointsRequest request = new UpsertDatapointsRequest
+            gcav::UpsertDatapointsRequest request = new gcav::UpsertDatapointsRequest
             {
-                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IndexAsIndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
                 Datapoints =
                 {
-                    new IndexDatapoint(),
+                    new gcav::IndexDatapoint(),
                 },
             };
             // Make the request
-            UpsertDatapointsResponse response = indexServiceClient.UpsertDatapoints(request);
+            gcav::UpsertDatapointsResponse response = indexServiceClient.UpsertDatapoints(request);
             // End snippet
         }
 
@@ -923,18 +923,18 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: UpsertDatapointsAsync(UpsertDatapointsRequest, CallSettings)
             // Additional: UpsertDatapointsAsync(UpsertDatapointsRequest, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpsertDatapointsRequest request = new UpsertDatapointsRequest
+            gcav::UpsertDatapointsRequest request = new gcav::UpsertDatapointsRequest
             {
-                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IndexAsIndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
                 Datapoints =
                 {
-                    new IndexDatapoint(),
+                    new gcav::IndexDatapoint(),
                 },
             };
             // Make the request
-            UpsertDatapointsResponse response = await indexServiceClient.UpsertDatapointsAsync(request);
+            gcav::UpsertDatapointsResponse response = await indexServiceClient.UpsertDatapointsAsync(request);
             // End snippet
         }
 
@@ -943,15 +943,15 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         {
             // Snippet: RemoveDatapoints(RemoveDatapointsRequest, CallSettings)
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
-            RemoveDatapointsRequest request = new RemoveDatapointsRequest
+            gcav::RemoveDatapointsRequest request = new gcav::RemoveDatapointsRequest
             {
-                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IndexAsIndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
                 DatapointIds = { "", },
             };
             // Make the request
-            RemoveDatapointsResponse response = indexServiceClient.RemoveDatapoints(request);
+            gcav::RemoveDatapointsResponse response = indexServiceClient.RemoveDatapoints(request);
             // End snippet
         }
 
@@ -961,15 +961,15 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Snippet: RemoveDatapointsAsync(RemoveDatapointsRequest, CallSettings)
             // Additional: RemoveDatapointsAsync(RemoveDatapointsRequest, CancellationToken)
             // Create client
-            IndexServiceClient indexServiceClient = await IndexServiceClient.CreateAsync();
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RemoveDatapointsRequest request = new RemoveDatapointsRequest
+            gcav::RemoveDatapointsRequest request = new gcav::RemoveDatapointsRequest
             {
-                IndexAsIndexName = IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IndexAsIndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
                 DatapointIds = { "", },
             };
             // Make the request
-            RemoveDatapointsResponse response = await indexServiceClient.RemoveDatapointsAsync(request);
+            gcav::RemoveDatapointsResponse response = await indexServiceClient.RemoveDatapointsAsync(request);
             // End snippet
         }
     }

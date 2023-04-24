@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ConfidentialComputing.V1Alpha1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.ConfidentialComputing.V1Alpha1;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>

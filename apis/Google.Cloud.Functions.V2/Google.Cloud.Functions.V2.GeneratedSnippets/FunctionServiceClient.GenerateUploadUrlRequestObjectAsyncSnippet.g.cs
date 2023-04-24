@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Functions.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudfunctions_v2_generated_FunctionService_GenerateUploadUrl_async]
     using Google.Api.Gax.ResourceNames;

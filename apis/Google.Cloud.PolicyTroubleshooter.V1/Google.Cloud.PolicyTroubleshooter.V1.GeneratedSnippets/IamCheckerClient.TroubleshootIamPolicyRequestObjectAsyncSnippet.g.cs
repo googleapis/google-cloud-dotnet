@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PolicyTroubleshooter.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START policytroubleshooter_v1_generated_IamChecker_TroubleshootIamPolicy_async]
     using Google.Cloud.PolicyTroubleshooter.V1;

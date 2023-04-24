@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
+    using Google.Cloud.AIPlatform.V1;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ResourceSettings.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START resourcesettings_v1_generated_ResourceSettingsService_ListSettings_async_flattened_resourceNames]
     using Google.Api.Gax;

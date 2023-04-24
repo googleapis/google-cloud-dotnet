@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Dialogflow.V2Beta1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;

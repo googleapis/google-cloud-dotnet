@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Translate.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START translate_v3_generated_TranslationService_DetectLanguage_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

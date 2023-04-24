@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.NetworkManagement.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync]
     using Google.Cloud.NetworkManagement.V1;

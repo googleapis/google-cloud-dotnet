@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Talent.V4;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_ListEntities_async]
     using Google.Api.Gax;
@@ -38,30 +38,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task ListEntitiesRequestObjectAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListEntitiesRequest request = new ListEntitiesRequest
+            gcdv::ListEntitiesRequest request = new gcdv::ListEntitiesRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
-                View = ListEntitiesRequest.Types.EntityView.Unspecified,
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                View = gcdv::ListEntitiesRequest.Types.EntityView.Unspecified,
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListEntitiesResponse, Entity> response = metadataServiceClient.ListEntitiesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListEntitiesResponse, gcdv::Entity> response = metadataServiceClient.ListEntitiesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Entity item) =>
+            await response.ForEachAsync((gcdv::Entity item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEntitiesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEntitiesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Entity item in page)
+                foreach (gcdv::Entity item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -70,10 +70,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Entity> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Entity> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Entity item in singlePage)
+            foreach (gcdv::Entity item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

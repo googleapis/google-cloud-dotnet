@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataform.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataform_v1beta1_generated_Dataform_ListRepositories_sync_flattened]
     using Google.Api.Gax;

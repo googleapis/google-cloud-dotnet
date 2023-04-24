@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Video.Stitcher.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_GetVodAdTagDetail_async_flattened_resourceNames]
     using Google.Cloud.Video.Stitcher.V1;

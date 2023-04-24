@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START documentai_v1beta3_generated_DocumentProcessorService_DeployProcessorVersion_sync]
     using Google.Cloud.DocumentAI.V1Beta3;

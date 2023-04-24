@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Notebooks.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START notebooks_v1beta1_generated_NotebookService_UpgradeInstanceInternal_sync]
     using Google.Cloud.Notebooks.V1Beta1;

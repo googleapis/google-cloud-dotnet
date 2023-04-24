@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.AppEngine.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START appengine_v1_generated_Versions_ListVersions_sync]
     using Google.Api.Gax;
@@ -36,15 +36,15 @@ namespace Google.Cloud.AppEngine.V1.Snippets
         public void ListVersionsRequestObject()
         {
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcav::VersionsClient versionsClient = gcav::VersionsClient.Create();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcav::ListVersionsRequest request = new gcav::ListVersionsRequest
             {
                 Parent = "",
-                View = VersionView.Basic,
+                View = gcav::VersionView.Basic,
             };
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcav::Version> response = versionsClient.ListVersions(request);
+            PagedEnumerable<gcav::ListVersionsResponse, gcav::Version> response = versionsClient.ListVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Version item in response)
@@ -54,7 +54,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

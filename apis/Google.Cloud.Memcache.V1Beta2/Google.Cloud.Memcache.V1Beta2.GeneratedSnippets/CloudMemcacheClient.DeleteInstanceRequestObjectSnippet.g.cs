@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Memcache.V1Beta2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START memcache_v1beta2_generated_CloudMemcache_DeleteInstance_sync]
     using Google.Cloud.Memcache.V1Beta2;

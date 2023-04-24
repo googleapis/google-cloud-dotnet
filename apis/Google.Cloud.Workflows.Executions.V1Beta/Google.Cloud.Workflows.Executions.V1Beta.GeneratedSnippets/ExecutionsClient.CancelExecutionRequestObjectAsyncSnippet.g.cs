@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Workflows.Executions.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START workflowexecutions_v1beta_generated_Executions_CancelExecution_async]
     using Google.Cloud.Workflows.Executions.V1Beta;

@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Run.V2.Snippets
+#pragma warning disable CS8981
+
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -24,6 +26,7 @@ namespace Google.Cloud.Run.V2.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcrv = Google.Cloud.Run.V2;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedServicesClientSnippets
@@ -33,32 +36,32 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: CreateService(CreateServiceRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
-            CreateServiceRequest request = new CreateServiceRequest
+            gcrv::CreateServiceRequest request = new gcrv::CreateServiceRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Service = new Service(),
+                Service = new gcrv::Service(),
                 ServiceId = "",
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Service, Service> response = servicesClient.CreateService(request);
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.CreateService(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceCreateService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceCreateService(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -69,32 +72,32 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: CreateServiceAsync(CreateServiceRequest, CallSettings)
             // Additional: CreateServiceAsync(CreateServiceRequest, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            CreateServiceRequest request = new CreateServiceRequest
+            gcrv::CreateServiceRequest request = new gcrv::CreateServiceRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Service = new Service(),
+                Service = new gcrv::Service(),
                 ServiceId = "",
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Service, Service> response = await servicesClient.CreateServiceAsync(request);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.CreateServiceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceCreateServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceCreateServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -104,28 +107,28 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: CreateService(string, Service, string, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Service service = new Service();
+            gcrv::Service service = new gcrv::Service();
             string serviceId = "";
             // Make the request
-            Operation<Service, Service> response = servicesClient.CreateService(parent, service, serviceId);
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.CreateService(parent, service, serviceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceCreateService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceCreateService(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -136,28 +139,28 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: CreateServiceAsync(string, Service, string, CallSettings)
             // Additional: CreateServiceAsync(string, Service, string, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Service service = new Service();
+            gcrv::Service service = new gcrv::Service();
             string serviceId = "";
             // Make the request
-            Operation<Service, Service> response = await servicesClient.CreateServiceAsync(parent, service, serviceId);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.CreateServiceAsync(parent, service, serviceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceCreateServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceCreateServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -167,28 +170,28 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: CreateService(LocationName, Service, string, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Service service = new Service();
+            gcrv::Service service = new gcrv::Service();
             string serviceId = "";
             // Make the request
-            Operation<Service, Service> response = servicesClient.CreateService(parent, service, serviceId);
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.CreateService(parent, service, serviceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceCreateService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceCreateService(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -199,28 +202,28 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: CreateServiceAsync(LocationName, Service, string, CallSettings)
             // Additional: CreateServiceAsync(LocationName, Service, string, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Service service = new Service();
+            gcrv::Service service = new gcrv::Service();
             string serviceId = "";
             // Make the request
-            Operation<Service, Service> response = await servicesClient.CreateServiceAsync(parent, service, serviceId);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.CreateServiceAsync(parent, service, serviceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceCreateServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceCreateServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -230,14 +233,14 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetService(GetServiceRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
-            GetServiceRequest request = new GetServiceRequest
+            gcrv::GetServiceRequest request = new gcrv::GetServiceRequest
             {
-                ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ServiceName = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
             };
             // Make the request
-            Service response = servicesClient.GetService(request);
+            gcrv::Service response = servicesClient.GetService(request);
             // End snippet
         }
 
@@ -247,14 +250,14 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetServiceAsync(GetServiceRequest, CallSettings)
             // Additional: GetServiceAsync(GetServiceRequest, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            GetServiceRequest request = new GetServiceRequest
+            gcrv::GetServiceRequest request = new gcrv::GetServiceRequest
             {
-                ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ServiceName = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
             };
             // Make the request
-            Service response = await servicesClient.GetServiceAsync(request);
+            gcrv::Service response = await servicesClient.GetServiceAsync(request);
             // End snippet
         }
 
@@ -263,11 +266,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetService(string, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
             // Make the request
-            Service response = servicesClient.GetService(name);
+            gcrv::Service response = servicesClient.GetService(name);
             // End snippet
         }
 
@@ -277,11 +280,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetServiceAsync(string, CallSettings)
             // Additional: GetServiceAsync(string, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
             // Make the request
-            Service response = await servicesClient.GetServiceAsync(name);
+            gcrv::Service response = await servicesClient.GetServiceAsync(name);
             // End snippet
         }
 
@@ -290,11 +293,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetService(ServiceName, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
-            ServiceName name = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            gcrv::ServiceName name = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
             // Make the request
-            Service response = servicesClient.GetService(name);
+            gcrv::Service response = servicesClient.GetService(name);
             // End snippet
         }
 
@@ -304,11 +307,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetServiceAsync(ServiceName, CallSettings)
             // Additional: GetServiceAsync(ServiceName, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            ServiceName name = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            gcrv::ServiceName name = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
             // Make the request
-            Service response = await servicesClient.GetServiceAsync(name);
+            gcrv::Service response = await servicesClient.GetServiceAsync(name);
             // End snippet
         }
 
@@ -317,29 +320,29 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListServices(ListServicesRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
-            ListServicesRequest request = new ListServicesRequest
+            gcrv::ListServicesRequest request = new gcrv::ListServicesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedEnumerable<ListServicesResponse, Service> response = servicesClient.ListServices(request);
+            PagedEnumerable<gcrv::ListServicesResponse, gcrv::Service> response = servicesClient.ListServices(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Service item in response)
+            foreach (gcrv::Service item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListServicesResponse page in response.AsRawResponses())
+            foreach (gcrv::ListServicesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Service item in page)
+                foreach (gcrv::Service item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -348,10 +351,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Service> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Service> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Service item in singlePage)
+            foreach (gcrv::Service item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -366,29 +369,29 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListServicesAsync(ListServicesRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            ListServicesRequest request = new ListServicesRequest
+            gcrv::ListServicesRequest request = new gcrv::ListServicesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedAsyncEnumerable<ListServicesResponse, Service> response = servicesClient.ListServicesAsync(request);
+            PagedAsyncEnumerable<gcrv::ListServicesResponse, gcrv::Service> response = servicesClient.ListServicesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Service item) =>
+            await response.ForEachAsync((gcrv::Service item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListServicesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListServicesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Service item in page)
+                foreach (gcrv::Service item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -397,10 +400,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Service> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Service> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Service item in singlePage)
+            foreach (gcrv::Service item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -415,25 +418,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListServices(string, string, int?, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListServicesResponse, Service> response = servicesClient.ListServices(parent);
+            PagedEnumerable<gcrv::ListServicesResponse, gcrv::Service> response = servicesClient.ListServices(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Service item in response)
+            foreach (gcrv::Service item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListServicesResponse page in response.AsRawResponses())
+            foreach (gcrv::ListServicesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Service item in page)
+                foreach (gcrv::Service item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -442,10 +445,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Service> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Service> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Service item in singlePage)
+            foreach (gcrv::Service item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -460,25 +463,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListServicesAsync(string, string, int?, CallSettings)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListServicesResponse, Service> response = servicesClient.ListServicesAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListServicesResponse, gcrv::Service> response = servicesClient.ListServicesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Service item) =>
+            await response.ForEachAsync((gcrv::Service item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListServicesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListServicesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Service item in page)
+                foreach (gcrv::Service item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -487,10 +490,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Service> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Service> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Service item in singlePage)
+            foreach (gcrv::Service item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -505,25 +508,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListServices(LocationName, string, int?, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListServicesResponse, Service> response = servicesClient.ListServices(parent);
+            PagedEnumerable<gcrv::ListServicesResponse, gcrv::Service> response = servicesClient.ListServices(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Service item in response)
+            foreach (gcrv::Service item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListServicesResponse page in response.AsRawResponses())
+            foreach (gcrv::ListServicesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Service item in page)
+                foreach (gcrv::Service item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -532,10 +535,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Service> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Service> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Service item in singlePage)
+            foreach (gcrv::Service item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -550,25 +553,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListServicesAsync(LocationName, string, int?, CallSettings)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListServicesResponse, Service> response = servicesClient.ListServicesAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListServicesResponse, gcrv::Service> response = servicesClient.ListServicesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Service item) =>
+            await response.ForEachAsync((gcrv::Service item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListServicesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListServicesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Service item in page)
+                foreach (gcrv::Service item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -577,10 +580,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Service> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Service> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Service item in singlePage)
+            foreach (gcrv::Service item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -595,31 +598,31 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: UpdateService(UpdateServiceRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
-            UpdateServiceRequest request = new UpdateServiceRequest
+            gcrv::UpdateServiceRequest request = new gcrv::UpdateServiceRequest
             {
-                Service = new Service(),
+                Service = new gcrv::Service(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };
             // Make the request
-            Operation<Service, Service> response = servicesClient.UpdateService(request);
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.UpdateService(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceUpdateService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceUpdateService(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -630,31 +633,31 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: UpdateServiceAsync(UpdateServiceRequest, CallSettings)
             // Additional: UpdateServiceAsync(UpdateServiceRequest, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateServiceRequest request = new UpdateServiceRequest
+            gcrv::UpdateServiceRequest request = new gcrv::UpdateServiceRequest
             {
-                Service = new Service(),
+                Service = new gcrv::Service(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };
             // Make the request
-            Operation<Service, Service> response = await servicesClient.UpdateServiceAsync(request);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.UpdateServiceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceUpdateServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceUpdateServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -664,26 +667,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: UpdateService(Service, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
-            Service service = new Service();
+            gcrv::Service service = new gcrv::Service();
             // Make the request
-            Operation<Service, Service> response = servicesClient.UpdateService(service);
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.UpdateService(service);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceUpdateService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceUpdateService(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -694,26 +697,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: UpdateServiceAsync(Service, CallSettings)
             // Additional: UpdateServiceAsync(Service, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            Service service = new Service();
+            gcrv::Service service = new gcrv::Service();
             // Make the request
-            Operation<Service, Service> response = await servicesClient.UpdateServiceAsync(service);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.UpdateServiceAsync(service);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceUpdateServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceUpdateServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -723,31 +726,31 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteService(DeleteServiceRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
-            DeleteServiceRequest request = new DeleteServiceRequest
+            gcrv::DeleteServiceRequest request = new gcrv::DeleteServiceRequest
             {
-                ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ServiceName = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Service, Service> response = servicesClient.DeleteService(request);
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.DeleteService(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceDeleteService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceDeleteService(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -758,31 +761,31 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteServiceAsync(DeleteServiceRequest, CallSettings)
             // Additional: DeleteServiceAsync(DeleteServiceRequest, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteServiceRequest request = new DeleteServiceRequest
+            gcrv::DeleteServiceRequest request = new gcrv::DeleteServiceRequest
             {
-                ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ServiceName = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Service, Service> response = await servicesClient.DeleteServiceAsync(request);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.DeleteServiceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceDeleteServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceDeleteServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -792,26 +795,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteService(string, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
             // Make the request
-            Operation<Service, Service> response = servicesClient.DeleteService(name);
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.DeleteService(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceDeleteService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceDeleteService(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -822,26 +825,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteServiceAsync(string, CallSettings)
             // Additional: DeleteServiceAsync(string, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]";
             // Make the request
-            Operation<Service, Service> response = await servicesClient.DeleteServiceAsync(name);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.DeleteServiceAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceDeleteServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceDeleteServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -851,26 +854,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteService(ServiceName, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
-            ServiceName name = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            gcrv::ServiceName name = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
             // Make the request
-            Operation<Service, Service> response = servicesClient.DeleteService(name);
+            Operation<gcrv::Service, gcrv::Service> response = servicesClient.DeleteService(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = servicesClient.PollOnceDeleteService(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = servicesClient.PollOnceDeleteService(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -881,26 +884,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteServiceAsync(ServiceName, CallSettings)
             // Additional: DeleteServiceAsync(ServiceName, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            ServiceName name = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            gcrv::ServiceName name = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
             // Make the request
-            Operation<Service, Service> response = await servicesClient.DeleteServiceAsync(name);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.DeleteServiceAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceDeleteServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceDeleteServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -910,7 +913,7 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -928,7 +931,7 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -945,7 +948,7 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -964,7 +967,7 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -982,7 +985,7 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
-            ServicesClient servicesClient = ServicesClient.Create();
+            gcrv::ServicesClient servicesClient = gcrv::ServicesClient.Create();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
@@ -1000,7 +1003,7 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {

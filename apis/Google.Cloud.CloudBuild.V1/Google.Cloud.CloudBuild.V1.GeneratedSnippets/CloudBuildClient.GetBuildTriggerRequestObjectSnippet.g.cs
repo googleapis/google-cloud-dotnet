@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.CloudBuild.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudbuild_v1_generated_CloudBuild_GetBuildTrigger_sync]
     using Google.Cloud.CloudBuild.V1;

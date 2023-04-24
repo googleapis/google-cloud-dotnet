@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Services_DeleteService_async]
     using Google.LongRunning;
@@ -36,31 +36,31 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task DeleteServiceRequestObjectAsync()
         {
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteServiceRequest request = new DeleteServiceRequest
+            gcrv::DeleteServiceRequest request = new gcrv::DeleteServiceRequest
             {
-                ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ServiceName = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Service, Service> response = await servicesClient.DeleteServiceAsync(request);
+            Operation<gcrv::Service, gcrv::Service> response = await servicesClient.DeleteServiceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Service, Service> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Service, gcrv::Service> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Service result = completedResponse.Result;
+            gcrv::Service result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Service, Service> retrievedResponse = await servicesClient.PollOnceDeleteServiceAsync(operationName);
+            Operation<gcrv::Service, gcrv::Service> retrievedResponse = await servicesClient.PollOnceDeleteServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Service retrievedResult = retrievedResponse.Result;
+                gcrv::Service retrievedResult = retrievedResponse.Result;
             }
         }
     }

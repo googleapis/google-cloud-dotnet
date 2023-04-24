@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataflow.V1Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Dataflow.V1Beta3;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;

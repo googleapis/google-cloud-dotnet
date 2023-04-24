@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AccessApproval.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START accessapproval_v1_generated_AccessApproval_GetApprovalRequest_sync_flattened_resourceNames]
     using Google.Cloud.AccessApproval.V1;

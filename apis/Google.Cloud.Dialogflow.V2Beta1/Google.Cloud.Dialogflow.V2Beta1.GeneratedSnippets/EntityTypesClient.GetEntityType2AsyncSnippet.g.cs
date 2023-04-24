@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2beta1_generated_EntityTypes_GetEntityType_async_flattened2]
     using Google.Cloud.Dialogflow.V2Beta1;

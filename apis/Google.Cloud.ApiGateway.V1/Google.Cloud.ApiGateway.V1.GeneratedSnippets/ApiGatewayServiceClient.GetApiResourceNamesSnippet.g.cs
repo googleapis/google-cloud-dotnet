@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ApiGateway.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apigateway_v1_generated_ApiGatewayService_GetApi_sync_flattened_resourceNames]
     using Google.Cloud.ApiGateway.V1;

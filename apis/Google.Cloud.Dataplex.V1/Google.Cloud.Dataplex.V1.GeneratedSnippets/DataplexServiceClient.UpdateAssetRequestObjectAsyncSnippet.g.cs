@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_UpdateAsset_async]
     using Google.LongRunning;
@@ -37,31 +37,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task UpdateAssetRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateAssetRequest request = new UpdateAssetRequest
+            gcdv::UpdateAssetRequest request = new gcdv::UpdateAssetRequest
             {
                 UpdateMask = new FieldMask(),
-                Asset = new Asset(),
+                Asset = new gcdv::Asset(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Asset, OperationMetadata> response = await dataplexServiceClient.UpdateAssetAsync(request);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateAssetAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Asset, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Asset, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Asset result = completedResponse.Result;
+            gcdv::Asset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Asset, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateAssetAsync(operationName);
+            Operation<gcdv::Asset, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateAssetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Asset retrievedResult = retrievedResponse.Result;
+                gcdv::Asset retrievedResult = retrievedResponse.Result;
             }
         }
     }

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ResourceManager.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudresourcemanager_v3_generated_Projects_SetIamPolicy_sync_flattened]
     using Google.Cloud.Iam.V1;

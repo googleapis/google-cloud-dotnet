@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_ListQueues_async]
     using Google.Api.Gax;
@@ -40,30 +40,30 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         public async Task ListQueuesRequestObjectAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            ListQueuesRequest request = new ListQueuesRequest
+            gctv::ListQueuesRequest request = new gctv::ListQueuesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 ReadMask = new FieldMask(),
             };
             // Make the request
-            PagedAsyncEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueuesAsync(request);
+            PagedAsyncEnumerable<gctv::ListQueuesResponse, gctv::Queue> response = cloudTasksClient.ListQueuesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Queue item) =>
+            await response.ForEachAsync((gctv::Queue item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListQueuesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gctv::ListQueuesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Queue item in page)
+                foreach (gctv::Queue item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -72,10 +72,10 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Queue> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gctv::Queue> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Queue item in singlePage)
+            foreach (gctv::Queue item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

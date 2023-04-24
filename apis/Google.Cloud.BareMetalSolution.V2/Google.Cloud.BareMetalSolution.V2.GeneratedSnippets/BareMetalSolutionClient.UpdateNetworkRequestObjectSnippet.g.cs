@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BareMetalSolution.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START baremetalsolution_v2_generated_BareMetalSolution_UpdateNetwork_sync]
     using Google.Cloud.BareMetalSolution.V2;

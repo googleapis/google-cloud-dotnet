@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DocumentAI.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START documentai_v1_generated_DocumentProcessorService_CreateProcessor_async_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

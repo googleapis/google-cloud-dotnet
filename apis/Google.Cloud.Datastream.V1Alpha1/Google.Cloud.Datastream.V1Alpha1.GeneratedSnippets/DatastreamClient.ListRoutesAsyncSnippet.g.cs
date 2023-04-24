@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Datastream.V1Alpha1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datastream_v1alpha1_generated_Datastream_ListRoutes_async_flattened]
     using Google.Api.Gax;

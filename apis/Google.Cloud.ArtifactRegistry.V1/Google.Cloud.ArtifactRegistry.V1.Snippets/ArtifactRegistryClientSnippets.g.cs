@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.ArtifactRegistry.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -36,29 +36,29 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListDockerImages(ListDockerImagesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListDockerImagesRequest request = new ListDockerImagesRequest
+            gcav::ListDockerImagesRequest request = new gcav::ListDockerImagesRequest
             {
                 Parent = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListDockerImagesResponse, DockerImage> response = artifactRegistryClient.ListDockerImages(request);
+            PagedEnumerable<gcav::ListDockerImagesResponse, gcav::DockerImage> response = artifactRegistryClient.ListDockerImages(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DockerImage item in response)
+            foreach (gcav::DockerImage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDockerImagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListDockerImagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DockerImage item in page)
+                foreach (gcav::DockerImage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -67,10 +67,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DockerImage> singlePage = response.ReadPage(pageSize);
+            Page<gcav::DockerImage> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DockerImage item in singlePage)
+            foreach (gcav::DockerImage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -85,29 +85,29 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListDockerImagesAsync(ListDockerImagesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListDockerImagesRequest request = new ListDockerImagesRequest
+            gcav::ListDockerImagesRequest request = new gcav::ListDockerImagesRequest
             {
                 Parent = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListDockerImagesResponse, DockerImage> response = artifactRegistryClient.ListDockerImagesAsync(request);
+            PagedAsyncEnumerable<gcav::ListDockerImagesResponse, gcav::DockerImage> response = artifactRegistryClient.ListDockerImagesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DockerImage item) =>
+            await response.ForEachAsync((gcav::DockerImage item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDockerImagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListDockerImagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DockerImage item in page)
+                foreach (gcav::DockerImage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -116,10 +116,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DockerImage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::DockerImage> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DockerImage item in singlePage)
+            foreach (gcav::DockerImage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -134,25 +134,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListDockerImages(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedEnumerable<ListDockerImagesResponse, DockerImage> response = artifactRegistryClient.ListDockerImages(parent);
+            PagedEnumerable<gcav::ListDockerImagesResponse, gcav::DockerImage> response = artifactRegistryClient.ListDockerImages(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DockerImage item in response)
+            foreach (gcav::DockerImage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDockerImagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListDockerImagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DockerImage item in page)
+                foreach (gcav::DockerImage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -161,10 +161,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DockerImage> singlePage = response.ReadPage(pageSize);
+            Page<gcav::DockerImage> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DockerImage item in singlePage)
+            foreach (gcav::DockerImage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -179,25 +179,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListDockerImagesAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListDockerImagesResponse, DockerImage> response = artifactRegistryClient.ListDockerImagesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListDockerImagesResponse, gcav::DockerImage> response = artifactRegistryClient.ListDockerImagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DockerImage item) =>
+            await response.ForEachAsync((gcav::DockerImage item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDockerImagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListDockerImagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DockerImage item in page)
+                foreach (gcav::DockerImage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -206,10 +206,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DockerImage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::DockerImage> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DockerImage item in singlePage)
+            foreach (gcav::DockerImage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -224,14 +224,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetDockerImage(GetDockerImageRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetDockerImageRequest request = new GetDockerImageRequest
+            gcav::GetDockerImageRequest request = new gcav::GetDockerImageRequest
             {
-                DockerImageName = DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]"),
+                DockerImageName = gcav::DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]"),
             };
             // Make the request
-            DockerImage response = artifactRegistryClient.GetDockerImage(request);
+            gcav::DockerImage response = artifactRegistryClient.GetDockerImage(request);
             // End snippet
         }
 
@@ -241,14 +241,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetDockerImageAsync(GetDockerImageRequest, CallSettings)
             // Additional: GetDockerImageAsync(GetDockerImageRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetDockerImageRequest request = new GetDockerImageRequest
+            gcav::GetDockerImageRequest request = new gcav::GetDockerImageRequest
             {
-                DockerImageName = DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]"),
+                DockerImageName = gcav::DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]"),
             };
             // Make the request
-            DockerImage response = await artifactRegistryClient.GetDockerImageAsync(request);
+            gcav::DockerImage response = await artifactRegistryClient.GetDockerImageAsync(request);
             // End snippet
         }
 
@@ -257,11 +257,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetDockerImage(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/dockerImages/[DOCKER_IMAGE]";
             // Make the request
-            DockerImage response = artifactRegistryClient.GetDockerImage(name);
+            gcav::DockerImage response = artifactRegistryClient.GetDockerImage(name);
             // End snippet
         }
 
@@ -271,11 +271,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetDockerImageAsync(string, CallSettings)
             // Additional: GetDockerImageAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/dockerImages/[DOCKER_IMAGE]";
             // Make the request
-            DockerImage response = await artifactRegistryClient.GetDockerImageAsync(name);
+            gcav::DockerImage response = await artifactRegistryClient.GetDockerImageAsync(name);
             // End snippet
         }
 
@@ -284,11 +284,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetDockerImage(DockerImageName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            DockerImageName name = DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]");
+            gcav::DockerImageName name = gcav::DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]");
             // Make the request
-            DockerImage response = artifactRegistryClient.GetDockerImage(name);
+            gcav::DockerImage response = artifactRegistryClient.GetDockerImage(name);
             // End snippet
         }
 
@@ -298,11 +298,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetDockerImageAsync(DockerImageName, CallSettings)
             // Additional: GetDockerImageAsync(DockerImageName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DockerImageName name = DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]");
+            gcav::DockerImageName name = gcav::DockerImageName.FromProjectLocationRepositoryDockerImage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[DOCKER_IMAGE]");
             // Make the request
-            DockerImage response = await artifactRegistryClient.GetDockerImageAsync(name);
+            gcav::DockerImage response = await artifactRegistryClient.GetDockerImageAsync(name);
             // End snippet
         }
 
@@ -311,28 +311,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListMavenArtifacts(ListMavenArtifactsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
+            gcav::ListMavenArtifactsRequest request = new gcav::ListMavenArtifactsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(request);
+            PagedEnumerable<gcav::ListMavenArtifactsResponse, gcav::MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (MavenArtifact item in response)
+            foreach (gcav::MavenArtifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListMavenArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListMavenArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (MavenArtifact item in page)
+                foreach (gcav::MavenArtifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -341,10 +341,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<MavenArtifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::MavenArtifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (MavenArtifact item in singlePage)
+            foreach (gcav::MavenArtifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -359,28 +359,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListMavenArtifactsAsync(ListMavenArtifactsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListMavenArtifactsRequest request = new ListMavenArtifactsRequest
+            gcav::ListMavenArtifactsRequest request = new gcav::ListMavenArtifactsRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(request);
+            PagedAsyncEnumerable<gcav::ListMavenArtifactsResponse, gcav::MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MavenArtifact item) =>
+            await response.ForEachAsync((gcav::MavenArtifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMavenArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListMavenArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (MavenArtifact item in page)
+                foreach (gcav::MavenArtifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -389,10 +389,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (MavenArtifact item in singlePage)
+            foreach (gcav::MavenArtifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -407,25 +407,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListMavenArtifacts(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(parent);
+            PagedEnumerable<gcav::ListMavenArtifactsResponse, gcav::MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (MavenArtifact item in response)
+            foreach (gcav::MavenArtifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListMavenArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListMavenArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (MavenArtifact item in page)
+                foreach (gcav::MavenArtifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -434,10 +434,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<MavenArtifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::MavenArtifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (MavenArtifact item in singlePage)
+            foreach (gcav::MavenArtifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -452,25 +452,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListMavenArtifactsAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListMavenArtifactsResponse, gcav::MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MavenArtifact item) =>
+            await response.ForEachAsync((gcav::MavenArtifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMavenArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListMavenArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (MavenArtifact item in page)
+                foreach (gcav::MavenArtifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -479,10 +479,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (MavenArtifact item in singlePage)
+            foreach (gcav::MavenArtifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -497,25 +497,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListMavenArtifacts(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(parent);
+            PagedEnumerable<gcav::ListMavenArtifactsResponse, gcav::MavenArtifact> response = artifactRegistryClient.ListMavenArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (MavenArtifact item in response)
+            foreach (gcav::MavenArtifact item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListMavenArtifactsResponse page in response.AsRawResponses())
+            foreach (gcav::ListMavenArtifactsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (MavenArtifact item in page)
+                foreach (gcav::MavenArtifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -524,10 +524,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<MavenArtifact> singlePage = response.ReadPage(pageSize);
+            Page<gcav::MavenArtifact> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (MavenArtifact item in singlePage)
+            foreach (gcav::MavenArtifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -542,25 +542,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListMavenArtifactsAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListMavenArtifactsResponse, MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListMavenArtifactsResponse, gcav::MavenArtifact> response = artifactRegistryClient.ListMavenArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((MavenArtifact item) =>
+            await response.ForEachAsync((gcav::MavenArtifact item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListMavenArtifactsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListMavenArtifactsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (MavenArtifact item in page)
+                foreach (gcav::MavenArtifact item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -569,10 +569,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::MavenArtifact> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (MavenArtifact item in singlePage)
+            foreach (gcav::MavenArtifact item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -587,14 +587,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetMavenArtifact(GetMavenArtifactRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetMavenArtifactRequest request = new GetMavenArtifactRequest
+            gcav::GetMavenArtifactRequest request = new gcav::GetMavenArtifactRequest
             {
-                MavenArtifactName = MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]"),
+                MavenArtifactName = gcav::MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]"),
             };
             // Make the request
-            MavenArtifact response = artifactRegistryClient.GetMavenArtifact(request);
+            gcav::MavenArtifact response = artifactRegistryClient.GetMavenArtifact(request);
             // End snippet
         }
 
@@ -604,14 +604,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetMavenArtifactAsync(GetMavenArtifactRequest, CallSettings)
             // Additional: GetMavenArtifactAsync(GetMavenArtifactRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetMavenArtifactRequest request = new GetMavenArtifactRequest
+            gcav::GetMavenArtifactRequest request = new gcav::GetMavenArtifactRequest
             {
-                MavenArtifactName = MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]"),
+                MavenArtifactName = gcav::MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]"),
             };
             // Make the request
-            MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(request);
+            gcav::MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(request);
             // End snippet
         }
 
@@ -620,11 +620,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetMavenArtifact(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/mavenArtifacts/[MAVEN_ARTIFACT]";
             // Make the request
-            MavenArtifact response = artifactRegistryClient.GetMavenArtifact(name);
+            gcav::MavenArtifact response = artifactRegistryClient.GetMavenArtifact(name);
             // End snippet
         }
 
@@ -634,11 +634,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetMavenArtifactAsync(string, CallSettings)
             // Additional: GetMavenArtifactAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/mavenArtifacts/[MAVEN_ARTIFACT]";
             // Make the request
-            MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(name);
+            gcav::MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(name);
             // End snippet
         }
 
@@ -647,11 +647,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetMavenArtifact(MavenArtifactName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            MavenArtifactName name = MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]");
+            gcav::MavenArtifactName name = gcav::MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]");
             // Make the request
-            MavenArtifact response = artifactRegistryClient.GetMavenArtifact(name);
+            gcav::MavenArtifact response = artifactRegistryClient.GetMavenArtifact(name);
             // End snippet
         }
 
@@ -661,11 +661,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetMavenArtifactAsync(MavenArtifactName, CallSettings)
             // Additional: GetMavenArtifactAsync(MavenArtifactName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            MavenArtifactName name = MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]");
+            gcav::MavenArtifactName name = gcav::MavenArtifactName.FromProjectLocationRepositoryMavenArtifact("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[MAVEN_ARTIFACT]");
             // Make the request
-            MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(name);
+            gcav::MavenArtifact response = await artifactRegistryClient.GetMavenArtifactAsync(name);
             // End snippet
         }
 
@@ -674,28 +674,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListNpmPackages(ListNpmPackagesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListNpmPackagesRequest request = new ListNpmPackagesRequest
+            gcav::ListNpmPackagesRequest request = new gcav::ListNpmPackagesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackages(request);
+            PagedEnumerable<gcav::ListNpmPackagesResponse, gcav::NpmPackage> response = artifactRegistryClient.ListNpmPackages(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (NpmPackage item in response)
+            foreach (gcav::NpmPackage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListNpmPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListNpmPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (NpmPackage item in page)
+                foreach (gcav::NpmPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -704,10 +704,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<NpmPackage> singlePage = response.ReadPage(pageSize);
+            Page<gcav::NpmPackage> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (NpmPackage item in singlePage)
+            foreach (gcav::NpmPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -722,28 +722,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListNpmPackagesAsync(ListNpmPackagesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListNpmPackagesRequest request = new ListNpmPackagesRequest
+            gcav::ListNpmPackagesRequest request = new gcav::ListNpmPackagesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(request);
+            PagedAsyncEnumerable<gcav::ListNpmPackagesResponse, gcav::NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NpmPackage item) =>
+            await response.ForEachAsync((gcav::NpmPackage item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNpmPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListNpmPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (NpmPackage item in page)
+                foreach (gcav::NpmPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -752,10 +752,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (NpmPackage item in singlePage)
+            foreach (gcav::NpmPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -770,25 +770,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListNpmPackages(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackages(parent);
+            PagedEnumerable<gcav::ListNpmPackagesResponse, gcav::NpmPackage> response = artifactRegistryClient.ListNpmPackages(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (NpmPackage item in response)
+            foreach (gcav::NpmPackage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListNpmPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListNpmPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (NpmPackage item in page)
+                foreach (gcav::NpmPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -797,10 +797,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<NpmPackage> singlePage = response.ReadPage(pageSize);
+            Page<gcav::NpmPackage> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (NpmPackage item in singlePage)
+            foreach (gcav::NpmPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -815,25 +815,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListNpmPackagesAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListNpmPackagesResponse, gcav::NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NpmPackage item) =>
+            await response.ForEachAsync((gcav::NpmPackage item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNpmPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListNpmPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (NpmPackage item in page)
+                foreach (gcav::NpmPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -842,10 +842,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (NpmPackage item in singlePage)
+            foreach (gcav::NpmPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -860,25 +860,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListNpmPackages(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackages(parent);
+            PagedEnumerable<gcav::ListNpmPackagesResponse, gcav::NpmPackage> response = artifactRegistryClient.ListNpmPackages(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (NpmPackage item in response)
+            foreach (gcav::NpmPackage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListNpmPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListNpmPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (NpmPackage item in page)
+                foreach (gcav::NpmPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -887,10 +887,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<NpmPackage> singlePage = response.ReadPage(pageSize);
+            Page<gcav::NpmPackage> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (NpmPackage item in singlePage)
+            foreach (gcav::NpmPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -905,25 +905,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListNpmPackagesAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListNpmPackagesResponse, NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListNpmPackagesResponse, gcav::NpmPackage> response = artifactRegistryClient.ListNpmPackagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((NpmPackage item) =>
+            await response.ForEachAsync((gcav::NpmPackage item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListNpmPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListNpmPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (NpmPackage item in page)
+                foreach (gcav::NpmPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -932,10 +932,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::NpmPackage> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (NpmPackage item in singlePage)
+            foreach (gcav::NpmPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -950,14 +950,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetNpmPackage(GetNpmPackageRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetNpmPackageRequest request = new GetNpmPackageRequest
+            gcav::GetNpmPackageRequest request = new gcav::GetNpmPackageRequest
             {
-                NpmPackageName = NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]"),
+                NpmPackageName = gcav::NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]"),
             };
             // Make the request
-            NpmPackage response = artifactRegistryClient.GetNpmPackage(request);
+            gcav::NpmPackage response = artifactRegistryClient.GetNpmPackage(request);
             // End snippet
         }
 
@@ -967,14 +967,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetNpmPackageAsync(GetNpmPackageRequest, CallSettings)
             // Additional: GetNpmPackageAsync(GetNpmPackageRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetNpmPackageRequest request = new GetNpmPackageRequest
+            gcav::GetNpmPackageRequest request = new gcav::GetNpmPackageRequest
             {
-                NpmPackageName = NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]"),
+                NpmPackageName = gcav::NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]"),
             };
             // Make the request
-            NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(request);
+            gcav::NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(request);
             // End snippet
         }
 
@@ -983,11 +983,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetNpmPackage(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/npmPackages/[NPM_PACKAGE]";
             // Make the request
-            NpmPackage response = artifactRegistryClient.GetNpmPackage(name);
+            gcav::NpmPackage response = artifactRegistryClient.GetNpmPackage(name);
             // End snippet
         }
 
@@ -997,11 +997,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetNpmPackageAsync(string, CallSettings)
             // Additional: GetNpmPackageAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/npmPackages/[NPM_PACKAGE]";
             // Make the request
-            NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(name);
+            gcav::NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(name);
             // End snippet
         }
 
@@ -1010,11 +1010,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetNpmPackage(NpmPackageName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            NpmPackageName name = NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]");
+            gcav::NpmPackageName name = gcav::NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]");
             // Make the request
-            NpmPackage response = artifactRegistryClient.GetNpmPackage(name);
+            gcav::NpmPackage response = artifactRegistryClient.GetNpmPackage(name);
             // End snippet
         }
 
@@ -1024,11 +1024,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetNpmPackageAsync(NpmPackageName, CallSettings)
             // Additional: GetNpmPackageAsync(NpmPackageName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            NpmPackageName name = NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]");
+            gcav::NpmPackageName name = gcav::NpmPackageName.FromProjectLocationRepositoryNpmPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[NPM_PACKAGE]");
             // Make the request
-            NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(name);
+            gcav::NpmPackage response = await artifactRegistryClient.GetNpmPackageAsync(name);
             // End snippet
         }
 
@@ -1037,28 +1037,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPythonPackages(ListPythonPackagesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListPythonPackagesRequest request = new ListPythonPackagesRequest
+            gcav::ListPythonPackagesRequest request = new gcav::ListPythonPackagesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackages(request);
+            PagedEnumerable<gcav::ListPythonPackagesResponse, gcav::PythonPackage> response = artifactRegistryClient.ListPythonPackages(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (PythonPackage item in response)
+            foreach (gcav::PythonPackage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPythonPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListPythonPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (PythonPackage item in page)
+                foreach (gcav::PythonPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1067,10 +1067,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<PythonPackage> singlePage = response.ReadPage(pageSize);
+            Page<gcav::PythonPackage> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (PythonPackage item in singlePage)
+            foreach (gcav::PythonPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1085,28 +1085,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPythonPackagesAsync(ListPythonPackagesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListPythonPackagesRequest request = new ListPythonPackagesRequest
+            gcav::ListPythonPackagesRequest request = new gcav::ListPythonPackagesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(request);
+            PagedAsyncEnumerable<gcav::ListPythonPackagesResponse, gcav::PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PythonPackage item) =>
+            await response.ForEachAsync((gcav::PythonPackage item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPythonPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListPythonPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (PythonPackage item in page)
+                foreach (gcav::PythonPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1115,10 +1115,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (PythonPackage item in singlePage)
+            foreach (gcav::PythonPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1133,25 +1133,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPythonPackages(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackages(parent);
+            PagedEnumerable<gcav::ListPythonPackagesResponse, gcav::PythonPackage> response = artifactRegistryClient.ListPythonPackages(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (PythonPackage item in response)
+            foreach (gcav::PythonPackage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPythonPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListPythonPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (PythonPackage item in page)
+                foreach (gcav::PythonPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1160,10 +1160,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<PythonPackage> singlePage = response.ReadPage(pageSize);
+            Page<gcav::PythonPackage> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (PythonPackage item in singlePage)
+            foreach (gcav::PythonPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1178,25 +1178,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPythonPackagesAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListPythonPackagesResponse, gcav::PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PythonPackage item) =>
+            await response.ForEachAsync((gcav::PythonPackage item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPythonPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListPythonPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (PythonPackage item in page)
+                foreach (gcav::PythonPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1205,10 +1205,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (PythonPackage item in singlePage)
+            foreach (gcav::PythonPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1223,25 +1223,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPythonPackages(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackages(parent);
+            PagedEnumerable<gcav::ListPythonPackagesResponse, gcav::PythonPackage> response = artifactRegistryClient.ListPythonPackages(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (PythonPackage item in response)
+            foreach (gcav::PythonPackage item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPythonPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListPythonPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (PythonPackage item in page)
+                foreach (gcav::PythonPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1250,10 +1250,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<PythonPackage> singlePage = response.ReadPage(pageSize);
+            Page<gcav::PythonPackage> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (PythonPackage item in singlePage)
+            foreach (gcav::PythonPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1268,25 +1268,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPythonPackagesAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListPythonPackagesResponse, PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListPythonPackagesResponse, gcav::PythonPackage> response = artifactRegistryClient.ListPythonPackagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((PythonPackage item) =>
+            await response.ForEachAsync((gcav::PythonPackage item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPythonPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListPythonPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (PythonPackage item in page)
+                foreach (gcav::PythonPackage item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1295,10 +1295,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::PythonPackage> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (PythonPackage item in singlePage)
+            foreach (gcav::PythonPackage item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1313,14 +1313,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetPythonPackage(GetPythonPackageRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetPythonPackageRequest request = new GetPythonPackageRequest
+            gcav::GetPythonPackageRequest request = new gcav::GetPythonPackageRequest
             {
-                PythonPackageName = PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]"),
+                PythonPackageName = gcav::PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]"),
             };
             // Make the request
-            PythonPackage response = artifactRegistryClient.GetPythonPackage(request);
+            gcav::PythonPackage response = artifactRegistryClient.GetPythonPackage(request);
             // End snippet
         }
 
@@ -1330,14 +1330,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetPythonPackageAsync(GetPythonPackageRequest, CallSettings)
             // Additional: GetPythonPackageAsync(GetPythonPackageRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetPythonPackageRequest request = new GetPythonPackageRequest
+            gcav::GetPythonPackageRequest request = new gcav::GetPythonPackageRequest
             {
-                PythonPackageName = PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]"),
+                PythonPackageName = gcav::PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]"),
             };
             // Make the request
-            PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(request);
+            gcav::PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(request);
             // End snippet
         }
 
@@ -1346,11 +1346,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetPythonPackage(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/pythonPackages/[PYTHON_PACKAGE]";
             // Make the request
-            PythonPackage response = artifactRegistryClient.GetPythonPackage(name);
+            gcav::PythonPackage response = artifactRegistryClient.GetPythonPackage(name);
             // End snippet
         }
 
@@ -1360,11 +1360,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetPythonPackageAsync(string, CallSettings)
             // Additional: GetPythonPackageAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/pythonPackages/[PYTHON_PACKAGE]";
             // Make the request
-            PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(name);
+            gcav::PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(name);
             // End snippet
         }
 
@@ -1373,11 +1373,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetPythonPackage(PythonPackageName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            PythonPackageName name = PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]");
+            gcav::PythonPackageName name = gcav::PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]");
             // Make the request
-            PythonPackage response = artifactRegistryClient.GetPythonPackage(name);
+            gcav::PythonPackage response = artifactRegistryClient.GetPythonPackage(name);
             // End snippet
         }
 
@@ -1387,11 +1387,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetPythonPackageAsync(PythonPackageName, CallSettings)
             // Additional: GetPythonPackageAsync(PythonPackageName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            PythonPackageName name = PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]");
+            gcav::PythonPackageName name = gcav::PythonPackageName.FromProjectLocationRepositoryPythonPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PYTHON_PACKAGE]");
             // Make the request
-            PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(name);
+            gcav::PythonPackage response = await artifactRegistryClient.GetPythonPackageAsync(name);
             // End snippet
         }
 
@@ -1400,30 +1400,30 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ImportAptArtifacts(ImportAptArtifactsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ImportAptArtifactsRequest request = new ImportAptArtifactsRequest
+            gcav::ImportAptArtifactsRequest request = new gcav::ImportAptArtifactsRequest
             {
                 Parent = "",
-                GcsSource = new ImportAptArtifactsGcsSource(),
+                GcsSource = new gcav::ImportAptArtifactsGcsSource(),
             };
             // Make the request
-            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> response = artifactRegistryClient.ImportAptArtifacts(request);
+            Operation<gcav::ImportAptArtifactsResponse, gcav::ImportAptArtifactsMetadata> response = artifactRegistryClient.ImportAptArtifacts(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::ImportAptArtifactsResponse, gcav::ImportAptArtifactsMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            ImportAptArtifactsResponse result = completedResponse.Result;
+            gcav::ImportAptArtifactsResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> retrievedResponse = artifactRegistryClient.PollOnceImportAptArtifacts(operationName);
+            Operation<gcav::ImportAptArtifactsResponse, gcav::ImportAptArtifactsMetadata> retrievedResponse = artifactRegistryClient.PollOnceImportAptArtifacts(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ImportAptArtifactsResponse retrievedResult = retrievedResponse.Result;
+                gcav::ImportAptArtifactsResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1434,30 +1434,30 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: ImportAptArtifactsAsync(ImportAptArtifactsRequest, CallSettings)
             // Additional: ImportAptArtifactsAsync(ImportAptArtifactsRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ImportAptArtifactsRequest request = new ImportAptArtifactsRequest
+            gcav::ImportAptArtifactsRequest request = new gcav::ImportAptArtifactsRequest
             {
                 Parent = "",
-                GcsSource = new ImportAptArtifactsGcsSource(),
+                GcsSource = new gcav::ImportAptArtifactsGcsSource(),
             };
             // Make the request
-            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> response = await artifactRegistryClient.ImportAptArtifactsAsync(request);
+            Operation<gcav::ImportAptArtifactsResponse, gcav::ImportAptArtifactsMetadata> response = await artifactRegistryClient.ImportAptArtifactsAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::ImportAptArtifactsResponse, gcav::ImportAptArtifactsMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            ImportAptArtifactsResponse result = completedResponse.Result;
+            gcav::ImportAptArtifactsResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceImportAptArtifactsAsync(operationName);
+            Operation<gcav::ImportAptArtifactsResponse, gcav::ImportAptArtifactsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceImportAptArtifactsAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ImportAptArtifactsResponse retrievedResult = retrievedResponse.Result;
+                gcav::ImportAptArtifactsResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1467,30 +1467,30 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ImportYumArtifacts(ImportYumArtifactsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ImportYumArtifactsRequest request = new ImportYumArtifactsRequest
+            gcav::ImportYumArtifactsRequest request = new gcav::ImportYumArtifactsRequest
             {
                 Parent = "",
-                GcsSource = new ImportYumArtifactsGcsSource(),
+                GcsSource = new gcav::ImportYumArtifactsGcsSource(),
             };
             // Make the request
-            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> response = artifactRegistryClient.ImportYumArtifacts(request);
+            Operation<gcav::ImportYumArtifactsResponse, gcav::ImportYumArtifactsMetadata> response = artifactRegistryClient.ImportYumArtifacts(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::ImportYumArtifactsResponse, gcav::ImportYumArtifactsMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            ImportYumArtifactsResponse result = completedResponse.Result;
+            gcav::ImportYumArtifactsResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> retrievedResponse = artifactRegistryClient.PollOnceImportYumArtifacts(operationName);
+            Operation<gcav::ImportYumArtifactsResponse, gcav::ImportYumArtifactsMetadata> retrievedResponse = artifactRegistryClient.PollOnceImportYumArtifacts(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ImportYumArtifactsResponse retrievedResult = retrievedResponse.Result;
+                gcav::ImportYumArtifactsResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1501,30 +1501,30 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: ImportYumArtifactsAsync(ImportYumArtifactsRequest, CallSettings)
             // Additional: ImportYumArtifactsAsync(ImportYumArtifactsRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ImportYumArtifactsRequest request = new ImportYumArtifactsRequest
+            gcav::ImportYumArtifactsRequest request = new gcav::ImportYumArtifactsRequest
             {
                 Parent = "",
-                GcsSource = new ImportYumArtifactsGcsSource(),
+                GcsSource = new gcav::ImportYumArtifactsGcsSource(),
             };
             // Make the request
-            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> response = await artifactRegistryClient.ImportYumArtifactsAsync(request);
+            Operation<gcav::ImportYumArtifactsResponse, gcav::ImportYumArtifactsMetadata> response = await artifactRegistryClient.ImportYumArtifactsAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::ImportYumArtifactsResponse, gcav::ImportYumArtifactsMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            ImportYumArtifactsResponse result = completedResponse.Result;
+            gcav::ImportYumArtifactsResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceImportYumArtifactsAsync(operationName);
+            Operation<gcav::ImportYumArtifactsResponse, gcav::ImportYumArtifactsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceImportYumArtifactsAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ImportYumArtifactsResponse retrievedResult = retrievedResponse.Result;
+                gcav::ImportYumArtifactsResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1534,28 +1534,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListRepositories(ListRepositoriesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListRepositoriesRequest request = new ListRepositoriesRequest
+            gcav::ListRepositoriesRequest request = new gcav::ListRepositoriesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
-            PagedEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositories(request);
+            PagedEnumerable<gcav::ListRepositoriesResponse, gcav::Repository> response = artifactRegistryClient.ListRepositories(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Repository item in response)
+            foreach (gcav::Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            foreach (gcav::ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcav::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1564,10 +1564,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Repository> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcav::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1582,28 +1582,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListRepositoriesAsync(ListRepositoriesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListRepositoriesRequest request = new ListRepositoriesRequest
+            gcav::ListRepositoriesRequest request = new gcav::ListRepositoriesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositoriesAsync(request);
+            PagedAsyncEnumerable<gcav::ListRepositoriesResponse, gcav::Repository> response = artifactRegistryClient.ListRepositoriesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Repository item) =>
+            await response.ForEachAsync((gcav::Repository item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRepositoriesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListRepositoriesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcav::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1612,10 +1612,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Repository> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcav::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1630,25 +1630,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListRepositories(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositories(parent);
+            PagedEnumerable<gcav::ListRepositoriesResponse, gcav::Repository> response = artifactRegistryClient.ListRepositories(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Repository item in response)
+            foreach (gcav::Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            foreach (gcav::ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcav::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1657,10 +1657,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Repository> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcav::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1675,25 +1675,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListRepositoriesAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositoriesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListRepositoriesResponse, gcav::Repository> response = artifactRegistryClient.ListRepositoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Repository item) =>
+            await response.ForEachAsync((gcav::Repository item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRepositoriesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListRepositoriesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcav::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1702,10 +1702,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Repository> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcav::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1720,25 +1720,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListRepositories(LocationName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositories(parent);
+            PagedEnumerable<gcav::ListRepositoriesResponse, gcav::Repository> response = artifactRegistryClient.ListRepositories(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Repository item in response)
+            foreach (gcav::Repository item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            foreach (gcav::ListRepositoriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcav::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1747,10 +1747,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Repository> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcav::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1765,25 +1765,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListRepositoriesAsync(LocationName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositoriesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListRepositoriesResponse, gcav::Repository> response = artifactRegistryClient.ListRepositoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Repository item) =>
+            await response.ForEachAsync((gcav::Repository item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRepositoriesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListRepositoriesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Repository item in page)
+                foreach (gcav::Repository item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1792,10 +1792,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Repository> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Repository> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Repository item in singlePage)
+            foreach (gcav::Repository item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1810,14 +1810,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetRepository(GetRepositoryRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetRepositoryRequest request = new GetRepositoryRequest
+            gcav::GetRepositoryRequest request = new gcav::GetRepositoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            Repository response = artifactRegistryClient.GetRepository(request);
+            gcav::Repository response = artifactRegistryClient.GetRepository(request);
             // End snippet
         }
 
@@ -1827,14 +1827,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetRepositoryAsync(GetRepositoryRequest, CallSettings)
             // Additional: GetRepositoryAsync(GetRepositoryRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetRepositoryRequest request = new GetRepositoryRequest
+            gcav::GetRepositoryRequest request = new gcav::GetRepositoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            Repository response = await artifactRegistryClient.GetRepositoryAsync(request);
+            gcav::Repository response = await artifactRegistryClient.GetRepositoryAsync(request);
             // End snippet
         }
 
@@ -1843,11 +1843,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetRepository(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            Repository response = artifactRegistryClient.GetRepository(name);
+            gcav::Repository response = artifactRegistryClient.GetRepository(name);
             // End snippet
         }
 
@@ -1857,11 +1857,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetRepositoryAsync(string, CallSettings)
             // Additional: GetRepositoryAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            Repository response = await artifactRegistryClient.GetRepositoryAsync(name);
+            gcav::Repository response = await artifactRegistryClient.GetRepositoryAsync(name);
             // End snippet
         }
 
@@ -1870,11 +1870,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetRepository(RepositoryName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName name = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            Repository response = artifactRegistryClient.GetRepository(name);
+            gcav::Repository response = artifactRegistryClient.GetRepository(name);
             // End snippet
         }
 
@@ -1884,11 +1884,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetRepositoryAsync(RepositoryName, CallSettings)
             // Additional: GetRepositoryAsync(RepositoryName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName name = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            Repository response = await artifactRegistryClient.GetRepositoryAsync(name);
+            gcav::Repository response = await artifactRegistryClient.GetRepositoryAsync(name);
             // End snippet
         }
 
@@ -1897,31 +1897,31 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: CreateRepository(CreateRepositoryRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            CreateRepositoryRequest request = new CreateRepositoryRequest
+            gcav::CreateRepositoryRequest request = new gcav::CreateRepositoryRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 RepositoryId = "",
-                Repository = new Repository(),
+                Repository = new gcav::Repository(),
             };
             // Make the request
-            Operation<Repository, OperationMetadata> response = artifactRegistryClient.CreateRepository(request);
+            Operation<gcav::Repository, gcav::OperationMetadata> response = artifactRegistryClient.CreateRepository(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Repository, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Repository, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Repository result = completedResponse.Result;
+            gcav::Repository result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Repository, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateRepository(operationName);
+            Operation<gcav::Repository, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateRepository(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Repository retrievedResult = retrievedResponse.Result;
+                gcav::Repository retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1932,31 +1932,31 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: CreateRepositoryAsync(CreateRepositoryRequest, CallSettings)
             // Additional: CreateRepositoryAsync(CreateRepositoryRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            CreateRepositoryRequest request = new CreateRepositoryRequest
+            gcav::CreateRepositoryRequest request = new gcav::CreateRepositoryRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 RepositoryId = "",
-                Repository = new Repository(),
+                Repository = new gcav::Repository(),
             };
             // Make the request
-            Operation<Repository, OperationMetadata> response = await artifactRegistryClient.CreateRepositoryAsync(request);
+            Operation<gcav::Repository, gcav::OperationMetadata> response = await artifactRegistryClient.CreateRepositoryAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Repository, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Repository, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Repository result = completedResponse.Result;
+            gcav::Repository result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Repository, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateRepositoryAsync(operationName);
+            Operation<gcav::Repository, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateRepositoryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Repository retrievedResult = retrievedResponse.Result;
+                gcav::Repository retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1966,28 +1966,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: CreateRepository(string, Repository, string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Repository repository = new Repository();
+            gcav::Repository repository = new gcav::Repository();
             string repositoryId = "";
             // Make the request
-            Operation<Repository, OperationMetadata> response = artifactRegistryClient.CreateRepository(parent, repository, repositoryId);
+            Operation<gcav::Repository, gcav::OperationMetadata> response = artifactRegistryClient.CreateRepository(parent, repository, repositoryId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Repository, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Repository, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Repository result = completedResponse.Result;
+            gcav::Repository result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Repository, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateRepository(operationName);
+            Operation<gcav::Repository, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateRepository(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Repository retrievedResult = retrievedResponse.Result;
+                gcav::Repository retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1998,28 +1998,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: CreateRepositoryAsync(string, Repository, string, CallSettings)
             // Additional: CreateRepositoryAsync(string, Repository, string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Repository repository = new Repository();
+            gcav::Repository repository = new gcav::Repository();
             string repositoryId = "";
             // Make the request
-            Operation<Repository, OperationMetadata> response = await artifactRegistryClient.CreateRepositoryAsync(parent, repository, repositoryId);
+            Operation<gcav::Repository, gcav::OperationMetadata> response = await artifactRegistryClient.CreateRepositoryAsync(parent, repository, repositoryId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Repository, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Repository, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Repository result = completedResponse.Result;
+            gcav::Repository result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Repository, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateRepositoryAsync(operationName);
+            Operation<gcav::Repository, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateRepositoryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Repository retrievedResult = retrievedResponse.Result;
+                gcav::Repository retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2029,28 +2029,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: CreateRepository(LocationName, Repository, string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Repository repository = new Repository();
+            gcav::Repository repository = new gcav::Repository();
             string repositoryId = "";
             // Make the request
-            Operation<Repository, OperationMetadata> response = artifactRegistryClient.CreateRepository(parent, repository, repositoryId);
+            Operation<gcav::Repository, gcav::OperationMetadata> response = artifactRegistryClient.CreateRepository(parent, repository, repositoryId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Repository, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Repository, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Repository result = completedResponse.Result;
+            gcav::Repository result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Repository, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateRepository(operationName);
+            Operation<gcav::Repository, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateRepository(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Repository retrievedResult = retrievedResponse.Result;
+                gcav::Repository retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2061,28 +2061,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: CreateRepositoryAsync(LocationName, Repository, string, CallSettings)
             // Additional: CreateRepositoryAsync(LocationName, Repository, string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Repository repository = new Repository();
+            gcav::Repository repository = new gcav::Repository();
             string repositoryId = "";
             // Make the request
-            Operation<Repository, OperationMetadata> response = await artifactRegistryClient.CreateRepositoryAsync(parent, repository, repositoryId);
+            Operation<gcav::Repository, gcav::OperationMetadata> response = await artifactRegistryClient.CreateRepositoryAsync(parent, repository, repositoryId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Repository, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Repository, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Repository result = completedResponse.Result;
+            gcav::Repository result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Repository, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateRepositoryAsync(operationName);
+            Operation<gcav::Repository, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateRepositoryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Repository retrievedResult = retrievedResponse.Result;
+                gcav::Repository retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2092,15 +2092,15 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: UpdateRepository(UpdateRepositoryRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            UpdateRepositoryRequest request = new UpdateRepositoryRequest
+            gcav::UpdateRepositoryRequest request = new gcav::UpdateRepositoryRequest
             {
-                Repository = new Repository(),
+                Repository = new gcav::Repository(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Repository response = artifactRegistryClient.UpdateRepository(request);
+            gcav::Repository response = artifactRegistryClient.UpdateRepository(request);
             // End snippet
         }
 
@@ -2110,15 +2110,15 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: UpdateRepositoryAsync(UpdateRepositoryRequest, CallSettings)
             // Additional: UpdateRepositoryAsync(UpdateRepositoryRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateRepositoryRequest request = new UpdateRepositoryRequest
+            gcav::UpdateRepositoryRequest request = new gcav::UpdateRepositoryRequest
             {
-                Repository = new Repository(),
+                Repository = new gcav::Repository(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Repository response = await artifactRegistryClient.UpdateRepositoryAsync(request);
+            gcav::Repository response = await artifactRegistryClient.UpdateRepositoryAsync(request);
             // End snippet
         }
 
@@ -2127,12 +2127,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: UpdateRepository(Repository, FieldMask, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            Repository repository = new Repository();
+            gcav::Repository repository = new gcav::Repository();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Repository response = artifactRegistryClient.UpdateRepository(repository, updateMask);
+            gcav::Repository response = artifactRegistryClient.UpdateRepository(repository, updateMask);
             // End snippet
         }
 
@@ -2142,12 +2142,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: UpdateRepositoryAsync(Repository, FieldMask, CallSettings)
             // Additional: UpdateRepositoryAsync(Repository, FieldMask, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            Repository repository = new Repository();
+            gcav::Repository repository = new gcav::Repository();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Repository response = await artifactRegistryClient.UpdateRepositoryAsync(repository, updateMask);
+            gcav::Repository response = await artifactRegistryClient.UpdateRepositoryAsync(repository, updateMask);
             // End snippet
         }
 
@@ -2156,24 +2156,24 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeleteRepository(DeleteRepositoryRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            DeleteRepositoryRequest request = new DeleteRepositoryRequest
+            gcav::DeleteRepositoryRequest request = new gcav::DeleteRepositoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeleteRepository(request);
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteRepository(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteRepository(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteRepository(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2189,24 +2189,24 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeleteRepositoryAsync(DeleteRepositoryRequest, CallSettings)
             // Additional: DeleteRepositoryAsync(DeleteRepositoryRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteRepositoryRequest request = new DeleteRepositoryRequest
+            gcav::DeleteRepositoryRequest request = new gcav::DeleteRepositoryRequest
             {
-                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                RepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(request);
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteRepositoryAsync(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteRepositoryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2221,21 +2221,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeleteRepository(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeleteRepository(name);
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteRepository(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteRepository(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteRepository(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2251,21 +2251,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeleteRepositoryAsync(string, CallSettings)
             // Additional: DeleteRepositoryAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(name);
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteRepositoryAsync(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteRepositoryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2280,21 +2280,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeleteRepository(RepositoryName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName name = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeleteRepository(name);
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteRepository(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteRepository(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteRepository(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2310,21 +2310,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeleteRepositoryAsync(RepositoryName, CallSettings)
             // Additional: DeleteRepositoryAsync(RepositoryName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName name = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(name);
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteRepositoryAsync(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteRepositoryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2339,28 +2339,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPackages(ListPackagesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListPackagesRequest request = new ListPackagesRequest
+            gcav::ListPackagesRequest request = new gcav::ListPackagesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackages(request);
+            PagedEnumerable<gcav::ListPackagesResponse, gcav::Package> response = artifactRegistryClient.ListPackages(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Package item in response)
+            foreach (gcav::Package item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Package item in page)
+                foreach (gcav::Package item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2369,10 +2369,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Package> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Package> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Package item in singlePage)
+            foreach (gcav::Package item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2387,28 +2387,28 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPackagesAsync(ListPackagesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListPackagesRequest request = new ListPackagesRequest
+            gcav::ListPackagesRequest request = new gcav::ListPackagesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackagesAsync(request);
+            PagedAsyncEnumerable<gcav::ListPackagesResponse, gcav::Package> response = artifactRegistryClient.ListPackagesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Package item) =>
+            await response.ForEachAsync((gcav::Package item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Package item in page)
+                foreach (gcav::Package item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2417,10 +2417,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Package> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Package> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Package item in singlePage)
+            foreach (gcav::Package item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2435,25 +2435,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPackages(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackages(parent);
+            PagedEnumerable<gcav::ListPackagesResponse, gcav::Package> response = artifactRegistryClient.ListPackages(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Package item in response)
+            foreach (gcav::Package item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Package item in page)
+                foreach (gcav::Package item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2462,10 +2462,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Package> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Package> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Package item in singlePage)
+            foreach (gcav::Package item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2480,25 +2480,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPackagesAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackagesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListPackagesResponse, gcav::Package> response = artifactRegistryClient.ListPackagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Package item) =>
+            await response.ForEachAsync((gcav::Package item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Package item in page)
+                foreach (gcav::Package item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2507,10 +2507,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Package> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Package> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Package item in singlePage)
+            foreach (gcav::Package item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2525,25 +2525,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPackages(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackages(parent);
+            PagedEnumerable<gcav::ListPackagesResponse, gcav::Package> response = artifactRegistryClient.ListPackages(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Package item in response)
+            foreach (gcav::Package item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPackagesResponse page in response.AsRawResponses())
+            foreach (gcav::ListPackagesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Package item in page)
+                foreach (gcav::Package item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2552,10 +2552,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Package> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Package> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Package item in singlePage)
+            foreach (gcav::Package item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2570,25 +2570,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListPackagesAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListPackagesResponse, Package> response = artifactRegistryClient.ListPackagesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListPackagesResponse, gcav::Package> response = artifactRegistryClient.ListPackagesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Package item) =>
+            await response.ForEachAsync((gcav::Package item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPackagesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListPackagesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Package item in page)
+                foreach (gcav::Package item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2597,10 +2597,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Package> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Package> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Package item in singlePage)
+            foreach (gcav::Package item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2615,14 +2615,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetPackage(GetPackageRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetPackageRequest request = new GetPackageRequest
+            gcav::GetPackageRequest request = new gcav::GetPackageRequest
             {
-                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+                PackageName = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
             };
             // Make the request
-            Package response = artifactRegistryClient.GetPackage(request);
+            gcav::Package response = artifactRegistryClient.GetPackage(request);
             // End snippet
         }
 
@@ -2632,14 +2632,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetPackageAsync(GetPackageRequest, CallSettings)
             // Additional: GetPackageAsync(GetPackageRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetPackageRequest request = new GetPackageRequest
+            gcav::GetPackageRequest request = new gcav::GetPackageRequest
             {
-                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+                PackageName = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
             };
             // Make the request
-            Package response = await artifactRegistryClient.GetPackageAsync(request);
+            gcav::Package response = await artifactRegistryClient.GetPackageAsync(request);
             // End snippet
         }
 
@@ -2648,11 +2648,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetPackage(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
             // Make the request
-            Package response = artifactRegistryClient.GetPackage(name);
+            gcav::Package response = artifactRegistryClient.GetPackage(name);
             // End snippet
         }
 
@@ -2662,11 +2662,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetPackageAsync(string, CallSettings)
             // Additional: GetPackageAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
             // Make the request
-            Package response = await artifactRegistryClient.GetPackageAsync(name);
+            gcav::Package response = await artifactRegistryClient.GetPackageAsync(name);
             // End snippet
         }
 
@@ -2675,11 +2675,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetPackage(PackageName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            PackageName name = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
+            gcav::PackageName name = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
             // Make the request
-            Package response = artifactRegistryClient.GetPackage(name);
+            gcav::Package response = artifactRegistryClient.GetPackage(name);
             // End snippet
         }
 
@@ -2689,11 +2689,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetPackageAsync(PackageName, CallSettings)
             // Additional: GetPackageAsync(PackageName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            PackageName name = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
+            gcav::PackageName name = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
             // Make the request
-            Package response = await artifactRegistryClient.GetPackageAsync(name);
+            gcav::Package response = await artifactRegistryClient.GetPackageAsync(name);
             // End snippet
         }
 
@@ -2702,24 +2702,24 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeletePackage(DeletePackageRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            DeletePackageRequest request = new DeletePackageRequest
+            gcav::DeletePackageRequest request = new gcav::DeletePackageRequest
             {
-                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+                PackageName = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeletePackage(request);
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeletePackage(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeletePackage(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeletePackage(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2735,24 +2735,24 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeletePackageAsync(DeletePackageRequest, CallSettings)
             // Additional: DeletePackageAsync(DeletePackageRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeletePackageRequest request = new DeletePackageRequest
+            gcav::DeletePackageRequest request = new gcav::DeletePackageRequest
             {
-                PackageName = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
+                PackageName = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(request);
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeletePackageAsync(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeletePackageAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2767,21 +2767,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeletePackage(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeletePackage(name);
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeletePackage(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeletePackage(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeletePackage(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2797,21 +2797,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeletePackageAsync(string, CallSettings)
             // Additional: DeletePackageAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/packages/[PACKAGE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(name);
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeletePackageAsync(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeletePackageAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2826,21 +2826,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeletePackage(PackageName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            PackageName name = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
+            gcav::PackageName name = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeletePackage(name);
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeletePackage(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeletePackage(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeletePackage(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2856,21 +2856,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeletePackageAsync(PackageName, CallSettings)
             // Additional: DeletePackageAsync(PackageName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            PackageName name = PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
+            gcav::PackageName name = gcav::PackageName.FromProjectLocationRepositoryPackage("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(name);
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeletePackageAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeletePackageAsync(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeletePackageAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2885,16 +2885,16 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListVersions(ListVersionsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcav::ListVersionsRequest request = new gcav::ListVersionsRequest
             {
                 Parent = "",
-                View = VersionView.Unspecified,
+                View = gcav::VersionView.Unspecified,
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(request);
+            PagedEnumerable<gcav::ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Version item in response)
@@ -2904,7 +2904,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2935,16 +2935,16 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListVersionsAsync(ListVersionsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcav::ListVersionsRequest request = new gcav::ListVersionsRequest
             {
                 Parent = "",
-                View = VersionView.Unspecified,
+                View = gcav::VersionView.Unspecified,
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersionsAsync(request);
+            PagedAsyncEnumerable<gcav::ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Version item) =>
@@ -2954,7 +2954,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2985,11 +2985,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListVersions(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(parent);
+            PagedEnumerable<gcav::ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Version item in response)
@@ -2999,7 +2999,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3030,11 +3030,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListVersionsAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersionsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Version item) =>
@@ -3044,7 +3044,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -3075,12 +3075,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetVersion(GetVersionRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetVersionRequest request = new GetVersionRequest
+            gcav::GetVersionRequest request = new gcav::GetVersionRequest
             {
                 Name = "",
-                View = VersionView.Unspecified,
+                View = gcav::VersionView.Unspecified,
             };
             // Make the request
             gcav::Version response = artifactRegistryClient.GetVersion(request);
@@ -3093,12 +3093,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetVersionAsync(GetVersionRequest, CallSettings)
             // Additional: GetVersionAsync(GetVersionRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetVersionRequest request = new GetVersionRequest
+            gcav::GetVersionRequest request = new gcav::GetVersionRequest
             {
                 Name = "",
-                View = VersionView.Unspecified,
+                View = gcav::VersionView.Unspecified,
             };
             // Make the request
             gcav::Version response = await artifactRegistryClient.GetVersionAsync(request);
@@ -3110,7 +3110,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetVersion(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -3124,7 +3124,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetVersionAsync(string, CallSettings)
             // Additional: GetVersionAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -3137,25 +3137,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeleteVersion(DeleteVersionRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            DeleteVersionRequest request = new DeleteVersionRequest
+            gcav::DeleteVersionRequest request = new gcav::DeleteVersionRequest
             {
                 Name = "",
                 Force = false,
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeleteVersion(request);
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteVersion(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteVersion(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteVersion(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3171,25 +3171,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeleteVersionAsync(DeleteVersionRequest, CallSettings)
             // Additional: DeleteVersionAsync(DeleteVersionRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteVersionRequest request = new DeleteVersionRequest
+            gcav::DeleteVersionRequest request = new gcav::DeleteVersionRequest
             {
                 Name = "",
                 Force = false,
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeleteVersionAsync(request);
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteVersionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteVersionAsync(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteVersionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3204,21 +3204,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeleteVersion(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeleteVersion(name);
+            Operation<Empty, gcav::OperationMetadata> response = artifactRegistryClient.DeleteVersion(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteVersion(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteVersion(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3234,21 +3234,21 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeleteVersionAsync(string, CallSettings)
             // Additional: DeleteVersionAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeleteVersionAsync(name);
+            Operation<Empty, gcav::OperationMetadata> response = await artifactRegistryClient.DeleteVersionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteVersionAsync(operationName);
+            Operation<Empty, gcav::OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteVersionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3263,30 +3263,30 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListFiles(ListFilesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListFilesRequest request = new ListFilesRequest
+            gcav::ListFilesRequest request = new gcav::ListFilesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFiles(request);
+            PagedEnumerable<gcav::ListFilesResponse, gcav::File> response = artifactRegistryClient.ListFiles(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (File item in response)
+            foreach (gcav::File item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFilesResponse page in response.AsRawResponses())
+            foreach (gcav::ListFilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (File item in page)
+                foreach (gcav::File item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3295,10 +3295,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<File> singlePage = response.ReadPage(pageSize);
+            Page<gcav::File> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (File item in singlePage)
+            foreach (gcav::File item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3313,30 +3313,30 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListFilesAsync(ListFilesRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListFilesRequest request = new ListFilesRequest
+            gcav::ListFilesRequest request = new gcav::ListFilesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                ParentAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFilesAsync(request);
+            PagedAsyncEnumerable<gcav::ListFilesResponse, gcav::File> response = artifactRegistryClient.ListFilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((File item) =>
+            await response.ForEachAsync((gcav::File item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFilesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListFilesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (File item in page)
+                foreach (gcav::File item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3345,10 +3345,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<File> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::File> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (File item in singlePage)
+            foreach (gcav::File item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3363,25 +3363,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListFiles(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFiles(parent);
+            PagedEnumerable<gcav::ListFilesResponse, gcav::File> response = artifactRegistryClient.ListFiles(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (File item in response)
+            foreach (gcav::File item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFilesResponse page in response.AsRawResponses())
+            foreach (gcav::ListFilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (File item in page)
+                foreach (gcav::File item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3390,10 +3390,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<File> singlePage = response.ReadPage(pageSize);
+            Page<gcav::File> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (File item in singlePage)
+            foreach (gcav::File item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3408,25 +3408,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListFilesAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
-            PagedAsyncEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFilesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListFilesResponse, gcav::File> response = artifactRegistryClient.ListFilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((File item) =>
+            await response.ForEachAsync((gcav::File item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFilesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListFilesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (File item in page)
+                foreach (gcav::File item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3435,10 +3435,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<File> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::File> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (File item in singlePage)
+            foreach (gcav::File item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3453,25 +3453,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListFiles(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFiles(parent);
+            PagedEnumerable<gcav::ListFilesResponse, gcav::File> response = artifactRegistryClient.ListFiles(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (File item in response)
+            foreach (gcav::File item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFilesResponse page in response.AsRawResponses())
+            foreach (gcav::ListFilesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (File item in page)
+                foreach (gcav::File item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3480,10 +3480,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<File> singlePage = response.ReadPage(pageSize);
+            Page<gcav::File> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (File item in singlePage)
+            foreach (gcav::File item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3498,25 +3498,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListFilesAsync(RepositoryName, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            RepositoryName parent = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            gcav::RepositoryName parent = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
-            PagedAsyncEnumerable<ListFilesResponse, File> response = artifactRegistryClient.ListFilesAsync(parent);
+            PagedAsyncEnumerable<gcav::ListFilesResponse, gcav::File> response = artifactRegistryClient.ListFilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((File item) =>
+            await response.ForEachAsync((gcav::File item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListFilesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListFilesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (File item in page)
+                foreach (gcav::File item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3525,10 +3525,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<File> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::File> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (File item in singlePage)
+            foreach (gcav::File item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3543,14 +3543,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetFile(GetFileRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetFileRequest request = new GetFileRequest
+            gcav::GetFileRequest request = new gcav::GetFileRequest
             {
-                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
+                FileName = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
             };
             // Make the request
-            File response = artifactRegistryClient.GetFile(request);
+            gcav::File response = artifactRegistryClient.GetFile(request);
             // End snippet
         }
 
@@ -3560,14 +3560,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetFileAsync(GetFileRequest, CallSettings)
             // Additional: GetFileAsync(GetFileRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetFileRequest request = new GetFileRequest
+            gcav::GetFileRequest request = new gcav::GetFileRequest
             {
-                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
+                FileName = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
             };
             // Make the request
-            File response = await artifactRegistryClient.GetFileAsync(request);
+            gcav::File response = await artifactRegistryClient.GetFileAsync(request);
             // End snippet
         }
 
@@ -3576,11 +3576,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetFile(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/files/[FILE]";
             // Make the request
-            File response = artifactRegistryClient.GetFile(name);
+            gcav::File response = artifactRegistryClient.GetFile(name);
             // End snippet
         }
 
@@ -3590,11 +3590,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetFileAsync(string, CallSettings)
             // Additional: GetFileAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]/files/[FILE]";
             // Make the request
-            File response = await artifactRegistryClient.GetFileAsync(name);
+            gcav::File response = await artifactRegistryClient.GetFileAsync(name);
             // End snippet
         }
 
@@ -3603,11 +3603,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetFile(FileName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            FileName name = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
+            gcav::FileName name = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
             // Make the request
-            File response = artifactRegistryClient.GetFile(name);
+            gcav::File response = artifactRegistryClient.GetFile(name);
             // End snippet
         }
 
@@ -3617,11 +3617,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetFileAsync(FileName, CallSettings)
             // Additional: GetFileAsync(FileName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            FileName name = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
+            gcav::FileName name = gcav::FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]");
             // Make the request
-            File response = await artifactRegistryClient.GetFileAsync(name);
+            gcav::File response = await artifactRegistryClient.GetFileAsync(name);
             // End snippet
         }
 
@@ -3630,29 +3630,29 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListTags(ListTagsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListTagsRequest request = new ListTagsRequest
+            gcav::ListTagsRequest request = new gcav::ListTagsRequest
             {
                 Parent = "",
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListTagsResponse, Tag> response = artifactRegistryClient.ListTags(request);
+            PagedEnumerable<gcav::ListTagsResponse, gcav::Tag> response = artifactRegistryClient.ListTags(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Tag item in response)
+            foreach (gcav::Tag item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTagsResponse page in response.AsRawResponses())
+            foreach (gcav::ListTagsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Tag item in page)
+                foreach (gcav::Tag item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3661,10 +3661,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Tag> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Tag> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Tag item in singlePage)
+            foreach (gcav::Tag item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3679,29 +3679,29 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListTagsAsync(ListTagsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListTagsRequest request = new ListTagsRequest
+            gcav::ListTagsRequest request = new gcav::ListTagsRequest
             {
                 Parent = "",
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListTagsResponse, Tag> response = artifactRegistryClient.ListTagsAsync(request);
+            PagedAsyncEnumerable<gcav::ListTagsResponse, gcav::Tag> response = artifactRegistryClient.ListTagsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Tag item) =>
+            await response.ForEachAsync((gcav::Tag item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTagsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListTagsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Tag item in page)
+                foreach (gcav::Tag item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3710,10 +3710,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Tag> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Tag> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Tag item in singlePage)
+            foreach (gcav::Tag item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3728,25 +3728,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListTags(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedEnumerable<ListTagsResponse, Tag> response = artifactRegistryClient.ListTags(parent);
+            PagedEnumerable<gcav::ListTagsResponse, gcav::Tag> response = artifactRegistryClient.ListTags(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Tag item in response)
+            foreach (gcav::Tag item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTagsResponse page in response.AsRawResponses())
+            foreach (gcav::ListTagsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Tag item in page)
+                foreach (gcav::Tag item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3755,10 +3755,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Tag> singlePage = response.ReadPage(pageSize);
+            Page<gcav::Tag> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Tag item in singlePage)
+            foreach (gcav::Tag item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3773,25 +3773,25 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: ListTagsAsync(string, string, int?, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListTagsResponse, Tag> response = artifactRegistryClient.ListTagsAsync(parent);
+            PagedAsyncEnumerable<gcav::ListTagsResponse, gcav::Tag> response = artifactRegistryClient.ListTagsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Tag item) =>
+            await response.ForEachAsync((gcav::Tag item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTagsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListTagsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Tag item in page)
+                foreach (gcav::Tag item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3800,10 +3800,10 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Tag> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcav::Tag> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Tag item in singlePage)
+            foreach (gcav::Tag item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3818,11 +3818,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetTag(GetTagRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetTagRequest request = new GetTagRequest { Name = "", };
+            gcav::GetTagRequest request = new gcav::GetTagRequest { Name = "", };
             // Make the request
-            Tag response = artifactRegistryClient.GetTag(request);
+            gcav::Tag response = artifactRegistryClient.GetTag(request);
             // End snippet
         }
 
@@ -3832,11 +3832,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetTagAsync(GetTagRequest, CallSettings)
             // Additional: GetTagAsync(GetTagRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetTagRequest request = new GetTagRequest { Name = "", };
+            gcav::GetTagRequest request = new gcav::GetTagRequest { Name = "", };
             // Make the request
-            Tag response = await artifactRegistryClient.GetTagAsync(request);
+            gcav::Tag response = await artifactRegistryClient.GetTagAsync(request);
             // End snippet
         }
 
@@ -3845,11 +3845,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetTag(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Tag response = artifactRegistryClient.GetTag(name);
+            gcav::Tag response = artifactRegistryClient.GetTag(name);
             // End snippet
         }
 
@@ -3859,11 +3859,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetTagAsync(string, CallSettings)
             // Additional: GetTagAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Tag response = await artifactRegistryClient.GetTagAsync(name);
+            gcav::Tag response = await artifactRegistryClient.GetTagAsync(name);
             // End snippet
         }
 
@@ -3872,16 +3872,16 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: CreateTag(CreateTagRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            CreateTagRequest request = new CreateTagRequest
+            gcav::CreateTagRequest request = new gcav::CreateTagRequest
             {
                 Parent = "",
                 TagId = "",
-                Tag = new Tag(),
+                Tag = new gcav::Tag(),
             };
             // Make the request
-            Tag response = artifactRegistryClient.CreateTag(request);
+            gcav::Tag response = artifactRegistryClient.CreateTag(request);
             // End snippet
         }
 
@@ -3891,16 +3891,16 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: CreateTagAsync(CreateTagRequest, CallSettings)
             // Additional: CreateTagAsync(CreateTagRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            CreateTagRequest request = new CreateTagRequest
+            gcav::CreateTagRequest request = new gcav::CreateTagRequest
             {
                 Parent = "",
                 TagId = "",
-                Tag = new Tag(),
+                Tag = new gcav::Tag(),
             };
             // Make the request
-            Tag response = await artifactRegistryClient.CreateTagAsync(request);
+            gcav::Tag response = await artifactRegistryClient.CreateTagAsync(request);
             // End snippet
         }
 
@@ -3909,13 +3909,13 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: CreateTag(string, Tag, string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string parent = "";
-            Tag tag = new Tag();
+            gcav::Tag tag = new gcav::Tag();
             string tagId = "";
             // Make the request
-            Tag response = artifactRegistryClient.CreateTag(parent, tag, tagId);
+            gcav::Tag response = artifactRegistryClient.CreateTag(parent, tag, tagId);
             // End snippet
         }
 
@@ -3925,13 +3925,13 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: CreateTagAsync(string, Tag, string, CallSettings)
             // Additional: CreateTagAsync(string, Tag, string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
-            Tag tag = new Tag();
+            gcav::Tag tag = new gcav::Tag();
             string tagId = "";
             // Make the request
-            Tag response = await artifactRegistryClient.CreateTagAsync(parent, tag, tagId);
+            gcav::Tag response = await artifactRegistryClient.CreateTagAsync(parent, tag, tagId);
             // End snippet
         }
 
@@ -3940,15 +3940,15 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: UpdateTag(UpdateTagRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            UpdateTagRequest request = new UpdateTagRequest
+            gcav::UpdateTagRequest request = new gcav::UpdateTagRequest
             {
-                Tag = new Tag(),
+                Tag = new gcav::Tag(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Tag response = artifactRegistryClient.UpdateTag(request);
+            gcav::Tag response = artifactRegistryClient.UpdateTag(request);
             // End snippet
         }
 
@@ -3958,15 +3958,15 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: UpdateTagAsync(UpdateTagRequest, CallSettings)
             // Additional: UpdateTagAsync(UpdateTagRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateTagRequest request = new UpdateTagRequest
+            gcav::UpdateTagRequest request = new gcav::UpdateTagRequest
             {
-                Tag = new Tag(),
+                Tag = new gcav::Tag(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Tag response = await artifactRegistryClient.UpdateTagAsync(request);
+            gcav::Tag response = await artifactRegistryClient.UpdateTagAsync(request);
             // End snippet
         }
 
@@ -3975,12 +3975,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: UpdateTag(Tag, FieldMask, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            Tag tag = new Tag();
+            gcav::Tag tag = new gcav::Tag();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Tag response = artifactRegistryClient.UpdateTag(tag, updateMask);
+            gcav::Tag response = artifactRegistryClient.UpdateTag(tag, updateMask);
             // End snippet
         }
 
@@ -3990,12 +3990,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: UpdateTagAsync(Tag, FieldMask, CallSettings)
             // Additional: UpdateTagAsync(Tag, FieldMask, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            Tag tag = new Tag();
+            gcav::Tag tag = new gcav::Tag();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Tag response = await artifactRegistryClient.UpdateTagAsync(tag, updateMask);
+            gcav::Tag response = await artifactRegistryClient.UpdateTagAsync(tag, updateMask);
             // End snippet
         }
 
@@ -4004,9 +4004,9 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeleteTag(DeleteTagRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            DeleteTagRequest request = new DeleteTagRequest { Name = "", };
+            gcav::DeleteTagRequest request = new gcav::DeleteTagRequest { Name = "", };
             // Make the request
             artifactRegistryClient.DeleteTag(request);
             // End snippet
@@ -4018,9 +4018,9 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeleteTagAsync(DeleteTagRequest, CallSettings)
             // Additional: DeleteTagAsync(DeleteTagRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteTagRequest request = new DeleteTagRequest { Name = "", };
+            gcav::DeleteTagRequest request = new gcav::DeleteTagRequest { Name = "", };
             // Make the request
             await artifactRegistryClient.DeleteTagAsync(request);
             // End snippet
@@ -4031,7 +4031,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: DeleteTag(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -4045,7 +4045,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: DeleteTagAsync(string, CallSettings)
             // Additional: DeleteTagAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -4058,7 +4058,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -4077,7 +4077,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -4095,7 +4095,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -4113,7 +4113,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -4130,7 +4130,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
@@ -4148,7 +4148,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
@@ -4165,14 +4165,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetProjectSettings(GetProjectSettingsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetProjectSettingsRequest request = new GetProjectSettingsRequest
+            gcav::GetProjectSettingsRequest request = new gcav::GetProjectSettingsRequest
             {
-                ProjectSettingsName = ProjectSettingsName.FromProject("[PROJECT]"),
+                ProjectSettingsName = gcav::ProjectSettingsName.FromProject("[PROJECT]"),
             };
             // Make the request
-            ProjectSettings response = artifactRegistryClient.GetProjectSettings(request);
+            gcav::ProjectSettings response = artifactRegistryClient.GetProjectSettings(request);
             // End snippet
         }
 
@@ -4182,14 +4182,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetProjectSettingsAsync(GetProjectSettingsRequest, CallSettings)
             // Additional: GetProjectSettingsAsync(GetProjectSettingsRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetProjectSettingsRequest request = new GetProjectSettingsRequest
+            gcav::GetProjectSettingsRequest request = new gcav::GetProjectSettingsRequest
             {
-                ProjectSettingsName = ProjectSettingsName.FromProject("[PROJECT]"),
+                ProjectSettingsName = gcav::ProjectSettingsName.FromProject("[PROJECT]"),
             };
             // Make the request
-            ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(request);
+            gcav::ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(request);
             // End snippet
         }
 
@@ -4198,11 +4198,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetProjectSettings(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/projectSettings";
             // Make the request
-            ProjectSettings response = artifactRegistryClient.GetProjectSettings(name);
+            gcav::ProjectSettings response = artifactRegistryClient.GetProjectSettings(name);
             // End snippet
         }
 
@@ -4212,11 +4212,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetProjectSettingsAsync(string, CallSettings)
             // Additional: GetProjectSettingsAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/projectSettings";
             // Make the request
-            ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(name);
+            gcav::ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(name);
             // End snippet
         }
 
@@ -4225,11 +4225,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetProjectSettings(ProjectSettingsName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ProjectSettingsName name = ProjectSettingsName.FromProject("[PROJECT]");
+            gcav::ProjectSettingsName name = gcav::ProjectSettingsName.FromProject("[PROJECT]");
             // Make the request
-            ProjectSettings response = artifactRegistryClient.GetProjectSettings(name);
+            gcav::ProjectSettings response = artifactRegistryClient.GetProjectSettings(name);
             // End snippet
         }
 
@@ -4239,11 +4239,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetProjectSettingsAsync(ProjectSettingsName, CallSettings)
             // Additional: GetProjectSettingsAsync(ProjectSettingsName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectSettingsName name = ProjectSettingsName.FromProject("[PROJECT]");
+            gcav::ProjectSettingsName name = gcav::ProjectSettingsName.FromProject("[PROJECT]");
             // Make the request
-            ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(name);
+            gcav::ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(name);
             // End snippet
         }
 
@@ -4252,15 +4252,15 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: UpdateProjectSettings(UpdateProjectSettingsRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            UpdateProjectSettingsRequest request = new UpdateProjectSettingsRequest
+            gcav::UpdateProjectSettingsRequest request = new gcav::UpdateProjectSettingsRequest
             {
-                ProjectSettings = new ProjectSettings(),
+                ProjectSettings = new gcav::ProjectSettings(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            ProjectSettings response = artifactRegistryClient.UpdateProjectSettings(request);
+            gcav::ProjectSettings response = artifactRegistryClient.UpdateProjectSettings(request);
             // End snippet
         }
 
@@ -4270,15 +4270,15 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: UpdateProjectSettingsAsync(UpdateProjectSettingsRequest, CallSettings)
             // Additional: UpdateProjectSettingsAsync(UpdateProjectSettingsRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateProjectSettingsRequest request = new UpdateProjectSettingsRequest
+            gcav::UpdateProjectSettingsRequest request = new gcav::UpdateProjectSettingsRequest
             {
-                ProjectSettings = new ProjectSettings(),
+                ProjectSettings = new gcav::ProjectSettings(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            ProjectSettings response = await artifactRegistryClient.UpdateProjectSettingsAsync(request);
+            gcav::ProjectSettings response = await artifactRegistryClient.UpdateProjectSettingsAsync(request);
             // End snippet
         }
 
@@ -4287,12 +4287,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: UpdateProjectSettings(ProjectSettings, FieldMask, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ProjectSettings projectSettings = new ProjectSettings();
+            gcav::ProjectSettings projectSettings = new gcav::ProjectSettings();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ProjectSettings response = artifactRegistryClient.UpdateProjectSettings(projectSettings, updateMask);
+            gcav::ProjectSettings response = artifactRegistryClient.UpdateProjectSettings(projectSettings, updateMask);
             // End snippet
         }
 
@@ -4302,12 +4302,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: UpdateProjectSettingsAsync(ProjectSettings, FieldMask, CallSettings)
             // Additional: UpdateProjectSettingsAsync(ProjectSettings, FieldMask, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectSettings projectSettings = new ProjectSettings();
+            gcav::ProjectSettings projectSettings = new gcav::ProjectSettings();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            ProjectSettings response = await artifactRegistryClient.UpdateProjectSettingsAsync(projectSettings, updateMask);
+            gcav::ProjectSettings response = await artifactRegistryClient.UpdateProjectSettingsAsync(projectSettings, updateMask);
             // End snippet
         }
 
@@ -4316,14 +4316,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetVPCSCConfig(GetVPCSCConfigRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetVPCSCConfigRequest request = new GetVPCSCConfigRequest
+            gcav::GetVPCSCConfigRequest request = new gcav::GetVPCSCConfigRequest
             {
-                VpcscConfigName = VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                VpcscConfigName = gcav::VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
-            VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(request);
+            gcav::VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(request);
             // End snippet
         }
 
@@ -4333,14 +4333,14 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetVPCSCConfigAsync(GetVPCSCConfigRequest, CallSettings)
             // Additional: GetVPCSCConfigAsync(GetVPCSCConfigRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetVPCSCConfigRequest request = new GetVPCSCConfigRequest
+            gcav::GetVPCSCConfigRequest request = new gcav::GetVPCSCConfigRequest
             {
-                VpcscConfigName = VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                VpcscConfigName = gcav::VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
-            VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(request);
+            gcav::VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(request);
             // End snippet
         }
 
@@ -4349,11 +4349,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetVPCSCConfig(string, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/vpcscConfig";
             // Make the request
-            VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(name);
+            gcav::VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(name);
             // End snippet
         }
 
@@ -4363,11 +4363,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetVPCSCConfigAsync(string, CallSettings)
             // Additional: GetVPCSCConfigAsync(string, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/vpcscConfig";
             // Make the request
-            VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(name);
+            gcav::VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(name);
             // End snippet
         }
 
@@ -4376,11 +4376,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: GetVPCSCConfig(VpcscConfigName, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            VpcscConfigName name = VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcav::VpcscConfigName name = gcav::VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(name);
+            gcav::VPCSCConfig response = artifactRegistryClient.GetVPCSCConfig(name);
             // End snippet
         }
 
@@ -4390,11 +4390,11 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: GetVPCSCConfigAsync(VpcscConfigName, CallSettings)
             // Additional: GetVPCSCConfigAsync(VpcscConfigName, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            VpcscConfigName name = VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcav::VpcscConfigName name = gcav::VpcscConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(name);
+            gcav::VPCSCConfig response = await artifactRegistryClient.GetVPCSCConfigAsync(name);
             // End snippet
         }
 
@@ -4403,15 +4403,15 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: UpdateVPCSCConfig(UpdateVPCSCConfigRequest, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            UpdateVPCSCConfigRequest request = new UpdateVPCSCConfigRequest
+            gcav::UpdateVPCSCConfigRequest request = new gcav::UpdateVPCSCConfigRequest
             {
-                VpcscConfig = new VPCSCConfig(),
+                VpcscConfig = new gcav::VPCSCConfig(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            VPCSCConfig response = artifactRegistryClient.UpdateVPCSCConfig(request);
+            gcav::VPCSCConfig response = artifactRegistryClient.UpdateVPCSCConfig(request);
             // End snippet
         }
 
@@ -4421,15 +4421,15 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: UpdateVPCSCConfigAsync(UpdateVPCSCConfigRequest, CallSettings)
             // Additional: UpdateVPCSCConfigAsync(UpdateVPCSCConfigRequest, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateVPCSCConfigRequest request = new UpdateVPCSCConfigRequest
+            gcav::UpdateVPCSCConfigRequest request = new gcav::UpdateVPCSCConfigRequest
             {
-                VpcscConfig = new VPCSCConfig(),
+                VpcscConfig = new gcav::VPCSCConfig(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            VPCSCConfig response = await artifactRegistryClient.UpdateVPCSCConfigAsync(request);
+            gcav::VPCSCConfig response = await artifactRegistryClient.UpdateVPCSCConfigAsync(request);
             // End snippet
         }
 
@@ -4438,12 +4438,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         {
             // Snippet: UpdateVPCSCConfig(VPCSCConfig, FieldMask, CallSettings)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            VPCSCConfig vpcscConfig = new VPCSCConfig();
+            gcav::VPCSCConfig vpcscConfig = new gcav::VPCSCConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            VPCSCConfig response = artifactRegistryClient.UpdateVPCSCConfig(vpcscConfig, updateMask);
+            gcav::VPCSCConfig response = artifactRegistryClient.UpdateVPCSCConfig(vpcscConfig, updateMask);
             // End snippet
         }
 
@@ -4453,12 +4453,12 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             // Snippet: UpdateVPCSCConfigAsync(VPCSCConfig, FieldMask, CallSettings)
             // Additional: UpdateVPCSCConfigAsync(VPCSCConfig, FieldMask, CancellationToken)
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            VPCSCConfig vpcscConfig = new VPCSCConfig();
+            gcav::VPCSCConfig vpcscConfig = new gcav::VPCSCConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            VPCSCConfig response = await artifactRegistryClient.UpdateVPCSCConfigAsync(vpcscConfig, updateMask);
+            gcav::VPCSCConfig response = await artifactRegistryClient.UpdateVPCSCConfigAsync(vpcscConfig, updateMask);
             // End snippet
         }
     }

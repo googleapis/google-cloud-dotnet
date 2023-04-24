@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
     using Google.Api.Gax;
+    using Google.Cloud.RecommendationEngine.V1Beta1;
     using Google.LongRunning;
     using System;
     using System.Linq;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START pubsub_v1_generated_SchemaService_ListSchemaRevisions_async]
     using Google.Api.Gax;

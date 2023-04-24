@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Trace.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtrace_v2_generated_TraceService_BatchWriteSpans_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

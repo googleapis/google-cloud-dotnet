@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.VmwareEngine.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START vmwareengine_v1_generated_VmwareEngine_ListNodeTypes_sync]
     using Google.Api.Gax;

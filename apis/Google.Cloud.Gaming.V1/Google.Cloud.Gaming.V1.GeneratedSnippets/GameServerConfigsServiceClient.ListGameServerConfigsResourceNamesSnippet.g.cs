@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Gaming.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gameservices_v1_generated_GameServerConfigsService_ListGameServerConfigs_sync_flattened_resourceNames]
     using Google.Api.Gax;

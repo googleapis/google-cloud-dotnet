@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Batch.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -35,17 +35,17 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: CreateJob(CreateJobRequest, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            CreateJobRequest request = new CreateJobRequest
+            gcbv::CreateJobRequest request = new gcbv::CreateJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 JobId = "",
-                Job = new Job(),
+                Job = new gcbv::Job(),
                 RequestId = "",
             };
             // Make the request
-            Job response = batchServiceClient.CreateJob(request);
+            gcbv::Job response = batchServiceClient.CreateJob(request);
             // End snippet
         }
 
@@ -55,17 +55,17 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: CreateJobAsync(CreateJobRequest, CallSettings)
             // Additional: CreateJobAsync(CreateJobRequest, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateJobRequest request = new CreateJobRequest
+            gcbv::CreateJobRequest request = new gcbv::CreateJobRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 JobId = "",
-                Job = new Job(),
+                Job = new gcbv::Job(),
                 RequestId = "",
             };
             // Make the request
-            Job response = await batchServiceClient.CreateJobAsync(request);
+            gcbv::Job response = await batchServiceClient.CreateJobAsync(request);
             // End snippet
         }
 
@@ -74,13 +74,13 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: CreateJob(string, Job, string, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Job job = new Job();
+            gcbv::Job job = new gcbv::Job();
             string jobId = "";
             // Make the request
-            Job response = batchServiceClient.CreateJob(parent, job, jobId);
+            gcbv::Job response = batchServiceClient.CreateJob(parent, job, jobId);
             // End snippet
         }
 
@@ -90,13 +90,13 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: CreateJobAsync(string, Job, string, CallSettings)
             // Additional: CreateJobAsync(string, Job, string, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Job job = new Job();
+            gcbv::Job job = new gcbv::Job();
             string jobId = "";
             // Make the request
-            Job response = await batchServiceClient.CreateJobAsync(parent, job, jobId);
+            gcbv::Job response = await batchServiceClient.CreateJobAsync(parent, job, jobId);
             // End snippet
         }
 
@@ -105,13 +105,13 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: CreateJob(LocationName, Job, string, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Job job = new Job();
+            gcbv::Job job = new gcbv::Job();
             string jobId = "";
             // Make the request
-            Job response = batchServiceClient.CreateJob(parent, job, jobId);
+            gcbv::Job response = batchServiceClient.CreateJob(parent, job, jobId);
             // End snippet
         }
 
@@ -121,13 +121,13 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: CreateJobAsync(LocationName, Job, string, CallSettings)
             // Additional: CreateJobAsync(LocationName, Job, string, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Job job = new Job();
+            gcbv::Job job = new gcbv::Job();
             string jobId = "";
             // Make the request
-            Job response = await batchServiceClient.CreateJobAsync(parent, job, jobId);
+            gcbv::Job response = await batchServiceClient.CreateJobAsync(parent, job, jobId);
             // End snippet
         }
 
@@ -136,14 +136,14 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: GetJob(GetJobRequest, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            GetJobRequest request = new GetJobRequest
+            gcbv::GetJobRequest request = new gcbv::GetJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcbv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
-            Job response = batchServiceClient.GetJob(request);
+            gcbv::Job response = batchServiceClient.GetJob(request);
             // End snippet
         }
 
@@ -153,14 +153,14 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: GetJobAsync(GetJobRequest, CallSettings)
             // Additional: GetJobAsync(GetJobRequest, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetJobRequest request = new GetJobRequest
+            gcbv::GetJobRequest request = new gcbv::GetJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcbv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
-            Job response = await batchServiceClient.GetJobAsync(request);
+            gcbv::Job response = await batchServiceClient.GetJobAsync(request);
             // End snippet
         }
 
@@ -169,11 +169,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: GetJob(string, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Job response = batchServiceClient.GetJob(name);
+            gcbv::Job response = batchServiceClient.GetJob(name);
             // End snippet
         }
 
@@ -183,11 +183,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: GetJobAsync(string, CallSettings)
             // Additional: GetJobAsync(string, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Job response = await batchServiceClient.GetJobAsync(name);
+            gcbv::Job response = await batchServiceClient.GetJobAsync(name);
             // End snippet
         }
 
@@ -196,11 +196,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: GetJob(JobName, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcbv::JobName name = gcbv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = batchServiceClient.GetJob(name);
+            gcbv::Job response = batchServiceClient.GetJob(name);
             // End snippet
         }
 
@@ -210,11 +210,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: GetJobAsync(JobName, CallSettings)
             // Additional: GetJobAsync(JobName, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            JobName name = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcbv::JobName name = gcbv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = await batchServiceClient.GetJobAsync(name);
+            gcbv::Job response = await batchServiceClient.GetJobAsync(name);
             // End snippet
         }
 
@@ -223,26 +223,26 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: DeleteJob(DeleteJobRequest, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            DeleteJobRequest request = new DeleteJobRequest
+            gcbv::DeleteJobRequest request = new gcbv::DeleteJobRequest
             {
                 Name = "",
                 Reason = "",
                 RequestId = "",
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = batchServiceClient.DeleteJob(request);
+            Operation<Empty, gcbv::OperationMetadata> response = batchServiceClient.DeleteJob(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = batchServiceClient.PollOnceDeleteJob(operationName);
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = batchServiceClient.PollOnceDeleteJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -258,26 +258,26 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: DeleteJobAsync(DeleteJobRequest, CallSettings)
             // Additional: DeleteJobAsync(DeleteJobRequest, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteJobRequest request = new DeleteJobRequest
+            gcbv::DeleteJobRequest request = new gcbv::DeleteJobRequest
             {
                 Name = "",
                 Reason = "",
                 RequestId = "",
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await batchServiceClient.DeleteJobAsync(request);
+            Operation<Empty, gcbv::OperationMetadata> response = await batchServiceClient.DeleteJobAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceDeleteJobAsync(operationName);
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceDeleteJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -292,21 +292,21 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: DeleteJob(string, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = batchServiceClient.DeleteJob(name);
+            Operation<Empty, gcbv::OperationMetadata> response = batchServiceClient.DeleteJob(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = batchServiceClient.PollOnceDeleteJob(operationName);
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = batchServiceClient.PollOnceDeleteJob(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -322,21 +322,21 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: DeleteJobAsync(string, CallSettings)
             // Additional: DeleteJobAsync(string, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await batchServiceClient.DeleteJobAsync(name);
+            Operation<Empty, gcbv::OperationMetadata> response = await batchServiceClient.DeleteJobAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceDeleteJobAsync(operationName);
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceDeleteJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -351,29 +351,29 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListJobs(ListJobsRequest, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            ListJobsRequest request = new ListJobsRequest
+            gcbv::ListJobsRequest request = new gcbv::ListJobsRequest
             {
                 Parent = "",
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = batchServiceClient.ListJobs(request);
+            PagedEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
+            foreach (gcbv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
+            foreach (gcbv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcbv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -382,10 +382,10 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
+            Page<gcbv::Job> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcbv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -400,29 +400,29 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListJobsAsync(ListJobsRequest, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListJobsRequest request = new ListJobsRequest
+            gcbv::ListJobsRequest request = new gcbv::ListJobsRequest
             {
                 Parent = "",
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = batchServiceClient.ListJobsAsync(request);
+            PagedAsyncEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcbv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcbv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcbv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -431,10 +431,10 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcbv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcbv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -449,25 +449,25 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListJobs(string, string, int?, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedEnumerable<ListJobsResponse, Job> response = batchServiceClient.ListJobs(parent);
+            PagedEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Job item in response)
+            foreach (gcbv::Job item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListJobsResponse page in response.AsRawResponses())
+            foreach (gcbv::ListJobsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcbv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -476,10 +476,10 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = response.ReadPage(pageSize);
+            Page<gcbv::Job> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcbv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -494,25 +494,25 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListJobsAsync(string, string, int?, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = batchServiceClient.ListJobsAsync(parent);
+            PagedAsyncEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcbv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcbv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcbv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -521,10 +521,10 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcbv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcbv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -539,11 +539,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: GetTask(GetTaskRequest, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gcbv::GetTaskRequest request = new gcbv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]"),
+                TaskName = gcbv::TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]"),
             };
             // Make the request
             gcbv::Task response = batchServiceClient.GetTask(request);
@@ -556,11 +556,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: GetTaskAsync(GetTaskRequest, CallSettings)
             // Additional: GetTaskAsync(GetTaskRequest, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gcbv::GetTaskRequest request = new gcbv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]"),
+                TaskName = gcbv::TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]"),
             };
             // Make the request
             gcbv::Task response = await batchServiceClient.GetTaskAsync(request);
@@ -572,7 +572,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: GetTask(string, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/taskGroups/[TASK_GROUP]/tasks/[TASK]";
             // Make the request
@@ -586,7 +586,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: GetTaskAsync(string, CallSettings)
             // Additional: GetTaskAsync(string, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/taskGroups/[TASK_GROUP]/tasks/[TASK]";
             // Make the request
@@ -599,9 +599,9 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: GetTask(TaskName, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]");
+            gcbv::TaskName name = gcbv::TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]");
             // Make the request
             gcbv::Task response = batchServiceClient.GetTask(name);
             // End snippet
@@ -613,9 +613,9 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             // Snippet: GetTaskAsync(TaskName, CallSettings)
             // Additional: GetTaskAsync(TaskName, CancellationToken)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]");
+            gcbv::TaskName name = gcbv::TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]");
             // Make the request
             gcbv::Task response = await batchServiceClient.GetTaskAsync(name);
             // End snippet
@@ -626,15 +626,15 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListTasks(ListTasksRequest, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gcbv::ListTasksRequest request = new gcbv::ListTasksRequest
             {
-                ParentAsTaskGroupName = TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
+                ParentAsTaskGroupName = gcbv::TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasks(request);
+            PagedEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasks(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcbv::Task item in response)
@@ -644,7 +644,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcbv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -675,15 +675,15 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListTasksAsync(ListTasksRequest, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gcbv::ListTasksRequest request = new gcbv::ListTasksRequest
             {
-                ParentAsTaskGroupName = TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
+                ParentAsTaskGroupName = gcbv::TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(request);
+            PagedAsyncEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcbv::Task item) =>
@@ -693,7 +693,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcbv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -724,11 +724,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListTasks(string, string, int?, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/taskGroups/[TASK_GROUP]";
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasks(parent);
+            PagedEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcbv::Task item in response)
@@ -738,7 +738,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcbv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -769,11 +769,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListTasksAsync(string, string, int?, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/taskGroups/[TASK_GROUP]";
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcbv::Task item) =>
@@ -783,7 +783,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcbv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -814,11 +814,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListTasks(TaskGroupName, string, int?, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = BatchServiceClient.Create();
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
             // Initialize request argument(s)
-            TaskGroupName parent = TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]");
+            gcbv::TaskGroupName parent = gcbv::TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]");
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasks(parent);
+            PagedEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcbv::Task item in response)
@@ -828,7 +828,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcbv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -859,11 +859,11 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         {
             // Snippet: ListTasksAsync(TaskGroupName, string, int?, CallSettings)
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TaskGroupName parent = TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]");
+            gcbv::TaskGroupName parent = gcbv::TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]");
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcbv::Task item) =>
@@ -873,7 +873,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcbv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

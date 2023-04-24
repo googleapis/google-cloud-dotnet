@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Firestore.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START firestore_v1_generated_FirestoreAdmin_UpdateField_sync]
     using Google.LongRunning;
@@ -36,25 +36,25 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         public void UpdateFieldRequestObject()
         {
             // Create client
-            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            UpdateFieldRequest request = new UpdateFieldRequest
+            gcfav::UpdateFieldRequest request = new gcfav::UpdateFieldRequest
             {
                 Field = new gcfav::Field(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<gcfav::Field, FieldOperationMetadata> response = firestoreAdminClient.UpdateField(request);
+            Operation<gcfav::Field, gcfav::FieldOperationMetadata> response = firestoreAdminClient.UpdateField(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcfav::Field, FieldOperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcfav::Field, gcfav::FieldOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcfav::Field result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcfav::Field, FieldOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceUpdateField(operationName);
+            Operation<gcfav::Field, gcfav::FieldOperationMetadata> retrievedResponse = firestoreAdminClient.PollOnceUpdateField(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

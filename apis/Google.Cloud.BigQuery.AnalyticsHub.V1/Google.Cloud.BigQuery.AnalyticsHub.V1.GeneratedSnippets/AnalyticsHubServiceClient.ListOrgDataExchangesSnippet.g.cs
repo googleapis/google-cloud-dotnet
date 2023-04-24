@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.AnalyticsHub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticshub_v1_generated_AnalyticsHubService_ListOrgDataExchanges_sync_flattened]
     using Google.Api.Gax;

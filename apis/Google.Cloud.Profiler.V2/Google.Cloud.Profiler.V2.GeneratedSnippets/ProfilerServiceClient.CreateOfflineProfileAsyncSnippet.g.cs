@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Profiler.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async_flattened]
     using Google.Cloud.Profiler.V2;

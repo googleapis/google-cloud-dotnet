@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.EnterpriseKnowledgeGraph.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.EnterpriseKnowledgeGraph.V1;
     using System;
     using System.Collections.Generic;
     using System.Linq;

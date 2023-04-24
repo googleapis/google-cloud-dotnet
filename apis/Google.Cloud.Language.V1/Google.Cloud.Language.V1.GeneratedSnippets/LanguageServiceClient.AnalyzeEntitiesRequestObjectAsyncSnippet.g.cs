@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Language.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START language_v1_generated_LanguageService_AnalyzeEntities_async]
     using Google.Cloud.Language.V1;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Retail.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START retail_v2_generated_ControlService_DeleteControl_async_flattened_resourceNames]
     using Google.Cloud.Retail.V2;

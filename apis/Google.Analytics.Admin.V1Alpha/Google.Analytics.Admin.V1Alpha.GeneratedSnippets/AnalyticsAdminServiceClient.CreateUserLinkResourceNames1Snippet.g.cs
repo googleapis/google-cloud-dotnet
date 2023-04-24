@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateUserLink_sync_flattened_resourceNames1]
     using Google.Analytics.Admin.V1Alpha;

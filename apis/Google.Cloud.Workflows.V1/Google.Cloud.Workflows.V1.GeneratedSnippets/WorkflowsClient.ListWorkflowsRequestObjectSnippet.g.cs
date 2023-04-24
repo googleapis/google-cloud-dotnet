@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Workflows.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START workflows_v1_generated_Workflows_ListWorkflows_sync]
     using Google.Api.Gax;

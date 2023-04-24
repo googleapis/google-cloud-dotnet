@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Datastore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Datastore.V1;
     using Google.Protobuf;
     using System.Collections.Generic;
     using System.Threading.Tasks;
