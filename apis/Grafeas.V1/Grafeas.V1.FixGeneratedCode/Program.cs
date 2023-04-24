@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -46,7 +46,7 @@ namespace Grafeas.V1.FixGeneratedCode
             foreach (string file in Directory.GetFiles(Path.Combine(layout.SourceDirectory, "Grafeas.V1.GeneratedSnippets"), "*Snippet.g.cs"))
             {
                 SourceFile.Load(file)
-                    .Rewrite(new SingleFileSnippetRewriter())
+                    .Rewrite(new SnippetRewriter())
                     .Save();
             }
         }
@@ -90,14 +90,6 @@ namespace Grafeas.V1.FixGeneratedCode
                     .Prepend(_channelDeclaration);
                 return node.WithBody(body.WithStatements(new SyntaxList<StatementSyntax>(statements)));
             }
-        }
-
-        private class SingleFileSnippetRewriter : SnippetRewriter
-        {
-            public override SyntaxNode VisitNamespaceDeclaration(NamespaceDeclarationSyntax node) =>
-                base.VisitNamespaceDeclaration(
-                    node.WithName(SyntaxFactory.ParseName("GrafeasV1.Snippets")
-                        .WithTriviaFrom(node.Name)));
         }
     }
 }
