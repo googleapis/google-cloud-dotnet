@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/iam/credentials/v1/.*-csharp/Google.Cloud.Iam.Credentials.V1
       dest: /owl-bot-staging/Google.Cloud.Iam.Credentials.V1/Google.Cloud.Iam.Credentials.V1
-    - source: /google/iam/credentials/v1/.*-csharp/Google.Cloud.Iam.Credentials.V1.Tests
-      dest: /owl-bot-staging/Google.Cloud.Iam.Credentials.V1/Google.Cloud.Iam.Credentials.V1.Tests
     - source: /google/iam/credentials/v1/.*-csharp/Google.Cloud.Iam.Credentials.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.Iam.Credentials.V1/Google.Cloud.Iam.Credentials.V1.Snippets
     - source: /google/iam/credentials/v1/.*-csharp/Google.Cloud.Iam.Credentials.V1.GeneratedSnippets

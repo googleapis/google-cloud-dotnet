@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/functions/v2beta/.*-csharp/Google.Cloud.Functions.V2Beta
       dest: /owl-bot-staging/Google.Cloud.Functions.V2Beta/Google.Cloud.Functions.V2Beta
-    - source: /google/cloud/functions/v2beta/.*-csharp/Google.Cloud.Functions.V2Beta.Tests
-      dest: /owl-bot-staging/Google.Cloud.Functions.V2Beta/Google.Cloud.Functions.V2Beta.Tests
     - source: /google/cloud/functions/v2beta/.*-csharp/Google.Cloud.Functions.V2Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.Functions.V2Beta/Google.Cloud.Functions.V2Beta.Snippets
     - source: /google/cloud/functions/v2beta/.*-csharp/Google.Cloud.Functions.V2Beta.GeneratedSnippets

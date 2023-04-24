@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/servicedirectory/v1beta1/.*-csharp/Google.Cloud.ServiceDirectory.V1Beta1
       dest: /owl-bot-staging/Google.Cloud.ServiceDirectory.V1Beta1/Google.Cloud.ServiceDirectory.V1Beta1
-    - source: /google/cloud/servicedirectory/v1beta1/.*-csharp/Google.Cloud.ServiceDirectory.V1Beta1.Tests
-      dest: /owl-bot-staging/Google.Cloud.ServiceDirectory.V1Beta1/Google.Cloud.ServiceDirectory.V1Beta1.Tests
     - source: /google/cloud/servicedirectory/v1beta1/.*-csharp/Google.Cloud.ServiceDirectory.V1Beta1.Snippets
       dest: /owl-bot-staging/Google.Cloud.ServiceDirectory.V1Beta1/Google.Cloud.ServiceDirectory.V1Beta1.Snippets
     - source: /google/cloud/servicedirectory/v1beta1/.*-csharp/Google.Cloud.ServiceDirectory.V1Beta1.GeneratedSnippets

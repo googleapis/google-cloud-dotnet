@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/bigtable/v2/.*-csharp/Google.Cloud.Bigtable.V2
       dest: /owl-bot-staging/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2
-    - source: /google/bigtable/v2/.*-csharp/Google.Cloud.Bigtable.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.Tests
     - source: /google/bigtable/v2/.*-csharp/Google.Cloud.Bigtable.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.Snippets
     - source: /google/bigtable/v2/.*-csharp/Google.Cloud.Bigtable.V2.GeneratedSnippets

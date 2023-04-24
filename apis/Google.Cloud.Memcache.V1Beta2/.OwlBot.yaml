@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/memcache/v1beta2/.*-csharp/Google.Cloud.Memcache.V1Beta2
       dest: /owl-bot-staging/Google.Cloud.Memcache.V1Beta2/Google.Cloud.Memcache.V1Beta2
-    - source: /google/cloud/memcache/v1beta2/.*-csharp/Google.Cloud.Memcache.V1Beta2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Memcache.V1Beta2/Google.Cloud.Memcache.V1Beta2.Tests
     - source: /google/cloud/memcache/v1beta2/.*-csharp/Google.Cloud.Memcache.V1Beta2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Memcache.V1Beta2/Google.Cloud.Memcache.V1Beta2.Snippets
     - source: /google/cloud/memcache/v1beta2/.*-csharp/Google.Cloud.Memcache.V1Beta2.GeneratedSnippets

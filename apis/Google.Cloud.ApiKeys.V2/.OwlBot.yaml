@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/api/apikeys/v2/.*-csharp/Google.Cloud.ApiKeys.V2
       dest: /owl-bot-staging/Google.Cloud.ApiKeys.V2/Google.Cloud.ApiKeys.V2
-    - source: /google/api/apikeys/v2/.*-csharp/Google.Cloud.ApiKeys.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.ApiKeys.V2/Google.Cloud.ApiKeys.V2.Tests
     - source: /google/api/apikeys/v2/.*-csharp/Google.Cloud.ApiKeys.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.ApiKeys.V2/Google.Cloud.ApiKeys.V2.Snippets
     - source: /google/api/apikeys/v2/.*-csharp/Google.Cloud.ApiKeys.V2.GeneratedSnippets

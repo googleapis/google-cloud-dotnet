@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/dataqna/v1alpha/.*-csharp/Google.Cloud.DataQnA.V1Alpha
       dest: /owl-bot-staging/Google.Cloud.DataQnA.V1Alpha/Google.Cloud.DataQnA.V1Alpha
-    - source: /google/cloud/dataqna/v1alpha/.*-csharp/Google.Cloud.DataQnA.V1Alpha.Tests
-      dest: /owl-bot-staging/Google.Cloud.DataQnA.V1Alpha/Google.Cloud.DataQnA.V1Alpha.Tests
     - source: /google/cloud/dataqna/v1alpha/.*-csharp/Google.Cloud.DataQnA.V1Alpha.Snippets
       dest: /owl-bot-staging/Google.Cloud.DataQnA.V1Alpha/Google.Cloud.DataQnA.V1Alpha.Snippets
     - source: /google/cloud/dataqna/v1alpha/.*-csharp/Google.Cloud.DataQnA.V1Alpha.GeneratedSnippets

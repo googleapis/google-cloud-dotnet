@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/gkehub/v1/.*-csharp/Google.Cloud.GkeHub.V1
       dest: /owl-bot-staging/Google.Cloud.GkeHub.V1/Google.Cloud.GkeHub.V1
-    - source: /google/cloud/gkehub/v1/.*-csharp/Google.Cloud.GkeHub.V1.Tests
-      dest: /owl-bot-staging/Google.Cloud.GkeHub.V1/Google.Cloud.GkeHub.V1.Tests
     - source: /google/cloud/gkehub/v1/.*-csharp/Google.Cloud.GkeHub.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.GkeHub.V1/Google.Cloud.GkeHub.V1.Snippets
     - source: /google/cloud/gkehub/v1/.*-csharp/Google.Cloud.GkeHub.V1.GeneratedSnippets

@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/location/.*-csharp/Google.Cloud.Location
       dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location
-    - source: /google/cloud/location/.*-csharp/Google.Cloud.Location.Tests
-      dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location.Tests
     - source: /google/cloud/location/.*-csharp/Google.Cloud.Location.Snippets
       dest: /owl-bot-staging/Google.Cloud.Location/Google.Cloud.Location.Snippets
     - source: /google/cloud/location/.*-csharp/Google.Cloud.Location.GeneratedSnippets

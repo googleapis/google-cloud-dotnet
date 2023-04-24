@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/gaming/v1beta/.*-csharp/Google.Cloud.Gaming.V1Beta
       dest: /owl-bot-staging/Google.Cloud.Gaming.V1Beta/Google.Cloud.Gaming.V1Beta
-    - source: /google/cloud/gaming/v1beta/.*-csharp/Google.Cloud.Gaming.V1Beta.Tests
-      dest: /owl-bot-staging/Google.Cloud.Gaming.V1Beta/Google.Cloud.Gaming.V1Beta.Tests
     - source: /google/cloud/gaming/v1beta/.*-csharp/Google.Cloud.Gaming.V1Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.Gaming.V1Beta/Google.Cloud.Gaming.V1Beta.Snippets
     - source: /google/cloud/gaming/v1beta/.*-csharp/Google.Cloud.Gaming.V1Beta.GeneratedSnippets

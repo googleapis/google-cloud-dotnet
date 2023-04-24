@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/maps/mapsplatformdatasets/v1alpha/.*-csharp/Google.Maps.MapsPlatformDatasets.V1Alpha
       dest: /owl-bot-staging/Google.Maps.MapsPlatformDatasets.V1Alpha/Google.Maps.MapsPlatformDatasets.V1Alpha
-    - source: /google/maps/mapsplatformdatasets/v1alpha/.*-csharp/Google.Maps.MapsPlatformDatasets.V1Alpha.Tests
-      dest: /owl-bot-staging/Google.Maps.MapsPlatformDatasets.V1Alpha/Google.Maps.MapsPlatformDatasets.V1Alpha.Tests
     - source: /google/maps/mapsplatformdatasets/v1alpha/.*-csharp/Google.Maps.MapsPlatformDatasets.V1Alpha.Snippets
       dest: /owl-bot-staging/Google.Maps.MapsPlatformDatasets.V1Alpha/Google.Maps.MapsPlatformDatasets.V1Alpha.Snippets
     - source: /google/maps/mapsplatformdatasets/v1alpha/.*-csharp/Google.Maps.MapsPlatformDatasets.V1Alpha.GeneratedSnippets

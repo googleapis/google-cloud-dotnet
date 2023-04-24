@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/translate/v3/.*-csharp/Google.Cloud.Translate.V3
       dest: /owl-bot-staging/Google.Cloud.Translate.V3/Google.Cloud.Translate.V3
-    - source: /google/cloud/translate/v3/.*-csharp/Google.Cloud.Translate.V3.Tests
-      dest: /owl-bot-staging/Google.Cloud.Translate.V3/Google.Cloud.Translate.V3.Tests
     - source: /google/cloud/translate/v3/.*-csharp/Google.Cloud.Translate.V3.Snippets
       dest: /owl-bot-staging/Google.Cloud.Translate.V3/Google.Cloud.Translate.V3.Snippets
     - source: /google/cloud/translate/v3/.*-csharp/Google.Cloud.Translate.V3.GeneratedSnippets

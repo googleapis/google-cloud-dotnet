@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/baremetalsolution/v2/.*-csharp/Google.Cloud.BareMetalSolution.V2
       dest: /owl-bot-staging/Google.Cloud.BareMetalSolution.V2/Google.Cloud.BareMetalSolution.V2
-    - source: /google/cloud/baremetalsolution/v2/.*-csharp/Google.Cloud.BareMetalSolution.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.BareMetalSolution.V2/Google.Cloud.BareMetalSolution.V2.Tests
     - source: /google/cloud/baremetalsolution/v2/.*-csharp/Google.Cloud.BareMetalSolution.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.BareMetalSolution.V2/Google.Cloud.BareMetalSolution.V2.Snippets
     - source: /google/cloud/baremetalsolution/v2/.*-csharp/Google.Cloud.BareMetalSolution.V2.GeneratedSnippets

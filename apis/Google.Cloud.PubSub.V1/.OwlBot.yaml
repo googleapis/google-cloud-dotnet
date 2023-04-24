@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/pubsub/v1/.*-csharp/Google.Cloud.PubSub.V1
       dest: /owl-bot-staging/Google.Cloud.PubSub.V1/Google.Cloud.PubSub.V1
-    - source: /google/pubsub/v1/.*-csharp/Google.Cloud.PubSub.V1.Tests
-      dest: /owl-bot-staging/Google.Cloud.PubSub.V1/Google.Cloud.PubSub.V1.Tests
     - source: /google/pubsub/v1/.*-csharp/Google.Cloud.PubSub.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.PubSub.V1/Google.Cloud.PubSub.V1.Snippets
     - source: /google/pubsub/v1/.*-csharp/Google.Cloud.PubSub.V1.GeneratedSnippets

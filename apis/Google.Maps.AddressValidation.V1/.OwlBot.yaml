@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/maps/addressvalidation/v1/.*-csharp/Google.Maps.AddressValidation.V1
       dest: /owl-bot-staging/Google.Maps.AddressValidation.V1/Google.Maps.AddressValidation.V1
-    - source: /google/maps/addressvalidation/v1/.*-csharp/Google.Maps.AddressValidation.V1.Tests
-      dest: /owl-bot-staging/Google.Maps.AddressValidation.V1/Google.Maps.AddressValidation.V1.Tests
     - source: /google/maps/addressvalidation/v1/.*-csharp/Google.Maps.AddressValidation.V1.Snippets
       dest: /owl-bot-staging/Google.Maps.AddressValidation.V1/Google.Maps.AddressValidation.V1.Snippets
     - source: /google/maps/addressvalidation/v1/.*-csharp/Google.Maps.AddressValidation.V1.GeneratedSnippets

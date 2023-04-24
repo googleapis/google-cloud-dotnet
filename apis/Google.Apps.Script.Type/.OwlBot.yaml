@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/apps/script/type/.*-csharp/Google.Apps.Script.Type
       dest: /owl-bot-staging/Google.Apps.Script.Type/Google.Apps.Script.Type
-    - source: /google/apps/script/type/.*-csharp/Google.Apps.Script.Type.Tests
-      dest: /owl-bot-staging/Google.Apps.Script.Type/Google.Apps.Script.Type.Tests
     - source: /google/apps/script/type/.*-csharp/Google.Apps.Script.Type.Snippets
       dest: /owl-bot-staging/Google.Apps.Script.Type/Google.Apps.Script.Type.Snippets
     - source: /google/apps/script/type/.*-csharp/Google.Apps.Script.Type.GeneratedSnippets
